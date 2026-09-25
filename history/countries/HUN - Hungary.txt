@@ -1,0 +1,146 @@
+﻿capital = 493
+
+oob = "HUN_1936"
+
+set_research_slots = 3
+set_stability = 0.62
+set_war_support = 0.45
+set_fuel_ratio = 1.0
+
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	tech_engineers = 1
+	armored_car1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	gw_artillery = 1
+	fuel_silos = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	motorised_infantry = 1	
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	engine_tech_1 = 1		
+	armor_tech_1 = 1
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1		
+    basic_medium_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+	easy_maintenance = 1	
+    new_tank_guns = 1
+	radio_tech_1 = 1
+	tank_improved_guns = 1	
+	mobile_warfare = 1	
+	base_strike = 1	
+}
+
+if = {
+	limit = {
+		 has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		
+		basic_cruiser_armor_scheme = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Death or Dishonor"
+	}
+	add_ideas = {
+	    training_spirit
+		extra_trade_minor
+		disarmed_nation
+		HUN_treaty_of_triannon
+		GER_stayoutofafrica
+		AFRICA_AXIS_6
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 25
+	fascism = 31
+	neutrality = 44
+}
+
+set_convoys = 35		
+	
+	create_equipment_variant = {
+		name = "37M"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_leafsupring_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_0			
+			special_type_slot_2 = basic_toolkit	
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 0
+		}
+		icon = "gfx/interface/technologies/HUN/TANKS/HUN_LT1_4.dds"
+	}
+		
+	add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 150 producer = HUN  variant_name = "37M" }	
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	
+
+#Start Horty as neutral if DOD
+recruit_character = HUN_miklos_horthy
+recruit_character = HUN_matyas_rakosi
+recruit_character = HUN_arpad_szakasits
+recruit_character = HUN_istvan_szechenyi
+recruit_character = HUN_francois_deak
+recruit_character = HUN_gyorgy_jendrassik
+recruit_character = HUN_jeno_ratz
+recruit_character = HUN_henrik_werth
+recruit_character = HUN_hugo_sonyi
+recruit_character = HUN_gusztav_jany
+recruit_character = HUN_dezso_laszlo
+recruit_character = HUN_reszo_kastner
+recruit_character = HUN_shvoy_kalman
+recruit_character = HUN_sandor_magyarossy
+recruit_character = HUN_bela_rakosi
+recruit_character = HUN_vilmos_roder
+recruit_character = HUN_zoltan_tildy
+recruit_character = HUN_kalman_daranyi
+recruit_character = HUN_lajos_remenyi_schneller
+recruit_character = HUN_gyula_gombos_de_jakfa
+recruit_character = HUN_otto_von_habsburg
+recruit_character = HUN_ferenc_sz
+recruit_character = HUN_franz_friedrich
+recruit_character = HUN_ferencfarkasdekisbarnak
+recruit_character = HUN_geza_lakatos
+recruit_character = HUN_lajos_veress
+recruit_character = HUN_Oszlanyi_Kornel
+recruit_character = HUN_ferenc_feketehalmyczeydner
+recruit_character = HUN_karoly_beregfy
+recruit_character = HUN_arpad_bertalan
+recruit_character = HUN_ivan_hindy

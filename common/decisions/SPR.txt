@@ -1,0 +1,287 @@
+
+foreign_politics = {
+	stop_buy_fuel = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+
+		}
+
+		visible = {
+			tag = SPR
+			OR = { 
+				has_idea = spain_buying_fuel
+				has_idea = spain_buying_fuel2
+				has_idea = spain_buying_fuel3
+				has_idea = spain_buying_fuel4
+				has_idea = spain_buying_fuel5
+				has_idea = spain_buying_fuel6
+			}				
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			hidden_effect = {
+				remove_ideas = spain_buying_fuel
+				remove_ideas = spain_buying_fuel2
+				remove_ideas = spain_buying_fuel3
+				remove_ideas = spain_buying_fuel4
+				remove_ideas = spain_buying_fuel5
+				remove_ideas = spain_buying_fuel6
+			}
+		}						
+	}
+
+	buy_fuel = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes
+		}
+		
+		visible = {
+		NOT = {
+		has_tech = synth_oil_experiments
+		}
+		}
+
+		visible = {
+			tag = SPR
+			NOT = { has_tech = fuel_refining }
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel
+		}	
+	}
+	buy_fuel2 = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes		
+		}
+		
+		visible = {
+			has_tech = synth_oil_experiments
+			NOT = {
+			has_tech = oil_processing
+		    }			
+		}		
+
+		visible = {
+			tag = SPR
+			NOT = { has_tech = fuel_refining2 }
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }	
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel2
+		}
+	}
+	
+	buy_fuel3 = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes
+		}
+		
+		visible = {
+			has_tech = oil_processing
+			NOT = {
+			has_tech = improved_oil_processing
+		    }			
+		}		
+
+		visible = {
+			tag = SPR
+			NOT = { has_tech = fuel_refining3 }
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }	
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel3
+		}
+	}
+	
+	buy_fuel4 = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes
+		}
+		
+		visible = {
+			has_tech = improved_oil_processing
+			NOT = {
+			has_tech = advanced_oil_processing
+		    }			
+		}		
+
+		visible = {
+			tag = SPR
+			NOT = { has_tech = fuel_refining4 }
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }	
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel4
+		}
+	}
+	
+	buy_fuel5 = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes
+		}
+		
+		visible = {
+			has_tech = advanced_oil_processing
+			NOT = {
+			has_tech = modern_oil_processing
+		    }			
+		}		
+
+		visible = {
+			tag = SPR
+			NOT = { has_tech = fuel_refining5 }
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }	
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel5
+		}
+	}
+	
+	buy_fuel6 = {
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			has_war = yes
+		}
+		
+		visible = {
+			has_tech = modern_oil_processing
+		}		
+
+		visible = {
+			tag = SPR
+			NOT = { has_idea = spain_buying_fuel }
+			NOT = { has_idea = spain_buying_fuel2 }
+			NOT = { has_idea = spain_buying_fuel3 }
+			NOT = { has_idea = spain_buying_fuel4 }
+			NOT = { has_idea = spain_buying_fuel5 }
+			NOT = { has_idea = spain_buying_fuel6 }		
+		}
+
+		fire_only_once = no
+			
+		complete_effect = {
+			add_ideas = spain_buying_fuel6
+		}
+	}
+}
+
+political_actions = {
+	SPR_invade_portugal = {
+	    icon = GFX_decision_generic_form_nation
+		
+		available = {
+			tag = SPR
+		}
+
+		visible = {
+			tag = SPR
+			SWI = { has_full_control_of_state = 112 }
+			has_global_flag = victory_in_europe
+		}
+
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+			transfer_state = 112
+			transfer_state = 179
+			transfer_state = 795
+			transfer_state = 181
+			transfer_state = 180
+			112 = {
+				add_building_construction = {
+					type = naval_base
+					level = 10
+					province = 11805
+					instant_build = yes
+				}			
+			}			
+		}
+	}
+
+
+}

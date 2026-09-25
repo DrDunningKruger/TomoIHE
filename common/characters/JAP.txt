@@ -1,0 +1,1139 @@
+characters={
+	JAP_emperor_hirohito={
+		name=JAP_emperor_hirohito
+		portraits={
+			civilian={
+				large="gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ warrior_code emperor_showa imperial_sanction }
+			expire="1989.1.1.1"
+			id=700
+		}
+	}
+
+	JAP_kyuichi_tokuda={
+		name=JAP_kyuichi_tokuda
+		portraits={
+			civilian={
+				large="GFX_Portrait_kyuichi_tokuda"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+
+	JAP_tetsu_katayama={
+		name=JAP_tetsu_katayama
+		portraits={
+			civilian={
+				large="GFX_Portrait_tetsu_katayama"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+
+	### THEORISTS ###
+
+	# Yamashita up there
+
+	# Terauchi up there
+
+	# Yamamoto up there
+
+	JAP_minoru_genda={
+		name=JAP_minoru_genda
+		portraits={
+			army={
+				small="GFX_idea_minoru_genda"
+			}
+		}
+		advisor={
+		cost = 100
+		slot = theorist
+		idea_token = minoru_genda
+		ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { naval_theorist }
+		}
+	}
+
+	JAP_yoshitoshi_tokugawa={
+		name=JAP_yoshitoshi_tokugawa
+		portraits={
+			army={
+				small="GFX_idea_yoshitoshi_tokugawa"
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = yoshitoshi_tokugawa
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				assault_avaition
+			}
+		}
+	}
+
+	JAP_hino_kumazo={
+		name=JAP_hino_kumazo
+		portraits={
+			army={
+				small="GFX_idea_hino_kumazo"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = hino_kumazo
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	JAP_yoshio_nishina={
+		name=JAP_yoshio_nishina
+		portraits={
+			army={
+				small="GFX_idea_yoshio_nishina"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = yoshio_nishina
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			research_bonus = {
+				nuclear = 0.150
+			}
+			traits = {
+				nuclear_scientist
+			}
+		}
+	}
+
+	JAP_hideo_itokawa={
+		name="Hideo Itokawa"
+		portraits={
+			army={
+				small="GFX_idea_hideo_itokawa"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = hideo_itokawa
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			research_bonus = {
+				rocketry = 0.150
+			}
+			traits = {
+				rocket_scientist
+			}
+		}
+	}
+
+
+	### ARMY CHIEFS ###
+
+	JAP_kanin_kotohito={
+		name=JAP_kanin_kotohito
+		portraits={
+			army={
+				small="GFX_idea_kanin_kotohito"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = kanin_kotohito
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	JAP_hajime_sugiyama={
+		name=JAP_hajime_sugiyama
+		portraits={
+			army={
+				small="GFX_idea_hajime_sugiyama"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = hajime_sugiyama
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	JAP_hideki_tojo={
+		name=JAP_hideki_tojo
+		portraits={
+			army={
+				small="GFX_idea_hideki_tojo"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = hideki_tojo
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	### NAVY CHIEFS ###
+
+	JAP_fushimi_hiroyasu={
+		name=JAP_fushimi_hiroyasu
+		portraits={
+			army={
+				small="GFX_idea_fushimi_hiroyasu"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = fushimi_hiroyasu
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+	JAP_osami_nagano={
+		name=JAP_osami_nagano
+		portraits={
+			army={
+				small="GFX_idea_osami_nagano"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = osami_nagano
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+	JAP_shigetaro_shimada={
+		name=JAP_shigetaro_shimada
+		portraits={
+			army={
+				small="GFX_idea_shigetaro_shimada"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = shigetaro_shimada
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	# Doihara up there
+
+	JAP_torashiro_kawabe={
+		name=JAP_torashiro_kawabe
+		portraits={
+			army={
+				small="GFX_idea_torashiro_kawabe"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = torashiro_kawabe
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	JAP_korechika_anami={
+		name=JAP_korechika_anami
+		portraits={
+			army={
+				small="GFX_idea_korechika_anami"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = korechika_anami
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	# Hata up there
+
+	# Okamura up there
+
+	# Imamura up there
+
+	# Toyoda up there
+
+	JAP_mitsuo_fuchida={
+		name=JAP_mitsuo_fuchida
+		portraits={
+			army={
+				small="GFX_idea_mitsuo_fuchida"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = mitsuo_fuchida
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_chief_precision_bomber
+				air_chief_air_logistics
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	JAP_nishizo_tsukahara={
+		name=JAP_nishizo_tsukahara
+		portraits={
+			army={
+				small="GFX_idea_nishizo_tsukahara"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = nishizo_tsukahara
+			ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_chief_naval_strike
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	JAP_tateo_kato={
+		name=JAP_tateo_kato
+		portraits={
+			army={
+				small="GFX_idea_tateo_kato"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = tateo_kato
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				air_air_superiority
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.800
+			}
+		}
+	}
+	
+	JAP_matome_ugaki={
+		name=JAP_matome_ugaki
+		portraits={
+			army={
+				small="GFX_idea_matome_ugaki"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = matome_ugaki
+			ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	JAP_chuichi_nagumo={
+		name=JAP_chuichi_nagumo
+		portraits={
+			army={
+				small="GFX_idea_chuichi_nagumo"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = chuichi_nagumo
+			ledger = air
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_carrier_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	JAP_kingoro_hashimoto={
+		name=JAP_kingoro_hashimoto
+		portraits={
+			army={
+				small="GFX_idea_kingoro_hashimoto"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = kingoro_hashimoto
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			cost = 150
+			traits = {
+				fortification_engineer
+				retired_officer
+				
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}		
+	}
+
+	JAP_mitsumasa_yonai={
+		name=JAP_mitsumasa_yonai
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = JAP_mitsumasa_yonai
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				silent_workhorse 
+				fascist_demagogue 
+			}
+		}
+	}
+
+	JAP_hiroshi_oshima={
+		name=JAP_hiroshi_oshima
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = JAP_hiroshi_oshima
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				prince_of_terror 
+				railroad_enthusiast
+			}
+			ai_will_do = {
+				factor = 0.300
+			}
+		}
+	}
+
+	JAP_chiune_sugihara={
+		name=JAP_chiune_sugihara
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = JAP_chiune_sugihara
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				technocrat
+			}
+		}		
+	}
+
+	JAP_takuo_godo={
+		name=JAP_takuo_godo
+		portraits={
+			army={
+				small="GFX_idea_takuo_godo"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = takuo_godo
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				war_industrialist 
+			}
+			ai_will_do = {
+				factor = 3.000
+			}
+		}
+	}
+
+	JAP_Tomoyuki_Yamashita={ #Took Malaya and Singapore, held north philippines until Japan capitulated
+		name = "Tomoyuki Yamashita"
+		portraits={
+			army={
+				large="GFX_portrait_Portrait_Japan_Tomoyuki_Yamashita"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		corps_commander={
+			desc = "Tomoyuki_Yamashita_desc"
+			traits = { brilliant_strategist jungle_rat expert_improviser fortress_buster infantry_leader infantry_expert trait_engineer }
+			skill = 7
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 6
+		}
+	}
+
+	JAP_Hisaichi_Terauchi={ #Fought in China, FM for Pacific operations, 
+		name = "Hisaichi Terauchi"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Hisaichi_Terauchi
+			}
+		}		
+		field_marshal = { 
+		    desc = "Hisaichi_Terauchi_desc"
+				traits = { naval_invader infantry_leader infantry_expert skirmisher offensive_doctrine organisational_leader naval_liason }
+				skill = 7
+				attack_skill = 7
+				defense_skill = 5
+				planning_skill = 6
+				logistics_skill = 5
+		}		
+	}	
+	
+	JAP_Shunroku_Hata={ #China FM , led Ichi Go, home defense guy
+		name = "Shunroku Hata"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Shunroku_Hata
+			}
+		}		
+		field_marshal = { 
+		    desc = "Shunroku_Hata_desc"
+				traits = { infantry_officer infantry_expert offensive_doctrine aggressive_assaulter bearer_of_artillery  panzer_leader  }
+				skill = 6
+				attack_skill = 6
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 5
+		}		
+	}		
+	
+	JAP_Yasuji_Okamura={ #China General, defensive, scorched earth, 
+		name = "Yasuji Okamura"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Yasuji_Okamura
+			}
+		}		
+		field_marshal = { 
+		    desc = "Yasuji_Okamura_desc"
+				traits = { trait_reckless harsh_leader ranger trait_engineer infantry_leader defensive_doctrine logistics_wizard }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 6
+				planning_skill = 5
+				logistics_skill = 5
+		}		
+	}	
+
+	JAP_Akira_Muto={ #mass murderer, led inf in china and was later a defensive gen in netherlands
+		name = "Akira Muto"
+		portraits={
+			army={
+				large=GFX_portrait_JAP_akira_muto
+				small=GFX_portrait_JAP_akira_muto_small
+			}
+		}
+		corps_commander={
+			desc = "Akira_Muto_desc" 
+				traits = { harsh_leader infantry_leader inflexible_strategist ambusher commando jungle_rat trait_mountaineer }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 6
+				planning_skill = 4
+				logistics_skill = 8
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = japinfman
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	JAP_Shizuichi_Tanaka={ #wuhan, comanded army in philippines and manchuckou
+		name = "Shizuichi Tanaka"
+		portraits={
+			army={
+				large=GFX_portrait_JAP_shizuichi_tanaka
+				small=GFX_portrait_JAP_shizuichi_tanaka_small
+			}
+		}
+		corps_commander={
+			desc = "Shizuichi_Tanaka_desc"
+				traits = { trickster career_officer panzer_leader camouflage_expert hill_fighter infantry_leader }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 5
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = japtankguy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+			army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}	
+		advisor={
+			slot = army_chief
+			idea_token = japtankmanguy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	JAP_Rikichi_Ando={ #commanded garrisons in china and taiwan army
+		name = "Rikichi Ando" #Ando
+		portraits={
+			army={
+				large=GFX_portrait_JAP_rikichi_ando
+				small=GFX_portrait_JAP_rikichi_ando_small
+			}
+		}
+		corps_commander={
+			desc = "Rikichi_Ando_desc" #Ando
+				traits = { infantry_leader ambusher scavenger organizer guerilla_fighter urban_assault_specialist hill_fighter }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 4
+		}
+	}	
+	
+	JAP_Takashi_Sakai={ #took honk honk, did nothing else
+		name = "Takashi Sakai"
+		portraits={
+			army={
+				large=GFX_portrait_JAP_takashi_sakai
+				small=GFX_portrait_JAP_takashi_sakai_small
+			}
+		}
+		corps_commander={
+			desc = "Takashi_Sakai_desc"
+				traits = { urban_assault_specialist infantry_leader infantry_expert brilliant_strategist naval_invader }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 3
+		}
+	}	
+	
+	JAP_Hatazo_Adachi={ #fought in china, later fought in new guinea where he remained entire war, beloved and self sufficient
+		name = "Hatazo Adachi"
+		portraits={
+			army={
+				large=GFX_portrait_JAP_hatazo_adachi
+				small=GFX_portrait_JAP_hatazo_adachi_small
+			}
+		}
+		corps_commander={
+			desc = "Hatazo_Adachi_desc"
+				traits = { naval_invader trait_reckless infantry_expert commando politically_connected adaptable guerilla_fighter }
+				skill = 6
+				attack_skill = 6
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 8
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = japconcealment
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_concealment_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	JAP_masaharu_homma={ #philippines invader, contaminated by western ideas of maneuver warfare and conserving lives of men,  
+		name=JAP_masaharu_homma
+		portraits={
+			army={
+				large=GFX_portrait_JAP_masaharu_homma
+				small=GFX_portrait_JAP_masaharu_homma_small
+			}
+		}
+		advisor={
+			cost = 100
+			idea_token = japtheoristmil
+			slot = theorist
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = { military_theorist }
+		}		
+		corps_commander={
+			desc = "Masaharu_Homma_desc"
+				traits = { politically_connected infantry_leader naval_invader invader_ii trait_mountaineer panzer_leader jungle_rat }
+				skill = 6
+				attack_skill = 6
+				defense_skill = 5
+				planning_skill = 6
+				logistics_skill = 5
+		}
+	}	
+	
+	JAP_Harukichi_Hyakutake={ #fought in solomons entire war
+		name = "Harukichi Hyakutake"
+		portraits={
+			army={
+				large=GFX_portrait_Portrait_Japan_Harukichi_Hyakutake
+				small=GFX_portrait_JAP_masaharu_homma_small
+			}
+		}
+		corps_commander={
+			desc = "Harukichi_Hyakutake_desc"
+				traits = { ambusher trait_reckless infantry_expert commando infantry_leader guerilla_fighter brilliant_strategist }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 5
+				logistics_skill = 5
+		}
+	}	
+	
+	JAP_masatane_kanda={		
+		name=JAP_masatane_kanda
+		portraits={
+			army={
+				large=GFX_portrait_JAP_masatane_kanda
+				small=GFX_portrait_JAP_masatane_kanda_small
+			}
+		}
+		corps_commander={
+			desc = "Masatane_Kanda_desc"
+				traits = { trait_mountaineer infantry_expert harsh_leader ranger trait_engineer trickster career_officer }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = japcommando
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	JAP_isoroku_yamamoto = {
+		name = JAP_isoroku_yamamoto
+		portraits = {
+			navy = {
+				large = GFX_portrait_JAP_isoroku_yamamoto
+				small = GFX_idea_isoroku_yamamoto
+			}
+			civilian = {
+				large = GFX_portrait_JAP_isoroku_yamamoto_scientist
+			}
+		}
+		navy_leader={
+			traits = { aviation_enthusiast bold air_controller flight_deck_manager superior_tactician spotter dive_bomber torpedo_bomber fighter_director blue_water_expert }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 6
+		}
+	}	
+	
+	JAP_mineichi_koga={
+		name=JAP_mineichi_koga
+		portraits={
+			army={
+				large=GFX_portrait_JAP_mineichi_koga
+				small=GFX_portrait_JAP_mineichi_koga_small
+			}
+		}
+		navy_leader={
+			traits = { bold battleship_adherent superior_tactician spotter naval_lineage blockade_runner air_controller blue_water_expert concealment_expert flight_deck_manager smoke_screen_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+
+	JAP_shigeyoshi_inoue={
+		name=JAP_shigeyoshi_inoue
+		portraits={
+			army={
+				large=GFX_portrait_JAP_shigeyoshi_inoue
+				small=GFX_portrait_JAP_shigeyoshi_inoue_small
+			}
+		}
+		navy_leader={
+			traits = { aviation_enthusiast air_controller navy_career_officer cuts_corners blue_water_expert flight_deck_manager fighter_director }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+
+	JAP_nobutake_kondo={
+		name=JAP_nobutake_kondo
+		portraits={
+			army={
+				large=GFX_portrait_JAP_nobutake_kondo
+				small=GFX_portrait_JAP_nobutake_kondo_small
+			}
+		}
+		navy_leader={
+			traits = { battleship_adherent naval_lineage fly_swatter inshore_fighter ironside big_guns_expert ground_pounder gunnery_expert blue_water_expert cruiser_captain }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+
+	JAP_takeo_takagi={
+		name=JAP_takeo_takagi
+		portraits={
+			army={
+				large=GFX_portrait_JAP_takeo_takagi
+				small=GFX_portrait_JAP_takeo_takagi_small
+			}
+		}
+		navy_leader={
+			traits = { spotter seawolf cruiser_captain destroyer_leader superior_tactician }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 3
+		}
+	}
+
+	JAP_soemu_toyoda={
+		name=JAP_soemu_toyoda
+		portraits={
+			navy={
+				small="GFX_idea_soemu_toyoda"
+			}
+			army={
+				large=GFX_portrait_JAP_soemu_toyoda
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = soemu_toyoda
+			ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_capital_ship_3
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		navy_leader={
+			traits = { bold ironside old_guard_navy naval_lineage cuts_corners air_controller big_guns_expert green_water_expert cruiser_captain blue_water_expert }
+			skill = 2
+			attack_skill = 7
+			defense_skill = 0
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+	JAP_jisaburo_ozawa={
+		name=JAP_jisaburo_ozawa
+		portraits={
+			army={
+				large=GFX_portrait_JAP_jisaburo_ozawa
+				small=GFX_portrait_JAP_jisaburo_ozawa_small
+			}
+		}
+		navy_leader={
+			traits = { bold aviation_enthusiast navy_career_officer blockade_runner superior_tactician torpedo_expert lancer loading_drill_master air_controller flight_deck_manager ground_pounder blue_water_expert }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+	}
+
+	JAP_zengo_yoshida={
+		name=JAP_zengo_yoshida
+		portraits={
+			army={
+				large=GFX_portrait_JAP_zengo_yoshida
+				small=GFX_portrait_JAP_zengo_yoshida_small
+			}
+		}
+		navy_leader={
+			traits = { old_guard_navy torpedo_expert battleship_adherent }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			legacy_id=0
+		}
+	}
+
+	JAP_hiroaki_abe={
+		name=JAP_hiroaki_abe
+		portraits={
+			army={
+				large=GFX_portrait_JAP_hiroaki_abe
+				small=GFX_portrait_JAP_hiroaki_abe_small
+			}
+		}
+		navy_leader={
+			traits = { battleship_adherent fleet_protector destroyer_leader blockade_runner }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	JAP_tadashige_daigo={
+		name=JAP_tadashige_daigo
+		portraits={
+			army={
+				large=GFX_portrait_JAP_tadashige_daigo
+				small=GFX_portrait_JAP_tadashige_daigo_small
+			}
+		}
+		navy_leader={
+			traits = { navy_career_officer seawolf cruiser_captain lone_wolf }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}	
+	
+	JAP_gengo_hyakutake={
+		name=JAP_gengo_hyakutake
+		portraits={
+			army={
+				large=GFX_portrait_JAP_gengo_hyakutake
+				small=GFX_portrait_JAP_gengo_hyakutake_small
+			}
+		}
+		navy_leader={
+			traits = { gentlemanly JAP_samurai_lineage battleship_adherent inshore_fighter }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}	
+}

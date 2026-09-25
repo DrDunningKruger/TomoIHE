@@ -1,0 +1,172 @@
+
+
+#	create_corps_commander = { #ROLE random dipshit
+#		name = "Kodandera Subayya Thimayya" #first indian to command a division, jungle fighter, 
+#		desc = "Kodandera_Subayya_Thimayya_desc" #
+#		picture = "Kodendera_Subayya_Thimayya.dds"
+#		traits = { career_officer jungle_rat ranger trickster infantry_expert politically_connected  }
+#		skill = 4
+#		attack_skill = 4
+#		defense_skill = 4
+#		planning_skill = 4
+#		logistics_skill = 4
+#	}	
+	
+
+#create_corps_commander = { #ROLE Desert Staffer
+#	name = "Pran Nath Thapar" #fought in burma, and then desert and italy
+#	picture = "Pran_Nath_Thapar.dds"
+#	traits = { hill_fighter infantry_leader skilled_staffer trickster old_guard }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 4
+#}
+
+#####################################
+#####################################
+#####################################
+
+#create_corps_commander = { #ROLE offensive mountaineer 
+#	name = "Mohammad Usman" #fought tribesmen in north and with infantry in burma
+#	picture = "Mohammad_Usman.dds"
+#	traits = { infantry_leader trait_mountaineer trait_engineer media_personality cavalry_officer }
+#	skill = 5
+#	attack_skill = 7
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE  hill fighter 
+#	name = "Ajit Rudra" #ww1, survived battle of somme,  fought in burma
+#	picture = "Ajit_Rudra.dds"
+#	traits = { war_hero ranger old_guard organizer hill_fighter cavalry_officer }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 3
+#}
+
+#create_corps_commander = { #ROLE adaptable infantryman
+#	name = "Akbar Khan" #fought war agains tribe in pakistain before ww2, served in infantry in burma during ww2
+#	picture = "Akbar_Khan.dds"
+#	traits = { war_hero trait_mountaineer jungle_rat adaptable commando infantry_officer  }
+#	skill = 4
+#	attack_skill = 5
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE burma infantryman
+#	name = "David Tennant Cowan" #well informed, led infantry through burma campaign
+#	picture = "David_Tennant_Cowan.dds"
+#	traits = { war_hero infantry_leader trickster commando jungle_rat guerilla_fighter }
+#	skill = 5
+#	attack_skill = 6
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE invader 
+#	name = "Francis Tuker" #ww1 and indian conflicts, comanded his division in western desert and italy, sent to burma to finish the japs off in 45
+#	picture = "Francis_Tuker.dds"
+#	traits = { war_hero career_officer trait_mountaineer desert_fox ranger naval_invader  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 6
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE desert motorized 
+#	name = "Rajendrasinhji Jadeja" #commander of 3rd Indian Motor Brigade in desert
+#	picture = "Maharaja_Rajendrasinhji_Jadeja.dds"
+#	traits = { guerilla_fighter brilliant_strategist cavalry_leader cavalry_expert desert_fox trickster   }
+#	skill = 5
+#	attack_skill = 6
+#	defense_skill = 6
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE desert infantryman
+#	name = "Thomas Wynford Rees" #ww1, big success in early desert war and east africa, fast and aggressive commander
+#	picture = "Thomas_Wynford_Rees.dds"
+#	traits = { war_hero desert_fox trickster brilliant_strategist infantry_leader }
+#	skill = 6
+#	attack_skill = 7
+#	defense_skill = 6
+#	planning_skill = 6
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE motor/mech guy for burma 
+#	name = "Gopal Gurunath Bewoor" #saw action in burma 
+#	picture = "Gopal_Gurunath_Bewoor.dds"
+#	traits = { infantry_officer hill_fighter guerilla_fighter cavalry_leader trait_engineer cavalry_expert }
+#	skill = 4
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE artilleryman 
+#	name = "P.P. Kumaramangalam" #artillery brigade commander who distinguished himself in libya
+#	picture = "P.P._Kumaramangalam.dds"
+#	traits = { bearer_of_artillery desert_fox organizer career_officer politically_connected camouflage_expert } 
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 2
+#	logistics_skill = 3
+#}
+#
+
+#	create_corps_commander = { #ROLE no pain no gain 
+#		name = "Sam Manekshaw"  #fought in burma, near some kind of river, took important location despite his brigade suffering massive losses and being gunned down by machinegun
+#		picture = "Sam_Manekshaw.dds"
+#		traits = { war_hero harsh_leader ambusher trait_engineer trait_reckless }
+#		skill = 3
+#		attack_skill = 8
+#		defense_skill = 1
+#		planning_skill = 2
+#		logistics_skill = 3
+#	}
+#	create_corps_commander = { #ROLE jungle camo exp
+#		name = "S.M. Shrinagesh" #fought in burma at the end of the war
+#		picture = "S.M._Shrinagesh.dds"
+#		traits = { ranger jungle_rat trait_engineer scavenger infantry_leader camouflage_expert }
+#		skill = 4
+#		attack_skill = 5
+#		defense_skill = 4
+#		planning_skill = 6
+#		logistics_skill = 5
+#	}
+
+#create_corps_commander = { #traitor, switched side to japs
+#	name = "Shah Nawaz"
+#	picture = "Shah_Nawaz.dds"
+#	traits = { career_officer politically_connected  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 1
+#	logistics_skill = 3
+#}
+#
+#create_corps_commander = { #traitor, switched side to japs
+#	name = "Gurbaksh Singh Dhillon"
+#	picture = "Gurbaksh_Singh_Dhillon.dds"
+#	traits = {  }
+#	skill = 1
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}

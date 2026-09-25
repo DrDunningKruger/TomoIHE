@@ -1,0 +1,122 @@
+﻿capital = 613 # Nanjing
+
+oob = "CHI_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "CHI_1936_naval_mtg"
+	else = {
+		set_naval_oob = "CHI_1936_naval_legacy"
+	}
+}
+
+create_faction = China
+
+set_stability = 0.2
+set_war_support = 0.5
+set_fuel_ratio = 1.0
+# Starting tech
+set_technology = {
+    cap_everyone = 1
+	infantry_weapons = 1
+	interwar_antiair = 1
+	armored_car1 = 1	
+	fuel_silos = 1	
+	basic_train = 1	
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+}
+
+add_ideas = {
+	german_advisors
+	training_spirit
+	scripted_china
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	add_ideas = {
+		CHI_communist_uprisings
+	}
+}
+
+
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}		
+	add_ideas = {
+		CHI_nine_power_treaty
+		CHI_army_corruption_1
+		CHI_ineffective_bureaucracy
+		CHI_incompetent_officers
+		free_trade
+		CHI_hyper_inflation_1
+	}
+}
+save_global_event_target_as = WTT_current_china_leader
+
+set_convoys = 60
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+recruit_character = CHI_chiang_kaishek
+recruit_character = CHI_zhang_guotao
+recruit_character = CHI_wang_jingwei
+recruit_character = CHI_weng_wenhao
+recruit_character = CHI_fang_zeyi
+recruit_character = CHI_zhu_de
+recruit_character = CHI_chen_cheng
+recruit_character = CHI_li_zongren
+recruit_character = CHI_bo_yibo
+recruit_character = CHI_huang_shen
+recruit_character = CHI_chen_jitang
+recruit_character = CHI_wang_shuming
+recruit_character = CHI_bai_chongxi
+recruit_character = CHI_zhou_zhirou
+recruit_character = CHI_xiao_yisu
+recruit_character = CHI_chen_shaokuan
+recruit_character = CHI_xiao_jinguang
+recruit_character = CHI_yu_hanmou
+recruit_character = CHI_he_yingqin
+recruit_character = CHI_gao_zhihang
+recruit_character = CHI_h_h_kung
+recruit_character = CHI_chen_guofu
+recruit_character = CHI_chiang_ching_kuo
+recruit_character = CHI_chen_yi
+recruit_character = CHI_soong_mei_ling
+recruit_character = CHI_random_prince_of_terror
+recruit_character = CHI_lin_sen
+
+
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 130 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1000 }	

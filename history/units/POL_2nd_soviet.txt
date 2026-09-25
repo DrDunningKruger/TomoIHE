@@ -1,0 +1,155 @@
+division_template = {
+	name = "5th Heavy Tank Regiment"		
+	is_locked = no
+	division_names_group = POL_ARM_01
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }
+		heavy_armor = { x = 0 y = 3 }
+		heavy_armor = { x = 0 y = 4 }
+		heavy_armor = { x = 1 y = 0 }
+		heavy_armor = { x = 1 y = 1 }
+		heavy_armor = { x = 1 y = 2 }
+		heavy_armor = { x = 1 y = 3 }
+		heavy_armor = { x = 1 y = 4 }		
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 2 y = 4 }	
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		mot_anti_air_brigade = { x = 4 y = 0 } 
+		mot_anti_air_brigade = { x = 4 y = 1 }
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "28th Armoured Artillery"	
+	is_locked = no
+	division_names_group = POL_ARM_BRIGADE_01
+	regiments = {
+		heavy_sp_artillery_brigade = { x = 0 y = 0 }
+		heavy_sp_artillery_brigade = { x = 0 y = 1 }
+		heavy_sp_artillery_brigade = { x = 0 y = 2 }
+		heavy_sp_artillery_brigade = { x = 0 y = 3 }
+		heavy_sp_artillery_brigade = { x = 0 y = 4 }
+		heavy_sp_artillery_brigade = { x = 1 y = 0 }	
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 2 y = 4 }	
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		motorized = { x = 3 y = 4 }		
+		mot_anti_air_brigade = { x = 4 y = 0 } 
+		mot_anti_air_brigade = { x = 4 y = 1 }
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Second Polish Army"			
+	is_locked = no
+	division_names_group = POL_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }		
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 	
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "5th Saxonian Division"
+		location = 228
+		division_template = "Infantry Division"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "7th Infantry Division"
+		location = 228
+		division_template = "Infantry Division"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Wojciech Bartosz Głowacki"
+		location = 228
+		division_template = "Infantry Division"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "9th Infantry Division"
+		location = 228
+		division_template = "Infantry Division"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "10th Infantry Division"
+		location = 228
+		division_template = "Infantry Division"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Dresden Armored Corps"
+		location = 228
+		division_template = "Korpus Pancerny"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "16th Tank Brigade"
+		location = 228
+		division_template = "Korpus Pancerny"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}	
+	division = {
+		name = "5th Heavy Tank Regiment"
+		location = 228
+		division_template = "5th Heavy Tank Regiment"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "28th Armoured Artillery"
+		location = 228
+		division_template = "28th Armoured Artillery"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}	
+}

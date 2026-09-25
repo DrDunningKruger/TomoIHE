@@ -1,0 +1,30 @@
+
+
+#create_corps_commander = { #pre war chief of staff, did nothing else?
+#	name = "Aarne Sihvo"
+#	picture = "aarne_sihvo.dds"
+#	traits = {  }
+#	skill = 5
+#    attack_skill = 5
+#    defense_skill = 5
+#    planning_skill = 5
+#    logistics_skill = 5
+#}
+
+
+#create_corps_commander = { #fired from army after drinking himself to death
+#	name = "Kurt Martti Wallenius"
+#	desc = "Kurt_Martti_Wallenius_desc"
+#	picture = "kurt_martti_wallenius.dds"
+#	traits = { winter_specialist swamp_fox infantry_leader substance_abuser }
+#	skill = 4
+#    attack_skill = 4
+#    defense_skill = 4
+#    planning_skill = 5
+#    logistics_skill = 5
+#}
+
+
+
+
+

@@ -1,0 +1,81 @@
+JAP_interservice_rivalry_bop = {
+	initial_value = 0
+	left_side = JAP_rivalry_navy_side
+	right_side = JAP_rivalry_army_side
+	decision_category = JAP_interservice_rivalry
+
+	range = { #Balanced Range, neither Navy nor Army
+		id = JAP_rivalry_balanced
+		min = -0.20
+		max = 0.20
+		modifier = {
+			
+		}
+	}
+
+	side = {
+		id = JAP_rivalry_army_side
+		icon = GFX_idea_jap_interservice_rivalry_army_dominant
+
+		range = {
+			id = JAP_rivalry_army_dominant
+			min = 0.60
+			max = 1
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = -0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = -0.2
+				naval_doctrine_cost_factor = 0.1
+				land_doctrine_cost_factor = -0.05
+			}		
+		}
+		
+		range = {
+			id = JAP_rivalry_army_strengthened
+			min = 0.20
+			max = 0.60
+			modifier = {
+				war_support_factor = -0.15
+				political_advisor_cost_factor = -0.75
+				surrender_limit	= 0.4
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = -0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+	}
+
+	side = {
+		id = JAP_rivalry_navy_side
+		icon = GFX_idea_jap_interservice_rivalry_navy_dominant
+
+		range = {
+			id = JAP_rivalry_navy_dominant
+			min = -1
+			max = -0.60
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = 0.2
+				planning_speed = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = 0.1
+				land_doctrine_cost_factor = 0.1
+				naval_doctrine_cost_factor = -0.05			
+			}
+		}
+
+		range = {
+			id = JAP_rivalry_navy_strengthened
+			min = -0.60
+			max = -0.20
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+	}
+} 

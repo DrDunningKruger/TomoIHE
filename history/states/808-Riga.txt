@@ -1,0 +1,30 @@
+
+state={
+	id=808
+	name="STATE_808"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = SWI
+		victory_points = {
+			5169 5 
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 10
+			5169 = {
+				naval_base = 3
+			}
+
+		}
+	}
+
+	provinces={
+		 5121 5169 9240 9340 10323 12954
+	}
+	manpower=420250
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,153 @@
+# ai_strategy
+
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+ 
+
+IEA_prepare_for_war_strategy = {
+	allowed = { original_tag = IEA }
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+	
+	# defending eritrea and amara
+	ai_strategy = {
+
+		type = put_unit_buffers
+		ratio = 0.3
+		states = {
+			550
+			271
+		}
+		subtract_fronts_from_need = no
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+		state = 550 # Eritrea
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 271 # Amara
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 838 #Gall Sidoma
+		value = 0
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 837 #Harrar
+		value = 0
+	}
+	ai_strategy = { 
+		type = front_unit_request
+		state = 559 # Somaliland
+		value = 0
+	}	
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 0
+	}
+	
+
+
+}
+
+
+IEA_front_def = {
+	allowed = { original_tag = IEA }
+	enable = {
+		has_war = yes
+		NOT = { any_neighbor_country = { is_in_faction_with = GER } }
+	}
+	abort = {
+		or = {
+			NOT = {	has_war = yes }
+			any_neighbor_country = { is_in_faction_with = GER }
+		}
+	}
+
+	ai_strategy = {
+		type = front_control
+		ratio = 0.8
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+	ai_strategy = { # take djibouti
+		type = front_control
+		state = 268
+		ratio = 0.7
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = no
+	}
+}
+
+IEA_front_off = {
+	allowed = { original_tag = IEA }
+	enable = {
+		has_war = yes
+		any_neighbor_country = { is_in_faction_with = GER }
+	}
+	abort = {
+		or = {
+			NOT = {	has_war = yes }
+			NOT = { any_neighbor_country = { is_in_faction_with = GER } }
+		}
+	}
+
+	ai_strategy = {
+		type = front_control
+		ratio = 0.8
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+		manual_attack = no
+	}
+}
+
+
+
+IEA_scorching = {
+	allowed = { original_tag = IEA }
+	enable = {
+		has_war = yes
+		NOT = { any_neighbor_country = { is_in_faction_with = GER } }
+	}
+	abort = {
+		or = {
+			NOT = {	has_war = yes }
+			any_neighbor_country = { is_in_faction_with = GER }
+		}
+	}
+
+	ai_strategy = {
+		type = scorched_earth_prio
+		value = 100
+		states = {
+			838
+			559
+			837
+		}
+	}
+}

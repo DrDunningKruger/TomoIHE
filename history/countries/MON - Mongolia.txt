@@ -1,0 +1,106 @@
+capital = 330
+
+oob = "MON_1936"
+set_research_slots = 3
+set_fuel_ratio = 1.0
+# Starting tech
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	armored_car1 = 1
+	infantry_weapons = 1
+	gw_artillery = 1
+	mobile_warfare = 1
+	motorised_infantry = 1
+	
+    armored_car2 = 1	
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	interwar_antiair = 1	
+	fuel_silos = 1
+	fuel_refining = 1	
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1
+	engine_tech_1 = 1
+    engine_tech_2 = 1
+    new_tank_guns = 1
+	armor_tech_1 = 1
+	armor_tech_2 = 1
+	tank_aa_guns = 1	
+	radio_tech_1 = 1
+	amphibious_drive = 1
+	tank_improved_guns = 1
+	amphibious_tank_chassis = 1
+    soviet_armor_pack = 1		
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1
+	electronics_2 = 1			
+}
+
+add_ideas = {
+    training_spirit
+	limited_conscription
+    MON_Rogue_state
+    MON_Rual_population
+	war_communism
+}
+
+set_convoys = 100
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = comintern_research
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 100
+}
+recruit_character = MON_anandyn_amar
+recruit_character = MON_mingzhu_zhanshan
+recruit_character = MON_fu_shangzhi
+recruit_character = MON_songgotu_kangan
+recruit_character = MON_haidav
+recruit_character = MON_dagva
+recruit_character = MON_chimid
+recruit_character = MON_sukhbaataryn_yanjmaa
+recruit_character = MON_ulanhu
+recruit_character = MON_lee_shou_hsin
+recruit_character = MON_buyannmeh
+recruit_character = MON_olziytrygyn_badrak
+recruit_character = MON_gomgchigryn_bumtsend
+recruit_character = MON_dansrabilegyin_dogsam
+recruit_character = MON_yundunwangcug
+recruit_character = MON_pai_yun_ti
+recruit_character = MON_buyannmeh2
+recruit_character = MON_buyannmeh3
+recruit_character = MON_random
+recruit_character = MON_Butochiyn_Tsog
+recruit_character = MON_Temujin_Batzorig
+recruit_character = MON_lkhagvasuren_jamiyanharry
+recruit_character = MON_Gelegdorjiin_Demid
+recruit_character = MON_Yumjaagiin_Tsedenbal
+recruit_character = MON_khorloogiin_choibalsan
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	
+	
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+}

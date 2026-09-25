@@ -1,0 +1,755 @@
+characters={
+	FIN_risto_heikki_ryti={
+		name=FIN_risto_heikki_ryti
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Risto_Heikki_Ryti.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FIN_aimo_aaltonen={
+		name=FIN_aimo_aaltonen
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FIN_vilho_annala={
+		name=FIN_vilho_annala
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FIN_kyosti_kallio={
+		name=FIN_kyosti_kallio
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Kyosti_Kallio.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FIN_carl_mannerheim={
+		name=FIN_carl_mannerheim
+		portraits={
+			army={
+				large="gfx/leaders/FIN/portrait_fin_carl_mannerheim.dds"
+				small="GFX_idea_carl_mannerheim"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = FIN_carl_mannerheim
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			desc = "Carl_Gustaf_Emil_Mannerheim_desc"
+			traits = { inflexible_strategist defensive_doctrine politically_connected winter_specialist fortress_buster camouflage_expert  }
+			skill = 7
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 5
+		}		
+	}
+
+
+	### THEORISTS ###
+
+	FIN_akseli_anttila={
+		name=FIN_akseli_anttila
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = FIN_akseli_anttila
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = {
+				military_theorist
+			}
+		}		
+	}
+
+	FIN_vaino_valve={
+		name=FIN_vaino_valve
+		portraits={
+			army={
+				small = GFX_portrait_FIN_vaino_valve_small
+				large = GFX_portrait_Vaino_Valve
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = FIN_vaino_valve
+			ledger = navy
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+        navy_leader = {
+			traits = { fleet_protector inshore_fighter seawolf spotter silent_hunter destroyer_leader hunter_killer arctic_water_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 5		
+		}		
+	}
+	
+	FIN_airdude={
+		name=FIN_vaino_valve
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			ledger = air
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}		
+	}
+
+
+	### ARMY CHIEFS ###
+
+	# Mannerheim up there
+
+	FIN_lauri_malmberg={
+		name=FIN_lauri_malmberg
+		portraits={
+			army={
+				small = GFX_portrait_FIN_lauri_malmberg_small
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = FIN_lauri_malmberg
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FIN_hugo_osterman={
+		name=FIN_hugo_osterman
+		portraits={
+			army={
+				small = GFX_portrait_FIN_hugo_osterman_small
+			}
+		}
+		advisor={			
+			slot = army_chief
+			idea_token = FIN_hugo_osterman
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+
+	### NAVY CHIEFS ###
+
+	FIN_olavi_arho={
+		name=FIN_olavi_arho
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = FIN_olavi_arho
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FIN_eero_rahola={
+		name=FIN_eero_rahola
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = FIN_eero_rahola
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### AIR CHIEFS ###
+
+	FIN_jarl_lundqvist={
+		name=FIN_jarl_lundqvist
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = FIN_jarl_lundqvist
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	FIN_olavi_sarko={
+		name=FIN_olavi_sarko
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = FIN_olavi_sarko
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	FIN_valio_porvari={
+		name=FIN_valio_porvari
+		portraits={
+			army={
+				small = GFX_portrait_FIN_valio_porvari_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FIN_valio_porvari
+			ledger = air
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_pilot_ace_trainer 
+				air_chief_fighter_bomber
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FIN_lauri_tiainen={
+		name=FIN_lauri_tiainen
+		portraits={
+			army={
+				small = GFX_portrait_FIN_lauri_tiainen_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FIN_lauri_tiainen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FIN_harald_ohquist={
+		name=FIN_harald_ohquist
+		portraits={
+			army={
+				small = GFX_portrait_FIN_harald_ohquist_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FIN_harald_ohquist
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_artillery_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	FIN_ralf_torngren={
+		name=FIN_ralf_torngren
+		portraits={
+			army={
+				small = GFX_portrait_FIN_ralf_torngren_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FIN_ralf_torngren
+			allowed  = {
+				original_tag  = FIN
+			}
+			traits  = {
+				war_industrialist
+			}
+		}		
+	}	
+	
+	FIN_hilja_riipinen = {
+		name = FIN_hilja_riipinen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_hilja_riipinen_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FIN_monarchist_media_mogul
+			allowed  = {
+				original_tag  = FIN
+			}
+			traits  = {
+				monarchist_media_mogul
+				education_reformer
+			}
+		}
+	}	
+	
+	FIN_vilho_helanen = {
+		name = FIN_vilho_helanen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_vilho_helanen_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FIN_reluctant_veteran
+			allowed  = {
+				original_tag  = FIN
+			}
+			traits  = {
+				veteran_anti_bolshevik
+				desperate_gambit
+			}
+		}	
+	}	
+	
+	FIN_svante_sundman = {
+		name = FIN_svante_sundman
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_svante_sundman
+				small = GFX_portrait_FIN_svante_sundman_small
+			}
+		}
+		navy_leader = {
+			traits = { fleet_protector inshore_fighter ironside gunnery_expert bold superior_tactician fly_swatter arctic_water_expert cruiser_captain destroyer_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 3
+			legacy_id = 0
+		}
+	}	
+
+	FIN_ake_henrik_gartz={
+		name=FIN_ake_henrik_gartz
+		portraits={
+			army={
+				small = GFX_portrait_FIN_ake_henrik_gartz_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FIN_ake_henrik_gartz
+			allowed  = {
+				original_tag  = FIN
+			}
+			traits  = {
+				captain_of_industry 
+			}
+		}		
+	}
+
+	FIN_antti_hackzell={
+		name=FIN_antti_hackzell
+		portraits={
+			army={
+				small = GFX_portrait_FIN_antti_hackzell_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FIN_antti_hackzell
+			allowed  = {
+				original_tag  = FIN
+			}
+			traits  = {
+				militant_minister
+			}
+		}		
+	}
+
+	FIN_aksel_airo = {# 2nd in command of finnish army, important planner, artillery expert, paper pusher
+		name = FIN_aksel_airo
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_aksel_airo
+				small = GFX_portrait_FIN_aksel_airo_small
+			}
+		}
+		field_marshal = {
+			desc = "Aksel_Fredrik_Airo_desc"
+			traits = { defensive_doctrine logistics_wizard ranger winter_specialist thorough_planner infantry_leader }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 7
+			logistics_skill = 5
+			legacy_id = -1
+		}
+		advisor = {			
+			slot = army_chief
+			idea_token = FIN_aksel_airo
+			allowed = {
+				original_tag = FIN
+			}
+			available = {
+
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	
+	FIN_ruben_lagus = { #led armored division
+		name = FIN_ruben_lagus
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_ruben_lagus
+				small = GFX_portrait_FIN_ruben_lagus_small
+			}
+		}
+		corps_commander = {
+			desc = "Ruben_Lagus_desc"
+			traits = { panzer_leader scavenger panzer_expert trait_engineer winter_specialist camouflage_expert ranger }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 6
+			legacy_id = -1
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = fintankguy
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FIN_erik_heinrichs = { #offensive inf fm army of karelia
+		name = FIN_erik_heinrichs
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_erik_heinrichs
+				small = GFX_portrait_FIN_erik_heinrichs_small
+			}
+		}
+		field_marshal = {
+			desc = "Erik_Heinrichs_desc"
+			traits = { aggressive_assaulter offensive_doctrine winter_specialist ranger panzer_leader infantry_leader  }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+		}
+	}	
+	
+	FIN_vilho_petter_nenonen = { #artillery genious
+		name = FIN_vilho_petter_nenonen
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_vilho_petter_nenonen
+				small = GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander = {
+			desc = "Vilho_Petter_Nenonen_desc"
+			traits = { winter_specialist bearer_of_artillery organizer scavenger fortress_buster war_hero }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = -1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = FIN_vilho_petter_nenonen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_artillery_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	FIN_erkki_raappana = { #forest warfare expert, defense expert
+		name = FIN_erkki_raappana
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_erkki_raappana
+				small = GFX_portrait_FIN_erkki_raappana_small
+			}
+		}
+		corps_commander = {
+			desc = "Erkki_Raappana_desc"
+			traits = { winter_specialist winter_expert ranger infantry_leader trickster guerilla_fighter }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 7
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+
+	FIN_hjalmar_siilasvuo = { #fought in central finland
+		name = FIN_hjalmar_siilasvuo
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_hjalmar_siilasvuo
+				small = GFX_portrait_FIN_hjalmar_siilasvuo_small
+			}
+		}
+		corps_commander = {
+			desc = "Hjalmar_Fridolf_Siilasvuo_desc"
+			traits = { winter_specialist ranger infantry_expert winter_expert commando skirmisher }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}	
+	
+	FIN_karl_oesch = {
+		name = FIN_karl_oesch
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_karl_lennart_oesch
+				small = GFX_portrait_FIN_karl_oesch_small
+			}
+		}
+
+		corps_commander = { #coastal commander, invader
+			desc = "Karl_Lennart_Oesch_desc"
+			traits = { winter_specialist infantry_leader naval_liason naval_invader infantry_expert skirmisher }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id = -1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = FIN_karl_oesch
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			available = {
+				
+			}
+			traits = {
+				army_regrouping_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	FIN_paavo_talvela = { #general of the infantry
+		name = FIN_paavo_talvela
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_paavo_talvela
+				small = GFX_portrait_FIN_paavo_talvela_small
+			}
+		}
+		corps_commander = {
+			desc = "Paavo_Talvela_desc"
+			traits = { infantry_leader infantry_expert ranger urban_assault_specialist trait_engineer scavenger }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id = -1
+		}
+	}
+
+	FIN_wiljo_einar_tuompo = { #northern finnish commander
+		name = FIN_wiljo_einar_tuompo
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_wiljo_einar_tuompo
+				small = GFX_portrait_FIN_wiljo_einar_tuompo_small
+			}
+		}
+		corps_commander = {
+			desc = "Wiljo_Tuompo_desc"
+			traits = { ranger winter_expert winter_specialist ambusher swamp_fox }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}	
+}

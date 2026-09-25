@@ -1,0 +1,32 @@
+
+state={
+	id=663
+	name="STATE_663"
+	resources={
+		oil=13.000
+	}
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			13323 10 
+		}	
+
+		victory_points = {
+			13314 1
+		}
+
+	}
+
+	provinces={
+		13275 13314 13316 13317 13318 13320 13321 13322 13323 
+	}
+	manpower=8808
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

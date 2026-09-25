@@ -1,0 +1,226 @@
+﻿###########################
+# Hungarian Events
+###########################
+
+add_namespace = DOD_hungary
+
+#everything is fine, Hungary permitted to rearm
+country_event = {
+	id = DOD_hungary.31
+	title = DOD_hungary.31.t
+	desc = DOD_hungary.31.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = HUN_rearmament_refused
+		}
+	}
+
+	option = { #cool
+		name = DOD_hungary.31.a
+		swap_ideas = {
+			remove_idea = HUN_treaty_of_triannon
+			add_idea = Hun_treaty_of_triannon_2
+		}
+	}
+
+}
+
+#Bled Agreement - HUN permitted to rearm
+country_event = {
+	id = DOD_hungary.142
+	title = DOD_hungary.142.t
+	desc = DOD_hungary.142.desc 
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+
+	option = {# 
+		name = DOD_hungary.142.a
+		if = {
+			limit = { has_idea = HUN_treaty_of_triannon }
+			swap_ideas = {
+				remove_idea = HUN_treaty_of_triannon
+				add_idea = HUN_treaty_of_triannon_3
+			}
+		}
+		if = {
+			limit = { has_idea = HUN_treaty_of_triannon_2 }
+			swap_ideas = {
+				remove_idea = HUN_treaty_of_triannon_2
+				add_idea = HUN_treaty_of_triannon_3
+			}
+		}
+	}
+	
+}
+
+#Rearmament denied - appeal to major democratic nations?
+country_event = {
+	id = DOD_hungary.32
+	title = DOD_hungary.32.t
+	desc = DOD_hungary.32.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #do nothing, people get very angry and upset
+		name = DOD_hungary.32.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				threat < 0.1
+				factor = 2
+			}
+		}
+		add_stability = -0.2
+		add_war_support = -0.1
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		add_popularity = { ideology = communism popularity = 0.1 }
+	}
+
+
+	option = { #approach France
+		name = DOD_hungary.32.b
+		ai_chance = {
+			factor = 45
+		}
+		trigger = {
+			FRA = {
+				NOT = { has_war_with = HUN }
+				has_government = democratic
+			}
+		}
+		FRA = { 
+			country_event = { id = DOD_hungary.33 hours = 12 } 
+		}
+	}
+	option = { #approach Britain
+		name = DOD_hungary.32.c
+		ai_chance = {
+			factor = 45
+			modifier = {
+				ENG = { has_completed_focus = uk_balkan_strategy }
+				factor = 2
+			}
+		}
+		trigger = {
+			ENG = {
+				NOT = { has_war_with = HUN }
+				has_government = democratic
+			}
+		}
+		ENG = { 
+			country_event = { id = DOD_hungary.33 hours = 12 } 
+		}
+	}
+
+}
+
+#Hungary calls for support to allow rearmament
+country_event = {
+	id = DOD_hungary.33
+	title = DOD_hungary.33.t
+	desc = DOD_hungary.33.desc
+	picture = GFX_report_event_generic_politician_speech
+	
+	is_triggered_only = yes
+
+	option = { #allow
+		name = DOD_hungary.33.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 10
+			}
+		}
+		every_country = {
+			limit = {
+				exists = yes
+				has_country_flag = HUN_refused #goes to the country that originally refused
+			}
+			country_event = { id = DOD_hungary.34 }
+		}
+	}
+
+
+	option = { #deny
+		name = DOD_hungary.33.b
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				threat < 0.2
+				factor = 2 #not yet
+			}
+		}
+		
+		HUN = { country_event = { id = DOD_hungary.35 hours = 12 } }
+	}
+
+}
+
+#major nation supports Hungary
+country_event = {
+	id = DOD_hungary.34
+	title = DOD_hungary.34.t
+	desc = DOD_hungary.34.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { #fold
+		ai_chance = {
+			factor = 90
+		}
+		name = DOD_hungary.34.a
+		HUN = { 
+			country_event = { id = DOD_hungary.31 days = 3 } 
+			clr_country_flag = HUN_rearmament_refused
+		}
+	}
+
+
+	option = { #stand ground
+		name = DOD_hungary.34.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				threat < 0.2
+				factor = 2
+			}
+		}
+		add_threat = 1
+		HUN = { set_country_flag = HUN_rearmament_refused }
+		
+		reverse_add_opinion_modifier = { target = FROM modifier = HUN_stubborn_fools }
+
+		add_relation_modifier = {
+				target = FROM
+				modifier = HUN_stubborn_fools
+			}
+		
+		HUN = { country_event = { id = DOD_hungary.36 hours = 12 } }
+	}
+
+}
+
+#major nation refuses to support Hungary
+country_event = {
+	id = DOD_hungary.35
+	title = DOD_hungary.35.t
+	desc = DOD_hungary.35.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = { #mean!
+		name = DOD_hungary.35.a
+		
+	}
+
+}

@@ -1,0 +1,2173 @@
+focus_tree = {
+	id = NEWGREEKTREE
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GRE
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 1800 y = 950 }	
+	
+	#Focus for Focus on the H.A.F
+	focus = {
+		id = GRE_focus_on_the_haf
+		icon = GFX_greamredforces
+		cost = 5.00
+		x = 11
+		y = 0
+		
+			available = {
+			   has_completed_focus = GRE_appoint_metaxas_as_defence_minister
+			}		
+		
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 50
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.50
+							uses = 1
+							category = land_doctrine
+						}
+				}
+	}
+
+	#Focus for Greek General Staff
+	focus = {
+		id = GRE_greek_general_staff
+		icon = GFX_GRE_army
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_focus_on_the_haf
+		}
+		x = 6
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_greek_general_staff
+				}
+	}
+
+	#Focus for Tackle the Italian Threat
+	focus = {
+		id = GRE_tackle_the_italian_threat
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_greek_general_staff
+		}
+		x = 6
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_war_support = 0.05
+					army_experience = 100
+				}
+	}
+
+	#Focus for Adopt the Papagos Plan
+	focus = {
+		id = GRE_adopt_the_papagos_plan
+		icon = GFX_GRE_soldiers
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_tackle_the_italian_threat
+		}
+		mutually_exclusive = {
+			focus = GRE_adopt_the_tsolakoglou_strategy
+		}
+		x = 3
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 100
+					add_doctrine_cost_reduction = {
+							name = land_doc_bonus
+							cost_reduction = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+	}
+
+	#Focus for Adopt the Tsolakoglou Strategy
+	focus = {
+		id = GRE_adopt_the_tsolakoglou_strategy
+		icon = GFX_GRE_motor
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_tackle_the_italian_threat
+		}
+		mutually_exclusive = {
+			focus = GRE_adopt_the_papagos_plan
+		}
+		x = 9
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 100
+					add_doctrine_cost_reduction = {
+							name = land_doc_bonus
+							cost_reduction = 0.5
+							uses = 1
+							category = land_doctrine
+						}						
+				}
+	}
+
+	#Focus for Upgrade the Mannlicher 1903
+	focus = {
+		id = GRE_upgrade_the_mannlicher_1903
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_adopt_the_papagos_plan
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRE_adopt_the_papagos_plan
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_bonus
+							bonus = 1.0
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+	}
+
+	#Focus for Superior Planning
+	focus = {
+		id = GRE_superior_planning
+		icon = GFX_GRE_planning
+		cost = 4.00
+		prerequisite = {
+			focus = GRE_upgrade_the_mannlicher_1903
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRE_upgrade_the_mannlicher_1903
+			available_if_capitulated = yes
+			completion_reward = {
+					every_army_leader = {
+							add_planning = 1
+						}
+				}
+	}
+
+	#Focus for Pack Artillery
+	focus = {
+		id = GRE_pack_artillery
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_superior_planning
+		}
+		x = -1
+		y = 1
+		relative_position_id = GRE_superior_planning
+			available_if_capitulated = yes
+			completion_reward = {
+					custom_effect_tooltip = RAJ_revive_the_screw_guns_effect
+					add_tech_bonus = {
+							name = artillery_bonus
+							bonus = 1.0
+							uses = 1
+							category = artillery
+						}
+				}
+	}
+
+	#Focus for Anti Tank Warfare
+	focus = {
+		id = GRE_anti_tank_warfare
+		icon = GFX_AST_atgun
+		cost = 4.00
+		prerequisite = {
+			focus = GRE_superior_planning
+		}
+		x = -2
+		y = 4
+		relative_position_id = GRE_tackle_the_italian_threat
+			available_if_capitulated = yes
+			completion_reward = {
+			add_tech_bonus = {
+				name = ROM_modern_at_guns
+				bonus = 1.0
+				uses = 2
+				technology = antitank4
+				technology = antitank5
+			}
+				}
+	}
+
+	#Focus for Motorization of the Army
+	focus = {
+		id = GRE_motorization_of_the_army
+		icon = GFX_USA_armored
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_adopt_the_tsolakoglou_strategy
+		}
+		x = 10
+		y = 4
+			bypass = {
+					has_tech = motorised_infantry
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+			if = { limit = { not = { has_tech = motorised_infantry } }
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+			}
+			add_tech_bonus = {
+				name = SAF_q_services_corps
+				bonus = 1.0
+				uses = 1
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+				technology = mechanised_infantry
+				technology = mechanised_infantry2
+				technology = mechanised_infantry3
+				technology = amphibious_mechanized_infantry
+				technology = amphibious_mechanized_infantry_2
+			}
+				}
+	}
+
+	#Focus for Hellenic Tank Program
+	focus = {
+		id = GRE_hellenic_tank_program
+		icon = GFX_GRE_tank
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_motorization_of_the_army
+		}
+		x = 10
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 1
+							category = armor
+							}			
+			add_tech_bonus = {
+				name = RAJ_indian_armor
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+						}
+				}
+	}
+
+	#Focus for British Assistance in Tank Development
+	focus = {
+		id = GRE_british_assistance_in_tank_development
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_hellenic_tank_program
+		}
+		x = -1
+		y = 6
+		relative_position_id = GRE_focus_on_the_haf
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 2
+							category = armor
+							}			
+			add_tech_bonus = {
+				name = RAJ_indian_armor
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+						}
+				}
+	}
+
+	#Focus for E.P.K Pyrkal Submachinegun
+	focus = {
+		id = GRE_epk_pyrkal_submachinegun
+		icon = GFX_GRE_pyrkal
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_adopt_the_tsolakoglou_strategy
+		}
+		x = 8
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_bonus
+							bonus = 1.0
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+	}
+
+	#Focus for Artillery Modernization
+	focus = {
+		id = GRE_artillery_modernization
+		icon = GFX_GRE_artillery
+		cost = 6.00
+		prerequisite = {
+			focus = GRE_epk_pyrkal_submachinegun
+		}
+		x = 8
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = artillery_bonus
+							bonus = 1.0
+							uses = 1
+							category = artillery
+						}
+				}
+	}
+
+	#Focus for Mechanized Army
+	focus = {
+		id = GRE_mechanized_army
+		icon = GFX_FRA_mech
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_artillery_modernization
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRE_artillery_modernization
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							ahead_reduction = 2
+							uses = 1
+							category = motorized_equipment
+						}
+				}
+	}
+
+	#Focus for Defense of the Epirus
+	focus = {
+		id = GRE_defense_of_the_epirus
+		icon = GFX_NEP_mountain
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_adopt_the_papagos_plan
+			focus = GRE_adopt_the_tsolakoglou_strategy
+		}
+		x = 6
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_doctrine_cost_reduction = {
+							name = land_doc_bonus
+							cost_reduction = 0.5
+							uses = 1
+							category = land_doctrine
+					}
+					add_tech_bonus = {
+						name = air_sup_bonus
+						bonus = 1.0
+						uses = 1
+						category = encryption_tech
+						category = decryption_tech
+					}						
+				}
+	}
+
+	#Focus for Defense of the Macedonia
+	focus = {
+		id = GRE_defense_of_the_macedonia
+		icon = GFX_GRE_army2
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_defense_of_the_epirus
+		}
+		x = 6
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_doctrine_cost_reduction = {
+							name = land_doc_bonus
+							cost_reduction = 0.5
+							uses = 1
+							category = land_doctrine
+						}
+				}
+	}
+
+	#Focus for Evzones
+	focus = {
+		id = GRE_evzones
+		icon = GFX_GRE_spartan
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_defense_of_the_macedonia
+		}
+		x = -5
+		y = 6
+		relative_position_id = GRE_focus_on_the_haf
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = special_forces
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 1.0
+							uses = 1
+							technology = marines2
+							technology = marines3
+							technology = tech_mountaineers2
+							technology = tech_mountaineers3
+						}
+				}
+	}
+
+	#Focus for Freedom or Death
+	focus = {
+		id = GRE_freedom_or_death
+		icon = GFX_GRE_flag
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_evzones
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRE_evzones
+			ai_will_do = {
+					factor = 50
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_freedom_or_death
+				}
+	}
+
+	#Focus for Update the H.R.A.F
+	focus = {
+		id = GRE_update_the_hraf
+		icon = GFX_GRE_air
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}		
+		prerequisite = {
+			focus = GRE_focus_on_the_haf
+		}
+		x = 13
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					air_experience = 150
+			add_tech_bonus = {
+				name = coastal_command_equipment
+				bonus = 1.0
+				uses = 2
+				category = plane_modules_tech
+			}		
+		}
+	}
+
+	#Focus for The Underdog Strategy
+	focus = {
+		id = GRE_the_underdog_strategy
+		icon = GFX_GRE_airstrat
+		cost = 5
+		prerequisite = {
+			focus = GRE_update_the_hraf
+		}
+		x = 13
+		y = 2
+		available_if_capitulated = yes
+		completion_reward = {
+				add_doctrine_cost_reduction = {
+					name = air_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = air_doctrine
+				}
+			add_tech_bonus = {
+				name = codebreaking_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_air_guns
+			}    					
+		}
+	}
+
+	#Focus for Establish the Fighter Command
+	focus = {
+		id = GRE_establish_the_fighter_command
+		icon = GFX_GRE_fighter
+		cost = 5
+		prerequisite = {
+			focus = GRE_the_underdog_strategy
+		}
+		x = 12
+		y = 3
+			available_if_capitulated = yes
+		completion_reward = {
+					add_tech_bonus = {
+						name = AST_cac_boomerang
+						bonus = 1.0
+						uses = 1
+						technology = improved_small_airframe
+						technology = advanced_small_airframe
+					}
+				}
+	}
+
+	#Focus for Establish the Bomber Command
+	focus = {
+		id = GRE_establish_the_bomber_command
+		icon = GFX_GRE_bomb
+		cost = 5
+		prerequisite = {
+			focus = GRE_the_underdog_strategy
+		}
+		x = 14
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+				add_tech_bonus = {
+					name = coastal_command_focus
+					bonus = 1.0
+					uses = 1
+					technology = improved_medium_airframe
+					technology = advanced_medium_airframe
+				}
+				}
+	}
+
+	#Focus for Airfield Construction
+	focus = {
+		id = GRE_airfield_construction
+		icon = GFX_PHI_armyinfra
+		cost = 5
+		x = 13
+		y = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = GRE_the_underdog_strategy }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			air_experience = 100
+	        if = { limit = { has_full_control_of_state = 47 } 
+			47 = {				
+			add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+			}}}	
+				}		
+	}
+
+	#Focus for Fund the H.R.N
+	focus = {
+		id = GRE_fund_the_hrn
+		icon = GFX_GRE_navy
+		cost = 5
+		prerequisite = {
+			focus = GRE_focus_on_the_haf
+		}
+		x = 16
+		y = 1
+			available_if_capitulated = yes
+					available = {
+		has_full_control_of_state = 47
+		}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							47 = {
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = dockyard
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+				}
+	}
+
+	#Focus for The Greek Merchant Marine
+	focus = {
+		id = GRE_the_greek_merchant_marine
+		icon = GFX_grenavy
+		cost = 5
+		prerequisite = {
+			focus = GRE_fund_the_hrn
+		}
+		x = 15
+		y = 2
+			available_if_capitulated = yes
+		available = {
+		has_full_control_of_state = 186
+		}
+			completion_reward = {
+			navy_experience = 25			
+			186 = {
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = dockyard
+											level = 1
+											instant_build = yes
+										}									
+			}				
+				}
+	}
+
+	#Focus for Mega to tis thakassis Kratos
+	focus = {
+		id = GRE_mega_to_tis_thakassis_kratos
+		icon = GFX_GRE_navyfunds
+		cost = 5
+		prerequisite = {
+			focus = GRE_the_greek_merchant_marine
+		}
+		x = 15
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 50
+				}
+	}
+
+	#Focus for Hit and Run Tactics
+	focus = {
+		id = GRE_hit_and_run_tactics
+		icon = GFX_GRE_navystrat
+		cost = 5
+		prerequisite = {
+			focus = GRE_fund_the_hrn
+		}
+		x = 17
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = sub_op_bonus
+							bonus = 1.0
+							uses = 1
+							technology = convoy_interdiction_ti
+							technology = unrestricted_submarine_warfare
+							technology = wolfpacks
+							technology = advanced_submarine_warfare
+							technology = combined_operations_raiding
+						}
+				}
+	}
+
+	#Focus for Upgrade the Averof
+	focus = {
+		id = GRE_upgrade_the_averof
+		icon = GFX_focus_generic_cruiser2
+		cost = 5
+		prerequisite = {
+			focus = GRE_hit_and_run_tactics
+		}
+		x = 16
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = cr_bonus
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							category = cl_tech
+							category = ca_tech
+						}
+				}
+	}
+
+	#Focus for Aetos Class Destroyers
+	focus = {
+		id = GRE_aetos_class_destroyers
+		icon = GFX_focus_generic_destroyer
+		cost = 5
+		prerequisite = {
+			focus = GRE_hit_and_run_tactics
+		}
+		x = 18
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 1.0
+							ahead_reduction = 1
+							uses = 2
+							category = dd_tech
+						}
+				}
+	}
+
+	#Focus for Modern Battleships
+	focus = {
+		id = GRE_modern_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5
+		prerequisite = {
+			focus = GRE_upgrade_the_averof
+			focus = GRE_aetos_class_destroyers
+		}
+		x = 6
+		y = 4
+		relative_position_id = GRE_focus_on_the_haf
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 25
+			if = { 
+				limit = { has_dlc = "Man the Guns" }
+				set_technology = { coastal_defense_ships = 1 } 
+			}					
+					add_tech_bonus = {
+							name = capital_ships_bonus
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							category = bc_tech
+							category = bb_tech
+							category = cv_tech
+						}
+				}
+	}
+
+	#Focus for Cult of the Admiral
+	focus = {
+		id = GRE_cult_of_the_admiral
+		icon = GFX_GRE_anchor
+		cost = 10
+		prerequisite = {
+			focus = GRE_mega_to_tis_thakassis_kratos
+		}
+		prerequisite = {
+			focus = GRE_modern_battleships
+		}
+		x = -1
+		y = 1
+		relative_position_id = GRE_modern_battleships
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_cult_of_the_admiral
+				}
+	}
+
+	#Focus for Civil Engineering Plans
+	focus = {
+		id = GRE_civil_engineering_plans
+		icon = GFX_civilplansgre
+		cost = 10.00
+		x = 24
+		y = 0
+			available_if_capitulated = yes
+			
+			available = {
+			   has_completed_focus = GRE_appoint_metaxas_as_defence_minister
+			}
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 1.0
+							uses = 1
+							technology = advanced_machine_tools
+							technology = flexible_line
+							technology = assembly_line_production
+							technology = streamlined_line
+							technology = concentrated_industry3
+							technology = concentrated_industry4
+							technology = concentrated_industry5
+							technology = dispersed_industry3
+							technology = dispersed_industry4
+							technology = dispersed_industry5
+							technology = construction3
+							technology = construction4
+							technology = construction5
+						}
+				}
+	}
+
+	#Focus for Public Works Projects
+	focus = {
+		id = GRE_public_works_projects
+		icon = GFX_3rdhellenic
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_civil_engineering_plans
+		}
+		x = -3
+		y = 1
+		relative_position_id = GRE_civil_engineering_plans 
+			available_if_capitulated = yes
+			completion_reward = {
+					47 = {
+							add_extra_state_shared_building_slots = 6
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Athens Salonica Railway
+	focus = {
+		id = GRE_athens_salonica_railway
+		icon = GFX_GRE_railway
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_public_works_projects
+		}
+		available = {
+		has_full_control_of_state = 731
+		has_full_control_of_state = 185
+		}		
+		x = 21
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					731 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3
+									instant_build = yes
+								}
+						}
+					185 = {
+							add_building_construction = {
+									type = infrastructure
+									instant_build = yes
+									level = 3
+								}
+						}
+				}
+	}
+
+	#Focus for Pyrkal Deal
+	focus = {
+		id = GRE_pyrkal_deal
+		icon = GFX_GRE_pyrkal2
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_athens_salonica_railway
+		}
+		available = {
+		has_full_control_of_state = 47
+		}		
+		x = 21
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					47 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Create ELBO
+	focus = {
+		id = GRE_create_elbo
+		icon = GFX_GRE_civs2
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_pyrkal_deal
+		}
+		available = {
+		has_full_control_of_state = 47
+		}		
+		x = -4
+		y = 4
+		relative_position_id = GRE_civil_engineering_plans
+			available_if_capitulated = yes
+			completion_reward = {
+					47 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Shipyards
+	focus = {
+		id = GRE_revive_the_eleusina_shipyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		prerequisite = {
+			focus = GRE_fund_the_hrn
+			focus = GRE_public_works_projects
+		}
+		x = -5
+		y = 2
+		relative_position_id = GRE_civil_engineering_plans
+		available = {
+		has_full_control_of_state = 47
+		}		
+			available_if_capitulated = yes
+			completion_reward = {
+            	47 = {	
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				         }
+				}
+	}
+
+	#Focus for Firearm Factories
+	focus = {
+		id = GRE_firearm_factories
+		icon = GFX_GRE_civs
+		cost = 10.00
+		available = {
+		has_full_control_of_state = 186
+		}		
+		prerequisite = {
+			focus = GRE_pyrkal_deal
+		}
+		x = -2
+		y = 4
+		relative_position_id = GRE_civil_engineering_plans
+			available_if_capitulated = yes
+			completion_reward = {
+					186 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for National Labor Service
+	focus = {
+		id = GRE_national_labor_service
+		icon = GFX_GRE_youth
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_civil_engineering_plans
+		}
+		x = 26
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_national_labour_service
+					add_stability = 0.05
+				}
+	}
+
+	#Focus for State Corporatism
+	focus = {
+		id = GRE_state_corporatism
+		icon = GFX_GRE_civs3
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_national_labor_service
+		}
+		x = 24
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 1.0
+							uses = 1
+							technology = advanced_machine_tools
+							technology = flexible_line
+							technology = assembly_line_production
+							technology = streamlined_line
+							technology = concentrated_industry3
+							technology = concentrated_industry4
+							technology = concentrated_industry5
+							technology = dispersed_industry3
+							technology = dispersed_industry4
+							technology = dispersed_industry5
+							technology = construction3
+							technology = construction4
+							technology = construction5
+						}
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for New Construction Safety Standards
+	focus = {
+		id = GRE_new_construction_safety_standards
+		icon = GFX_GRE_standards
+		cost = 8
+		prerequisite = {
+			focus = GRE_national_labor_service
+		}
+		x = 26
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.05
+					random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for End the Ifesi
+	focus = {
+		id = GRE_end_the_ifesi
+		icon = GFX_GRE_money
+		cost = 8
+		prerequisite = {
+			focus = GRE_state_corporatism
+		}
+		prerequisite = {
+			focus = GRE_new_construction_safety_standards
+		}
+		x = 25
+		y = 3
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					remove_ideas = GRE_ifesi
+				}
+	}
+
+	#Focus for Tobacco Exports
+	focus = {
+		id = GRE_tobacco_exports
+		icon = GFX_GRE_tobacco
+		cost = 8
+		prerequisite = {
+			focus = GRE_end_the_ifesi
+		}
+		x = 25
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_tobacco_trade
+				}
+	}
+
+	#Focus for Fund the Athens Polytechnic University
+	focus = {
+		id = GRE_fund_the_athens_polytechnic_university
+		icon = GFX_GRE_uni
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_state_corporatism
+		}
+		x = 24
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+	}
+
+	#Focus for State Employment
+	focus = {
+		id = GRE_state_employment
+		icon = GFX_GRE_corp
+		cost = 8
+		prerequisite = {
+			focus = GRE_national_labor_service
+		}
+		available = {
+		has_full_control_of_state = 186
+		}		
+		x = 28
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					186 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Build the Metaxas Line
+	focus = {
+		id = GRE_build_the_metaxas_line
+		icon = GFX_GRE_forts
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_state_employment
+		}
+		prerequisite = {
+			focus = GRE_4th_of_august_regime
+		}
+		x = 28
+		y = 3
+			ai_will_do = {
+					factor = 50
+				}
+			available = {
+					GRE = {
+							controls_state = 184
+						}
+					GRE = {
+							controls_state = 731
+						}
+				}
+			bypass = {
+
+}
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+			complete_tooltip = {
+
+}
+			completion_reward = {
+					army_experience = 25
+					184 = {
+							add_building_construction = {
+									type = bunker
+									province = 11774
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9791
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 6990
+									level = 2
+									instant_build = yes
+								}
+						}
+					731 = {
+							add_building_construction = {
+									type = bunker
+									province = 3526
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Extend the Metaxas Line
+	focus = {
+		id = GRE_extend_the_metaxas_line
+		icon = GFX_GRE_forts2
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_build_the_metaxas_line
+		}
+		x = 28
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+			available = {
+					GRE = {
+							controls_state = 185
+						}
+					GRE = {
+							controls_state = 731
+						}
+				}
+			bypass = {
+
+}
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+			complete_tooltip = {
+
+}
+			completion_reward = {
+					army_experience = 25
+					185 = {
+							add_building_construction = {
+									type = bunker
+									province = 9837
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9791
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 841
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9805
+									level = 1
+									instant_build = yes
+								}
+						}
+					731 = {
+							add_building_construction = {
+									type = bunker
+									province = 936
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Navigate the Political Crisis
+	focus = {
+		id = GRE_navigate_the_political_crisis
+		icon = GFX_GRE_defense
+		cost = 10.00
+		x = 32
+		y = 0
+		ai_will_do = {
+				factor = 100
+			}
+		available_if_capitulated = yes
+		completion_reward = {
+				add_political_power = 100
+				hidden_effect = {
+					if = {
+						limit = {
+							is_ai = yes
+						}
+						add_political_power = -150
+						add_ideas = partial_economic_mobilisation
+						}
+					}
+
+					if = {
+					limit = {is_ai = yes }
+								add_equipment_to_stockpile = {
+											type = infantry_equipment_1
+											amount = 10000
+											producer = ENG
+								}			
+					}				
+				
+			}
+	}
+
+	#Focus for Appoint Metaxas as Defence Minister
+	focus = {
+		id = GRE_appoint_metaxas_as_defence_minister
+		icon = GFX_GRE_metaxas
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_navigate_the_political_crisis
+		}
+		x = 32
+		y = 1
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.05
+					add_war_support = 0.05
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.05
+						}
+				}
+	}
+
+	#Focus for 4th of August Regime
+	focus = {
+		id = GRE_4th_of_august_regime
+		icon = GFX_GRE_regime
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_appoint_metaxas_as_defence_minister
+		}
+		x = 32
+		y = 2
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+create_country_leader = {
+	name = "Ioànnis Metaxàs"
+	desc = "POLITICS_IOANNIS_METAXAS_DESC"
+	picture = "Portrait_Greece_Ioannis_Metaxas.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+		el_jefe_maximo
+		stout_defender
+		ww_one_trauma 
+	}
+}			
+					add_political_power = 30
+					add_stability = 0.02
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.30
+						}
+				}
+	}
+
+	#Focus for Asfalia
+	focus = {
+		id = GRE_asfalia
+		icon = GFX_GRE_asfalia
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_4th_of_august_regime
+		}
+		x = 30
+		y = 3
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_manpower = 20000
+					add_ideas = GRE_asfalia
+				}
+	}
+
+	#Focus for Public Re-education
+	focus = {
+		id = GRE_public_reeducation
+		icon = GFX_GRE_book
+		cost = 3.00
+		prerequisite = {
+			focus = GRE_asfalia
+		}
+		x = 30
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_war_support = 0.01
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.05
+						}
+				}
+	}
+
+	#Focus for Establish E.O.N
+	focus = {
+		id = GRE_establish_eon
+		icon = GFX_GRE_EON
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_public_reeducation
+		}
+		x = 30
+		y = 5
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 25
+					add_ideas = GRE_EON
+				}
+	}
+
+	#Focus for Imprison the Communists
+	focus = {
+		id = GRE_imprison_the_communists
+		icon = GFX_GRE_prison
+		cost = 8.00
+		prerequisite = {
+			focus = GRE_4th_of_august_regime
+		}
+		x = 34
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					remove_ideas = GRE_communist_agitation
+				}
+	}
+
+	#Focus for YRE Broadcasting
+	focus = {
+		id = GRE_yre_broadcasting
+		icon = GFX_GRE_ype
+		cost = 5
+		prerequisite = {
+			focus = GRE_imprison_the_communists
+		}
+		x = 35
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 1.0
+							uses = 2
+							category = electronics
+						}
+				}
+	}
+
+	#Focus for Strenghten the Crown
+	focus = {
+		id = GRE_strenghten_the_crown
+		icon = GFX_GRE_crown
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_yre_broadcasting
+		}
+		x = 35
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 30
+					add_stability = 0.07
+				}
+	}
+
+	#Focus for Prohibit Strikes
+	focus = {
+		id = GRE_prohibit_strikes
+		icon = GFX_GRE_strike
+		cost = 8.00
+		prerequisite = {
+			focus = GRE_imprison_the_communists
+		}
+		x = 32
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.02
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.10
+						}
+				}
+	}
+
+	#Focus for Create the I.K.A
+	focus = {
+		id = GRE_create_the_ika
+		icon = GFX_GRE_friend
+		cost = 6.00
+		prerequisite = {
+			focus = GRE_prohibit_strikes
+		}
+		x = 32
+		y = 5
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 100
+					add_stability = 0.05
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.05
+						}
+				}
+	}
+
+	#Focus for Labour Protections
+	focus = {
+		id = GRE_labour_protections
+		icon = GFX_GRE_labour
+		cost = 4.00
+		prerequisite = {
+			focus = GRE_create_the_ika
+		}
+		available = {
+		has_full_control_of_state = 731
+		}		
+		x = 30
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					731 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Social Security
+	focus = {
+		id = GRE_social_security
+		icon = GFX_GRE_ss
+		cost = 8
+		prerequisite = {
+			focus = GRE_create_the_ika
+		}
+		available = {
+		has_full_control_of_state = 186
+		}		
+		x = 32
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.05
+					186 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for Third Hellenic Civilization
+	focus = {
+		id = GRE_third_hellenic_civilization
+		icon = GFX_GRE_civilization
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_social_security
+		}
+		x = 32
+		y = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.20
+		}
+	}
+
+	#Focus for Debt Relief
+	focus = {
+		id = GRE_debt_relief
+		icon = GFX_GRE_money2
+		cost = 7.00
+		prerequisite = {
+			focus = GRE_create_the_ika
+		}
+		available = {
+		has_full_control_of_state = 184
+		}		
+		x = 34
+		y = 6
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.05
+					184 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+	}
+
+	#Focus for OXI
+	focus = {
+		id = GRE_oxi
+		icon = GFX_oxino
+		cost = 1
+		x = 38
+		y = 0
+		available_if_capitulated = yes		
+			available = {
+					has_defensive_war = yes
+				}
+			ai_will_do = {
+					factor = 4000
+				}
+			bypass = {
+					GRE = {
+							has_capitulated = yes
+						}
+				}
+			completion_reward = {
+					add_war_support = 0.10
+					add_ideas = { GRE_cretan_defence_strategy }
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_0
+							amount = 2000
+							producer = GRE
+						}
+					add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 250
+							producer = GRE
+						}
+					add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 200
+							producer = GRE
+						}
+				}
+	}
+
+	#Focus for AERA
+	focus = {
+		id = GRE_aera
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		cost = 2.00
+		prerequisite = {
+			focus = GRE_oxi
+		}
+		x = -2
+		y = 1
+		relative_position_id = GRE_oxi
+			available_if_capitulated = yes
+			bypass = {
+					GRE = {
+							has_capitulated = yes
+						}
+				}			
+			completion_reward = {
+			add_timed_idea = { idea = GRE_AERA  days = 120 }
+					add_stability = 0.10
+				}
+	}
+
+	#Focus for British Arms Assistance
+	focus = {
+		id = GRE_british_arms_assistance
+		icon = GFX_focus_eng_motion_of_no_confidence
+		cost = 10
+		prerequisite = {
+			focus = GRE_aera
+		}
+		x = -2
+		y = 3
+		relative_position_id = GRE_oxi
+			ai_will_do = {
+					factor = 10
+				}
+			available = {
+
+			}
+			cancel_if_invalid = yes
+			available_if_capitulated = yes
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_0
+							amount = 5000
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 300
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 200
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 150
+							producer = ENG
+						}
+					if = { limit = { has_idea =  GRE_ammunition_sortages } remove_ideas =  GRE_ammunition_sortages }	
+				}
+	}
+
+	#Focus for Evacuate Government to Crete
+	focus = {
+		id = GRE_evacuate_government_to_crete
+		icon = GFX_GRE_crete
+		cost = 1
+		prerequisite = {
+			focus = GRE_aera
+		}
+		x = -1
+		y = 2
+		relative_position_id = GRE_oxi
+		ai_will_do = {
+			factor = 1000
+		}
+		available_if_capitulated = yes
+		available = {
+			GRE = {
+				has_capitulated = yes
+				has_full_control_of_state = 182
+			}
+		}
+			completion_reward = {
+			        add_state_core = 840
+			        add_state_core = 182
+					set_capital = { state = 182 }
+					182 = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+							}
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+							}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 9940
+									level = 3
+									instant_build = yes
+							}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 12058
+									level = 2
+									instant_build = yes
+							}
+							ROOT = {
+								set_country_flag = aviation_effort_2_AB
+							}
+					}
+					if = { limit = { has_idea =  GRE_ammunition_sortages } remove_ideas =  GRE_ammunition_sortages }
+					if = { limit = { has_idea =  GRE_logistical_troubles } remove_ideas =  GRE_logistical_troubles }
+					if = { limit = { has_idea =  GRE_army_fatigue } remove_ideas = GRE_army_fatigue }
+					if = { limit = { has_idea =  GRE_army_fatigue } remove_ideas = GRE_army_collapse }
+			}
+	}
+
+	#Focus for 5th Cretan Division
+	focus = {
+		id = GRE_5th_cretan_division
+		icon = GFX_GRE_cretediv
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_evacuate_government_to_crete
+		}
+		x = 37
+		y = 4
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_manpower = 10000
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_0
+							amount = 1000
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 150
+							producer = GRE
+						}
+					add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 100
+							producer = GRE
+						}
+				}
+	}
+
+	#Focus for Greek Partisans
+	focus = {
+		id = GRE_greek_partisans
+		icon = GFX_focus_prc_infiltration
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_oxi
+		}
+		x = 39
+		y = 1
+			available_if_capitulated = yes
+			available = {
+					NOT = {
+							GRE = {
+									has_full_control_of_state = 47
+								}
+						}
+				}
+			completion_reward = {
+					add_ideas = GRE_greek_guerillas
+				}
+	}
+
+	#Focus for Polemos
+	focus = {
+		id = GRE_polemos
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 2.00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = GRE_oxi
+		}
+		x = 3
+		y = 1
+		relative_position_id = GRE_oxi
+			ai_will_do = {
+					factor = 100
+				}
+			available = {
+					GRE = {
+							has_capitulated = yes
+						}
+				}
+			completion_reward = {
+					add_political_power = 100
+					add_war_support = 0.10
+					add_ideas = GRE_polemos
+					hidden_effect = {
+					
+					if = { limit = { has_idea = GRE_asfalia } remove_ideas = GRE_asfalia }
+					if = { limit = { has_idea = GRE_EON } remove_ideas = GRE_EON }
+					if = { limit = { has_idea = GRE_national_labour_service } remove_ideas = GRE_national_labour_service }
+					if = { limit = { has_idea = GRE_army_collapse } remove_ideas = GRE_army_collapse }
+					if = { limit = { has_idea = GRE_tobacco_trade } remove_ideas = GRE_tobacco_trade }
+									
+				}
+			}
+	}
+
+	#Focus for British S.O.E
+	focus = {
+		id = GRE_british_soe
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = GRE_greek_partisans
+		}
+		prerequisite = {
+			focus = GRE_polemos
+		}
+		x = 39
+		y = 2
+
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GRE_greek_guerillas
+							add_idea = GRE_greek_guerillas_2
+						}
+				}
+	}
+
+	#Focus for Assist the EAM
+	focus = {
+		id = GRE_assist_the_eam
+		icon = GFX_GRE_partisan
+		cost = 10.00
+		available_if_capitulated = yes		
+		prerequisite = {
+			focus = GRE_british_soe
+		}
+		x = 38
+		y = 3
+			completion_reward = {
+			        add_political_power = 50
+					add_timed_idea = { idea = GRE_EAM days = 100 }
+				}
+	}
+
+	#Focus for Fund the EDES
+	focus = {
+		id = GRE_fund_the_edes
+		icon = GFX_GRE_edes
+		cost = 10.00
+		available_if_capitulated = yes		
+		prerequisite = {
+			focus = GRE_british_soe
+		}
+		x = 40
+		y = 3
+
+			completion_reward = {
+					swap_ideas = {
+							remove_idea = GRE_greek_guerillas_2
+							add_idea = GRE_greek_guerillas_3
+						}
+				}
+	}
+
+	#Focus for Grogopotamos Bridge Sabotage
+	focus = {
+		id = GRE_grogopotamos_bridge_sabotage
+		icon = GFX_GRE_sabotage
+		cost = 4.00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = GRE_assist_the_eam
+		}
+		prerequisite = {
+			focus = GRE_fund_the_edes
+		}
+		x = 39
+		y = 4
+			ai_will_do = {
+					factor = 100
+				}
+			completion_reward = {
+					add_war_support = 0.05
+				}
+	}
+
+	#Focus for Establish the Cairo Government
+	focus = {
+		id = GRE_establish_the_cairo_government
+		icon = GFX_GRE_cairo
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_polemos
+		}
+		x = 4
+		y = 2
+		relative_position_id = GRE_oxi
+			available_if_capitulated = yes
+			available = {
+					GRE = {
+							has_capitulated = yes
+						}
+				}
+			completion_reward = {			
+					add_offsite_building = {
+							type = arms_factory
+							level = 4
+						}
+					add_manpower = -10000
+					add_ideas = GRE_mutinies
+					add_ideas = POL_lendlease
+					if = { limit = { has_idea =  GRE_ammunition_sortages } remove_ideas =  GRE_ammunition_sortages }
+					if = { limit = { has_idea =  GRE_logistical_troubles } remove_ideas =  GRE_logistical_troubles }
+					if = { limit = { has_idea =  GRE_army_fatigue } remove_ideas = GRE_army_fatigue }
+					if = { limit = { has_idea =  GRE_army_fatigue } remove_ideas = GRE_army_collapse }	
+			        custom_effect_tooltip = "NEWGENERAL_TOOLTIP"		
+	    }				
+	}
+
+	#Focus for The H.A.F in the Middle East
+	focus = {
+		id = GRE_the_haf_in_the_middle_east
+		icon = GFX_GRE_east
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_establish_the_cairo_government
+		}
+		x = 42
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.10
+					add_manpower = 10000
+					add_offsite_building = {
+							type = industrial_complex
+							level = 6
+						}
+					add_offsite_building = {
+							type = arms_factory
+							level = 6
+						}
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_0
+							amount = 8000
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 300
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = support_equipment_1
+							amount = 200
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = motorized_equipment
+							amount = 150
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = light_tank_equipment_1
+							amount = 60
+							producer = ENG
+						}
+					add_equipment_to_stockpile = {
+							type = anti_air_equipment_1
+							amount = 200
+							producer = ENG
+						}
+				}
+	}
+
+	#Focus for Deal With Mutinies
+	focus = {
+		id = GRE_deal_with_mutinies
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 5.00
+		prerequisite = {
+			focus = GRE_the_haf_in_the_middle_east
+		}
+		x = 42
+		y = 4
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					if = { limit = { has_idea = GRE_mutinies } remove_ideas = GRE_mutinies }
+				}
+	}
+
+	#Focus for 3rd Mountain Brigade
+	focus = {
+		id = GRE_3rd_mountain_brigade
+		icon = GFX_GRE_mount
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_deal_with_mutinies
+		}
+		x = 3
+		y = 5
+		relative_position_id = GRE_oxi
+			ai_will_do = {
+					factor = 100
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+						add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 1.0
+							uses = 2
+							technology = marines2
+							technology = marines3
+							technology = tech_mountaineers2
+							technology = tech_mountaineers3
+						}
+					add_manpower = 5000
+					custom_effect_tooltip = "NEWGENERAL_TOOLTIP"							
+				}
+	}
+
+	#Focus for Take the Fight to Italy
+	focus = {
+		id = GRE_take_the_fight_to_italy
+		icon = GFX_focus_generic_italy_first
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_deal_with_mutinies
+		}
+		x = 5
+		y = 5
+		relative_position_id = GRE_oxi
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = GRE_italian_preparations
+				}
+	}
+
+	#Focus for Efoplisters
+	focus = {
+		id = GRE_efoplisters
+		icon = GFX_GRE_navyfunds
+		cost = 10.00
+		prerequisite = {
+			focus = GRE_establish_the_cairo_government
+		}
+		x = 6
+		y = 3
+		relative_position_id = GRE_oxi
+			available_if_capitulated = yes
+			available = {
+					GRE = {
+							has_capitulated = yes
+						}
+				}
+			completion_reward = {
+					add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					add_offsite_building = {
+							type = arms_factory
+							level = 2
+						}
+					swap_ideas = {
+							remove_idea = GRE_polemos
+							add_idea = GRE_polemos_2
+						}
+				}
+	}
+
+	#Focus for Indian Ocean Patrols
+	focus = {
+		id = GRE_indian_ocean_patrols
+		icon = GFX_focus_generic_cruiser2
+		cost = 2.00
+		prerequisite = {
+			focus = GRE_efoplisters
+		}
+		x = 6
+		y = 4
+		relative_position_id = GRE_oxi
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 50
+					add_offsite_building = {
+							type = dockyard
+							level = 2
+						}					
+				}
+	}
+
+#End of focuses 
+ }

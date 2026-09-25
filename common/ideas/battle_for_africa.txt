@@ -1,0 +1,567 @@
+ideas = {
+
+	country = {
+		AFRICA_ALLIES_11 = { #TOTAL ALLIED VICTORY
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies5
+
+			cancel = {
+				date > 1942.1.1		
+			}		
+		
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.1
+				consumer_goods_expected_value = -0.02				
+				local_resources_factor = 0.05	
+			}
+		}		
+		AFRICA_ALLIES_10 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies4
+
+			cancel = {
+				date > 1942.1.1		
+			}	
+	
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.01					
+				local_resources_factor = 0.05			
+			}
+		}		
+		AFRICA_ALLIES_9 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies3
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.01					
+				local_resources_factor = 0.05					
+			}
+		}		
+		AFRICA_ALLIES_8 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies2
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.01				
+			}
+		}		
+		AFRICA_ALLIES_7 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies1
+
+			cancel = {
+				date > 1942.1.1		
+			}		
+		
+			modifier = {
+				consumer_goods_expected_value = -0.01				
+			}
+		}
+		AFRICA_ALLIES_6 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies0
+
+			cancel = {
+				date > 1942.1.1		
+			}		
+		
+			modifier = {
+				stability_factor = 0
+			}
+		}		
+		AFRICA_ALLIES_5 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis1
+
+			cancel = {
+				date > 1942.1.1		
+			}	
+	
+			modifier = {
+				stability_factor = -0.02
+				political_power_gain = -0.05
+			}
+		}		
+		AFRICA_ALLIES_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis2
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				stability_factor = -0.04
+				political_power_gain = -0.1			
+			}
+		}		
+		AFRICA_ALLIES_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis3
+
+			cancel = {
+				date > 1942.1.1		
+			}
+			
+			modifier = {
+				stability_factor = -0.06
+				political_power_gain = -0.15			
+			}
+		}		
+		AFRICA_ALLIES_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis4
+		
+			cancel = {
+				date > 1942.1.1		
+			}
+		
+			modifier = {
+				stability_factor = -0.08
+				political_power_gain = -0.20
+                industrial_capacity_factory = -0.05
+				air_superiority_efficiency = -0.05
+				air_cas_efficiency = -0.05
+				air_strategic_bomber_bombing_factor = -0.05
+				air_escort_efficiency = -0.05
+				air_intercept_efficiency = -0.05
+				air_nav_efficiency = -0.05
+				air_ace_generation_chance_factor = -0.05
+				air_accidents_factor = 0.05				
+			}
+		}		
+		AFRICA_ALLIES_1 = { #TOTAL ALLIED DEATH
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis5
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.25
+                industrial_capacity_factory = -0.2		
+				air_superiority_efficiency = -0.10
+				air_cas_efficiency = -0.10
+				air_strategic_bomber_bombing_factor = -0.10
+				air_escort_efficiency = -0.10
+				air_intercept_efficiency = -0.10
+				air_nav_efficiency = -0.10
+				air_ace_generation_chance_factor = -0.10
+				air_accidents_factor = 0.10				
+			}
+		}		
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		# FOR AXIS
+		
+		AFRICA_AXIS_11 = { #TOTAL AXIS WIN
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis5
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = 0.05
+				stability_factor = 0.05
+				fascism_drift = 0.05
+                army_core_defence_factor = 0.25				
+			}
+		}		
+		AFRICA_AXIS_10 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis4
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				industrial_capacity_factory = 0.08
+				consumer_goods_expected_value = -0.03
+				local_resources_factor = 0.05
+				stability_factor = 0.025
+				fascism_drift = 0.03
+                army_core_defence_factor = 0.2						
+			}
+		}		
+		AFRICA_AXIS_9 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis3
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_expected_value = -0.01
+				local_resources_factor = 0.05
+				fascism_drift = 0.02
+                army_core_defence_factor = 0.15				
+			}
+		}		
+		AFRICA_AXIS_8 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis2
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				industrial_capacity_factory = 0.03
+				consumer_goods_expected_value = -0.01
+				fascism_drift = 0.01
+                army_core_defence_factor = 0.10				
+			}
+		}		
+		AFRICA_AXIS_7 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_axis1
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+			
+			modifier = {
+				industrial_capacity_factory = 0.03
+				fascism_drift = 0.01
+				army_core_defence_factor = 0.05
+			}
+		}
+		AFRICA_AXIS_6 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies0
+			
+			cancel = {
+				date > 1942.1.1		
+			}		
+			
+			modifier = {
+				stability_factor = 0
+			}
+		}		
+		AFRICA_AXIS_5 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				date > 1942.1.1		
+			}			
+
+			picture = AFRICA_allies1
+			
+			modifier = {
+				war_support_factor = -0.05
+				fascism_drift = -0.01				
+			}
+		}		
+		AFRICA_AXIS_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				date > 1942.1.1		
+			}
+
+			picture = AFRICA_allies2
+			
+			modifier = {
+				war_support_factor = -0.05
+				political_power_gain = -0.025
+				fascism_drift = -0.01
+			}
+		}		
+		AFRICA_AXIS_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies3
+
+			cancel = {
+				date > 1942.1.1		
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				political_power_gain = -0.05	
+				fascism_drift = -0.01
+				base_fuel_gain_factor = -0.05
+			}
+		}		
+		AFRICA_AXIS_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies4
+
+			cancel = {
+				date > 1942.1.1		
+			}
+			
+			modifier = {
+				war_support_factor = -0.05
+				political_power_gain = -0.0725	
+				fascism_drift = -0.02
+				base_fuel_gain_factor = -0.1
+			}
+		}		
+		AFRICA_AXIS_1 = { #TOTAL AXIS DEATH
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = AFRICA_allies5
+
+			cancel = {
+				date > 1942.1.1		
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				war_support_factor = -0.05
+				political_power_gain = -0.1
+				fascism_drift = -0.02
+				base_fuel_gain_factor = -0.1
+			}
+		}		
+		
+    }
+}

@@ -1,0 +1,36 @@
+
+state = {
+	id = 836
+	name = "STATE_836"
+	manpower = 51000
+	
+	state_category = rural
+
+	history = {
+		owner = NOR
+		victory_points = {
+			3757 2 
+		}
+		victory_points = {
+			741 1 
+		}
+		buildings = {
+			infrastructure = 2
+			9116 = {
+				naval_base = 3
+
+			}		
+		}
+		add_core_of = NOR
+		
+		
+		
+		
+	}
+
+	provinces = {
+		11034 64 11063 6092 9116
+	}
+
+	local_supplies = 6.0 
+}

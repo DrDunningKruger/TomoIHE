@@ -1,0 +1,45 @@
+ideas = {
+
+	country = {
+
+		FIL_death_before_surrender = {
+
+			name = SPR_death_before_surrender
+
+			picture = GER_fight
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				#surrender_limit = 0.99
+				forced_surrender_limit = 1
+			}
+		}	
+
+		FIL_death_before_surrender2 = {
+
+			name = SPR_death_before_surrender
+
+			picture = GER_fight
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				#surrender_limit = 0.99
+				forced_surrender_limit = 0.97
+			}
+		}
+	}
+}

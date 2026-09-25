@@ -1,0 +1,487 @@
+political_actions = {
+	NOR_return_capital = {
+
+		icon = generic_propaganda
+
+		visible = {
+			tag = NOR
+            has_full_control_of_state = 816
+		}
+		
+		available = {
+           has_full_control_of_state = 110
+		}
+
+		fire_only_once = no
+		
+		cost = 10
+
+		#days_remove = 1
+
+		complete_effect = {
+		set_capital = { state = 110 } 
+		remove_state_core = 816
+		CAN = {
+		transfer_state = 816
+		}
+		}
+	}	
+	CAN_return_muskoka = {
+
+		icon = generic_propaganda
+
+		visible = {
+		tag = CAN
+		OR = {
+         NOR = { has_full_control_of_state = 816 }
+         ENG = { has_full_control_of_state = 816 }
+		}
+		}
+		
+		available = {
+		OR = {
+		NOT = { 
+		country_exists = NOR }
+		NOR = {is_ai = yes }
+		}
+        }
+
+		fire_only_once = no
+		
+		cost = 10
+
+		#days_remove = 1
+
+		complete_effect = {
+		if = { limit = { NOR = { has_full_control_of_state = 100 } } NOR = { set_capital = { state = 110 }  }} 
+		NOR = {
+		remove_state_core = 816 }
+		CAN = {
+		transfer_state = 816
+		}
+		}
+	}
+	give_refuge_ger = {
+
+		icon = generic_research
+
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+            }
+        }
+
+	visible = {
+            NOT = { has_government = fascism }
+            NOT = { has_government = communism }
+	}
+
+        cost = 100
+        fire_only_once = yes
+        
+        days_remove = -1
+
+        available = {
+            GER = { NOT = { has_government = ROOT } }
+        }
+
+        modifier = {
+            research_speed_factor = 0.05
+            stability_factor = -0.05
+        }
+
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = ENG
+				has_War = no
+				date < 1937.3.1
+				factor = 0
+			}
+		}
+    }
+    give_refuge_ita = {
+
+    	icon = generic_research
+
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = USA
+                original_tag = FRA
+                original_tag = CAN
+            }
+	}
+
+	visible = {
+            NOT = { has_government = fascism }
+            NOT = { has_government = communism }
+        }
+        cost = 100
+        fire_only_once = yes
+        days_remove = -1
+
+        available = {
+            ITA = { NOT = { has_government = ROOT } }
+        }
+
+        modifier = {
+            research_speed_factor = 0.05
+            stability_factor = -0.05
+        }
+
+        remove_trigger = {
+            ITA = { has_government = ROOT }
+        }
+        ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = ENG
+				has_War = no
+				date < 1937.3.1
+				factor = 0
+			}
+		}
+    }
+
+    anti_fascist_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+			NOT = { has_government = fascism }
+		}
+
+		available = {
+            fascism > 0.1
+        }
+	
+		modifier = {
+			fascism_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 140
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+    }
+
+    anti_democratic_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+			NOT = { has_government = democratic }
+		}
+
+		available = {
+            democratic > 0.1
+        }
+	
+		modifier = {
+			democratic_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 140
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+
+    anti_communist_raids = {
+
+    	icon = generic_civil_support
+
+    	visible = {
+			NOT = { has_government = communism }
+		}
+
+		available = {
+            communism > 0.1
+        }
+	
+		modifier = {
+			communism_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 140
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    
+	ban_fascist_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			fascism < 0.2
+		}
+
+		visible = {
+			NOT = { has_government = fascism }
+			fascism > 0
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = fascism
+			}
+		}
+	
+		modifier = {
+			fascism_drift = -0.02
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@fascism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}				
+			}
+			custom_effect_tooltip = ban_fascist_party_tt
+			add_stability = ban_ideology_var
+		}
+	}
+
+	ban_democratic_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			democratic < 0.2
+		}
+
+		visible = {
+			NOT = { has_government = democratic }
+			democratic > 0
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = democratic
+			}
+		}
+	
+		modifier = {
+			democratic_drift = -0.02
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}				
+			}
+			custom_effect_tooltip = ban_democratic_party_tt
+			add_stability = ban_ideology_var
+		}
+	}
+	
+	ban_communist_party = {
+
+		icon = generic_civil_support
+
+		available = {
+			communism < 0.2
+		}
+
+		visible = {
+			NOT = { has_government = communism }
+			communism > 0
+		}
+
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = communism
+			}
+		}
+	
+		modifier = {
+			communism_drift = -0.02
+		}
+	
+		days_remove = -1
+		cost = 100
+		
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@communism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}				
+			}
+			custom_effect_tooltip = ban_communist_party_tt
+			add_stability = ban_ideology_var
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	institute_press_censorship_fascist_state = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = fascism
+		}
+	
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = 0.03
+			democratic_drift = -0.01
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 100
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	institute_press_censorship_democratic_state = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = democratic
+		}
+		
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = -0.01
+			democratic_drift = 0.03
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 100
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	institute_press_censorship_communist_state = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = communism
+		}
+	
+		modifier = {
+			communism_drift = 0.03
+			fascism_drift = -0.01
+			democratic_drift = -0.01
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 360
+		cost = 100
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	institute_press_censorship_neutrality_state = {
+
+		icon = generic_political_discourse
+
+		visible = {
+			has_government = neutrality
+		}
+	
+		modifier = {
+			communism_drift = -0.01
+			fascism_drift = -0.01
+			democratic_drift = -0.01
+			neutrality_drift = 0.03
+		}
+	
+		days_remove = 360
+		cost = 100
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,167 @@
+﻿division_template = {
+	name = "Pesadijska Divizija"	# Infantry Division	
+	# Note: infantry divisions were all at low reserve levels even just prior to Axis 
+	#	invasion of 1941
+
+	division_names_group = YUG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }		
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }  
+	}
+}
+division_template = {
+	name = "Gorska Pesadija"		# Mountain Brigade
+
+	division_names_group = YUG_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }		
+	}
+}
+division_template = {
+
+	division_names_group = YUG_CAV_01
+
+	name = "Konjička Divizija" 			# Cavalry Division
+	# Note: regiments within the brigade were battalion-sized units
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Light Armored-Division"
+	division_names_group = YUG_ARM_01
+    template_counter = 112
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 0 y = 4 }		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }	
+		cavalry = { x = 1 y = 4 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }	
+		cavalry = { x = 2 y = 4 }
+		light_armor = { x = 3 y = 0 }
+		light_armor = { x = 3 y = 1 }
+		light_armor = { x = 3 y = 2 }
+		light_armor = { x = 3 y = 3 }
+		light_armor = { x = 3 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Armored-Division"
+	division_names_group = YUG_ARM_01
+    template_counter = 114
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }	
+		cavalry = { x = 1 y = 4 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }	
+		cavalry = { x = 2 y = 4 }
+		medium_armor = { x = 3 y = 0 }
+		medium_armor = { x = 3 y = 1 }
+		medium_armor = { x = 3 y = 2 }
+		medium_armor = { x = 3 y = 3 }
+		medium_armor = { x = 3 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Heavy Armored Division"
+
+	division_names_group = YUG_ARM_01
+    template_counter = 116
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }
+		heavy_armor = { x = 0 y = 3 }
+		heavy_armor = { x = 0 y = 4 }		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }	
+		cavalry = { x = 1 y = 4 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }	
+		cavalry = { x = 2 y = 4 }
+		heavy_armor = { x = 3 y = 0 }
+		heavy_armor = { x = 3 y = 1 }
+		heavy_armor = { x = 3 y = 2 }
+		heavy_armor = { x = 3 y = 3 }
+		heavy_armor = { x = 3 y = 4 }		
+	}
+}
+
+
+units = {
+
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "YUG"
+		}
+		requested_factories = 1
+		progress = 0.37
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "YUG"
+		}
+		requested_factories = 1
+		progress = 0.76
+		efficiency = 100
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 7000 }
+	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 250 }
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 }	
+}

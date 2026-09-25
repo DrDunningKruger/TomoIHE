@@ -1,0 +1,282 @@
+spriteTypes = {
+####Infantry Equipment####
+	SpriteType = {
+	    name = "GFX_YUG_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/HUN/HUN_rifle_mannlicher_m1895.dds"
+	    }
+	SpriteType = {
+		name = "GFX_YUG_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_rifle_vz24.dds"
+		}
+	SpriteType = {
+		name = "GFX_YUG_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_smg_Zastava_M49.dds"
+		}
+	SpriteType = {
+		name = "GFX_YUG_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_smg_Zastava_M56.dds"
+		}
+####Motorised and Mechanised Equipment###		
+	SpriteType = {
+		name = "GFX_YUG_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_motorized.dds"
+		}
+    SpriteType = {
+        name = "GFX_YUG_motorized_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/YUG/YUG_motorized.dds"
+    }		
+	SpriteType = {
+		name = "GFX_YUG_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_apc_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_apc_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_apc_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_transport_plane.dds"	
+	}
+    SpriteType = {
+        name = "GFX_YUG_motorized_rocket_unit_medium"
+        texturefile = "gfx/interface/technologies/GEN/GEN_motorized_rocket_unit.dds"
+	}		
+####armored_car####		
+	SpriteType = {
+		name = "GFX_YUG_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/FRA/FRA_AC0_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_YUG_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/FRA/FRA_AC1_5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_YUG_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/SPR/SPR_AC2_3.dds"		
+	}	
+########	
+	SpriteType = {
+		name = "GFX_YUG_amphibious_tank_chassis_medium"
+         texturefile = "gfx/interface/technologies/GEN/CHASSIS/ITA_AMP_CH.dds"
+	}
+####WW1_Armor####	
+	SpriteType = {
+		name = "GFX_YUG_gwtank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/WW1_CH.dds"
+	}
+####Basic Light####	
+	SpriteType = {
+		name = "GFX_YUG_basic_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT1_CH.dds"
+	}
+####Improved Light####		
+	SpriteType = {
+		name = "GFX_YUG_improved_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT2_CH.dds"
+	}	
+####Advanced Light####	
+	SpriteType = {
+		name = "GFX_YUG_advanced_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT3_CH.dds"
+	}	
+	SpriteType = {
+		name = "GFX_YUG_modern_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT4_CH.dds"
+	}
+####Basic Medium####	
+	SpriteType = {
+		name = "GFX_YUG_basic_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT1_CH.dds"
+	}	
+####Improved Medium####	
+	SpriteType = {
+		name = "GFX_YUG_improved_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT2_CH.dds"
+	}
+####Advanced Medium####	
+	SpriteType = {
+		name = "GFX_YUG_advanced_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT3_CH.dds"
+	}
+####MBT####	
+	SpriteType = {
+		name = "GFX_YUG_main_battle_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/ITA_SH_CH.dds"
+	}	
+####Basic Heavy####	
+	SpriteType = {
+		name = "GFX_YUG_basic_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT1_CH.dds"
+	}		
+####Improved Heavy####	
+	SpriteType = {
+		name = "GFX_YUG_improved_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT2_CH.dds"
+	}
+####Advanced Heavy####	
+	SpriteType = {
+		name = "GFX_YUG_advanced_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT3_CH.dds"
+	}	
+####Super Heavy####	
+	SpriteType = {
+		name = "GFX_YUG_super_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_SH_CH.dds"
+	}	
+####Fighter####	
+	SpriteType = {
+		name = "GFX_YUG_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_fighter_0.dds"
+		}	
+	SpriteType = {
+		name = "GFX_YUG_fighter1_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_fighter_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_YUG_fighter2_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_fighter3_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_fighter_3.dds"
+	}
+####CAS####	
+	SpriteType = {
+		name = "GFX_YUG_CAS1_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_CAS_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_CAS2_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_CAS_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_CAS3_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_CAS_3.dds"
+	}	
+####Naval Bomber####	
+	SpriteType = {
+		name = "GFX_YUG_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_nav_1_0.dds"
+	}		
+	SpriteType = {
+		name = "GFX_YUG_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_nav_bomber_2_0.dds"
+	}		
+	SpriteType = {
+		name = "GFX_YUG_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_nav_bomber_2_0.dds"
+	}
+####Heavy Fighter####	
+	SpriteType = {
+		name = "GFX_YUG_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_heavy_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_heavy_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_heavy_fighter_3.dds"
+	}
+####Tac Bomber####	
+	SpriteType = {
+		name = "GFX_YUG_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_bomber_0.dds"
+	}		
+	SpriteType = {
+		name = "GFX_YUG_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_bomber_1.dds"
+	}			
+	SpriteType = {
+		name = "GFX_YUG_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_bomber_2.dds"
+	}			
+	SpriteType = {
+		name = "GFX_YUG_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/YUG/AIR/YUG_bomber_3.dds"
+	}	
+####Strat Bomber####	
+    SpriteType = {
+		name = "GFX_YUG_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/GEN_strat_1.dds"
+	}	
+    SpriteType = {
+		name = "GFX_YUG_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/GEN_strat_2.dds"
+	}			
+	SpriteType = {
+		name = "GFX_YUG_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/GEN_strat_3.dds"
+	}
+    #YUG howitzer#
+    SpriteType = {
+        name = "GFX_YUG_gw_artillery_medium"
+        texturefile = "gfx/interface/technologies/YUG/YUG_ART_1.dds"
+    }
+
+    SpriteType = {
+        name = "GFX_YUG_artillery1_medium"
+        texturefile = "gfx/interface/technologies/YUG/YUG_ART_2.dds"
+    }	
+	
+    SpriteType = {
+        name = "GFX_YUG_artillery4_medium"
+        texturefile = "gfx/interface/technologies/YUG/YUG_ART_3.dds"
+    }
+
+	SpriteType = {
+		name = "GFX_YUG_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_Rocket_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_Rocket_Art_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_YUG_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AA_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_antiair2_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AA_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_antiair5_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AA_3.dds"
+	}	
+#Generic AT#
+	SpriteType = {
+		name = "GFX_YUG_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AT_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_antitank2_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AT_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_YUG_antitank5_medium"
+		texturefile = "gfx/interface/technologies/YUG/YUG_AT_3.dds"
+	}
+	SpriteType = { 
+		name = "GFX_YUG_support_weapons3_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_3.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_YUG_support_weapons4_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUG_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Support/ENG_AT_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_YUG_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Support/GER_AT_2.dds"
+	}	
+}		

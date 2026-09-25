@@ -1,0 +1,39 @@
+
+state={
+	id=110
+	name="STATE_110"
+	resources={
+		aluminium=5.000
+	}
+
+	history={
+		owner = NOR
+		victory_points = {
+			1937 3 
+		}		
+		victory_points = {
+			3022 3 
+		}		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 4
+			
+			1937 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}			
+		}
+		add_core_of = NOR
+
+	}
+
+	provinces={
+		10 21 107 111 115 133 1937 3018 3021 3022 3098 3105 3136 3183 6038 6042 6114 6116 6118 6136 6173 8056 9032 9132 9135 9139 9227 11028 11113 11118 11135 11173 11206 
+	}
+	manpower=410219
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

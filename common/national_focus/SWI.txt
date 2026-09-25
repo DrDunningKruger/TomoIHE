@@ -1,0 +1,333 @@
+focus_tree = {
+	id = SWI_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SWI
+		}
+	}
+
+	focus = {
+		id = civil_war
+		x = 0
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_global_flag = asia_only }
+			date > 1936.7.15
+		}
+		
+		completion_reward = {
+			IF = {
+				limit = {NOT = {has_global_flag = NO_SCW }}
+					SPR = { country_event = mao.5 }
+			}
+			IF = {
+				limit = {has_global_flag = NO_SCW }
+					add_named_threat = { threat = 1 name = Spannish_Civil_War}
+					news_event = { hours = 6 id = news.63 }
+				SPR = {
+				add_ideas = SPA_civil_war_nerf
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.6
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.4
+					}
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+					set_cosmetic_tag = SPR_civil_war
+					army_experience = 750
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = civil_war_2
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}		
+		available = {
+			NOT = { has_global_flag = asia_only }
+			date > 1937.6.1
+		}
+		
+		completion_reward = {
+			IF = {
+				limit = {has_global_flag = NO_SCW }
+				SPR = {
+						swap_ideas = {
+		remove_idea = SPA_civil_war_nerf
+		add_idea = SPA_civil_war_nerf_2
+			}
+				}
+			}
+		}
+	}	
+	
+ 	focus = {
+		id = china_war
+		x = 2
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = no_asia
+			date > 1937.8.7
+		}
+		completion_reward = {
+			add_named_threat = { threat = 12 name = Japan_invaded_china }
+		}
+	}
+	
+	focus = {
+		id = scw_over
+		x = 4
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = NO_SCW
+			date > 1939.3.21
+			NOT = { has_global_flag = asia_only }
+		}
+		completion_reward = {
+			add_named_threat = { threat = 8 name = SCW_over}
+			set_global_flag = scw_over
+			IF = {
+				limit = {has_global_flag = NO_SCW }
+				SPR = {
+		            remove_ideas = SPA_civil_war_nerf_3
+
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = panay_incident
+		x = 6
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_global_flag =  no_asia
+			date > 1937.12.12
+			NOT = { has_global_flag = asia_only }
+		}
+		completion_reward = {
+			USA = {
+						add_political_power = 100
+			}
+			news_event = { id = news.334 }
+		}
+	}
+
+	focus = {
+		id = border_war_jap_sov
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1938.8.11
+		}
+		completion_reward = {
+            SOV = { country_event = japan_border_conflict.4 }
+			JAP = { country_event = japan_border_conflict.4 }
+		}
+	}
+
+	focus = {
+		id = yugo_plane_sale
+		x = 10
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1938.6.6
+			NOT = { has_global_flag = asia_only }
+		}
+		completion_reward = {
+			IF = {
+				limit = {has_global_flag = NO_SCW }
+				SPR = {
+						swap_ideas = {
+		            remove_idea = SPA_civil_war_nerf_2
+		            add_idea = SPA_civil_war_nerf_3
+			}
+				}
+			}		
+				GER = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+				ENG = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+				FRA = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+				ITA = { add_timed_idea = { idea = YUG_air_payment days = 180 } }
+		}
+	}
+	
+	focus = {
+		id = tora_tora_tora
+		x = 10
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1941.1.1
+			NOT = { has_global_flag = asia_only }
+		}
+		completion_reward = {
+        JAP = {		
+        add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+		}}
+	}	
+	
+	focus = {
+		id = china_jap_war_resume
+		x = 12
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.1.10
+			has_global_flag = asia_only
+		}
+		completion_reward = {
+			JAP = { declare_war_on = { target = CHI    type = annex_everything } }
+		}
+	}
+	
+	focus = {
+		id = conquest_of_indochina
+		x = 14
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.9.19
+			has_global_flag = asia_only
+		}
+		completion_reward = {
+			JAP = { 
+					transfer_state = 741
+					transfer_state = 286
+					transfer_state = 671
+					transfer_state = 670
+				}
+			JAP = { remove_ideas = naval_catch_up }
+            NZL = { remove_ideas = naval_catch_up }	
+            AST = { remove_ideas = naval_catch_up }
+            USA = { remove_ideas = naval_catch_up }
+            RAJ = { remove_ideas = naval_catch_up }
+            PHI = { remove_ideas = naval_catch_up }	
+            MAN = { remove_ideas = naval_catch_up }	
+            SIA = { remove_ideas = naval_catch_up }				
+		}
+	}
+	
+	focus = {
+		id = pearl_harbor
+		x = 16
+		y = 0
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1941.12.7
+			has_global_flag = asia_only
+		}
+		completion_reward = {
+			JAP = { declare_war_on = { target = USA    type = annex_everything } }
+		}
+	}
+	
+	focus = {
+		id = asia_only_resources
+		x = 18
+		y = 0
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SWI = { exists = no }
+		}
+		completion_reward = {
+		every_country = {
+        add_timed_idea = { idea = POL_efficiencygrowth days = 60 }				
+		}
+					375 = {
+						add_resource = {
+							type = steel
+							amount = 370
+						}
+						add_resource = {
+							type = aluminium
+							amount = 44
+						}
+						add_resource = {
+							type = oil
+							amount = 50
+						}						
+					}
+					285 = {
+						add_resource = {
+							type = steel
+							amount = 208
+						}
+						add_resource = {
+							type = aluminium
+							amount = 100
+						}
+						add_resource = {
+							type = oil
+							amount = 80
+						}	
+						add_resource = {
+							type = chromium
+							amount = 100
+						}						
+					}					
+		}
+	}

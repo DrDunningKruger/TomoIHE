@@ -1,0 +1,51 @@
+﻿air_wings = {
+	
+	305 = {
+		small_plane_airframe_2 =  {		
+				owner = "GER" 
+				amount = 100
+				version_name = "Bf 109F"
+			}
+			name = "261 Wing"
+			start_experience_factor = 0.9
+			
+	    small_plane_airframe_2 =  {		
+				owner = "GER" 
+				amount = 100
+				version_name = "Bf 109F"
+			}
+			name = "253 Wing"
+			start_experience_factor = 0.9   
+		small_plane_airframe_2 =  {		
+				owner = "GER" 
+				amount = 100
+				version_name = "Bf 109F"
+			}
+			name = "258 Wing"
+			start_experience_factor = 0.9
+	
+		
+		small_plane_cas_airframe_2 =  {		
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 87 D"
+			}
+			name = "261 Wing"
+			start_experience_factor = 0.9	
+		small_plane_cas_airframe_2 =  {		
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 87 D"
+			}
+			name = "270 Wing"
+			start_experience_factor = 0.9	
+			
+		small_plane_cas_airframe_2 =  {			
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 87 D"
+			}
+			name = "272 Wing"
+			start_experience_factor = 0.9
+	}
+}

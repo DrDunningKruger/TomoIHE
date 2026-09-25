@@ -1,0 +1,1375 @@
+characters={
+	FRA_pierre_laval={ #Democratic Leader
+		name=FRA_pierre_laval
+		portraits={
+			civilian={
+				large="GFX_portrait_fra_pierre_laval"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ stout_defender }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FRA_edouard_daladier={
+		name=FRA_edouard_daladier
+		portraits={
+			civilian={
+				large="gfx/leaders/FRA/Portrait_France_Edouard_Daladier.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ stout_defender }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	FRA_denis_guillaumat={ #Non-Aligned Leader
+		name=FRA_denis_guillaumat
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ editor eager_collaborator }
+			expire="1949.1.1.12"
+			id=-1
+		}
+	}
+
+	FRA_rene_nicod={
+		name=FRA_rene_nicod
+		portraits={
+			civilian={
+				large="GFX_portrait_fra_rene_nicod"
+				small = "gfx/interface/ideas/idea_FRA_rene_nicod.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+		}
+	}
+
+	FRA_philippe_petain={ #Fascist Leader
+		name=FRA_philippe_petain
+		portraits={
+			civilian={
+				large="gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+	FRA_charles_de_gaulleFM={
+		name=FRA_charles_de_gaulle
+		portraits={
+			army={
+				small="GFX_idea_charles_de_gaulle"
+				large=GFX_portrait_France_Charles_De_Gaulle
+			}
+			civilian={
+				large=GFX_portrait_FRA_charles_de_gaulle
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = FRA_charlesattack
+			allowed = {
+				original_tag = FRA
+			}
+			available = { 
+				has_completed_focus = FRA_appeal_to_the_french_nation
+			}				
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 25
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+				field_marshal = {
+					visible = { 
+						has_completed_focus = FRA_appeal_to_the_french_nation
+					}
+					desc = "FFA_Charles_De_Gaulle_desc"
+					traits = { trickster panzer_leader harsh_leader media_personality hill_fighter armor_officer  }
+					skill = 7
+					attack_skill = 6
+					defense_skill = 6
+					planning_skill = 5
+					logistics_skill = 5
+				}		
+	}		
+	
+	Jean_Touzet_du_Vigier={
+		name = "Jean Touzet du Vigier"
+		portraits={
+			army={
+				small=GFX_portrait_FRA_alphonse_juin_small
+				large=GFX_portrait_Jean_Touzet_du_Vigier
+			}
+		}
+		
+		field_marshal={ #advocate for mechanization and cav motorization, veteran, let 2nd tank div, joined free french on torch and led tanks			
+					visible = { 
+						has_completed_focus = FRA_armored_divisions
+					}					
+					desc = "Jean_Touzet_du_Vigier_desc"	 #
+					traits = { panzer_leader panzer_expert trickster ranger naval_invader expert_improviser trait_engineer infantry_officer }
+					skill = 5
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 4
+			legacy_id=0
+		}
+	}
+				
+
+	### THEORISTS ###
+
+	FRA_maxime_weygand={
+		name=FRA_maxime_weygand
+		portraits={
+			army={
+				small="GFX_idea_maxime_weygand"
+			}
+			army={
+				large=GFX_portrait_FRA_maxime_weygand
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = maxime_weygand
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 7
+			}
+		}		
+		
+		advisor={
+			slot = army_chief
+			idea_token = maxime_weygand1
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_chief_defensive_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		field_marshal={ #vet, appointed field marshal, majorly fucked up a counter attack at dunkirk pocket, tried to salvage with defense in depth, defeatist
+			desc = "Maxime_Weygand_desc"
+			traits = { trait_defeatist war_hero defensive_doctrine ambusher unyielding_defender }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}
+
+	FRA_jean_decoux={
+		name=FRA_jean_decoux
+		portraits={
+			army={
+				small="GFX_idea_jean_decoux"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = jean_decoux
+			ledger = navy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { naval_theorist }
+		}		
+	}
+
+	FRA_jean_marie_bergeret={
+		name=FRA_jean_marie_bergeret
+		portraits={
+			army={
+				small="GFX_idea_jean_marie_bergeret"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = jean_marie_bergeret
+			ledger = air
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	FRA_frederic_irene_joliot_curie={
+		name=FRA_frederic_irene_joliot_curie
+		portraits={
+			army={
+				small="GFX_idea_frederic_irene_joliot_curie"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = frederic_irene_joliot_curie
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			research_bonus = {
+				nuclear = 0.150
+			}
+			traits = {
+				nuclear_scientist
+			}
+		}
+	}
+
+
+	### ARMY CHIEFS ###
+
+
+	FRA_maurice_gamelin={
+		name=FRA_maurice_gamelin
+		portraits={
+			army={
+				small="GFX_idea_maurice_gamelin"
+			}
+			army={
+				large=GFX_portrait_FRA_maurice_gamelin
+			}
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = maurice_gamelin
+			traits = {
+				army_chief_offensive_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal={ # smart, predictable, stiff, slow, not vigorous, veteran, Gamelin was considered one of the best commanding generals in Europe, static, defeatist
+			desc = "Maurice_Gamelin_desc" #Defensive FM, better stats but worse traits
+			traits = { trait_defeatist war_hero defensive_doctrine politically_connected trait_cautious trait_imbecile trait_imbecile }
+			skill = 6 
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+
+
+
+	### NAVY CHIEFS ###
+
+	FRA_francois_darlan={
+		name=FRA_francois_darlan
+		portraits={
+			army={
+				large=GFX_portrait_FRA_francois_darlan
+				small="GFX_idea_francois_darlan"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = francois_darlan
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		navy_leader={
+			traits = { naval_lineage bold ironside fly_swatter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+	
+	FRA_jeanmarie_charles_abrial={
+		name=FRA_jeanmarie_charles_abrial
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits = { chief_engineer superior_tactician spotter blockade_runner }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id=0
+		}
+	}
+
+	FRA_jeanpierre_esteva={
+		name=FRA_jeanpierre_esteva
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanpierre_esteva
+				small=GFX_portrait_FRA_jeanpierre_esteva_small
+			}
+		}
+		navy_leader={
+			traits = { aviation_enthusiast old_guard_navy battleship_adherent cruiser_captain }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Georges_Thierry={
+		name="Georges Thierry D Argenlieu"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_Georges_Thierry
+				small=GFX_portrait_FRA_jeanpierre_esteva_small
+			}
+		}
+		navy_leader={
+			traits = { aviation_enthusiast old_guard_navy battleship_adherent cruiser_captain }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id=0
+		}
+	}	
+	
+	FRA_rene_emile_godfroy={
+		name=FRA_rene_emile_godfroy
+		portraits={
+			army={
+				large=GFX_portrait_FRA_rene_emile_godfroy
+				small=GFX_portrait_FRA_rene_emile_godfroy_small
+			}
+			army={
+				small="GFX_idea_rene_emile_godfroy"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = rene_emile_godfroy
+			ledger = navy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		navy_leader={
+			traits = { gentlemanly battleship_adherent old_guard_navy spotter green_water_expert cuts_corners }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+			legacy_id=0
+		}
+	}
+
+	FRA_jean_de_laborde={
+		name=FRA_jean_de_laborde
+		portraits={
+			navy={
+				small="GFX_idea_jean_de_laborde"
+			}
+			army={
+				large=GFX_portrait_FRA_jean_de_laborde
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = jean_de_laborde
+			ledger = navy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_capital_ship_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		navy_leader={
+			traits = { naval_lineage aviation_enthusiast air_controller flight_deck_manager green_water_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 3
+			legacy_id=0
+		}
+	}	
+
+	FRA_marcel_gensoul={
+		name=FRA_marcel_gensoul
+		portraits={
+			army={
+				small="GFX_idea_marcel_gensoul"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = marcel_gensoul
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_naval_aviation_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FRA_jean_marie_abrial={
+		name=FRA_jean_marie_abrial
+		portraits={
+			army={
+				small="GFX_idea_jean_marie_abrial"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = jean_marie_abrial
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	FRA_joseph_vuillemin={
+		name=FRA_joseph_vuillemin
+		portraits={
+			army={
+				small="GFX_idea_joseph_vuillemin"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = joseph_vuillemin
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	FRA_philippe_fequant={
+		name=FRA_philippe_fequant
+		portraits={
+			army={
+				small="GFX_idea_philippe_fequant"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = philippe_fequant
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	FRA_charles_de_gaulle={
+		name=FRA_charles_de_gaulle
+		portraits={
+			army={
+				small="GFX_idea_charles_de_gaulle"
+				large=GFX_portrait_France_Charles_De_Gaulle
+			}
+			civilian={
+				large=GFX_portrait_FRA_charles_de_gaulle
+			}
+		}	
+		
+		corps_commander={
+	        desc = "Mainland_Charles_De_Gaulle_desc"
+			traits = { trickster panzer_leader harsh_leader media_personality hill_fighter armor_officer  }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=101
+		}
+	}
+
+	FRA_martial_valin={
+		name=FRA_martial_valin
+		portraits={
+			army={
+				small="GFX_idea_martial_valin"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = martial_valin
+			ledger = air
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				air_chief_naval_strike
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	FRA_alfred_heurtaux={
+		name=FRA_alfred_heurtaux
+		portraits={
+			army={
+				small="GFX_idea_alfred_heurtaux"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = alfred_heurtaux
+			ledger = air
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				air_air_superiority
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	FRA_rene_olry={
+		name=FRA_rene_olry
+		portraits={
+			army={
+				large=GFX_portrait_Rene_Olry
+				small=GFX_portrait_FRA_rene_olry_small
+			}
+		}
+		corps_commander={ #Did a good job at defending the Alps from the Italians
+		    desc = "Rene_Olry_desc"	 #Defensive Mountaineer for Italian Front
+			traits = { trait_defeatist trait_mountaineer skirmisher trait_cautious ambusher }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id=0
+		}
+		
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = frainfguy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_infantry_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	FRA_philippe_leclerc={
+		name=FRA_philippe_leclerc
+		portraits={
+			army={
+				small="GFX_idea_philippe_leclerc"
+				large=GFX_portrait_philippe_leclerc
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = charles_de_gaulle
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+
+		advisor={
+			available = { 
+				has_completed_focus = FRA_appeal_to_the_french_nation
+			}			
+			slot = army_chief
+			idea_token = FRA_leclercpostcap
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 25
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		corps_commander={ #capt esc 2x during fr, eager, Gabon and tunisia, Formed 2nd armored, figured out logistics, caused traffic jams, beat better tanks with maneuver and air
+			desc = "philippe_leclerc_desc"	 #
+			traits = { desert_fox panzer_leader combined_arms_expert organizer trickster camouflage_expert armor_officer }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+			legacy_id=0
+		}
+	}
+
+	FRA_rene_prioux={
+		name=FRA_rene_prioux
+		portraits={
+			army={
+				small="GFX_idea_rene_prioux"
+				large=GFX_portrait_Rene_Prioux
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = rene_prioux
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_cavalry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		corps_commander={ #defeatist, gifted cavalryman, did a good job defending in Belgium
+	        desc = "Rene_Prioux_desc"
+			traits = { trait_defeatist cavalry_leader cavalry_expert expert_improviser ambusher organizer career_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=10101
+		}		
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	# Thorez up there
+
+	FRA_leon_blum={
+		name=FRA_leon_blum
+		portraits={
+			army={
+				small="GFX_idea_leon_blum"
+			}
+			civilian = {
+				large="GFX_portrait_fra_leon_blum"
+			}
+		}
+	}
+
+	FRA_georges_bonnet={
+		name=FRA_georges_bonnet
+		portraits={
+			army={
+				small="GFX_idea_georges_bonnet"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = georges_bonnet
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				has_government  = democratic 
+			}
+			cost  = 100.000
+			traits  = {
+				appeaser 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_pierre_pucheu={
+		name=FRA_pierre_pucheu
+		portraits={
+			army={
+				small="GFX_idea_FRA_pierre_pucheu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_pierre_pucheu
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				not  = {
+					has_government  = communism 
+				}
+			}
+			cost  = 75.000
+			traits  = {
+				technocrat 
+				democratic_reformer 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+	
+	FRA_gaston_henry_haye={
+		name=FRA_gaston_henry_haye
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_gaston_henry_haye
+			allowed  = {
+				original_tag  = FRA
+			}
+			traits  = {
+				silent_workhorse 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_jacques_duclos={
+		name=FRA_jacques_duclos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+				large="gfx/leaders/FRA/portrait_fra_jacques_duclos.dds" #Used only as Operative atm
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_jacques_duclos
+			allowed  = {
+				original_tag  = FRA
+			}
+			cost = 100
+			traits  = {
+				backroom_backstabber 
+				smooth_talking_charmer 
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+
+	FRA_vincent_auriol={
+		name=FRA_vincent_auriol
+		portraits={
+			army={
+				small="GFX_idea_FRA_vincent_auriol"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_vincent_auriol
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				has_completed_focus  = FRA_form_the_popular_front 
+			}
+			cost = 100
+			traits  = {
+				financial_expert 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_zivony_peshkov={
+		name=FRA_zivony_peshkov
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_zivony_peshkov
+			allowed  = {
+				original_tag  = FRA
+			}
+			traits  = {
+				war_industrialist 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_felix_gouin={
+		name=FRA_felix_gouin
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_felix_gouin
+			allowed  = {
+				original_tag  = FRA
+			}
+			cost = 75
+			traits  = {
+				captain_of_industry 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_charles_tillon={
+		name=FRA_charles_tillon
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_charles_tillon
+			allowed  = {
+				original_tag  = FRA
+			}
+			traits  = {
+				armaments_organizer 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_paul_reynaud={
+		name=FRA_paul_reynaud
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_paul_reynaud.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Paul_Reynaud.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_paul_reynaud
+			allowed  = {
+				original_tag  = FRA
+			}
+			traits  = {
+				quartermaster_general 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}		
+	}
+	
+	################### GENERALS
+	################### GENERALS
+	################### GENERALS
+	################### GENERALS
+	
+	FRA_alphonse_georges={  #allowed inititative to officers, vet, deputy commander of all french forces, cried after german breakthrough
+		name=FRA_alphonse_georges
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_FRA_alphonse_georges
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = philippe_leclerc
+			ledger = army
+			traits = {
+				army_concealment_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		corps_commander={
+			desc = "Alphonse_Joseph_Georges_desc"	#Mediocre, Large Capacity General
+			traits = { trait_defeatist skilled_staffer inflexible_strategist war_hero } #needs more
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Georges_Blanchard={  #allowed inititative to officers, vet, deputy commander of all french forces, cried after german breakthrough
+		name="Georges Blanchard"
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Georges_Blanchard
+			}
+		}
+		
+		field_marshal={
+			desc = "Georges_Blanchard_desc"	#Standard Mainland Tank FM
+			traits = { trait_defeatist infantry_officer panzer_leader war_hero guerilla_fighter offensive_doctrine }
+			skill = 6
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Andre_Corap={  #sedan dude, this man lost the war by himself
+		name="André Corap" 
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Andre_Corap
+			}
+		}
+		
+		corps_commander={
+			desc = "Andre_Corap_desc"	 #Infantry Ranger.
+			traits = { trait_defeatist ranger infantry_leader trait_imbecile }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Aime_Doumenc={  
+		name="Aime Doumenc" 
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Aime_Doumenc
+			}
+		}
+		
+		corps_commander={
+			desc = "Aime_Doumenc_desc"	#Defensive Forest General for Mainland, Good for Red Air
+			traits = { harsh_leader logistics_wizard armor_officer ranger camouflage_expert trait_defeatist inspirational_leader }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Raoul_Magrin_Vernerey={
+		name = "Raoul Magrin-Vernerey"
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Raoul_Magrin_Vernerey
+			}
+		}
+		
+		corps_commander={ #vet, mountaineer in norway, did an okay job there, did nothing important post cap
+			desc = "Raoul_Magrin_Vernerey_desc"
+			traits = { war_hero scavenger trait_defeatist trait_mountaineer winter_specialist naval_liason winter_expert infantry_expert }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Diego_Brosset={
+		name = "Diego Brosset"
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Diego_Brosset
+			}
+		}
+		
+		corps_commander={ #free french, fought in tunisia and italy, fort buster, urban fighter, beloved?
+			desc = "Diego_Brosset_desc"	 #JOINED FFA IN 41
+			traits = { urban_assault_specialist politically_connected hill_fighter fortress_buster infantry_leader infantry_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}	
+	
+	FRA_Marie_Pierre_Koenig={
+		name = "Marie-Pierre Kœnig"
+		portraits={
+			army={
+				small="GFX_idea_alphonse_georges"
+				large=GFX_portrait_Marie_Pierre_Koenig
+			}
+		}
+		
+		corps_commander={ #free french, fought in tunisia and italy, fort buster, urban fighter, beloved?
+			desc = "Marie_Pierre_Koenig_desc"	 #
+			traits = { naval_invader infantry_leader desert_fox inflexible_strategist commando career_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	
+	
+	FRA_Jean_de_Lattre_de_Tassigny={
+		name = "Jean de Lattre de Tassigny"
+		portraits={
+			army={
+				small=GFX_portrait_FRA_jean_de_lattre_de_tassigny_small
+				large=GFX_portrait_Jean_de_Lattre_de_Tassigny
+			}
+		}
+		
+		field_marshal={ #free french, fought in tunisia and italy, fort buster, urban fighter, beloved?
+		    visible = {
+			 has_completed_focus = FRA_continue_the_fight
+			}			
+			desc = "Jean_de_Lattre_de_Tassigny_desc"	 #
+				traits = { infantry_leader infantry_expert naval_invader aggressive_assaulter invader_ii thorough_planner organisational_leader }
+				skill = 5
+				attack_skill = 7
+				defense_skill = 5
+				planning_skill = 6
+				logistics_skill = 2
+			legacy_id=0
+		}
+		
+		advisor={
+		    available = {
+			 has_completed_focus = FRA_continue_the_fight
+			}
+			slot = high_command
+			ledger = army
+			idea_token = frasomethingsomething
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+		    available = {
+			 has_completed_focus = FRA_continue_the_fight
+			}		
+			slot = theorist
+			idea_token = jean_de_advisor
+			traits = {
+				military_theorist
+			}
+			cost = 25
+			ai_will_do = {
+				factor = 7
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = FRA_maountaindudedefenseive
+			allowed = {
+				original_tag = FRA
+			}
+			available = { 
+				has_completed_focus = FRA_continue_the_fight
+			}			
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 25
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	FRA_emile_muselier={
+		name=FRA_emile_muselier
+		portraits={
+			army={
+				small="GFX_idea_emile_muselier"
+				large="GFX_portrait_Emile_Muselier"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = emile_muselier
+			ledger = navy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_fleet_logistics_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader={
+		    visible = {
+			 has_completed_focus = FRA_catapult
+			}			
+				skill = 4
+				traits = { superior_tactician seawolf fleet_protector blockade_runner cruiser_captain hunter_killer  }
+				attack_skill = 4
+				defense_skill = 3
+				maneuvering_skill = 3
+				coordination_skill = 4
+		}		
+	}	
+	
+	FRA_Alphonse_Juin={
+		name = "Alphonse Juin"
+		portraits={
+			army={
+				small=GFX_portrait_FRA_alphonse_juin_small
+				large=GFX_portrait_Alphonse_Juin
+			}
+		}
+		
+		advisor={
+			slot = army_chief
+			idea_token = FRA_maountaindudedefenseive
+			allowed = {
+				original_tag = FRA
+			}
+			available = { 
+				has_completed_focus = FRA_continue_the_fight
+			}			
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 25
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+		    available = {
+			 has_completed_focus = FRA_continue_the_fight
+			}
+			slot = high_command
+			ledger = army
+			idea_token = frainfdude2
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		corps_commander={ #vet, comanded mot division, got encircled, joined after torch, fought in italy with distinction as mountaineer, broke gustav line,careful planner,attacker
+		    visible = {
+			 has_completed_focus = FRA_continue_the_fight
+			}				
+				desc = "Alphonse_Juin_desc"	 #
+				traits = { trait_mountaineer infantry_leader skirmisher brilliant_strategist cavalry_leader fortress_buster  }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 5
+				logistics_skill = 5
+			legacy_id=0
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

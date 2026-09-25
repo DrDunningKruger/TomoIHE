@@ -1,0 +1,1238 @@
+# target 40 divs (10 inf, eng, art, aa) 1/1/1940
+
+
+########################################
+# Research	default 
+########################################
+########################################
+# Research - production	
+########################################
+IEA_research_industry_construction = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes	
+	}
+	abort = {
+			has_tech = construction2
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		concentrated_industry_category = 1
+		construction_tech = 1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+IEA_research_industry_no_construction = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_tech = construction2
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		concentrated_industry_category = 1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+########################################
+# Research - electronics	
+########################################
+IEA_research_electronics_do_research = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		or = {
+			date > 1939.1.1
+			NOT = { IEA = { has_tech = electronic_mechanical_engineering } }
+		}
+	}
+	abort = {
+			or = {
+				and = {
+					has_tech = electronic_mechanical_engineering 
+					date < 1939.1.1				
+				}
+				has_tech = radio
+			}
+	}
+	research = {
+		# radio
+		electronics = 1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+IEA_research_electronics_do_not_research = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# radio
+		electronics = -1
+	}
+	weight = {
+		factor = 1000
+	}
+}
+
+
+
+########################################
+# Research - Land doctrine ???	
+########################################
+IEA_research_doctrine = {
+
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			always = no
+	}
+	
+	
+	research = {
+		# military
+		land_doctrine = 0 # obsolete?
+	}
+	weight = {
+		factor = 1000
+	}
+}
+########################################
+# Research - infantry	
+########################################
+IEA_research_rush_infantry_weapons2 = {
+
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			has_tech = improved_infantry_weapons
+	}
+	research = {
+		# infantry
+		infantry_weapons = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+IEA_research_infantry_weapons = {
+
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_tech = improved_infantry_weapons
+	}
+	abort = {
+		always = no	
+	}
+	research = {
+		# infantry
+		infantry_weapons = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+
+########################################
+# Research - Artillery	
+########################################
+IEA_research_rush_art2 = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			has_tech = artillery1
+	}
+	research = {
+		# artillery
+		artillery = 1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+IEA_research_artillery = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_tech = artillery1
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# artillery
+		artillery = 1
+	}
+	weight = {
+		factor = 3000
+	}	
+}
+
+########################################
+# Research - Support	
+########################################
+IEA_research_not_engineers = {
+
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		or = {
+			NOT = { has_tech = artillery1 }
+			NOT = { has_tech = improved_infantry_weapons }
+		}
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# utility
+		engineers_tech = -1
+	}
+	weight = {
+		factor = 1000
+	}
+}
+
+IEA_research_engineers = {
+
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_tech = artillery1
+		has_tech = improved_infantry_weapons
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# utility
+		engineers_tech = 1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+#####################################
+# END OF RESEARCH
+#####################################
+
+#####################################
+# PP spending - default is no spending
+#####################################
+
+#####################################
+# IEA wants Industrial Concern 
+#####################################
+IEA_wants_industrial_concern = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_idea = danieli # industrial_concern
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	
+	ideas = {
+	# industrial advisor
+		industrial_concern = 1
+		
+		war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		extensive_conscription = -1
+		service_by_requirement = -1
+		all_adults_serve = -1
+		scraping_the_barrel = -1
+		infantry_equipment_manufacturer = -1
+		#industrial_concern = -1
+		IEA_giacomo_acerbo  = -1
+		IEA_junio_valerio_borghese  = -1
+		IEA_cheif2 = -1	
+		IEA_entr = -1
+		IEA_regroup = -1
+		ieatheoristarmy = -1
+	}
+	weight = {
+		factor = 4000
+	}
+}
+#####################################
+# IEA wants War Eco after Industrial Concern
+#####################################
+IEA_war_eco = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_idea = danieli # industrial_concern
+	}
+	abort = {
+		has_idea = war_economy
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = { # closed economy once war starts
+		war_economy = 1
+		
+		#war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		extensive_conscription = -1
+		service_by_requirement = -1
+		all_adults_serve = -1
+		scraping_the_barrel = -1
+		infantry_equipment_manufacturer = -1
+		industrial_concern = -1
+		IEA_giacomo_acerbo  = -1
+		IEA_junio_valerio_borghese  = -1
+		IEA_cheif2 = -1	
+		IEA_entr = -1
+		IEA_regroup = -1
+		ieatheoristarmy = -1
+	}
+	weight = { 
+		factor = 4000
+	}
+}
+##################################################
+# IEA wants industry boost but doesnt want attaches
+##################################################
+IEA_doesnt_want_decisions = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		or = {
+			#always = yes
+			and = {
+				date > 1936.1.1
+				#date < 1938.6.1
+			}
+		}
+	}
+	abort = {
+		and = {
+			date > 1938.6.1
+			date < 1938.10.1
+		}
+	}
+
+	# dont send attaches
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = -1
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1
+	}
+	
+	weight = {
+		factor = 100000
+	}
+}
+
+IEA_wants_industry_boost = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		or = {
+			and = {
+				date > 1938.6.1
+				date < 1938.10.1
+			}
+			and = {
+				date > 1940.6.1
+				date < 1940.10.1
+			}
+		}
+	}
+	abort = {
+		or = {
+			date < 1938.6.1
+			and = {
+				date > 1938.10.1
+				date < 1940.6.1
+			}
+			date > 1940.10.1
+		}
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 500
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 5
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = -1
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = -1
+	}
+	
+	weight = {
+		factor = 100000
+	}
+}
+
+
+#####################################
+# IEA wants War Industrialist after War Eco after Industrial Concern
+#####################################
+IEA_wants_war_industrialist = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_idea = war_economy
+	}
+	abort = {
+		has_idea = IEA_giacomo_acerbo
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = IEA_giacomo_acerbo
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = { 
+	# advisors
+		IEA_giacomo_acerbo  = 1
+		
+		war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		extensive_conscription = -1
+		service_by_requirement = -1
+		all_adults_serve = -1
+		scraping_the_barrel = -1
+		infantry_equipment_manufacturer = -1
+		industrial_concern = -1
+		#IEA_giacomo_acerbo  = -1
+		IEA_junio_valerio_borghese  = -1
+		IEA_cheif2 = -1	
+		IEA_entr = -1
+		IEA_regroup = -1
+		ieatheoristarmy = -1
+	}
+	weight = {
+		factor = 4000
+	}
+}
+#####################################
+# IEA wants Infantry designer after War Industrialist after Industrial Concern after War Eco
+#####################################
+IEA_wants_infantry_designer = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_idea = IEA_giacomo_acerbo #war industrialist
+	}
+	abort = {
+		has_idea = beretta
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = infantry_equipment_manufacturer
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = { 
+	# material designer
+		infantry_equipment_manufacturer = 1
+		
+		war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		extensive_conscription = -1
+		service_by_requirement = -1
+		all_adults_serve = -1
+		scraping_the_barrel = -1
+		#infantry_equipment_manufacturer = -1
+		industrial_concern = -1
+		IEA_giacomo_acerbo  = -1
+		IEA_junio_valerio_borghese  = -1
+		IEA_cheif2 = -1	
+		IEA_entr = -1
+		IEA_regroup = -1
+		ieatheoristarmy = -1
+	}
+	weight = {
+		factor = 4000
+	}
+}
+
+#####################################
+# IEA wants to spend PP on military
+#####################################
+IEA_conscript = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_idea = beretta
+		has_idea = limited_conscription
+
+	}
+	abort = {
+		not = { has_idea = limited_conscription }
+
+	}
+	
+	
+	ideas = { 
+		extensive_conscription = 100
+		
+		war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		#extensive_conscription = -1
+		service_by_requirement = -1
+		all_adults_serve = -1
+		scraping_the_barrel = -1
+		infantry_equipment_manufacturer = -1
+		industrial_concern = -1
+		IEA_giacomo_acerbo  = -1
+		IEA_junio_valerio_borghese  = -1
+		IEA_cheif2 = -1	
+		IEA_entr = -1
+		IEA_regroup = -1
+		ieatheoristarmy = -1
+
+	}
+	weight = {
+		factor = 40
+	}
+}
+IEA_spend_pp = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		not = { has_idea = limited_conscription }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	
+	
+	ideas = { 
+	# conscription
+		service_by_requirement = 1
+		all_adults_serve = 1
+		scraping_the_barrel = 1
+	# advisors
+		IEA_junio_valerio_borghese = 2
+	# theorists
+		ieatheoristarmy = 1
+	# chief army
+		IEA_cheif2 = 1
+	# military high command
+		IEA_entr = 1
+		IEA_regroup = 1
+		
+		
+		war_economy = -1
+		tot_economic_mobilisation = -1
+		war_communism = -1
+		extensive_conscription = -1
+		#service_by_requirement = -1
+		#all_adults_serve = -1
+		#scraping_the_barrel = -1
+		infantry_equipment_manufacturer = -1
+		industrial_concern = -1
+		IEA_giacomo_acerbo  = -1
+		#IEA_junio_valerio_borghese  = -1
+		#IEA_cheif2 = -1	
+		#IEA_entr = -1
+		#IEA_regroup = -1
+		#ieatheoristarmy = -1
+	}
+	weight = {
+		factor = 40
+	}
+}
+#####################################
+# Recruitment
+#####################################
+#####################################
+# Recruitment - up to 1939
+#####################################
+IEA_recruitment_up_39 = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		date > 1939.1.1
+	}
+# Recruitment and production	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	# Dont stockpile in buildup phase
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 0
+	}
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_2
+		value = -100
+	}
+	# Keep at least x factories on infantry and support to prevent early game juggling
+########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+#####################################
+# Recruitment - after 1939 - more stockpile
+#####################################
+IEA_recruitment_after_39 = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		date > 1939.1.1
+	}
+	abort = {
+		always = no
+	}
+# Recruitment and production	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	# Stockpile some stuff for the war
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 10
+	}
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		id = infantry_equipment_2
+		value = -100
+	}
+	# Keep at least x factories on infantry and support to prevent early game juggling
+###########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+
+
+######################################################
+# Stuff thats fixed throughout the game
+# National focus, unused tech and PP, Construction
+######################################################
+IEA_national_focus = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		IEA_africa_orientale_italiana
+		IEA_educate_modernize_execute
+		IEA_collaboration
+		IEA_teach_them_to_read
+		IEA_fight_against_arbegnochs
+		IEA_death_to_desta
+		
+		IEA_war_logistics
+		IEA_roads_of_amhara
+		IEA_start_works_on_imperial_road
+		IEA_compagnia_etiopica_mineraria
+
+		IEA_duke_of_aosta # datelocked mar 1937
+		
+		#IEA_butcher_of_africa
+		IEA_harrar
+		#IEA_mobilize
+		IEA_amhara
+		
+		IEA_fund_new_workplaces
+		
+		IEA_finalize_works_on_imperial_road
+		IEA_established_base_for_industry
+		IEA_linea_dellimpero
+		IEA_italian_investments
+		IEA_ethopian_workforce	
+
+		IEA_compagnie_per_il_cotone_detiopia		
+		
+		IEA_italian_colonial_army
+		IEA_garrison_of_addisababa
+		IEA_ethopian_ressistance
+
+		IEA_army_modernization 
+		IEA_italian_officers		
+		
+		#IEA_ressistance_in_amhara
+		#IEA_ressistance_in_harrar
+		#IEA_resistance_in_somali
+
+		IEA_steel_of_ethopia
+		IEA_italian_warfare_thoughs 
+		IEA_trasporti_automobilistici
+		IEA_ethopians_within_italian_army
+		#IEA_army_of_the_butcher
+		
+		IEA_ressistance_in_amhara
+		IEA_ressistance_in_harrar
+	}
+}
+######################################################
+IEA_useless_tech = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+	# utility
+		support_tech = -1
+		motorized_equipment = -1
+		recon_tech = -1 # for ac maybe
+		signal_company_tech = -1 # for ac maybe
+	# artillery
+		cat_anti_tank = -1
+		cat_anti_air = -1
+		rocketry = -1	
+	# infantry
+		infantry_tech = -1
+		night_vision = -1
+		computing_tech = -1
+		radar_tech = -1
+		dispersed_industry_category = -1
+		synth_resources = -1
+		cat_synth_rubber = -1
+		cat_synth_oil = -1
+		excavation_tech = -1
+		tank_modules = -1		
+		cat_torpedoes = -1
+		cat_ship_light_battery = -1
+		cat_ship_medium_battery = -1
+		cat_ship_heavy_battery = -1
+		air_equipment = -1
+		plane_modules_tech = -1
+		cat_air_guns = -1
+		cat_air_bombs = -1
+		light_air = -1
+		medium_air = -1
+		heavy_air = -1
+		armor = -1
+		cat_light_armor = -1
+		cat_medium_armor = -1
+		cat_heavy_armor = -1
+		naval_air = -1
+		cat_mechanized_equipment = -1
+		naval_equipment = -1
+		nuclear = -1		
+		air_doctrine = -1
+		naval_doctrine = -1
+		strategic_destruction_tree = -1
+		battlefield_support_tree = -1
+		operational_integrity_tree = -1
+		jet_technology = -1
+		trade_interdiction_tree = -1
+		convoy_defense_tree = -1
+		light_fighter = -1
+		cat_heavy_fighter = -1
+		tactical_bomber = -1
+		cat_strategic_bomber = -1
+		naval_bomber = -1
+		cas_bomber = -1
+		ship_modules_tech = -1
+		dd_tech = -1
+		cl_tech = -1
+		ca_tech = -1
+		cv_tech = -1
+		bc_tech = -1
+		bb_tech = -1
+		shbb_tech = -1
+		ss_tech = -1
+		tp_tech = -1
+		fleet_in_being_tree = -1
+		encryption_tech = -1
+		decryption_tech = -1
+		submarine_doctrine = -1
+		air_equipment = -1
+		cat_mobile_warfare = -1
+		cat_superior_firepower = -1
+		cat_grand_battle_plan = -1
+		cat_mass_assault = -1
+		cat_base_strike = -1
+		cat_trade_interdiction = -1
+		cat_fleet_in_being = -1
+		cat_strategic_destruction = -1
+		cat_battlefield_support = -1
+		cat_operational_integrity = -1	
+		para_tech = -1
+		base_strike_main = -1
+		mot_rockets = -1		
+		military_police_tech = -1
+		hospital_tech = -1
+		logistics_tech = -1		
+		maintenance_company_tech = -1
+		naval_mines = -1
+		asw_tech = -1
+		naval_minesweeping = -1
+		naval_minelaying = -1
+		cat_scout_plane = -1
+		train_tech = -1
+		cat_production = -1		
+		# spec forces
+		mountaineers_tech = -1
+		cat_special_forces_generic = -1
+		marine_tech = -1
+		d_infantry = -1 # desert infantry
+		j_infantry = -1 # jaegers infantry
+	}
+	weight = {
+		factor = 10000
+	}
+}
+##########################################################################
+
+IEA_PP_spending_defaults_to_no = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	# dont take ideas
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 0
+	}	
+	ideas = {
+	# economy
+		undisturbed_isolation = -1
+		isolation = -1
+		civilian_economy = -1
+		low_economic_mobilisation = -1
+		partial_economic_mobilisation = -1
+	# trade
+		export_focus = -1
+		limited_exports = -1
+		free_trade = -1
+		closed_economy = -1 		
+	# conscription
+		disarmed_nation = -1
+		volunteer_only = -1
+		limited_conscription = -1		
+	# designers
+	# tank designer
+		experimental_heavy_tank_manufacturer  = -1
+		heavy_tank_manufacturer  = -1
+		medium_tank_manufacturer  = -1
+		cruiser_tank_manufacturer  = -1
+		cavalry_tank_manufacturer  = -1
+		assault_gun_manufacturer  = -1
+		fast_tank_manufacturer  = -1
+		pacific_light_tank_manufacturer  = -1
+		tankette_manufacturer = -1
+		fast_tank_manufacturer = -1
+		armored_car_manufacturer = -1
+		
+	# naval designer	
+		blohm_und_voss = -1
+		raiding_fleet_naval_manufacturer = 0
+		
+		kaiserliche_werft_wilhelmshaven = -1
+		coastal_defence_naval_manufacturer = 0
+		
+		merchant_naval_manufacturer = -1
+		HUN_ganz_danubius = 0
+		
+		crda = -1
+		mediterranean_naval_manufacturer = 0
+		
+		ansaldo_navy = -1
+		atlantic_fleet_naval_manufacturer = 0	
+		
+		ITA_oto = -1
+		battlefleet_designer  = 0
+	# air designer
+		standard_fighter_manufacturer = -1
+		escort_fighter_manufacturer = -1
+		tactical_bomber_manufacturer = -1
+		fast_bomber_manufacturer = -1
+		naval_aircraft_manufacturer = -1
+		heavy_bomber_manufacturer = -1
+		light_fighter_designer = -1
+		standard_CAS_manufacturer = -1
+		interceptor_fighter_manufacturer = -1
+		cheap_fighter_manufacturer = -1
+		recon_plane_manufacturer = -1
+		flying_boat_manufacturer = -1
+	# material designer
+		motorized_equipment_manufacturer = -1
+		mechanized_equipment_manufacturer  = -1
+		artillery_manufacturer = -1
+		support_equipment_manufacturer = -1		
+	# industrial advisor
+		refinery_concern = -1
+		linchpin_of_infrastructure = -1
+		railway_company = -1
+		electronics_concern = -1
+	# advisors
+		IEA_giovanni_marinelli = -1 
+		IEA_gian_galeazzo_ciano  = -1
+		IEA_roberto_farinacci  = -1
+		IEA_serafino_mazzolini  = -1
+		IEA_dino_grandi  = -1
+		IEA_luigi_einaudi  = -1
+		IEA_paolo_thaon_di_revel  = -1
+	# theorists
+		ieatheoristnavy = 0 # same name used for army theorist, i dont know why this works, but it does
+		IEA_guiseppe_fioravanzo = 0
+		grand_fleet_proponent = 0
+		IEA_amedeo_mecozzi  = -1
+		IEA_renato_sandalli  = -1
+		IEA_theorist   = 0
+		military_theorist = 0	
+	# chief army
+		IEA_cheif1 = -1	
+	# chief navy
+	# chief air
+		IEA_francesco_pricolo = -1
+		IEA_italo_balbo = -1		
+	# military high command
+		IEA_ettore_muti = -1
+		IEA_cavguy = -1
+	}
+	weight = {
+		factor = 80
+	}
+}	
+	
+########################################
+# Construction
+########################################	
+	# should make AI build Mils only	
+IEA_construction_build_mils = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = { 
+		type = added_military_to_civilian_factory_ratio
+		value = 100
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard 
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure  
+		value = 0
+	}	
+	ai_strategy = { # cant make him stop building Fuel Silo at the start
+		type = building_target
+		id = fuel_silo
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory   
+		value = 1000
+	}		
+
+
+	# Build Mils in Eritrea (no nerf there) and Amara (defending there in war)
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 550 # Eritrea
+		value = 100 # Eritrea first priority
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 271 # Amara
+		value = 2 # Amara second priority
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 550 # Eritrea
+		value = 1 # how many at once
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 271 # Amara - Addis Ababa
+		value = 1 # how many at once
+	}	
+}
+# construction location
+IEA_construction_location_eritrea = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		NOT = { has_completed_focus = IEA_ethopian_ressistance }
+	}
+	abort = {
+		has_completed_focus = IEA_ethopian_ressistance
+	}
+	# Build Mils in Eritrea (no nerf there) not Amara (defending there in war)
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 550 # Eritrea
+		value = 100 # Eritrea first priority
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 271 # Amara
+		value = -100 # Amara second priority
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 550 # Eritrea
+		value = 1 # how many at once
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 271 # Amara - Addis Ababa
+		value = 1 # how many at once
+	}
+}
+
+IEA_construction_location_amara = {
+	allowed = {
+		original_tag = IEA
+	}
+	enable = {
+		has_completed_focus = IEA_ethopian_ressistance
+	}
+	abort = {
+		NOT = { has_completed_focus = IEA_ethopian_ressistance }
+	}
+
+	# Build Mils in Amara (defending there in war)
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 51 # Eritrea
+		value = -1 # Eritrea first priority
+	}
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 271 # Amara
+		value = 100 # Amara second priority
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 51 # Eritrea
+		value = 1 # how many at once
+	}
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 271 # Amara - Addis Ababa
+		value = 1 # how many at once
+	}	
+}

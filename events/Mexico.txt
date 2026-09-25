@@ -1,0 +1,858 @@
+﻿###########################
+# Mexico Events
+# By Tristan 'Enjoy' Edge, aged 30 and 2 months
+###########################
+
+add_namespace = mexico
+
+# Mexico asks to join someone's faction via focus
+
+country_event = {
+	id = mexico.8
+	title = mexico.8.title
+	desc = mexico.8.desc
+	
+	picture = GFX_report_event_canadian_tank
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = { save_event_target_as = alliance_applicant }
+		}
+	}
+	
+	option = {
+		name = mexico.8.a
+		
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_to_tech_sharing_group = MEX_ENG_tech_group
+			
+			FROM = {
+				add_to_tech_sharing_group = MEX_ENG_tech_group
+			}
+		}
+		
+		if = {
+			limit = {
+				original_tag = GER
+			}
+			add_to_tech_sharing_group = MEX_GER_tech_group
+			
+			FROM = {
+				add_to_tech_sharing_group = MEX_GER_tech_group
+			}
+		}
+		
+		if = {
+			limit = {
+				original_tag = SOV
+			}
+			add_to_tech_sharing_group = MEX_SOV_tech_group
+			
+			FROM = {
+				add_to_tech_sharing_group = MEX_SOV_tech_group
+			}
+		}
+		
+		if = {
+			limit = {
+				original_tag = USA
+			}
+			add_to_tech_sharing_group = MEX_USA_tech_group
+			
+			FROM = {
+				add_to_tech_sharing_group = MEX_USA_tech_group
+			}
+		}
+		
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = FROM
+			hidden_effect = {
+				news_event = { id = news.289 hours = 12 }
+			}
+			FROM = { country_event = { id = generic.3 hours = 6 } }
+		}
+		
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			random_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_faction_leader = yes
+				}
+				country_event = {
+					id = mexico.9
+					days = 1
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 2.0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				MEX = {
+					has_war = yes
+					any_enemy_country = {
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				MEX = {
+					has_war = yes
+					any_enemy_country = {
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							has_government = ROOT
+							is_major = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.8.b
+		
+		FROM = { 
+			country_event = { id = generic.4 hours = 6 }
+		}
+		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.1
+				MEX = {
+					OR = {
+						has_government = ROOT
+						is_major = yes
+						is_ai = no
+					}
+				}
+			}
+		}
+	}
+}
+
+# Mexico is being sponsored to join a faction by a third party (ENG/GER/SOV/USA)
+# Attempt to catch a request to USA going to ENG, but knowing HoI4 anything could happen
+
+country_event = {
+	id = mexico.9
+	title = mexico.9.title
+	desc = mexico.9.desc
+	
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+		}
+	}
+	
+	option = {
+		name = mexico.9.a
+
+		add_to_faction = MEX
+				
+		hidden_effect = {
+			news_event = { id = news.289 hours = 12 }
+		}
+		
+		MEX = { country_event = { id = generic.3 hours = 6 } }
+		
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2.0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				MEX = {
+					has_war = yes
+					any_enemy_country = {
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				MEX = {
+					has_war = yes
+					any_enemy_country = {
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							has_government = ROOT
+							is_major = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.9.b
+				
+		FROM = { 
+			country_event = { id = generic.4 hours = 6 }
+		}
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				MEX = {
+					OR = {
+						has_government = ROOT
+						is_major = yes
+						is_ai = no
+					}
+				}
+			}
+		}
+	}
+}
+
+# Mexico asks Britain to sell Belize after aligning towards them
+
+country_event = {
+	id = mexico.12
+	title = mexico.12.title
+	desc = mexico.12.desc
+	
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico.12.a
+		
+		311 = {
+			set_state_name = "Belice"
+		}
+		
+		add_political_power = 25
+		
+		MEX = {
+			transfer_state = 311
+			add_state_core = 311
+			country_event = {
+				id = mexico.13
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2.0
+				has_government = FROM
+			}
+			
+			modifier = {
+				factor = 2.0
+				is_in_faction_with = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.12.b
+		
+		MEX = {
+			country_event = {
+				id = mexico.14
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2.0
+				has_war = yes
+			}
+		}
+	}
+}
+
+# Mexico is informed that Belize was granted to them
+
+country_event = {
+	id = mexico.13
+	title = mexico.13.title
+	desc = mexico.13.desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mexico.13.a
+	}
+}
+
+# Mexico is informed Britain refused to turn over Belize
+
+country_event = {
+	id = mexico.14
+	title = mexico.14.title
+	desc = mexico.14.desc
+	
+	picture = GFX_report_event_british_inspect_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mexico.14.a
+	}
+}
+
+# Archbishop Pascual Díaz y Barreto passes away
+
+country_event = {
+	id = mexico.15
+	title = mexico.15.title
+	desc = mexico.15.desc
+	
+	picture = GFX_report_event_europe_funeral
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		has_dlc = "Man the Guns"
+	}
+	
+	mean_time_to_happen = {
+		months = 6 # Historically died in May 1936
+	}
+	
+	option = {
+		name = mexico.15.a # Rest in peace
+		
+		MEX_increase_church_power = yes
+		
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.1
+				has_completed_focus = MEX_focus_state_education
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_idea = MEX_church_power_2
+					has_idea = MEX_church_power_1
+				}
+				NOT = { has_global_flag = flag_second_mexican_civil_war }
+			}
+		}
+	}
+	option = {
+		name = mexico.15.b # Burn in hell
+		
+		MEX_decrease_church_power = yes
+	}
+}
+
+# Oil worker strike
+
+country_event = {
+	id = mexico.16
+	title = mexico.16.title
+	desc = mexico.16.desc
+	
+	picture = GFX_report_event_american_hunger_march
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		
+		date > 1937.1.1
+	
+		has_dlc = "Man the Guns"
+	}
+	
+	mean_time_to_happen = {
+		months = 12 # Historically started in November 1937
+	}
+	
+	option = {
+		name = mexico.16.a # Support the strikers
+		
+		if = {
+			limit = {
+				OR = {
+					has_idea = MEX_cedillo_tension
+					has_idea = MEX_cedillo_tension_2
+					has_idea = MEX_cedillo_tension_3
+				}
+			}
+			MEX_increase_cedillo_tension = yes # Supposedly, Cedillo rebelled because he thought the imperial powers would support him after the oil nationalisation
+			add_political_power = -100
+		}
+		else = {
+			add_political_power = -150
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = mexico.16.b # Support the oil companies
+		
+		add_stability = -0.05
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Trotsky arrives from Norway
+
+country_event = {
+	id = mexico.17
+	title = mexico.17.title
+	desc = mexico.17.desc
+	
+	picture = GFX_report_event_communists_cheer
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		date > 1936.08.28
+		OR = {
+			has_government = neutrality
+			AND = {
+				has_government = communism
+				NOT = {
+					has_country_leader = { ruling_only = yes name = "Dionisio Encina" }
+				} 
+			}
+
+		}
+		NOT = {
+			has_global_flag = trotsky_not_welcome_in_mexico
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3 # Historically arrived in January 1937
+	}
+	
+	option = {
+		name = mexico.17.a # We aren't Stalin's puppets, let him stay
+		
+		if = {
+			limit = {
+				SOV = {
+					has_country_leader = { name = "Joseph Stalin" }
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = mexico_trotskyite_wreckers
+				}
+			}
+		}
+		USA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = mexico_snubbed_stalin
+			}
+		}
+		set_global_flag = trotsky_exile_mexico
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				add = 100
+			}
+			
+			modifier = {
+				add = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# Unrestricted submarine warfare
+
+# German submarines sank some oilers in 1942, which brought Mexico into the war
+
+# First event offers Germany a short bonus to convoy raiding in exchange for the risk of diplomatic repercussions
+
+country_event = {
+	id = mexico.23
+	title = mexico.23.title
+	desc = mexico.23.desc
+	
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		
+		has_war_with = USA
+		
+		NOT = {
+			has_war_with = MEX
+		}
+		
+		has_navy_size = { unit = submarine size > 9 }
+		
+		OR = {
+			ships_in_area = { # Gulf of Mexico
+				type = submarine
+				area = 52
+				size > 0
+			}
+			ships_in_area = { # Carribean Sea
+				type = submarine
+				area = 53
+				size > 0
+			}
+			ships_in_area = { # Florida Coast
+				type = submarine
+				area = 170
+				size > 0
+			}
+			ships_in_area = { # Eastern Seaboard
+				type = submarine
+				area = 54
+				size > 0
+			}
+			ships_in_area = { # Sargasso Sea
+				type = submarine
+				area = 57
+				size > 0
+			}
+			ships_in_area = { # Demerara Plain
+				type = submarine
+				area = 59
+				size > 0
+			}
+		}
+		has_dlc = "Man the Guns"
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.5
+			has_tech = unrestricted_submarine_warfare
+		}
+	}
+	
+	option = {
+		name = mexico.23.a # Sink them
+		
+		add_war_support = 0.01
+		
+		add_timed_idea = {
+			idea = mexico_german_submarine_happy_time
+			days = 90
+		}
+		
+		MEX = {
+			country_event = {
+				id = mexico.24
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = mexico.23.b # Best not
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Mexico is informed of the attacks by German submarines and gets the opportunity to enter the war against Germany
+
+country_event = {
+	id = mexico.24
+	title = mexico.24.title
+	desc = mexico.24.desc
+	
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mexico.24.a # Join the war against Germany
+		
+		trigger = {
+			NOT = {
+				has_war_with = USA
+			}
+			is_in_faction = no
+			has_dlc = "Man the Guns"
+		}
+		
+		add_war_support = 0.01
+		
+		random_other_country = {
+			limit = {
+				is_in_faction_with = USA
+				is_faction_leader = yes
+			}
+			country_event = {
+				id = mexico.25
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 70
+			
+			modifier = {
+				factor = 0.1
+				USA = {
+					surrender_progress > 0.1
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.24.b # What can we do?
+		
+		add_stability = 0.01
+		
+		ai_chance = {
+			factor = 30
+			
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# USA's faction leader (ie USA or ENG) gets asked to add Mexico to the war against Germany
+
+country_event = {
+	id = mexico.25
+	title = mexico.25.title
+	desc = mexico.25.desc
+	
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico.25.a # Every little helps
+		
+		trigger = {
+			NOT = {
+				has_war_with = MEX
+			}
+			has_dlc = "Man the Guns"
+		}
+		
+		add_to_faction = MEX
+		
+		MEX = {
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = GER
+			}
+		}
+		
+		hidden_effect = {
+			news_event = {
+				id = mexico.26
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 85
+			
+			modifier = {
+				factor = 0.5
+				MEX = {
+					has_war = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = mexico.25.b # Mexico? Bahahaha
+		
+		add_political_power = 25
+		
+		ai_chance = {
+			factor = 15
+			
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# News event for Mexico joining the war against Germany after submarine attacks
+
+news_event = {
+	id = mexico.26
+	title = mexico.26.title
+	desc = mexico.26.desc
+	
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico.26.a
+		
+		trigger = {
+			OR = {
+				original_tag = MEX
+				is_in_faction_with = MEX
+				has_war_with = GER
+			}
+		}
+	}
+	option = {
+		name = mexico.26.b
+		
+		trigger = {
+			OR = {
+				original_tag = GER
+				is_in_faction_with = GER
+				has_war_with = MEX
+			}
+		}
+	}
+	option = {
+		name = mexico.26.c
+		
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MEX
+					is_in_faction_with = MEX
+					has_war_with = MEX
+					original_tag = GER
+					is_in_faction_with = GER
+					has_war_with = GER
+				}
+			}
+		}
+	}
+}
+
+# Papal encyclical on Mexico issued by Pope Pius XI
+
+country_event = {
+	id = mexico.27
+	title = mexico.27.title
+	desc = mexico.27.desc
+	
+	picture = GFX_report_event_europe_funeral
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+		
+		date > 1937.1.1
+		
+		has_civil_war = no
+
+		NOT = {
+			has_global_flag = flag_second_mexican_civil_war
+		}
+		has_dlc = "Man the Guns"
+	}
+	
+	mean_time_to_happen = {
+		months = 6 # Historically published 28 March 1937
+	}
+	
+	option = {
+		name = mexico.27.a # It is good that the anti-Church violence has ended.
+		
+		MEX_increase_church_power = yes
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				has_completed_focus = MEX_focus_state_education
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_idea = MEX_church_power_2
+					has_idea = MEX_church_power_1
+				}
+				NOT = { has_global_flag = flag_second_mexican_civil_war }
+			}
+		}
+	}
+	option = {
+		name = mexico.27.b # Superstitious propaganda, prevent publication of this treason!
+		
+		MEX_decrease_church_power = yes
+	}
+}
+

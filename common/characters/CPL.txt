@@ -1,0 +1,222 @@
+characters={
+	CPL_genner_ricardo={
+		name="Gęnner Ricardo"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = polgenner_ricardo
+			allowed  = {
+				tag  = CPL
+			}
+			cost = 150
+			traits  = {
+			    armaments_genius
+				veteran_communist				
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}		
+	}
+	
+	CPL_pelso_pilsudski={
+		name="Pełso Piłsudski"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = pelso_pilsudski
+			allowed  = {
+				tag  = CPL
+			}
+			cost = 150
+			traits  = {
+			    great_war_hero
+				radical_anti_fascist
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}		
+	}
+	
+	
+	CPL_soviet_commissar_council={
+		name="Soviet Commissar Council"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = polish_advisory_council
+			allowed  = {
+				tag  = CPL
+			}
+			cost = 150
+			traits  = {
+				stalin_great_commander
+				stalin_servant_of_lenin_final
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+	
+	CPL_soviet_armor_command={
+		name="Soviet Armor Command"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			traits = {
+				army_armored_2
+			}
+			idea_token = CPL_soviet_armor_command
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	
+	CPL_soviet_infantry_command={
+		name="Soviet Infantry Command"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			traits = {
+				army_infantry_2
+				army_concealment_2
+			}
+			idea_token = CPL_ivan_koniev
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	
+	CPL_polish_partisan_commissary={
+		name="Polish Partisan Commissary"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = CPL_polish_partisan_commissary
+			ledger = army
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+	
+	CPL_soviet_artillery_commissary={
+		name="Soviet Artillery Commissary"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CPL_soviet_artillery_commissary
+			ledger = army
+			traits = {
+				army_artillery_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	
+	CPL_maneuver={
+		portraits={
+			army={
+			small="GFX_idea_generic_army_europe_3"		
+			}
+		}
+		advisor={
+			slot = army_chief
+			traits = {
+				army_chief_maneuver_2
+				army_chief_organizational_1
+			}
+			idea_token = CPL_maneuver
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	CPL_defensive ={
+		portraits={
+			army={
+			small="GFX_idea_generic_army_europe_1"		
+			}
+		}
+		advisor={
+			slot = army_chief
+			traits = {
+				army_chief_offensive_1
+				army_chief_defensive_2
+			}
+			idea_token = CPL_defensive
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	CPL_vladislav_korchits = {
+		name = POL_vladislav_korchits
+		portraits = {
+			army = {
+				large = GFX_portrait_POL_vladislav_korchits
+				small = GFX_portrait_POL_vladislav_korchits_small
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}	
+	
+}

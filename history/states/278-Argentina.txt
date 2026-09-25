@@ -1,0 +1,28 @@
+
+state={
+	id=278
+	name="STATE_278" # Pampas
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		victory_points = {
+			12364 10 
+		}
+		victory_points = {
+			7621 1 
+		}
+
+	}
+
+	provinces={
+		1555 1568 1624 4573 4602 4643 7621 10402 12351 12364 12379 
+	}
+
+	local_supplies=0.0 
+}

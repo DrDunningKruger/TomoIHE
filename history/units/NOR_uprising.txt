@@ -1,0 +1,49 @@
+﻿division_template = {
+	name = "Militia"			
+	division_names_group = SOV_INF_01
+	template_counter = 105
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }		
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 
+	    artillery = { x = 0 y = 1 }	
+	    engineer = { x = 0 y = 2 }		
+	}
+}
+
+units = {
+	division = {
+		name = "Reserve Division"
+		location = 6092
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "NOR" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 11063
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "NOR" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 11063
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "NOR" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 6092
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "NOR" } }	
+	}
+}

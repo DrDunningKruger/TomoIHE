@@ -1,0 +1,327 @@
+ideas = {
+
+	country = {
+		sisu = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.4
+				conscription = 0.03
+			}
+		}
+
+		sisu2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = sisu
+			
+			modifier = {
+				army_attack_factor = 0.05
+				conscription = 0.03				
+			}
+		}
+
+		winter_war_unity = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+            stability_weekly = 0.01
+			party_popularity_stability_factor = 0.05
+			war_stability_factor = 0.05
+			experience_gain_army = 2
+			}
+		}
+
+		finger_four1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = air_war_plans_division_focus
+			
+			modifier = {
+            air_agility_factor = 0.05
+			air_attack_factor = 0.05			
+			air_defence_factor = 0.05
+			}
+		}
+
+		lottas = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = FIN_lotta
+			
+			modifier = {
+			conscription = 0.03
+			}
+		}
+		lottas2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = FIN_lotta
+			
+			modifier = {
+            conscription_factor = 0.1
+			conscription = 0.03
+			}
+		}
+
+		national_coalition = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = FIN_coalition
+			
+			modifier = {
+            political_power_factor = -0.75
+			}
+		}
+
+		fin_officers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = FIN_officer
+			
+			modifier = {
+				army_morale_factor = 0.25
+				attrition = -0.1
+			}
+		}		
+	}	
+
+	# TECHNOLOGY
+
+	materiel_manufacturers = {
+		
+		##designer = yes
+		
+		company_tikkakoski_logo = {
+			
+			picture = company_tikkakoski_logo
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+		}
+		
+		company_sisu_trucks = {
+
+			picture = company_sisu_trucks
+			
+			allowed = {
+				original_TAG = FIN
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.15				
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+			
+		}
+	}
+
+	industrial_concern = {
+
+		company_nokia_logo = {
+
+			picture = company_nokia_logo
+			
+			allowed = {
+				original_TAG = FIN
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}
+		}	
+	
+		company_wartsila_logo = {
+					
+			picture = company_wartsila_logo
+				
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			cost = 100
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}			
+		}	
+	}
+
+	naval_manufacturers = { 
+		
+		##designer = yes
+		
+		crichton = {
+			
+			picture = crichton_vulcan
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			# submarine and defence ship production
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturers = { 
+			
+		##designer = yes
+		
+		
+		valtion_lentokonetehdas = {
+			
+			picture = company_vlt_logo
+			
+			allowed = {
+				original_tag = FIN
+			}
+			cost = 100				
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { fast_bomber_manufacturer }
+			
+			# assembled Junkers, fast bombers
+		
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}			
+		}
+	}
+}

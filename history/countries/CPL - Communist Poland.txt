@@ -1,0 +1,265 @@
+﻿capital = 808
+
+#oob = ""
+
+set_research_slots = 3
+set_stability = 0.7
+set_war_support = 0.6
+set_fuel_ratio = 1.0
+set_convoys = 150
+add_political_power = 1000
+
+	set_technology = {
+	#INFANTRY TECH:
+	    basic_train = 1		
+	    cap_everyone = 1
+		support_weapons = 1
+		support_weapons2 = 1
+	    infantry_weapons = 1
+	    infantry_weapons1 = 1		
+		infantry_weapons2 = 1	
+		improved_infantry_weapons = 1	
+		infantry_at = 1	
+		motorised_infantry = 1
+		armored_car1 = 1
+		armored_car2 = 1
+		marines = 1
+		jaegers = 1
+		tech_mountaineers = 1
+		paratroopers = 1
+		tech_special_forces = 1
+		mechanised_infantry = 1
+		motorized_rocket_unit = 1
+	#SUPPORT TECH:
+	    tech_support = 1	
+	    tech_recon = 1
+        tech_recon2	= 1		
+        tech_field_hospital	= 1		
+        tech_field_hospital2	= 1		
+	    tech_engineers = 1	
+	    tech_engineers2 = 1			
+	    tech_logistics_company = 1	
+	    tech_logistics_company2 = 1	
+	    tech_military_police = 1
+	    tech_military_police2 = 1
+        tech_signal_company	= 1
+        tech_signal_company2	= 1
+	    tech_maintenance_company = 1
+	    tech_maintenance_company2 = 1
+	    wartime_train = 1
+	#TANK TECH:		
+	#ARTILLERY TECH:		
+	    gw_artillery = 1	
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		artillery3 = 1
+		interwar_antiair = 1
+		antiair1 = 1
+		antiair2 = 1
+		antiair3 = 1
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		rocket_artillery = 1
+	#ARMY DOCTRINE TECH:   
+	#NAVAL TECH:  		
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1 
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1		
+        improved_depth_charges = 1
+        smoke_generator = 1
+        improved_sonar = 1
+        damage_control_1 = 1
+        fire_control_methods_1	= 1			
+	#NAVY DOCTRINE TECH: 
+	#AIR TECH: 			
+	#AIR DOCTRINE TECH: 
+    #ELECTRONICS TECH: 
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_fire_control_system = 1
+    #INDUSTRY: 
+	    fuel_silos = 1
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining = 1		
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		excavation1 = 1
+		excavation2 = 1
+		excavation3 = 1
+        decimetric_radar = 1
+        improved_decimetric_radar = 1
+		centimetric_radar = 1		
+		dispersed_industry  = 1			
+		dispersed_industry2  = 1			
+		dispersed_industry3  = 1			
+	#TONAK
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_medium_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+	improved_light_tank_chassis = 1
+	improved_medium_tank_chassis = 1
+	improved_heavy_tank_chassis = 1
+	engine_tech_1 = 1
+    engine_tech_2 = 1
+    fueltank_tech = 1
+    new_tank_guns = 1
+    tank_aa_guns = 1
+    tank_autocannon = 1
+    tank_aa_guns2 = 1
+	tank_improved_guns = 1	
+	antitank_guns = 1	
+	howitzer_guns = 1	
+	support_techs = 1	
+	armor_tech_1 = 1
+	armor_tech_2 = 1
+	armor_tech_3 = 1
+	easy_maintenance = 1
+	radio_tech_1 = 1
+	radio_tech_2 = 1
+	amphibious_drive = 1
+	amphibious_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	advanced_light_tank_chassis = 1
+	}
+
+recruit_character = CPL_genner_ricardo
+recruit_character = CPL_pelso_pilsudski
+recruit_character = CPL_soviet_commissar_council
+recruit_character = CPL_soviet_armor_command
+recruit_character = CPL_soviet_infantry_command
+recruit_character = CPL_polish_partisan_commissary
+recruit_character = CPL_soviet_artillery_commissary
+recruit_character = CPL_maneuver
+recruit_character = CPL_defensive
+recruit_character = CPL_vladislav_korchits
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	communism = 100
+}
+
+add_ideas = {
+	   partial_economic_mobilisation
+	   war_communism
+	   POL_Katyn
+	   training_spirit
+	   POL_lendlease
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = comintern_research
+}
+
+	create_equipment_variant = {
+		name = "T-34 76"
+		type = medium_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon_2
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_fully_sloped_armor
+			special_type_slot_1 = tank_radio_2
+			special_type_slot_2 = wide_tracks
+			special_type_slot_3 = external_fuel
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 4
+		}
+		icon = "gfx/interface/technologies/SOV/TANKS/SOV_MT2_3.dds"
+	}	
+	
+	create_equipment_variant = {
+		name = "KV-1S"
+		type = heavy_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon_2
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_2
+			special_type_slot_2 = wide_tracks
+			special_type_slot_3 = armor_skirts
+			special_type_slot_4 = hvap_ammo
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 14
+			tank_nsb_armor_upgrade_heavy = 10
+		}
+		icon = "gfx/interface/technologies/SOV/TANKS/SOV_HT2_5.dds"
+	}	
+	
+	create_equipment_variant = {
+		name = "SU-152"
+		type = heavy_tank_artillery_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_howitzer
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_2
+			special_type_slot_2 = apcr_ammo
+			special_type_slot_3 = hesh_ammo
+			special_type_slot_4 = extra_ammo_storage
+			special_type_slot_5 = empty
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 14
+			tank_nsb_armor_upgrade_heavy = 10
+		}
+		icon = "gfx/interface/technologies/SOV/TANKS/SOV_HT2_SPG_1.dds"
+	}
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 150 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 800 }	

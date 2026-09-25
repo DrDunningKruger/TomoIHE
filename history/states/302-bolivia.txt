@@ -1,0 +1,20 @@
+
+state={
+	id=302
+	name="STATE_302"
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		5229 12979 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

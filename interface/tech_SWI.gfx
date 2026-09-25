@@ -1,0 +1,377 @@
+spriteTypes = {
+####Infantry Equipment####
+	SpriteType = {
+	    name = "GFX_SWI_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_rifle_vz_98_22.dds"
+	    }
+	SpriteType = {
+		name = "GFX_SWI_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_rifle_vz24.dds"
+		}
+	SpriteType = {
+		name = "GFX_SWI_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_smg_zk383.dds"
+		}
+	SpriteType = {
+		name = "GFX_SWI_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_smg_model_25.dds"
+		}	
+####Motorised and Mechanised Equipment###		
+	SpriteType = {
+		name = "GFX_SWI_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_motorized_2_pragarv.dds"
+		}		
+    SpriteType = {
+        name = "GFX_SWI_motorized_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/GEN/CZE_motorized_2_pragarv.dds"
+        }		
+	SpriteType = {
+		name = "GFX_SWI_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_apc_1.dds"
+		}
+	SpriteType = {
+		name = "GFX_SWI_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_apc_2.dds"
+		}
+	SpriteType = {
+		name = "GFX_SWI_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_apc_3.dds"
+		}
+	SpriteType = {
+		    name = "GFX_SWI_transport_plane_equipment_medium"
+		    texturefile = "gfx/interface/technologies/SOV/SOV_transport_plane.dds"
+	    }	
+####WW1_Armor####	
+		SpriteType = {
+		name = "GFX_SWI_gwtank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_gwtank.dds"
+		}		
+####Basic Light Tank###		
+		
+		SpriteType = {
+		name = "GFX_SWI_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_basic_light_tank.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_basic_light_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_light_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_light_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_light_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_light_spaa.dds"
+		}
+		
+####Improved Light Tank###			
+		
+		SpriteType = {
+		name = "GFX_SWI_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_imp_light_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_light_td_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_imp_light_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_light_art_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_imp_light_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_imp_light_spaa.dds"
+		}
+
+####Advanced Light Tank###	
+		
+		SpriteType = {
+		name = "GFX_SWI_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_light_tank.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_advanced_light_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_light_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_light_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_light_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_light_spaa.dds"
+		}
+		
+####Basic Medium Tank###			
+		
+		SpriteType = {
+		name = "GFX_SWI_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_basic_medium_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_medium_td_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_basic_medium_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_medium_art_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_basic_medium_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_basic_medium_spaa.dds"
+		}
+
+####Improved Medium Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_imp_medium_tank.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_improved_medium_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_medium_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_medium_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_medium_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_medium_spaa.dds"
+		}
+
+####Advanced Medium Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_adv_medium_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_medium_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_medium_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_medium_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_medium_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_medium_spaa.dds"
+		}
+		
+####Basic Heavy Tank###		
+		
+		SpriteType = {
+		name = "GFX_SWI_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_basic_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spat.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_basic_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spa.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_basic_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spaa.dds"
+		}
+		
+####Improved Heavy Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_heavy_tank.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_improved_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_heavy_spat.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_improved_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_heavy_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_improved_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_imp_heavy_spaa.dds"
+		}
+
+####Advanced Heavy Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CZE/CZE_adv_heavy_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_advanced_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_heavy_spat.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_advanced_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_heavy_spa.dds"
+		}		
+		SpriteType = {
+		name = "GFX_SWI_advanced_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_adv_heavy_spaa.dds"
+		}		
+
+####Main Battle Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_mbt.dds"
+		}
+		
+####Super Heavy Tank###
+		
+		SpriteType = {
+		name = "GFX_SWI_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_tank.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_super_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spat.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_super_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spa.dds"
+		}
+		SpriteType = {
+		name = "GFX_SWI_super_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spaa.dds"
+		}
+		
+####Fighter####	
+	SpriteType = {
+		name = "GFX_SWI_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/CZE_fighter_0.dds"
+		}	
+	SpriteType = {
+		name = "GFX_SWI_fighter1_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/LLFIGHTER1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_SWI_fighter2_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/LLFIGHTER2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_fighter3_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/LLFIGHTER3.dds"
+	}
+####CAS####	
+	SpriteType = {
+		name = "GFX_SWI_CAS1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_CAS_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_CAS2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_CAS_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_CAS3_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/GEN_CAS_3.dds"
+	}	
+####Naval Bomber####	
+	SpriteType = {
+		name = "GFX_SWI_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_nav_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_SWI_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_nav_2.dds"
+	}		
+	SpriteType = {
+		name = "GFX_SWI_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_nav_3.dds"
+	}
+####Heavy Fighter####	
+	SpriteType = {
+		name = "GFX_SWI_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_heavy_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_heavy_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_heavy_fighter_3.dds"
+	}
+####Tac Bomber####	
+	SpriteType = {
+		name = "GFX_SWI_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_bomber_0.dds"
+	}		
+	SpriteType = {
+		name = "GFX_SWI_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_bomber_1.dds"
+	}			
+	SpriteType = {
+		name = "GFX_SWI_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_bomber_2.dds"
+	}			
+	SpriteType = {
+		name = "GFX_SWI_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_bomber_3.dds"
+	}	
+####Strat Bomber####	
+    SpriteType = {
+		name = "GFX_SWI_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_strat_1.dds"
+	}	
+    SpriteType = {
+		name = "GFX_SWI_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_strat_2.dds"
+	}			
+	SpriteType = {
+		name = "GFX_SWI_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/GEN/AIR/GEN_nav_3.dds"
+	}
+		SpriteType = {
+		name = "GFX_SWI_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_jet_fighter_avia_s92.dds"
+	}
+	SpriteType = {
+		name = "GFX_SWI_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CZE/AIR/CZE_jet_fighter_mig17.dds"
+	}
+    #Czechoslovakian howitzer#
+        SpriteType = {
+            name = "GFX_SWI_gw_artillery_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_Art_1.dds"
+        }
+
+        SpriteType = {
+            name = "GFX_SWI_artillery1_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_Art_2.dds"
+        }	
+	
+        SpriteType = {
+            name = "GFX_SWI_artillery4_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_Art_3.dds"
+        }	
+
+    #Czechoslovakian AA#
+        SpriteType = {
+            name = "GFX_SWI_interwar_antiair_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_AA_1.dds"
+        }
+
+        SpriteType = {
+            name = "GFX_SWI_antiair2_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_AA_2.dds"
+        }
+
+    #Czechoslovakian AT#
+        SpriteType = {
+            name = "GFX_SWI_interwar_antitank_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_AT_1.dds"
+        }
+
+        SpriteType = {
+            name = "GFX_SWI_antitank2_medium"
+            texturefile = "gfx/interface/technologies/CZE/CZE_AT_2.dds"
+        }	
+}

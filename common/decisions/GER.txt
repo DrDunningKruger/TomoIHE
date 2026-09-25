@@ -1,0 +1,3047 @@
+#Category only allowed for GER
+
+GER_mefo_bills_category = {
+
+	GER_mefo_bills_mission = {
+
+		allowed = { always = no
+			original_tag = GER }
+
+		icon = ger_mefo_bills
+
+		available = {
+			NOT = { has_government = democratic }
+			GER_can_delay_mefo_payment = yes
+			has_political_power > 0
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		selectable_mission = yes
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { GER_has_mefo_bills = yes }
+					has_idea = GER_mefo_bills_ended
+				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			GER_mefo_bills_level_up = yes
+			if = {
+				limit = {
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
+			}
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {                                                                                                                          
+			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_effect_in_days
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+			hidden_effect = {
+				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_effect_in_days
+			hidden_effect = {
+				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+			GER_mefo_bills_level_up = yes
+			if = {
+				limit = {
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
+			}
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+operations = {
+
+#	GER_execute_fall_gleb = {
+#		icon = generic_operation
+#		available = {
+#			has_war_with = FRA
+#			date > 1940.2.10
+#		}
+#		visible = {
+#			has_completed_focus = GER_war_with_france
+#			NOT = {
+#			FRA = {			
+#				has_capitulated = yes
+#			}			
+#		}
+#           date < 1941.1.1			
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		fire_only_once = yes
+#       complete_effect = {
+#		add_timed_idea = { idea = GER_fallgleb days = 360 }
+#		
+#		ROM = {
+#		add_timed_idea = { idea = GER_fallgleb days = 360 }
+#		}		
+#		ITA = {
+#		add_timed_idea = { idea = GER_fallgleb days = 360 }
+#		}	
+#		BUL = {
+#		add_timed_idea = { idea = GER_fallgleb days = 360 }
+#		}	
+#		HUN = {
+#		add_timed_idea = { idea = GER_fallgleb days = 360 }
+#		}
+#		}
+#	}
+
+    romania_annexed_oil = {
+	
+	icon = generic_operation
+	
+	fire_only_once = yes
+	
+	visible = {
+		
+		NOT = {
+		country_exists = ROM
+		}
+        has_full_control_of_state = 46	
+	}
+		
+		allowed = {
+		   original_tag = GER
+           original_tag = ITA
+           original_tag = IEA
+           original_tag = FIN
+           original_tag = HUN
+           original_tag = BUL
+           original_tag = YUG
+           original_tag = SPR
+		}
+		
+	
+	complete_effect = {
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 2
+				uses = 2
+				category = synth_resources
+			}	
+	}
+	
+	}
+
+	GER_Summer_offensive_1 = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			original_tag = GER
+			always = yes
+		}
+		fire_only_once = yes
+		
+		is_good = no
+
+		available = {
+			NOT = {has_idea = summer_offensive}
+			AND	= { date > 1941.6.22
+			date < 1941.9.30
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1941.5.22
+		}
+		complete_effect = {		 
+			GER = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			#	hidden_effect = {
+			#		country_event = { days = 100 id = germany.1001 }
+			#	}
+			}
+			ITA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ROM = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			HUN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			FIN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SPR = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			BUL = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}	
+			YUG = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			IEA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SOV = {
+				add_timed_idea = { 
+					idea = airforce_crushed
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = { 
+					idea = airforce_crushed
+					days = 100
+				}
+			}			
+		}
+	}
+	GER_Summer_offensive_2 = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			original_tag = GER
+			always = yes
+		}
+		fire_only_once = yes
+		
+		is_good = no
+		
+		available = {
+			NOT = {has_idea = summer_offensive}
+			AND	= {date > 1942.6.22
+			date < 1942.9.30
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1942.5.22
+		}
+		complete_effect = {
+		 GER = { complete_national_focus = GER_fallblau }
+			GER = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			#	hidden_effect = {
+			#		country_event = { days = 100 id = germany.1001 }
+			#	}
+			}
+			ITA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ROM = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			HUN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}	
+			YUG = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			FIN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SPR = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			BUL = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			IEA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SOV = {
+				add_timed_idea = { 
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = { 
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+		}
+	}
+	GER_last_major_offensive ={
+		
+		icon = generic_operation
+		
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			original_tag = GER
+			always = yes
+		}
+		fire_only_once = yes
+		
+		is_good = no
+
+		available = {
+			NOT = {has_idea = summer_offensive}
+			AND = {date > 1943.6.22 date < 1943.9.30
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1943.5.22
+		}
+		complete_effect = {
+			GER = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ITA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ROM = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			HUN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			FIN = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SPR = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			BUL = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}	
+			YUG = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			IEA = {
+				add_timed_idea = { 
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SOV = {
+				add_timed_idea = { 
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = { 
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+		}	
+	}
+}
+
+#Category only allowed for GER
+GER_military_buildup = {
+
+	GER_annex_VIC = {
+				available = {
+					always = yes
+					NOT = { ENG = { has_completed_focus = ENG_royalmarines }}
+					GER = { has_war_with = SOV }
+				}
+					
+				allowed = {
+					tag = GER
+				}
+				visible = { 
+					NOT = { has_global_flag = vichy_annexed }
+					NOT = {
+						has_global_flag = victory_in_europe
+					} 					
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						GER = {
+							transfer_state = 21
+							transfer_state = 32
+							transfer_state = 20
+							transfer_state = 22
+							transfer_state = 31
+							transfer_state = 25
+							transfer_state = 33
+							transfer_state = 26
+						}
+						hidden_effect = {
+							set_global_flag = vichy_annexed
+						}						
+					}
+				}
+	Ger_annex_VIC_mission = {
+
+		icon = jap_conquer_china
+
+		visible = {
+			ENG = { has_completed_focus = ENG_royalmarines }
+		}
+		
+		available = {
+			NOT = { country_exists = FIN }
+		}
+
+		fire_only_once = yes
+		
+
+		activation = {
+			ENG = { has_completed_focus = ENG_royalmarines }
+		}
+
+		days_mission_timeout = 140
+		#days_remove = 1
+
+		timeout_effect = {
+			GER = {
+							transfer_state = 21
+							transfer_state = 32
+							transfer_state = 20
+							transfer_state = 22
+							transfer_state = 31
+							transfer_state = 25
+							transfer_state = 33
+							transfer_state = 26
+						}
+			hidden_effect = {
+				set_global_flag = vichy_annexed
+			}						
+		}
+	}			
+
+	GER_annex_HUN = { 
+	
+				available = {
+					HUN = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = GER
+				}
+				visible = { 
+					country_exists = HUN
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = HUN
+								transfer_troops = yes
+						}
+					}
+				}
+				
+	GER_annex_BUL = {
+	
+				available = {
+					AND = {
+						BUL = { is_ai = yes }
+							NOT = {
+									has_global_flag = victory_in_europe
+							} 
+					}
+				}
+					
+				allowed = { 
+					tag = GER
+				}
+				visible = { 
+					country_exists = BUL
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = BUL
+								transfer_troops = yes
+						}
+					}
+				}				
+				
+				GER_annex_ROM = {
+	
+				available = {
+				AND = {
+					ROM = { is_ai = yes }
+					NOT = {
+						has_global_flag = victory_in_europe
+					} 
+				}
+				}
+					
+				allowed = { 
+					tag = GER
+				}
+				visible = { 
+					country_exists = ROM
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = ROM
+								transfer_troops = yes
+						}
+					}
+				}
+				
+				GER_annex_ITA = {
+	
+				available = {
+				AND = {
+					ITA = { is_ai = yes }
+					NOT = {
+						has_global_flag = victory_in_europe
+					} 
+				}
+				}
+					
+				allowed = { 
+					tag = GER
+				}
+				visible = { 
+					country_exists = ITA
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = ITA
+								transfer_troops = yes
+						}
+					}
+				}
+				
+				GER_annex_SPR = { 
+	
+				available = {
+				AND = {
+					SPR = { is_ai = yes }
+					NOT = {
+						has_global_flag = victory_in_europe
+					} 
+				}
+				}
+					
+				allowed = { 
+					tag = GER
+				}
+				visible = { 
+					country_exists = SPR
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = SPR
+								transfer_troops = yes
+						}
+					}
+				}				
+}
+
+
+special_projects = {
+
+	GER_dismantle_maginot = {
+
+		icon = generic_construction
+
+			allowed = { 
+		original_tag = GeR
+		}
+		
+		available = {
+			#has_war = yes
+			controls_state = 28
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			#has_war = yes
+			controls_state = 28
+		}
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+		    add_political_power = 75
+			28 = {
+				set_building_level = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 2
+					}
+				}
+			}
+		}
+	}	
+	GER_dismantle_czechoslovakian_forts = {
+
+		icon = generic_construction
+		
+		allowed = { 
+		original_tag = GeR
+		}
+
+		available = {
+			#has_war = yes
+			controls_state = 69 # Sudetenland
+			controls_state = 74 # Eastern Sudetenland
+			controls_state = 9 # Bohemia
+			controls_state = 75 # Moravia
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			#has_war = yes
+			controls_state = 69 # Sudetenland
+			controls_state = 74 # Eastern Sudetenland
+			controls_state = 9 # Bohemia
+			controls_state = 75 # Moravia
+		}
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+		    add_political_power = 50
+			69 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			74 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			9 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			75 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					72 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					71 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				72 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+				71 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					70 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					73 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					664 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				73 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+				664 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+		}
+	}
+}		
+GER_industry_relocation = {
+
+	GER_industry_relocation_paris = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 16 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						16 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					16 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						16 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					16 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						16 = {
+							is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_paris
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_normandy = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 15 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						15 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					15 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						15 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					15 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						15 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_normandy
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_picardy = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 785 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						785 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					785 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						785 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					785 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						785 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_picardy
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_nord_pas = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 29 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						29 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					29 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						29 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					29 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						806 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_nord_pas
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_champagne = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 29 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						18 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					18 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						18 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					18 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						29 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_champagne
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_alsace = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 28 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						28 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					28 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						28 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					28 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						28 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_alsace
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_comte = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 17 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						17 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					17 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						17 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					17 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						17 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_comte
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_bourgogne = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 27 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						27 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					27 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						27 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					27 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+						if = {
+				limit = {
+                    OR = {
+						27 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_bourgogne
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_centre = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 24 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						24 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					24 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						24 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					24 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						24 = {
+							is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_centre
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_loire = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 30 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						30 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					30 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						30 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					30 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						30 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_loire
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_brittany = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 14 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						14 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					14 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						14 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					14 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+					if = {
+					limit = {
+                    OR = {
+						14 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_brittany
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_poitou = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 23 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						23 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					23 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						23 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					23 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						23 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_poitou
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_aquitaine = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 19 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						19 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					19 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						19 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					19 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						19 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_aquitaine
+				}
+			}
+		}
+	}
+
+	GER_industry_relocation_pyrenees = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 806 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						806 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					806 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						806 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					806 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						806 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_pyrenees
+				}
+			}
+		}
+	}
+	GER_industry_relocation_wallonie = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 34 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						34 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					34 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						34 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					34 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						34 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_wallonie
+				}
+			}
+		}
+	}
+	GER_industry_relocation_vlaanderen = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 6 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						6 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					6 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						6 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					6 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						6 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_vlaanderen
+				}
+			}
+		}
+	}
+	GER_industry_relocation_brabant = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 35 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						35 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					35 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						35 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					35 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						35 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_brabant
+				}
+			}
+		}
+	}
+	GER_industry_relocation_holland = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 7 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						7 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					7 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						7 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					7 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						7 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_holland
+				}
+			}
+		}
+	}
+	GER_industry_relocation_friesland = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 36 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						36 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					36 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						36 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					36 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						36 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_friesland
+				}
+			}
+		}
+	}
+	GER_industry_relocation_jutland = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 36 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						99 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					99 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						99 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					99 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						99 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_jutland
+				}
+			}
+		}
+	}
+	GER_industry_relocation_sjaelland = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = GER }
+
+		days_mission_timeout = 2
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { controls_state = 36 }
+		}
+		
+		activation = {
+			GER = { has_war_with = SOV }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						37 = {
+							is_controlled_by = GER
+							arms_factory > 0
+						}
+					}
+					37 = { 
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { 
+					limit = {
+						37 = {
+							is_controlled_by = GER
+							industrial_complex > 0
+						}
+					}
+					37 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_state  = { 
+						limit = {
+							is_owned_and_controlled_by = GER
+							has_state_flag = is_proper_germany
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					
+					}
+				}
+				if = {
+					limit = {
+                    OR = {
+						37 = {
+								is_controlled_by = GER
+							OR = {
+								industrial_complex > 0
+								arms_factory > 0
+							}
+						}						
+					}}
+						activate_mission = GER_industry_relocation_sjaelland
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+remove_occupation_cost_effect = {
+	if = {
+		limit = { has_idea = FRA_occupation_costs_1 }
+		remove_ideas = FRA_occupation_costs_1
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		remove_ideas = FRA_occupation_costs_2
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		remove_ideas = FRA_occupation_costs_3
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_4
+		}
+		remove_ideas = FRA_occupation_costs_4
+	}
+}
+
+reduce_occupation_cost_effect = {
+	if = {
+		limit = { has_idea = FRA_occupation_costs_1 }
+		remove_ideas = FRA_occupation_costs_1
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_2
+			add_idea = FRA_occupation_costs_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_3
+			add_idea = FRA_occupation_costs_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_4
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_4
+			add_idea = FRA_occupation_costs_3
+		}
+	}
+}
+
+increase_occupation_cost_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_occupation_costs_3
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_3
+			add_idea = FRA_occupation_costs_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_2
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_2
+			add_idea = FRA_occupation_costs_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_occupation_costs_1
+		}
+		swap_ideas = {
+			remove_idea = FRA_occupation_costs_1
+			add_idea = FRA_occupation_costs_2
+		}
+	}
+	else_if = {
+		limit = { 
+			NOT = { 
+				has_idea = FRA_occupation_costs_1
+				has_idea = FRA_occupation_costs_2
+				has_idea = FRA_occupation_costs_3
+				has_idea = FRA_occupation_costs_4 
+			}
+		}
+		add_ideas = FRA_occupation_costs_1
+	}
+}
+
+FRA_right_wing_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.1
+	}
+}
+FRA_communism_riot_effect = {
+	if = {
+		limit = {
+			has_idea = FRA_political_violence
+		}
+		country_event = lar_france_political_violence.2
+	}
+}

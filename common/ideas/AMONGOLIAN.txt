@@ -1,0 +1,377 @@
+ideas = {
+	country = {
+			MON_Rogue_state = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = mongolianflag
+			
+			modifier = {
+				ai_get_ally_desire_factor = -100
+				stability_factor = -0.2
+				political_power_cost = 0.30
+			}
+		}	
+		
+			MON_Rogue_state_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = 0.20
+			}
+		}
+		
+			MON_Rogue_state_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_cost = 0.15
+			}
+		}
+		
+		MON_Rual_population = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				war_support_factor = -0.05
+				research_speed_factor = -0.15
+			}
+		}
+		
+		
+		MON_Rual_population_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				war_support_factor = -0.05			
+				research_speed_factor = -0.10
+			}
+		}
+		
+		MON_Rual_population_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = MON
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				research_speed_factor = -0.05
+			}
+		}		
+		
+		MON_Mongolian_Police = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_cost = 0.40
+			}
+		}
+		
+		
+		MON_Armed_State = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = sovietrifles
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		
+				MON_Armed_State_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = sovietrifles
+			
+			modifier = {
+				conscription = 0.20
+			}
+		}
+		
+				MON_idea_economic_aid = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+				YUG = {
+					NOT = { has_war_with = SOV }
+					exists = yes
+					has_capitulated = no
+				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		
+				MON_Internal_security = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+		
+						MON_Internal_security_1 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.22
+			}
+		}
+		
+								MON_Internal_security_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.19
+			}
+		}
+		
+										MON_Internal_security_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.16
+			}
+		}
+		
+												MON_Internal_security_4 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.13
+			}
+		}
+		
+														MON_Internal_security_5 = {
+			
+			allowed = {
+				original_tag = MON
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		
+		MON_tank_industry = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = tankograd
+
+			equipment_bonus = {
+                armored_car_chassis = {
+				build_cost_ic = -0.15 instant = yes
+				} 			
+	            light_tank_chassis = {
+				build_cost_ic = -0.15 instant = yes
+				}         
+				medium_tank_chassis = {
+				build_cost_ic = -0.15 instant = yes
+				}              
+				heavy_tank_chassis = {
+				build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}		
+	}
+}	

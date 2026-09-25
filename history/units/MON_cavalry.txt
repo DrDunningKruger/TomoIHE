@@ -1,0 +1,20 @@
+﻿units = {
+	division= {
+		location = 4801
+		name = "Mongolian Cavalry"		
+		division_template = "Mongolian Revolutionary Cavalry"		
+		start_experience_factor = 0.4
+	}
+	division= {
+		location = 4801
+		name = "Mongolian Cavalry"		
+		division_template = "Mongolian Revolutionary Cavalry"		
+		start_experience_factor = 0.4
+	}
+	division= {
+		location = 4801
+		name = "Mongolian Cavalry"		
+		division_template = "Mongolian Revolutionary Cavalry"		
+		start_experience_factor = 0.4
+	}	
+}

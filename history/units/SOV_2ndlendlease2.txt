@@ -1,0 +1,64 @@
+﻿air_wings = {
+	653 = { 
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3	
+			medium_plane_cas_airframe_2 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "A-20 Havoc"
+			}
+			start_experience_factor = 0.3
+	}
+}

@@ -1,0 +1,225 @@
+equipments = {
+
+	paradrop_tank_chassis = {
+		year = 1936
+		is_archetype = yes
+		is_buildable = no
+
+		can_be_produced = {
+			NOT = {
+				has_idea = BUL_army_restrictions
+			}
+		}
+
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
+
+		
+
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_small_main_armament
+				}
+			}
+
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_light_turret_type
+				}
+			}
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_suspension_type
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_engine_type
+				}
+			}
+
+			layout_type_slot = {
+			    required = yes
+				allowed_module_categories = {
+					tank_armor_layout
+				}
+			}
+
+			special_type_slot_1 = {
+			    required = yes
+				allowed_module_categories = {
+					tank_radio_module
+				}
+			}		
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}	
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}		
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		}			
+		module_count_limit = {
+			module = sloped_armor
+			count < 2
+		}	
+		module_count_limit = {
+			module = nightvision
+			count < 2
+		}		
+		module_count_limit = {
+			module = stabilizer
+			count < 2
+		}	
+		module_count_limit = {
+			category = tank_radio_module
+			count < 2
+		}
+		module_count_limit = {
+		module = smoke_launchers
+			count < 2
+		}			
+		module_count_limit = {
+			category = tank_secondary_turret
+			count < 2
+		}
+		module_count_limit = {
+			module = amphibious_drive
+			count < 1
+		}
+
+		module_count_limit = {
+			module = wet_ammo_storage
+			count < 2
+		}
+
+		module_count_limit = {
+			module = squeezebore_adaptor
+			count < 2
+		}
+
+		module_count_limit = {
+			module = armor_skirts
+			count < 2
+		}
+
+		module_count_limit = {
+			module = dozer_blade
+			count < 2
+		}
+
+		module_count_limit = {
+			module = easy_maintenance
+			count < 2
+		}
+		module_count_limit = {
+			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+		module = additional_machine_guns
+			count < 2
+		}		
+		module_count_limit = {
+		module = apcr_ammo
+			count < 2
+		}	
+		module_count_limit = {
+		module = hvap_ammo
+			count < 2
+		}			
+		module_count_limit = {
+		module = commander_hatch
+			count < 2
+		}		
+		module_count_limit = {
+		module = external_fuel
+			count < 2
+		}		
+		module_count_limit = {
+		module = hesh_ammo
+			count < 2
+		}		
+		module_count_limit = {
+		module = wide_tracks
+			count < 2
+		}	
+		module_count_limit = {
+		module = tank_light_fixed_superstructure_turret
+			count < 1
+		}		
+		module_count_limit = {
+		module = flamethrower
+			count < 1
+		}	
+
+
+		
+		default_modules = {
+			main_armament_slot = empty
+			turret_type_slot = tank_light_one_man_tank_turret_p
+			suspension_type_slot = tank_unsprung_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_0
+		}
+
+		fuel_consumption = 0
+		fuel_capacity = 250
+		maximum_speed = 6			#same as tier 0 light tank
+		build_cost_ic = 2			#same as tier 3 light tank
+		reliability = 1			#same as tier 0 light tank
+		hardness = 0.8				#same as light tank
+		armor_value = 15			#same as tier 1 light tank
+		resources = {
+			steel = 2				#same as tier 0,1,2 light tank
+		}
+
+		manpower = 2
+
+	}
+
+	paradrop_tank_chassis_0 = {
+		abbreviation = "pt1"
+		derived_variant_name = light_tank_equipment_0
+		year = 1936
+		archetype = paradrop_tank_chassis
+		priority = 2000
+		module_slots = inherit
+
+		upgrades = {
+			tank_nsb_engine_upgrade
+			tank_nsb_armor_upgrade
+		}
+	}
+}

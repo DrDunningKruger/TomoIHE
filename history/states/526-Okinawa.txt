@@ -1,0 +1,36 @@
+
+state={
+	id=526
+	name="STATE_526"
+	resources={
+		aluminium=20.000
+	}
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			11932 = {
+				naval_base = 5
+
+			}
+
+		}
+		victory_points = {
+			11932 10 
+		}	
+		victory_points = {
+			13276 1 
+		}
+	}
+
+	provinces={
+		1123 2162 2198 2212 2225 2226 7115 8160 10124 11932 12983 12997 13276 
+	}
+	manpower=578000
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

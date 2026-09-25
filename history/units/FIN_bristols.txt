@@ -1,0 +1,10 @@
+﻿air_wings = {
+	111 = { 
+			medium_plane_cas_airframe_1 = {
+				owner = "FIN" 
+				amount = 100
+				version_name = "Bristol Blenheim"
+			}
+			start_experience_factor = 0.9
+	}
+}

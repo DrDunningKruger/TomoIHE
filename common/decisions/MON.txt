@@ -1,0 +1,27 @@
+Mongolian_cavalry = {
+
+	MON_cavalry_decision = {
+
+		icon = jap_conquer_china
+
+		visible = {
+			tag = MON
+		}
+		
+		available = {
+            has_completed_focus = MON_assisttheherdsmen
+		}
+
+		fire_only_once = no
+		
+		cost = 75
+
+		days_re_enable = 100
+
+		#days_remove = 1
+
+		complete_effect = {
+	     load_oob = "MON_cavalry"
+		}
+	}
+}

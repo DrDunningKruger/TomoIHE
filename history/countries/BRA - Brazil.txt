@@ -1,0 +1,218 @@
+﻿capital = 500
+
+
+oob = "BRA_1936"
+
+add_ideas = {
+	BRA_Army_for_Internal_Security
+	BRA_Vargas_power
+	Lacking_military_expenses
+	Unexperienced_army
+	training_spirit
+}			
+set_research_slots = 3
+set_fuel_ratio = 1.0
+# Starting tech
+set_technology = {
+    cap_everyone = 1
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	superior_firepower = 1	
+	fuel_silos = 1	
+	basic_train = 1		
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1	
+	engine_tech_1 = 1	
+	armor_tech_1 = 1	
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+    new_tank_guns = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1	
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+	set_naval_oob = "BRA_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "BRA_1936_naval"	
+}
+set_country_flag = monroe_doctrine
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 45
+	fascism = 10
+	communism = 5
+	neutrality = 40
+}
+
+set_convoys = 80
+set_stability = 0.5 
+set_war_support = 0.15
+
+recruit_character = BRA_getulio_vargas
+recruit_character = BRA_plinio_salgado
+recruit_character = BRA_luis_carlos_prestes
+recruit_character = BRA_agliberto_vieira
+recruit_character = BRA_eduardo_gomes
+recruit_character = BRA_salgado_filho
+recruit_character = BRA_floriano_peixoto
+recruit_character = BRA_aristides_guilhem
+recruit_character = BRA_epaminondas_dos_santos
+recruit_character = BRA_moreira_lima
+recruit_character = BRA_artur_da_costa_e_silva
+recruit_character = BRA_ismael_motta_paes
+recruit_character = BRA_jorge_martins
+recruit_character = BRA_afranio_de_mello_franco
+recruit_character = BRA_osvaldo_aranha
+recruit_character = BRA_arlindo_veiga_dos_santos
+recruit_character = BRA_navy_theorist
+recruit_character = BRA_war_industrialist
+recruit_character = BRA_captain_of_industry
+recruit_character = BRA_reformer
+
+
+recruit_character = BRA_Mascarenhas_de_Morais
+recruit_character = BRA_Euclides_Zenobio_Da_Costa
+recruit_character = BRA_Olympio_Falconiere_da_Cunha
+recruit_character = BRA_Alberto_Ribeiro_Paz
+recruit_character = BRA_Canrobert_Pereira_da_Costa
+recruit_character = BRA_Eurico_Gaspar_Dutra
+recruit_character = BRA_Odilio_Denys
+recruit_character = BRA_Joao_De_Sagades_Viana
+recruit_character = BRA_Joao_Baptista_de_Mattos
+recruit_character = BRA_Pedro_Aurelio_de_Gois_Monteiro
+
+recruit_character = BRA_augusto_rademaker
+recruit_character = BRA_henrique_aristides_guilhem
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "Minas Geras Class"
+		type = ship_hull_heavy_1
+		name_group = BRA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Bahia Class"
+		type = ship_hull_cruiser_1
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Para Class"
+		type = ship_hull_light_1
+		name_group = BRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Humaytá Class"
+		type = ship_hull_submarine_2
+		name_group = BRA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+	create_equipment_variant = {
+		name = "FT-17"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_unsprung_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_0			
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "gfx/interface/technologies/USA/TANKS/USA_LT0_1.dds"
+	}
+    add_equipment_to_stockpile = { type = light_tank_chassis_0 amount = 45 producer = BRA  variant_name = "FT-17" }
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	

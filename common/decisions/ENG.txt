@@ -1,0 +1,1241 @@
+War_Emergency_Programme = {
+
+	ENG_destroyer_decision = {
+
+		icon = GFX_decision_generic_naval
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = uk_destroyer_focus
+		}
+
+		fire_only_once = no
+		
+		cost = 45	
+
+		days_re_enable = 90
+
+		#days_remove = 1
+
+		complete_effect = {
+	     load_oob = "ENG_escorts"
+		}
+	}	
+
+	ENG_convoy_decision = {
+
+		icon = GFX_decision_generic_naval
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = uk_convoy_focus
+		}
+
+		fire_only_once = no
+		
+		cost = 45	
+
+		days_re_enable = 45
+        days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		#days_remove = 1
+
+		complete_effect = {
+	   	add_equipment_to_stockpile = {
+        type = convoy_1
+        amount = 150
+        producer = USA
+        }
+		}
+	}	
+	
+	ENG_recomission_HMSArgus = {
+
+		icon = GFX_decision_generic_merge_plant_ship
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = naval_rearmament_focus
+		}
+
+		fire_only_once = yes
+		
+		cost = 35
+
+		#days_remove = 1
+
+		complete_effect = {
+		create_equipment_variant = {
+		name = "Argus Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = ENG_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = empty
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+		}
+		obsolete = yes
+	    }
+	  				add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "ENG" 
+							version_name = "Argus Class"
+						}
+						name = "HMS Argus" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}  
+		}
+	}	
+	
+	ENG_orderavengers = {
+
+		icon = GFX_decision_generic_merge_plant_ship
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = uk_convoy_focus
+		}
+
+		fire_only_once = yes
+		
+		cost = 125
+
+		#days_remove = 1
+
+		complete_effect = {
+	    create_equipment_variant = {
+		name = "Avenger Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = ENG_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = empty
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = ship_radar_2
+			fixed_ship_engine_slot = cruiser_ship_engine_4
+			fixed_ship_secondaries_slot = empty
+		}
+		obsolete = yes
+	    }
+	  				add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "ENG" 
+							version_name = "Avenger Class"
+						}
+						name = "HMS Avenger" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					} 	  	
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "ENG" 
+							version_name = "Avenger Class"
+						}
+						name = "HMS Biter" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}  		
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "ENG" 
+							version_name = "Avenger Class"
+						}
+						name = "HMS Dasher" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+
+            USA = {
+	    create_equipment_variant = {
+		name = "Avenger Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = ENG_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = empty
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = ship_radar_2
+			fixed_ship_engine_slot = cruiser_ship_engine_4
+			fixed_ship_secondaries_slot = empty
+		}
+		obsolete = yes
+	    }
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "USA" 
+							version_name = "Avenger Class"
+						}
+						name = "USS Charger" 
+						requested_factories = 1
+						progress = 0.95
+						amount = 1
+					}
+			}					
+		}
+	}
+	
+	ENG_recomission_HMSAudacity = {
+
+		icon = GFX_decision_generic_merge_plant_ship
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = ENG_secure_the_imperial_shipping_routes
+			ENG = { has_war = yes }
+		}
+
+		fire_only_once = yes
+		
+		cost = 35
+
+		#days_remove = 1
+
+		complete_effect = {
+			create_equipment_variant = {
+		name = "Audacity Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = ENG_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = empty
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+		}
+		obsolete = yes
+	    }
+	  				add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_conversion_ca
+							creator = "ENG" 
+							version_name = "Audacity Class"
+						}
+						name = "HMS Audacity" 
+						requested_factories = 1
+						progress = 0.75
+						amount = 1
+					}  
+		}
+	}	
+	
+	ENG_ice_carrier_program = {
+
+		icon = GFX_decision_generic_merge_plant_ship
+
+		visible = {
+			tag = ENG
+		}
+		
+		available = {
+            has_completed_focus = ENG_expand_the_repair_yards
+			ENG = { has_war = yes }
+			date > 1942.1.1
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		#days_remove = 1
+
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		remove_effect = {
+		
+			hidden_effect = {
+			if = {
+			limit = { NOT = { has_tech = ice_carrier_project }}
+			set_technology = {
+				ice_carrier_project = 1
+			}}				
+			}
+		
+			create_equipment_variant = {
+		name = "Habakkuk Class"
+		type = ship_hull_mega_carrier
+		name_group = ENG_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = big_ship_deck_space
+			fixed_ship_deck_slot_2 = big_ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_radar_slot = ship_radar_4
+			fixed_ship_engine_slot = carrier_ship_engine_3
+			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			front_1_custom_slot = big_ship_deck_space
+			mid_1_custom_slot = ship_armor_ice_carrier_deck_3
+			mid_2_custom_slot = ship_armor_ice_carrier_deck_3
+			rear_1_custom_slot = dp_ship_secondaries_2
+		}
+
+	    }
+	  				add_equipment_production = {
+						equipment = {
+							type = ship_hull_mega_carrier
+							creator = "ENG" 
+							version_name = "Habakkuk Class"
+						}
+						name = "HMS Habakkuk" 
+						requested_factories = 1
+						progress = 0.35
+						amount = 1
+					}  
+		}
+	}
+}
+
+ENG_IH&E_special = {
+
+	ENG_WW3 = {
+
+        available = {
+		has_war = no
+		SOV = { has_war = no } 
+		}
+
+		allowed = { 
+			tag = ENG
+		}
+
+		visible = {
+			has_global_flag = victory_in_europe
+		}
+
+		icon = generic_industry
+
+		#cost = 0
+		
+		days_remove = 60
+		fire_only_once = yes
+		
+		modifier = {
+			
+		}
+		complete_effect = {
+			country_event = { id = peace_in_europe.3 hours = 1 random_hours = 0 } 
+		}
+		remove_effect = {
+				declare_war_on = {
+				target = SOV
+				type = annex_everything
+				}
+		}
+	}
+
+	ENG_annex_FRA = { 
+	
+				available = {
+					FRA = { has_country_flag = france_is_capped }
+					FRA = { is_ai = yes }
+					}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = FRA
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = FRA
+								transfer_troops = yes
+						}
+					}
+				}
+				
+	ENG_annex_NOR = { 
+	
+				available = {				
+					NOR = { 
+					is_ai = yes
+					has_capitulated = yes
+					}
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = NOR
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = NOR
+								transfer_troops = yes
+						}
+					}
+				}				
+
+	ENG_annex_GRE = { 
+	
+				available = {			
+					GRE = { 
+					is_ai = yes
+					has_capitulated = yes
+					}
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = GRE
+					has_war = yes
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = GRE
+								transfer_troops = yes
+						}
+					}
+				}				
+
+	ENG_puppet_HOL = { 
+	
+				available = {
+					HOL = { 
+					is_ai = yes 
+					has_war = yes
+					}
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = HOL
+					HOL = {
+					is_puppet = no
+					}
+				}
+				
+				fire_only_once = yes
+					
+				cost = 0 
+					
+				complete_effect = {
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = HOL
+							}
+						}
+						remove_dynamic_modifier = {
+								modifier = benelux_modifier
+						}
+			}
+			ENG = { puppet = HOL }
+		}
+	}
+
+	ENG_annex_BEL = { 
+	
+				available = {
+					BEL = { 
+					is_ai = yes 
+					has_war = yes
+					has_capitulated = yes
+					has_full_control_of_state = 718
+					has_full_control_of_state = 769
+					has_full_control_of_state = 768
+					has_full_control_of_state = 295
+					has_full_control_of_state = 538
+					}			 
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = BEL
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						every_state = {
+							limit = {
+								OR = {
+									is_core_of = BEL
+								}
+							}
+							remove_dynamic_modifier = {
+								modifier = benelux_modifier
+							}
+						}
+
+						if = {
+							limit = { country_exists = FRA }
+							FRA = {
+								transfer_state = 718
+								transfer_state = 769
+								transfer_state = 768
+								transfer_state = 295
+								transfer_state = 538
+							}
+						}
+						annex_country = {
+							target = BEL
+							transfer_troops = yes
+						}
+					}
+	}
+				
+	ENG_annex_POL = {
+	
+				available = {
+					POL = { 
+					is_ai = yes 
+					has_war = yes
+					has_full_control_of_state = 490
+					}			 
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = POL
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+					    POL = {
+						add_offsite_building = {
+							type = dockyard
+							level = -2
+						}					
+						add_offsite_building = {
+							type = arms_factory
+							level = -10
+						}
+						} 
+						490 = { 
+							remove_building = {
+								type = arms_factory
+								level = 15
+							}
+						}					
+						annex_country = {
+								target = POL
+								transfer_troops = yes
+						}
+					}
+				}				
+
+	ENG_annex_CAN = {
+	
+				available = {
+					CAN = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = CAN
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = CAN
+								transfer_troops = yes
+						}
+					}
+				}
+			
+	ENG_annex_RAJ = { 
+	
+				available = {
+					RAJ = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = RAJ
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = RAJ
+								transfer_troops = yes
+						}
+					}
+				}
+
+	ENG_annex_NEP = { 
+	
+				available = {
+					NEP = { 
+					is_ai = yes 
+					has_war = yes
+					}
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = NEP
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = NEP
+								transfer_troops = yes
+						}
+					}
+				}
+			
+	ENG_annex_SAF = { 
+	
+		available = {
+			SAF = { is_ai = yes }
+			OR = {
+			NOT = {
+			country_exists = CAN
+			}
+			date > 1940.1.1
+			}
+		}
+					
+		allowed = { 
+			tag = ENG
+		}
+		visible = { 
+			country_exists = SAF
+		}
+				
+		fire_only_once = yes
+					
+		cost = 0 
+					
+		complete_effect = {
+			annex_country = {
+				target = SAF
+				transfer_troops = yes
+			}
+		}
+	}
+			
+	ENG_annex_AST = { 
+	
+				available = {
+					AST = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = AST
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = AST
+								transfer_troops = yes
+						}
+					}
+				}
+				
+	ENG_annex_NZL = { 
+	
+				available = {
+					NZL = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = { 
+					country_exists = NZL
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = NZL
+								transfer_troops = yes
+						}
+					}
+				}
+				
+	ENG_annex_SAF_to_CAN = { 
+	
+				available = {
+					SAF = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = {
+                AND = {				
+					country_exists = SAF
+					country_exists = CAN					
+				}
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+					CAN = {
+					add_state_core = 541	
+					add_state_core = 681
+					add_state_core = 275
+					add_state_core = 719					
+						annex_country = {
+								target = SAF
+								transfer_troops = yes
+						}
+					}
+					}
+				}	
+				
+	ENG_annex_SAF_to_FRA = { 
+	
+				available = {
+					SAF = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = {
+                AND = {				
+					country_exists = SAF
+					NOT = {
+					country_exists = CAN
+                    }					
+				}
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+					FRA = {
+					#add_state_core = 541	
+					#add_state_core = 681
+					#add_state_core = 275
+					#add_state_core = 719					
+						annex_country = {
+								target = SAF
+								transfer_troops = yes
+						}
+					}
+					}
+				}
+
+	ENG_annex_CAN_to_SAF = { 
+	
+				available = {
+					CAN = { is_ai = yes }
+				}
+					
+				allowed = { 
+					tag = ENG
+				}
+				visible = {
+                AND = {				
+					country_exists = SAF
+					country_exists = CAN					
+				}
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+					SAF = {
+					add_state_core = 331
+					add_state_core = 332
+					add_state_core = 466
+					add_state_core = 464
+					add_state_core = 465	
+					add_state_core = 468	
+					add_state_core = 682	
+					add_state_core = 276
+					add_state_core = 683	
+					add_state_core = 467	
+					add_state_core = 472
+					add_state_core = 469	
+					add_state_core = 470
+					add_state_core = 473
+					add_state_core = 740
+					add_state_core = 739
+					add_state_core = 471					
+						annex_country = {
+								target = CAN
+								transfer_troops = yes
+						}
+					}
+					}
+				}				
+	}
+	
+
+ENG_imperial_conference_decision = {
+	
+	ENG_imperial_conference_decision = {
+
+		icon = generic_political_discourse
+		
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 60
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = imperial_conference_ends_tt
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							is_subject_of = ENG
+							tag = CAN
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = SAF
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = RAJ
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = AST
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = NZL
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = NEP
+						}						
+					}
+				}
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_opinion }
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_approved_resolution }
+			}
+		}
+	}
+	
+	ENG_discuss_imperial_defense = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.83 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_trade = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.87 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+
+	}
+
+	ENG_discuss_imperial_economy = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.91 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+	}
+
+	ENG_discuss_appeasement = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+			has_war = no
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.95 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+	}
+}
+
+political_actions = {
+
+	ENG_invade_iceland = {
+	    icon = GFX_decision_generic_form_nation
+		
+		available = {
+			tag = ENG
+            has_war = yes
+		}
+
+		visible = {
+			tag = ENG
+            has_war = yes
+			SWI = { has_full_control_of_state = 100 }
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			transfer_state = 100
+		}
+	}	
+	
+	ENG_lease_azores = {
+	    icon = GFX_decision_generic_form_nation
+		
+		available = {
+			tag = ENG
+            has_war = yes
+		}
+
+		visible = {
+			tag = ENG
+            has_war = yes
+			SWI = { has_full_control_of_state = 698 }
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			transfer_state = 698
+		}
+	}
+	
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = blood_toil_tears_sweat_speech }
+			}
+			set_country_flag = blood_toil_tears_sweat_speech
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = fight_on_the_beaches_speech }
+			}
+			set_country_flag = fight_on_the_beaches_speech
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = { 
+					has_country_flag = france_is_capped
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = this_was_their_finest_hour_speech }
+			}
+			set_country_flag = this_was_their_finest_hour_speech
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+}
+

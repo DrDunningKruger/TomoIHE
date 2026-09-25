@@ -1,0 +1,1162 @@
+focus_tree = {
+	id = Italianethopia
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IEA
+		}
+	}
+	
+	continuous_focus_position = { x = 2150 y = 70 }
+	
+	#Focus for Roads of Amhara
+	focus = {
+		id = IEA_roads_of_amhara
+		icon = GFX_IEA_roads
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_war_logistics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			271 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for War Logistics
+	focus = {
+		id = IEA_war_logistics
+		icon = GFX_brazileq12
+		x = 2
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+				559 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+				559 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 12991
+						instant_build = yes
+					}
+				}
+				550 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				550 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 12991
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	#Focus for Italian Colonial Army
+	focus = {
+		id = IEA_italian_colonial_army
+		icon = GFX_IEA_army
+		x = 16
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {		
+			add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+			army_experience = 100
+		}
+	}
+
+	#Focus for Africa Orientale Italiana
+	focus = {
+		id = IEA_africa_orientale_italiana
+		icon = GFX_IEA_east
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			controls_state= 271
+		}
+        search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		completion_reward = { 
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Start Works on Imperial Road
+	focus = {
+		id = IEA_start_works_on_imperial_road
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_roads_of_amhara }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			838 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			271 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			837 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			805 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Fund new workplaces
+	focus = {
+		id = IEA_fund_new_workplaces
+		icon = GFX_braurbanisation1
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_start_works_on_imperial_road }
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			559 = {
+				 add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for Finalize Works on Imperial Road
+	focus = {
+		id = IEA_finalize_works_on_imperial_road
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_start_works_on_imperial_road }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				build_railway = { 
+				path = {
+					12766 13257 7944 13253 5097 5010 12991 2020 13240 13244 13245 13247 13248
+				}
+			}
+		}
+	}
+
+	#Focus for Compagnia etiopica mineraria
+	focus = {
+		id = IEA_compagnia_etiopica_mineraria
+		icon = GFX_brazilrubber
+		x = 6
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_start_works_on_imperial_road }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource = { 
+				type = rubber 
+				amount = 30 
+				state = 559
+			}
+			add_tech_bonus = {
+			name = IEA_excavation1
+				bonus = 1.0
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+	}
+
+	#Focus for Compagnie per il cotone d'Etiopia
+	focus = {
+		id = IEA_compagnie_per_il_cotone_detiopia
+		icon = GFX_brazilianindustry3
+		x = 0
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_start_works_on_imperial_road }
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			550	=  { 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	#Focus for Established base for industry
+	focus = {
+		id = IEA_established_base_for_industry
+		icon = GFX_brazilianindustry1
+		x = 4
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_finalize_works_on_imperial_road 
+		}
+		prerequisite = { 
+			focus = IEA_fund_new_workplaces 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			837	=  { 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	#Focus for Steel of Ethopia
+	focus = {
+		id = IEA_steel_of_ethopia
+		icon = GFX_brazilianresources
+		x = 6
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_compagnia_etiopica_mineraria 
+		}
+		prerequisite = { 
+			focus = IEA_finalize_works_on_imperial_road 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource= { 
+				type = steel 
+				amount = 24
+				state = 838
+			}
+			add_tech_bonus = {
+			name = IEA_excavation1
+				bonus = 1.0
+				uses = 1
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+	}
+
+	#Focus for Linea dell'Impero
+	focus = {
+		id = IEA_linea_dellimpero
+		icon = GFX_porteco
+		x = 2
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_finalize_works_on_imperial_road }
+		ai_will_do = {
+			factor = 1
+		}
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			271	=  { 
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}				
+				add_extra_state_shared_building_slots = 2
+			}
+			550	=  { 
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}		
+                add_extra_state_shared_building_slots = 1			
+            }			
+		}
+	}
+
+	#Focus for Italian Investments
+	focus = {
+		id = IEA_italian_investments
+		icon = GFX_brazilianfunding
+		x = 4
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_linea_dellimpero 
+		}
+		prerequisite = { 
+			focus = IEA_established_base_for_industry 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+        search_filters = {FOCUS_FILTER_POLITICAL}		
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IEA_Italian_funds
+				add_idea = IEA_stable_budget
+			}
+		}
+	}
+
+	#Focus for Garrison of Addis-Ababa
+	focus = {
+		id = IEA_garrison_of_addisababa
+		icon = GFX_infeqshipment
+		x = 16
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_italian_colonial_army }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			controls_state= 271
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}  
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 10000
+		}
+	}
+
+	#Focus for Country of mountains
+	focus = {
+		id = IEA_country_of_mountains
+		icon = GFX_europeandoctrinebrz
+		x = 18
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_italian_warfare_thoughs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mountain_tech
+				bonus = 1.0
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	#Focus for Italian Warfare Thoughs
+	focus = {
+		id = IEA_italian_warfare_thoughs
+		icon = GFX_IEA_warfare
+		x = 18
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_italian_colonial_army }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+		}
+	}
+
+	#Focus for Army modernization
+	focus = {
+		id = IEA_army_modernization
+		icon = GFX_brazilgerartillery
+		x = 15
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_garrison_of_addisababa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+				}			
+			add_tech_bonus = {
+				name = RAJ_indian_armor
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+			}
+		}
+	}
+
+	#Focus for Ethopian ressistance
+	focus = {
+		id = IEA_ethopian_ressistance
+		icon = GFX_bragunupgrade
+		x = 17
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_garrison_of_addisababa }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			controls_state = 271
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_state_core = 271
+			271 = {
+				remove_dynamic_modifier = { modifier = ethopian_ressitance_state }
+				add_dynamic_modifier = { modifier = ethopian_ressitance_dealt_with_state scope = IEA }				
+			}		
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Ethopians within Italian Army
+	focus = {
+		id = IEA_ethopians_within_italian_army
+		icon = GFX_brazilianmobilization
+		x = 16
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_garrison_of_addisababa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IEA_conscription 
+		}
+	}
+
+	#Focus for Ressistance in Amhara
+	focus = {
+		id = IEA_ressistance_in_amhara
+		icon = GFX_bragunupgrade	
+		x = 16
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_ethopian_ressistance }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			controls_state = 838
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_state_core = 838
+			838 = {
+				remove_dynamic_modifier = { modifier = ethopian_ressitance_state }
+				add_dynamic_modifier = { modifier = ethopian_ressitance_dealt_with_state scope = IEA }				
+			}			
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Ressistance in Harrar
+	focus = {
+		id = IEA_ressistance_in_harrar
+		icon = GFX_bragunupgrade
+		x = 18
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_ethopian_ressistance }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			controls_state = 837
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_state_core = 837
+			837 = {
+				remove_dynamic_modifier = { modifier = ethopian_ressitance_state }
+				add_dynamic_modifier = { modifier = ethopian_ressitance_dealt_with_state scope = IEA }				
+			}		
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Resistance in Somali
+	focus = {
+		id = IEA_resistance_in_somali
+		icon = GFX_IEA_Dubats
+		x = 17
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_ressistance_in_amhara 
+		}
+		prerequisite = { 
+			focus = IEA_ressistance_in_harrar 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 269
+		}
+		completion_reward = {
+		add_ideas = SPA_expand_conscription
+		
+			custom_effect_tooltip="irregular_infantry_tooltip"
+			set_technology = {
+				irregular_infantry = 1
+			}	
+		}
+	}
+
+	#Focus for Trasporti automobilistici
+	focus = {
+		id = IEA_trasporti_automobilistici
+		icon = GFX_goal_generic_army_motorized
+		x = 13
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_army_modernization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				name = mech_army_bonus
+				technology = motorised_infantry
+			}
+			add_equipment_to_stockpile = {
+								type = motorized_equipment
+								amount = 250
+								producer = ITA
+			}			
+			army_experience = 25		
+		}
+	}
+
+	#Focus for Italian Panzers
+	focus = {
+		id = IEA_italian_panzers
+		icon = GFX_tankresearch
+		x = 13
+		y = 6
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_trasporti_automobilistici }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.0
+				uses = 2
+				category = armor
+			}		
+			add_tech_bonus = {
+				name = RAJ_indian_armor
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+			}
+			army_experience = 50
+		}
+	}
+
+	#Focus for Italian Officers
+	focus = {
+		id = IEA_italian_officers
+		icon = GFX_brazilianofficers
+		x = 15
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_army_modernization }
+		ai_will_do = {
+			factor = 1
+		}
+        search_filters = {FOCUS_FILTER_RESEARCH}		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Educate, Modernize, Execute
+	focus = {
+		id = IEA_educate_modernize_execute
+		icon = GFX_IEA_victory
+		x = 10
+		y = 1	
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_africa_orientale_italiana }
+		ai_will_do = {
+			factor = 15
+		}
+		
+        search_filters = {FOCUS_FILTER_STABILITY}			
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IEA_ethiopiawar
+				add_idea = IEA_ethiopiawar2
+			}
+		}
+	}	
+	
+	focus = {
+		id = IEA_removenerf
+		icon = GFX_IEA_victory
+		x = 20
+		y = 4	
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_italian_warfare_thoughs }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+		date > 1941.1.1
+		}
+		completion_reward = {
+				remove_ideas = IEA_collaboration_movements
+		}
+	}
+
+	#Focus for Collaboration
+	focus = {
+		id = IEA_collaboration
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 8
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_educate_modernize_execute }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = IEA_unwelcomed_occupant
+				add_idea = IEA_collaboration_movements
+			}
+		}
+	}
+
+	#Focus for Teach them to read
+	focus = {
+		id = IEA_teach_them_to_read
+		icon = GFX_IEA_read
+		x = 8
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_collaboration }
+		ai_will_do = {
+			factor = 1
+		}
+        search_filters = {FOCUS_FILTER_RESEARCH}		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Fight Against Arbegnochs
+	focus = {
+		id = IEA_fight_against_arbegnochs
+		icon = GFX_IEA_butcher
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_educate_modernize_execute }
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = { 
+		remove_ideas = IEA_ethiopiawar2
+        create_country_leader = {
+	name = "Rodolfo Graziani"
+	desc = "POLITICS_RODOLFO_GRAZIANI_PATS_DESC"
+	picture = "portrait_italIian_radolfo_graziani.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		griazani
+	}
+    }	
+		}
+	}
+
+	#Focus for Death to Desta
+	focus = {
+		id = IEA_death_to_desta
+		icon = GFX_IEA_capital
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_fight_against_arbegnochs }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			controls_state= 271
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_state_core = 271
+			set_capital = { state = 271 }
+			271 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+					add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Yekatit 12
+	focus = {
+		id = IEA_yekatit_12
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 10
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		
+		bypass = { 
+			has_country_flag = Yekatit_happened
+		}
+		
+		available = {
+			has_country_flag = Yekatit_happened
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		   custom_effect_tooltip="IEA_MASSACRE_TOOLTIP"	
+		}
+	}
+
+	#Focus for Butcher of Africa
+	focus = {
+		id = IEA_butcher_of_africa
+		icon = GFX_IEA_butcher2
+		x = 11
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_yekatit_12 }
+		prerequisite = { focus = IEA_death_to_desta }
+		mutually_exclusive = { focus = IEA_duke_of_aosta }
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}		
+
+		completion_reward = {
+			add_political_power = -50		
+			271	=  { 
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = butcher_of_africa		
+			custom_effect_tooltip = "NEWGENERAL_TOOLTIP"			
+		}
+	}
+
+	#Focus for Duke of Aosta
+	focus = {
+		id = IEA_duke_of_aosta
+		icon = GFX_IEA_duke
+		x = 9
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_yekatit_12 }
+		prerequisite = { focus = IEA_teach_them_to_read }
+		prerequisite = { focus = IEA_death_to_desta }
+		mutually_exclusive = { focus = IEA_butcher_of_africa }
+		ai_will_do = {
+			factor = 50
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}  		
+		completion_reward = {
+		    add_manpower = 10000
+			271	=  { 
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			create_country_leader = {
+				name = "Amedeo di Aosta"
+				desc = "POLITICS_AMEDEO_PATS_DESC"
+				picture = "portrait_eastafrica_amedeo_aosta.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+				#
+				}
+			}
+				remove_unit_leader = 1552
+			ITA = {
+				country_event = { id = mao.2 
+				days = 14 }
+			}
+			set_country_flag = duke_of_aostra
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Ethopian Workforce
+	focus = {
+		id = IEA_ethopian_workforce
+		icon = GFX_focus_mex_privatisation
+		x = 7
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_italian_investments 
+		}
+		prerequisite = { 
+			focus = IEA_duke_of_aosta 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IEA_workforce
+			add_ideas = SAF_desert_equipment
+		}
+	}
+
+	#Focus for Army of The Butcher
+	focus = {
+		id = IEA_army_of_the_butcher
+		icon = GFX_goal_generic_attack_allies
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_butcher_of_africa 
+		}
+		prerequisite = { 
+			focus = IEA_italian_officers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = IEA_army_of_the_butcher_idea
+			custom_effect_tooltip = "PENALBATTALION_TOOLTIP"
+			hidden_effect = {
+				set_technology = {
+					penal_infantry = 1
+				}
+			}
+		}
+	}
+
+	#Focus for Harrar
+	focus = {
+		id = IEA_harrar
+		icon = GFX_IEA_colony
+		x = 10
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_butcher_of_africa 
+			focus = IEA_duke_of_aosta 
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			controls_state= 837
+		}
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		
+		completion_reward = {
+					custom_effect_tooltip = "IEA_CIVS_OR_MILS_TOOLTIP"
+				IF = { limit = { has_country_flag = butcher_of_africa } 
+				837	=  { 
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IF = { limit = { has_country_flag = duke_of_aostra } 
+				837	=  { 
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+	}
+
+	#Focus for Amhara
+	focus = {
+		id = IEA_amhara
+		icon = GFX_IEA_modernize
+		x = 9
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IEA_harrar
+		}
+		prerequisite = { 
+			focus = IEA_duke_of_aosta
+		}
+		mutually_exclusive = { focus = IEA_mobilize }		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			controls_state= 271
+		}
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+           remove_ideas = { IEA_undevelopedwasteland }
+				837	=  { 
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}		   
+		}
+	}
+	
+	focus = {
+		id = IEA_mobilize
+		icon = GFX_IEA_mobilize
+		x = 11
+		y = 9
+		cost = 8
+		available_if_capitulated = yes	
+		prerequisite = { 
+			focus = IEA_harrar
+		}
+		prerequisite = { 
+          focus = IEA_butcher_of_africa
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available = {
+			controls_state= 271
+		}
+		mutually_exclusive = { focus = IEA_amhara }	
+        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}  
+		
+		completion_reward = {
+		add_ideas = IEA_guns
+			IF = { limit = { has_country_flag = butcher_of_africa } 
+				271	=  { 
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			IF = { limit = { has_country_flag = duke_of_aostra } 
+				271	=  { 
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			if = {
+				limit = {
+				OR = {
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+				}
+				add_political_power = 120
+			}					
+			if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				add_ideas = extensive_conscription
+			}
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				add_ideas = limited_conscription
+			}
+            custom_effect_tooltip = manpower_upping_desc			
+		}
+	}
+
+	
+
+#End of focuses 
+ }

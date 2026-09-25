@@ -1,0 +1,3087 @@
+# if axis fails
+
+
+#Axis lost
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = { # if there are 3+ majors is major, both germany and italy need to cap, if spain is not major only germany needs to cap
+					or = {
+						and = {
+							ROOT = { original_tag = GER } # when Germany caps, war is over if
+							or = {
+								ITA = { # Italy has already capped or doesnt exist
+									or = {
+										has_capitulated = yes
+										NOT = { country_exists = ITA }
+									}
+								}
+								NOT = { # or there is no third major in Axis (SPR)
+									any_country = { 
+										is_in_faction_with = GER
+										is_major = yes
+										has_capitulated = no
+										NOT = { tag = ITA }
+										NOT = { tag = GER }
+									}
+								}
+							}
+						}
+						and = {
+							ROOT = { original_tag = ITA } # when Italy caps, war is over if
+							GER = { has_capitulated = yes } # Germany has already capped
+						}
+					}
+				}
+				
+				# effects
+				
+				set_global_flag = victory_in_europe
+				
+
+				
+				##################################################################################
+				#Italy
+				#
+				ITA = {
+					set_cosmetic_tag = ITA
+				}
+				
+				if = { # If soviets took Milan, Rome, Palermo they puppet Italy
+					limit = { 
+						159 = { is_controlled_by = SOV } # Milan
+						2 = { is_controlled_by = SOV } # Rome
+						115 = { is_controlled_by = SOV } # Palermo
+					}
+					FRA = { # France takes Sardinia
+						transfer_state = 114
+					}
+						
+					SOV = {
+						set_autonomy = {
+							target = ITA
+							autonomy_state = autonomy_puppet
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = ITA
+						}
+					
+					ITA = {
+						transfer_state = 160
+						transfer_state = 39
+						transfer_state = 159
+						transfer_state = 158
+						transfer_state = 161
+						transfer_state = 162
+						transfer_state = 157
+						transfer_state = 2
+						transfer_state = 117
+						transfer_state = 156	
+						transfer_state = 115						
+					}
+				}
+				else = { # anything else means Italy is divided, Soviets annex, Allies puppet
+					ITA = { # Sardinia stays Italian
+						transfer_state = 114
+					}
+					if = {
+						limit = {
+							159 = { is_controlled_by = SOV } # Milan
+						}
+						SOV = {
+							transfer_state = 160
+							transfer_state = 39
+							transfer_state = 159
+							transfer_state = 158
+							transfer_state = 161
+							transfer_state = 162
+						}
+					}
+					else = {
+						ITA = { 
+							transfer_state = 160
+							transfer_state = 39
+							transfer_state = 159
+							transfer_state = 158
+							transfer_state = 161
+							transfer_state = 162
+						}
+					}
+					if = {
+						limit = {
+							2 = { is_controlled_by = SOV } # Milan
+						}
+						SOV = {
+							transfer_state = 157
+							transfer_state = 2
+							transfer_state = 117
+							transfer_state = 156
+						}
+					}
+					else = {
+						ITA = { 
+							transfer_state = 157
+							transfer_state = 2
+							transfer_state = 117
+							transfer_state = 156
+						}
+					}
+					if = {
+						limit = {
+							115 = { is_controlled_by = SOV } # Palermo
+						}
+						SOV = {
+							transfer_state = 115
+						}
+					}
+					else = {
+						ITA = { 
+							transfer_state = 115
+						}
+					}
+					
+					ENG = {
+						set_autonomy = {
+							target = ITA
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = ITA
+					}
+				}
+				
+				#############################################################################
+				# Poland and Baltics
+				if = {
+					limit = { # Soviet no influence in Poland, reverts to pre Molotov borders
+						NOT = {
+							or = {
+								763 = { is_controlled_by = SOV } # Koningsberg
+								92 = { is_controlled_by = SOV } # Lublin
+								111 = { is_controlled_by = SOV } # Helsinki
+							}
+						}
+					}
+					POL = {
+						# Pre Molotov borders
+						transfer_state = 96 
+						transfer_state = 784
+						transfer_state = 95
+						transfer_state = 94
+						transfer_state = 93
+						transfer_state = 91
+						transfer_state = 89
+						
+						# Post Molotov borders
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 10
+						transfer_state = 98
+						transfer_state = 87
+						transfer_state = 86
+						transfer_state = 807
+						transfer_state = 85
+						transfer_state = 762
+						transfer_state = 97
+						transfer_state = 92
+						
+						# German
+						transfer_state = 63
+						transfer_state = 68
+						transfer_state = 66
+						transfer_state = 67
+						
+						# Koningsberg
+						transfer_state = 5
+						transfer_state = 763
+					}
+					
+					#Baltics liberated
+					FIN = { # Lithuania
+						transfer_state = 11
+						transfer_state = 815
+						transfer_state = 809
+						transfer_state = 189
+						transfer_state = 37
+						transfer_state = 190
+						transfer_state = 188
+						transfer_state = 814
+					}
+					FIN = { # Latvia
+						transfer_state = 810
+						transfer_state = 808
+						transfer_state = 12
+					}
+					FIN = { # Estonia
+						transfer_state = 191
+						transfer_state = 13
+						transfer_state = 811
+						transfer_state = 813
+						transfer_state = 812
+					}
+					FIN = {
+						# Winter war losses
+						transfer_state = 146
+						transfer_state = 147
+						transfer_state = 722
+						# Finland proper
+						transfer_state = 111
+						transfer_state = 150
+						transfer_state = 149
+						transfer_state = 148
+					}
+					ENG = {
+						add_to_faction = FIN
+					}
+					
+				}
+				else_if = { # Soviets made partial gains, but didnt take Poland, keep Molotov gains
+					limit = { 
+						NOT = {
+							or = {
+								10 = { is_controlled_by = SOV } # Warsaw
+								88 = { is_controlled_by = SOV } # Krakow
+							}
+						}
+					}
+					POL = {
+						# Post Molotov borders
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 10
+						transfer_state = 98
+						transfer_state = 87
+						transfer_state = 86
+						transfer_state = 807
+						transfer_state = 85
+						transfer_state = 762
+						transfer_state = 5
+						transfer_state = 763
+						transfer_state = 97
+						transfer_state = 92
+						
+						# German
+						transfer_state = 63
+						transfer_state = 68
+						transfer_state = 66
+						transfer_state = 67
+					}	
+					
+					#Baltics 
+					SOV = { # Lithuania
+						transfer_state = 188 # Memel
+						transfer_state = 722 # Petsamo
+					}
+					if = {
+						limit = {
+							111 = { is_controlled_by = SOV } # Helsinki
+						}
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+						SOV = {
+							set_autonomy = {
+								target = FIN
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = FIN
+						}
+					}
+					else = { 
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+					}
+				}
+				
+				else_if = { # Soviets made gains, occupied Poland, but didnt reach Germany proper
+					limit = { 
+						NOT = {
+							or = {
+								63 = { is_controlled_by = SOV } # Hinterpommern
+								68 = { is_controlled_by = SOV } # Ostmark
+								66 = { is_controlled_by = SOV } # Niederschlesien
+								67 = { is_controlled_by = SOV } # Oberschlesien
+								305 = { is_controlled_by = SOV } # Berlin
+								GER = { is_subject_of = SOV }								
+							}
+						}
+					}
+					POL = {
+						# Post Molotov borders
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 10
+						transfer_state = 98
+						transfer_state = 87
+						transfer_state = 86
+						transfer_state = 807
+						transfer_state = 85
+						transfer_state = 762
+						transfer_state = 97
+						transfer_state = 92
+						transfer_state = 5
+					}
+					SOV = {
+						set_autonomy = {
+							target = POL
+							autonomy_state = autonomy_puppet
+							end_wars = yes
+							end_civil_wars = yes	
+						}
+						add_to_faction = POL
+					}
+					
+					SOV = { # Taking Koningsberg
+						#Koningsberg
+						transfer_state = 763
+					}	
+					
+					#Baltics 
+					SOV = { # Lithuania
+						transfer_state = 188 # Memel
+						transfer_state = 722 # Petsamo
+					}
+					if = { #Finland
+						limit = {
+							111 = { is_controlled_by = SOV } # Helsinki
+						}
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+						SOV = {
+							set_autonomy = {
+								target = FIN
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = FIN
+						}
+					}
+					else = { 
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+					}
+				}
+				else = { # Soviets entered Germany
+					POL = {
+						# Post Molotov borders
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 10
+						transfer_state = 98
+						transfer_state = 87
+						transfer_state = 86
+						transfer_state = 807
+						transfer_state = 85
+						transfer_state = 762
+						transfer_state = 97
+						transfer_state = 92
+						
+						# German
+						transfer_state = 63
+						transfer_state = 68
+						transfer_state = 66
+						transfer_state = 67
+						
+						# Konigsberg (Prussia)
+						transfer_state = 5
+					}
+					SOV = {
+						set_autonomy = {
+							target = POL
+							autonomy_state = autonomy_puppet
+							end_wars = yes
+							end_civil_wars = yes	
+						}
+						add_to_faction = POL
+					}	
+					
+					SOV = { # Taking Koningsberg
+						#Koningsberg
+						transfer_state = 763
+					}	
+					
+					#Baltics 
+					SOV = { # Lithuania
+						transfer_state = 188 # Memel
+						transfer_state = 722 # Petsamo
+					}
+					
+					if = { #Finalnd
+						limit = {
+							111 = { is_controlled_by = SOV } # Helsinki
+						}
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+						SOV = {
+							set_autonomy = {
+								target = FIN
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = FIN
+						}
+					}
+					else = { 
+						FIN = {# Finland proper
+							transfer_state = 111
+							transfer_state = 150
+							transfer_state = 149
+							transfer_state = 148
+						}
+					}
+				}	
+			
+				#############################################################################################
+				#Mitteleuropa
+
+				if = { # If soviets took Berlin, they take everything not occupied by allies 
+					limit = { 
+						or = {
+							305 = { is_controlled_by = SOV } # Berlin
+							GER = { is_subject_of = SOV }
+						}
+					}
+					if = { # Slovakia
+						limit = {
+							OR = {
+								70 = { is_controlled_by = SOV } # Bratislava
+								70 = { is_controlled_by = ROM } # Bratislava
+								70 = { is_controlled_by = GER } # Bratislava
+								70 = { is_controlled_by = ITA } # Bratislava
+								70 = { is_controlled_by = HUN } # Bratislava
+								70 = { is_controlled_by = BUL } # Bratislava
+							}
+						}
+						SOV = { # Slovakia
+							# Slovakia
+							transfer_state = 73
+							transfer_state = 71
+							transfer_state = 664
+							transfer_state = 70
+						}
+					}
+					else = {
+						ENG = { # Slovakia
+							# Slovakia
+							transfer_state = 73
+							transfer_state = 71
+							transfer_state = 664
+							transfer_state = 70
+						}
+					}
+					if = { # Czech
+						limit = {
+							OR = {
+								9 = { is_controlled_by = SOV } # Prague
+								9 = { is_controlled_by = ROM } # Prague
+								9 = { is_controlled_by = GER } # Prague
+								9 = { is_controlled_by = ITA } # Prague
+								9 = { is_controlled_by = HUN } # Prague
+								9 = { is_controlled_by = BUL } # Prague
+							}
+						}
+						SOV = { # Czech
+							# Czech
+							transfer_state = 72
+							transfer_state = 75
+							transfer_state = 74
+							transfer_state = 9
+							transfer_state = 69
+						}
+					}
+					else = {
+						ENG = { # Czech
+							# Czech
+							transfer_state = 72
+							transfer_state = 75
+							transfer_state = 74
+							transfer_state = 9
+							transfer_state = 69
+						}
+					}
+					
+					if = { # Austria
+						limit = {
+							OR = {
+								4 = { is_controlled_by = SOV } # Vienna
+								4 = { is_controlled_by = ROM } # Vienna
+								4 = { is_controlled_by = GER } # Vienna
+								4 = { is_controlled_by = ITA } # Vienna
+								4 = { is_controlled_by = HUN } # Vienna
+								4 = { is_controlled_by = BUL } # Vienna
+							}
+						}
+						SOV = { # Austria
+							# Austria
+							transfer_state = 4
+							transfer_state = 152
+							transfer_state = 153
+						}
+					}
+					else = {
+						ENG = { # Austria
+							# Austria
+							transfer_state = 4
+							transfer_state = 152
+							transfer_state = 153
+						}
+					}
+				}
+
+				else = { # If soviets did not take Berlin, they take everything they occupied
+					if = { # Slovakia
+						limit = {
+							OR = {
+								70 = { is_controlled_by = SOV } # Bratislava
+							}
+						}
+						SOV = { # Slovakia
+							# Slovakia
+							transfer_state = 73
+							transfer_state = 71
+							transfer_state = 664
+							transfer_state = 70
+						}
+					}
+					else = {
+						ENG = { # Slovakia
+							# Slovakia
+							transfer_state = 71
+							transfer_state = 664
+							transfer_state = 70
+						}
+						if = { # Carpathian Ruthenia
+							limit = {
+								73 = { is_controlled_by = SOV }
+							}
+							SOV = {
+								transfer_state = 73
+							}
+						}
+						else = {
+							ENG = { 
+								transfer_state = 73 
+							}
+						}
+					}
+					if = { # Czech
+						limit = {
+							OR = {
+								9 = { is_controlled_by = SOV } # Prague
+							}
+						}
+						SOV = { # Czech
+							# Czech
+							transfer_state = 72
+							transfer_state = 75
+							transfer_state = 74
+							transfer_state = 9
+							transfer_state = 69
+						}
+					}
+					else = {
+						ENG = { # Czech
+							# Czech
+							transfer_state = 72
+							transfer_state = 75
+							transfer_state = 74
+							transfer_state = 9
+							transfer_state = 69
+						}
+					}
+					
+					if = { # Austria
+						limit = {
+							OR = {
+								4 = { is_controlled_by = SOV } # Vienna
+							}
+						}
+						SOV = { # Austria
+							# Austria
+							transfer_state = 4
+							transfer_state = 152
+							transfer_state = 153
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								4 = { is_controlled_by = ROM } # Vienna
+								4 = { is_controlled_by = GER } # Vienna
+								4 = { is_controlled_by = ITA } # Vienna
+								4 = { is_controlled_by = HUN } # Vienna
+								4 = { is_controlled_by = BUL } # Vienna
+							}
+						}
+						SWI = { # Austria neutral
+							# Austria
+							transfer_state = 4
+							transfer_state = 152
+							transfer_state = 153
+						}
+					}
+					else = { # Austria to allies
+						ENG = { # Austria
+							# Austria
+							transfer_state = 4
+							transfer_state = 152
+							transfer_state = 153
+						}
+					}
+				}				
+					
+				
+
+				########################################################################
+				# Balkans
+				if = { # Soviets didnt reach out of their borders, back to pre Molotov
+					limit = { 
+						NOT = {
+							or = {
+								46 = { is_controlled_by = SOV } # Bucharest
+								79 = { is_controlled_by = SOV } # Moldova
+								or = {
+									305 = { is_controlled_by = SOV } # Berlin
+									GER = { is_subject_of = SOV }
+								}
+							}
+						}
+					}
+			
+					#Balkans
+					ROM = { # Moldova
+						transfer_state = 78
+						transfer_state = 766
+						transfer_state = 80
+					}
+					ROM = { # Transylvania
+						transfer_state = 76
+					}
+					ROM = { #Romania proper
+						transfer_state = 79
+						transfer_state = 46
+						transfer_state = 84
+						transfer_state = 83
+						transfer_state = 82
+						transfer_state = 81
+					}
+					ENG = {
+						set_autonomy = {
+							target = ROM
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes	
+						}
+						add_to_faction = ROM
+					}
+					
+					BUL = { #Bulgaria proper
+						transfer_state = 211
+						transfer_state = 212
+						transfer_state = 801
+						transfer_state = 48
+						transfer_state = 77
+					}
+					ENG = {
+						set_autonomy = {
+							target = BUL
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes	
+						}
+						add_to_faction = BUL
+					}
+									
+					HUN = {
+						set_cosmetic_tag = HUN
+					}
+					HUN = { #Hungary proper
+						transfer_state = 154
+						transfer_state = 43
+						transfer_state = 493
+						transfer_state = 155
+					}
+					ENG = {
+						set_autonomy = {
+							target = HUN
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes	
+						}
+						add_to_faction = HUN
+					}
+						
+					YUG = {
+						set_cosmetic_tag = YUG
+						set_capital = { state = 107 }
+
+						add_state_core = 102
+						add_state_core = 506
+						add_state_core = 105			
+						add_state_core = 804			
+						add_state_core = 108
+						add_state_core = 106
+						add_state_core = 107	
+						add_state_core = 764	
+						add_state_core = 45
+						add_state_core = 306
+						add_state_core = 803
+						add_state_core = 802				
+						add_state_core = 804	
+					
+						transfer_state = 102
+						transfer_state = 506
+						transfer_state = 109
+						transfer_state = 103
+						transfer_state = 104
+						transfer_state = 804
+						transfer_state = 163
+						transfer_state = 736
+						transfer_state = 105
+						transfer_state = 45
+						transfer_state = 764
+						transfer_state = 107
+						transfer_state = 108
+						transfer_state = 803
+						transfer_state = 802
+						transfer_state = 106
+						transfer_state = 306
+					}
+					ENG = {
+						set_autonomy = {
+							target = YUG
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = YUG
+					}
+					
+					IEA = { # Albania
+						transfer_state = 44
+						transfer_state = 805
+					}
+					
+					ENG = {
+						set_autonomy = {
+							target = IEA
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = IEA
+					}
+					
+					GRE = {
+						transfer_state = 184
+						transfer_state = 731
+						transfer_state = 185
+						transfer_state = 47
+						transfer_state = 186
+						transfer_state = 187
+						transfer_state = 182
+						transfer_state = 840
+						transfer_state = 164
+					}
+				}
+				
+				# if Soviets took Berlin they puppet Axis minors not occupied by allies ###########################################################
+				else_if = { 
+					limit = { 
+						or = {
+							305 = { is_controlled_by = SOV } # Berlin
+							GER = { is_subject_of = SOV }
+						}
+					}
+					if = { # Romania
+						limit = {
+							OR = {
+								46 = { is_controlled_by = SOV } # Bucharest
+								46 = { is_controlled_by = ROM } # Bucharest
+								46 = { is_controlled_by = GER } # Bucharest
+								46 = { is_controlled_by = ITA } # Bucharest
+								46 = { is_controlled_by = HUN } # Bucharest
+								46 = { is_controlled_by = BUL } # Bucharest
+							}
+						}
+						SOV = { # Moldova
+							transfer_state = 78
+							transfer_state = 766
+							transfer_state = 80
+						}
+						ROM = { # Transylvania
+							transfer_state = 76
+						}
+						ROM = { #Romania proper
+							transfer_state = 79
+							transfer_state = 46
+							transfer_state = 84
+							transfer_state = 83
+							transfer_state = 82
+							transfer_state = 81
+						}
+						SOV = {
+							set_autonomy = {
+								target = ROM
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = ROM
+						}
+					}
+					else = { #Romania belongs to the Allies
+						ROM = { # Transylvania
+							transfer_state = 76
+						}
+						ROM = { #Romania proper
+							transfer_state = 79
+							transfer_state = 46
+							transfer_state = 84
+							transfer_state = 83
+							transfer_state = 82
+							transfer_state = 81
+						}
+						ENG = {
+							set_autonomy = {
+								target = ROM
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = ROM
+						}
+					}
+					if = { # Bulgaria
+						limit = {
+							OR = {
+								48 = { is_controlled_by = SOV } # Sofia
+								48 = { is_controlled_by = ROM } # Sofia
+								48 = { is_controlled_by = GER } # Sofia
+								48 = { is_controlled_by = ITA } # Sofia
+								48 = { is_controlled_by = HUN } # Sofia
+								48 = { is_controlled_by = BUL } # Sofia
+							}
+						}
+						BUL = { #Bulgaria proper
+							transfer_state = 211
+							transfer_state = 212
+							transfer_state = 801
+							transfer_state = 48
+							transfer_state = 77							
+						}
+						SOV = {
+							set_autonomy = {
+								target = BUL
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = BUL
+						}
+					}
+					else = { #Bulgaria belongs to the Allies
+						BUL = { #Bulgaria proper
+							transfer_state = 211
+							transfer_state = 212
+							transfer_state = 801
+							transfer_state = 48
+							transfer_state = 77							
+						}
+						ENG = {
+							set_autonomy = {
+								target = BUL
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = BUL
+						}
+					}
+					if = { # Hungary
+						limit = {
+							OR = {
+								493 = { is_controlled_by = SOV } # Budapest
+								493 = { is_controlled_by = ROM } # Budapest
+								493 = { is_controlled_by = GER } # Budapest
+								493 = { is_controlled_by = ITA } # Budapest
+								493 = { is_controlled_by = HUN } # Budapest
+								493 = { is_controlled_by = BUL } # Budapest
+							}
+						}
+						HUN = {
+							set_cosmetic_tag = HUN
+						}
+						HUN = { #Hungary proper
+							transfer_state = 154
+							transfer_state = 43
+							transfer_state = 493
+							transfer_state = 155
+						}
+						SOV = {
+							set_autonomy = {
+								target = HUN
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = HUN
+						}
+					}
+					else = { #Hungary belongs to the Allies
+						HUN = {
+							set_cosmetic_tag = HUN
+						}
+						HUN = { #Hungary proper
+							transfer_state = 154
+							transfer_state = 43
+							transfer_state = 493
+							transfer_state = 155
+						}
+						ENG = {
+							set_autonomy = {
+								target = HUN
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = HUN
+						}
+					}
+					
+					if = { # Yugoslavia
+						limit = {
+							OR = {
+								107 = { is_controlled_by = SOV } # Belgrade
+								107 = { is_controlled_by = ROM } # Belgrade
+								107 = { is_controlled_by = GER } # Belgrade
+								107 = { is_controlled_by = ITA } # Belgrade
+								107 = { is_controlled_by = HUN } # Belgrade
+								107 = { is_controlled_by = BUL } # Belgrade
+							}
+						}
+						YUG = {
+							set_cosmetic_tag = YUG
+							set_capital = { state = 107 }
+
+							add_state_core = 102
+							add_state_core = 506
+							add_state_core = 105			
+							add_state_core = 804			
+							add_state_core = 108
+							add_state_core = 106
+							add_state_core = 107	
+							add_state_core = 764	
+							add_state_core = 45
+							add_state_core = 306
+							add_state_core = 803
+							add_state_core = 802				
+							add_state_core = 804	
+						
+							transfer_state = 102
+							transfer_state = 506
+							transfer_state = 109
+							transfer_state = 103
+							transfer_state = 104
+							transfer_state = 804
+							transfer_state = 163
+							transfer_state = 736
+							transfer_state = 105
+							transfer_state = 45
+							transfer_state = 764
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 803
+							transfer_state = 802
+							transfer_state = 106
+							transfer_state = 306
+						}
+						SOV = {
+							set_autonomy = {
+								target = YUG
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = YUG
+						}
+					}
+					
+					if = { # Albania
+						limit = {
+							OR = {
+								44 = { is_controlled_by = SOV } # Tirana
+								44 = { is_controlled_by = ROM } # Tirana
+								44 = { is_controlled_by = GER } # Tirana
+								44 = { is_controlled_by = ITA } # Tirana
+								44 = { is_controlled_by = HUN } # Tirana
+								44 = { is_controlled_by = BUL } # Tirana
+							}
+						}					
+						IEA = { # Albania
+							transfer_state = 44
+							transfer_state = 805
+						}
+						SOV = {
+							set_autonomy = {
+								target = IEA
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = IEA
+						}
+					}
+					else = {
+						IEA = { # Albania
+							transfer_state = 44
+							transfer_state = 805
+						}
+						ENG = {
+							set_autonomy = {
+								target = IEA
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = IEA
+						}
+					}
+					
+					else = { #Yugoslavia belongs to the Allies
+						YUG = {
+							set_cosmetic_tag = YUG
+							set_capital = { state = 107 }
+
+							add_state_core = 102
+							add_state_core = 506
+							add_state_core = 105			
+							add_state_core = 804			
+							add_state_core = 108
+							add_state_core = 106
+							add_state_core = 107	
+							add_state_core = 764	
+							add_state_core = 45
+							add_state_core = 306
+							add_state_core = 803
+							add_state_core = 802				
+							add_state_core = 804	
+						
+							transfer_state = 102
+							transfer_state = 506
+							transfer_state = 109
+							transfer_state = 103
+							transfer_state = 104
+							transfer_state = 804
+							transfer_state = 163
+							transfer_state = 736
+							transfer_state = 105
+							transfer_state = 45
+							transfer_state = 764
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 803
+							transfer_state = 802
+							transfer_state = 106
+							transfer_state = 306							
+						}
+						ENG = {
+							set_autonomy = {
+								target = YUG
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = YUG
+						}
+						IEA = { # Albania
+							transfer_state = 44
+							transfer_state = 805
+						}
+						ENG = {
+							set_autonomy = {
+								target = IEA
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = IEA
+						}
+					}
+					GRE = { # Greece stays free
+						transfer_state = 184
+						transfer_state = 731
+						transfer_state = 185
+						transfer_state = 47
+						transfer_state = 186
+						transfer_state = 187
+						transfer_state = 182
+						transfer_state = 840
+						transfer_state = 164
+					}
+					ENG = {
+						add_to_faction = GRE 
+					}
+
+				}
+				else = { # Soviets didnt take Berlin, they keep what they took  ###########################################################
+					if = { # Romania
+						limit = {
+							OR = {
+								46 = { is_controlled_by = SOV } # Bucharest
+							}
+						}
+						SOV = { # Moldova
+							transfer_state = 78
+							transfer_state = 766
+							transfer_state = 80
+						}
+						ROM = { # Transylvania
+							transfer_state = 76
+						}
+						ROM = { #Romania proper
+							transfer_state = 79
+							transfer_state = 46
+							transfer_state = 84
+							transfer_state = 83
+							transfer_state = 82
+							transfer_state = 81
+						}
+						SOV = {
+							set_autonomy = {
+								target = ROM
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = ROM
+						}
+					}
+					else = { #Romania belongs to the Allies
+						ROM = { # Transylvania
+							transfer_state = 76
+						}
+						ROM = { #Romania proper
+							transfer_state = 79
+							transfer_state = 46
+							transfer_state = 84
+							transfer_state = 83
+							transfer_state = 82
+							transfer_state = 81
+						}
+						ENG = {
+							set_autonomy = {
+								target = ROM
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = ROM
+						}
+					}
+					if = { # Bulgaria
+						limit = {
+							OR = {
+								48 = { is_controlled_by = SOV } # Sofia
+							}
+						}
+						BUL = { #Bulgaria proper
+							transfer_state = 211
+							transfer_state = 212
+							transfer_state = 801
+							transfer_state = 48
+							transfer_state = 77							
+						}
+						SOV = {
+							set_autonomy = {
+								target = BUL
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = BUL
+						}
+					}
+					else = { #Bulgaria belongs to the Allies
+						BUL = { #Bulgaria proper
+							transfer_state = 211
+							transfer_state = 212
+							transfer_state = 801
+							transfer_state = 48
+							transfer_state = 77							
+						}
+						ENG = {
+							set_autonomy = {
+								target = BUL
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = BUL
+						}
+					}
+					if = { # Hungary
+						limit = {
+							OR = {
+								493 = { is_controlled_by = SOV } # Budapest
+							}
+						}
+						HUN = {
+							set_cosmetic_tag = HUN
+						}
+						HUN = { #Hungary proper
+							transfer_state = 154
+							transfer_state = 43
+							transfer_state = 493
+							transfer_state = 155
+						}
+						SOV = {
+							set_autonomy = {
+								target = HUN
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = HUN
+						}
+					}
+					else = { #Hungary belongs to the Allies
+						HUN = {
+							set_cosmetic_tag = HUN
+						}
+						HUN = { #Hungary proper
+							transfer_state = 154
+							transfer_state = 43
+							transfer_state = 493
+							transfer_state = 155
+						}
+						ENG = {
+							set_autonomy = {
+								target = HUN
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = HUN
+						}
+					}
+					
+					if = { # Yugoslavia
+						limit = {
+							OR = {
+								107 = { is_controlled_by = SOV } # Belgrade
+							}
+						}
+						YUG = {
+							set_cosmetic_tag = YUG
+							set_capital = { state = 107 }
+
+							add_state_core = 102
+							add_state_core = 506
+							add_state_core = 105			
+							add_state_core = 804			
+							add_state_core = 108
+							add_state_core = 106
+							add_state_core = 107	
+							add_state_core = 764	
+							add_state_core = 45
+							add_state_core = 306
+							add_state_core = 803
+							add_state_core = 802				
+							add_state_core = 804	
+						
+							transfer_state = 102
+							transfer_state = 506
+							transfer_state = 109
+							transfer_state = 103
+							transfer_state = 104
+							transfer_state = 804
+							transfer_state = 163
+							transfer_state = 736
+							transfer_state = 105
+							transfer_state = 45
+							transfer_state = 764
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 803
+							transfer_state = 802
+							transfer_state = 106
+							transfer_state = 306
+						}
+						SOV = {
+							set_autonomy = {
+								target = YUG
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes
+							}
+							add_to_faction = YUG
+						}
+					}
+					else = { #Yugoslavia belongs to the Allies
+						YUG = {
+							set_cosmetic_tag = YUG
+							set_capital = { state = 107 }
+
+							add_state_core = 102
+							add_state_core = 506
+							add_state_core = 105			
+							add_state_core = 804			
+							add_state_core = 108
+							add_state_core = 106
+							add_state_core = 107	
+							add_state_core = 764	
+							add_state_core = 45
+							add_state_core = 306
+							add_state_core = 803
+							add_state_core = 802				
+							add_state_core = 804	
+						
+							transfer_state = 102
+							transfer_state = 506
+							transfer_state = 109
+							transfer_state = 103
+							transfer_state = 104
+							transfer_state = 804
+							transfer_state = 163
+							transfer_state = 736
+							transfer_state = 105
+							transfer_state = 45
+							transfer_state = 764
+							transfer_state = 107
+							transfer_state = 108
+							transfer_state = 803
+							transfer_state = 802
+							transfer_state = 106
+							transfer_state = 306							
+						}
+						ENG = {
+							set_autonomy = {
+								target = YUG
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = YUG
+						}
+					}
+					
+					if = { # Albania
+						limit = {
+							OR = {
+								44 = { is_controlled_by = SOV } # Tirana
+							}
+						}					
+						IEA = { # Albania
+							transfer_state = 44
+							transfer_state = 805
+						}
+						SOV = {
+							set_autonomy = {
+								target = IEA
+								autonomy_state = autonomy_puppet
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = IEA
+						}
+					}
+					else = {
+						IEA = { # Albania
+							transfer_state = 44
+							transfer_state = 805
+						}
+						ENG = {
+							set_autonomy = {
+								target = IEA
+								autonomy_state = autonomy_supervised_state
+								end_wars = yes
+								end_civil_wars = yes	
+							}
+							add_to_faction = IEA
+						}
+					}
+					
+					
+					GRE = { # Greece stays free
+						transfer_state = 184
+						transfer_state = 731
+						transfer_state = 185
+						transfer_state = 47
+						transfer_state = 186
+						transfer_state = 187
+						transfer_state = 182
+						transfer_state = 840
+						transfer_state = 164
+					}
+					ENG = {
+						add_to_faction = GRE
+					}
+				}	
+				
+
+				#############################################################################################
+				#Africa
+				#Soviets have no business in Africa
+				ENG = { # Libya
+					transfer_state = 451
+					transfer_state = 663
+					transfer_state = 450
+					transfer_state = 662
+					transfer_state = 449
+					transfer_state = 767
+				}
+				FRA = { # Libya
+					transfer_state = 661
+					transfer_state = 448
+					transfer_state = 273
+				}
+				
+				FRA = { # Algiers
+					transfer_state = 460
+					transfer_state = 513
+					transfer_state = 459
+					transfer_state = 461
+					transfer_state = 462
+					transfer_state = 699
+					transfer_state = 514
+				}
+				
+				FRA = { # Tunisia
+					transfer_state = 665
+					transfer_state = 458
+					transfer_state = 290
+				}
+				
+				ENG = { # Ethiopia
+					transfer_state = 271
+					transfer_state = 838
+					transfer_state = 837
+				}
+				
+				FRA = { # Eritrea
+					transfer_state = 550
+				}
+				ENG = { # Somaliland
+					transfer_state = 559
+				}
+				
+				SAF = { #South Africa proper
+					transfer_state = 719
+					transfer_state = 275
+					transfer_state = 681
+					transfer_state = 541
+				}
+				
+				BEL = { # Belgian Kongo
+					transfer_state = 295
+					transfer_state = 718
+					transfer_state = 538
+					transfer_state = 769
+					transfer_state = 768
+				}
+
+				#############################################################################################
+				#Spain
+				#Soviets take Spain only if they completely dominate
+				
+				SPR = { #Spain proper
+					transfer_state = 792
+					transfer_state = 173
+					transfer_state = 169
+					transfer_state = 789
+					transfer_state = 168
+					transfer_state = 175
+					transfer_state = 170
+					transfer_state = 788
+					transfer_state = 41
+					transfer_state = 793
+					transfer_state = 167
+					transfer_state = 165
+					transfer_state = 794
+					transfer_state = 166
+					transfer_state = 172
+					transfer_state = 176
+					transfer_state = 791
+					transfer_state = 174
+					transfer_state = 790
+					transfer_state = 171
+				}
+				if = { # If soviets took Berlin, Frankfurt, Munich they take Spain
+					limit = { 
+						GER = { is_subject_of = SOV }
+					}
+					SOV = {
+						set_autonomy = {
+							target = SPR
+							autonomy_state = autonomy_puppet
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = SPR
+					}
+				}				
+				else = {
+					#Spain
+					ENG = {
+						set_autonomy = {
+							target = SPR
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = SPR
+
+					}
+				}
+				##################################################################################
+				#Western allies liberated
+				FRA = { #Vichy - France proper
+					transfer_state = 735
+					transfer_state = 851
+					transfer_state = 21
+					transfer_state = 32
+					transfer_state = 20
+					transfer_state = 22
+					transfer_state = 31
+					transfer_state = 806
+					transfer_state = 19
+					transfer_state = 23
+					transfer_state = 25
+					transfer_state = 33
+					transfer_state = 26
+					transfer_state = 27
+					transfer_state = 17
+					transfer_state = 28
+					transfer_state = 18
+					transfer_state = 24
+					transfer_state = 30
+					transfer_state = 14
+					transfer_state = 15
+					transfer_state = 16
+					transfer_state = 785
+					transfer_state = 29
+					transfer_state = 1
+				}
+				FRA = { # Luxemburg
+					transfer_state = 8
+				}
+				ENG = {
+						add_to_faction = FRA
+					}				
+				BEL = { # Belgium proper
+					transfer_state = 6
+					transfer_state = 34
+				}
+				ENG = { add_to_faction = BEL }
+
+				HOL = { #Netherlands proper
+					transfer_state = 35
+					transfer_state = 36
+					transfer_state = 7
+				}
+
+				ENG = { add_to_faction = HOL }
+
+				NOR = { # Norway proper
+					transfer_state = 492
+					transfer_state = 142
+					transfer_state = 110
+					transfer_state = 143
+					transfer_state = 144
+					transfer_state = 836
+				}
+				NOR = { # Denmark
+					transfer_state = 99
+					transfer_state = 37
+				}
+				NOR = { # Iceland
+					transfer_state = 100
+				}
+				ENG = { add_to_faction = NOR }
+
+				##################################################################################
+				#GERMANY
+				#
+				
+				if = { # If soviets took Berlin, Frankfurt, Munich they puppet Germany
+					limit = { 
+						305 = { is_controlled_by = SOV } # Berlin
+						55 = { is_controlled_by = SOV } # Frankfurt
+						52 = { is_controlled_by = SOV } # Munich
+					}
+					country_event = { id = peace_in_europe.1 hours = 1 random_hours = 0 } 
+
+					GER = {
+						transfer_state = 65
+						transfer_state = 305
+						transfer_state = 62
+						transfer_state = 60
+						transfer_state = 64
+						transfer_state = 61
+						transfer_state = 58
+						transfer_state = 59
+						transfer_state = 56
+						transfer_state = 57
+						transfer_state = 55
+						transfer_state = 51
+						transfer_state = 42
+						transfer_state = 54
+						transfer_state = 53
+						transfer_state = 52
+						transfer_state = 50
+					}
+					SOV = {
+						set_autonomy = {
+							target = GER
+							autonomy_state = autonomy_puppet
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = GER
+					}
+					
+				}
+				else = { # anything else means Germany is divided, Soviets annex, Allies puppet
+					if = {
+						limit = {
+							305 = { is_controlled_by = SOV } # Berlin
+						}
+						country_event = { id = peace_in_europe.1 hours = 1 random_hours = 0 } 
+
+						SOV = {
+							transfer_state = 65
+							transfer_state = 305
+							transfer_state = 62
+							transfer_state = 60
+							transfer_state = 64
+							transfer_state = 61
+						}
+					}
+					else = {
+						country_event = { id = peace_in_europe.2 hours = 1 random_hours = 0 } 
+						GER = { 
+							transfer_state = 65
+							transfer_state = 305
+							transfer_state = 62
+							transfer_state = 60
+							transfer_state = 64
+							transfer_state = 61
+						}
+					}
+					if = {
+						limit = {
+							55 = { is_controlled_by = SOV } # Frankfurt
+						}
+						SOV = {
+							transfer_state = 58
+							transfer_state = 59
+							transfer_state = 56
+							transfer_state = 57
+							transfer_state = 55
+							transfer_state = 51
+							transfer_state = 42
+						}
+					}
+					else = {
+						GER = { 
+							transfer_state = 58
+							transfer_state = 59
+							transfer_state = 56
+							transfer_state = 57
+							transfer_state = 55
+							transfer_state = 51
+							transfer_state = 42
+						}
+					}
+					if = {
+						limit = {
+							52 = { is_controlled_by = SOV } # Munich
+						}
+						SOV = {
+							transfer_state = 54
+							transfer_state = 53
+							transfer_state = 52
+							transfer_state = 50
+						}
+					}
+					else = {
+						GER = { 
+							transfer_state = 54
+							transfer_state = 53
+							transfer_state = 52
+							transfer_state = 50
+						}
+					}
+					
+					ENG = {
+						set_autonomy = {
+							target = GER
+							autonomy_state = autonomy_supervised_state
+							end_wars = yes
+							end_civil_wars = yes
+						}
+						add_to_faction = GER
+					}
+				}
+
+				
+				##########################################################
+				# Axis members that control a state but down own it, need to return it to owner, because some Axis members maybe did not capitulate
+				###
+				every_country = {
+					limit = { 
+						NOT = { has_war_with = JAP } 
+						NOT = { is_in_faction_with = JAP } 
+					}
+					#white_peace	= every_country
+					every_owned_state = {
+						transfer_state_to = PREV
+					}
+				}
+				############################################################# removing opinion modifiers so axis countries can trade freely
+				
+			GER = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 }			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 }			
+			}		
+			ITA = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 }			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 }			
+			}	
+			SPR = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 } 			
+			}	
+			ROM = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 } 			
+			}	
+			HUN = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 }			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 }			
+			}	
+			IEA = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 } 			
+			}	
+			YUG = { 
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 }  			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 }  			
+			}		
+			BUL = {
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 } 			
+			}	
+			FIN = {
+			remove_opinion_modifier = { target = USA modifier = embargo_others }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others }  
+			remove_opinion_modifier = { target = GRE modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = GRE modifier = embargo_others3 } 			
+			}
+
+			USA = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			ENG = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			FRA = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			AST = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			NZL = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			SAF = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			RAJ = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			NEP = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			SAF = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}
+			CAN = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			NOR = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}
+			BEL = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			GRE = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			HOL = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			BRA = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			MEX = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			CUB = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			PHI = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			SOV = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 } 
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 } 
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			MON = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			POL = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			CPL = { 
+			remove_opinion_modifier = { target = GER modifier = embargo_others }  
+			remove_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = ITA modifier = embargo_others }  
+			remove_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = HUN modifier = embargo_others }  
+			remove_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = ROM modifier = embargo_others }  
+			remove_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			remove_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			remove_opinion_modifier = { target = BUL modifier = embargo_others }  
+			remove_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others }  
+			remove_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			remove_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			remove_opinion_modifier = { target = FIN modifier = embargo_others }  
+			remove_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			remove_opinion_modifier = { target = IEA modifier = embargo_others }  
+			remove_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others }  
+			remove_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			remove_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			remove_opinion_modifier = { target = MAN modifier = embargo_others }  
+			remove_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			remove_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			remove_opinion_modifier = { target = SIA modifier = embargo_others }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			remove_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others }  
+			remove_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			remove_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}			
+			}
+		}
+	}
+}

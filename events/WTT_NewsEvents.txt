@@ -1,0 +1,897 @@
+﻿add_namespace = wtt_news
+
+
+#ID wtt_news.30+: China
+# German Civil War
+news_event = {
+	id = wtt_news.1
+	title = wtt_news.1.t
+	desc = wtt_news.1.desc
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.1.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.1.b
+		trigger = { 
+			NOT = { original_tag = GER }
+			has_government = fascism
+		}
+	}
+	option = {
+		name = wtt_news.1.c
+		trigger = { 
+			NOT = { original_tag = GER }
+			NOT = { has_government = fascism }
+		}
+	}
+}
+
+# Netherlands refuses to let Kaiser go, danger of war
+news_event = {
+	id = wtt_news.2
+	title = wtt_news.2.t
+	desc = wtt_news.2.desc
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.2.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.2.b
+		trigger = { 
+			NOT = { original_tag = GER }
+			NOT = { original_tag = HOL }
+		}
+	}
+	option = {
+		name = wtt_news.2.c
+		trigger = { 
+			original_tag = HOL
+		}
+	}
+}
+
+# Soviet threat after interfering with sphere of influence
+news_event = {
+	id = wtt_news.11
+	title = wtt_news.11.t
+	desc = wtt_news.11.desc
+	picture = GFX_news_event_soviet_tanks
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.11.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.11.b
+		trigger = { 
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = wtt_news.11.c
+		trigger = { 
+			is_in_faction_with = GER
+			NOT = { original_tag = GER }
+		}
+	}
+	option = {
+		name = wtt_news.11.d
+		trigger = { 
+			NOT = {
+				original_tag = GER
+				original_tag = SOV
+				original_tag = POL
+				original_tag = FIN
+				is_in_faction_with = GER
+			}
+		}
+	}
+	option = {
+		name = wtt_news.11.e
+		trigger = { 
+			NOT = {
+				is_in_faction_with = GER
+			}
+			OR = {
+				original_tag = POL
+				original_tag = FIN
+			}
+		}
+	}
+}
+
+# France and Britain go to war upon return of the Kaiser
+news_event = {
+	id = wtt_news.12
+	title = wtt_news.12.t
+	desc = wtt_news.12.desc
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.12.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.12.b
+		trigger = {
+			OR = {
+				original_tag = FRA
+				original_tag = ENG
+			}
+		}
+	}
+	option = {
+		name = wtt_news.12.c
+		trigger = { 
+			NOT = { 
+				original_tag = GER
+				original_tag = FRA
+				original_tag = ENG
+			}
+		}
+	}
+}
+
+# Germany democratically annexes Austria
+news_event = {
+	id = wtt_news.18
+	title = wtt_news.18.t
+	desc = wtt_news.18.desc
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.18.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.18.b
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+# Germany launches anti-Soviet Pact
+news_event = {
+	id = wtt_news.20
+	title = wtt_news.20.t
+	desc = wtt_news.20.desc
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.215.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = news.215.b
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = news.215.c
+		trigger = {
+			NOT = {
+				original_tag = GER
+				original_tag = SOV
+			}
+		}
+	}
+}
+
+# News event for Japan taking European colonies
+news_event = {
+	id = wtt_news.25
+	title = wtt_news.25.t
+	desc = wtt_news.25.desc
+	picture = GFX_news_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.25.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = wtt_news.25.b
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = ENG
+				AND = {
+					original_tag = FRA
+					has_government = democratic
+				}
+			}
+		}
+	}
+	option = {
+		name = wtt_news.25.c
+		trigger = {
+			NOT = {
+				original_tag = JAP
+				original_tag = HOL
+				original_tag = ENG
+				AND = {
+					original_tag = FRA
+					has_government = democratic
+				}
+			}
+		}
+	}
+}
+
+# News event for Phillipine Independence
+news_event = {
+	id = wtt_news.26
+	title = wtt_news.26.t
+	desc = wtt_news.26.desc
+	picture = GFX_news_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.25.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = wtt_news.26.b
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = wtt_news.26.c
+		trigger = {
+			original_tag = "PHI"
+		}
+	}
+	option = {
+		name = wtt_news.25.c
+		trigger = {
+			NOT = {
+				original_tag = JAP
+				original_tag = PHI
+				original_tag = USA
+			}
+		}
+	}
+}
+
+# China - Flying Tigers sent to China
+news_event = {
+	id = wtt_news.34
+	title = wtt_news.34.t
+	desc = wtt_news.34.desc
+	picture = GFX_news_event_china_flying_tigers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.34.a
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = wtt_news.34.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = wtt_news.34.c
+		trigger = {
+			has_war_with = CHI
+		}
+	}
+	option = {
+		name = wtt_news.34.d
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = USA
+				has_war_with = CHI
+			}
+		}
+	}
+}
+
+# China - China picks a fight with Japan
+news_event = {
+	id = wtt_news.35
+	title = wtt_news.35.t
+	desc = wtt_news.35.desc
+	picture = GFX_news_event_001
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.35.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = wtt_news.35.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = wtt_news.35.c
+		trigger = {
+			is_literally_china = yes
+			NOT = {
+				original_tag = CHI
+			}
+		}
+	}
+	option = {
+		name = wtt_news.35.d
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = JAP
+				is_literally_china = yes
+			}
+		}
+	}
+}
+
+# Canals - Suez Canal Blown
+news_event = {
+	id = wtt_news.40
+	title = wtt_news.40.t
+	desc = {
+		text = wtt_news.40.desc_eng
+		trigger = {
+			FROM = {
+				has_country_flag = blew_up_suez
+				owns_state = 446
+				owns_state = 453
+			}
+		}
+	}
+	desc = {
+		text = wtt_news.40.desc_not_eng
+		trigger = {
+			FROM = {
+				OR = {
+					NOT = {	has_country_flag = blew_up_suez }
+					NOT = {
+						owns_state = 446
+						owns_state = 453
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.40.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_suez }
+			owns_state = 446
+			owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = wtt_news.40.b
+		trigger = {
+			has_country_flag = blew_up_suez
+			owns_state = 446
+			owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+		}
+	}
+	option = {
+		name = wtt_news.40.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				owns_state = 453
+			}
+			has_country_flag = blew_up_suez
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 446
+					owns_state = 453
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+}
+
+# Canals - Panama Canal Blown
+news_event = {
+	id = wtt_news.41
+	title = wtt_news.41.t
+	desc = {
+		text = wtt_news.41.desc_usa
+		trigger = {
+			FROM = {
+				has_country_flag = blew_up_panama
+				owns_state = 685
+			}
+		}
+	}
+	desc = {
+		text = wtt_news.41.desc_not_usa
+		trigger = {
+			FROM = {
+				OR = {
+					NOT = {	has_country_flag = blew_up_panama }
+					NOT = { owns_state = 685 }
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_news.41.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_panama }
+			owns_state = 685
+		}
+		if = {
+			limit = {
+				original_tag = USA
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = wtt_news.41.b
+		trigger = {
+			has_country_flag = blew_up_panama
+			owns_state = 685
+		}
+		if = {
+			limit = {
+				original_tag = USA
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_panama
+	}
+	option = {
+		name = wtt_news.41.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+		}
+	}
+	option = {
+		name = wtt_news.41.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+			}
+			has_country_flag = blew_up_panama
+		}
+		clr_country_flag = blew_up_panama
+	}
+	option = {
+		name = wtt_news.41.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+				NOT = { has_country_flag = blew_up_panama }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_panama
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_panama
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				NOT = { has_country_flag = blew_up_panama }
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 685
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+}
+
+# Canals - Suez Canal Rebuilt
+news_event = {
+	id = wtt_news.42
+	title = wtt_news.42.t
+	desc = wtt_news.42.desc
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.42.a
+		trigger = {
+			original_tag = ENG
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.b
+		trigger = {
+			NOT = { original_tag = ENG }
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.c
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.d
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.e
+		trigger = {
+			NOT = { has_country_flag = rebuilt_suez }
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+		}
+	}
+}
+
+# Canals - Panama Canal Rebuilt
+news_event = {
+	id = wtt_news.43
+	title = wtt_news.43.t
+	desc = wtt_news.43.desc
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.43.a
+		trigger = {
+			original_tag = USA
+			has_country_flag = rebuilt_panama
+		}
+		clr_country_flag = rebuilt_panama
+	}
+	option = {
+		name = wtt_news.43.b
+		trigger = {
+			NOT = { original_tag = USA }
+			has_country_flag = rebuilt_panama
+		}
+		clr_country_flag = rebuilt_panama
+	}
+	option = {
+		name = wtt_news.43.c
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = rebuilt_panama
+			}
+			NOT = { has_country_flag = rebuilt_panama }
+		}
+	}
+	option = {
+		name = wtt_news.43.d
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_country_flag = rebuilt_panama
+			}
+			NOT = { has_country_flag = rebuilt_panama }
+		}
+	}
+	option = {
+		name = wtt_news.43.e
+		trigger = {
+			NOT = { has_country_flag = rebuilt_panama }
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					has_country_flag = rebuilt_panama
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_with = ROOT
+					has_country_flag = rebuilt_panama
+				}
+			}
+		}
+	}
+}
+
+# Manchukuo - Emperor declares himself Emperor
+news_event = {
+	id = wtt_news.44
+	title = wtt_news.44.t
+	desc = wtt_news.44.desc
+	picture = GFX_news_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.44.a
+		trigger = {
+			is_literally_china = yes
+			OR = {
+				is_subject_of = MAN
+				is_in_faction_with = MAN
+			}
+		}
+	}
+	option = {
+		name = wtt_news.44.b
+		trigger = {
+			original_tag = MAN
+		}
+	}
+	option = {
+		name = wtt_news.44.c
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = wtt_news.44.d
+		trigger = {
+			NOT = {
+				original_tag = MAN
+				original_tag = JAP
+				is_literally_china = yes
+			}
+		}
+	}
+	option = {
+		name = wtt_news.44.e
+		trigger = {
+			is_literally_china = yes
+			NOT = { 
+				is_subject_of = MAN 
+				is_in_faction_with = MAN
+			}
+		}
+	}
+}
+
+###############
+news_event = {
+	id = wtt_news.1000
+	title = wtt_germany.1001.t
+	desc = wtt_news.1000.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1000.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+news_event = {
+	id = wtt_news.1001
+	title = wtt_germany.1001.t
+	desc = wtt_news.1001.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+	
+	option = {
+		name = wtt_news.1001.a
+		trigger = {
+			NOT = { original_tag = GER }
+		}
+	}
+}

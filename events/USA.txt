@@ -1,0 +1,127 @@
+﻿###########################
+# USA Events
+###########################
+
+add_namespace = usa
+
+# Destroyers for Bases
+country_event = {
+	id = usa.4
+	title = usa.4.t
+	desc = usa.4.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = usa.4.a
+		custom_effect_tooltip = usa.4.a.tt
+		hidden_effect = {
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
+				ENG = {	load_oob = "ENG_destroyers_for_bases" }
+				CAN = { load_oob = "CAN_destroyers_for_bases" }
+			}
+			else = {
+				ENG = {	load_oob = "ENG_destroyers_for_bases_mtg" }
+				CAN = { load_oob = "CAN_destroyers_for_bases_mtg" }
+			}
+			ENG = {
+				if = { limit = { 696 = { is_controlled_by = ENG } }
+					remove_state_core = 696
+				}
+				if = { limit = { 331 = { is_controlled_by = ENG } }
+					remove_state_core = 331
+				}
+				if = { limit = { 308 = { is_controlled_by = ENG } } 
+					remove_state_core = 308
+				}
+				if = { limit = { 693 = { is_controlled_by = ENG } } 
+					remove_state_core = 693
+				}
+				if = { limit = { 689 = { is_controlled_by = ENG } } 
+					remove_state_core = 689
+				}
+				if = { limit = { 691 = { is_controlled_by = ENG } } 
+					remove_state_core = 691
+				}
+			}
+		}
+		USA = {
+			if = { limit = { 696 = { is_controlled_by = ENG } }
+				transfer_state = 696
+			}
+			if = { limit = { 331 = { is_controlled_by = ENG } }
+				transfer_state = 331
+			}
+			if = { limit = { 308 = { is_controlled_by = ENG } } 
+				transfer_state = 308
+			}
+			if = { limit = { 693 = { is_controlled_by = ENG } } 
+				transfer_state = 693
+			}
+			if = { limit = { 689 = { is_controlled_by = ENG } } 
+				transfer_state = 689
+			}
+			if = { limit = { 691 = { is_controlled_by = ENG } } 
+				transfer_state = 691
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = destroyers_for_bases_opinion
+			}
+			country_event = { id = usa.401 days = 3 }
+		}
+	}
+}
+
+# Britain accepts offer
+country_event = {
+	id = usa.401
+	title = usa.401.t
+	desc = usa.401.desc
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = usa.401.a
+	}
+}
+
+# Roosevelt Dies
+country_event = {
+	id = usa.13
+	title = usa.13.t
+	desc = usa.13.d
+	picture = GFX_report_event_usa_funeral
+
+	trigger = {
+		tag = USA
+		date > 1945.3.29
+		has_idea = new_deal
+		has_government = democratic
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	option = {
+		name = usa.13.a
+		add_political_power = -40
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Harry S. Truman"
+			desc = "POLITICS_HARRY_TRUMAN_DESC"
+			picture = "Portrait_USA_Harry_Truman.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=839
+	name="STATE_839"
+
+	history={
+		owner = ENG
+		set_state_flag = ENG_controls
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			1068 3 
+		}
+		victory_points = {
+			1071 1 
+		}
+
+	}
+
+	provinces={
+		1068 1071 1143 5081 5093 7117 8030 10870 11910 12091 12740 12764 12768 13279 13280 13282 13283 13284 13285 13290 13291 13294 13295 13303 13304 
+	}
+	manpower=69
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

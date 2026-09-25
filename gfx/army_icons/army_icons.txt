@@ -1,0 +1,4144 @@
+﻿army = {
+	gfx = GFX_theatre_army_shield
+
+
+	icon = {
+		color_override = yes
+		name = "Infantry"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = USA
+			tag = PHI
+			tag = BRA
+			tag = MEX
+			tag = CUB
+			tag = AST
+			tag = NZL
+			tag = RAJ
+			tag = HOL
+			tag = BEL
+			tag = NOR
+			tag = FIN
+			tag = BUL
+			tag = GRE
+			tag = YUG
+			tag = ROM
+			tag = GER
+			tag = HUN
+			tag = IEA
+			tag = ITA
+			tag = SPR
+			tag = FRA
+			tag = POL
+			tag = CPL
+			tag = MON
+			tag = SOV
+			tag = JAP
+			tag = MAN
+			tag = SIA
+			tag = SAF
+			tag = CHI
+			tag = FIL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Imperial Naval Ensign"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Homeland Defense Army"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Celestial Penetration Army"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Manchurian Storm Troopers"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Infantry 'Carp' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Infantry 'Lucky' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Infantry 'Yodo' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7th Infantry 'Bear' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "18th Infantry 'Chrysanthemum' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "19th Infantry 'Tiger' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Co-Prosperity Sphere Emblem"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Manchukuo Imperial Army Emblem"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Five Races Under One Union"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "24th Infantry 'Mountain' Division"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "State Flag"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Tokugawa Seal"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Tokugawa State Flag"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Mori Family Crest"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Shimazu Family Crest"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Oda Family Crest"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Otomo Family Crest"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Army Air Force Symbol 1"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Army Air Force Symbol 2"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Army Air Force Symbol 3"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of Mengjiang"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Reformed Government of the Republic of China"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Provisional Government of the Republic of China (Five Races)"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Reorganized National Government of the Republic of China"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Emblem of the Reorganized National Government of the Republic of China"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Communist Party Symbol"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Hammer and Sickle"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Communist Party Symbol 2"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Liberal Democratic Party Emblem"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "National Diet Emblem"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Japan Self Defense Force"
+		available = 
+		{
+		OR = {
+			tag = JAP
+			tag = SIA
+			tag = MAN
+		}}
+	}
+	icon = {
+		#Example of icon script, corresponding to the frame index in the .dds files
+		#color_override = no
+		#name = "EQUAL_ICON"
+		#available = 
+		#{
+		#	tag = CHI
+		#}
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+		color_override = no
+		name = "1st Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "9th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "10th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "14th Army (Decoy)"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "15th Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "US Army Europe"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Allied Airborne Army"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "9th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "10th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "11th Corps"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "9th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "24th Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "82nd Airborne Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "101st Airborne Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Armored Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Armored Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Armored Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Cavalry Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Cavalry Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Marine Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Marine Division"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st South Carolina Infanty"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "11th Missouri Infantry"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Confederate National Guard"
+		available = 
+		{
+		OR = {
+			tag = USA
+			tag = CUB
+			tag = BRA
+			tag = PHI
+			tag = MEX
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Silver Legion"
+		available = 
+		{
+			tag = USA
+		}
+	}
+		icon = {
+		color_override = no
+		name = "First Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Second Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Fourth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Eighth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Ninth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Tenth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Twelfth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Fourteenth Army"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Northern Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Eastern Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Western Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Southern Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Aldershot Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Scottish Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Anti-Aircraft Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Army of the Rhine"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Malaya Command"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "HQ Nothern Ireland"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7th Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8th Infantry Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Essex County Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Northumberland County Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Armoured Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Armoured Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Armoured Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "British Airborne Forces"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st African Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "11th (East Africa) Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "81st (West Africa) Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "82nd (West Africa) Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Anti-Aircraft Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Anti-Aircraft Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Anti-Aircraft Division"
+		available = 
+		{
+		OR = {
+			tag = ENG
+			tag = AST
+			tag = NZL
+			tag = NEP
+			tag = RAJ
+			tag = CAN
+			tag = SAF
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "10th Parachute Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1re Armée"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Forces françaises libres"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2e Armée"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Free French Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4th Armored Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5th Armored Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "15th Motorized Infantry Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Armored Division"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "35th Parachute Artillery Regiment"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Marine Infantry Paratroopers Regiment"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Marine Artillery Regiment"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "French Foreign Legion"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9th Marine Infantry Brigade"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Armored Brigade"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11th Parachute Brigade"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Régiment of Infantry"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Régiment of Artillery"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "French Flag"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Napoleonic National Emblem"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "National Emblem"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Fleur-de-lis"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of French Vietnam"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of French Togo"
+		available = 
+		{
+			tag = FRA
+		}
+	}
+	icon = {
+		name = "Infantry"
+	}
+	icon = {
+		name = "Amphibious Mechanized"
+	}
+	icon = {
+		name = "Amphibious Tank"
+	}
+	icon = {
+		name = "Anti Aircraft"
+	}
+	icon = {
+		name = "Artillery"
+	}
+	icon = {
+		name = "Anti Tank"
+	}
+	icon = {
+		name = "Bicyle"
+	}
+	icon = {
+		name = "Calvary"
+	}
+	icon = {
+		name = "Heavy Tank"
+	}
+	icon = {
+		name = "Light Tank"
+	}
+	icon = {
+		name = "Marine"
+	}
+	icon = {
+		name = "Medium Tank"
+	}
+	icon = {
+		name = "Motorized"
+	}
+	icon = {
+		name = "Mountain"
+	}
+	icon = {
+		name = "Paratroop"
+	}
+		icon = {
+		color_override = no
+		name = "4. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "16. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Panzerarmee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "V. Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Panzerarmee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "10. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "14. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "17. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "18. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe H"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe E"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe Z"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe A"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe D"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Afrika Korps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Afrika Korps II"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9. Armee"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Gebirgs-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Gebirgs-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4. Gebirgs-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "I Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "L Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "LXXXI Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "IV Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "LXXV Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzer Corps Feldherrnhalle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "VI Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "XVI Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "XVII Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "XXVI Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "XXX Armeekorps"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Panzerdivision 'Leibstandarte SS Adolf Hitler'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Panzerdivision 'Das Reich'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Division 'Totenkopf'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Panzerdivision 'Wiking'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Panzer-Division 'Hohenstaufen'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "SS Panzerdivision 'Hitlerjugend'"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Soviet Unit Symbol I"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "NKVD"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "67th Army"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Soviet Naval Infantry"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "336 Rifle Brigade"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Polish Brigade"
+		available = 
+		{
+			tag = SOV
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Shock Army"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Red Star"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Army of the Far East"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "12th Army"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "6th Rifle Battalion"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Soviet Army Symbol II"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Training Army"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "7. Guards"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "41. Guards"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "90. Tanks"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8. Artillery"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1443. Artillery"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "76. Tanks"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3. Guards Mechanized"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "3. Tanks"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "213. Tanks"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "8. Mechanized"
+		available = 
+		{
+		OR = {
+			tag = SOV
+			tag = MON
+			tag = CPL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Italian Tricolor"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Kingdom of Italy Flag"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "House of Savoy"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Fascist Eagle"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "P.N.F Emblem"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Fasces"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Royal Italian Air Force Flank Roundel"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Royal Italian Air Force Roundel"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "A.N.R Roundel"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Royal Italian Navy Jack"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "44th Infantry Division Cremona"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "20th Infantry Division Friuli"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Folgore Combat Group"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Legnano Combat Group"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Mantova Combat Group"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "184th Airborne Division Nembo"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Alpine Division Taurinense"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "1st Cavalry Division Eugenio di Savoia"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "131st Armoured Division Centauro"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Italian Roundel I"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Italian Roundel II"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Tank"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "4th Tank"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "5th Tank"
+		available = 
+		{
+		OR = {
+			tag = ITA
+			tag = IEA
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "State Flag"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Prince Flag"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "RNLAF Roundel I"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Prince Flag Variant"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Naval Jack"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Marine Emblem"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "RNLAF Roundel II"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Dutch East Indies Air Force Emblem"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "No.120 Squadron"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "43rd Mechanized Brigade"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Staff Land Forces Command"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "11th Air Assault Brigade"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "13th Light Brigade"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Korps Commandotroepen"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Operational Support Command"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Education and Training Command"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Je Maintiendrai"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Dutch Air Force Emblem"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Dutch East Indies Army Emblem"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "National Reserve Corps"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "RNLAF Roundel III"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of Friesland"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Royal Standard"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "Dutch Army Emblem"
+		available = 
+		{
+		OR = {
+			tag = HOL
+			tag = BEL
+		}}
+	}
+	icon = {
+		color_override = no
+		name = "General Staff Emblem"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Kraków'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Lublin'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Łódź'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Pomorze'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Poznań'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Modlin'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Army 'Karpaty'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Independent Operational Group 'Polesie'"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Warsaw Armored Divison"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish 2nd Corps"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Carpathian Rifle Division"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5th Kresowa Infantry Division"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish 1st Corps"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Grenadiers Division"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4th Infantry Division"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7th Infantry Division"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish State Flag"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish Uprising Flag"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish Naval Jack"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Polish Coat of Arms"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Warsaw Armored Brigade"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "14th Wielkopolska Armored Brigade"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "16th Independent Armored Brigade"
+		available = 
+		{
+			tag = POL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "National Emblem"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Reformed Government of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Provisional Government of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Re-Organized National Government of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "KMT Flag/Naval Jack of the Republic of China"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "88th Division"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "200th Division"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11th Division"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "36th Division"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "87th Division"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "New Fourth Army (1941)"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "New Fourth (1945)"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "18th Group Army"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8th Route Army"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "National Revolutionary Army Flag"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Emblem of the Central Military Academy"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Insignia of the Chinese Expedition Force in Burma-India"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5th Army"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Combat Command Insignia"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Parachute Regiment"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "94th Artillery"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Flag of the Republic of Formosa"
+		available = 
+		{
+			tag = CHI
+		}
+	}
+	icon = {
+		color_override = no
+		name = "30th Infantry Division 'Roosevelt's SS'"
+		available = 
+		{
+			tag = USA
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Panzer-Division - 1935-1940 und 1943-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Panzer-Division - Sommer und Herbst 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Panzer-Division - 1941-1942"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Panzer-Division - 1939-1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Panzer-Division - 1940-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Panzer-Division - 1940-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3. Panzer-Division - 1939-1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3. Panzer-Division - Sommer 1943"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4. Panzer-Division - 1939"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4. Panzer-Division - 1942"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4. Panzer-Division - 1940 und 1943-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "4. Panzer-Division - Kursk Battle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5. Panzer-Division - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5. Panzer-Division - 1941-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5. Panzer-Division - Unternehmen Zitadelle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6. Panzer-Division - September - Oktober 1941"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6. Panzer-Division - Unternehmen Zitadelle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7. Panzer-Division - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7. Panzer-Division - Variant"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7. Panzer-Division - Unternehmen Zitadelle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8. Panzer-Division (Wehrmacht) - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8. Panzer-Division - 1941-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9. Panzer-Division - 1939"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9. Panzer-Division - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9. Panzer-Division - 1941-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "10. Panzer-Division - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "10. Panzer-Division - 1940-1942"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "10. Panzer-Division - 1941-1943"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11. Panzer-Division - 1940"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11. Panzer-Division - Unternehmen Zitadelle"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "12. Panzer-Division - 1941-1945"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "12. Panzer-Division - Sommer 1943"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "13. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "14. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+	}
+	icon = {
+		color_override = no
+		name = "15. Panzer-Division - 1941-1943"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "21. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "21. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "22. Panzer-Division (Wehrmacht)"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "23. Panzer-Division (Wehrmacht)"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "24. Panzer-Division - 1942-1945"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "24. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "116. Panzer-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "Panzerlehrdivision"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "57. Infanterie-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "250. Infanterie-Division Spanische Freiwilligendivision"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "20. Panzergrenadier-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "4. SS Polizeidivision"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "44. Reichsgrenadier-Division „Hoch- und Deutschmeister“"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "6. SS Gebirgsdivision Nord"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "7. SS Freiwilligen Gebirgsdivision Prinz Eugen"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "8. SS Kavalleriedivision Florian Geyer"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "10. SS Panzerdivision Frundsberg"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "11. SS Freiwilligen Panzergrenadierivision Nordland"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "30. Infanterie-Division"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "13. Gebirgsdivision der SS Handschar"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "15. Grenadierdivision der SS"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "19. Grenadierdivision der SS"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "20. Grenadierdivision der SS"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "21. Gebirgsdivision der SS Skanderbeg"
+		available = 
+		{
+			tag = GER
+		}
+
+	}
+	icon = {
+		color_override = no
+		name = "87. Infanterie-Division Grünes Herz"
+		available = 
+		{
+			tag = GER
+		}
+	}
+}	
+
+#
+army_group = {
+	gfx = GFX_theatre_army_group_shield
+	
+	icon = {
+	}
+	icon = {
+		color_override = no
+		name = "Imperial Guard Headquarters"
+		available = 
+		{
+			tag = JAP
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Kwuntang Headquarters"
+		available = 
+		{
+			tag = JAP
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Imperial Army"
+		available = 
+		{
+			tag = JAP
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Manchukuo Imperial Army"
+		available = 
+		{
+			tag = JAP
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Japan Self Defense Force"
+		available = 
+		{
+			tag = JAP
+			has_government = democratic
+		}
+	}
+	icon = {
+		color_override = no
+	}
+	icon = {
+		color_override = no
+		name = "15th Army Group"
+	}
+	icon = {
+		color_override = no
+		name = "12th Army Group"
+	}
+	icon = {
+		color_override = no
+		name = "6th Army Group"
+	}
+	icon = {
+		color_override = no
+	}
+	icon = {
+		color_override = no
+		name = "1st Army Group"
+	}
+	icon = {
+	}
+	icon = {
+		color_override = no
+		name = "V Corps"
+	}
+	icon = {
+		color_override = no
+		name = "Wehrmacht"
+	}
+	icon = {
+		color_override = no
+		name = "21st Army Group"
+	}
+	icon = {
+		color_override = no
+		name = "8th Army Group"
+	}
+	icon = {
+		color_override = no
+	}
+	icon = {
+		color_override = no
+	}
+}
+#
+fleet = {
+	gfx = GFX_theatre_task_force_shield
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+task_force = {
+	gfx = GFX_theatre_task_force_shield
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+naval_equipment_role = {
+	gfx = GFX_naval_equipment_role_icons
+	
+	icon = {
+		color_override = no
+		name = "Battery"
+	}
+	icon = {
+		color_override = no
+		name = "Shield"
+	}
+	icon = {
+		color_override = no
+		name = "Spotter"
+	}
+	icon = {
+		color_override = no
+		name = "Minelayer"
+	}
+	icon = {
+		color_override = no
+		name = "Minesweeper"
+	}
+	icon = {
+		color_override = no
+		name = "Skull"
+	}
+	icon = {
+		color_override = no
+		name = "Airplane"
+	}
+	icon = {
+		color_override = no
+		name = "Crab"
+	}
+}

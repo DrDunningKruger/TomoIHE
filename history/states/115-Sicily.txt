@@ -1,0 +1,48 @@
+
+state={
+	id=115
+	name="STATE_115"
+	resources={
+		tungsten=32.000
+		chromium=28.000
+	}
+
+	history={
+		owner = ITA
+		victory_points = {
+			10074 20 
+		}
+		victory_points = {
+			4159 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 10
+			dockyard = 4
+			10074 = {
+				naval_base = 3
+
+			}
+			4159 = {
+				naval_base = 8
+
+			}
+			12099 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = ITA
+
+	}
+
+	provinces={
+		1009 1156 3857 4014 4159 7059 7147 8103 10074 10869 12047 12099 
+	}
+	manpower=3836571
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

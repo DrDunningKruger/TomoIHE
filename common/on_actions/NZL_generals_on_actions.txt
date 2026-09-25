@@ -1,0 +1,82 @@
+
+
+#create_corps_commander = { #ROLE infantry ranger
+#	name = "Thomas J. King" #followed 2NZEF but never saw action, was in charge of logistics and weapon procurement
+#	picture = "T_J_King.dds"
+#	traits = { scavenger organizer infantry_leader politically_connected ranger }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE shit general, flavor? 
+#	name = "John Duigan"  #downsized the army, disliked by men, too incompetent to be sent to war
+#	picture = "John_Duigan.dds"
+#	traits = { old_guard cavalry_officer cavalry_leader media_personality  }
+#	skill = 3
+#	attack_skill = 4
+#	defense_skill = 5
+#	planning_skill = 3
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE shit general, flavor?
+#	name = "John Saunders (Dentist)" #home guard officer, very active dentist? 
+#	picture = "John_Saunders.dds"
+#	traits = { infantry_officer cavalry_officer harsh_leader urban_assault_specialist  }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 3
+#}
+
+# bad image
+
+#create_corps_commander = { #ROLE motorized/mech mountaineer
+#	name = "Keith Lindsay Stewart" #cavalryman in ww1 but didnt see much service, various training posts in interwar, took monte casio
+#	picture = "Keith_Lindsay_Stewart.dds"
+#	traits = { cavalry_leader fortress_buster trait_mountaineer trait_reckless  } 
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = {  #ROLE competent infantry hillfighter
+#	name = "William Gentry" #crushed tribes in raj, competent staff officer and infantry leader, fought in italy and africa
+#	picture = "William_Gentry.dds"
+#	traits = { infantry_leader infantry_expert skirmisher cavalry_leader hill_fighter career_officer  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 6
+#	planning_skill = 6
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE jungle commando
+#	name = "Brian Poananga" #maori officer, never deployed 
+#	picture = "Brian_Poananga.dds"
+#	traits = { commando guerilla_fighter trickster infantry_expert jungle_rat  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 3
+#	planning_skill = 3
+#	logistics_skill = 2
+#}
+
+#create_corps_commander = {  #ROLE paratrooper
+#	name = "Richard Webb" #nothing known about this dude, served in the 2nd New Zealand Expeditionary Force
+#	picture = "Richard_Webb.dds"
+#	traits = { commando paratrooper combined_arms_expert guerilla_fighter  }
+#	skill = 4
+#	attack_skill = 5
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 6
+#}
+
+	

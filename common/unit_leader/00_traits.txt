@@ -1,0 +1,2300 @@
+# leader_traits contain a list of UnitLeaderTrait with the following structure:
+# trait_key = {
+# 	type = all # or either of field_marshal, corps_commander, navy
+#	trait_type = basic_trait # or either of status_trait, personality_trait, assignable_trait, basic_terrain_trait, assignable_terrain_trait, exile
+#	attack_skill = 0 # integer
+#	defense_skill = 0 # integer
+#	logistics_skill = 0 # integer
+#	planning_skill = 0 # integer
+#	maneuvering_skill = 0 # integer
+#	coordination_skill = 0 # integer
+#	attack_skill_factor = 0.0 # decimal
+#	defense_skill_factor = 0.0 # decimal
+#	logistics_skill_factor = 0.0 # decimal
+#	planning_skill_factor = 0.0 # decimal
+#	maneuvering_skill_factor = 0.0 # decimal
+#	coordination_skill_factor = 0.0 # decimal
+#	show_in_combat = yes # boolean
+#	override_effect_tooltip = "" # loc key
+#	custom_effect_tooltip = "" # loc key
+#	custom_prerequisite_tooltip = "" # loc key
+#	custom_gain_xp_trigger_tooltip = "" # loc key
+#	mutually_exclusive = other_trait # trait key
+#	parent = { # Can be added multiple times
+#	    traits = {XXX YYY ZZZ}  # A list of other traits that
+#       num_parents_needed = 1 # The number of the above traits that must be true
+#   }
+#   any_parent = { XXX YYY ZZZ } # shorthand for parent when num_parents_needed are defaulted to 1
+#   all_parents = { XXX YYY ZZZ } # shorthand for parent when num_parents_needed are the same as the number of parents
+#	gui_row = 0 # integer, starts at 0, unset or -1 means the trait does not appear in unlockable trait tree.
+#	gui_column = 0 # integer, starts at 0, unset or -1 means auto
+#	allowed = trigger # scope is a unit leader
+#	prerequisites = trigger # scope is an unit leader
+#	gain_xp = trigger # scope is a combatant
+#	gain_xp_leader = trigger # scope is a unit leader. ROOT is country you are from and FROM is any target nationality for agents
+#	gain_xp_on_spotting = 0 # integer
+#	modifier = { } # list of modifiers
+#	non_shared_modifier = {} #
+#	corps_commander_modifier = {} #
+#	field_marshal_modifier = {} #
+#	sub_unit_modifiers = { # list of sub unit def
+#		# e.g.
+#		submarine {
+#			units = {} # list of adjusters
+#			# list of modifiers e.g.
+#			naval_visibility = -0.1
+#		}
+#	}
+#	trait_xp_factor = {} # list of trait_key/decimal
+#	on_add = effect # scope is an unit leader
+#	on_remove = effect # scope is an unit leader
+#	daily_effect = effect # scope is an unit leader
+#	cost = 1000 # integer
+#	ai_will_do = {} # weight
+#	new_commander_weight = {} # weight
+#	enable_ability = ability_key
+#}
+leader_traits = {
+
+	
+##################################
+# Common Traits
+##################################
+#	old_guard = { 
+#		type = land
+#		trait_type = corps_commander
+#		
+#		modifier = {
+#			army_artillery_attack_factor = 0.05
+#			land_reinforce_rate = 0.05	
+#			experience_loss_factor = 0.1		
+#		}
+#
+#		new_commander_weight = {
+#			factor = 1
+#		}
+#		
+#       #gui_row = 17
+#	}
+	
+	
+	brilliant_strategist = { #Attacker
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+           org_loss_when_moving = -0.1
+		   breakthrough_factor = 0.1
+		}
+
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		gui_row = 11
+	}
+	
+	
+	inflexible_strategist = { #defender
+		type = land
+		trait_type = corps_commander
+
+		modifier = {
+			initiative_factor = 0.1
+            max_dig_in_factor = 0.05			
+		}
+
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		gui_row = 12		
+	}
+	
+	politically_connected = { #beloved
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+			army_morale_factor = 0.10
+		}
+
+		new_commander_weight = {
+			factor = 1 
+		}
+		
+		gui_row = 14	
+	}
+	
+	war_hero = { #veteran
+		type = { land navy }
+		trait_type = corps_commander	
+
+		modifier = {
+			army_artillery_attack_factor = 0.05
+			land_reinforce_rate = 0.025	
+			experience_loss_factor = 0.1	
+		}
+		
+		new_commander_weight = {
+			factor = 0  # Scripted starting leaders only
+		}
+		
+        gui_row = 18		
+	}
+	
+	career_officer = {
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+			experience_gain_army_unit_factor = 0.25
+		}
+
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		gui_row = 7
+	}
+
+	trait_cautious = { #SLOW
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+			planning_speed = -0.25
+			desert = {
+				movement = -0.25
+			}
+			hills = {
+				movement = -0.25
+			}
+			forest = {
+				movement = -0.25
+			}
+			mountain = {
+				movement = -0.25
+			}
+			plains = {
+				movement = -0.25
+			}
+			urban = {
+				movement = -0.25
+			}
+			jungle = {
+				movement = -0.25
+			}
+			marsh = {
+				movement = -0.25
+			}
+		}
+		
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		gui_row = 5		
+	}
+
+	trait_reckless = { #frontline general 
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+			recon_factor = 0.1
+            supply_consumption_factor = 0.1
+		    coordination_bonus = 0.1
+		}
+		
+		new_commander_weight = {
+			factor = 1	
+		}
+
+		gui_row = 21	
+	}
+
+	media_personality = { #Prima Dona
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+			out_of_supply_factor = 0.25
+			unit_upkeep_attrition_factor = 0.1
+			dig_in_speed_factor = -0.25
+			initiative_factor = 0.2
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+		
+		gui_row = 23		
+	}
+
+	harsh_leader = { #Ruthless
+		type = land
+		trait_type = corps_commander
+
+		modifier = {
+	     	org_loss_at_low_org_factor = -0.3
+			army_morale_factor = -0.10
+			land_reinforce_rate = 0.02	
+			experience_loss_factor = 0.5
+		}
+
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		gui_row = 22		
+	}
+
+	bearer_of_artillery = { # Reserved for Wojtek  
+		type = corps_commander
+		
+		trait_type = corps_commander
+		
+		modifier = {
+			army_artillery_attack_factor = 0.1
+		}
+		
+		new_commander_weight = {
+			factor = 1	
+		}
+		
+        gui_row = 9
+	}
+	
+	infantry_officer = { #inspector general
+		type = land
+		trait_type = corps_commander 
+		
+		modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+		}			
+		
+		new_commander_weight = {
+			factor = 1	
+		}
+		
+		gui_row = 20
+	}
+	
+	cavalry_officer = { #outoftouch
+		type = land
+		trait_type = corps_commander
+
+		modifier = {
+		    army_armor_attack_factor = -0.1
+			motorized_attack_factor = -0.1
+			mechanized_attack_factor = -0.1
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+		
+		gui_row = 19
+	}
+	
+	armor_officer = { #dashing tanker 
+		type = land
+		trait_type = corps_commander
+		
+		modifier = {
+		    army_armor_speed_factor = 0.05
+			cas_damage_reduction = 0.05
+			army_fuel_consumption_factor = 0.1
+		}		
+		
+		new_commander_weight = {
+			factor = 1	
+		}
+		
+		gui_row = 2
+	}
+
+	irregulars_officer = { 
+		type = corps_commander
+
+		trait_type = corps_commander
+
+		unit_type = {
+			type = cavalry
+			#type = camelry
+			type = irregular_infantry
+		}
+
+		unit_trigger = {
+			OR = {
+				division_has_majority_template = cavalry
+				division_has_majority_template = camelry
+				division_has_majority_template = irregular_infantry
+			}
+			owner = {
+				OR = {
+					original_tag = ITA
+					original_tag = ETH
+				}
+				NOT = {
+					OR = {
+						has_idea = best_of_the_best_spirit
+						has_idea = academy_scholarships_spirit
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			modifier_army_sub_unit_irregular_infantry_attack_factor = 0.05
+			modifier_army_sub_unit_cavalry_speed_factor = 0.05
+			modifier_army_sub_unit_camelry_speed_factor = 0.05
+			out_of_supply_factor = -0.1
+			desert = {
+				movement = 0.1
+			}
+		}
+
+        gui_row = 17
+
+		new_commander_weight = {
+			factor = 0	
+		}
+	}
+
+	militias_officer = { 
+		type = corps_commander
+
+		trait_type = corps_commander
+
+		allowed = {
+
+		}
+
+		unit_type = {
+			type = militia
+		}
+
+		unit_trigger = {
+			division_has_majority_template = militia
+		}
+		
+		modifier = {
+			modifier_army_sub_unit_militia_defence_factor = 0.05
+			modifier_army_sub_unit_militia_speed_factor = 0.05
+			modifier_army_sub_unit_militia_max_org_factor = 0.05
+		}
+
+		new_commander_weight = {
+			factor = 0	
+		}
+		
+		gui_row = 16
+	}
+
+	
+##################################
+# Field Marshal traits.
+##################################
+	logistics_wizard = { 
+		type = field_marshal
+		
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		
+		field_marshal_modifier = {
+			supply_consumption_factor = -0.15
+		}
+		enable_ability = extra_suplies
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 0
+		trait_type = assignable_trait
+		any_parent = {organizer}
+	}
+
+	offensive_doctrine = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			org_loss_when_moving = -0.30
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+		mutually_exclusive = defensive_doctrine
+		gui_row = 5
+
+	}
+
+	defensive_doctrine = {
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			max_dig_in_factor = 0.30
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+		mutually_exclusive = offensive_doctrine
+		gui_row = 6
+	}
+	
+	fast_planner = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			planning_speed = 0.75
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 1
+		any_parent = { organizer }
+		mutually_exclusive = thorough_planner
+		trait_type = assignable_trait
+	}
+
+
+	thorough_planner = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			max_planning = 0.1
+			planning_speed = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 2
+		any_parent = { organizer }
+		mutually_exclusive = fast_planner
+		trait_type = assignable_trait
+	}
+
+
+	unyielding_defender = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		cost = 1000
+		field_marshal_modifier = {
+			defence = 0.10
+		}
+		custom_effect_tooltip = INCREASED_COUNTERATTACK_CHANCE
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 3
+		trait_type = assignable_trait
+	}
+
+
+	aggressive_assaulter = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		field_marshal_modifier = {
+			breakthrough_factor = 0.10
+		}
+		custom_effect_tooltip = INCREASED_ASSAULT_AND_SHOCK_CHANCE
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 4
+		trait_type = assignable_trait
+	}
+
+	organisational_leader = { #Airforce Liaison
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		field_marshal_modifier = {
+			air_superiority_bonus_in_combat = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+
+		gui_row = 7
+	}
+
+	inspirational_leader = { #understaffed
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		corps_commander_modifier = {
+			max_commander_army_size = -36
+		}
+		
+		gui_row = 20		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+		gui_row = 8
+	}
+
+	expert_delegator = { 
+		type = field_marshal
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		
+		field_marshal_modifier = {
+			max_army_group_size = 3
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = assignable_trait
+		any_parent = { skilled_staffer }
+		gui_row = 15
+	}
+
+
+##################################
+# Corps Commander traits.
+##################################
+
+	organizer = { 
+		type = corps_commander
+		
+		gain_xp = {
+			always = no # not gainable
+		}		
+		
+		cost = 1000
+		modifier = {
+			unit_upkeep_attrition_factor = -0.1
+			army_fuel_capacity_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 0
+	}	
+	
+	cavalry_leader = { 
+		type = corps_commander
+		
+		gain_xp = {
+			always = no # not gainable
+		}		
+		
+		cost = 1000
+		modifier = {
+			cavalry_attack_factor = 0.10
+			motorized_attack_factor = 0.10
+			mechanized_attack_factor = 0.10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 3
+	}
+	
+	infantry_leader = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		modifier = {
+			army_infantry_defence_factor = 0.10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 6
+	}
+	skilled_staffer = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 2000
+		
+		corps_commander_modifier = {
+			max_commander_army_size = 900
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 15
+		
+	}
+	trickster = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 500
+		modifier = {
+			recon_factor = 0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 13
+	}
+
+
+	winter_specialist = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			winter_attrition_factor = -0.5
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = basic_terrain_trait
+		gui_row = 7
+	}
+
+	adaptable = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		modifier = {
+			terrain_penalty_reduction = 0.10
+			acclimatization_cold_climate_gain_factor = 0.1
+			acclimatization_hot_climate_gain_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_terrain_trait
+		gui_row = 3
+				
+		parent = {
+			traits = {
+				desert_fox
+				swamp_fox
+				trait_mountaineer
+				hill_fighter
+				jungle_rat
+				ranger
+				urban_assault_specialist
+				winter_specialist
+			}
+			num_parents_needed = 2
+		} 
+	}
+
+	winter_expert = { 
+		type = corps_commander
+
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		modifier = {
+			acclimatization_cold_climate_gain_factor = 0.40
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		any_parent = { winter_specialist }
+
+		trait_type = assignable_terrain_trait
+		gui_row = 7
+	}
+
+	
+	trait_engineer = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			river = {
+				attack = 0.05
+			}
+			fort = {
+                attack = 0.1
+            }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+        gui_row = 4
+	}
+
+
+	panzer_leader = {
+ 		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 700
+		modifier = {
+            army_armor_attack_factor = 0.1 
+		}
+		#corps_commander_modifier = {
+		#	max_commander_army_size = -36
+		#}		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 1
+
+	}
+
+	commando = { 
+ 		type = corps_commander
+
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		cost = 700
+		modifier = {
+			out_of_supply_factor = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 10
+	}
+
+	desert_fox = { 
+ 		type = corps_commander
+
+		gain_xp = {
+			always = no # not gainable
+		}
+
+		cost = 700
+		modifier = {
+			desert = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		new_commander_weight = {
+			factor = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 0
+	}
+
+	swamp_fox = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			marsh = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 1
+	}
+
+	trait_mountaineer = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			mountain = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 3
+	}
+
+	hill_fighter = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			hills = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 2
+	}
+
+	jungle_rat = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			jungle = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 6
+	}
+
+	ranger = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			forest = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 5
+	}
+
+	urban_assault_specialist = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			urban = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 4
+	}
+
+	
+	naval_invader = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 100
+		modifier = {
+			amphibious_invasion = 0.3 # 30% faster invasions
+			invasion_preparation = -0.3
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 8
+	}
+	
+##################################
+# Corps Commander assignable traits.
+##################################
+
+
+	panzer_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 1000
+		modifier = {
+			army_armor_defence_factor = 0.10 
+		}
+		
+		custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { panzer_leader }
+		
+		mutually_exclusive = combined_arms_expert
+		mutually_exclusive = cavalry_expert
+		
+		gui_row = 1
+	}
+	
+	combined_arms_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			motorized_defence_factor = 0.15
+			mechanized_defence_factor = 0.15
+		}
+		
+		custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { cavalry_leader panzer_leader }
+		
+		mutually_exclusive = panzer_expert
+		mutually_exclusive = cavalry_expert
+		
+		
+		gui_row = 2
+	}
+	
+	cavalry_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			modifier_army_sub_unit_cavalry_speed_factor = 0.1
+			cavalry_defence_factor = 0.15
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { cavalry_leader }
+		
+		mutually_exclusive = panzer_expert
+		mutually_exclusive = combined_arms_expert
+		
+		gui_row = 3
+	}
+	
+	fortress_buster = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			fort = {
+				attack = 0.15
+			}
+		}
+		enable_ability = siege_artillery
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		gui_row = 4
+		
+		trait_type = assignable_trait
+		any_parent = { trait_engineer }
+		mutually_exclusive = scavenger
+	}
+	
+	scavenger = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			equipment_capture = 0.03
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		
+		gui_row = 5
+		any_parent = { trait_engineer }
+		mutually_exclusive = fortress_buster
+	}
+	
+	infantry_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			army_infantry_attack_factor = 0.10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { infantry_leader }
+		gui_row = 6
+	}
+	
+	ambusher = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			dig_in_speed_factor = 0.5
+			recon_factor_while_entrenched = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		trait_type = assignable_trait
+		any_parent = { infantry_leader }
+		
+		gui_row = 7
+	}
+	invader_ii = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			extra_marine_supply_grace = 240
+		}
+		
+		enable_ability = faster_naval_invasion_planning
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { naval_invader }
+		
+		gui_row = 8
+	}
+	naval_liason = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			shore_bombardment_bonus = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { naval_invader }
+		
+		gui_row = 9
+	}
+	
+	skirmisher = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+		special_forces_attack_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		enable_ability = probing_attack
+		
+		trait_type = assignable_trait
+		any_parent = { commando }
+		
+		gui_row = 10
+	}
+	
+	paratrooper = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			extra_paratrooper_supply_grace = 240
+			paradrop_organization_factor = 0.1
+			pocket_penalty = -0.5
+		}
+		
+		enable_ability = glider_planes
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { commando }
+		
+		gui_row = 11
+	}
+	
+	
+	camouflage_expert = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			cas_damage_reduction = 0.5
+			air_superiority_bonus_in_combat = -0.5
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { commando }
+		
+		gui_row = 12
+	}
+	
+	expert_improviser = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {		
+			desert = {
+				movement = 0.1
+			}
+			hills = {
+				movement = 0.1
+			}
+			forest = {
+				movement = 0.1
+			}
+			mountain = {
+				movement = 0.1
+			}
+			plains = {
+				movement = 0.1
+			}
+			urban = {
+				movement = 0.1
+			}
+			jungle = {
+				movement = 0.1
+			}
+			marsh = {
+				movement = 0.1
+			}
+		}
+		
+		override_effect_tooltip = expert_improviser_movement_bonus_on_land
+			
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { trickster }
+		custom_prerequisite_tooltip = needs_at_least_one_terrain
+		
+		gui_row = 13
+	}
+	
+	guerilla_fighter = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			pocket_penalty = -0.5
+			out_of_supply_factor = -0.5
+			land_night_attack = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { trickster }
+		
+		gui_row = 14
+	}
+	
+	trait_defeatist = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+            pocket_penalty = 1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		
+		gui_row = 19	
+	}	
+	
+	trait_imbecile = {
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			experience_loss_factor = 0.1
+			max_planning = -0.1
+			recon_factor = -0.2
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		
+		gui_row = 16
+	}	
+	
+	trait_psychopat = { 
+		type = corps_commander
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			org_loss_at_low_org_factor = -0.2
+			coordination_bonus = -0.3
+			planning_speed = -0.25
+			breakthrough_factor = 0.2
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait
+		
+		gui_row = 17	
+	}
+
+	substance_abuser = { 
+		type = all
+		trait_type = status_trait
+		
+		modifier = {
+			org_loss_when_moving = 0.1
+			dig_in_speed_factor = -0.25			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		trait_type = assignable_trait	
+
+		gui_row = 20	
+	}	
+	
+	
+
+
+##################################
+# Naval traits.
+##################################
+	
+	seawolf = { 
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 700
+		modifier = {
+			navy_submarine_attack_factor = 0.2 # +X% stronger damage for submarines
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 1
+		gui_column = 0
+	}
+
+	fleet_protector = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			screening_efficiency = 0.2
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 3
+		gui_column = 0
+	}
+
+	blockade_runner = { 
+		type = navy
+		cost = 500
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			naval_retreat_chance = 0.2
+			naval_retreat_speed = 0.15
+			convoy_retreat_speed = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 7
+		gui_column = 0
+	}
+
+	superior_tactician = { 
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			positioning = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 5
+		gui_column = 0
+	}
+
+	spotter = { 
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			spotting_chance = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 8
+		gui_column = 0
+	}
+
+	fly_swatter = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 300
+		modifier = {
+			navy_anti_air_attack_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 4
+		gui_column = 0
+	}
+
+	ironside = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			navy_capital_ship_defence_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}	
+		gui_row = 13
+		gui_column = 0
+	}
+
+	air_controller = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		cost = 500
+		modifier = {
+			navy_carrier_air_targetting_factor = 0.1 # Airplanes from carriers has better naval targetting
+			sortie_efficiency = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		gui_row = 10
+		gui_column = 0
+	}
+	
+
+##################################
+# naval assignable traits
+##################################
+
+	silent_hunter = { 
+		type = navy
+		modifier = {
+			naval_torpedo_reveal_chance_factor = -0.15
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		trait_type = assignable_trait
+		any_parent = { seawolf }
+		mutually_exclusive = lancer
+		gui_row = 1
+		gui_column = 1
+	}
+
+	torpedo_expert = {
+		type = navy
+		modifier = {
+			naval_torpedo_hit_chance_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		trait_type = assignable_trait
+		any_parent = { silent_hunter }
+		gui_row = 1
+		gui_column = 2
+	}
+
+	lancer = {
+		type = navy
+		modifier = {
+			naval_torpedo_screen_penetration_factor = 0.25
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { seawolf fleet_protector }
+		
+		mutually_exclusive = silent_hunter
+		
+		gui_row = 2
+		gui_column = 1
+	}
+
+	destroyer_leader = {
+		type = navy
+		modifier = {
+			#destroyer = {
+			#	units = {
+			#		attack = 0.1
+			#		defence = 0.1
+			#	}
+			#}
+		}
+		sub_unit_modifiers = {
+			destroyer = {
+				naval_damage_factor = 0.1
+				naval_torpedo_hit_chance_factor = 0.1
+				navy_visibility = -0.1
+			}
+		}	
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { fleet_protector }
+		
+		gui_row = 3
+		gui_column = 1
+	}
+	loading_drill_master = { 
+		type = navy
+		modifier = {
+			naval_torpedo_cooldown_factor = -0.25
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = {
+			silent_hunter
+			lancer
+			destroyer_leader
+		}
+		
+		gui_row = 2
+		gui_column = 2
+	}
+	hunter_killer = { 
+		type = navy
+		modifier = {
+			navy_submarine_detection_factor = 0.2
+			navy_submarine_attack_factor = 0.1
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { destroyer_leader }
+		
+		gui_row = 3
+		gui_column = 2
+	}
+
+	cruiser_captain = { 
+		type = navy
+		modifier = {
+			
+		}
+		sub_unit_modifiers = {
+			light_cruiser = {
+				naval_damage_factor = 0.1
+				naval_speed_factor = 0.1
+			}
+			heavy_cruiser = {
+				naval_damage_factor = 0.1
+				naval_speed_factor = 0.1
+			}
+		}	
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { fly_swatter }
+		
+		gui_row = 4
+		gui_column = 1
+	}
+
+	search_pattern_expert = {
+		type = navy
+		modifier = {
+			 spotting_chance = 0.2
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { cruiser_captain }
+		
+		gui_row = 4
+		gui_column = 2
+	}
+
+	lone_wolf = { 
+		type = navy
+		modifier = {
+			naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { superior_tactician }
+		mutually_exclusive = concealment_expert
+		gui_row = 5
+		gui_column = 1
+	}
+
+	concealment_expert = { 
+		type = navy
+		modifier = {
+			navy_visibility = -0.2
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = {
+			superior_tactician
+			spotter
+			blockade_runner
+		}
+		mutually_exclusive = lone_wolf
+		gui_row = 6
+		gui_column = 1
+	}
+
+	smoke_screen_expert = { 
+		type = navy
+		modifier = {
+			naval_retreat_chance = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = {
+		 	lone_wolf
+			concealment_expert
+		}
+		gui_row = 5
+		gui_column = 2
+	}
+
+	big_guns_expert = { 
+		type = navy
+		modifier = {
+			navy_capital_ship_attack_factor = 0.15
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { ironside }
+		
+		gui_row = 12
+		gui_column = 1
+	}
+	ground_pounder = { 
+		type = navy
+		modifier = {
+			shore_bombardment_bonus = 0.25 
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { ironside }
+		
+		gui_row = 14
+		gui_column = 1
+	}
+	safety_first = { 
+		type = navy
+		modifier = {
+			critical_receive_chance = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		any_parent = { ironside }
+		
+		gui_row = 13
+		gui_column = 1
+	}
+	marksman = { 
+		type = navy
+		modifier = {
+			naval_critical_score_chance_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		mutually_exclusive = crisis_magician
+		any_parent = { big_guns_expert }
+		
+		gui_row = 12
+		gui_column = 2
+	}
+	crisis_magician = { 
+		type = navy
+		modifier = {
+			 naval_critical_effect_factor = -0.5
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		mutually_exclusive = marksman
+		any_parent = { safety_first }
+		
+		gui_row = 13
+		gui_column = 2
+	}
+	flight_deck_manager = { 
+		type = navy
+		modifier = {
+			 sortie_efficiency = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		
+		any_parent = { air_controller }
+		
+		gui_row = 10
+		gui_column = 1
+	}
+	fighter_director = { 
+		type = navy
+		modifier = {
+			fighter_sortie_efficiency = 0.2
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		mutually_exclusive = dive_bomber
+		mutually_exclusive = torpedo_bomber
+		any_parent = { flight_deck_manager }
+		
+		gui_row = 9
+		gui_column = 2
+	}
+	dive_bomber = { 
+		type = navy
+		sub_unit_modifiers = {
+			cv_cas = {
+				air_attack_factor = 0.1
+				air_mission_efficiency = 0.1
+			}
+		}	
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		mutually_exclusive = fighter_director
+		mutually_exclusive = torpedo_bomber
+		any_parent = { flight_deck_manager }
+		
+		gui_row = 10
+		gui_column = 2
+	}
+	torpedo_bomber = { 
+		type = navy
+		sub_unit_modifiers = {
+			cv_nav_bomber = {
+				air_attack_factor = 0.1
+				air_mission_efficiency = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		trait_type = assignable_trait
+		mutually_exclusive = fighter_director
+		mutually_exclusive = dive_bomber
+		any_parent = { flight_deck_manager }
+		
+		gui_row = 11
+		gui_column = 2
+	}
+	
+
+##################################
+# navy terrain trait
+##################################
+	arctic_water_expert = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		modifier = {
+			naval_attrition = -0.08
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+
+		trait_type = basic_terrain_trait
+		gui_row = 1
+	}
+
+	inshore_fighter = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		modifier = {
+			water_fjords = {
+				attack = 0.1
+				movement = 0.1
+				defence = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+
+		trait_type = basic_terrain_trait
+		gui_row = 2
+	}
+
+	blue_water_expert = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		modifier = {
+			water_deep_ocean = {
+				attack = 0.1
+				movement = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+
+		trait_type = basic_terrain_trait
+		gui_row = 3
+	}
+
+	green_water_expert = {
+		type = navy
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		cost = 1000
+		modifier = {
+			water_shallow_sea = {
+				attack = 0.1
+				movement = 0.1
+				defence = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		new_commander_weight = {
+			factor = 1	
+		}
+
+		trait_type = basic_terrain_trait
+		gui_row = 4
+	}
+
+
+#  #  ##  #   #  ##  #       ###  ### ###   ##  ##  #  #  ##  #   ### ### #   #     ### ###   ##  ### ###  ## 
+## # #  # #   # #  # #       #  # #   #  # #   #  # ## # #  # #    #   #   # #       #  #  # #  #  #   #  #   
+# ## ####  # #  #### #       ###  ##  ###   #  #  # # ## #### #    #   #    #        #  ###  ####  #   #   #  
+#  # #  #  # #  #  # #       #    #   #  #   # #  # #  # #  # #    #   #    #        #  #  # #  #  #   #    # 
+#  # #  #   #   #  # ###     #    ### #  # ##   ##  #  # #  # ### ###  #    #        #  #  # #  # ###  #  ##  
+
+	old_guard_navy = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			navy_org = 2.5
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gentlemanly = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			naval_enemy_retreat_chance = 0.2
+			navy_org = 5
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gunnery_expert = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			navy_capital_ship_attack_factor = 0.025
+		}
+		trait_xp_factor = {
+			ironside = 0.5     #+100%
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	cuts_corners = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			naval_damage_factor = 0.2
+			naval_defense_factor = -0.1
+		}
+		new_commander_weight = {
+			factor = 1 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chief_engineer = {
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			critical_receive_chance = -0.05	
+		}
+		new_commander_weight = {
+			factor = 1 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	navy_media_personality = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			naval_has_potf_in_combat_attack = 0.1
+			naval_has_potf_in_combat_defense = 0.1
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bold = { 
+		type = navy
+		trait_type = personality_trait
+	
+		modifier = { # WARNING! Changing the value of these modifiers requires changing them also in the tooltip ITA_flotta_d_evasione_admiral_traits_tt
+			naval_damage_factor = 0.05
+			naval_speed_factor = 0.1
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	navy_career_officer = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			experience_gain_factor = 0.1	
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	battleship_adherent = { 
+		type = navy
+		trait_type = personality_trait
+	
+		modifier = {
+			navy_capital_ship_attack_factor = 0.1
+			navy_anti_air_attack_factor = -0.2	
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	aviation_enthusiast = { 
+		type = navy
+		trait_type = personality_trait
+	
+		modifier = {
+			sortie_efficiency = 0.025
+		}
+		trait_xp_factor = {
+			air_controller = 0.5     #+100%
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	caustic_personality = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			ships_at_battle_start = -0.25
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	craven = { 
+		type = navy
+		trait_type = personality_trait
+	
+		modifier = {
+			naval_retreat_chance = 0.25
+			naval_damage_factor = -0.05 
+		}
+		new_commander_weight = {
+			factor = 1  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	naval_lineage = { 
+		type = navy
+		trait_type = personality_trait
+		
+		modifier = {
+			naval_retreat_chance = -0.25
+			ships_at_battle_start = 0.25
+		}
+		new_commander_weight = {
+			factor = 1 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+##################################
+# status traits
+##################################
+	
+	disgruntled = { 
+		type = all
+		trait_type = status_trait
+		
+		attack_skill = -2
+		defense_skill = -2
+		logistics_skill = -2
+		planning_skill = -2
+	}
+
+
+	##################################
+	# Special trait for exiled leaders
+	##################################
+
+	exiled_leader = {
+		type = land
+		trait_type = exile
+		gain_xp = {
+			always = no # not gainable
+		}
+		
+		modifier = {
+			exiled_divisions_attack_factor = 0.1
+			own_exiled_divisions_attack_factor = 0.05 
+			exiled_divisions_defense_factor = 0.1
+			own_exiled_divisions_defense_factor = 0.05			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+}

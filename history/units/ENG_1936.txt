@@ -1,0 +1,383 @@
+﻿division_template = {
+	name = "1 DIV TRAIN"		
+	division_names_group = ENG_INF_01
+    template_counter = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+	}
+	support = {
+       	
+	}
+}
+division_template = {
+	name = "Infantry Division"			
+	division_names_group = ENG_INF_01
+    template_counter = 104
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Garrison Division"			
+	division_names_group = ENG_GAR_01
+    template_counter = 40
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	
+	priority = 0
+}
+
+division_template = {
+	name = "Armoured Division"
+
+	division_names_group = ENG_ARM_01
+    template_counter = 131
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }		
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }	
+		motorized = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }	
+		motorized = { x = 2 y = 4 }
+		medium_armor = { x = 3 y = 0 }
+		medium_armor = { x = 3 y = 1 }
+		medium_armor = { x = 3 y = 2 }
+		medium_armor = { x = 3 y = 3 }
+		medium_armor = { x = 3 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Heavy Armoured Brigade"
+
+	division_names_group = ENG_ARM_03
+    template_counter = 132
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }
+		heavy_armor = { x = 0 y = 3 }
+		heavy_armor = { x = 0 y = 4 }		
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }	
+		motorized = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }	
+		motorized = { x = 2 y = 4 }
+		heavy_armor = { x = 3 y = 0 }
+		heavy_armor = { x = 3 y = 1 }
+		heavy_armor = { x = 3 y = 2 }
+		heavy_armor = { x = 3 y = 3 }
+		heavy_armor = { x = 3 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Marine Division" 		
+
+	division_names_group = ENG_MAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 0 y = 4 }		
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 1 y = 4 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Mountaineer Division" 		
+
+	division_names_group = ENG_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }		
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 1 y = 4 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Colonial Division" 		
+
+	division_names_group = ENG_COL_01
+
+	regiments = {
+		desertinfantry = { x = 0 y = 0 }
+		desertinfantry = { x = 0 y = 1 }
+		desertinfantry = { x = 0 y = 2 }
+		desertinfantry = { x = 0 y = 3 }
+		desertinfantry = { x = 0 y = 4 }		
+		desertinfantry = { x = 1 y = 0 }
+		desertinfantry = { x = 1 y = 1 }
+		desertinfantry = { x = 1 y = 2 }
+		desertinfantry = { x = 1 y = 3 }
+        mot_anti_tank_brigade = { x = 2 y = 0 }
+        mot_anti_tank_brigade = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+
+units = {
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6103
+		division_template = "1 DIV TRAIN"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.01
+	}
+}
+
+air_wings = {
+	126 = {	
+		small_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Fairey Battle"
+		}		
+		small_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Fairey Battle"
+		}	
+		small_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Fairey Battle"
+		}		
+		small_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Fairey Battle"
+		}	
+		small_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Hurricane I"
+		}	
+		small_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Hurricane I"
+		}	
+		small_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Hurricane I"
+		}		
+		small_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Hurricane I"
+		}		
+		small_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Hurricane I"
+		}
+		medium_plane_scout_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Avro Anson"
+		}
+		medium_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Armstrong Whitworth Whitley"
+		}			
+		medium_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Armstrong Whitworth Whitley"
+		}
+		medium_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Armstrong Whitworth Whitley"
+		}	
+		medium_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Armstrong Whitworth Whitley"
+		}		
+		medium_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Bristol Blenheim"
+		}		
+		medium_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Bristol Blenheim"
+		}	
+		medium_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Bristol Blenheim"
+		}	
+		medium_plane_cas_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Bristol Blenheim"
+		}
+		large_plane_maritime_patrol_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Short Sunderland"
+		}	
+		large_plane_maritime_patrol_plane_airframe_1 = {
+			owner = "ENG" 
+			amount = 100
+			version_name = "Short Sunderland"
+		}		
+	}
+}
+
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 10000 }
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 30000 }
+	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 300 }
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 }
+}
+
+
+	#####################

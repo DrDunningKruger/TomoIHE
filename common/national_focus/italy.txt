@@ -1,0 +1,4096 @@
+﻿
+focus_tree = {
+	id = italian_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = ITA
+				tag = RSI
+				tag = RDS
+			}
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 2500 y = 900 }
+
+	initial_show_position = {
+		x = 0
+		y = 0
+	}
+
+
+########  ##    ##    ########  ##        #######   #######  ########        ###    ##        #######  ##    ## ######## 
+##     ##  ##  ##     ##     ## ##       ##     ## ##     ## ##     ##      ## ##   ##       ##     ## ###   ## ##       
+##     ##   ####      ##     ## ##       ##     ## ##     ## ##     ##     ##   ##  ##       ##     ## ####  ## ##       
+########     ##       ########  ##       ##     ## ##     ## ##     ##    ##     ## ##       ##     ## ## ## ## ######   
+##     ##    ##       ##     ## ##       ##     ## ##     ## ##     ##    ######### ##       ##     ## ##  #### ##       
+##     ##    ##       ##     ## ##       ##     ## ##     ## ##     ##    ##     ## ##       ##     ## ##   ### ##       
+########     ##       ########  ########  #######   #######  ########     ##     ## ########  #######  ##    ## ######## 
+
+
+
+ ######   #######  ##        #######  ##    ## ####    ###    ##                ##    #### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##       
+##    ## ##     ## ##       ##     ## ###   ##  ##    ## ##   ##               ##      ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##       
+##       ##     ## ##       ##     ## ####  ##  ##   ##   ##  ##              ##       ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##       
+##       ##     ## ##       ##     ## ## ## ##  ##  ##     ## ##             ##        ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##       
+##       ##     ## ##       ##     ## ##  ####  ##  ######### ##            ##         ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##       
+##    ## ##     ## ##       ##     ## ##   ###  ##  ##     ## ##           ##          ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##       
+ ######   #######  ########  #######  ##    ## #### ##     ## ########    ##          #### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ######## 
+
+
+	focus = {
+		id = ITA_ethiopian_war_logistics_bba
+		icon = GFX_ITA_triumph
+
+		x = 2
+		y = 0
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				always = no
+			}
+		}
+		cost = 1
+
+		available = {
+		}
+		
+		completion_reward = {
+			if = { limit = { 550 = { is_owned_and_controlled_by = IEA } }
+				550 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				550 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 12766
+						instant_build = yes
+					}
+				}
+			}
+
+			if = { limit = { 559 = { is_owned_and_controlled_by = IEA } }
+				559 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+				}
+				559 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 12991
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_italian_highways_bba
+		icon = GFX_ITA_road
+		x = 6
+		y = 0
+		relative_position_id = ITA_ethiopian_war_logistics_bba
+		cost = 5
+		available = {
+			OR = {
+				controls_state = 2
+				controls_state = 117
+				controls_state = 162
+				controls_state = 158
+			}
+		}
+
+		completion_reward = {
+		    custom_effect_tooltip = "ITALYHIGHWAY_TOOLTIP"
+			2 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			117 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			156 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			157 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			158 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			159 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			160 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			161 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			162 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_ministry_of_italian_africa
+		icon = GFX_ITA_ministry
+		prerequisite = { focus = ITA_italian_highways_bba }
+		prerequisite = { focus = ITA_ethiopian_war_logistics_bba }
+
+		x = -5
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 1
+		available = {
+
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+            add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_develop_eastafrica
+		icon = GFX_IEA_east
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 3
+		
+		bypass = {
+		   NOT = {
+               271 = {
+			   OR = {
+			        is_controlled_by = ROOT
+			        is_controlled_by = IEA
+			   }
+			   }		   
+		   }
+		}
+		
+		available = {
+               271 = {
+			   OR = {
+			        is_controlled_by = ROOT
+			        is_controlled_by = IEA
+			   }
+			   }
+		}
+		
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		
+		completion_reward = {
+		    271 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_develop_libya
+		icon = GFX_ITA_Italian_Libya
+		prerequisite = { focus = ITA_ministry_of_italian_africa }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_ministry_of_italian_africa
+		cost = 3
+		available = {
+		       448 = {
+			        is_controlled_by = ROOT
+			   }   
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		bypass = {
+		   NOT = {
+               271 = {
+			   OR = {
+			        is_controlled_by = ROOT
+			        is_controlled_by = IEA
+			   }
+			   }		   
+		   }
+		}
+		
+		available = {
+               271 = {
+			   OR = {
+			        is_controlled_by = ROOT
+			        is_controlled_by = IEA
+			   }
+			   }
+		}
+
+		completion_reward = {
+		    448 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+	
+	focus = {
+		id = ITA_regional_development
+		icon = GFX_ITA_development
+		prerequisite = { focus = ITA_develop_eastafrica }
+		prerequisite = { focus = ITA_develop_libya }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_develop_libya
+		cost = 3
+		available = {
+		    448 = {
+			is_controlled_by = ROOT
+		    } 
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		    448 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			
+					271 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+			    			
+			
+		}
+	}
+
+	focus = {
+		id = ITA_litoranea_balboo
+		icon = GFX_ITA_railway2
+		prerequisite = { focus = ITA_regional_development }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 3
+		available = {
+		  OR = {
+		   has_full_control_of_state = 451
+		   has_full_control_of_state = 464
+		   has_full_control_of_state = 663
+		   has_full_control_of_state = 450
+		   has_full_control_of_state = 449
+		   has_full_control_of_state = 767
+		   has_full_control_of_state = 662
+		   has_full_control_of_state = 448
+		   has_full_control_of_state = 661
+			}
+		}
+		
+		completion_reward = {
+			451 = {
+				add_building_construction = {
+								type = air_base
+								level = 5
+								instant_build = yes
+				}
+			}
+			164 = {
+				add_building_construction = {
+								type = air_base
+								level = 5
+								instant_build = yes
+				}
+			}			
+			663 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}
+			450 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}	
+			449 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}
+			767 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}	
+			662 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}
+			448 = {
+				add_building_construction = {
+								type = air_base
+								level = 4
+								instant_build = yes
+				}
+			}	
+			661 = {
+				add_building_construction = {
+								type = air_base
+								level = 10
+								instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_via_della_vittoria
+		icon = GFX_ITA_Fourth_Shore
+		prerequisite = { focus = ITA_litoranea_balboo }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_litoranea_balboo
+		cost = 3
+
+		available = {
+			has_full_control_of_state = 451
+			has_full_control_of_state = 449
+			has_full_control_of_state = 663 
+			has_full_control_of_state = 450
+			has_full_control_of_state = 448	
+			has_full_control_of_state = 661	
+		}
+
+		completion_reward = {
+		    451 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 3
+								instant_build = yes
+				}
+			}
+			663 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 3
+								instant_build = yes
+				}
+			}
+			450 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 3
+								instant_build = yes
+				}
+			}
+			449 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 2
+								instant_build = yes
+				}
+			}
+			448 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 2
+								instant_build = yes
+				}
+			}
+			661 = {
+				add_building_construction = {
+								type = infrastructure
+								level = 2
+								instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_prospect_for_oil
+		icon = GFX_ITA_oil
+		prerequisite = { focus = ITA_regional_development }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 3
+
+		available = {
+
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 30
+				state = 662
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_libyan_refineries
+		icon = GFX_ita_saiga
+		prerequisite = { focus = ITA_prospect_for_oil }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_prospect_for_oil
+		cost = 3
+
+		available = {
+          has_full_control_of_state = 450
+		}
+		completion_reward = {
+			450 = {
+				set_state_flag = benghazi_oil_developed
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_polizia_dell_africa_italiana
+		icon = GFX_POL_officers
+		prerequisite = { focus = ITA_regional_development }
+		x = 1
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 2
+		available = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+								type = motorized_equipment
+								amount = 1000
+								producer = ITA
+			}			
+			add_tech_bonus = {
+				name = "Polizia Bonus"
+				bonus = 1.0
+				uses = 2
+				technology = tech_military_police2
+				technology = tech_military_police3
+				technology = tech_military_police4
+			}				
+		}
+	}
+
+	focus = {
+		id = ITA_strengthen_ascari_corps
+		icon = GFX_IEA_Dubats
+		prerequisite = { focus = ITA_regional_development }
+		x = 3
+		y = 1
+		relative_position_id = ITA_regional_development
+		cost = 2
+		available = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip="irregular_infantry_tooltip"
+			set_technology = {
+				irregular_infantry = 1				
+			}
+				add_tech_bonus = {
+					name = "Desert Inf Bonus"
+					bonus = 1.0				
+					uses = 1
+					technology = desertinfantry_at2
+					technology = desertinfantry_at3				
+				}			
+		}
+	}
+
+	focus = {
+		id = ITA_comandante_diavolo
+		icon = GFX_IEA_victory
+		prerequisite = { focus = ITA_polizia_dell_africa_italiana focus = ITA_strengthen_ascari_corps }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_polizia_dell_africa_italiana
+		cost = 4
+		available = {
+
+		}
+
+		completion_reward = {
+          add_ideas = ITA_hardened_irregular_bands
+		  	add_equipment_to_stockpile = {
+								type = motorized_equipment
+								amount = 1000
+								producer = GER
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_steel_industry_in_terni
+		icon = GFX_PHI_steel
+		prerequisite = { focus = ITA_italian_highways_bba }
+		x = -1
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {
+			has_full_control_of_state = 2
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 32
+				}
+			}
+			
+			if = { limit = { has_global_flag = NO_SPAIN } 	
+				158 = {
+					add_resource = {
+						type = chromium
+						 amount = 125
+					}
+					add_resource = {
+						type = tungsten
+						 amount = 150
+					}
+				} 
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_power_plants_in_terni
+		icon = GFX_NZL_industrymob
+		prerequisite = { focus = ITA_italian_highways_bba }
+		x = 1
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {
+	         has_full_control_of_state = 2
+		}
+		
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		
+		completion_reward = {
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_industria_della_gomma_sintetica
+		icon = GFX_ITA_refs
+		prerequisite = { focus = ITA_steel_industry_in_terni focus = ITA_power_plants_in_terni }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_steel_industry_in_terni
+		cost = 5
+		available = {
+		  has_full_control_of_state = 2	
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_industria_della_gomma_sintetica
+				bonus = 0.75
+				uses = 2
+				category = cat_synth_oil
+			}
+
+				2 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = ITA_strengthen_northern_industry
+		icon = GFX_GENERIC_Nationalize_Industry
+		prerequisite = { focus = ITA_industria_della_gomma_sintetica }
+		x = -1
+		y = 1
+		relative_position_id = ITA_industria_della_gomma_sintetica
+		cost = 10
+		available = {
+		has_full_control_of_state = 160	
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+				160 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = ITA_modernize_the_mezzogiorno
+		icon = GFX_IEA_milz
+		prerequisite = { focus = ITA_industria_della_gomma_sintetica }
+		x = 1
+		y = 1
+		relative_position_id = ITA_industria_della_gomma_sintetica
+		cost = 10
+		available = {
+		has_full_control_of_state = 117
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+				117 = { #CAMPAGNA (Napoli)
+					if = {
+						limit = {
+							infrastructure < 5
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes						
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 819					
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = ITA_new_industrialization_program
+		icon = GFX_ITA_industrial_triangle
+		prerequisite = { focus = ITA_strengthen_northern_industry focus = ITA_modernize_the_mezzogiorno }
+		prerequisite = { focus = ITA_expand_national_universities }
+
+		x = 1
+		y = 2
+		relative_position_id = ITA_strengthen_northern_industry
+		cost = 5
+		available = {
+
+		}
+		
+        search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				technology = construction3
+				technology = construction4
+				technology = construction5
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_railway_innovations
+		icon = GFX_ITA_train
+		prerequisite = { focus = ITA_italian_highways_bba }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 2
+		available = {
+
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = wartime_train  }}
+			set_technology = {
+				wartime_train = 1
+			}}	
+		}
+	}
+
+	focus = {
+		id = ITA_expand_foggia_farm_fields
+		icon = GFX_USA_farm
+		prerequisite = { focus = ITA_railway_innovations }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_railway_innovations
+		cost = 5
+		available = {
+		NOT = {
+		  has_war = yes
+		}
+		}
+		
+		completion_reward = {
+		add_timed_idea = { idea = ITA_foggia_farm_fields days = 180 }	
+		}
+	}
+
+	focus = {
+		id = ITA_investments_in_edison
+		icon = GFX_electricity
+		prerequisite = { focus = ITA_railway_innovations }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_railway_innovations
+		cost = 5
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Electronics Bonus"
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_expand_national_universities
+		icon = GFX_researchslot1
+		prerequisite = { focus = ITA_investments_in_edison }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_investments_in_edison
+		cost = 10
+		available = {
+		}
+
+        search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ITA_fiocchi_munizioni
+		icon = GFX_AST_ammo
+		prerequisite = { focus = ITA_italian_highways_bba }
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {
+		  159 = {
+		    is_controlled_by = ROOT
+		   }
+		}
+
+		completion_reward = {
+		   159 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_brescia_small_arms_industry
+		icon = GFX_ITA_helmet
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 5
+		available = {
+		
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Gun 3 Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = improved_infantry_weapons
+				technology = advanced_infantry_weapons
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_milan_comms_industry
+		icon = GFX_GER_radar
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 5
+		available = {
+			has_tech = radio_detection
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 1.0
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_redirect_alfa_romeo_production
+		icon = GFX_focus_ITA_redirect_alfa_romeo_production
+		prerequisite = { focus = ITA_brescia_small_arms_industry focus = ITA_milan_comms_industry }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_brescia_small_arms_industry
+		cost = 5
+		available = {
+		  159 = {
+		    is_controlled_by = ROOT
+		   }
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		   159 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+            }			
+		}
+	}
+
+	focus = {
+		id = ITA_increase_production
+		icon = GFX_ITA_production
+		prerequisite = { focus = ITA_expand_national_universities }
+		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
+		mutually_exclusive = { focus = ITA_keep_specialization }
+		x = -1
+		y = 2
+		relative_position_id = ITA_redirect_alfa_romeo_production
+		cost = 5
+		available = {
+		}
+
+        search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_keep_specialization
+		icon = GFX_ITA_specialization
+		prerequisite = { focus = ITA_expand_national_universities }
+		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
+		mutually_exclusive = { focus = ITA_increase_production }
+		x = 1
+		y = 2
+		relative_position_id = ITA_redirect_alfa_romeo_production
+		cost = 5
+		available = {
+		}
+
+        search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_thermojet_research
+		icon = GFX_JAP_jet
+		prerequisite = { focus = ITA_increase_production focus = ITA_keep_specialization }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_increase_production
+		cost = 5
+		available = {
+		date > 1942.10.1
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = jet_engines  }}
+			set_technology = {
+				jet_engines = 1
+			}}
+		}
+	}
+
+
+########  ########  ######   ####  #######     ########  ######  ######## ########   ######  #### ########  #######  
+##     ## ##       ##    ##   ##  ##     ##    ##       ##    ## ##       ##     ## ##    ##  ##     ##    ##     ## 
+##     ## ##       ##         ##  ##     ##    ##       ##       ##       ##     ## ##        ##     ##    ##     ## 
+########  ######   ##   ####  ##  ##     ##    ######    ######  ######   ########  ##        ##     ##    ##     ## 
+##   ##   ##       ##    ##   ##  ##     ##    ##             ## ##       ##   ##   ##        ##     ##    ##     ## 
+##    ##  ##       ##    ##   ##  ##     ##    ##       ##    ## ##       ##    ##  ##    ##  ##     ##    ##     ## 
+##     ## ########  ######   ####  #######     ########  ######  ######## ##     ##  ######  ####    ##     #######  
+
+
+	focus = {
+		id = ITA_army_primacy_bba
+		icon = GFX_ITA_army
+
+		x = 13
+		y = 0
+		relative_position_id = ITA_italian_highways_bba
+		cost = 5
+		available = {
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+	    completion_reward = {
+			157 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_preserve_army_traditions
+		icon = GFX_Fascist_Militias
+		prerequisite = { focus = ITA_army_primacy_bba }
+		x = -3
+		y = 1
+		relative_position_id = ITA_army_primacy_bba
+		cost = 4
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Recon Company Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = tech_recon2
+				technology = tech_recon3
+			}			
+			army_experience = 100
+		}
+	}	
+	
+	focus = {
+		id = ITA_winter_line
+		icon = GFX_ITA_forts
+		prerequisite = { focus = ITA_army_primacy_bba }
+		x = 0
+		y = 1
+		relative_position_id = ITA_army_primacy_bba
+		cost = 1
+		available = {
+		surrender_progress > 0.05
+		controls_province = 11598
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "ITALYbunkersouth_TOOLTIP"
+			
+			2 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 923
+								instant_build = yes
+							}
+				}	
+				if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 11846
+								instant_build = yes
+							}
+				}	
+				if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 11882
+								instant_build = yes
+							}
+				}
+		    }	
+			157 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 963
+								instant_build = yes
+							}
+				}	
+				if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 6831
+								instant_build = yes
+							}
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = ITA_increase_artillery_production
+		icon = GFX_IEA_arty
+		prerequisite = { focus = ITA_fiocchi_munizioni }
+		prerequisite = { focus = ITA_army_primacy_bba }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_fiocchi_munizioni
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Arty Bonus"
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}	
+	
+	focus = {
+		id = ITA_increase_antiair_production
+		icon = GFX_airdefense
+		prerequisite = { focus = ITA_increase_artillery_production }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_increase_artillery_production
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Anti-Air Bonus"
+				uses = 1
+				bonus = 1.0
+				category = cat_anti_air
+			}	
+		
+             every_controlled_state = {
+			 limit = {
+			 is_core_of = ITA
+			 is_controlled_by = ROOT 
+			 NOT = {
+			 	anti_air_building > 0
+			 }
+			 }
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_vallo_alpino_del_littorio
+		icon = GFX_ITA_forts
+		prerequisite = { focus = ITA_milan_comms_industry focus = ITA_increase_artillery_production }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_milan_comms_industry
+		cost = 1
+		
+		available = {
+
+		}
+
+		completion_reward = {
+			# French border
+			custom_effect_tooltip = "ITALYBunkerfrance_TOOLTIP"
+			158 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }													
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 611
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 6780
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 9738
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 11721
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								province = 11891
+								instant_build = yes
+							}
+						}
+		    }
+		}
+	}
+
+	focus = {
+		id = ITA_support_eq
+		icon = GFX_AST_supplies
+		prerequisite = { focus = ITA_preserve_army_traditions }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 3
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Support Tech Bonus"
+				uses = 2
+				bonus = 1.0
+				category = support_tech
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_maneuver_warfare
+		icon = GFX_IEA_butcher
+		prerequisite = { focus = ITA_army_primacy_bba }
+		x = 3
+		y = 1
+		relative_position_id = ITA_army_primacy_bba
+		cost = 4
+		available = {
+		}
+
+		completion_reward = {
+				if = {
+			limit = {			
+			 NOT = {
+			 	has_tech = armored_car2
+             }		
+             }
+				set_technology = {
+				armored_car2 = 1
+				}}
+			add_tech_bonus = {
+				name = "Mechanized Bonus"
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	
+
+	focus = {
+		id = ITA_army_leaders
+		icon = GFX_ITA_officers
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_maneuver_warfare }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 2
+		available = {
+
+		}
+		
+		completion_reward = {
+		army_experience = 100
+		  add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }		
+		}
+	}
+
+	focus = {
+		id = ITA_superesercito
+		icon = GFX_ITA_armyupgrade
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_maneuver_warfare }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 3
+		available = {
+
+		}
+		
+        search_filters = {FOCUS_FILTER_MANPOWER}  
+		
+		completion_reward = {
+			if = {
+				limit = {
+				OR = {
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+				}
+				add_political_power = 120
+			}		
+			if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				add_ideas = extensive_conscription
+			}
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				add_ideas = limited_conscription
+			}
+            custom_effect_tooltip = manpower_upping_desc			
+		}
+	}
+
+	focus = {
+		id = ITA_italian_tanks
+		icon = GFX_JAP_tankeq
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_maneuver_warfare }
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+				}					
+		}
+	}
+
+	focus = {
+		id = ITA_bersaglieri
+		icon = GFX_ITA_arditi
+		prerequisite = { focus = ITA_army_leaders }
+		prerequisite = { focus = ITA_superesercito }
+		search_filters = {FOCUS_FILTER_MANPOWER}  
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_army_leaders
+		cost = 4
+		available = {
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Jaegers Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = jaegers2
+				technology = jaegers3
+			}
+			if = {
+				limit = { has_idea = SPA_expand_conscription }
+				swap_ideas = {
+						add_idea = SPA_expand_conscription_II
+						remove_idea = SPA_expand_conscription
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = SPA_expand_conscription }}
+				add_ideas = SPA_expand_conscription	
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_divisioni_alpine
+		icon = GFX_ITA_special
+		prerequisite = { focus = ITA_bersaglieri }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_bersaglieri
+		cost = 4
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Mountaineers Bonus"
+				bonus = 1.0				
+				uses = 1
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3			
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_fanti_dell_aria
+		icon = GFX_ITA_paratroopers
+		prerequisite = { focus = ITA_bersaglieri }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_bersaglieri
+		cost = 4
+		available = {
+		date > 1939.12.12
+		has_tech = paratroopers
+		}
+		
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
+		
+		completion_reward = {
+		custom_effect_tooltip = "ITA_PARATROOPER_TOOLTIP"
+        load_oob = "ITA_paratroopers"		
+			add_tech_bonus = {
+				name = "Paratrooper Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_self_propelled_guns
+		icon = GFX_ITA_semovente
+		prerequisite = { focus = ITA_superesercito }
+		prerequisite = { focus = ITA_italian_tanks }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_superesercito
+		cost = 3
+		available = {
+
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Tank Module Bonus"
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_end_fiat_ansaldo_duopoly
+		icon = GFX_ITA_mediums
+		prerequisite = { focus = ITA_self_propelled_guns }
+		mutually_exclusive = { focus = ITA_modernize_ansaldo_facilities }
+		x = -1
+		y = 1
+		relative_position_id = ITA_self_propelled_guns
+		cost = 5
+		available = {
+		}
+
+		available = {
+		date > 1938.01.01
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = engine_tech_3  }}
+			set_technology = {
+				engine_tech_3 = 1
+			}}	
+		}
+	}
+
+	focus = {
+		id = ITA_modernize_ansaldo_facilities
+		icon = GFX_ITA_ansaldo
+		prerequisite = { focus = ITA_self_propelled_guns }
+		mutually_exclusive = { focus = ITA_end_fiat_ansaldo_duopoly }
+		x = 1
+		y = 1
+		relative_position_id = ITA_self_propelled_guns
+		cost = 5
+		available = {
+		}
+
+		available = {
+		date > 1938.01.01
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = armor_tech_3  }}
+			set_technology = {
+				armor_tech_3 = 1
+			}}
+		}
+	}
+
+	focus = {
+		id = ITA_make_more_tanks
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		
+		prerequisite = { focus = ITA_maneuver_warfare }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_maneuver_warfare		
+		cost = 5
+		available = {
+		}
+
+        mutually_exclusive = { focus = ITA_standardization }
+
+		completion_reward = {
+            add_timed_idea = { idea = GER_tank_industry days = 180 }			
+		}
+	}
+	
+	focus = {
+		id = ITA_ariete
+		icon = GFX_ariete
+
+		prerequisite = { focus = ITA_end_fiat_ansaldo_duopoly focus = ITA_modernize_ansaldo_facilities }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_end_fiat_ansaldo_duopoly
+
+		cost = 5
+		available = {
+		 has_tech = tech_logistics_company
+		 has_tech = tech_maintenance_company
+		}
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {  
+            custom_effect_tooltip = "LIGHT_TANK_SPAWNIN_TOOLTIP"				
+					division_template = {
+						name = "Ariete"
+						priority = 2
+						division_names_group = ITA_ARM_01
+						regiments = {
+					motorized = { x = 0 y = 0 }
+					motorized = { x = 0 y = 1 }
+					motorized = { x = 0 y = 2 }
+					motorized = { x = 0 y = 3 }
+					motorized = { x = 0 y = 4 }
+					motorized = { x = 1 y = 0 } 
+					motorized = { x = 1 y = 1 }
+					motorized = { x = 1 y = 2 }
+					motorized = { x = 1 y = 3 }
+					motorized = { x = 1 y = 4 }					
+					light_armor = { x = 2 y = 0}
+					light_armor = { x = 2 y = 1} 
+					light_armor = { x = 2 y = 2} 
+					light_armor = { x = 2 y = 3} 
+					light_armor = { x = 2 y = 4} 
+					light_armor = { x = 3 y = 0} 
+					light_armor = { x = 3 y = 1} 
+					light_armor = { x = 3 y = 2} 
+					light_armor = { x = 3 y = 3} 
+					light_armor = { x = 3 y = 4} 
+						}
+						support = { 	
+							engineer = { x = 0 y = 0 }
+							logistics_company = { x = 0 y = 1 }
+							mot_recon = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 2 }
+					create_unit = {
+						division = "name = \"132nd Armored Division Ariete\" division_template = \"Ariete\" start_experience_factor = 0.7" 
+						owner = ITA
+					}
+				}
+		}
+	}	
+
+
+########  ########  ######   ####    ###          ###    ######## ########   #######  ##    ##    ###    ##     ## ######## ####  ######     ###    
+##     ## ##       ##    ##   ##    ## ##        ## ##   ##       ##     ## ##     ## ###   ##   ## ##   ##     ##    ##     ##  ##    ##   ## ##   
+##     ## ##       ##         ##   ##   ##      ##   ##  ##       ##     ## ##     ## ####  ##  ##   ##  ##     ##    ##     ##  ##        ##   ##  
+########  ######   ##   ####  ##  ##     ##    ##     ## ######   ########  ##     ## ## ## ## ##     ## ##     ##    ##     ##  ##       ##     ## 
+##   ##   ##       ##    ##   ##  #########    ######### ##       ##   ##   ##     ## ##  #### ######### ##     ##    ##     ##  ##       ######### 
+##    ##  ##       ##    ##   ##  ##     ##    ##     ## ##       ##    ##  ##     ## ##   ### ##     ## ##     ##    ##     ##  ##    ## ##     ## 
+##     ## ########  ######   #### ##     ##    ##     ## ######## ##     ##  #######  ##    ## ##     ##  #######     ##    ####  ######  ##     ## 
+
+
+	focus = {
+		id = ITA_air_innovations_bba
+		icon = GFX_ITA_air
+
+		x = 7
+		y = 0
+		relative_position_id = ITA_army_primacy_bba
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+
+	focus = {
+		id = ITA_citta_dell_aria
+		icon = GFX_ITA_plane
+		prerequisite = { focus = ITA_air_innovations_bba }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_air_innovations_bba
+		cost = 5
+		available = {
+
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Aiframe Bonus"
+				bonus = 2.0
+				uses = 1
+				technology = improved_small_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_expand_rome_flying_school
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ITA_air_innovations_bba }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_air_innovations_bba
+		cost = 1
+		available = {
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_air_ground_cooperation
+				category = air_doctrine
+				uses = 4
+				cost_reduction = 0.5
+			}			
+		}
+	}
+
+	focus = {
+		id = ITA_reggianes_exports
+		icon = GFX_ITA_planecoop
+		prerequisite = { focus = ITA_citta_dell_aria }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 2
+		available = {
+			has_full_control_of_state = 161
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Electronics Bonus"
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = "Anti-Air Equipment Bonus"
+				bonus = 1.0
+				uses = 1
+				category = cat_air_guns
+			}			
+		}
+	}
+
+	focus = {
+		id = ITA_diving_bombers
+		icon = GFX_ITA_air_land_coordination
+		prerequisite = { focus = ITA_citta_dell_aria }
+		prerequisite = { focus = ITA_expand_rome_flying_school }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 3
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Bombers Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_airframe
+			}			
+		}
+	}
+
+	focus = {
+		id = ITA_superaereo
+		icon = GFX_ITA_rounder
+		prerequisite = { focus = ITA_citta_dell_aria }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_citta_dell_aria
+		cost = 5
+		available = {
+
+		}
+
+		completion_reward = {
+			 air_experience = 250
+		}
+	}
+
+	focus = {
+		id = ITA_standardization
+		icon = GFX_ITA_production
+		prerequisite = { focus = ITA_superaereo }
+		x = -1
+		y = 1
+		relative_position_id = ITA_superaereo
+		cost = 5
+		available = {
+		}
+
+        mutually_exclusive = { focus = ITA_make_more_tanks }
+
+		completion_reward = {
+           add_timed_idea = { idea = ROM_local_development days = 180 }				
+		}
+	}
+
+	focus = {
+		id = ITA_specialization
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = ITA_superaereo }
+		x = 1
+		y = 1
+		relative_position_id = ITA_superaereo
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		   	add_tech_bonus = {
+				name = "Air Modules Bonus"
+				bonus = 1.0
+				uses = 1
+				category = plane_modules_tech
+			} 		
+            add_ideas = BUL_aircraft_repair_facilities
+		}
+	}
+
+
+	focus = {
+		id = ITA_long_range_aircraft
+		icon = GFX_ITA_bomber2
+		prerequisite = { focus = ITA_standardization }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_standardization
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+		    air_experience = 25
+			add_tech_bonus = {
+				name = "Range Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = range_improvements
+			}  
+		   	add_tech_bonus = {
+				name = "Plane Modules Bonus" 
+				bonus = 1.0
+				uses = 1
+				category = plane_modules_tech
+			} 			
+		}
+	}
+
+	focus = {
+		id = ITA_bomber_designs
+		icon = GFX_ITA_bomber
+		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
+
+		x = 2
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+		    air_experience = 25
+			add_tech_bonus = {
+				name = "Bomber Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = advanced_medium_airframe		
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_fighter_designs
+		icon = GFX_ITA_fighter
+		prerequisite = { focus = ITA_standardization focus = ITA_specialization }
+
+		x = 4
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+		    air_experience = 25
+			add_tech_bonus = {
+				name = "Small Airframe Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = advanced_small_airframe
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_multirole_aircraft
+		icon = GFX_ITA_fiat_G55
+		prerequisite = { focus = ITA_specialization }
+
+		x = 6
+		y = 0
+		relative_position_id = ITA_long_range_aircraft
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+		    air_experience = 25
+			add_tech_bonus = {
+				name = "CAS Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = late_bombs
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_supremacy_in_the_skies
+		icon = GFX_ITA_mussolini_air
+		prerequisite = { focus = ITA_multirole_aircraft focus = ITA_long_range_aircraft focus = ITA_fighter_designs focus = ITA_bomber_designs }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_bomber_designs
+		cost = 5
+		available = {
+		has_tech = jet_engines
+		date > 1943.1.1
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = modern_small_airframe  }}
+			set_technology = {
+				modern_small_airframe = 1
+			}}
+		}
+	}
+
+
+########  ########  ######   ####    ###       ##     ##    ###    ########  #### ##    ##    ###    
+##     ## ##       ##    ##   ##    ## ##      ###   ###   ## ##   ##     ##  ##  ###   ##   ## ##   
+##     ## ##       ##         ##   ##   ##     #### ####  ##   ##  ##     ##  ##  ####  ##  ##   ##  
+########  ######   ##   ####  ##  ##     ##    ## ### ## ##     ## ########   ##  ## ## ## ##     ## 
+##   ##   ##       ##    ##   ##  #########    ##     ## ######### ##   ##    ##  ##  #### ######### 
+##    ##  ##       ##    ##   ##  ##     ##    ##     ## ##     ## ##    ##   ##  ##   ### ##     ## 
+##     ## ########  ######   #### ##     ##    ##     ## ##     ## ##     ## #### ##    ## ##     ## 
+
+
+	focus = {
+		id = ITA_naval_power_projection
+		icon = GFX_ITA_navy
+
+		x = 11
+		y = 0
+		relative_position_id = ITA_air_innovations_bba
+		cost = 2
+		available = {
+		}
+		
+		completion_reward = {
+		unlock_decision_tooltip = ITA_comp_1
+		unlock_decision_tooltip = ITA_comp_2
+		unlock_decision_tooltip = ITA_comp_3
+			navy_experience = 250
+
+			add_doctrine_cost_reduction = {
+				name = FRA_army_reform
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}				
+		}
+	}
+
+	focus = {
+		id = ITA_intensify_torpedo_manufacturing
+		icon = GFX_JAP_torp
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 1
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Torps Bonus"
+				bonus = 1.0
+				uses = 1
+				category = cat_torpedoes
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_expand_naval_facilities
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 5
+		available = {
+               has_full_control_of_state = 157
+               has_full_control_of_state = 158
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+	
+	        158 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+            }	
+			157 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+            }
+			add_ideas = ITA_expand_the_repair_yards
+		}
+	}
+
+	focus = {
+		id = ITA_oto_naval_guns
+		icon = GFX_ITA_shoredefense
+		prerequisite = { focus = ITA_naval_power_projection }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_naval_power_projection
+		cost = 3
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_oto_naval_guns
+				bonus = 1.0
+				uses = 1
+				category = cat_ship_light_battery
+				category = cat_ship_medium_battery
+				category = cat_ship_heavy_battery
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_improve_overseas_naval_bases
+		icon = GFX_AST_scrap
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = -4
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 3
+		available = {
+			has_full_control_of_state = 450 
+			has_full_control_of_state = 448	
+			has_full_control_of_state = 451		
+		}
+
+	    completion_reward = {
+			450 = {
+				add_building_construction = {
+								type = naval_base
+								level = 10
+								province = 10907
+								instant_build = yes
+				}	
+				add_building_construction = {
+								type = naval_base
+								level = 10
+								province = 13134
+								instant_build = yes
+				}
+			}
+			449 = {
+				add_building_construction = {
+								type = naval_base
+								level = 10
+								province = 2023
+								instant_build = yes
+				}
+			}
+			448 = {
+				add_building_construction = {
+								type = naval_base
+								level = 10
+								province = 12994
+								instant_build = yes
+				}
+			}	
+			451 = {
+				add_building_construction = {
+								type = naval_base
+								level = 10
+								province = 1140
+								instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_milizia_marittima_di_artiglieria
+		icon = GFX_focus_ITA_milizia_marittima_di_artiglieria
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+			# Dodecanese
+			164 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 10007
+					instant_build = yes
+				   }
+			    }
+			}
+			# Sardinia
+			114 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11773
+					instant_build = yes
+				}		
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6891
+					instant_build = yes
+				}
+			}
+			}
+			# Sicily
+			115 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }			
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 7059
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 10074
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 4014
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 4159
+					instant_build = yes
+				}
+				
+			}
+			}
+			# Tuscany
+			162 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 6973
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 11833
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6875
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6946
+					instant_build = yes
+				}
+			}
+			}
+			
+			# Piedmont
+			158 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 6788
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 3772
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11891
+					instant_build = yes
+				}	
+			}
+			}
+			
+			# Savoy
+			735 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 9909
+					instant_build = yes
+				}
+			}
+			}
+			# Latium
+			2 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 923
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6862
+					instant_build = yes
+				}		
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 8231
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 11846
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 11751
+					instant_build = yes
+				}
+			}
+			}
+						# Campania
+			117 = {
+						  if = {
+		         limit = { is_controlled_by = ROOT }	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 819
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 955
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 851
+					instant_build = yes
+				}
+			}
+			}
+			
+			# Abruzzo
+			157 = {
+						  if = {
+		         limit = { is_controlled_by = ROOT }	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 6831
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 925
+					instant_build = yes
+				}
+			}
+			}
+			161 = {
+						  if = {
+		         limit = { is_controlled_by = ROOT }	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 782
+					instant_build = yes
+				}
+			}
+			}
+			160 = {
+						  if = {
+		         limit = { is_controlled_by = ROOT }	
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 11584
+					instant_build = yes
+				}	
+			}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_supermarina
+		icon = GFX_ITA_boats
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 3
+		available = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+                name = naval_doc_bonus
+                cost_reduction = 0.5
+                uses = 2
+                category = naval_doctrine
+            }
+		}
+	}	
+	
+	focus = {
+		id = ITA_mechantmarine
+		icon = GFX_ENG_repair
+		prerequisite = { focus = ITA_supermarina }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 1
+		available = {
+
+		}
+
+		completion_reward = {
+	    		add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}	
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 200
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_stockpile_fuel
+		icon = GFX_ITA_barrels
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 1
+		available = {
+			
+		}
+
+		completion_reward = {
+             set_fuel_ratio = 1
+			160 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = fuel_silo
+							level = 2
+							instant_build = yes
+						}			
+			}			 
+		}
+	}
+
+	focus = {
+		id = ITA_forza_navale_especiale
+		icon = GFX_AST_training
+		prerequisite = { focus = ITA_expand_naval_facilities }
+
+		x = 4
+		y = 1
+		relative_position_id = ITA_expand_naval_facilities
+		cost = 3
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_marines_and_landing_craft
+				bonus = 2.0
+				uses = 1
+				technology = marines2
+				technology = marines3
+			}
+			add_tech_bonus = {
+				name = ITA_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				technology = transport
+				technology = landing_craft
+				technology = tank_landing_craft
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_naval_air_coordination
+		icon = GFX_goal_nav_bombing
+		prerequisite = { focus = ITA_supermarina }
+		prerequisite = { focus = ITA_expand_rome_flying_school }
+
+		x = -6
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 1	
+		available = {
+		}
+
+		completion_reward = {
+		    air_experience = 100
+			navy_experience = 100
+			add_tech_bonus = {
+				name = "Large Airframes Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = improved_large_airframe
+				technology = advanced_large_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_incrociatori_leggeri
+		icon = GFX_ITA_Decima_Flottiglia_MAS
+		prerequisite = { focus = ITA_supermarina }
+		x = -2
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_escort_effort
+				bonus = 1.5
+				uses = 1
+				category = dd_tech
+			}			
+		}
+	}
+
+	focus = {
+		id = ITA_incrociatori_pesanti
+		icon = GFX_ITA_capitals
+		prerequisite = { focus = ITA_supermarina }
+		x = 2
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 5
+		available = {
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 1.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.5
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+			}			
+		}
+	}
+
+	focus = {
+		id = ITA_cooperation_programs
+		icon = GFX_ITA_admiral
+		prerequisite = { focus = ITA_supermarina }
+
+		x = 6
+		y = 1
+		relative_position_id = ITA_supermarina
+		cost = 1
+		available = {
+		}
+
+		completion_reward = {
+			navy_experience = 150
+		}
+	}
+
+	focus = {
+		id = ITA_submarine_effort
+		icon = GFX_GER_sub
+		prerequisite = { focus = ITA_incrociatori_leggeri }
+		x = -2
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 2
+		available = {
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = ITA_sea_wolves
+				cost_reduction = 0.5
+				uses = 2
+				category = submarine_doctrine 
+			}		
+			add_tech_bonus = {
+				name = "Submarine Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = improved_ship_hull_submarine
+			}			
+			set_technology = { cruiser_submarines = 1 }
+		 custom_effect_tooltip="MIDGET_SUB_TOOLTIP"	
+		hidden_effect = {
+            set_technology = { ship_hull_midget_submarine_tech = 1 } 
+		}			
+		}
+	}
+
+	focus = {
+		id = ITA_cacciatorpediniere_di_scorta
+		icon = GFX_ITA_dds
+		prerequisite = { focus = ITA_incrociatori_leggeri }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 5
+		available = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_asw_warfare
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = asw_tech
+			}
+
+			162 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+            }			
+		}
+	}
+
+	focus = {
+		id = ITA_ispettorato_dei_mezzi_antisommergibili
+		icon = GFX_AST_patrol
+		prerequisite = { focus = ITA_incrociatori_leggeri focus = ITA_incrociatori_pesanti }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_incrociatori_leggeri
+		cost = 3
+		available = {
+
+		}
+
+		completion_reward = {
+		add_ideas = ENG_anti_submarine_training_school	
+			add_doctrine_cost_reduction = {
+                name = naval_doc_bonus
+                cost_reduction = 0.5
+                uses = 2
+                category = naval_doctrine
+            }
+		}
+	}
+
+	focus = {
+		id = ITA_navi_da_battaglia
+		icon = GFX_ITA_ROMA
+		prerequisite = { focus = ITA_incrociatori_pesanti }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_incrociatori_pesanti
+		cost = 5
+		
+        available = {
+		has_war = yes
+		}
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {
+          custom_effect_tooltip="ITA_BATTLESHIPS_TOOLTIP"		
+          hidden_effect = {
+	create_equipment_variant = {
+			name = "Littorio Class 2"
+			type = ship_hull_heavy_2
+			name_group = ITA_BB_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				fixed_ship_armor_slot = ship_armor_bb_2
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_secondaries_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_heavy_battery_2
+			}
+		}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "ITA"
+						version_name = "Littorio Class 2"
+					}
+					name = "Roma"
+					requested_factories = 1
+					progress = 0.6
+					amount = 1
+				}		
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "ITA"
+						version_name = "Littorio Class 2"
+					}
+					name = "Impero"
+					requested_factories = 1
+					progress = 0.6
+					amount = 1
+				}		
+		  }
+		  
+			158 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+            }		  
+		}
+	}
+
+	focus = {
+		id = ITA_carrier_effort2
+		icon = GFX_NZL_carrier
+		prerequisite = { focus = ITA_incrociatori_pesanti }
+		x = 2
+		y = 1
+		relative_position_id = ITA_incrociatori_pesanti
+		cost = 2
+		
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
+		
+       available = {
+		has_war = yes
+		has_tech = early_ship_hull_carrier
+		}
+
+		completion_reward = {
+			custom_effect_tooltip="ITA_CARRIERS_TOOLTIP"
+			hidden_effect = {
+	create_equipment_variant = {
+		name = "Sparviero Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = ITA_CVL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+		}
+	}			
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_conversion_ca
+						creator = "ITA"
+						version_name = "Sparviero Class"
+					}
+					name = "Aquila"
+					requested_factories = 1
+					progress = 0.6
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_conversion_ca
+						creator = "ITA"
+						version_name = "Sparviero Class"
+					}
+					name = "Sparviero"
+					requested_factories = 1
+					progress = 0.6
+					amount = 1
+				}
+			}
+	
+			158 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+            }	
+	
+		}
+	}
+
+	focus = {
+		id = ITA_mare_nostrum
+		icon = GFX_ITA_mare_nostrum
+		prerequisite = { focus = ITA_ispettorato_dei_mezzi_antisommergibili focus = ITA_cacciatorpediniere_di_scorta focus = ITA_navi_da_battaglia }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_ispettorato_dei_mezzi_antisommergibili
+		cost = 5
+		available = {
+		    has_full_control_of_state = 161
+   		    OR = {
+            controls_state = 182
+			any_allied_country = { controls_state = 182 }
+			}   
+		    OR = {
+            controls_state = 840
+			any_allied_country = { controls_state = 840 }
+			}		
+			OR = {
+            controls_state = 183
+			any_allied_country = { controls_state = 183 }
+			}		
+			OR = {
+            controls_state = 164
+			any_allied_country = { controls_state = 164 }
+			}		
+			OR = {
+            controls_state = 446
+			any_allied_country = { controls_state = 446 }
+			}		
+			OR = {
+            controls_state = 116
+			any_allied_country = { controls_state = 116 }
+			}	
+			OR = {
+            controls_state = 1
+			any_allied_country = { controls_state = 1 }
+			}			
+		}
+		
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		
+		completion_reward = {
+	        161 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+            }
+            	add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+	}
+
+
+
+##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##       
+##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##       
+##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##       
+#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##       
+##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##       
+##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##       
+##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ######## 
+
+	focus = {
+		id = ITA_triumph_in_africa_bba
+		icon = GFX_IEA_east
+
+		x = 50
+		y = 0
+		cost = 1
+
+		available = {
+           date > 1937.1.1
+		}
+		
+        search_filters = {FOCUS_FILTER_WAR_SUPPORT}		
+		
+		completion_reward = {		
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = ITA_anglo_italian_agreements
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = -2
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+
+        available = {NOT = { has_war_with = ENG }}
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+           add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = ITA_lessons_of_war
+		icon = GFX_researchslot1
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {
+
+		}
+		
+	    search_filters = {FOCUS_FILTER_RESEARCH}	
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ITA_culto_del_duce
+		icon = GFX_focus_ITA_culto_del_duce
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		allow_branch = {
+             always = yes
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 5
+		available = {
+
+		}
+		
+        search_filters = {FOCUS_FILTER_STABILITY}		
+		
+		completion_reward = {
+           add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = ITA_the_man_of_providence
+		icon = GFX_ITA_officers
+		prerequisite = { focus = ITA_culto_del_duce }
+
+		x = -3
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 5
+		available = {
+           date > 1938.6.1
+		}
+
+		completion_reward = {
+           add_timed_idea = { idea = fascist_influence days = 180 }
+		   custom_effect_tooltip = "ITA_FASCIST_TOOLTIP"
+		}
+	}
+
+	focus = {
+		id = ITA_boost_the_grand_council_of_fascism
+		icon = GFX_ITA_council
+		prerequisite = { focus = ITA_the_man_of_providence }
+		mutually_exclusive = { focus = ITA_to_live_as_a_lion }
+		x = -1
+		y = 2
+		relative_position_id = ITA_the_man_of_providence
+		cost = 5
+		available = {
+
+		}
+
+        search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {
+             add_stability = 0.08
+			 add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ITA_to_live_as_a_lion
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = ITA_the_man_of_providence }
+		mutually_exclusive = { focus = ITA_boost_the_grand_council_of_fascism }
+		x = 2
+		y = 0
+		relative_position_id = ITA_boost_the_grand_council_of_fascism
+		cost = 5
+		available = {
+
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = victor_emmanuell
+				add_idea = victor_emmanuell_2
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_del_grano
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = ITA_culto_del_duce }
+		mutually_exclusive = { focus = ITA_la_battaglia_per_la_terra }
+		x = -1
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 5
+		available = {
+		   has_full_control_of_state = 117
+		}
+
+		completion_reward = {
+		    117 = {
+                add_extra_state_shared_building_slots = 1			
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_per_la_terra
+		icon = GFX_Tractors
+		prerequisite = { focus = ITA_culto_del_duce }
+		mutually_exclusive = { focus = ITA_la_battaglia_del_grano }
+		x = 1
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		    115 = {
+            add_extra_state_shared_building_slots = 2
+			}	
+			156 = {
+            add_extra_state_shared_building_slots = 2
+			}		
+			157 = {
+            add_extra_state_shared_building_slots = 2
+			}	
+			117 = {
+            add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_la_battaglia_per_le_nascite
+		icon = GFX_ITA_family
+		prerequisite = { focus = ITA_la_battaglia_del_grano focus = ITA_la_battaglia_per_la_terra }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_la_battaglia_del_grano
+		cost = 5
+		available = {
+		}
+
+        search_filters = {FOCUS_FILTER_MANPOWER}  
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = SPA_expand_conscription }
+				swap_ideas = {
+						add_idea = SPA_expand_conscription_II
+						remove_idea = SPA_expand_conscription
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = SPA_expand_conscription }}
+				add_ideas = SPA_expand_conscription	
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_ministero_della_cultura_popolare 
+		icon = GFX_ITA_ministry
+		prerequisite = { focus = ITA_culto_del_duce }
+
+		x = 3
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+                 always = no
+			}
+		}
+
+		cost = 2
+		available = {
+			has_government = fascism
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+          add_war_support = 0.05 
+           add_political_power = 50
+			add_tech_bonus = {
+				name = "Decryption Bonus"
+				bonus = 2.0
+				uses = 2
+				category = encryption_tech
+				category = decryption_tech
+			}		   
+		}
+	}
+
+	focus = {
+		id = ITA_strengthen_the_regime
+		icon = GFX_ITA_regime
+		prerequisite = { focus = ITA_ministero_della_cultura_popolare }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_ministero_della_cultura_popolare
+		cost = 2
+		available = {
+			has_country_leader = {
+				character = ITA_benito_mussolini
+				ruling_only = yes
+			}
+		}
+
+		completion_reward = {
+          add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+
+	focus = {
+		id = ITA_security_militias
+		icon = GFX_ITA_guns
+		prerequisite = { focus = ITA_culto_del_duce }
+
+		x = 6
+		y = 1
+		relative_position_id = ITA_culto_del_duce
+
+		offset = {
+			x = -11
+			y = 0
+			trigger = {
+               always = no
+			}
+		}
+
+		cost = 4
+		available = {
+
+		}
+
+		completion_reward = {
+		    custom_effect_tooltip="militia_infantry_tooltip"
+			set_technology = {
+				militia = 1
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_battaglioni_d_assalto
+		icon = GFX_ITA_MVSN_Legion
+		prerequisite = { focus = ITA_security_militias }
+		mutually_exclusive = { focus = ITA_strengthen_the_blackshirts }
+		x = -1
+		y = 2
+		relative_position_id = ITA_security_militias
+
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+               always = no
+			}
+		}
+
+		cost = 5
+		available = {
+
+		}
+
+		completion_reward = {
+			set_technology = {
+				blackshirt_assault_battalion_tech = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_strengthen_the_blackshirts
+		icon = GFX_ITA_eagle
+		prerequisite = { focus = ITA_security_militias }
+		mutually_exclusive = { focus = ITA_battaglioni_d_assalto }
+		x = 2
+		y = 0
+		relative_position_id = ITA_battaglioni_d_assalto
+		cost = 3
+		available = {
+
+		}
+
+		completion_reward = {
+			set_technology = {
+				mountain_militias_tech = 1
+			}	
+		}
+	}
+
+	focus = {
+		id = ITA_milizia_coloniale
+		icon = GFX_ITA_colony
+		prerequisite = { focus = ITA_battaglioni_d_assalto focus = ITA_strengthen_the_blackshirts }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_battaglioni_d_assalto
+		cost = 2
+		available = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Logistics Bonus"
+				bonus = 1.0
+				uses = 1
+				technology = tech_logistics_company2
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
+			}				
+		}
+	}
+
+	focus = {
+		id = ITA_towards_a_greater_italy
+		icon = GFX_ITA_roads
+		prerequisite = { focus = ITA_strengthen_the_regime }
+        prerequisite = { focus = ITA_la_battaglia_per_le_nascite }		
+		prerequisite = { focus = ITA_to_live_as_a_lion focus = ITA_boost_the_grand_council_of_fascism }	
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_la_battaglia_per_le_nascite
+		cost = 5
+
+		offset = {
+			x = 8
+			y = 0
+			trigger = {
+                always = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		available = {
+			fascism > 0.95
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.15
+			add_state_core = 735
+		}
+	}
+
+
+########  #######  ########  ######## ####  ######   ##    ##    ########   #######  ##       #### ######## ####  ######   ######     ########  ####  ######   ##     ## ######## 
+##       ##     ## ##     ## ##        ##  ##    ##  ###   ##    ##     ## ##     ## ##        ##     ##     ##  ##    ## ##    ##    ##     ##  ##  ##    ##  ##     ##    ##    
+##       ##     ## ##     ## ##        ##  ##        ####  ##    ##     ## ##     ## ##        ##     ##     ##  ##       ##          ##     ##  ##  ##        ##     ##    ##    
+######   ##     ## ########  ######    ##  ##   #### ## ## ##    ########  ##     ## ##        ##     ##     ##  ##        ######     ########   ##  ##   #### #########    ##    
+##       ##     ## ##   ##   ##        ##  ##    ##  ##  ####    ##        ##     ## ##        ##     ##     ##  ##             ##    ##   ##    ##  ##    ##  ##     ##    ##    
+##       ##     ## ##    ##  ##        ##  ##    ##  ##   ###    ##        ##     ## ##        ##     ##     ##  ##    ## ##    ##    ##    ##   ##  ##    ##  ##     ##    ##    
+##        #######  ##     ## ######## ####  ######   ##    ##    ##         #######  ######## ####    ##    ####  ######   ######     ##     ## ####  ######   ##     ##    ##    
+
+
+	focus = {
+		id = ITA_foreign_affairs
+		icon = GFX_BUL_joinaxis
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = 12
+		y = 1
+		offset = {
+			x = -29
+			y = 0
+			trigger = {
+                  always = no
+			}
+		}
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+                    always = no
+			}
+		}
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 3
+		available = {
+
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = { 
+             add_political_power = 50
+			YUG = {
+				give_resource_rights = { receiver = ITA
+				state = 105 }
+			}			 
+		}
+	}
+	
+	focus = {
+		id = ITA_invest_in_bulgaria
+		icon = GFX_bulfriend
+		prerequisite = { focus = ITA_foreign_affairs }
+		x = -2
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = BUL
+			NOT = {
+				has_war_with = BUL
+			}
+		}
+
+		completion_reward = {
+			BUL = {
+				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
+				add_timed_idea = { idea = fascist_influence days = 1095 }
+			}
+			if = { limit = { 801 = { is_controlled_by = BUL } }
+            801 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}			
+		}
+	}	
+
+	focus = {
+		id = ITA_invest_in_romania
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = ITA_foreign_affairs }
+		x = 2
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = ROM
+			NOT = {
+				has_war_with = ROM
+			}
+		}
+
+		completion_reward = {
+			ROM = {
+				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus }
+				add_timed_idea = { idea = fascist_influence days = 1095 }
+			}
+			if = { limit = { 82 = { is_controlled_by = ROM } }
+            82 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}					
+		}
+	}	
+
+	focus = {
+		id = ITA_albanian_occupation
+		icon = GFX_ITA_albania
+		prerequisite = { focus = ITA_foreign_affairs }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		available = {
+		}
+
+		available = {
+		   
+		}	
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		    add_named_threat = { threat = 5 name = ITA_slovenia_dalmatia_claims_threat }
+			transfer_state = 44
+			transfer_state = 805
+            44 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}			
+			}		  
+			805 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}				
+			}			
+			add_state_core = 44
+			add_state_core = 805	
+			add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 750
+			producer = SWI
+			}	
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 16000
+			}
+			
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 44
+			}			
+		}
+	}
+	
+	focus = {
+		id = ITA_pact_of_steel
+		icon = GFX_IEA_modernize
+		prerequisite = { focus = ITA_albanian_occupation }
+		x = 1
+		y = 1
+		relative_position_id = ITA_albanian_occupation
+		cost = 5
+
+		available = {
+
+		}
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		completion_reward = {
+	    	add_political_power = 100
+			GER = {
+				add_opinion_modifier = { target = ITA modifier = pact_of_steel_opinion }
+			}	
+			hidden_effect = {
+				news_event = { hours = 6 id = news.184 }
+			}
+            add_ideas = ITA_german_millitary_cooperation_focus			
+		}
+	}
+
+	focus = {
+		id = ITA_treaty_with_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = ITA_pact_of_steel }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 5
+		available = {
+			
+		}
+
+		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = synth_oil_experiments  }}
+			set_technology = {
+				synth_oil_experiments = 1
+			}}
+            custom_effect_tooltip = "ITA_TREATY_TOOLTIP"			
+			GER = {
+				country_event = { id = italy.5 days = 1 }
+			}
+		}
+	}	
+	
+	focus = {
+		id = ITA_secret_weapons
+		icon = GFX_GEN_rocket
+		prerequisite = { focus = ITA_treaty_with_germany }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_treaty_with_germany
+		cost = 5
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Secret Weapons Bonus"
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+				category = nuclear
+			}
+		}
+	}	
+
+	# Italy auto declares on Greece, joins Axis, declares on Allies already at war. Axis countries at war with Allies declare on Greece
+	focus = {
+		id = ITA_greece_war_goal
+		icon = GFX_warwithgreece
+		prerequisite = { focus = ITA_albanian_occupation }
+
+		x = -1
+		y = 1
+		relative_position_id = ITA_albanian_occupation
+		cost = 1
+		available = {
+			FRA = { 
+					has_country_flag = france_is_capped
+			}
+			country_exists = GRE
+			}
+			
+		# add bypass if GRE doesnt exist
+
+		completion_reward = {
+			hidden_effect = {
+				ENG = { add_to_faction = GRE }
+				news_event = { hours = 6 id = news.186 } 
+			}
+			GER = { add_to_faction = ITA }
+			
+			# in case of weird situations - GER not at war with ENG
+			if = { limit = { GER = { NOT = { has_war_with = ENG } } } 
+				ITA = { declare_war_on = { target = GRE type = annex_everything } } }
+
+			# All enemies of England that are Axis declare on Greece
+			ENG = { 
+				every_enemy_country = { limit = { is_in_faction_with = GER} declare_war_on = { type = annex_everything target = GRE }}}
+		
+			# Italy and puppets declare on enemies of Germany that are in Allies
+			GER = {
+				every_enemy_country = { limit = { is_in_faction_with = ENG}
+					ITA = {
+						declare_war_on = { type = annex_everything target = PREV } 
+						every_subject_country = { declare_war_on = { type = annex_everything target = PREV.PREV }}}
+				}
+			}
+			GER = { add_to_faction = SPR }
+			GER = {
+				every_enemy_country = { limit = { is_in_faction_with = ENG}
+					SPR = {
+						declare_war_on = { type = annex_everything target = PREV } 
+						every_subject_country = { declare_war_on = { type = annex_everything target = PREV.PREV }}}
+				}
+			}
+
+
+
+			custom_effect_tooltip = "ITA_WAR_WITH_GREECE_TOOLTIP"
+			
+		}
+	}
+
+	focus = {
+		id = ITA_corpo_di_truppe_volontarie
+		icon = GFX_focus_intervention_spain_nationalists
+		prerequisite = { focus = ITA_foreign_affairs }
+
+		x = -4
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 2
+
+		bypass = {
+
+		}
+
+		available = {
+
+		}
+
+		completion_reward = { 
+		  add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+			add_tech_bonus = {
+				name = "Tank Module Bonus"
+				bonus = 1.0
+				uses = 1
+				category = tank_modules
+			}				
+		}
+	}
+
+
+
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+#####################
+
+ 	focus = {
+		id = ITA_italiansocialistrepublic
+		icon = GFX_ITA_socialistrepublic
+		x = -1
+		y = 2
+		relative_position_id = ITA_greece_war_goal
+		cost = 1
+		
+		allow_branch = {
+			always = yes 
+		}
+
+		available = {
+		surrender_progress > 0.4
+		controls_province = 11598
+		}
+
+	completion_reward = {
+	custom_effect_tooltip = "ITA_COMBAT_SLOWDOWN_TOOLTIP"
+	add_ideas = FIL_death_before_surrender2
+	if = {
+	limit = { has_idea = victor_emmanuell }
+	remove_ideas = victor_emmanuell
+	}
+
+	if = {
+	limit = { has_idea = victor_emmanuell_2 }
+	remove_ideas = victor_emmanuell_2
+	}
+	
+			if = {
+			limit = { NOT = { has_tech = rocket_artillery  }}
+			set_technology = {
+				rocket_artillery = 1
+			}}	
+	
+	hidden_effect = {
+	        set_cosmetic_tag = ITA_SOC				
+
+			115 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}		
+			156 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}		
+			117 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}	
+			157 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}	
+			2 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}	
+			162 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}
+			161 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}
+			158 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}	
+			159 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}
+			39 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}	
+			160 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}		
+			736 = {
+				add_dynamic_modifier = {
+					modifier = unplanned_offensive days = 30
+				}
+			}
+				if = {
+				limit = { NOT = { has_tech = rocket_artillery  }}
+				set_technology = {
+					rocket_artillery = 1
+				}}	
+			}	
+			
+	    }
+	}
+
+	focus = {
+		id = ITA_guardia_nazionale_repubblicana
+		icon = GFX_RSI_army
+		prerequisite = { focus = ITA_italiansocialistrepublic }
+		x = 0
+		y = 1
+		relative_position_id = ITA_italiansocialistrepublic
+		cost = 1
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		available = {
+		controls_province = 11598
+		}
+		cancel_if_invalid = yes
+
+		completion_reward = {	
+		
+	        custom_effect_tooltip = "ITA_GUARD_TOOLTIP"
+						
+			    hidden_effect = {
+			    if = {
+				limit = { NOT = { has_tech = interwar_antitank  }}
+				set_technology = {
+					interwar_antitank = 1
+				}}
+				if = {
+				limit = { NOT = { has_tech = tech_military_police  }}
+				set_technology = {
+					tech_military_police = 1
+				}}		
+				if = {
+				limit = { NOT = { has_tech = tech_recon  }}
+				set_technology = {
+					tech_recon = 1
+				}}					
+			   load_oob = "ITA_reserves"
+			   load_oob = "ITA_reserves"
+			   load_oob = "ITA_reserves"
+		       }
+		}
+	}
+
+	focus = {
+		id = ITA_german_reinforcements
+		icon = GFX_ITA_gerreinforce
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = -1
+		y = 1
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+		available = {
+		controls_province = 11598
+		}
+		cancel_if_invalid = yes
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {
+		        custom_effect_tooltip = "GER_ITA_REINFORCEMENTS_TOOLTIP"
+		        hidden_effect = {
+			    GER = {
+				if = {
+				limit = { NOT = { has_tech = tech_maintenance_company  }}
+				set_technology = {
+					tech_maintenance_company = 1
+				}}
+				if = {
+				limit = { NOT = { has_tech = tech_logistics_company  }}
+				set_technology = {
+					tech_logistics_company = 1
+				}}
+				if = {
+				limit = { NOT = { has_tech = mechanised_infantry  }}
+				set_technology = {
+					mechanised_infantry = 1
+				}}			
+			   load_oob = "GER_ITALY"
+			   }
+			   }
+			   custom_effect_tooltip = "NEWGENERAL_TOOLTIP"		
+		}
+	}
+
+	focus = {
+		id = ITA_battaglioni_m
+		icon = GFX_ITA_hat
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = 1
+		y = 1
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		bypass = {
+			
+		}
+
+		available = {
+		   controls_province = 11598
+		}
+		cancel_if_invalid = yes
+
+
+		completion_reward = {
+		        custom_effect_tooltip = "ITA_GUARD_TOOLTIP"
+			   
+			   
+		hidden_effect = {
+			   load_oob = "ITA_reserves"
+			   load_oob = "ITA_reserves"
+			   load_oob = "ITA_reserves"
+		}
+		}
+	}
+
+	focus = {
+		id = ITA_reinforce_the_gothic_line
+		icon = GFX_GER_FORT
+		prerequisite = { focus = ITA_guardia_nazionale_repubblicana }
+		x = 0
+		y = 2
+		relative_position_id = ITA_guardia_nazionale_repubblicana
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = "ITALYbunkernorth_TOOLTIP"
+			162 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }													
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 6973
+									instant_build = yes
+					}		
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 1616
+									instant_build = yes
+					}	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 11889
+									instant_build = yes
+					}
+				}
+		    }	
+			161 = {
+		         if = {
+		         limit = { is_controlled_by = ROOT }													
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 9924
+									instant_build = yes
+					}	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 782
+									instant_build = yes
+					}	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 6985
+									instant_build = yes
+					}	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 3976
+									instant_build = yes
+					}
+				}
+		    }
+		}
+	}
+
+
+
+}

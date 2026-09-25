@@ -1,0 +1,13 @@
+
+
+#create_corps_commander = { #ROLE staffer 
+#	name = "Leonard Beyers" #never fought, was just larping as chief of staff
+#	picture = "Leonard_Beyers.dds"
+#	traits = { media_personality infantry_leader organizer skilled_staffer inflexible_strategist  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 4
+#}
+	

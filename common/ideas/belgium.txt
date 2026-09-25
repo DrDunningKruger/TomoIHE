@@ -1,0 +1,726 @@
+ideas = {
+	country = {
+
+		BELAF = {
+		           
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+			picture = belaf
+
+		  modifier = {
+
+		  }			
+            
+			modifier = {
+			air_doctrine_cost_factor = -0.5
+			}
+		}
+
+		BEL_leadershipcrisis = {
+			picture = leadershipcrisis
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.45			
+				war_support_factor = -0.35
+				stability_factor = -0.25			
+			}
+		
+
+        }
+		
+		BEL_leadershipcrisis_2 = {
+			picture = leadershipcrisis
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.40		
+				war_support_factor = -0.30
+				stability_factor = -0.20			
+			}
+		
+
+        }
+		
+		BEL_inflexible = {
+			picture = inflexible
+			allowed = {
+				original_tag = BEL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1000.00
+			
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 10
+			}
+		}		
+
+
+		BEL_governmentoftwo = {
+			picture = eng_the_sun_never_sets
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {			
+				democratic_drift = 0.1
+				stability_factor = 0.05	
+                legitimacy_daily = 0.10				
+			}
+        }
+		
+		BEL_governmentoffour = {
+			picture = eng_the_sun_never_sets
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {			
+				democratic_drift = 0.2
+				stability_factor = 0.10
+				max_planning = 0.10	
+                legitimacy_daily = 0.20			
+			}
+		
+
+        }
+
+
+	
+		BEL_plan_de_man = {
+			picture = plan_de_man
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {			
+				consumer_goods_expected_value = -0.10				
+			}
+		
+
+        }
+	
+		BEL_aftermath = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_buildings_factor = -0.10			
+				political_power_cost = 0.15
+				consumer_goods_expected_value = 0.25		
+				hidden_modifier = {
+                production_speed_coastal_bunker_factor = 0.10		
+			    production_speed_bunker_factor = 0.10
+                }				
+			}
+		}
+
+				BEL_aftermath_2 = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_buildings_factor = -0.05			
+				political_power_cost = 0.05
+				consumer_goods_expected_value = 0.25	
+				hidden_modifier = {
+                production_speed_coastal_bunker_factor = 0.05		
+			    production_speed_bunker_factor = 0.05
+                }				
+			}
+		}
+		
+						BEL_aftermath_3 = {
+			picture = usa_great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				political_power_cost = 0.05
+				consumer_goods_expected_value = 0.15				
+			}
+		}
+		
+		BEL_gold_reserve = {
+			picture = golden_reserve
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_expected_value = -0.15			
+			}
+		}
+		
+		BEL_mobilization = {
+			picture = type99rifle
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.80
+				mobilization_speed = 0.5	
+                minimum_training_level = -0.3 				
+			}
+		}
+		
+		
+		BEL_obsolete_doctrine = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = belgian_doctrine
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				land_doctrine_cost_factor = 0.5
+                experience_gain_army_factor = -0.25		
+			}			
+	     }	
+		 
+		 BEL_fear = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_banned
+			
+			research_bonus = {		
+				armor = -0.50
+			}
+			modifier = {
+				democratic_drift = 0.05
+				war_support_factor = -0.1				
+			}
+	     }
+
+		 BEL_wartax = {
+			picture = generic_foreign_capital
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = golden_reserve
+			
+			modifier = {
+				industrial_capacity_factory = 0.1			
+				consumer_goods_expected_value = -0.10
+				war_support_factor = -0.1				
+			}
+		
+
+        }
+		BEL_colonial_army = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = congmen
+		 
+			modifier = {
+				conscription_factor = -0.75
+			}
+		}
+		BEL_colonial_army_II = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1 
+			
+			picture = congmen
+		 
+			modifier = {
+				conscription_factor = -0.65
+			}
+		}
+ }		
+ 
+ 	industrial_concern = {
+
+		UMHK = {
+
+			picture = UMHK
+			
+			allowed = {
+				original_TAG = BEL
+			}
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}
+		}	
+	
+		company_ACEC = {
+					
+			picture = company_ACEC
+				
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			cost = 100
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}			
+		}	
+		
+		brossel_motors = {
+			
+			picture = brossel_motors
+			
+			allowed = {
+	            original_tag = BEL
+			}
+			
+			research_bonus = {
+				industry = 0.05
+			}
+			
+			cost = 100
+			
+			traits = { railway_company }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}			
+		}	
+
+		company_solvay = {
+					
+			picture = company_solvay
+				
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				excavation_tech = 0.15
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			modifier = {
+				fuel_gain_factor_from_states = 0.05
+				production_oil_factor = 0.05
+			industrial_concern_cost_factor = -0.50
+			}			
+		}		
+	}
+
+	tank_manufacturers = {
+		company_vickers_belgium = {
+			picture = company_vickers_belgium
+			
+			allowed = {
+				original_TAG = BEL
+			}
+			
+			cost = 75
+			
+			research_bonus = {
+				armor = 0.15
+				tank_modules = 0.5
+			}
+			
+			traits = { assault_gun_manufacturer }
+			
+			modifier = {
+			tank_manufacturers_cost_factor = -1
+			}
+		}	
+	}	
+
+	aircraft_manufacturers = {
+	
+		#designer = yes
+
+		company_sabca = {
+			picture = company_sabca
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			cost = 100			
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { standard_CAS_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}			
+		}
+
+		renard = {
+			picture = company_renard
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			cost = 100				
+			
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { tactical_bomber_manufacturer }
+			
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}		
+		}		
+		
+		company_stampe_vertongen = {
+			picture = company_stampe_vertongen
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			cost = 100			
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { recon_plane_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}			
+		}
+	}
+	
+	naval_manufacturers = { 
+		
+		#designer = yes
+		
+		company_boel_zonen = { 
+			picture = company_boel_zonen
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			cost = 75
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+						
+			traits = { convoy_escort_naval_manufacturer }
+
+			modifier = {
+			naval_manufacturers_cost_factor = -1
+			}
+		}		
+		
+		BEL_cock = {
+			picture = cockerill
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			cost = 75
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+						
+			traits = { merchant_naval_manufacturer }
+			
+			modifier = {
+			naval_manufacturers_cost_factor = -1
+			}
+		}
+	}
+
+	materiel_manufacturers = {
+		
+		#designer = yes
+		
+		fn_herstol = {
+			
+			picture = fn_herstol
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+		}		
+		
+		company_mecar = {
+			
+			picture = company_mecar
+
+			
+			allowed = {
+				original_tag = BEL
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			available = {
+				has_completed_focus = BEL_rearmament
+			}			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+		}
+		
+		company_bayonne = {
+			
+			picture = company_bayonne
+
+			allowed = {
+				original_TAG = BEL
+			}
+			
+            cost = 150
+			
+			research_bonus = {
+				support_tech = 0.15
+			}
+			
+			traits = { support_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+			
+		}			
+		
+		company_miesse = {
+
+			picture = company_miesse
+			
+			allowed = {
+				original_TAG = BEL
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.15				
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+			
+		}		
+
+		belgian_fn_trucks = {
+
+			picture = FN_Trucks
+			
+			allowed = {
+				original_TAG = BEL
+			}
+			
+			cost = 150
+			
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+			
+			available = {
+				has_completed_focus = BEL_defensiveforce
+			}	
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}			
+		}		
+	}
+}

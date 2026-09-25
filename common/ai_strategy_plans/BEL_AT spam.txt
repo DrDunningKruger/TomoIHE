@@ -1,0 +1,1128 @@
+# target ?
+
+
+########################################
+# Research	default 
+########################################
+########################################
+# Research - production	
+########################################
+BEL_research_industry_t0 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_tech = basic_machine_tools 
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		concentrated_industry_category = -1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_industry_c12 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = basic_machine_tools 
+	}
+	abort = {
+		has_tech = concentrated_industry2  
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = -1
+		concentrated_industry_category = 1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_industry_t1 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = concentrated_industry2 
+	}
+	abort = {
+		has_tech = improved_machine_tools   
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		concentrated_industry_category = -1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_industry_c3 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = improved_machine_tools 
+	}
+	abort = {
+		has_tech = concentrated_industry3   
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = -1
+		concentrated_industry_category = 1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_industry_t2 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = concentrated_industry3 
+	}
+	abort = {
+		has_tech = advanced_machine_tools    
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		concentrated_industry_category = -1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_industry_c4 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = advanced_machine_tools 
+	}
+	abort = {
+		has_tech = concentrated_industry4    
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = -1
+		concentrated_industry_category = 1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+########################################
+# Research - electronics	
+########################################
+BEL_research_electronics_do_research = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		or = {
+			date > 1939.1.1
+			NOT = { BEL = { has_tech = electronic_mechanical_engineering } }
+		}
+	}
+	abort = {
+			or = {
+				and = {
+					has_tech = electronic_mechanical_engineering 
+					date < 1939.1.1				
+				}
+				has_tech = radio
+			}
+	}
+	research = {
+		# radio
+		electronics = 1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+BEL_research_electronics_do_not_research = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# radio
+		electronics = -1
+	}
+	weight = {
+		factor = 1000
+	}
+}
+
+
+
+########################################
+# Research - Land doctrine ???	
+########################################
+BEL_research_doctrine = {
+
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			always = no
+	}
+	
+	
+	research = {
+		# military
+		land_doctrine = 0 # obsolete?
+	}
+	weight = {
+		factor = 1000
+	}
+}
+########################################
+# Research - infantry	
+########################################
+BEL_research_infantry_weapons = { # namestiti da posle inf 2 researchuje defanzivne techove
+
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		or = {
+			has_tech = interwar_antiair  
+			has_tech = electronic_mechanical_engineering
+		} 
+	}
+	abort = {
+		has_tech = improved_infantry_weapons
+	}
+	research = {
+		# infantry
+		infantry_weapons = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+BEL_research_infantry_weapons = {
+
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_tech = improved_infantry_weapons
+	}
+	abort = {
+		always = no	
+	}
+	research = {
+		# infantry
+		artillery = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+
+########################################
+# Research - Artillery	
+########################################
+BEL_research_rush_aa = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		or = {
+			has_tech = interwar_antiair  
+			has_tech = electronic_mechanical_engineering
+		}
+	}
+	research = {
+		# artillery
+		cat_anti_tank = -1
+		cat_anti_air = 1
+		artillery = -1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+
+BEL_research_rush_at = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		or = {
+			has_tech = interwar_antiair  
+			has_tech = electronic_mechanical_engineering
+		} 
+	}
+	abort = {
+		has_tech = antitank5 
+	}
+	research = {
+		# artillery
+		cat_anti_tank = 5
+		cat_anti_air = -1
+		artillery = -1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+
+########################################
+# Research - Support	
+########################################
+
+#####################################
+# END OF RESEARCH
+#####################################
+
+#####################################
+# PP spending - default is no spending
+#####################################
+BEL_pp0 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_idea = partial_economic_mobilisation
+	}
+	ideas = {
+		partial_economic_mobilisation = 10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		military_theorist = 0
+		army_chief_offensive_2 = -1
+		army_logistics_2 = -1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}	
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp1 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = partial_economic_mobilisation
+	}
+	abort = {
+		has_idea = fn_herstol
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= 1
+		military_theorist = 0
+		army_chief_offensive_2 = -1
+		army_logistics_2 = -1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}	
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp2 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = fn_herstol
+	}
+	abort = {
+		has_idea = BEL_jules_pire
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		BEL_jules_pire = 1
+		#military_theorist = 1
+		army_chief_offensive_2 = -1
+		army_logistics_2 = -1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}	
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp3 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = BEL_jules_pire
+	}
+	abort = {
+		has_idea = BEL_victor_strydonck_burkel
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		military_theorist = 0
+		army_chief_offensive_2 = 1
+		army_logistics_2 = -1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}	
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp4 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = BEL_victor_strydonck_burkel
+	}
+	abort = {
+		has_idea = limited_conscription
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = 10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		military_theorist = 0
+		army_chief_offensive_2 = -1
+		army_logistics_2 = -1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}	
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp5 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = limited_conscription
+	}
+	abort = {
+		has_idea = BEL_oscar_michiels
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		military_theorist = 0
+		army_chief_offensive_2 = -1
+		army_logistics_2 = 1
+		army_infantry_2 = -1
+		artillery_manufacturer = -1
+	}
+	weight = { 
+		factor = 4000
+	}
+}
+BEL_pp6 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		has_idea = BEL_oscar_michiels
+	}
+	abort = {
+		has_idea = BEL_victor_van_strydonck_de_burkel
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		partial_economic_mobilisation = -10
+		limited_conscription = -10	
+	}
+	ideas = {
+		infantry_equipment_manufacturer	= -1
+		military_theorist = 0
+		army_chief_offensive_2 = -1
+		army_logistics_2 = -1
+		army_infantry_2 = 1
+		artillery_manufacturer = -1
+	}
+	weight = { 
+		factor = 4000
+	}
+}
+
+
+
+
+
+BEL_PP_spending_defaults_to_no = { # uzima decisione i dalje
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	# dont take ideas
+	#ai_strategy = {
+	#	type = pp_spend_priority
+	#	id = idea
+	#	value = 0
+	#}
+	#ai_strategy = {
+	#	type = pp_spend_amount
+	#	id = idea
+	#	value = 0
+	#}	
+	
+	ideas = {
+	# economy
+		undisturbed_isolation = -1
+		isolation = -1
+		civilian_economy = -1
+		low_economic_mobilisation = -1
+	#	partial_economic_mobilisation = -1
+	# trade
+		export_focus = -1
+		limited_exports = -1
+		free_trade = -1
+		closed_economy = -1 		
+	# conscription
+		disarmed_nation = -1
+		volunteer_only = -1
+		#limited_conscription = -10		
+	# designers
+	# tank designer
+		experimental_heavy_tank_manufacturer  = -1
+		heavy_tank_manufacturer  = -1
+		medium_tank_manufacturer  = -1
+		cruiser_tank_manufacturer  = -1
+		cavalry_tank_manufacturer  = -1
+		assault_gun_manufacturer  = -1
+		fast_tank_manufacturer  = -1
+		pacific_light_tank_manufacturer  = -1
+		tankette_manufacturer = -1
+		fast_tank_manufacturer = -1
+		armored_car_manufacturer = -1
+		infantry_tank_manufacturer = -1
+		assault_heavy_tank_manufacturer = -1
+		airborne_tank_manufacturer = -1
+		
+	# naval designer	
+		blohm_und_voss = -1
+		raiding_fleet_naval_manufacturer = 0
+		
+		kaiserliche_werft_wilhelmshaven = -1
+		coastal_defence_naval_manufacturer = 0
+		
+		merchant_naval_manufacturer = 0
+		HUN_ganz_danubius = 0
+		
+		crda = -1
+		mediterranean_naval_manufacturer = 0
+		
+		ansaldo_navy = -1
+		atlantic_fleet_naval_manufacturer = 0	
+		
+		ITA_oto = -1
+		battlefleet_designer  = 0
+		
+		
+	# air designer
+		standard_fighter_manufacturer = -1
+		escort_fighter_manufacturer = -1
+		tactical_bomber_manufacturer = -1
+		fast_bomber_manufacturer = -1
+		naval_aircraft_manufacturer = -1
+		heavy_bomber_manufacturer = -1
+		light_fighter_designer = -1
+		standard_CAS_manufacturer = -1
+		interceptor_fighter_manufacturer = -1
+		cheap_fighter_manufacturer = -1
+		recon_plane_manufacturer = -1
+		flying_boat_manufacturer = -1
+		heavy_fighter_manufacturer = -1
+		multirole_CAS_manufacturer = -1
+		transport_plane_manufacturer = -1
+		flying_fort_manufacturer = -1
+		
+	# material designer
+		motorized_equipment_manufacturer = -1
+		mechanized_equipment_manufacturer  = -1
+		#artillery_manufacturer = -1
+		support_equipment_manufacturer = -1	
+		#infantry_equipment_manufacturer	= -1
+	# industrial advisor
+		refinery_concern = -1
+		linchpin_of_infrastructure = -1
+		railway_company = -1
+		electronics_concern = -1
+		industrial_concern = -1
+		
+	# advisors
+		captain_of_industry = -1
+		appeaser = 0
+		finance_graduate = 0
+		education_reformer = -1
+		silent_workhorse = -1
+		armaments_organizer = -1
+	# theorists
+		naval_theorist = 0
+		#military_theorist = -1
+		air_warfare_theorist = -1
+
+	# chief army
+		#army_chief_offensive_2 = -1
+		army_chief_morale_2 = -1
+
+	# chief navy
+		navy_chief_naval_aviation_2 = 0
+		navy_chief_maneuver_2 = 0
+		
+	# chief air
+		air_chief_rely_on_others = -1
+		air_chief_reform = -1
+		
+	# military high command
+		navy_naval_air_defense_2 = 0
+		air_bomber_interception = -1
+		air_chief_close_coordination = 0
+		air_chief_paratrooper = 0
+		#army_logistics_2 = -1
+		#army_infantry_2 = -1
+		army_armored_1 = -1
+		army_CombinedArms_1 = -1
+	}
+	weight = {
+		factor = 10
+	}
+}	
+#####################################
+# BEL wants attache 
+#####################################
+
+#####################################
+# BEL wants War Eco after Industrial Concern
+#####################################
+
+##################################################
+# BEL wants industry boost but doesnt want attaches
+##################################################
+
+#####################################
+# BEL wants War Industrialist after War Eco after Industrial Concern
+#####################################
+
+#####################################
+# BEL wants Infantry designer after War Industrialist after Industrial Concern after War Eco
+#####################################
+
+#####################################
+# BEL wants to spend PP on military
+#####################################
+
+#####################################
+# Recruitment
+#####################################
+#####################################
+# Recruitment - up to 1939
+#####################################
+BEL_recruitment_up_39 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		date > 1938.7.1
+	}
+# Recruitment and production	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	# Dont stockpile in buildup phase
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 0
+	}
+
+	# Keep at least x factories on infantry and support to prevent early game juggling	
+
+########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+BEL_recruitment_after_39 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		date > 1938.7.1
+	}
+	abort = {
+		always = no
+	}
+# Recruitment and production	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	# Dont stockpile in buildup phase
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 0
+	}
+
+	# Keep at least x factories on infantry and support to prevent early game juggling	
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 1
+	}	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 1
+	}	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_tank
+		value = 10
+	}	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 1
+	}	
+########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+######################################################
+# Division placement management
+######################################################
+BEL_troop_placement = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HOL
+		value = 50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SWI
+		value = 50
+	}	
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -1000
+	}
+}
+
+
+######################################################
+# Stuff thats fixed throughout the game
+# National focus, unused tech and PP, Construction
+######################################################
+
+BEL_national_focus_1 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		date > 1937.2.1
+	}
+	ai_national_focuses = {
+		BEL_plandeman
+		BEL_belgocongolesecolonialcompanies
+		BEL_restrictthepoweroftheworkers
+		BEL_thefrancobelgianstrategy
+		BEL_policyofneutrality
+		BEL_dismantleunions
+	}
+	focus_factors = { 
+		BEL_rearmament = 0
+		BEL_colonialminingindustry = 0
+		BEL_orderacg1 = 0
+		BEL_defensiveforce = 0
+		BEL_fortconstructionprogram = 0
+	}
+}
+
+BEL_national_focus_2 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		date > 1937.2.1
+	}
+	abort = {
+		date > 1938.5.1
+	}
+	ai_national_focuses = {
+		BEL_defensiveforce
+		BEL_secretplan
+		BEL_rearmament
+		BEL_reinforceforcepublique
+		BEL_colonialminingindustry
+		BEL_fortconstructionprogram
+		BEL_reinforcefortebenemael
+		BEL_openupnewfactories
+	}
+	focus_factors = { 
+		BEL_colonialtradefleet = 0
+		BEL_orderacg1 = 0
+		BEL_modernizefortifications = 0
+		BEL_thearonautiquemilitairebelge = 0
+	}
+}
+
+BEL_national_focus_3 = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		date > 1938.5.1
+	}
+	abort = {
+		has_capitulated = yes
+	}
+	ai_national_focuses = {
+		BEL_orderacg1
+		BEL_lighttankhunters
+		BEL_developantiarmordoctrine
+		
+		BEL_emergencyrearmamentprogram
+		BEL_mobilereserve
+		BEL_kwdefensiveline
+	}
+	focus_factors = { 
+		BEL_thearonautiquemilitairebelge = 0
+		BEL_colonialtradefleet = 0
+		BEL_modernizefortifications = 0
+	}
+}
+
+######################################################
+BEL_useless_tech = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+	# utility
+		support_tech = -1
+		motorized_equipment = -1
+		recon_tech = -1 # for ac maybe
+		signal_company_tech = -1 # for ac maybe
+	# artillery
+		#artillery = -1
+		#cat_anti_air = -1
+		rocketry = -1	
+	# infantry
+		infantry_tech = -1
+		night_vision = -1
+		computing_tech = -1
+		radar_tech = -1
+		dispersed_industry_category = -1
+		synth_resources = -1
+		cat_synth_rubber = -1
+		cat_synth_oil = -1
+		excavation_tech = -1
+		tank_modules = -1		
+		cat_torpedoes = -1
+		cat_ship_light_battery = -1
+		cat_ship_medium_battery = -1
+		cat_ship_heavy_battery = -1
+		air_equipment = -1
+		plane_modules_tech = -1
+		cat_air_guns = -1
+		cat_air_bombs = -1
+		light_air = -1
+		medium_air = -1
+		heavy_air = -1
+		armor = -1
+		cat_light_armor = -1
+		cat_medium_armor = -1
+		cat_heavy_armor = -1
+		naval_air = -1
+		cat_mechanized_equipment = -1
+		naval_equipment = -1
+		nuclear = -1		
+		air_doctrine = -1
+		naval_doctrine = -1
+		strategic_destruction_tree = -1
+		battlefield_support_tree = -1
+		operational_integrity_tree = -1
+		jet_technology = -1
+		trade_interdiction_tree = -1
+		convoy_defense_tree = -1
+		light_fighter = -1
+		cat_heavy_fighter = -1
+		tactical_bomber = -1
+		cat_strategic_bomber = -1
+		naval_bomber = -1
+		cas_bomber = -1
+		ship_modules_tech = -1
+		dd_tech = -1
+		cl_tech = -1
+		ca_tech = -1
+		cv_tech = -1
+		bc_tech = -1
+		bb_tech = -1
+		shbb_tech = -1
+		ss_tech = -1
+		tp_tech = -1
+		fleet_in_being_tree = -1
+		encryption_tech = -1
+		decryption_tech = -1
+		submarine_doctrine = -1
+		air_equipment = -1
+		cat_mobile_warfare = -1
+		cat_superior_firepower = -1
+		cat_grand_battle_plan = -1
+		cat_mass_assault = -1
+		cat_base_strike = -1
+		cat_trade_interdiction = -1
+		cat_fleet_in_being = -1
+		cat_strategic_destruction = -1
+		cat_battlefield_support = -1
+		cat_operational_integrity = -1	
+		para_tech = -1
+		base_strike_main = -1
+		mot_rockets = -1		
+		military_police_tech = -1
+		hospital_tech = -1
+		logistics_tech = -1		
+		maintenance_company_tech = -1
+		naval_mines = -1
+		asw_tech = -1
+		naval_minesweeping = -1
+		naval_minelaying = -1
+		cat_scout_plane = -1
+		train_tech = -1
+		cat_production = -1		
+		# spec forces
+		mountaineers_tech = -1
+		cat_special_forces_generic = -1
+		marine_tech = -1
+		d_infantry = -1 # desert infantry
+		j_infantry = -1 # jaegers infantry
+	}
+	weight = {
+		factor = 10000
+	}
+}
+##########################################################################
+
+
+
+	
+########################################
+# Construction
+########################################	
+# should make AI build Mils only	
+BEL_construction_build_mils = {
+	allowed = {
+		original_tag = BEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = { 
+		type = added_military_to_civilian_factory_ratio
+		value = 100
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard 
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure  
+		value = 0
+	}	
+	ai_strategy = { 
+		type = building_target
+		id = fuel_silo
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory   
+		value = 1000
+	}			
+}
+# construction location

@@ -1,0 +1,14 @@
+﻿air_wings = {
+	305 = { 
+			small_plane_airframe_4 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Me 163 Komet"
+			}	
+			small_plane_airframe_4 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Me 163 Komet"
+			}
+	}
+}

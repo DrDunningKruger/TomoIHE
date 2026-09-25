@@ -1,0 +1,52 @@
+add_namespace = mongolia
+
+country_event = {
+    id = mongolia.1
+    title = mongolia.1.title
+    desc = mongolia.1.desc
+    picture = news_event_dutch_soldiers_indonesia.dds
+    fire_only_once = yes
+
+    trigger = {
+	tag = MON
+        MON = { has_completed_focus = MON_elevateministryofinternalaffairs }
+    }
+
+    mean_time_to_happen = { days = 7 }
+
+    immediate = {
+            add_ideas = MON_Internal_security
+    }
+    option = {
+        name = mon.1.a
+    }
+}
+
+country_event = {
+    id = mongolia.69
+    title = mong.69.t
+    desc = mong.69.d
+    picture = GFX_report_event_soviet_soldiers_tank
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = mong.69.b
+		
+		load_oob = "MON_light_tankdivision"
+    }
+
+    option = {
+        name = mong.69.a
+		
+        load_oob = "MON_tankdivision"
+    } 
+
+	option = {
+        name = mong.69.c
+		
+		load_oob = "MON_heavy_tankdivision"
+    }
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=840
+	name="STATE_840"
+	
+	resources={
+		tungsten=25
+	}
+	
+	history={
+		owner = SWI
+		
+		victory_points = {
+			13329 10
+		}
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 2
+			air_base = 10
+			13329 = {
+				naval_base = 3
+
+			}
+			13325 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+	provinces={
+		4170 9940 13325 13326 13329 
+	}
+	manpower=193950
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

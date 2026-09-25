@@ -1,0 +1,19 @@
+﻿units= {
+	fleet = {
+		name = "FNFL"
+		naval_base = 11064 # 
+		task_force = {				
+			name = "FNFL"			
+			location = 11064 # 
+			ship = { name = "Courbet" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }        
+			ship = { name = "Paris" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }
+			ship = { name = "Le Triomphant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Le Fantasque Class" } } }
+			ship = { name = "Léopard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+			ship = { name = "Mistral" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }
+			ship = { name = "Ouragan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Bourrasque Class" } } }
+			ship = { name = "Surcouf" definition = submarine equipment = { ship_hull_cruiser_submarine = { amount = 1 owner = FRA version_name = "Surcouf Class" } } }
+			ship = { name = "Minerve" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Minerve Class" } } }
+			ship = { name = "Junon" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = FRA version_name = "Minerve Class" } } }			
+		}		
+	}
+} 

@@ -1,0 +1,98 @@
+
+
+#create_field_marshal = { #random gen
+#	name = "Paul Legentilhomme"
+#	desc = "Paul_Legentilhomme_desc"	 #
+#	picture = "Paul_Legentilhomme.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Batuo Sevez"
+#	desc = "Batuo_Sevez_desc"	 #
+#	picture = "Francois_Sevez.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = " Sesawn Juin"
+#	desc = "Sesawn_Juin_desc"	 #
+#	picture = "WALLACE.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Davalo Clerc"
+#	desc = "Davalo_Clerc_desc"	 #
+#	picture = "philippe_leclerc.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Tom Peterson"
+#	desc = "Tom_Peterson_desc"	 #
+#	picture = "Jean_de_Lattre_de_Tassigny.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Varacoure Defreter"
+#	desc = "Varacoure_Defreter_desc"	 #
+#	picture = "Antoine_Bethouart.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Domonic Luther"
+#	desc = "Domonic_Luther_desc"	 #
+#	picture = "Jean_Touzet_du_Vigier.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #random gen
+#	name = "Carlos P Romulo"
+#	desc = "Carlos_P_Romulo_desc"	 #
+#	picture = "Gaston_Billotte.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+	

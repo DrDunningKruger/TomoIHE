@@ -1,0 +1,18 @@
+﻿l_english:
+ JAP_interservice_rivalry_bop:0 "Interservice Rivalry"
+
+ JAP_rivalry_balanced:0 "Balanced"
+
+ JAP_rivalry_navy_dominant:0 "Dominant Navy"
+ JAP_rivalry_navy_strengthened:0 "Strengthened Navy"
+
+ JAP_rivalry_army_dominant:0 "Dominant Army"
+ JAP_rivalry_army_strengthened:0 "Strengthened Army"
+
+ JAP_rivalry_navy_side:0 "The Imperial Navy"
+ JAP_rivalry_army_side:0 "The Imperial Army"
+
+ JAP_interservice_rivalry_off:0 "Conference is in recess"
+ JAP_interservice_rivalry_off_desc:0 "We've made the necessary decisions to ensure the balance between the imperial navy and army so the conference is in recess for now. Our generals and admirals will meet with us again in [?mission.JAP_interservice_rivalry_off] days to discuss how to divide our limited resources."
+
+ JAP_interservice_rivalry_selected:0 "Conference Concluded"

@@ -1,0 +1,721 @@
+characters={
+
+	SPR_niceto_alcala_zamora={
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=SPR_niceto_alcala_zamora
+			portraits={
+				civilian={
+					large="GFX_portrait_SPR_niceto_alcala_zamora"
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				traits={ indecisive }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=SPR_niceto_alcala_zamora
+			portraits={
+				civilian={
+					large="GFX_portrait_SPR_niceto_alcala_zamora"
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+	SPR_manuel_fal_conde={
+		name=SPR_manuel_fal_conde
+		portraits={
+			civilian={
+				large="GFX_portrait_SPA_manuel_fal_conde"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ jefe }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	SPA_salvador_moreno_fernandez={
+		name=SPA_salvador_moreno_fernandez
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SPA_salvador_moreno_fernandez
+			name = SPA_salvador_moreno_fernandez
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+				original_tag = SPR
+			}
+			visible = {
+
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+				cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SPA_alfredo_kindelan_duany={
+		name=SPA_alfredo_kindelan_duany
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = SPA_alfredo_kindelan_duany
+			name = SPA_alfredo_kindelan_duany
+			allowed = {
+				original_tag = SPR
+			}			
+			
+			traits = {
+			air_chief_rely_on_others
+			}
+			
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#SPA
+	SPA_luis_valdes_cavanillas={
+		name=SPA_luis_valdes_cavanillas
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_luis_valdes_cavanillas
+			name = SPA_luis_valdes_cavanillas 
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+	}
+
+	SPA_tomas_garciano_goni={
+		name=SPA_tomas_garciano_goni
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_tomas_garciano_goni
+			name = SPA_tomas_garciano_goni 
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				compassionate_gentleman 
+			}
+		}
+	}
+
+	SPA_fidel_davila_arrondo={
+		name=SPA_fidel_davila_arrondo
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_fidel_davila_arrondo
+			name = SPA_fidel_davila_arrondo 
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	SPA_jose_antonio_giron={
+		name=SPA_jose_antonio_giron
+		portraits={
+			army={
+				small="GFX_idea_SPA_jose_antonio_giron"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_jose_antonio_giron
+			name = SPA_jose_antonio_giron 
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+
+			}
+			available = {
+
+			}
+			traits = {
+				falangist_industrialist 
+			}
+		}
+	}
+		
+	SPA_manuel_hedilla={
+		name=SPA_manuel_hedilla
+		portraits={
+			army={
+				small="GFX_idea_SPA_manuel_hedilla"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_manuel_hedilla
+			name = SPA_manuel_hedilla 
+			allowed = {
+				original_tag = SPR
+			}
+
+			visible = {
+
+			}
+
+			available = {
+
+			}
+			traits = {
+				falangist_syndicalist 
+			}
+		}
+	}
+
+	SPA_hector_salamanca={
+		name=SPA_hector_salamanca
+		portraits={
+			army={
+				small="GFX_idea_hector_salamanca"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = SPA_hector_salamanca
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SPA_gustavo_fring={
+		name=SPA_gustavo_fring
+		portraits={
+			army={
+				small="GFX_idea_gustavo_fring"
+			}
+		}
+
+		advisor={
+			slot = high_command
+			ledger = air
+			idea_token = SPA_motherfucker
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				air_chief_night_bomber
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	SPA_tomas_dominguez_arevalo={
+		name=SPA_tomas_dominguez_arevalo
+		portraits={
+			army={
+				small="GFX_idea_SPA_tomas_dominguez_arevalo"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_tomas_dominguez_arevalo
+			name = SPA_tomas_dominguez_arevalo 
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+
+			}
+			available = {
+
+			}
+			traits = {
+				lifelong_carlist 
+			}
+		}
+	}
+
+	SPA_diego_hidalgo_y_duran={
+		name=SPA_diego_hidalgo_y_duran
+		portraits={
+			army={
+				small="GFX_idea_SPA_diego_hidalgo_y_duran"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_diego_hidalgo_y_duran
+			name = SPA_diego_hidalgo_y_duran 
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+
+			}
+			available = {
+
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	SPA_ramon_serrano_suner={
+		name=SPA_ramon_serrano_suner
+		portraits={
+			army={
+				small="GFX_idea_SPA_ramon_serrano_suner"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_ramon_serrano_suner
+			name = SPA_ramon_serrano_suner 
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+
+			}
+			available = {
+
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
+	}
+
+	SPA_luis_hernando_de_larramendi={
+		name=SPA_luis_hernando_de_larramendi
+		portraits={
+			army={
+				small="GFX_idea_SPA_luis_hernando_de_larramendi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_luis_hernando_de_larramendi
+			name = SPA_luis_hernando_de_larramendi 
+			allowed = {
+				original_tag = SPR
+			}
+
+			visible = {
+
+			}
+
+			available = {
+
+			}
+			traits = {
+				traditionalist_theorist 
+			}
+		}
+	}
+
+	SPA_martin_de_riquer={ #Carlist
+		name=SPA_martin_de_riquer
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_martin_de_riquer
+			name = SPA_martin_de_riquer 
+			allowed = {
+				original_tag = SPR
+			}
+
+			visible = {
+
+			}
+
+			available = {
+
+			}
+			traits = {
+				carlist_intellectual 
+			}
+		}
+	}
+	
+	SPA_mauricio_de_sivatte={ #Carlist
+		name=SPA_mauricio_de_sivatte
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_mauricio_de_sivatte
+			name = SPA_mauricio_de_sivatte 
+			allowed = {
+				original_tag = SPR
+			}
+
+			visible = {
+
+			}
+
+			available = {
+
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+		}
+	}
+
+	SPA_emilio_herrera={
+		name=SPA_emilio_herrera
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			ledger = air
+			allowed = {
+				original_tag = SPR
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	SPA_joaquin_garcia_morato = { # Francoist
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=SPA_joaquin_garcia_morato
+			portraits={
+				army={
+					small="GFX_idea_SPA_joaquin_garcia_morato"
+				}
+			}
+			advisor={
+				slot = high_command
+				ledger = air
+				idea_token = SPA_gustavo_spanjard
+				allowed = {
+					original_tag = SPR
+				}
+				traits = {
+					air_chief_pilot_ace_trainer
+					air_bomber_interception
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+		}	
+	}
+
+	SPR_ioan_mihail_racovita={
+		name = "Juan Yagüe Blanco"
+		portraits={
+			army={
+					large="GFX_portrait_SPA_juan_yague"
+					small=GFX_portrait_SPA_juan_yague_small
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_logistics_3
+			}
+			idea_token = spanishlogistics
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SPR_defenceguyde
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		field_marshal={
+				desc = "Juan_Yague_Blanco_desc"	#Offensive urban General for special needs, good under green air
+				traits = { infantry_leader logistics_wizard trait_cautious harsh_leader unyielding_defender ambusher}
+				skill = 4
+				attack_skill = 7
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4	
+			legacy_id=-1
+		}
+	}
+	
+	SPR_franco_but_general={
+		name = "Francisco Franco"
+		portraits={
+			army={
+					large="GFX_portrait_franco_general"
+					small=GFX_portrait_SPA_francisco_franco_small
+			}
+		}
+			advisor={
+				cost = 100
+				slot = theorist
+				idea_token = SPA_agustin_munoz_grandes
+				ledger = army
+
+			allowed = {
+				original_tag = SPR
+			}
+				traits = {
+					military_theorist
+				}
+			}
+		advisor={
+			slot = army_chief
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+			army_chief_offensive_1	
+			}
+			idea_token = spanisoffensive
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+		field_marshal={
+				desc = "francisco_franco_desc"	#The Dictator of Spain himself, Franco is one of the best armor fieldmarshals for any situation
+				traits = { panzer_leader panzer_expert thorough_planner aggressive_assaulter politically_connected organizer }
+				skill = 7
+				attack_skill = 8
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+	
+	SPR_mohamed_meziane={
+		name=SPR_mohamed_meziane
+		portraits={
+			army={
+				large="GFX_portrait_SPA_mohamed_meziane"
+				small=GFX_portrait_SPR_mohamed_meziane_small
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_regrouping_2
+			}
+			idea_token = spanishregrouping
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+		corps_commander={
+				desc = "mohamed_meziane_desc"	#
+				traits = { infantry_leader ambusher inflexible_strategist harsh_leader bearer_of_artillery}
+				skill = 3
+				attack_skill = 4
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 6
+			legacy_id=1109
+		}
+	}
+
+	SPA_jose_enrique_varela={
+			name=SPA_jose_enrique_varela
+			portraits={
+				army={
+					large="GFX_portrait_SPA_jose_enrique_varela"
+					small=GFX_portrait_SPA_jose_enrique_varela_small
+				}
+			}
+			advisor={
+				cost = 100
+				slot = theorist
+				idea_token = SPA_jose_enrique_varela
+				ledger = army
+				allowed = {
+						original_tag = SPR
+				}
+
+				traits = {
+					mobile_warfare_expert
+				}
+			}
+		advisor={
+			slot = army_chief
+			idea_token = SPR_defensive
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+
+			corps_commander={
+				desc = "jose_enrique_varela_desc"	#Armor general for western front, good under red air
+				traits = { panzer_leader panzer_expert armor_officer ranger camouflage_expert }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 5
+				planning_skill = 2
+				logistics_skill = 4
+				legacy_id=1114
+			}	
+	}	
+
+	SPA_agustin_munoz_grandes={
+			name=SPA_agustin_munoz_grandes
+			portraits={
+				army={
+					small="GFX_idea_SPA_agustin_munoz_grandes"
+					large="GFX_portrait_SPA_augustin_muynoz_grandes"
+				}
+			}
+			
+		advisor={	
+			slot = army_chief
+			idea_token = SPR_maneuverofficer
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			traits = {
+				army_armored_2
+			}
+			idea_token = spanisharmorguy
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+			
+			corps_commander={
+				desc = "augustin_muynoz_grandes_desc"	#Officer in charge of the Blue Division, good in forest and urban terrain, good under green air
+				traits = { panzer_leader armor_officer ranger organisational_leader trait_engineer }
+				skill = 5
+				attack_skill = 7
+				defense_skill = 5
+				planning_skill = 3
+				logistics_skill = 5
+				legacy_id=1113
+			}
+	}
+}

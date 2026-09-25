@@ -1,0 +1,30 @@
+ENG_IH&E_special = {	
+	MEX_annex_CUB = { 
+	
+				available = {				
+					CUB = { 
+					is_ai = yes
+					has_capitulated = yes
+					}
+				}
+					
+				allowed = { 
+					tag = MEX
+				}
+				visible = { 
+					date > 1940.1.1
+					country_exists = CUB
+				}
+				
+					fire_only_once = yes
+					
+					cost = 0 
+					
+					complete_effect = {
+						annex_country = {
+								target = CUB
+								transfer_troops = yes
+						}
+					}
+				}
+			}

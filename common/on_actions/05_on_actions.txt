@@ -1,0 +1,3448 @@
+on_actions = {
+	on_startup = {
+		effect = {		
+		
+	        JAP = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }  
+			}	 
+			MAN = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			SIA = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			GER = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			ITA = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			SPR = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			ROM = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			HUN = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			IEA = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}	
+			YUG = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}		
+			BUL = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }			
+			}	
+			FIN = { 
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others2 }  
+			add_opinion_modifier = { target = ENG modifier = embargo_others3 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = FRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NZL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others }  
+			add_opinion_modifier = { target = AST modifier = embargo_others2 }  
+			add_opinion_modifier = { target = AST modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SAF modifier = embargo_others3 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others2 }  
+			add_opinion_modifier = { target = RAJ modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NEP modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CAN modifier = embargo_others3 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others2 }  
+			add_opinion_modifier = { target = MEX modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BRA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others2 }  
+			add_opinion_modifier = { target = CUB modifier = embargo_others3 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = PHI modifier = embargo_others3 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = BEL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others2 }  
+			add_opinion_modifier = { target = HOL modifier = embargo_others3 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = NOR modifier = embargo_others3 }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others }  
+			add_opinion_modifier = { target = GRE modifier = embargo_others2 }  		
+			add_opinion_modifier = { target = GRE modifier = embargo_others3 }  		
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 } 			
+			}			
+			
+			USA = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }    			
+			}
+	
+			ENG = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			FRA = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}		
+			AST = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}		
+			NZL = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			SAF = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}		
+			RAJ = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			NEP = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}	
+			SAF = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}
+			CAN = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			NOR = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}
+			BEL = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			GRE = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}		
+			HOL = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}		
+			BRA = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			MEX = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}		
+			CUB = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}	
+			PHI = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			CHI = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			SOV = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			MON = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			POL = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 }			
+			}	
+			CPL = { 
+			add_opinion_modifier = { target = GER modifier = embargo_others }  
+			add_opinion_modifier = { target = GER modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = GER modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = ITA modifier = embargo_others }  
+			add_opinion_modifier = { target = ITA modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ITA modifier = embargo_others3 }	
+			add_opinion_modifier = { target = HUN modifier = embargo_others }  
+			add_opinion_modifier = { target = HUN modifier = embargo_others2 }		
+			add_opinion_modifier = { target = HUN modifier = embargo_others3 }		
+			add_opinion_modifier = { target = ROM modifier = embargo_others }  
+			add_opinion_modifier = { target = ROM modifier = embargo_others2 }	
+			add_opinion_modifier = { target = ROM modifier = embargo_others3 }	
+			add_opinion_modifier = { target = BUL modifier = embargo_others }  
+			add_opinion_modifier = { target = BUL modifier = embargo_others2 }		
+			add_opinion_modifier = { target = BUL modifier = embargo_others3 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others }  
+			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
+			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = FIN modifier = embargo_others }  
+			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
+			add_opinion_modifier = { target = IEA modifier = embargo_others }  
+			add_opinion_modifier = { target = IEA modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = IEA modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others }  
+			add_opinion_modifier = { target = JAP modifier = embargo_others2 } 		
+			add_opinion_modifier = { target = JAP modifier = embargo_others3 } 		
+			add_opinion_modifier = { target = MAN modifier = embargo_others }  
+			add_opinion_modifier = { target = MAN modifier = embargo_others2 }  	
+			add_opinion_modifier = { target = MAN modifier = embargo_others3 }  	
+			add_opinion_modifier = { target = SIA modifier = embargo_others }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SIA modifier = embargo_others3 }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others }  
+			add_opinion_modifier = { target = SWI modifier = embargo_others2 } 			
+			add_opinion_modifier = { target = SWI modifier = embargo_others3 }
+
+			add_opinion_modifier = { target = USA modifier = embargo_others }  
+			add_opinion_modifier = { target = USA modifier = embargo_others2 }  
+			add_opinion_modifier = { target = USA modifier = embargo_others3 } 			
+			}
+		
+			SWI = { 
+				give_resource_rights = { receiver = ENG state = 676 }
+				give_resource_rights = { receiver = ENG state = 291 }
+			}
+			HOL = { 
+				give_resource_rights = { receiver = ENG state = 309 }
+			}
+			POL = {
+				country_lock_all_division_template = yes
+			}
+			119 = {
+				add_dynamic_modifier = {
+					modifier = no_dday_before_1942
+					days = 2191
+				}
+				add_dynamic_modifier = {
+					modifier = HONK_HONK
+					days = 180
+				}				
+			}
+			118 = {
+				add_dynamic_modifier = {
+					modifier = no_dday_before_1942
+					days = 2191
+				}
+			}
+			7 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			35 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			36 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			6 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			34 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			#france
+			29 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			785 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			18 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			28 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			17 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			27 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			16 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			15 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			24 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			30 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			14 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			23 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			19 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			806 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			33 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			26 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			25 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			31 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			22 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}
+			20 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			21 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			32 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			1 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			461 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			462 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			459 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			513 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			460 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			458 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
+			665 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}		
+			735 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}			
+			########### Africa
+			774 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			660 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			718 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			769 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			768 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			295 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			538 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			772 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			539 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			773 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			558 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			776 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			777 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			778 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			781 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			556 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			779 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			274 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			780 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			700 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			272 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			701 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			557 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			546 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			770 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			771 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			545 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			542 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			541 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			275 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}		
+			719 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier  scope = SPR
+				}
+			}			
+			681 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}			
+			##################### LIBYA
+			##################### LIBYA
+			##################### LIBYA
+			##################### LIBYA	
+			448 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}		
+			661 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}		
+			662 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			663 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			449 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			450 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			767 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			451 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			452 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}		
+			839 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			447 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			446 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			
+			453 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}		
+			454 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}	
+			455 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			553 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			554 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			680 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			677 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+				}
+			}
+			#
+			FRA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+                add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 	
+			}
+			GER = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			BEL = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			HOL = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			ENG = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			ITA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			POL = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			NOR = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			FIN = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			SOV = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			MON = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			CHI = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			JAP = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			RAJ = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			MAN = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			NEP = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			USA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			SPR = {
+			   add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 }
+               add_timed_idea = { idea = GER_cantattackfranceyet days = 1460 }			   
+			}
+			CAN = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			GRE = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			YUG = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+               add_timed_idea = { idea = GER_cantattackfranceyet days = 1460 } 				
+			}
+			MEX = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			BRA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			IEA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+			}
+			ROM = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+               add_timed_idea = { idea = GER_cantattackfranceyet days = 1460 } 				
+			}
+			HUN = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+               add_timed_idea = { idea = GER_cantattackfranceyet days = 1460 } 				
+			}
+			BUL = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 			
+               add_timed_idea = { idea = GER_cantattackfranceyet days = 1460 } 			
+			}
+			AST = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			NZL = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			PHI = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			SIA = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			SAF = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}
+			CUB = {
+				add_ideas = passive_naval_doctrine_research_speed	
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+			}			
+			580 = {
+				set_state_flag = is_literally_siberia
+			}	
+			579 = {
+				set_state_flag = is_literally_siberia
+			}	
+			577 = {
+				set_state_flag = is_literally_siberia
+			}	
+			824 = {
+				set_state_flag = is_literally_siberia
+			}	
+			572 = {
+				set_state_flag = is_literally_siberia
+			}	
+			583 = {
+				set_state_flag = is_literally_siberia
+			}	
+			403 = {
+				set_state_flag = is_literally_siberia
+			}	
+			590 = {
+				set_state_flag = is_literally_siberia
+			}	
+			587 = {
+				set_state_flag = is_literally_siberia
+			}
+			402 = {
+				set_state_flag = is_literally_siberia
+			}	
+			404 = {
+				set_state_flag = is_literally_siberia
+			}	
+			405 = {
+				set_state_flag = is_literally_siberia
+			}	
+			830 = {
+				set_state_flag = is_literally_siberia
+			}	
+			742 = {
+				set_state_flag = is_literally_siberia
+			}	
+			732 = {
+				set_state_flag = is_literally_siberia
+			}
+			516 = {
+				set_state_flag = is_literally_siberia
+			}	
+			576 = {
+				set_state_flag = is_literally_siberia
+			}	
+			568 = {
+				set_state_flag = is_literally_siberia
+			}	
+			569 = {
+				set_state_flag = is_literally_siberia
+			}	
+			568 = {
+				set_state_flag = is_literally_siberia
+			}	
+			644 = {
+				set_state_flag = is_literally_siberia
+			}	
+			574 = {
+				set_state_flag = is_literally_siberia
+			}
+			565 = {
+				set_state_flag = is_literally_siberia
+			}	
+			561 = {
+				set_state_flag = is_literally_siberia
+			}	
+			560 = {
+				set_state_flag = is_literally_siberia
+			}	
+			563 = {
+				set_state_flag = is_literally_siberia
+			}	
+			657 = {
+				set_state_flag = is_literally_siberia
+			}	
+			564 = {
+				set_state_flag = is_literally_siberia
+			}	
+			566 = {
+				set_state_flag = is_literally_siberia
+			}	
+			567 = {
+				set_state_flag = is_literally_siberia
+			}
+			63 = {
+				set_state_flag = is_proper_germany
+			}	
+			68 = {
+				set_state_flag = is_proper_germany
+			}	
+			66 = {
+				set_state_flag = is_proper_germany
+			}	
+			67 = {
+				set_state_flag = is_proper_germany
+			}	
+			65 = {
+				set_state_flag = is_proper_germany
+			}	
+			305 = {
+				set_state_flag = is_proper_germany
+			}	
+			62 = {
+				set_state_flag = is_proper_germany
+			}	
+			61 = {
+				set_state_flag = is_proper_germany
+			}	
+			58 = {
+				set_state_flag = is_proper_germany
+			}	
+			64 = {
+				set_state_flag = is_proper_germany
+			}	
+			59 = {
+				set_state_flag = is_proper_germany
+			}	
+			56 = {
+				set_state_flag = is_proper_germany
+			}	
+			57 = {
+				set_state_flag = is_proper_germany
+			}	
+			55 = {
+				set_state_flag = is_proper_germany
+			}	
+			60 = {
+				set_state_flag = is_proper_germany
+			}	
+			51 = {
+				set_state_flag = is_proper_germany
+			}	
+			42 = {
+				set_state_flag = is_proper_germany
+			}	
+			8 = {
+				set_state_flag = is_proper_germany
+			}	
+			28 = {
+				set_state_flag = is_proper_germany
+			}	
+			50 = {
+				set_state_flag = is_proper_germany
+			}	
+			54 = {
+				set_state_flag = is_proper_germany
+			}	
+			53 = {
+				set_state_flag = is_proper_germany
+			}	
+			52 = {
+				set_state_flag = is_proper_germany
+			}	
+			69 = {
+				set_state_flag = is_proper_germany
+			}
+			74 = {
+				set_state_flag = is_proper_germany
+			}	
+			9 = {
+				set_state_flag = is_proper_germany
+			}	
+			75 = {
+				set_state_flag = is_proper_germany
+			}	
+			153 = {
+				set_state_flag = is_proper_germany
+			}	
+			152 = {
+				set_state_flag = is_proper_germany
+			}	
+			4 = {
+				set_state_flag = is_proper_germany
+			}	
+		}
+	}
+	
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					date < 1941.6.22
+					date > 1941.9.30
+					tag = GER
+					has_idea = summer_offensive
+				}
+				remove_ideas = summer_offensive
+			}
+			if = {
+				limit = {
+					date < 1942.6.22
+					date > 1942.9.30
+					tag = GER
+					has_idea = summer_offensive
+				}
+				remove_ideas = summer_offensive
+			}
+			if = {
+				limit = {
+					date < 1943.6.22
+					date > 1943.9.30
+					tag = GER
+					has_idea = summer_offensive
+				}
+				remove_ideas = summer_offensive
+			}
+		}
+	}
+	
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = POL 
+				}
+				POL = {
+					remove_ideas = POL_knife_in_the_back
+				}
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}				
+			}	
+			if = {
+				limit = {
+					original_tag = FRA
+				}
+				FRA = {
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}		
+					every_unit_leader = {
+						limit = {
+							has_trait = media_personality
+						}
+					retire = yes
+					}
+				}
+			}	
+			if = {
+				limit = {
+					original_tag = NOR
+				}
+				NOR = {
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}
+				}
+			}	
+			if = {
+				limit = {
+					original_tag = BEL
+				}
+				BEL = {
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}
+				}
+			}	
+			if = {
+				limit = {
+					original_tag = HOL
+				}
+				HOL = {
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}
+				}
+			}	
+			if = {
+				limit = {
+					original_tag = GRE
+				}
+				GRE = {
+					every_unit_leader = {
+						limit = {
+							has_trait = trait_defeatist
+						}
+					retire = yes
+					}	
+					every_unit_leader = {
+						limit = {
+							has_trait = media_personality
+						}
+					retire = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = HOL
+					NOT = { has_global_flag = hol_caput}
+				}
+				HOL = {
+					transfer_state = 672
+					transfer_state = 335
+					transfer_state = 334
+					transfer_state = 673
+					transfer_state = 667
+					transfer_state = 668
+				}
+				set_global_flag = hol_caput
+			}
+			if = {
+				limit = {
+					original_tag = BEL
+					NOT = { has_global_flag = bel_caput}
+				}
+				BEL = {
+					transfer_state = 295
+					transfer_state = 538
+					transfer_state = 718
+					transfer_state = 769
+					transfer_state = 768
+				}
+				set_global_flag = bel_caput
+			}
+		}
+	}
+}

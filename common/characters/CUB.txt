@@ -1,0 +1,755 @@
+characters={
+	CUB_jose_agripino_barnet={
+		name="José Agripino Barnet"
+		portraits={
+			civilian={
+				large="GFX_portrait_cuba_jose_barnet"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUB_guillermo_cabral={
+		name="Guillermo Cabral"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/portrait_south_america_generic_9.dds"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ reluctant_interventionist }
+			expire="1941.1.1.12"
+			id=-1
+		}
+	}
+	CUB_wenceslao_carmona={
+		name="Wenceslao Carmona"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/portrait_south_america_generic_9.dds"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			expire="1952.1.1.12"
+			id=-1
+		}
+	}
+	CUB_gregorio_morales={
+		name="Gregorio Morales"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ economist }
+			expire="1947.1.1.12"
+			id=-1
+		}
+	}
+	CUB_federico_laredo_bru={
+		name="Federico Laredo Brú"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUB_fidel_castro={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_fidel_castro
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Fidél Castro"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	CUB_enrique_c_rolas={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_enrique_c_rolas
+			ledger = navy
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+				air_chief_naval_strike
+				air_chief_air_logistics
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Enrique C. Rolas"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	CUB_palaez_menendez={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_palaez_menendez
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					air_chief_reform
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Palaez Menendez"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_3"
+			}
+		}
+	}
+	CUB_domingo_r_del_toro={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_domingo_r_del_toro
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					air_chief_rely_on_others
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Domingo R. del Toro"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	CUB_eduardo_chibas={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_eduardo_chibas
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+
+		name="Eduardo Chibas"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	CUB_juan_blas_hernandez={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_juan_blas_hernandez
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_concealment_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Juan Blas Hernandez"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}	
+	CUB_tanker ={
+		advisor={
+			slot = high_command
+			idea_token = CUB_tanker
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_armored_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Juan Blas Hernandez"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}	
+	CUB_mechman ={
+		advisor={
+			slot = high_command
+			idea_token = CUB_mechman
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_CombinedArms_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Juan Blas Hernandez"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+	}
+	CUB_sergio_carbo={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_sergio_carbo
+			ledger = air
+				allowed = {
+					original_tag = CUB
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_carrierman
+			ledger = navy
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					navy_chief_naval_aviation_3
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Sergio Carbo"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	CUB_fulgencio_batista={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_fulgencio_batista
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Fulgencio Batista"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_5"
+			}
+		}
+	}
+	CUB_rodrigo_a_fuentes={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_rodrigo_a_fuentes
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Rodrigo A. Fuentes"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	CUB_sandalio_junco={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_sandalio_junco
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					navy_fleet_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Sandalio Junco"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	CUB_salvador_castaneda_castro={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_salvador_castaneda_castro
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Salvador Castaneda Castro"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+	}
+	CUB_angel_gonzalez={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_angel_gonzalez
+			ledger = army
+				allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_commando_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Angel Gonzalez"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	CUB_julio_sanguily={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_julio_sanguily
+			ledger = navy
+				allowed = {
+					original_tag = CUB
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+
+		name="Julio Sanguily"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	CUB_carlos_prio={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_prio
+			allowed  = {
+					original_tag  = CUB
+				}
+				traits  = {
+					war_industrialist 
+				}
+		}
+
+		name="Carlos Prio"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	CUB_gerardo_machado={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_gerardo_machado
+			allowed  = {
+					original_tag  = CUB
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
+
+		name="Gerardo Machado"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}	
+	
+	CUB_milguy ={
+		advisor={
+			slot = political_advisor
+			allowed  = {
+					original_tag  = CUB
+				}
+				traits  = {
+					emigre_connections
+				}
+		}
+
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}	
+	
+	CUB_industrialist ={
+		advisor={
+			slot = political_advisor
+			allowed  = {
+					original_tag  = CUB
+				}
+				traits  = {
+					nationalist_symbol
+				}
+		}
+
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	
+	CUB_eugenio_molinet_castro={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_eugenio_molinet_castro
+			allowed  = {
+					original_tag  = CUB
+				}
+				traits  = {
+					captain_of_industry 
+				}
+		}
+
+		name="Eugenio Molinet Castro"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	
+	
+	CUB_Markel_Madrid = {
+		name = "Markel Madrid"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_two" #Can become unit leader
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = reformguy
+			allowed = {
+				original_tag = CUB
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+		
+		field_marshal = {
+			desc = "Markel_Madrid_desc"	#Defensive FM
+			traits = { infantry_leader defensive_doctrine ambusher trickster logistics_wizard organisational_leader }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+
+	CUB_Alfonso_Herrera = {
+		name = "Alfonso Herrera"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_one" #Can become unit leader
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = alfonsocuba
+			allowed = {
+				original_tag = CUB
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		field_marshal = {
+			desc = "Alfonso_Herrera_desc"	#Offensive FM
+			traits = { panzer_leader panzer_expert naval_invader infantry_expert offensive_doctrine fast_planner trait_engineer } 
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+		}
+	}
+
+	CUB_Jairo_Ariza = {
+		name = "Jairo Ariza"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_three" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Jairo_Ariza_desc"	#invader for asia
+			traits = { infantry_expert jungle_rat naval_invader naval_liason commando trait_mountaineer guerilla_fighter }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+
+	CUB_Teo_Herrero = {
+		name = "Teo Herrero"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_four" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Teo_Herrero_desc"	#Special Forces for Europe
+			traits = { naval_invader invader_ii urban_assault_specialist guerilla_fighter infantry_leader skirmisher paratrooper }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+		}
+	}
+
+	CUB_Sergio_Duque = {
+		name = "Sergio Duque"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_five" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Sergio_Duque_desc"	#
+			traits = { panzer_leader panzer_expert expert_improviser trickster trait_engineer adaptable naval_invader }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+		}
+	}
+
+	CUB_Jorge_Chistau = {
+		name = "Jorge Chistau"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Cuban_six" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Jorge_Chistau_desc"	#infantry general 
+			traits = { camouflage_expert infantry_leader ambusher infantry_officer hill_fighter }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 6
+		}
+	}
+	CUB_maximo_castanon = {
+		name = "Máximo Castanon"
+		portraits = {
+			army = {
+				large = "GFX_portrait_Leon_Cortes_Castro"
+				small = GFX_portrait_BUL_atanas_shalapatov_small
+			}
+		}
+		navy_leader = {
+			traits = { flight_deck_manager air_controller fly_swatter craven cruiser_captain destroyer_leader torpedo_bomber }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id = -1
+		}		
+	}	
+	CUB_Leonardo_Orduno = {
+		name = "Leonardo Orduno"
+		portraits = {
+			army = {
+				large = "GFX_portrait_Juan_Demostenes_Arosemena"
+				small = GFX_portrait_BUL_atanas_shalapatov_small
+			}
+		}
+		navy_leader = {
+			traits = { media_personality chief_engineer fleet_protector destroyer_leader blockade_runner spotter blue_water_expert concealment_expert lancer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 5	
+			legacy_id = -1
+		}		
+	}
+	CUB_Felipe_Carvajal = {
+		name = "Felipe Carvajal"
+		portraits = {
+			army = {
+				large = "GFX_portrait_Hosni_al_Arabi"
+				small = GFX_portrait_BUL_atanas_shalapatov_small
+			}
+		}
+		navy_leader = {
+			traits = { search_pattern_expert fleet_protector blockade_runner fly_swatter inshore_fighter }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 5	
+			legacy_id = -1
+		}		
+	}
+	
+}

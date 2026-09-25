@@ -1,0 +1,2840 @@
+focus_tree = {
+	id = netherlands_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HOL
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+ ##   ##  #    ##  #  # ###  ##  #       ### #  # ###  #  #  ## ### ###  #   #     ### ###  ### ### 
+#  # #  # #   #  # ## #  #  #  # #        #  ## # #  # #  # #    #  #  #  # #       #  #  # #   #   
+#    #  # #   #  # # ##  #  #### #        #  # ## #  # #  #  #   #  ###    #        #  ###  ##  ##  
+#  # #  # #   #  # #  #  #  #  # #        #  #  # #  # #  #   #  #  #  #   #        #  #  # #   #   
+ ##   ##  ###  ##  #  # ### #  # ###     ### #  # ###   ##  ##   #  #  #   #        #  #  # ### ### 
+
+
+	focus = {
+		id = HOL_obtain_foreign_colonial_investments
+		available = {
+			NOT = { has_war_with = USA }
+			NOT = { has_war_with = ENG }
+			any_country = {
+				OR = {
+					original_tag = HOL
+					is_subject_of = HOL
+				}
+				has_full_control_of_state = 335
+				has_full_control_of_state = 672
+				has_full_control_of_state = 334
+			}
+			has_full_control_of_state = 695
+			has_full_control_of_state = 309
+		}
+		bypass = {
+		}
+		
+		icon = GFX_HOL_lion
+		x = 3
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_category_tooltip = HOL_obtain_foreign_colonial_investments
+			custom_effect_tooltip = HOL_obtain_foreign_colonial_investments_tt
+		}
+	}
+
+#   # ###  ## ###     ### #  # ###  ### ###  ## 
+#   # #   #    #       #  ## # #  #  #  #   #   
+# # # ##   #   #       #  # ## #  #  #  ##   #  
+# # # #     #  #       #  #  # #  #  #  #     # 
+ # #  ### ##   #      ### #  # ###  ### ### ##  
+
+
+	focus = {
+		id = HOL_the_western_possessions
+		available = {
+			has_full_control_of_state = 695
+			has_full_control_of_state = 309
+		}
+		prerequisite = { focus = HOL_obtain_foreign_colonial_investments }
+		icon = GFX_HOL_west
+		x = -3
+		y = 1
+		relative_position_id = HOL_obtain_foreign_colonial_investments
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			695 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			309 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 6
+					instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_expand_curacao_oil_refineries
+		available = {
+			has_full_control_of_state = 695
+			OR = {
+				threat > 0.2
+				has_war = yes
+			}
+			OR = {
+				GER = {
+					is_in_faction_with = ROOT
+				}
+				AND = {
+					USA = {
+						NOT = { has_war_with = ROOT }
+					}
+					ENG = {
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+			OR = {
+				has_idea = free_trade
+				has_idea = export_focus
+			}
+		}
+		prerequisite = { focus = HOL_the_western_possessions }
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = HOL_the_western_possessions
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = HOL_expand_curacao_oil_refineries_tt
+			695 = {
+				add_resource = {
+					type = oil
+					amount = 34
+				}
+				if = {
+					limit = {
+						695 = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = HOL_expand_curacao_oil_refineries
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_open_second_paranam_bauxite_mine
+		available = {
+			has_full_control_of_state = 309
+			OR = {
+				has_war = yes
+				GER = {
+					is_in_faction_with = ROOT
+				}
+				AND = {
+					USA = {
+						has_war = yes
+						NOT = { has_war_with = ROOT }
+					}
+					ENG = {
+						has_war = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+			}
+			OR = {
+				has_idea = free_trade
+				has_idea = export_focus
+			}
+		}
+		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
+		icon = GFX_focus_generic_aluminum
+		x = 0
+		y = 2
+		relative_position_id = HOL_expand_curacao_oil_refineries
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			309 = {
+				add_resource = {
+					type = aluminium
+					amount = 36
+				}
+				if = {
+					limit = {
+						309 = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_antilles_defenses
+		available = {
+			has_full_control_of_state = 695
+		}
+		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
+		icon = GFX_HOL_fort_island
+		x = 2
+		y = 2
+		relative_position_id = HOL_expand_curacao_oil_refineries
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			695 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 153
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province = 153
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+###  ##   ## ###     ### #  # ###  ### ###  ## 
+#   #  # #    #       #  ## # #  #  #  #   #   
+##  ####  #   #       #  # ## #  #  #  ##   #  
+#   #  #   #  #       #  #  # #  #  #  #     # 
+### #  # ##   #      ### #  # ###  ### ### ##  
+
+	focus = {
+		id = HOL_the_crown_jewel_colony
+		available = {
+			OR = {
+				AND = {
+					has_full_control_of_state = 335
+					has_full_control_of_state = 672
+				}
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 335
+					has_full_control_of_state = 672
+				}
+			}
+		}
+		prerequisite = { focus = HOL_obtain_foreign_colonial_investments }
+		icon = GFX_HOL_east
+		x = 3
+		y = 1
+		relative_position_id = HOL_obtain_foreign_colonial_investments
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			335 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			672 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_java
+		available = {
+			OR = {
+				has_full_control_of_state = 335
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 335
+				}
+			}
+		}
+		prerequisite = { focus = HOL_the_crown_jewel_colony }
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 1
+		relative_position_id = HOL_the_crown_jewel_colony
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			335 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_reinforce_java
+		available = {
+			OR = {
+				has_full_control_of_state = 335
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 335
+				}
+			}
+		}
+		prerequisite = { focus = HOL_java }
+		icon = GFX_HOL_fort_island
+		x = -2
+		y = 2
+		relative_position_id = HOL_java
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			335 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 7381
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7381
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 4608
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4608
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_the_foundations_of_defense
+		available = {
+			OR = {
+				has_full_control_of_state = 335
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 335
+				}
+			}
+			has_full_control_of_state = 695
+			custom_trigger_tooltip = {
+				tooltip = HOL_pre_empt_venezuelan_aggression_tt
+				NOT = {
+					OR = {
+						has_idea = HOL_shell_shocked_spectator_1
+						has_idea = HOL_shell_shocked_spectator_2
+						has_idea = HOL_shell_shocked_spectator_3
+						has_idea = HOL_shell_shocked_spectator_4
+						has_idea = HOL_shell_shocked_spectator_5
+					}
+				}
+			}
+		}
+		prerequisite = { focus = HOL_antilles_defenses focus = HOL_reinforce_java }
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = -1
+		y = 1
+		relative_position_id = HOL_reinforce_java
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = HOL_the_foundations_of_defense
+			335 = {
+				add_building_construction = {
+					type = naval_base
+					level = 10
+					province = 4608
+					instant_build = yes
+				}
+			}
+			695 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 153
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_sumatra
+		available = {
+			OR = {
+				has_full_control_of_state = 672
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 672
+				}
+			}
+		}
+		prerequisite = { focus = HOL_java }
+		icon = GFX_focus_generic_industry_2
+		x = -1
+		y = 1
+		relative_position_id = HOL_java
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			672 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_borneo_and_the_grote_oost
+		available = {
+			OR = {
+				AND = {
+					has_full_control_of_state = 667
+					has_full_control_of_state = 334
+					has_full_control_of_state = 668
+					has_full_control_of_state = 673
+				}
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 667
+					has_full_control_of_state = 334
+					has_full_control_of_state = 668
+					has_full_control_of_state = 673
+				}
+			}
+		}
+		prerequisite = { focus = HOL_java }
+		icon = GFX_focus_generic_industry_1
+		x = 1
+		y = 1
+		relative_position_id = HOL_java
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			667 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			334 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			668 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			673 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+ ##   ##  #  # ### ### #  # #  # ###     ### #  # ###     #   #  ##  ###      ### #  #     ###   ##  ###  ##  #   # ###  ##  
+#  # #  # ## #  #   #  ## # #  # #        #  #  # #       #   # #  # #  #      #  ## #     #  # #  #  #  #  # #   #  #  #  # 
+#    #  # # ##  #   #  # ## #  # ##       #  #### ##      # # # #### ###       #  # ##     ###  ####  #  ####  # #   #  #### 
+#  # #  # #  #  #   #  #  # #  # #        #  #  # #       # # # #  # #  #      #  #  #     #  # #  #  #  #  #  # #   #  #  # 
+ ##   ##  #  #  #  ### #  #  ##  ###      #  #  # ###      # #  #  # #  #     ### #  #     ###  #  #  #  #  #   #   ### #  # 
+
+	focus = {
+		id = HOL_continue_the_war_in_batavia
+		prerequisite = { focus = HOL_sumatra }
+		prerequisite = { focus = HOL_borneo_and_the_grote_oost }
+		available = {
+			SWI = { has_completed_focus = capitulation_of_netherlands }
+			has_full_control_of_state = 335
+		}
+		icon = GFX_focus_hol_continue_the_war_in_batavia
+		x = 1
+		y = 2
+		relative_position_id = HOL_sumatra
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+					set_technology = {
+						jaegers = 1
+					}				
+					set_technology = {
+						desertinfantry_at = 1
+					}			
+		    remove_ideas = GBP_nerf
+            remove_ideas = BEL_inflexible		
+			activate_decision = HOL_relocate_government_to_batavia
+			custom_effect_tooltip = HOL_continue_the_war_in_batavia_tt
+			effect_tooltip = {
+			 set_capital = { state = 335 }
+			}
+			custom_effect_tooltip = "NEWGENERALS_TOOLTIP"
+		}
+	}
+
+	focus = {
+		id = HOL_a_western_capital
+		available = {
+			has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_continue_the_war_in_batavia }
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 1
+		relative_position_id = HOL_continue_the_war_in_batavia
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			335 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_expand_the_colonial_army
+		prerequisite = { focus = HOL_continue_the_war_in_batavia }
+		icon = GFX_HOL_colarmy
+		x = 1
+		y = 1
+		relative_position_id = HOL_continue_the_war_in_batavia
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			add_ideas = HOL_expand_the_colonial_army
+
+			custom_effect_tooltip="irregular_infantry_tooltip"
+			set_technology = {
+				irregular_infantry = 1
+			}	
+			
+			custom_effect_tooltip = "HOL_MANPOWER_TOOLTIP"
+			hidden_effect = {
+				334 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				672 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				335 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				667 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				673 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				668 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				738 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+				669 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_1 }
+					add_dynamic_modifier = { modifier = DEI_manpower_2 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_colonial_shipbuilding
+		prerequisite = { focus = HOL_the_foundations_of_defense }
+		available = {
+			controls_state = 335	
+			controls_state = 672
+			controls_state = 334
+		}
+		icon = GFX_HOL_colnavy
+		x = 0
+		y = 1
+		relative_position_id = HOL_the_foundations_of_defense
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			335 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			672 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			334 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_the_east_indies_war_machine
+		available = {
+			has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_a_western_capital }
+		prerequisite = { focus = HOL_expand_the_colonial_army }
+		icon = GFX_IEA_milz
+		x = 1
+		y = 1
+		relative_position_id = HOL_a_western_capital
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			335 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_prepare_for_our_return
+		available = {
+		}
+		bypass = {
+			controls_state = 7
+			controls_state = 35
+			controls_state = 36
+		}
+		prerequisite = { focus = HOL_the_east_indies_war_machine }
+		icon = GFX_SIA_marine
+		x = 0
+		y = 1
+		relative_position_id = HOL_the_east_indies_war_machine
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			add_ideas = HOL_prepare_for_our_return
+			add_tech_bonus = {
+				name = ITA_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				technology = marines2
+				technology = marines3
+			}
+			custom_effect_tooltip = "HOL_MANPOWER_TOOLTIPTWO"
+			hidden_effect = {
+				334 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				672 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				335 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				667 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				673 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				668 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				738 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+				669 = {
+					remove_dynamic_modifier = { modifier = DEI_manpower_2 }
+					add_dynamic_modifier = { modifier = DEI_manpower_3 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_liberation
+		available = {
+			has_full_control_of_state = 7
+			has_full_control_of_state = 35
+			has_full_control_of_state = 36
+		}
+		prerequisite = { focus = HOL_prepare_for_our_return }
+		icon = GFX_focus_hol_liberation
+		x = 0
+		y = 1
+		relative_position_id = HOL_prepare_for_our_return
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
+
+		completion_reward = {
+			set_capital = { state = 7 }
+ 			add_stability = 0.1
+			add_war_support = 0.05
+			add_manpower = 50000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 10000
+			    producer = HOL
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 500
+			    producer = HOL
+			}
+			add_ideas = HOL_liberation
+		}
+	}
+
+ ##  ###   ##  #  # ###   ##  #  #     ### #  # ###      ##   ##  #   ###       ## ###  ##  #  # ###   ##  ###  ###  
+#  # #  # #  # ## # #  # #  # ## #      #  #  # #       #    #  # #   #  #     #    #  #  # ## # #  # #  # #  # #  # 
+#### ###  #### # ## #  # #  # # ##      #  #### ##      # ## #  # #   #  #      #   #  #### # ## #  # #### ###  #  # 
+#  # #  # #  # #  # #  # #  # #  #      #  #  # #       #  # #  # #   #  #       #  #  #  # #  # #  # #  # #  # #  # 
+#  # ###  #  # #  # ###   ##  #  #      #  #  # ###      ##   ##  ### ###      ##   #  #  # #  # ###  #  # #  # ###  
+
+	focus = {
+		id = HOL_abandon_the_gold_standard
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = 13
+		y = 0
+		relative_position_id = HOL_obtain_foreign_colonial_investments
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			HOL_de_crisisjaren_level_down = yes
+		}
+	}
+
+#   #  ##  ### #  # #    ##  #  # ###      ### #  # ###  #  #  ## ### ###  #   #     ### ###  ### ### 
+## ## #  #  #  ## # #   #  # ## # #  #      #  ## # #  # #  # #    #  #  #  # #       #  #  # #   #   
+# # # ####  #  # ## #   #### # ## #  #      #  # ## #  # #  #  #   #  ###    #        #  ###  ##  ##  
+#   # #  #  #  #  # #   #  # #  # #  #      #  #  # #  # #  #   #  #  #  #   #        #  #  # #   #   
+#   # #  # ### #  # ### #  # #  # ###      ### #  # ###   ##  ##   #  #  #   #        #  #  # ### ### 
+
+
+	focus = {
+		id = HOL_continue_the_public_works
+		available = {
+			has_full_control_of_state = 7
+		}
+		bypass = {
+			NOT = { controls_state = 7 }
+			NOT = { controls_state = 35 }
+			NOT = { controls_state = 36 }
+		}
+		prerequisite = { focus = HOL_abandon_the_gold_standard }
+		icon = GFX_goal_generic_construction
+		x = -5
+		y = 1
+		relative_position_id = HOL_abandon_the_gold_standard
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_continue_the_public_works
+				bonus = 1.0
+				uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+				technology = construction3
+				technology = construction4
+				technology = construction5
+			}
+			HOL_de_crisisjaren_level_down = yes
+		}
+	}
+
+	focus = {
+		id = HOL_finish_the_noordoostpolder
+		available = {
+			has_full_control_of_state = 36
+		}
+		bypass = {
+			NOT = { controls_state = 7 }
+			NOT = { controls_state = 35 }
+			NOT = { controls_state = 36 }
+		}
+		prerequisite = { focus = HOL_continue_the_public_works }
+		icon = GFX_NOR_hydro2
+		x = -1
+		y = 1
+		relative_position_id = HOL_continue_the_public_works
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			HOL_de_crisisjaren_level_down = yes
+		}
+	}
+
+	focus = {
+		id = HOL_the_maastunnel
+		available = {
+			has_full_control_of_state = 7
+			has_full_control_of_state = 35
+		}
+		bypass = {
+			NOT = { controls_state = 7 }
+			NOT = { controls_state = 35 }
+			NOT = { controls_state = 36 }
+		}
+		prerequisite = { focus = HOL_continue_the_public_works }
+		icon = GFX_PHI_armyinfra
+		x = 1
+		y = 1
+		relative_position_id = HOL_continue_the_public_works
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			HOL_de_crisisjaren_level_down = yes
+		}
+	}
+
+	focus = {
+		id = HOL_expand_the_artillerieinrichtingen
+		available = {
+			has_full_control_of_state = 7
+		}
+		bypass = {
+			NOT = { controls_state = 7 }
+			NOT = { controls_state = 35 }
+			NOT = { controls_state = 36 }
+		}
+		prerequisite = { focus = HOL_finish_the_noordoostpolder }
+		prerequisite = { focus = HOL_the_maastunnel }
+		icon = GFX_YUG_artillery
+		x = 1
+		y = 1
+		relative_position_id = HOL_finish_the_noordoostpolder
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = HOL_expand_the_artillerieinrichtingen_tt
+			672 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = HOL_modernize_our_infantry_equipment
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}			
+		}
+	}
+
+	focus = {
+		id = HOL_philips_focus
+		prerequisite = { focus = HOL_expand_the_artillerieinrichtingen }
+		icon = GFX_focus_hol_philips
+		x = 1
+		y = 1
+		relative_position_id = HOL_expand_the_artillerieinrichtingen
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = HOL_philips_focus_tt
+			add_tech_bonus = {
+				name = HOL_philips_focus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_expand_RD_facilities
+		prerequisite = { focus = HOL_expand_the_artillerieinrichtingen }
+		icon = GFX_focus_research
+		x = 1
+		y = 1
+		relative_position_id = HOL_philips_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+### #  # ###     ### #  # ### ###  ### ###  ### ### ###     #   #  ##  ###  # #  ## 
+ #  #  # #         # #  #  #  #  # #   #  #   # #   #       #   # #  # #  # # # #   
+ #  #### ##       #  #  #  #  #  # ##  ###   #  ##  ##      # # # #  # ###  ##   #  
+ #  #  # #       #   #  #  #  #  # #   #  # #   #   #       # # # #  # #  # # #   # 
+ #  #  # ###     ###  ##  ### ###  ### #  # ### ### ###      # #   ##  #  # # # ##  
+
+ 	focus = {
+		id = HOL_the_zuiderzee_works
+		available = {
+		
+		}
+		prerequisite = { focus = HOL_expand_the_artillerieinrichtingen }
+		icon = GFX_focus_hol_the_zuiderzee_works
+		x = -1
+		y = 1
+		relative_position_id = HOL_expand_the_artillerieinrichtingen
+		cost = 15
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_GRE_DEBT_TO_IFC}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_the_zuiderzee_works
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+				technology = construction3
+				technology = construction4
+				technology = construction5
+			}
+			HOL_de_crisisjaren_level_down = yes
+		}
+	}
+
+	focus = {
+		id = HOL_develop_the_randstad
+		available = {
+		
+		}
+		prerequisite = { focus = HOL_the_zuiderzee_works }
+		mutually_exclusive = { focus = HOL_develop_the_zandstad }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = HOL_the_zuiderzee_works
+		cost = 5
+
+		available_if_capitulated = yes
+
+        bypass = {
+		   NOT = {
+		      has_full_control_of_state = 335
+		   }
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		    335 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_expand_the_ijmuiden_steel_mill
+		available = {
+		has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_develop_the_randstad focus = HOL_develop_the_zandstad }
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 1
+		relative_position_id = HOL_develop_the_randstad
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			335 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_fokker
+		available = {
+			has_full_control_of_state = 673
+		}
+		prerequisite = { focus = HOL_expand_the_ijmuiden_steel_mill }
+		icon = GFX_focus_hol_fokker
+		x = 0
+		y = 1
+		relative_position_id = HOL_expand_the_ijmuiden_steel_mill
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			673 = {
+				if = {
+					limit = {
+						673 = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_domestic_jet_engine_designs
+		prerequisite = { focus = HOL_fokker }
+		icon = GFX_JAP_jet
+		x = 0
+		y = 1
+		relative_position_id = HOL_fokker
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_domestic_jet_engine_designs
+				bonus = 1.0
+				uses = 1
+				category = jet_technology
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_develop_the_zandstad
+		available = {
+		
+		}
+		prerequisite = { focus = HOL_the_zuiderzee_works }
+		mutually_exclusive = { focus = HOL_develop_the_randstad }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 1
+		relative_position_id = HOL_the_zuiderzee_works
+		cost = 5
+
+		available_if_capitulated = yes
+        bypass = {
+		   NOT = {
+		      has_full_control_of_state = 335
+		   }
+		}
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+		    335 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_friesland_agricultural_impetus
+		available = {
+			has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_develop_the_randstad focus = HOL_develop_the_zandstad }
+		icon = GFX_NZL_sheep
+		x = 0
+		y = 1
+		relative_position_id = HOL_develop_the_zandstad
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = HOL_friesland_agricultural_impetus
+			335 = {
+				if = {
+					limit = {
+						335 = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_daf
+		available = {
+			has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_friesland_agricultural_impetus }
+		icon = GFX_focus_hol_daf
+		x = 0
+		y = 1
+		relative_position_id = HOL_friesland_agricultural_impetus
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			335 = {
+				if = {
+					limit = {
+						335 = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_domestic_vehicle_designs
+		prerequisite = { focus = HOL_daf }
+		icon = GFX_CM_pattern_truck
+		x = 0
+		y = 1
+		relative_position_id = HOL_daf
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_domestic_vehicle_designs
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_ideas = HOL_domestic_vehicle_designs
+		}
+	}
+
+	focus = {
+		id = HOL_domestic_innovation
+		prerequisite = { focus = HOL_the_east_indies_war_machine focus = HOL_fokker focus = HOL_daf }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		icon = GFX_researchslot1
+		x = -1
+		y = 2
+		relative_position_id = HOL_fokker
+		cost = 10
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = HOL_make_use_of_our_riches
+		prerequisite = { focus = HOL_open_second_paranam_bauxite_mine }
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		relative_position_id = HOL_open_second_paranam_bauxite_mine
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_make_use_of_our_riches
+				bonus = 1.0
+				uses = 2
+				category = excavation_tech
+			}
+			add_ideas = HOL_make_use_of_our_riches
+		}
+	}
+
+#   # ### #   ### ###  ##  ###  #   #     ### ###  ### ### 
+## ##  #  #    #   #  #  # #  #  # #       #  #  # #   #   
+# # #  #  #    #   #  #### ###    #        #  ###  ##  ##  
+#   #  #  #    #   #  #  # #  #   #        #  #  # #   #   
+#   # ### ### ###  #  #  # #  #   #        #  #  # ### ### 
+
+	focus = {
+		id = HOL_overturn_military_budget_cuts
+		prerequisite = { focus = HOL_abandon_the_gold_standard }
+		icon = GFX_HOL_command
+		x = 5
+		y = 1
+		relative_position_id = HOL_abandon_the_gold_standard
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			army_experience = 50
+			add_war_support = 0.1
+		}
+	}
+
+
+
+	focus = {
+		id = HOL_war_on_pacifism
+		available = {
+			threat > 0.15
+		}
+        prerequisite = { focus = HOL_abandon_the_gold_standard }		
+		icon = GFX_HOL_waronpac
+		x = 0
+		y = 1
+		relative_position_id = HOL_abandon_the_gold_standard
+		cost = 5
+
+		cancel_if_invalid = no
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_category_tooltip = HOL_war_on_pacifism
+			custom_effect_tooltip = HOL_war_on_pacifism_tt
+		}
+	}
+
+ ##  ###  #   # #   #     ### ###  ### ### 
+#  # #  # ## ##  # #       #  #  # #   #   
+#### ###  # # #   #        #  ###  ##  ##  
+#  # #  # #   #   #        #  #  # #   #   
+#  # #  # #   #   #        #  #  # ### ### 
+
+
+	focus = {
+		id = HOL_evaluate_the_army
+		prerequisite = { focus = HOL_overturn_military_budget_cuts }
+		icon = GFX_HOL_army
+		x = -4
+		y = 1
+		relative_position_id = HOL_overturn_military_budget_cuts
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				set_technology = {
+					bicycle_infantry = 1
+				}
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = HOL_evaluate_the_army
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_modernize_our_infantry_equipment
+		prerequisite = { focus = HOL_evaluate_the_army }
+		icon = GFX_HOL_gun
+		x = -1
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
+		relative_position_id = HOL_evaluate_the_army
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_modernize_our_infantry_equipment
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = HOL_modernize_our_infantry_equipment
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+				}
+				custom_effect_tooltip = HOL_modernize_our_infantry_equipment_tt
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_support_equipment
+		prerequisite = { focus = HOL_evaluate_the_army }
+
+		allow_branch = {
+			has_dlc = "Death or Dishonor"
+		}
+
+		available = {
+		}
+		icon = GFX_SIA_support
+		x = 1
+		y = 1
+		relative_position_id = HOL_evaluate_the_army
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAF_sa_engineer_corps
+				bonus = 1.0
+				uses = 2
+				category = support_tech
+			}			
+		}
+	}
+
+	focus = {
+		id = HOL_light_tanks_for_the_colonies
+		allow_branch = {
+			always = yes
+		}
+		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_support_equipment }
+		icon = GFX_MAN_tank
+		x = -1
+		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
+		relative_position_id = HOL_modernize_our_infantry_equipment
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = HOL_modernize_our_infantry_equipment }
+					NOT = { has_completed_focus = HOL_support_equipment }
+					has_dlc = "Death or Dishonor"
+				}
+				custom_effect_tooltip = HOL_light_tanks_for_the_colonies_tt
+				effect_tooltip = {
+					add_tech_bonus = {
+						name = armor_bonus
+						bonus = 1.0
+						uses = 2
+						category = armor
+					}
+					custom_effect_tooltip = HOL_light_tanks_for_the_colonies_2tt
+					add_ideas = HOL_light_tanks_for_the_colonies
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = HOL_modernize_our_infantry_equipment
+						NOT = { has_dlc = "Death or Dishonor" }
+					}
+				}
+				add_tech_bonus = {
+					name = armor_bonus
+					bonus = 1.0
+					uses = 2
+					category = armor
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = HOL_support_equipment
+				}
+				add_ideas = HOL_light_tanks_for_the_colonies
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_secret_staff_talks
+		available = {
+			threat > 0.15
+			OR = {
+				GER = { has_added_tension_amount > 10 }
+				ENG = { has_added_tension_amount > 10 }
+				FRA = { has_added_tension_amount > 10 }
+			}
+			has_war = no
+		}
+		allow_branch = {
+			always = yes
+		}
+		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_support_equipment }
+		icon = GFX_POL_officers
+		x = 1
+		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
+		relative_position_id = HOL_modernize_our_infantry_equipment
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_category_tooltip = HOL_secret_staff_talks
+			custom_effect_tooltip = HOL_secret_staff_talks_tt
+		}
+	}
+
+	focus = {
+		id = HOL_anti_tank_guns_for_the_continent
+		allow_branch = {
+			always = yes
+		}
+		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_support_equipment }
+		icon = GFX_NOR_antiarmor
+		x = 3
+		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
+		relative_position_id = HOL_modernize_our_infantry_equipment
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = HOL_modernize_our_infantry_equipment }
+					NOT = { has_completed_focus = HOL_support_equipment }
+					has_dlc = "Death or Dishonor"
+				}
+				custom_effect_tooltip = HOL_light_tanks_for_the_colonies_tt
+				effect_tooltip = {
+					add_tech_bonus = {
+						name = HOL_anti_tank_guns_for_the_continent
+						bonus = 1.0
+						uses = 2
+						category = cat_anti_tank
+					}
+					custom_effect_tooltip = HOL_light_tanks_for_the_colonies_2tt
+					add_ideas = HOL_anti_tank_guns_for_the_continent
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = HOL_modernize_our_infantry_equipment
+						NOT = { has_dlc = "Death or Dishonor" }
+					}
+				}
+				add_tech_bonus = {
+					name = HOL_anti_tank_guns_for_the_continent
+					bonus = 1.0
+					uses = 1
+					category = cat_anti_tank
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = HOL_support_equipment
+				}
+				add_ideas = HOL_anti_tank_guns_for_the_continent
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_lessons_from_the_last_war
+		prerequisite = { focus = HOL_light_tanks_for_the_colonies focus = HOL_secret_staff_talks focus = HOL_anti_tank_guns_for_the_continent }
+		icon = GFX_SIA_militaryschool
+		x = 0
+		y = 1
+		relative_position_id = HOL_secret_staff_talks
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = HOL_lessons_from_the_last_war
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = HOL_expand_the_mld
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+		}
+	}
+
+ ##  ### ###      ### ###  ### ### 
+#  #  #  #  #      #  #  # #   #   
+####  #  ###       #  ###  ##  ##  
+#  #  #  #  #      #  #  # #   #   
+#  # ### #  #      #  #  # ### ### 
+
+	focus = {
+		id = HOL_expand_the_mld
+		available = {
+			OR = {
+				has_full_control_of_state = 335
+				any_other_country = {
+					is_subject_of = ROOT
+					has_full_control_of_state = 335
+				}
+			}
+		}
+		bypass = {
+			335 = {
+				OWNER = { 
+					NOT = {
+						OR = {
+							TAG = ROOT 
+							is_subject_of = ROOT 
+						}
+					} 
+				}
+			}
+		}
+		prerequisite = { focus = HOL_overturn_military_budget_cuts }
+		icon = GFX_HOL_air
+		x = 0
+		y = 1
+		relative_position_id = HOL_overturn_military_budget_cuts
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}		
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = coastal_command_equipment
+				bonus = 1.0
+				uses = 1
+				category = electronics
+				category = cat_air_guns
+			}	
+		}
+	}
+
+	focus = {
+		id = HOL_protect_the_mainland
+		prerequisite = { focus = HOL_expand_the_mld }
+		icon = GFX_HOL_fighter
+		x = -1
+		y = 1
+		relative_position_id = HOL_expand_the_mld
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AST_cac_boomerang
+				bonus = 1.0
+				uses = 1
+				technology = improved_small_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_protect_the_colonies
+		prerequisite = { focus = HOL_expand_the_mld }
+		icon = GFX_itaplane
+		x = 1
+		y = 1
+		relative_position_id = HOL_expand_the_mld
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = coastal_command_focus
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_modernize_the_air_fleet
+		prerequisite = { focus = HOL_protect_the_mainland focus = HOL_protect_the_colonies }
+		icon = GFX_HOL_modernize
+		x = 1
+		y = 1
+		relative_position_id = HOL_protect_the_mainland
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = HOL_modernize_the_air_fleet days = 365 }
+			
+			add_tech_bonus = {
+				name = coastal_command_equipment
+				bonus = 1.0
+				uses = 1
+				category = plane_modules_tech
+			}				
+		}
+	}
+
+	focus = {
+		id = HOL_strategic_bombing_defense
+		available = {
+			has_full_control_of_state = 335
+		}
+		prerequisite = { focus = HOL_modernize_the_air_fleet }
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 1
+		relative_position_id = HOL_modernize_the_air_fleet
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 100
+			add_doctrine_cost_reduction = {
+				name = HOL_strategic_bombing_defense
+				cost_reduction = 0.5
+				category = air_doctrine
+			}
+			335 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_longer_range_models
+		prerequisite = { focus = HOL_strategic_bombing_defense }
+		icon = GFX_HOL_hvf
+		x = -1
+		y = 1
+		relative_position_id = HOL_strategic_bombing_defense
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AST_cac_boomerang
+				bonus = 1.0
+				uses = 1
+				technology = advanced_small_airframe
+				technology = advanced_medium_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_unsinkable_aircraft_carriers
+		available = {
+			OR = {
+				AND = {
+					has_full_control_of_state = 335
+					has_full_control_of_state = 672
+					has_full_control_of_state = 673
+					has_full_control_of_state = 334
+					has_full_control_of_state = 667
+					has_full_control_of_state = 668
+					has_full_control_of_state = 738
+					has_full_control_of_state = 669
+				}
+				any_other_country = {
+					is_subject_of = HOL
+					has_full_control_of_state = 335
+					has_full_control_of_state = 672
+					has_full_control_of_state = 673
+					has_full_control_of_state = 334
+					has_full_control_of_state = 667
+					has_full_control_of_state = 668
+					has_full_control_of_state = 738
+					has_full_control_of_state = 669
+				}
+			}
+		}
+		prerequisite = { focus = HOL_strategic_bombing_defense }
+		icon = GFX_HOL_koolhoven
+		x = 1
+		y = 1
+		relative_position_id = HOL_strategic_bombing_defense
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			335 = {			
+				add_building_construction = {
+					type = air_base
+					level = 7
+					instant_build = yes
+				}
+			}
+			672 = {			
+				add_building_construction = {
+					type = air_base
+					level = 9
+					instant_build = yes
+				}
+			}
+			673 = {			
+				add_building_construction = {
+					type = air_base
+					level = 5 
+					instant_build = yes
+				}
+			}
+			334 = {			
+				add_building_construction = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			667 = {			
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			668 = {			
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			738 = {			
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			669 = {			
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}	
+		}
+	}
+
+#  #  ##  #   #  ##  #       ### ###  ### ### 
+## # #  # #   # #  # #        #  #  # #   #   
+# ## ####  # #  #### #        #  ###  ##  ##  
+#  # #  #  # #  #  # #        #  #  # #   #   
+#  # #  #   #   #  # ###      #  #  # ### ### 
+	
+	focus = {
+		id = HOL_prepare_naval_expansion
+		prerequisite = { focus = HOL_overturn_military_budget_cuts }
+		available = {
+		
+		}
+		icon = GFX_HOL_navy
+		x = 4
+		y = 1
+		relative_position_id = HOL_overturn_military_budget_cuts
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			695 = {		
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			navy_experience = 125
+		}
+	}
+
+	focus = {
+		id = HOL_cornerstone_of_colonial_defense
+		prerequisite = { focus = HOL_prepare_naval_expansion }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		relative_position_id = HOL_prepare_naval_expansion
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HOL_cornerstone_of_colonial_defense
+				cost_reduction = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_rely_on_submarines
+		prerequisite = { focus = HOL_cornerstone_of_colonial_defense }
+		icon = GFX_goal_generic_navy_submarine
+		x = 2
+		y = 1
+		relative_position_id = HOL_cornerstone_of_colonial_defense
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fleet_submarines
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_modernize_the_cruiser_fleet
+		prerequisite = { focus = HOL_cornerstone_of_colonial_defense }
+		icon = GFX_focus_generic_cruiser2
+		x = 0
+		y = 1
+		relative_position_id = HOL_cornerstone_of_colonial_defense
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_modernize_the_cruiser_fleet
+				bonus = 1
+				uses = 1
+				technology = basic_ship_hull_heavy
+			}	
+			add_tech_bonus = {
+				name = HOL_modernize_the_cruiser_fleet
+				bonus = 1
+				uses = 1
+				technology = early_ship_hull_carrier
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_the_battlecruiser_plan
+		prerequisite = { focus = HOL_modernize_the_cruiser_fleet }
+		available = {
+           has_tech = basic_ship_hull_heavy
+		}
+		bypass = {
+
+		}
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		relative_position_id = HOL_modernize_the_cruiser_fleet
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {
+		
+		 custom_effect_tooltip = "HOLCRUISER_TOOLTIP"		
+		
+				set_technology = {
+					antiair2 = 1
+					improved_fire_control_system = 1
+					basic_dp_light_battery = 1
+				}
+				create_equipment_variant = {
+					name = "Design 1047"
+					type = ship_hull_heavy_2
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = ship_armor_bc_2
+						front_1_custom_slot = ship_heavy_battery_2
+						mid_1_custom_slot = ship_anti_air_2
+						mid_2_custom_slot = ship_anti_air_2
+						rear_1_custom_slot = ship_heavy_battery_2
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HOL"
+						version_name = "Design 1047"
+					}
+					name = "De Zeven Provincien"
+					requested_factories = 20
+					progress = 0.25
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HOL"
+						version_name = "Design 1047"
+					}
+					name = "Ruyter"
+					requested_factories = 20
+					progress = 0.25
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "HOL"
+						version_name = "Design 1047"
+					}
+					name = "Van Amstel"
+					requested_factories = 20
+					progress = 0.25
+					amount = 1
+				}
+		}
+	}
+
+	focus = {
+		id = HOL_air_cover_for_the_new_fleet
+		prerequisite = { focus = HOL_the_battlecruiser_plan }
+		icon = GFX_goal_generic_navy_carrier
+		x = -1
+		y = 1
+		relative_position_id = HOL_the_battlecruiser_plan
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		   has_tech = early_ship_hull_carrier
+ 		}
+
+        search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {
+		 
+		 custom_effect_tooltip = "HOLCARRIER_TOOLTIP"
+		 
+		hidden_effect = {
+			create_equipment_variant = {
+			name = "Rapana Class"
+			type = ship_hull_carrier_conversion_ca
+			name_group = HOL_CVL_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = empty
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_secondaries_slot = empty
+			}
+			}
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_carrier_conversion_ca
+								creator = "HOL" 
+								version_name = "Rapana Class"
+							}
+							name = "MV Macoma" 
+							requested_factories = 1
+							progress = 0.90
+							amount = 1
+						}		
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_carrier_conversion_ca
+								creator = "HOL" 
+								version_name = "Rapana Class"
+							}
+							name = "MV Gadila" 
+							requested_factories = 1
+							progress = 0.90
+							amount = 1
+						}
+		}
+		}
+	}
+
+	focus = {
+		id = HOL_escorts_for_the_new_fleet
+		prerequisite = { focus = HOL_the_battlecruiser_plan }
+		icon = GFX_focus_generic_destroyer
+		x = 1
+		y = 1
+		relative_position_id = HOL_the_battlecruiser_plan
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HOL_escorts_for_the_new_fleet
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_naval_heritage
+		prerequisite = { focus = HOL_air_cover_for_the_new_fleet focus = HOL_escorts_for_the_new_fleet }
+		icon = GFX_HOL_navy2
+		x = 1
+		y = 1
+		relative_position_id = HOL_air_cover_for_the_new_fleet
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = HOL_naval_heritage
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_ideas = HOL_naval_heritage
+		}
+	}
+
+###   ##  #   ### ### ###  ##   ##  #       ### ###  ### ### 
+#  # #  # #    #   #   #  #  # #  # #        #  #  # #   #   
+###  #  # #    #   #   #  #    #### #        #  ###  ##  ##  
+#    #  # #    #   #   #  #  # #  # #        #  #  # #   #   
+#     ##  ### ###  #  ###  ##  #  # ###      #  #  # ### ### 
+
+	focus = {
+		id = HOL_form_new_government
+		bypass = {
+			SWI = { has_completed_focus = capitulation_of_netherlands }
+		}
+		icon = GFX_HOL_deal
+		x = 14
+		y = 0
+		relative_position_id = HOL_abandon_the_gold_standard
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = { id = mtg_netherlands.10 hours = 6 }
+			effect_tooltip = {
+				set_party_name = { ideology = democratic long_name = HOL_CHU_party_long name = HOL_CHU_party }
+				create_country_leader = {
+					name = "Dirk Jan de Geer"
+					desc = "POLITICS_DIRK_JAN_DE_GEER_DESC"
+					picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+						defeatist ww_one_trauma
+					}
+				}
+				remove_ideas = HOL_weak_government
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_gateway_to_europe
+		prerequisite = { focus = HOL_form_new_government }
+		bypass = {
+			OR = {
+				has_war_with = GER
+				has_war_with = ENG
+			}
+		}
+		icon = GFX_focus_hol_gateway_to_europe
+		x = 0
+		y = 1
+		relative_position_id = HOL_form_new_government
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = HOL_cave_to_the_british
+		prerequisite = { focus = HOL_gateway_to_europe }
+		available = {
+
+		}
+		bypass = {
+				has_war_with = GER
+		}
+		icon = GFX_ENG_doctrine
+		cancel_if_invalid = no
+		x = 0
+		y = 1
+		relative_position_id = HOL_gateway_to_europe
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_historical_focus_on = no
+				ENG = { is_ai = no }
+				check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = HOL_caved_to_the_british days = 1095 }
+		}
+	}
+
+###  ### #   #  ##   ##  ###   ##  ### ###  ##  
+#  # #   ## ## #  # #  # #  # #  #  #   #  #  # 
+#  # ##  # # # #  # #    ###  ####  #   #  #    
+#  # #   #   # #  # #  # #  # #  #  #   #  #  # 
+###  ### #   #  ##   ##  #  # #  #  #  ###  ##  
+
+	focus = {
+		id = HOL_unity_through_democracy
+		prerequisite = { focus = HOL_cave_to_the_british }
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		relative_position_id = HOL_cave_to_the_british
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_STABILITY}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = { idea = HOL_unity_through_democracy days = 1095 }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = HOL_willem_schermerhorn
+			hidden_effect = {
+				if = {
+					limit = {
+						ENG = {
+							has_government = democratic
+						}
+					}
+					ENG = {
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT
+							value = -200
+						}
+						add_ai_strategy = {
+							type = befriend
+							id = ROOT
+							value = -200
+						}
+						add_ai_strategy = {
+							type = protect
+							id = ROOT
+							value = -200
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = HOL_replace_the_defeatist_government
+		prerequisite = { focus = HOL_unity_through_democracy }
+		available = {
+			has_war = yes
+		}
+		bypass = {
+			has_government = neutrality
+		}
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = HOL_unity_through_democracy
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = { id = mtg_netherlands.14 }
+			effect_tooltip = {
+				add_popularity = {
+				    ideology = democratic
+				    popularity = -0.05
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Pieter Sjoerds Gerbrandy"
+					desc = "POLITICS_PIETER_SJOERDS_GERBRANDY_DESC"
+					picture = "portrait_hol_pieter_sjoerds_gerbrandy.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+						little_churchill ww_one_trauma
+					}
+				}
+			}
+		}
+	}	
+
+ ##   ##      #   # ### ### #  #     ###  ###  ### ###  ##  ### #  # 
+#    #  #     #   #  #   #  #  #     #  # #  #  #   #  #  #  #  ## # 
+# ## #  #     # # #  #   #  ####     ###  ###   #   #  ####  #  # ## 
+#  # #  #     # # #  #   #  #  #     #  # #  #  #   #  #  #  #  #  # 
+ ##   ##       # #  ###  #  #  #     ###  #  # ###  #  #  # ### #  # 
+
+
+	focus = {
+		id = HOL_go_with_britain
+		available = {
+			ENG = { has_government = democratic }
+			threat > 0.25
+		}
+		bypass = {
+			is_in_faction_with = ENG
+		}
+		prerequisite = { focus = HOL_unity_through_democracy }
+		icon = GFX_focus_chi_british_cooperation
+		x = 1
+		y = 1
+		relative_position_id = HOL_unity_through_democracy
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = HOL_aloof_neutrality
+		}
+	}
+
+	focus = {
+		id = HOL_de_vaarplicht
+		prerequisite = { focus = HOL_replace_the_defeatist_government }
+		prerequisite = { focus = HOL_go_with_britain }
+		icon = GFX_PHI_reserve
+		x = 1
+		y = 1
+		relative_position_id = HOL_replace_the_defeatist_government
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = HOL_de_vaarplicht
+		}
+	}
+
+	focus = {
+		id = HOL_request_allied_favors
+		available = {
+			is_in_faction_with = ENG
+			has_war = yes
+		}
+		prerequisite = { focus = HOL_de_vaarplicht }
+		icon = GFX_ENG_allies
+		x = 0
+		y = 2
+		relative_position_id = HOL_de_vaarplicht
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
+
+		completion_reward = {
+		
+		    custom_effect_tooltip = "HOLBUYSTUFF"
+		
+			add_political_power = 60
+			unlock_decision_category_tooltip = HOL_request_allied_favors
+			custom_effect_tooltip = HOL_request_allied_favors_tt
+		}
+	}
+
+	focus = {
+		id = HOL_the_singapore_conferences
+		prerequisite = { focus = HOL_go_with_britain }
+		available = {
+			has_completed_focus = HOL_unity_through_democracy
+			has_government = democratic
+			is_in_faction_with = ENG
+		}
+		bypass = {
+
+		}
+		icon = GFX_HOL_singapore
+		x = 1
+		y = 1
+		relative_position_id = HOL_go_with_britain
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HOL_the_singapore_conferences
+				cost_reduction = 0.5
+				uses = 4
+				category = naval_doctrine
+			}
+			
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 1.0
+				uses = 1
+				category = encryption_tech
+				category = decryption_tech
+			}			
+		}
+	}
+
+	focus = {
+		id = HOL_ship_a_day_sinking_quotas
+		available = {
+			has_war = yes
+		}
+		prerequisite = { focus = HOL_rely_on_submarines }
+		icon = GFX_goal_generic_navy_submarine
+		x = 0
+		y = 1
+		relative_position_id = HOL_rely_on_submarines
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = HOL_ship_a_day_sinking_quotas
+				cost_reduction = 0.5
+				uses = 2
+				category = submarine_doctrine
+			}
+			random_unit_leader = {
+				limit = {
+					has_id = 981
+				}
+				add_maneuver = 2
+				add_coordination = 2
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_allied_technological_developments
+		prerequisite = { focus = HOL_the_singapore_conferences }
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 1
+		relative_position_id = HOL_the_singapore_conferences
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = HOL_allied_technological_developments
+		}
+	}
+
+	focus = {
+		id = HOL_american_west_indies_protectorate
+		available = {
+			has_war = yes
+			NOT = { has_war_with = USA }
+		}
+		prerequisite = { focus = HOL_allied_technological_developments }
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 0
+		y = 1
+		relative_position_id = HOL_allied_technological_developments
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_full_control_of_state = 695
+			has_full_control_of_state = 309	
+		}		
+
+		completion_reward = {
+				695 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 153
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 153
+						instant_build = yes
+					}
+				}
+				309 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 10906
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 10906
+						instant_build = yes
+					}
+				}
+			}
+	}
+
+	focus = {
+		id = HOL_combined_chiefs_of_staff_representation
+		available = {
+			is_in_faction_with = ENG
+			is_in_faction_with = USA
+			has_war = yes
+		}
+		prerequisite = { focus = HOL_request_allied_favors }
+		prerequisite = { focus = HOL_american_west_indies_protectorate }
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		relative_position_id = HOL_request_allied_favors
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = HOL_combined_chiefs_of_staff_representation
+		}
+	}
+
+	focus = {
+		id = HOL_the_fourth_ally
+		available = {
+			is_in_faction_with = ENG
+			is_in_faction_with = USA
+			has_war = yes
+			NOT = { has_war_with = SOV }
+			has_full_control_of_state = 335
+			has_full_control_of_state = 672
+		}
+		prerequisite = { focus = HOL_combined_chiefs_of_staff_representation }
+		icon = GFX_focus_hol_the_fourth_ally
+		x = 0
+		y = 1
+		relative_position_id = HOL_combined_chiefs_of_staff_representation
+		cost = 5
+
+		available_if_capitulated = yes
+
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_offsite_building = { type = dockyard level = 4 }
+			add_ideas = HOL_the_fourth_ally
+			}
+		}
+	
+
+	focus = {
+		id = HOL_zandery_military_airport
+		available = {
+			is_in_faction_with = USA
+			has_war = yes
+			has_full_control_of_state = 309
+			has_full_control_of_state = 695
+		}
+		prerequisite = { focus = HOL_naval_heritage }
+		prerequisite = { focus = HOL_request_allied_favors }
+		icon = GFX_ENG_airfields
+		x = 3
+		y = 2
+		relative_position_id = HOL_naval_heritage
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			309 = {	
+				add_building_construction = {
+					type = air_base
+					level = 8
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			695 = {	
+				add_building_construction = {
+					type = radar_station
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

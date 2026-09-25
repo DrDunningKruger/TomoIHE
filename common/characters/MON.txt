@@ -1,0 +1,615 @@
+characters={
+	MON_anandyn_amar={
+		name="Peljidiin Genden"
+		portraits={
+			civilian={
+				large="gfx/leaders/MON/Portrait_Genden.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MON_mingzhu_zhanshan={
+		name="Mingzhu Zhanshan"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ silent_workhorse dealbroker }
+			expire="1945.1.1.12"
+			id=-1
+		}
+	}
+	MON_fu_shangzhi={
+		name="Fu Shangzhi"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1947.1.1.12"
+			id=-1
+		}
+	}
+	MON_songgotu_kangan={
+		name="Songgotu Kang'an"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/portrait_asia_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ armaments_organizer }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	MON_khorloogiin_choibalsan={
+		name="Khorloogiin Choibalsan"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1" 
+				large=GFX_portrait_Choibalsan
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1948.1.1.12"
+			id=-1
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = MONmaneuverguy
+			allowed = {
+				original_tag = MON
+			}
+		    cost = 100			
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		field_marshal = { 
+		    desc = "Khorloogiin_Choibalsano_desc" #
+			traits = { logistics_wizard cavalry_leader ranger offensive_doctrine aggressive_assaulter panzer_leader trickster politically_connected  }
+			skill = 7
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 5
+		}
+	}
+	MON_haidav={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_haidav
+			ledger = navy
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					navy_naval_air_defense_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Haidav"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+	}
+	MON_dagva={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = MON_dagva
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Dagva"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_5"
+			}
+		}
+	}
+	MON_chimid={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_chimid
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					army_concealment_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Chimid"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+	}
+	MON_sukhbaataryn_yanjmaa={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = MON_sukhbaataryn_yanjmaa
+			allowed = {
+					original_tag = MON
+				}
+				traits = {
+					air_chief_rely_on_others
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Sükhbaataryn Yanjmaa"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
+	MON_ulanhu={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = MON_ulanhu
+			ledger = air
+				allowed = {
+					original_tag = MON
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Ulanhu"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+	}
+	MON_lee_shou_hsin={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_lee_shou_hsin
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					army_regrouping_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Lee Shou-hsin"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_3"
+			}
+		}
+	}
+	MON_buyannmeh={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_buyannmeh
+			ledger = air
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					air_chief_air_logistics
+					air_air_superiority
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Buyannmeh"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}	
+	MON_buyannmeh2={
+		advisor={
+			
+			
+			slot = high_command
+			ledger = air
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+                air_chief_close_coordination
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Buyannmeh"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+	}	
+	MON_buyannmeh3={
+		advisor={
+			
+			
+			slot = high_command
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+               army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Buyannmeh"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_1"
+			}
+		}
+	}
+	MON_olziytrygyn_badrak={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = MON_olziytrygyn_badrak
+			allowed = {
+					original_tag = MON
+				}
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Ölziytrygyn Badrak"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_4"
+			}
+		}
+	}
+	MON_gomgchigryn_bumtsend={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = MON_gomgchigryn_bumtsend
+			allowed = {
+					original_tag = MON
+				}
+				traits = {
+					air_chief_reform
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Gomgchigryn Bumtsend"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+	}
+	MON_dansrabilegyin_dogsam={
+		advisor={
+			slot = political_advisor
+			idea_token = MON_dansrabilegyin_dogsam
+			allowed  = {
+					original_tag  = MON
+				}
+				traits  = {
+					spirit_of_genghis 
+					hawk
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Dansrabilegyin Dogsam"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+	}
+	MON_yundunwangcug={
+		advisor={
+			slot = political_advisor
+			idea_token = MON_yundunwangcug
+			allowed  = {
+					original_tag  = MON
+				}
+				traits  = {
+					quartermaster_general 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Yundunwangcug"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
+	MON_pai_yun_ti={
+		advisor={
+			slot = political_advisor
+			idea_token = MON_pai_yun_ti
+			allowed  = {
+					original_tag  = MON
+				}
+				traits  = {
+					war_industrialist 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Pai Yun-ti"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+	}	
+	
+	MON_random ={
+		advisor={
+			slot = political_advisor
+			idea_token = MON_radom
+			allowed  = {
+					original_tag  = MON
+				}
+				traits  = {
+					council_communist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Altan Otgonbayar"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+	}
+	
+	MON_Butochiyn_Tsog={ 
+		name = "Butochiyn Tsog" 
+		portraits={
+			army={
+				large=GFX_portrait_Butochiyn_Tsog
+				small="GFX_idea_generic_army_asia_3"
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = MON_armorguy
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		corps_commander={
+		    desc = "Butochiyn_Tsog_desc" #
+			traits = { panzer_leader armor_officer cavalry_leader trait_engineer winter_specialist urban_assault_specialist organizer }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 5
+		}
+	}
+	
+	
+	MON_Temujin_Batzorig={
+		name = "Temujin Batzorig"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_4" 
+				large=GFX_portrait_Portrait_Demid
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MON_cavnibba
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_cavalry_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MONmaneuverguydva
+			allowed = {
+				original_tag = MON
+			}
+		    cost = 100			
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MON_officerhard
+			allowed  = {
+					original_tag  = MON
+				}
+				traits  = {
+					hardened_officer
+				}
+		}		
+		corps_commander={
+		    desc = "temujin_batzorig_desc" #
+			traits = { cavalry_leader cavalry_expert combined_arms_expert infantry_leader ranger ambusher winter_specialist }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}
+
+
+	MON_lkhagvasuren_jamiyanharry={
+		name = "Lkhagvasuren Jamiyan"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2" 
+				large=GFX_portrait_Portrait_Lhagvasuren
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = mongarmyreform
+			allowed = {
+				original_tag = MON
+			}
+		    cost = 100			
+			traits = {
+				army_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+		    desc = "lkhagvasuren_jamiyanharry_desc" #
+			traits = { infantry_officer infantry_leader infantry_expert panzer_leader expert_improviser ranger winter_specialist }
+			skill = 6
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
+		}		
+	}
+
+	MON_Gelegdorjiin_Demid={
+		name = "Gelegdorjiin Demid"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_5" 
+				large=GFX_portrait_Lkhagvasuren_Jamyan1
+			}
+		}
+		corps_commander={
+		    desc = "gelegdorjiin_demid_desc" #
+			traits = { cavalry_leader infantry_officer war_hero hill_fighter winter_specialist infantry_leader trait_engineer trait_cautious }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+		}		
+	}	
+	
+	MON_Yumjaagiin_Tsedenbal={
+		name = "Yumjaagiin Tsedenbal"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1" 
+				large=GFX_portrait_Portrait_Yumjaagiin
+			}
+		}
+		corps_commander={
+		    desc = "yumjaagiin_tsedenbal_desc" #
+			traits = { cavalry_leader cavalry_expert ambusher adaptable guerilla_fighter trickster expert_improviser winter_specialist }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}		
+	}	
+}

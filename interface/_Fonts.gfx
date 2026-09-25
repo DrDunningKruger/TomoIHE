@@ -1,0 +1,38 @@
+spriteTypes = {
+	#################################################
+	### Bebas Neue
+	#################################################
+	bitmapfont = {
+		name = "Bebas_Neue_20"
+		#path = "gfx/fonts/Bebas_Neue_20"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_20"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			B = { 45 54 63 } #custom blue
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_45"
+		#path = "gfx/fonts/Bebas_Neue_45"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_45"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+}

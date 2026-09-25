@@ -1,0 +1,295 @@
+﻿division_template = {
+	name = "1 DIV TRAIN"		
+	division_names_group = GER_Inf_01
+    template_counter = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+	}
+	support = {
+       	
+	}
+}
+division_template = {
+	name = "Infanterie-Division"
+
+	division_names_group = GER_Inf_01
+    template_counter = 106
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }		
+	}
+	
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Light Panzer-Division"
+
+	division_names_group = GER_LTARM_01
+    template_counter = 111
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 0 y = 4 }		
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+        light_armor = { x = 1 y = 2 }
+		light_armor = { x = 1 y = 3 }
+        light_armor = { x = 1 y = 4 }		
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+        motorized = { x = 2 y = 3 }
+	    motorized = { x = 2 y = 4 }
+		motorized = { x = 3 y = 0 }
+        motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+        motorized = { x = 3 y = 3 }
+	    motorized = { x = 3 y = 4 }		
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Medium Panzer-Division"
+
+	division_names_group = GER_Arm_01
+    template_counter = 114
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }		
+        medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+        medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+        medium_armor = { x = 1 y = 4 }		
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+        motorized = { x = 2 y = 3 }
+	    motorized = { x = 2 y = 4 }
+		motorized = { x = 3 y = 0 }
+        motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+        motorized = { x = 3 y = 3 }
+	    motorized = { x = 3 y = 4 }		
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Infanterie-Division (mot.)" 			# Used to be SS division -> New system for SS. Also messed up the civil war by refusing to move to the fascists, and immersion-breaking to have them around as royalists
+
+	division_names_group = GER_MOT_02
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		
+		motorized = { x = 2 y = 0 }
+	    motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 3 y = 0 }		
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Gebirgs-Brigade"		# Gebirgsbrigade
+	#Note: precursor to Gebirgs-Divisions
+	division_names_group = GER_Mnt_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 3 y = 0 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}	
+}
+
+units = {
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5192
+		division_template = "1 DIV TRAIN"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.01
+	}
+}
+
+air_wings = {
+
+	305 = {
+			small_plane_scout_plane_airframe_1 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Hs 126"
+			}		
+			small_plane_scout_plane_airframe_1 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Hs 126"
+			}
+			small_plane_cas_airframe_0 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Hs 123"
+			}	
+			small_plane_cas_airframe_1 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 87"
+			}	
+			small_plane_cas_airframe_1 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 87"
+			}	
+			medium_plane_airframe_1= {
+				owner = "GER" 
+				amount = 100
+				version_name = "He 111"
+			}	
+			medium_plane_airframe_1= {
+				owner = "GER" 
+				amount = 100
+				version_name = "He 111"
+			}	
+			medium_plane_cas_airframe_1= {
+				owner = "GER" 
+				amount = 100
+				version_name = "Do 17"
+			}	
+			medium_plane_cas_airframe_1= {
+				owner = "GER" 
+				amount = 100
+				version_name = "Do 17"
+			}
+    }
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+	}		
+}
+
+#####################

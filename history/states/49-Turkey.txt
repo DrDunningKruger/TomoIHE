@@ -1,0 +1,30 @@
+
+state={
+	id=49
+	name="STATE_49" # Ankara
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = SWI
+		victory_points = {
+			11747 15
+		}
+		victory_points = {
+			804 5 
+		}
+		victory_points = {
+			3951 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		804 909 919 3807 3862 3890 3903 3907 3950 3951 3964 6808 6919 6925 6950 6965 9761 9777 9806 9901 11747 11784 11826 11844 
+	}
+
+	local_supplies=7.0 
+}

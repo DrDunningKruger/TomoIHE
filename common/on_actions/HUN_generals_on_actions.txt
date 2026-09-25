@@ -1,0 +1,14 @@
+
+
+#create_field_marshal = { #FM for Yugoslavia, retired afterwards, vet
+#	name = "Gorondy Novak Elemer"
+#	desc = "Gorondy_Novak_Elemer_desc"
+#	picture = "Gorondy_Novak_Elemer.dds"
+#	traits = { }
+#	skill = 5
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 5
+#	logistics_skill = 5
+#}	
+	

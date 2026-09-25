@@ -1,0 +1,24 @@
+
+state={
+	id=506
+	name="STATE_506"
+
+	history={
+		owner = YUG
+        add_core_of = YUG		
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9627 3 
+		}
+	}
+
+	provinces={
+		3631 9627
+	}
+    manpower = 144300	
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

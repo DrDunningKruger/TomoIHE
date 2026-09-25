@@ -1,0 +1,1153 @@
+# target 40 divs (10 inf, eng, art, aa) 1/1/1940
+
+
+########################################
+# Research	default 
+########################################
+########################################
+# Research - production	
+########################################
+GRE_research_industry_no_construction = { #Gre dont need construction
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# economy
+		industry = 0
+		tools = 1
+		dispersed_industry_category = 1
+		construction_tech = -1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+########################################
+# Research - electronics	
+########################################
+GRE_research_electronics_do_research = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		or = {
+			date > 1939.1.1
+			NOT = { GRE = { has_tech = electronic_mechanical_engineering } }
+		}
+	}
+	abort = {
+			or = {
+				and = {
+					has_tech = electronic_mechanical_engineering 
+					date < 1939.1.1				
+				}
+				has_tech = radio
+			}
+	}
+	research = {
+		# radio
+		electronics = 1
+	}
+	weight = {
+		factor = 5000
+	}
+}
+GRE_research_electronics_do_not_research = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# radio
+		electronics = -1
+	}
+	weight = {
+		factor = 1000
+	}
+}
+
+
+
+########################################
+# Research - Land doctrine ???	
+########################################
+GRE_research_doctrine = {
+
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			always = no
+	}
+	
+	
+	research = {
+		# military
+		land_doctrine = 0 # obsolete?
+	}
+	weight = {
+		factor = 1000
+	}
+}
+########################################
+# Research - infantry	
+########################################
+GRE_research_rush_infantry_weapons2 = {
+
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			has_tech = improved_infantry_weapons
+	}
+	research = {
+		# infantry
+		infantry_weapons = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+GRE_research_infantry_weapons = {
+
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_tech = improved_infantry_weapons
+	}
+	abort = {
+		always = no	
+	}
+	research = {
+		# infantry
+		infantry_weapons = 1
+		night_vision = 0
+	}
+	weight = {
+		factor = 100
+	}	
+}
+
+########################################
+# Research - Artillery	
+########################################
+GRE_research_rush_art2 = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+			has_tech = artillery1
+	}
+	research = {
+		# artillery
+		artillery = 1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+GRE_research_artillery = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_tech = artillery1
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# artillery
+		artillery = 1
+	}
+	weight = {
+		factor = 3000
+	}	
+}
+
+########################################
+# Research - Support	
+########################################
+GRE_research_not_engineers = {
+
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		or = {
+			NOT = { has_tech = artillery1 }
+			NOT = { has_tech = improved_infantry_weapons }
+		}
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# utility
+		engineers_tech = -1
+	}
+	weight = {
+		factor = 1000
+	}
+}
+
+GRE_research_engineers = {
+
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_tech = artillery1
+		has_tech = improved_infantry_weapons
+	}
+	abort = {
+		always = no
+	}
+	research = {
+		# utility
+		engineers_tech = 1
+	}
+	weight = {
+		factor = 1000
+	}	
+}
+#####################################
+# END OF RESEARCH
+#####################################
+
+#####################################
+# PP spending - default is no spending
+#####################################
+
+#####################################
+# GRE wants Industrial Concern 
+#####################################
+GRE_wants_industrial_concern = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		has_idea = company_viohalco # industrial_concern
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	
+	ideas = {
+	# economy
+		partial_economic_mobilisation = 0
+	# trade
+		free_trade = 0
+	# conscription
+	# designers
+	# tank designer
+	# naval designer	
+	# air designer
+	# material designer
+		artillery_manufacturer = 0
+		infantry_equipment_manufacturer = 0
+	# industrial advisor
+		industrial_concern = 1
+	# advisors
+		GRE_aristeidis_dimitratos = 0
+	# theorists
+		GRE_konstantinos_ventiris = 0
+	# chief army
+		GRE_aris_velouchiotis = 0
+	# chief navy
+	# chief air
+	# military high command
+		GRE_napoleon_zervas = 0
+		GRE_nikos_beloyannis = 0
+		GRE_georgios_kosmas = 0
+	}
+	weight = {
+		factor = 400
+	}
+}
+##################################### solved through a focus, code obsolete
+# GRE wants Partial Eco after Industrial Concern
+#####################################
+GRE_partial_eco = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_idea = company_viohalco # industrial_concern
+	}
+	abort = {
+		has_idea = partial_economic_mobilisation
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = law
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = {
+		# economy
+			partial_economic_mobilisation = 1 # ovde je problem, ulazi u strategiju
+		# trade
+			free_trade = 0
+		# conscription
+		# designers
+		# tank designer
+		# naval designer	
+		# air designer
+		# material designer
+			artillery_manufacturer = 0
+			infantry_equipment_manufacturer = 0
+		# industrial advisor
+			industrial_concern = 0
+		# advisors
+			GRE_aristeidis_dimitratos = 0
+		# theorists
+			GRE_konstantinos_ventiris = 0
+		# chief army
+			GRE_aris_velouchiotis = 0
+		# chief navy
+		# chief air
+		# military high command
+			GRE_napoleon_zervas = 0
+			GRE_nikos_beloyannis = 0
+			GRE_georgios_kosmas = 0
+	}
+	weight = { 
+		factor = 4000
+	}
+}
+##################################################
+# GRE wants industry boost but doesnt want attaches
+##################################################
+GRE_doesnt_want_decisions = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		or = {
+			#always = yes
+			and = {
+				date > 1936.1.1
+				#date < 1938.6.1
+			}
+		}
+	}
+	abort = {
+		and = {
+			date > 1938.6.1
+			date < 1938.10.1
+		}
+	}
+
+	# dont send attaches
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = -1
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = -1
+	}
+	
+	weight = {
+		factor = 100000
+	}
+}
+
+GRE_wants_industry_boost = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		or = {
+			and = {
+				date > 1938.6.1
+				date < 1938.10.1
+			}
+			and = {
+				date > 1940.6.1
+				date < 1940.10.1
+			}
+		}
+	}
+	abort = {
+		or = {
+			date < 1938.6.1
+			and = {
+				date > 1938.10.1
+				date < 1940.6.1
+			}
+			date > 1940.10.1
+		}
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 500
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 5
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = -1
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = -1
+	}
+	
+	weight = {
+		factor = 100000
+	}
+}
+
+
+##################################### Cant get Free Trade to work
+# GRE wants War Industrialist after Partial Eco after Industrial Concern
+#####################################
+GRE_wants_war_industrialist = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_idea = partial_economic_mobilisation
+		has_idea = company_viohalco
+	}
+	abort = {
+		has_idea = GRE_aristeidis_dimitratos
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = GRE_aristeidis_dimitratos
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = { 
+		# economy
+			partial_economic_mobilisation = 0
+		# trade
+			free_trade = 0
+		# conscription
+		# designers
+		# tank designer
+		# naval designer	
+		# air designer
+		# material designer
+			artillery_manufacturer = 0
+			infantry_equipment_manufacturer = 0
+		# industrial advisor
+			industrial_concern = 0
+		# advisors
+			GRE_aristeidis_dimitratos = 1
+		# theorists
+			GRE_konstantinos_ventiris = 0
+		# chief army
+			GRE_aris_velouchiotis = 0
+		# chief navy
+		# chief air
+		# military high command
+			GRE_napoleon_zervas = 0
+			GRE_nikos_beloyannis = 0
+			GRE_georgios_kosmas = 0
+	}
+	weight = {
+		factor = 4000
+	}
+}
+#####################################
+# GRE wants ART designer after War Industrialist
+#####################################
+GRE_wants_infantry_designer = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_idea = GRE_aristeidis_dimitratos 
+	}
+	abort = {
+		has_idea = company_chropei
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = artillery_manufacturer
+		value = 150
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 150
+	}
+	ideas = { 
+	# economy
+		partial_economic_mobilisation = 0
+	# trade
+		free_trade = 0
+	# conscription
+	# designers
+	# tank designer
+	# naval designer	
+	# air designer
+	# material designer
+		artillery_manufacturer = 1
+		infantry_equipment_manufacturer = 0
+	# industrial advisor
+		industrial_concern = 0
+	# advisors
+		GRE_aristeidis_dimitratos = 0
+	# theorists
+		GRE_konstantinos_ventiris = 0
+	# chief army
+		GRE_aris_velouchiotis = 0
+	# chief navy
+	# chief air
+	# military high command
+		GRE_napoleon_zervas = 0
+		GRE_nikos_beloyannis = 0
+		GRE_georgios_kosmas = 0
+	}
+	weight = {
+		factor = 4000
+	}
+}
+
+##################################### 
+# GRE wants to spend PP on military
+#####################################
+GRE_conscript = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		has_idea = company_chropei
+
+	}
+	abort = {
+		always = no
+	}
+	
+	
+	ideas = { 
+	# economy
+		partial_economic_mobilisation = 0
+	# trade
+		free_trade = 0
+	# conscription
+	# designers
+	# tank designer
+	# naval designer	
+	# air designer
+	# material designer
+		artillery_manufacturer = 0
+		infantry_equipment_manufacturer = 0
+	# industrial advisor
+		industrial_concern = 0
+	# advisors
+		GRE_aristeidis_dimitratos = 0
+	# theorists
+		GRE_konstantinos_ventiris = 1
+	# chief army
+		GRE_aris_velouchiotis = 1
+	# chief navy
+	# chief air
+	# military high command
+		GRE_napoleon_zervas = 1
+		GRE_nikos_beloyannis = 1
+		GRE_georgios_kosmas = 1
+	}
+	weight = {
+		factor = 40
+	}
+}
+
+##################################### NE RADI - naterati ga da pravi mountaineerce
+# Recruitment
+#####################################
+#####################################
+# Recruitment - up to 1939
+#####################################
+GRE_recruitment_up_39 = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		date > 1939.1.1
+	}
+# Recruitment and production	
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 100
+	}	
+	
+	# Dont stockpile in buildup phase
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 1
+	}
+
+	# Keep at least x factories on infantry and support to prevent early game juggling
+########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+#####################################
+# Recruitment - after 1939 - more stockpile
+#####################################
+GRE_recruitment_after_39 = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		date > 1939.1.1
+	}
+	abort = {
+		always = no
+	}
+# Recruitment and production	
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 100
+	}
+	ai_strategy = {
+		type = build_army
+		id = mountaineers
+		value = 100
+	}	
+
+	# Stockpile some stuff for the war
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 10
+	}
+
+	# Keep at least x factories on infantry and support to prevent early game juggling
+###########
+	
+# dont build motorized, horses all the way
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized 
+		value = -1
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+
+
+######################################################
+# Stuff thats fixed throughout the game
+# National focus, unused tech and PP, Construction
+######################################################
+GRE_national_focus = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		GRE_civil_engineering_plans
+		GRE_national_labor_service
+		GRE_new_construction_safety_standards
+		GRE_state_corporatism
+		GRE_fund_the_athens_polytechnic_university
+		GRE_end_the_ifesi
+		
+
+		GRE_navigate_the_political_crisis
+		GRE_appoint_metaxas_as_defence_minister
+		GRE_4th_of_august_regime
+		GRE_imprison_the_communists
+		GRE_state_employment		
+
+		GRE_public_works_projects
+		GRE_athens_salonica_railway
+		GRE_pyrkal_deal
+		GRE_create_elbo
+		GRE_firearm_factories			
+
+		GRE_asfalia
+		GRE_public_reeducation
+		GRE_establish_eon
+
+		GRE_focus_on_the_haf
+		GRE_greek_general_staff
+		GRE_tackle_the_italian_threat
+		
+		GRE_adopt_the_papagos_plan
+		GRE_upgrade_the_mannlicher_1903
+		GRE_superior_planning
+		GRE_pack_artillery
+		
+		GRE_build_the_metaxas_line
+		GRE_extend_the_metaxas_line
+		
+		GRE_defense_of_the_epirus
+		GRE_defense_of_the_macedonia
+		GRE_evzones
+		GRE_freedom_or_death
+		
+
+	}
+}
+######################################################
+GRE_useless_tech = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	research = {
+	# utility
+		support_tech = -1
+		motorized_equipment = -1
+		recon_tech = -1 # for ac maybe
+		signal_company_tech = -1 # for ac maybe
+	# artillery
+		cat_anti_tank = -1
+		cat_anti_air = -1
+		rocketry = -1	
+	# infantry
+		infantry_tech = -1
+		night_vision = -1
+		computing_tech = -1
+		radar_tech = -1
+		concentrated_industry_category = -1
+		synth_resources = -1
+		cat_synth_rubber = -1
+		cat_synth_oil = -1
+		excavation_tech = -1
+		tank_modules = -1		
+		cat_torpedoes = -1
+		cat_ship_light_battery = -1
+		cat_ship_medium_battery = -1
+		cat_ship_heavy_battery = -1
+		air_equipment = -1
+		plane_modules_tech = -1
+		cat_air_guns = -1
+		cat_air_bombs = -1
+		light_air = -1
+		medium_air = -1
+		heavy_air = -1
+		armor = -1
+		cat_light_armor = -1
+		cat_medium_armor = -1
+		cat_heavy_armor = -1
+		naval_air = -1
+		cat_mechanized_equipment = -1
+		naval_equipment = -1
+		nuclear = -1		
+		air_doctrine = -1
+		naval_doctrine = -1
+		strategic_destruction_tree = -1
+		battlefield_support_tree = -1
+		operational_integrity_tree = -1
+		jet_technology = -1
+		trade_interdiction_tree = -1
+		convoy_defense_tree = -1
+		light_fighter = -1
+		cat_heavy_fighter = -1
+		tactical_bomber = -1
+		cat_strategic_bomber = -1
+		naval_bomber = -1
+		cas_bomber = -1
+		ship_modules_tech = -1
+		dd_tech = -1
+		cl_tech = -1
+		ca_tech = -1
+		cv_tech = -1
+		bc_tech = -1
+		bb_tech = -1
+		shbb_tech = -1
+		ss_tech = -1
+		tp_tech = -1
+		fleet_in_being_tree = -1
+		encryption_tech = -1
+		decryption_tech = -1
+		submarine_doctrine = -1
+		air_equipment = -1
+		cat_mobile_warfare = -1
+		cat_superior_firepower = -1
+		cat_grand_battle_plan = -1
+		cat_mass_assault = -1
+		cat_base_strike = -1
+		cat_trade_interdiction = -1
+		cat_fleet_in_being = -1
+		cat_strategic_destruction = -1
+		cat_battlefield_support = -1
+		cat_operational_integrity = -1	
+		para_tech = -1
+		base_strike_main = -1
+		mot_rockets = -1		
+		military_police_tech = -1
+		hospital_tech = -1
+		logistics_tech = -1		
+		maintenance_company_tech = -1
+		naval_mines = -1
+		asw_tech = -1
+		naval_minesweeping = -1
+		naval_minelaying = -1
+		cat_scout_plane = -1
+		train_tech = -1
+		cat_production = -1		
+		# spec forces
+		mountaineers_tech = -1
+		cat_special_forces_generic = -1
+		marine_tech = -1
+		d_infantry = -1 # desert infantry
+		j_infantry = -1 # jaegers infantry
+	}
+	weight = {
+		factor = 10000
+	}
+}
+##########################################################################
+
+GRE_PP_spending_defaults_to_no = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	# dont take ideas
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = 0
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 0
+	}	
+	ideas = {
+	# economy
+		undisturbed_isolation = -1
+		isolation = -1
+		civilian_economy = -1
+		low_economic_mobilisation = -1
+		#partial_economic_mobilisation = 1
+	# trade
+		export_focus = -1
+		limited_exports = -1
+		#free_trade = -1
+		closed_economy = -1 		
+	# conscription
+		disarmed_nation = -1
+		volunteer_only = -1
+		limited_conscription = -1		
+	# designers
+	# tank designer
+		experimental_heavy_tank_manufacturer  = -1
+		heavy_tank_manufacturer  = -1
+		medium_tank_manufacturer  = -1
+		cruiser_tank_manufacturer  = -1
+		cavalry_tank_manufacturer  = -1
+		assault_gun_manufacturer  = -1
+		fast_tank_manufacturer  = -1
+		pacific_light_tank_manufacturer  = -1
+		tankette_manufacturer = -1
+		fast_tank_manufacturer = -1
+		armored_car_manufacturer = -1
+		infantry_tank_manufacturer = -1
+		assault_heavy_tank_manufacturer = -1
+		airborne_tank_manufacturer = -1
+		
+	# naval designer	
+		blohm_und_voss = -1
+		raiding_fleet_naval_manufacturer = 0
+		
+		kaiserliche_werft_wilhelmshaven = -1
+		coastal_defence_naval_manufacturer = 0
+		
+		merchant_naval_manufacturer = -1
+		HUN_ganz_danubius = 0
+		
+		crda = -1
+		mediterranean_naval_manufacturer = 0
+		
+		ansaldo_navy = -1
+		atlantic_fleet_naval_manufacturer = 0	
+		
+		ITA_oto = -1
+		battlefleet_designer  = 0
+		
+		convoy_escort_naval_manufacturer = -1
+	# air designer
+		standard_fighter_manufacturer = -1
+		escort_fighter_manufacturer = -1
+		tactical_bomber_manufacturer = -1
+		fast_bomber_manufacturer = -1
+		naval_aircraft_manufacturer = -1
+		heavy_bomber_manufacturer = -1
+		light_fighter_designer = -1
+		standard_CAS_manufacturer = -1
+		interceptor_fighter_manufacturer = -1
+		cheap_fighter_manufacturer = -1
+		recon_plane_manufacturer = -1
+		flying_boat_manufacturer = -1
+		heavy_fighter_manufacturer = -1
+		transport_plane_manufacturer = -1
+		flying_fort_manufacturer = -1
+		multirole_CAS_manufacturer = -1
+		divebomber_CAS_manufacturer = -1
+	# material designer
+		motorized_equipment_manufacturer = -1
+		mechanized_equipment_manufacturer  = -1
+		#artillery_manufacturer = -1
+		support_equipment_manufacturer = -1
+		#infantry_equipment_manufacturer = -1		
+	# industrial advisor
+		#industrial_concern = -1
+		refinery_concern = -1
+		linchpin_of_infrastructure = -1
+		railway_company = -1
+		electronics_concern = -1
+		construction_company = -1
+		electronics_developer = -1
+	# advisors
+		#GRE_aristeidis_dimitratos = -1 
+		GRE_georgios_papandreou  = -1
+		GRE_evripidis_bakirtris  = -1
+		GRE_aristotle_onassis  = -1
+		GRE_emmanouil_tsouderos  = -1
+		GRE_damaskinos  = -1
+		GRE_konstantinos_maniadakis  = -1
+		GRE_konstantinos_tsaldaris = -1
+	# theorists
+		#GRE_konstantinos_ventiris = -1
+		GRE_spyridon_avgeris = -1
+		GRE_alexandros_papagos_theorist = -1
+		GRE_eleftherios_venizelos = -1
+		GRE_marinos_mitralexis = -1
+	# chief army
+		GRE_nikolaos_plastiras = -1	
+		GRE_alexandros_papagos = -1
+		GRE_georgios_tsolakoglou = -1
+		#GRE_aris_velouchiotis = -1
+	# chief navy
+		GRE_alexandros_sakellariou = -1
+		GRE_petros_voulgaris = -1
+	# chief air
+		GRE_panagiotis_gazis = -1
+		GRE_vasilios_tsarpalis = -1		
+	# military high command
+		#GRE_napoleon_zervas = -1
+		GRE_dimitrios_oikonomou = -1
+		#GRE_nikos_beloyannis = -1
+		GRE_mechman = -1
+		GRE_conceal = -1
+		GRE_epameinondas_kavvadias = -1
+		#GRE_georgios_kosmas = -1
+		GRE_aristeidis_moraitinis = -1
+		
+		
+		
+	}
+	weight = {
+		factor = 80
+	}
+}	
+	
+########################################
+# Construction
+########################################	
+	# should make AI build Mils only	
+GRE_construction_build_mils = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = { 
+		type = added_military_to_civilian_factory_ratio
+		value = 100
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard 
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure  
+		value = 0
+	}	
+	ai_strategy = { 
+		type = building_target
+		id = fuel_silo
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory   
+		value = 1000
+	}		
+
+
+	# Build Mils in Attica
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 47 # Attica
+		value = 100 # Eritrea first priority
+	}
+
+	ai_strategy = { # build one at a time - if it chooses the wrong province to have a chance to switch for the next construction
+		type = build_building
+		id = arms_factory 
+		target = 47 # Attica
+		value = 1 # how many at once
+	}
+}

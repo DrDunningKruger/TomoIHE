@@ -1,0 +1,132 @@
+capital = 6
+
+oob = "BEL_1936"
+
+set_research_slots = 3
+set_fuel_ratio = 1.0
+set_stability = 0.8
+set_war_support = 0.25 #
+
+add_ideas = {
+     BEL_inflexible
+     BEL_aftermath
+     BEL_obsolete_doctrine  
+     BEL_fear
+	 training_spirit
+	 AFRICA_ALLIES_6	 
+}
+
+	give_guarantee = FRA
+
+set_technology = {
+    cap_everyone = 1
+	armored_car1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	superior_firepower = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	gw_artillery = 1
+    new_tank_guns = 1	
+	interwar_antitank = 1
+	basic_train = 1		
+    french_armor_pack = 1	
+  	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_medium_tank_chassis = 1
+	engine_tech_1 = 1
+	tank_improved_guns = 1	
+	improved_light_tank_chassis = 1
+	gw_artillery = 1
+	interwar_antitank = 1
+	armor_tech_1 = 1
+	
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	aa_lmg = 1
+	engines_1 = 1
+	early_bombs = 1	
+	basic_small_airframe = 1	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 83
+	fascism = 11
+	communism = 6
+}
+
+recruit_character = BEL_paul_van_zeeland
+recruit_character = BEL_gilles_wyvekens
+recruit_character = BEL_appeaser
+recruit_character = BEL_fritz_conrad
+recruit_character = BEL_raoul_overstraeten
+recruit_character = BEL_georges_deffontaine
+recruit_character = BEL_victor_strydonck_burkel
+recruit_character = BEL_georges_vereecken
+recruit_character = BEL_oscar_michiels
+recruit_character = BEL_charles_bastin
+recruit_character = BEL_rene_lagrou
+recruit_character = BEL_fritz_lob
+recruit_character = BEL_jules_iserentant
+recruit_character = BEL_paul-henri_spaak
+recruit_character = BEL_gaston_eyskens
+recruit_character = BEL_interceptor
+#recruit_character = BEL_supply
+recruit_character = BEL_raoul_van_overstraeten
+recruit_character = BEL_jules_pire
+recruit_character = BEL_Edouard_van_den_Bergen
+recruit_character = BEL_Auguste_Baesens
+recruit_character = BEL_Alexis_Vander
+recruit_character = BEL_mcl_keyaerts
+recruit_character = BEL_jean_baptise_piron
+recruit_character = BEL_victor_van_strydonck_de_burkel
+recruit_character = BEL_victor_Auguste_Edouard
+recruit_character = BEL_eddy_blondeel
+recruit_character = BEL_yvan_gerard
+recruit_character = BEL_Georges_Timmermans
+recruit_character = BEL_Lambert_Robins
+recruit_character = BEL_dieudonne_salve
+recruit_character = BEL_camille_gutt
+recruit_character = BEL_camille_huysmans
+recruit_character = BEL_emile_de_cartier_de_marchienne
+recruit_character = BEL_achille_van_acker
+
+set_convoys = 85
+set_stability = 0.75
+
+	create_equipment_variant = {
+		name = "T-15"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_leafsupring_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			layout_type_slot = tank_basic_armor
+			special_type_slot_1 = tank_radio_0
+            special_type_slot_2 = basic_toolkit			
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 0
+		}
+		icon = "gfx/interface/technologies/FRA/TANKS/BEL_LT1_1.dds"
+	}
+ 
+    add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 100 producer = BEL  variant_name = "T-15" }
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	

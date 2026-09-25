@@ -1,0 +1,31 @@
+
+state={
+	id=551
+	name="STATE_551"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			air_base = 2
+			12725 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			12725 1 
+		}
+
+	}
+
+	provinces={
+		1977 2003 2046 2088 5219 7500 7550 7989 10902 10935 12725 12998 
+	}
+	manpower=1993507
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

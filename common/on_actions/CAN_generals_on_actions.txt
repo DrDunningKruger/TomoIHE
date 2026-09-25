@@ -1,0 +1,102 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			CAN = {
+
+
+#create_corps_commander = {
+#	name = "Georges Vanier" # ww1 vet and later Governor General of Canada, wasn't deployed to combat during ww2, probably for the better
+#	picture = "George_Vanier.dds"
+#	traits = { war_hero cavalry_officer infantry_officer skilled_staffer  }
+#	skill = 4
+#    attack_skill = 3
+#    defense_skill = 5
+#    planning_skill = 4
+#    logistics_skill = 4
+#}
+
+#create_corps_commander = { #ww1 vet, landed in farnce as it capitulated, got killed before he got to do anything, F
+#	name = "H. L. N. Salmon" 
+#	picture = "HLN_Salmon.dds"
+#	traits = { war_hero camouflage_expert trickster career_officer  }
+#	skill = 4
+#    attack_skill = 5
+#    defense_skill = 5
+#    planning_skill = 5
+#    logistics_skill = 5
+#}
+
+
+
+#create_corps_commander = { #Officer in Canadian Grenadier Guards, light infantry  
+#	name = "Garner Ormsby Currie" 
+#	picture = "Garner_Ormsby_Currie.dds"
+#	traits = { scavenger infantry_leader infantry_expert ambusher infantry_officer  }
+#	skill = 4
+#    attack_skill = 4
+#    defense_skill = 4
+#    planning_skill = 4
+#    logistics_skill = 3
+#}
+
+########## bad portrait
+
+#create_corps_commander = {
+#	name = "John Hamilton Roberts" #guy in charge during dieppe raid, sent to guard sheep after badly losing a wargame
+#	gfx = "GFX_CAN_John_Hamilton_Roberts"
+#	traits = { naval_invader cavalry_leader commando organizer ranger naval_liason }
+#	skill = 4
+#    attack_skill = 4
+#    defense_skill = 6
+#    planning_skill = 3
+#    logistics_skill = 5
+#}
+
+#create_corps_commander = { #commando guy,  the only Quebecer to be awarded the VC during ww2
+#	name = "Paul Triquet"
+#	picture = "Paul_Triquet.dds"
+#	traits = { infantry_leader naval_invader invader_ii ambusher trait_mountaineer fortress_buster  }
+#	skill = 5
+#    attack_skill = 6
+#    defense_skill = 3
+#    planning_skill = 3
+#    logistics_skill = 3
+#}
+
+#create_corps_commander = {
+#	name = "E. L. M. Burns" # boring dude, didn't do much entire war and was mediocre when he got sent to combat
+#	picture = "Eedson_Louis_Burns.dds"
+#	traits = { war_hero career_officer trait_engineer hill_fighter  }
+#	skill = 4
+#    attack_skill = 5
+#    defense_skill = 3
+#    planning_skill = 3
+#    logistics_skill = 4
+#}
+
+#create_corps_commander = { #4th armoured division commander, had difficulties commanding it and eventually got demoted for being slow
+#	name = "George Kitching" 
+#	gfx = "GFX_CAN_George_Kitching"
+#	traits = { organizer trait_cautious panzer_leader media_personality brilliant_strategist trait_engineer }
+#	skill = 5
+#    attack_skill = 5
+#    defense_skill = 3
+#    planning_skill = 5
+#    logistics_skill = 4
+#}
+
+#create_corps_commander = { #commanded mechanized engineer unit in ww1, never held command in ww2
+#	name = "Kenneth Stuart"
+#	name = "Kenneth_Stuart_desc"
+#	gfx = "GFX_CAN_Kenneth_Stuart"
+#	traits = {   }
+#	skill = 5
+#    attack_skill = 4
+#    defense_skill = 4
+#    planning_skill = 4
+#    logistics_skill = 4
+#}
+			}
+		}
+	}
+}

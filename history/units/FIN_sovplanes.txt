@@ -1,0 +1,17 @@
+﻿air_wings = {
+	111 = {
+			medium_plane_airframe_0 = {
+				owner = "FIN" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			start_experience_factor = 0.9			
+			
+			small_plane_airframe_1 = {
+				owner = "FIN" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}
+			start_experience_factor = 0.9
+	}
+}

@@ -1,0 +1,1476 @@
+characters={
+	ENG_winston_churchill={
+		name=ENG_winston_churchill
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Winston_Churchill.dds"
+			}
+			army={
+				small="GFX_idea_ENG_winston_churchill"
+			}
+		}
+
+		country_leader={
+			ideology=conservatism
+			traits = {
+				british_bulldog
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_stanley_baldwin={
+		name=ENG_stanley_baldwin
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Stanley_Baldwin.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ conservative_grandee }
+			expire="1938.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_oswald_mosley={
+		name=ENG_oswald_mosley
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Oswald_Mosley.dds"
+			}
+			army={
+				small="GFX_idea_ENG_oswald_mosley"
+			}
+		}
+		
+		country_leader={
+			ideology=fascism_ideology
+			traits={ champion_of_peace_1 economic_reformer }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_harry_pollitt={
+		name=ENG_harry_pollitt
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/portrait_eng_harry_pollitt.dds"
+			}
+			army={
+				small="GFX_idea_harry_pollitt"
+			}
+		}
+		
+		country_leader={
+			ideology=leninism
+			traits={ staunch_stalinist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_neville_chamberlain={
+		name=ENG_neville_chamberlain
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Neville_Chamberlain.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits = { chamberlain_appeaser rearmer }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_horatio_dundas={
+		name=ENG_horatio_dundas
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ quartermaster_general compassionate_gentleman }
+			expire="1945.1.1.12"
+			id=-1
+		}
+	}
+
+	### THEORISTS ###
+
+	# Montgomery up there
+
+	# Alexander up there
+
+	ENG_alan_brooke={ #BEF, pessimist, designed mobile defence in britain, wanted to use mustard gas, not aggressive, slow 
+		name=ENG_alan_brooke #FM for garrisons and red air
+		#desc = "Alan_Brooke_desc"
+		portraits={
+			army={
+				small="GFX_idea_alan_brooke"
+			}
+			army={
+				large=GFX_portrait_ENG_alan_brooke
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = alan_brooke
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = {
+				base = 0.5
+			}
+		}	
+
+		advisor={
+			slot = army_chief
+			idea_token = alan_brooke2
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+		
+		field_marshal={
+		    desc = "Alan_Brooke_desc"
+			traits = { defensive_doctrine trait_cautious career_officer ambusher war_hero camouflage_expert }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 6
+			legacy_id=997
+		}
+	}
+
+	ENG_james_somerville={
+		name=ENG_james_somerville
+		portraits={
+			army={
+				large=GFX_portrait_ENG_james_fownes_somerville
+				small=GFX_portrait_ENG_james_fownes_somerville_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = james_somerville
+			ledger = navy
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+
+			}
+			traits = {
+				grand_fleet_proponent
+			}
+		}
+		navy_leader={
+			traits = { superior_tactician aviation_enthusiast navy_career_officer cruiser_captain air_controller ironside flight_deck_manager torpedo_bomber concealment_expert }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 6
+			legacy_id=983
+		}		
+	}
+	
+	ENG_henry_harwood={
+		name=ENG_henry_harwood
+		portraits={
+			navy={
+				small="GFX_idea_henry_harwood"
+			}
+			army={
+				large=GFX_portrait_ENG_henry_harwood
+			}
+		}
+		#advisor={
+		#	slot = high_command
+		#	idea_token = henry_harwood
+		#	ledger = navy
+		#	allowed = {
+		#		original_tag = ENG
+		#	}
+		#	traits = {
+		#		navy_screen_2
+		#	}
+		#	cost = 100
+		#	ai_will_do = {
+		#		base = 0.7
+		#	}
+		#}
+		
+		navy_leader={
+			traits = { old_guard_navy bold cruiser_captain blockade_runner search_pattern_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id=984
+		}
+	}
+
+	ENG_louis_mountbatten={
+		name=ENG_louis_mountbatten
+		portraits={
+			army={
+				small="GFX_idea_louis_mountbatten"
+				large="GFX_portrait_Louis_Mountbatte"
+			}
+		}
+
+		navy_leader={
+			traits = { destroyer_leader arctic_water_expert fly_swatter safety_first }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3		
+		}
+	}
+
+	ENG_hugh_dowding={
+		name=ENG_hugh_dowding
+		portraits={
+			army={
+				small="GFX_idea_hugh_dowding"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = hugh_dowding
+			ledger = air
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+#	ENG_arthur_harris={
+#		name=ENG_arthur_harris
+#		portraits={
+#			army={
+#				small="GFX_idea_arthur_harris"
+#			}
+#		}
+#		advisor={
+#			cost = 150
+#			slot = theorist
+#			idea_token = arthur_harris
+#			ledger = air
+#			allowed = {
+#				original_tag = ENG
+#			}
+#			
+#			traits = {
+#				victory_through_airpower
+#			}
+#		}
+#	}
+
+	ENG_james_chadwick={
+		name=ENG_james_chadwick
+		portraits={
+			army={
+				small="GFX_idea_james_chadwick"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = james_chadwick
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			research_bonus = {
+				nuclear = 0.150
+			}
+			traits = {
+				nuclear_scientist
+			}
+		}
+	}
+
+	ENG_frank_whittle={
+		name=ENG_frank_whittle
+		portraits={
+			army={
+				small="GFX_idea_frank_whittle"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = frank_whittle
+			ledger = air
+			allowed = {
+				original_tag = ENG
+			}
+			research_bonus = {
+				rocketry = 0.150
+			}
+			traits = {
+				rocket_scientist
+			}
+		}		
+	}
+
+	### ARMY CHIEFS ###
+	### ARMY CHIEFS ###
+	### ARMY CHIEFS ###
+	### ARMY CHIEFS ###
+
+	ENG_edmund_ironside={
+		name=ENG_edmund_ironside
+		portraits={
+			army={
+				small="GFX_idea_edmund_ironside"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = edmund_ironside
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+
+
+	ENG_bernard_montgomery={
+		name=ENG_bernard_montgomery
+		portraits={
+			army={
+				small="GFX_idea_bernard_montgomery"
+			}
+			army={
+				large=GFX_portrait_ENG_bernard_montgomery
+			}
+		}
+		advisor={
+			cost = 50
+			slot = army_chief
+			idea_token = bernard_montgomery
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			
+			traits = {
+				army_chief_offensive_1
+			}
+		}
+		
+		field_marshal={
+		desc = "Bernard_Montgomery_desc" # Desert War FM
+			traits = { media_personality inflexible_strategist organizer panzer_leader infantry_leader desert_fox defensive_doctrine }
+			skill = 7 
+			attack_skill = 4
+			defense_skill = 8
+			planning_skill = 4
+			logistics_skill = 6
+			legacy_id=996
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+	ENG_andrew_cunningham={
+		name=ENG_andrew_cunningham
+		portraits={
+			navy={
+				small="GFX_idea_andrew_cunningham"
+			}
+			army={
+				large=GFX_portrait_ENG_andrew_cunningham
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = andrew_cunningham
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 75
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+		
+		navy_leader={
+			traits = { blockade_runner superior_tactician navy_career_officer bold gunnery_expert ironside fleet_protector concealment_expert destroyer_leader big_guns_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+			legacy_id=985
+		}
+	}
+
+	ENG_ernle_chatfield={
+		name=ENG_ernle_chatfield
+		portraits={
+			army={
+				small="GFX_idea_ernle_chatfield"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ernle_chatfield
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	ENG_dudley_pound={
+		name=ENG_dudley_pound
+		portraits={
+			army={
+				small="GFX_idea_dudley_pound"
+				large="GFX_idea_dudley_pound_big"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = dudley_pound
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		navy_leader={
+			traits = { fleet_protector destroyer_leader search_pattern_expert superior_tactician blockade_runner spotter blue_water_expert ironside battleship_adherent cuts_corners green_water_expert concealment_expert }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 5
+		}		
+	}
+
+	ENG_bruce_fraser={
+		name=ENG_bruce_fraser
+		portraits={
+			army={
+				large=GFX_portrait_ENG_bruce_fraser
+				small=GFX_portrait_ENG_bruce_fraser_small
+			}
+		}
+		navy_leader={
+			traits = { aviation_enthusiast naval_lineage blockade_runner concealment_expert smoke_screen_expert destroyer_leader }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+	}	
+	
+	ENG_arthur_palliser={
+		name="Arthur Palliser"
+		portraits={
+			army={
+				large=GFX_portrait_ENG_Arthur_Palliser
+				small=GFX_portrait_ENG_bruce_fraser_small
+			}
+		}
+		navy_leader={
+			traits = { navy_career_officer cruiser_captain battleship_adherent craven old_guard_navy gentlemanly search_pattern_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}	
+	
+	ENG_percy_noble={
+		name="Percy Noble"
+		portraits={
+			army={
+				large=GFX_portrait_ENG_Percy_Noble
+				small=GFX_portrait_ENG_bruce_fraser_small
+			}
+		}
+		navy_leader={
+			traits = { navy_career_officer battleship_adherent craven fleet_protector blockade_runner destroyer_leader fly_swatter cruiser_captain }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}	
+	
+	ENG_tom_phillips={
+		name="Percy Noble"
+		portraits={
+			army={
+				large=GFX_portrait_ENG_tom_phillips
+				small=GFX_portrait_ENG_bruce_fraser_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = tom_phillips
+			ledger = navy
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { naval_theorist }
+		}
+		navy_leader={
+			traits = { navy_career_officer battleship_adherent craven fleet_protector blockade_runner destroyer_leader fly_swatter concealment_expert loading_drill_master }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+	}
+	
+	ENG_john_tovey={
+		name=ENG_john_tovey
+		portraits={
+			army={
+				large=GFX_portrait_ENG_john_tovey
+				small=GFX_portrait_ENG_john_tovey_small
+			}
+		}
+		navy_leader={
+			traits = { gentlemanly naval_lineage superior_tactician lone_wolf marksman inshore_fighter smoke_screen_expert }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 5
+			legacy_id=987
+		}
+	}
+
+	ENG_john_cunningham={
+		name=ENG_john_cunningham
+		portraits={
+			army={
+				large=GFX_portrait_ENG_john_cunningham
+				small=GFX_portrait_ENG_john_cunningham_small
+			}
+		}
+		navy_leader={
+			traits = { navy_career_officer green_water_expert fleet_protector destroyer_leader blockade_runner concealment_expert loading_drill_master }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 3
+			legacy_id=989
+		}
+	}
+
+	ENG_charles_forbes={
+		name=ENG_charles_forbes
+		portraits={
+			army={
+				large=GFX_portrait_ENG_charles_forbes
+				small=GFX_portrait_ENG_charles_forbes_small
+			}
+		}
+		navy_leader={
+			traits = { gunnery_expert fly_swatter cruiser_captain search_pattern_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+			legacy_id=990
+		}
+	}
+
+	ENG_algernon_willis={
+		name=ENG_algernon_willis
+		portraits={
+			army={
+				large=GFX_portrait_ENG_algernon_willis
+				small=GFX_portrait_ENG_algernon_willis_small
+			}
+		}
+		navy_leader={
+			traits = { seawolf spotter concealment_expert silent_hunter loading_drill_master blue_water_expert }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+
+#	ENG_arthur_power={
+#		name=ENG_arthur_power
+#		portraits={
+#			army={
+#				large=GFX_portrait_ENG_arthur_power
+#				small=GFX_portrait_ENG_arthur_power_small
+#			}
+#		}
+#		navy_leader={
+#			traits={ gunnery_expert }
+#			skill=2
+#			attack_skill=3
+#			defense_skill=1
+#			maneuvering_skill=1
+#			coordination_skill=2
+#			legacy_id=992
+#		}
+#	}	
+
+	### AIR CHIEFS ###
+
+	ENG_cyril_newall={
+		name=ENG_cyril_newall
+		portraits={
+			army={
+				small="GFX_idea_cyril_newall"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = cyril_newall
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	ENG_edward_ellington={
+		name=ENG_edward_ellington
+		portraits={
+			army={
+				small="GFX_idea_edward_ellington"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = edward_ellington
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	### MILITARY HIGH COMMAND ###
+
+	ENG_kenneth_anderson={
+		name=ENG_kenneth_anderson
+		portraits={
+			army={
+			    large=GFX_portrait_Anderson_Kenneth
+				small="GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = kenneth_anderson
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+		corps_commander={ #torch lander, did poorly at first, bad at chain of command stuff, 
+			desc = "Kenneth_Anderson_desc"
+			traits = { trait_mountaineer naval_invader war_hero ambusher infantry_leader harsh_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+
+		}			
+	}
+
+	ENG_sholto_douglas={
+		name=ENG_sholto_douglas
+		portraits={
+			army={
+				small="GFX_idea_sholto_douglas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = sholto_douglas
+			ledger = air
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				air_air_superiority
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	ENG_trafford_leigh_mallory ={
+		name=ENG_trafford_leigh_mallory
+		portraits={
+			army={
+				small="GFX_idea_trafford_leigh_mallory"
+			}
+		}
+		advisor={	
+			slot = high_command
+			ledger = air
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+			air_chief_night_bomber	
+			air_chief_naval_strike
+			}
+			idea_token = ENG_trafford_leigh_mallory
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	ENG_miles_dempsey={
+		name=ENG_miles_dempsey
+		portraits={
+			army={
+				large=GFX_portrait_ENG_miles_dempsey
+				small=GFX_portrait_ENG_miles_dempsey_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = paranavydudesomething
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+
+			}
+			traits = {
+				navy_amphibious_assault_3
+				air_chief_paratrooper
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+	        desc = "Miles_Dempsey_desc"		
+			traits = { naval_invader infantry_leader infantry_expert commando paratrooper invader_ii naval_liason }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}		
+	}
+
+	ENG_max_horton={
+		name=ENG_max_horton
+		portraits={
+			army={
+				small="GFX_idea_max_horton"
+				large="GFX_idea_max_horton_big"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = max_horton
+			ledger = navy
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_submarine_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+		navy_leader={
+			traits = { destroyer_leader fleet_protector search_pattern_expert blockade_runner spotter hunter_killer loading_drill_master }
+			skill = 6
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 5		
+		}
+	}
+
+	ENG_david_stirling={
+		name=ENG_david_stirling
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = ENG_david_stirling
+			ledger = army
+			available = {
+				has_completed_focus = ENG_special_air_service
+			}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+	ENG_richard_oconnor={
+		name=ENG_richard_oconnor
+		portraits={
+			army={
+				large=GFX_portrait_ENG_richard_oconnor
+				small=GFX_portrait_ENG_richard_oconnor_small
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = ENG_tankerman
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		
+		corps_commander={ #Operation Compass guy, desert tanker, frontline general, also fought in europe but was held in reserve
+		    desc = "Richard_OConnor_desc" #tank gen for africa or europe
+			traits = { organizer panzer_leader camouflage_expert trait_reckless panzer_expert trickster }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 5
+			legacy_id=999
+		}
+	}	
+
+
+	### POLITICAL ADVISORS ###
+
+	# Churchill up there
+
+	# Mosley up there
+
+	# Pollit up there
+
+	ENG_clement_attlee={
+		name=ENG_clement_attlee
+		portraits={
+			army={
+				small="GFX_idea_clement_attlee"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = clement_attlee
+			available  = {
+				if  = {
+					limit  = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state  = autonomy_supervised_state
+					}
+				}
+			}
+			cost = 50
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				democratic_reformer 
+			}
+			do_effect  = {
+				NOT = {
+					has_government  = democratic 
+				}
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}		
+	}
+
+	ENG_philip_kerr={
+		name=ENG_philip_kerr
+		portraits={
+			army={
+				small="GFX_idea_ENG_philip_kerr"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_philip_kerr
+			available  = {
+
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				silent_workhorse 
+			}
+			ai_will_do  = {
+				factor  = 2.000
+				modifier  = {
+					has_country_leader = {
+						character = ENG_stanley_baldwin
+						ruling_only = yes 
+					}
+					factor  = 10.000
+				}
+			}
+		}		
+	}
+
+	ENG_nevile_henderson={
+		name=ENG_nevile_henderson
+		portraits={
+			army={
+				small="GFX_idea_ENG_nevile_henderson"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_nevile_henderson
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				backroom_backstabber 
+			}
+		}
+	}
+
+	ENG_maxwell_aitken={
+		name=ENG_maxwell_aitken
+		portraits={
+			army={
+				small="GFX_idea_ENG_maxwell_aitken"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_maxwell_aitken
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				war_industrialist 
+			}
+			ai_will_do  = {
+				factor  = 2.000
+			}
+		}
+	}
+
+	ENG_leslie_hore_belisha={
+		name=ENG_leslie_hore_belisha
+		portraits={
+			army={
+				small="GFX_idea_ENG_leslie_hore_belisha"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_leslie_hore_belisha
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				armaments_organizer 
+			}
+		}
+	}
+
+	ENG_ernest_bevin={
+		name=ENG_ernest_bevin
+		portraits={
+			army={
+				small="GFX_idea_ENG_ernest_bevin"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_ernest_bevin
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				quartermaster_general 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+	
+	##################
+	################## GENERALS
+	##################
+	##################
+	
+	ENG_harold_alexander={
+		name=ENG_harold_alexander
+		portraits={
+			army={
+				small="GFX_idea_harold_alexander"
+			}
+			army={
+				large=GFX_portrait_ENG_harold_alexander
+			}
+		}
+		
+		field_marshal={ #led inf in BEF, failed to hold Ragoon in india, not great field commander or planner, was in tunisina campaign, slugged italian campaign, beloved but pushover
+			desc = "Harold_Alexander_desc" # FM for Italy
+			traits = { politically_connected naval_invader hill_fighter offensive_doctrine infantry_leader trait_mountaineer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 5
+			legacy_id=995
+		}
+	}
+	
+	ENG_archibald_wavell={
+		name=ENG_archibald_wavell
+		portraits={
+			army={
+				small="GFX_idea_archibald_wavell"
+			}
+			army={
+				large=GFX_portrait_ENG_archibald_wavell
+			}
+		}		
+		field_marshal={ #fought in desert, and then was commander in chief of british far east territories
+	        desc = "Archibald_Wavell_desc" #FM for far east		
+			traits = { adaptable naval_invader infantry_leader defensive_doctrine organisational_leader logistics_wizard }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=998
+		}
+	}
+
+	ENG_henry_wilson={
+		name=ENG_henry_wilson
+		portraits={
+			army={
+				large=GFX_portrait_ENG_henry_wilson
+				small=GFX_portrait_ENG_henry_wilson_small
+			}
+		}
+		field_marshal={
+		    desc = "Henry_Wilson_desc"
+			traits = { offensive_doctrine desert_fox hill_fighter panzer_leader infantry_leader trickster aggressive_assaulter organisational_leader }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = ENG_maneuver
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	ENG_neil_ritchie={
+		name=ENG_neil_ritchie
+		portraits={
+			army={
+				large=GFX_portrait_ENG_neil_ritchie
+				small=GFX_portrait_ENG_neil_ritchie_small
+			}
+		}
+		corps_commander={ #calm and confident, cautious, didnt do great in desert but did great in Europe after dday, harsh commander 
+		    desc = "Neil_Ritchie_desc" #DDAY Fast Panzer Leader
+			traits = { harsh_leader trait_engineer expert_improviser panzer_expert panzer_leader ranger }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_alan_cunningham={
+		name=ENG_alan_cunningham
+		portraits={
+			army={
+				large=GFX_portrait_ENG_alan_cunningham
+				small=GFX_portrait_ENG_alan_cunningham_small
+			}
+		}
+		corps_commander={  #had a decisive role in east africa offensive, fought in north africa but sacked for not trying to call off an offensive
+		    desc = "Alan_Cunningham_desc" #east african guy
+			traits = { infantry_expert trait_mountaineer hill_fighter career_officer trait_defeatist }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_thomas_jacomb_hutton={ #commanded burma army, poorly, 
+		name=ENG_thomas_jacomb_hutton #infantry guy for Burma
+		portraits={
+			army={
+				large=GFX_portrait_ENG_thomas_jacomb_hutton
+				small=GFX_portrait_ENG_thomas_jacomb_hutton_small
+			}
+		}
+		corps_commander={
+		    desc = "Thomas_Jacomb_Hutton_desc" #infantry guy for Burma
+			traits = { jungle_rat commando infantry_leader organizer hill_fighter irregulars_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_william_gott={ #beloved, mediocre commander of 7th armored in desert and later of a corps. died in one battle. 
+		name=ENG_william_gott
+		portraits={
+			army={
+				large=GFX_portrait_ENG_william_gott
+				small=GFX_portrait_ENG_william_gott_small
+			}
+		}
+		corps_commander={
+		    desc = "William_Gott_desc" #alt tanker for africa
+			traits = { armor_officer trait_reckless desert_fox panzer_leader armor_officer politically_connected }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_jock_campbell={
+		name=ENG_jock_campbell
+		portraits={
+			army={
+				large=GFX_portrait_ENG_jock_campbell
+				small=GFX_portrait_ENG_jock_campbell_small
+			}
+		}
+		corps_commander={ #commanded support elements of 7th armored division, frontline commander, died in action
+		    desc = "Jock_Campbell_desc" #mot commander
+			traits = { cavalry_leader combined_arms_expert desert_fox infantry_leader bearer_of_artillery trait_reckless }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_oliver_leese={
+		name=ENG_oliver_leese
+		portraits={
+			army={
+				large=GFX_portrait_ENG_oliver_leese
+				small=GFX_portrait_ENG_oliver_leese_small
+			}
+		}
+		corps_commander={ #planned evacuation of BEF, did husky and commanded army in italy
+		    desc = "Oliver_Leese_desc" # infantry leader in italy
+			traits = { infantry_leader infantry_expert hill_fighter fortress_buster naval_invader skirmisher }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=993
+		}
+	}
+
+	ENG_brian_horrocks={
+		name=ENG_brian_horrocks
+		portraits={
+			army={
+				large=GFX_portrait_ENG_brian_horrocks
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ #competent infantry general who fought very well in desert, and did alright in Europe
+		    desc = "Brian_Horrocks_desc" #desert inf gen
+			traits = { desert_fox infantry_leader infantry_expert ambusher organizer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	ENG_percy_hobart={
+		name = "Percy Hobart"
+		portraits={
+			army={
+				large=GFX_portrait_percy_hobart
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ #tank invader
+		    desc = "Percy_Hobart_desc" #tank invader
+			traits = { trait_engineer naval_invader panzer_expert panzer_leader invader_ii }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	ENG_john_crocker={
+		name = "John Crocker"
+		portraits={
+			army={
+				large=GFX_portrait_John_Crocker
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ #armor general in early war, briefly saw service in africa where he fucked up, planned landings in europe
+		    desc = "John_Crocker_desc" #mech invader, urban tanker
+			traits = { panzer_leader infantry_expert paratrooper naval_invader urban_assault_specialist combined_arms_expert }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 7
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	ENG_richard_mccreery={
+	    name = "Richard McCreery" #good and competent tanker, did planning in africa, comanded in italy
+		portraits={
+			army={
+				large=GFX_portrait_Richard_McCreery
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ 
+		   desc = "Richard_McCreery_desc" #tanker for italy
+			traits = { cavalry_leader panzer_leader hill_fighter fortress_buster trait_engineer armor_officer }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}		
+	
+	ENG_Ronald_Scobie={
+	    name = "Ronald Scobie" #comanded tobruk fortress in ww2, then fought in greece at the end of the war
+		portraits={
+			army={
+				large=GFX_portrait_Ronald_Scobie
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ #tobruk port holder
+		    desc = "Ronald_Scobie_desc"
+			traits = { infantry_leader guerilla_fighter inflexible_strategist urban_assault_specialist ambusher trait_mountaineer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+	ENG_Frederick_Browning={
+	    name = "Ronald Scobie" #a bridge too far guy
+		portraits={
+			army={
+				large=GFX_portrait_frederick_browning
+				small=GFX_portrait_ENG_brian_horrocks_small
+			}
+		}
+		corps_commander={ #paratrooper
+		    desc = "Frederick_Browning_desc" 
+			traits = { paratrooper infantry_leader infantry_expert guerilla_fighter trickster skirmisher commando }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}	
+	
+	ENG_arthur_percival={ #organized home defence, lost singapore
+		name=ENG_arthur_percival
+		portraits={
+			army={ #Malaya defense guy
+				large=GFX_portrait_ENG_arthur_percival
+				small=GFX_portrait_ENG_arthur_percival_small
+			}
+		}
+		corps_commander={
+            desc = "Arthur_Percival_desc"		
+			traits = { jungle_rat infantry_leader ambusher trait_defeatist commando }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id=0
+		}
+	}
+
+	ENG_merton_beckwithsmith={ #BEF, Singapore, told his men to fire at stukas as if they were pheasant
+		name=ENG_merton_beckwithsmith
+		portraits={
+			army={
+				large=GFX_portrait_ENG_merton_beckwithsmith
+				small=GFX_portrait_ENG_merton_beckwithsmith_small
+			}
+		}
+		corps_commander={ #Malaya offensive guy
+		    desc = "Merton_Beckwith_Smith_desc"
+			traits = { jungle_rat camouflage_expert infantry_expert hill_fighter trickster }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=0
+		}
+	}	
+	
+}

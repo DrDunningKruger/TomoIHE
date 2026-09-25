@@ -1,0 +1,254 @@
+governments_in_exile = {
+
+	request_reinstatement = {
+
+		icon = generic_independence
+
+		days_re_enable = 90 # Prevent event spam
+
+		cost = 10
+
+		available = {
+			all_owned_state = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			FROM = { is_hosting_exile = ROOT }
+			any_owned_state = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		
+		targets = { host }
+
+		target_trigger = { FROM = { is_hosting_exile = ROOT } }
+		
+		complete_effect = {
+			FROM = {
+				country_event = { id = mtg_exile_government.2 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	grant_parliamentary_audience = {
+
+		icon = eng_install_government
+
+		available = {
+		    FROM = {
+		    	has_legitimacy < 95
+		    }
+		}
+
+		visible = {
+			FROM = { is_exiled_in = ROOT }
+		    FROM = {
+		    	has_legitimacy < 100
+		    }
+		}
+
+		
+		target_array = exiles
+
+		target_trigger = { FROM = { is_exiled_in = ROOT } }
+		
+		modifier = {
+		}
+		
+		targeted_modifier = {
+			tag = FROM
+			targeted_legitimacy_daily = 0.1
+		}
+
+		days_remove = 120
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	lobby_for_parliamentary_support = {
+
+		icon = eng_install_government
+
+		available = {
+				has_political_power > 30
+		}
+
+		visible = {
+			FROM = { is_hosting_exile = ROOT }
+		    FROM = {
+		    	has_legitimacy < 100
+		    }
+		}
+
+		
+		targets = { host }
+
+		target_trigger = { FROM = { is_hosting_exile = ROOT } }
+		
+		modifier = {
+			legitimacy_daily = 0.25
+		}		
+
+		days_remove = 120
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	exile_recruitment_campaign = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+
+		available = {
+			OR = {
+				political_power_daily > 1.0
+				has_political_power > 120
+			}
+		    FROM = {
+		    	has_legitimacy > 20
+		    }
+		}
+
+		visible = {
+			FROM = { is_hosting_exile = ROOT }
+		    FROM = {
+		    	has_legitimacy > 10
+		    }
+		}
+
+		
+		targets = { host }
+
+		target_trigger = { FROM = { is_hosting_exile = ROOT } }
+		
+		modifier = {
+			political_power_cost = 1.0
+			exile_manpower_factor = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				has_political_power < 150
+				political_power_daily < 0.75
+				factor = 0
+			}
+		}
+	}
+
+	request_control_of_navy = {
+		
+		icon = generic_naval
+
+		cost = 25
+		fire_only_once = yes
+
+		available = {
+
+		}
+
+		visible = {
+			FROM = { is_exiled_in = ROOT }
+		}
+		
+		target_array = exiles
+
+		target_trigger = {
+			FROM = {
+				is_exiled_in = ROOT
+				has_navy_size = {
+				    size > 0
+				}
+			}
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				FROM = {
+					transfer_navy = {
+						target = ROOT
+						is_government_in_exile = yes
+					}
+					add_legitimacy = 10
+				}
+			}
+			custom_effect_tooltip = HOL_request_equipment_tt_2
+			FROM = {
+				country_event = { id = mtg_exile_government.3 hours = 6 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+category_exile_forces = {
+
+	joint_training_exercise = {
+
+		icon = eng_blackshirt_march
+
+		cost = 0
+
+		days_re_enable = 360
+
+		custom_cost_trigger = {
+		}
+
+		custom_cost_text = custom_cost_joint_training_exercise
+
+		available = {
+		    FROM = {
+		    	has_legitimacy > 35
+		    	any_war_score > 9
+		    }
+		}
+
+		visible = {
+			FROM = { 
+				is_exiled_in = ROOT
+		    	has_legitimacy > 25
+		    }
+		}
+
+		
+		target_array = exiles
+
+		target_trigger = { FROM = { is_exiled_in = ROOT } }
+		
+		complete_effect = {
+
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+
+			FROM = {
+				army_experience = 100
+				air_experience = 100
+				navy_experience = 100
+			}
+
+			hidden_effect = {
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+

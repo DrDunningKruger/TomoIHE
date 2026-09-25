@@ -1,0 +1,74 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+
+#create_corps_commander = { #didn't understood tanks, fought defensive actions, frontline general, captured during recon mission, had mission impossible style escape #from germans 
+#	name = "Henri Giraud"
+#	desc = "henri_giraud_desc"	 #
+#	picture = "henri_giraud.dds"
+#	traits = { trait_defeatist trait_reckless trickster cavalry_officer }
+#	skill = 5
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #vet, served in madagascar and africa during war, fought in east africa with free french
+#	name = "Paul Legentilhomme"
+#	desc = "Paul_Legentilhomme_desc"	 #
+#	picture = "Paul_Legentilhomme.dds"
+#	traits = {  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #vet, ffa, fought in belgium, tunisia, italy as mountaineer, alsace in 44
+#	name = "Francois Sevez"
+#	desc = "Francois_Sevez_desc"	 #
+#	picture = "Francois_Sevez.dds"
+#	traits = {  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #mountaineer, fought in narvik, joined allies in 43, served in liberation of france
+#	name = "Antoine Béthouart"
+#	desc = "Antoine_Bethouart_desc"	 #
+#	picture = "Antoine_Bethouart.dds"
+#	traits = {  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #defeatist, did nothing in france
+#	name = "Gaston Billotte"
+#	desc = "Gaston_Billotte_desc"	 #
+#	picture = "Gaston_Billotte.dds"
+#	traits = {  }
+#	skill = 6
+#	attack_skill = 6
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+##########################################################################
+##########################################################################
+##########################################################################
+
+	
+			}
+		}
+	}
+}

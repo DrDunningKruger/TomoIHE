@@ -1,0 +1,36 @@
+
+state={
+	id=126
+	name="STATE_126"
+
+	history={
+		owner = ENG
+		victory_points = {
+			6103 50 
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 3
+			industrial_complex = 8
+			dockyard = 1
+			anti_air_building = 5
+			radar_station = 1
+			air_base = 10
+			11374 = {
+				naval_base = 10
+
+			}
+
+		}
+		add_core_of = ENG
+
+	}
+
+	provinces={
+		5146 5171 6103 9239 11000 11221 11333 11374 
+	}
+	manpower=9824296
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

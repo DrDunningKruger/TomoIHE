@@ -1,0 +1,71 @@
+
+
+#create_field_marshal = { #retired by 36
+#	name = "Aisin Gioro Xiqia"
+#	GFX = "GFX_portrait_man_aisin_gioro_xiqia"
+#	traits = { career_officer infantry_officer commando hill_fighter organizer trickster trait_engineer }
+#	skill = 5
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 3
+#	logistics_skill = 6
+#}
+
+#create_field_marshal = { princess spy
+#	name = "Yoshiko Kawashima"
+#	gfx = "GFX_portrait_man_yoshiko_kawashima"
+#	traits = { cavalry_officer cavalry_leader panzer_leader }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 2
+#	logistics_skill = 3
+#	female = yes
+#}
+
+#create_field_marshal = {
+#	name = "Aisin Gioro Pujie"
+#	picture = "Aisin_Gioro_Pujie.dds"
+#	traits = { infantry_leader ambusher trait_cautious combined_arms_expert fortress_buster trait_mountaineer }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+#create_field_marshal = { #retired after failures in Manchuria
+#	name = "Kenkichi Ueda"
+#	picture = "Portrait_Japan_Kenkichi_Ueda.dds"
+#	traits = { old_guard cavalry_officer trait_reckless winter_specialist trait_engineer trickster }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #troll
+#	name = "Kanji Ishiwara"
+#	picture = "Portrait_Japan_Kanji_Ishiwara.dds"
+#	traits = { JAP_samurai_lineage trait_engineer ambusher camouflage_expert offensive_doctrine }
+#	skill = 5
+#	attack_skill = 4
+#	defense_skill = 5
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+#create_field_marshal = { #retired during war
+#	name = "Shigeru Honjo"
+#		picture = "Portrait_Japan_Shigeru_Honjo.dds"
+#	traits = { old_guard war_hero politically_connected trickster inspirational_leader offensive_doctrine }
+#	skill = 3
+#	attack_skill = 4
+#	defense_skill = 1
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+
+

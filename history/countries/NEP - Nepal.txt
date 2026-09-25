@@ -1,0 +1,98 @@
+﻿capital = 323
+
+oob = "NEP_1936"
+
+# Starting tech
+set_technology = {
+    cap_everyone = 1
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	fuel_silos = 1	
+	basic_train = 1		
+	britbong_armor_pack = 1		
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1	
+	superior_firepower = 1
+}
+set_war_support = 0.15
+set_stability = 0.8
+set_fuel_ratio = 1.0
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+    training_spirit
+	limited_conscription
+    NEP_policy_of_isolationism	
+    NEP_suppressed_religion
+	AFRICA_ALLIES_6	
+}
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_convoys = 50
+
+set_research_slots = 3
+
+create_country_leader = {
+	name = "Juddha Rana"
+	desc = "POLITICS_JUDDHA_RANA_DESC"
+	picture = "GFX_portrait_nepal_portrait_juddah_rana"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		stout_defender
+	}
+}
+recruit_character = NEP_juddha_rana
+recruit_character = NEP_bhakti_thapa
+recruit_character = NEP_bir_shamsher_singh_thapa
+recruit_character = NEP_amar_thapa
+recruit_character = NEP_khusbu_singh
+recruit_character = NEP_hira_rana
+recruit_character = NEP_birsha_gurung
+recruit_character = NEP_gagan_lama
+recruit_character = NEP_walter_morriano
+recruit_character = NEP_robert_mainwaring
+recruit_character = NEP_kiran_rana
+recruit_character = NEP_h_t_s_collins
+recruit_character = NEP_gehendra_rana
+recruit_character = NEP_rudra_rana
+recruit_character = NEP_alaap_lokesh
+recruit_character = NEP_william_stevenson_meyer
+recruit_character = NEP_w_r_parker_gill
+recruit_character = NEP_sidney_r_planter
+recruit_character = NEP_airguy
+recruit_character = NEP_randombro
+
+recruit_character = NEP_Aadarsh_Piya
+recruit_character = NEP_Rohit_Kasaju
+recruit_character = NEP_Rishikesh_Khatiwada
+recruit_character = NEP_Mandeep_Pokhrel
+recruit_character = NEP_Hemant_Pudasaini
+recruit_character = NEP_Sachindra_Timilsina
+recruit_character = NEP_Surendra_Gaire
+recruit_character = NEP_Anoj_Ranjeet
+recruit_character = NEP_naver
+
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 }	

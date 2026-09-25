@@ -1,0 +1,27 @@
+
+state={
+	id=54
+	name="STATE_54"
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 5
+
+		}
+		victory_points = {
+			7632 10 
+		}
+		add_core_of = GER
+
+	}
+
+	provinces={
+		561 3474 4598 6421 6594 7632 9416 9557 9572 11404 11417 11529 11544 12823 13116 
+	}
+	manpower=2508159
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+	local_supplies=0.000
+}

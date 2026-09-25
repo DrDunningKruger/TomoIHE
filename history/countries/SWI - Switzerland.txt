@@ -1,0 +1,42 @@
+﻿capital = 3
+
+oob = "SWI_1936"
+
+set_research_slots = 1
+
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	fuel_silos = 1	
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.10.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+	neutral_land
+	neutrality_idea	
+	undisturbed_isolation
+	closed_economy
+}
+
+
+
+set_stability = 1
+
+1939.1.1 = {
+complete_national_focus = asia_only_resources
+}

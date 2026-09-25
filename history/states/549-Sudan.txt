@@ -1,0 +1,27 @@
+
+state={
+	id=549
+	name="STATE_549"
+	manpower = 3694293
+	
+	state_category = rural
+	
+	
+	history={
+		victory_points = {
+			2096 1
+		}
+		owner = ENG
+
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		1596 1639 1914 1953 1960 2016 2096 4033 4918 5060 7996 8052 8084 8208 10390 10418 10739 10764 10795 10827 10851 10857 10859 10877 10908 10975 11022 12409 12744 12800 12887
+	}
+
+	local_supplies=0.0 
+}

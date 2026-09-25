@@ -1,0 +1,21 @@
+﻿# Destroyers sent to CAN in exchange for bases
+
+units = {
+	fleet = {
+		name = "American Destroyer Squadron"			
+		naval_base = 11064 # Scapa Flow
+		task_force = {					
+			name = "American Destroyer Flotilla 4"
+			location = 11064 # Scapa Flow
+			ship = { name = "HMS Escort I" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "HMS Escort II" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "HMS Escort III" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "HMS Escort IV" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "HMS Escort V" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "Escort VI" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }			
+			ship = { name = "Escort VII" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }		
+			ship = { name = "Escort VIII" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = ENG creator = ENG version_name = "O/P/Q/R/S Class" } } }		
+		}
+	}
+}
+					

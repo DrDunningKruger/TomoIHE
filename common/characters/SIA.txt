@@ -1,0 +1,840 @@
+characters={
+	SIA_phraya_phahon={
+		name="Phraya Phahon"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Siam_Phraya_Phahon.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_nangklao_chichalerm={
+		name="Nangklao Chichalerm"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/portrait_asia_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ retired_officer financial_expert }
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+	SIA_chao_phonphayuhasena={
+		name="Chao Phonphayuhasena"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism
+			traits={ retired_officer }
+			expire="1942.1.1.12"
+			id=-1
+		}
+	}
+	SIA_nangklao_suriyawongse={
+		name="Nangklao Suriyawongse"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1953.1.1.12"
+			id=-1
+		}
+	}
+	SIA_plaek_phibunsongkhram={
+		name="Plaek Phibunsongkhram"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1953.1.1.12"
+			id=-1
+		}
+	}
+	SIA_tianliang_huntrakool={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_tianliang_huntrakool
+			ledger = army
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					army_armored_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Tianliang Huntrakool"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_3"
+			}
+		}
+	}	
+	SIA_invader ={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_invader
+			ledger = navy
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					navy_amphibious_assault_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Siamese Siamovich"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_3"
+			}
+		}
+	}
+	SIA_phra_silpasakrakorn={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = SIA_phra_silpasakrakorn
+			ledger = air
+				allowed = {
+					original_tag = SIA
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phra Silpasakrakorn"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
+
+	SIA_thawon_thamrongnawasawat={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = SIA_thawon_thamrongnawasawat
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Thawon Thamrongnawasawat"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_3"
+			}
+		}
+	}
+	SIA_phraya_preechacholayudha={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_phraya_preechacholayudha
+			ledger = navy
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					navy_submarine_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phraya Preechacholayudha"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+	}
+	SIA_pridi_phanomyong={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_pridi_phanomyong
+			ledger = navy
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					navy_screen_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Pridi Phanomyong"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_3"
+			}
+		}
+	}
+	SIA_sindhu_kamalanavin={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_sindhu_kamalanavin
+			ledger = army
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					army_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Sindhu Kamalanavin"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+	}
+	SIA_phraya_chitnasongkhla={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = SIA_phraya_chitnasongkhla
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phraya Chitnasongkhla"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_4"
+			}
+		}
+	}
+	SIA_phraya_thayarnpikart={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = SIA_phraya_thayarnpikart
+			ledger = air
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+				air_chief_close_coordination
+				air_chief_naval_strike
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phraya Thayarnpikart"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
+	SIA_phra_vechayanrangsarit={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = SIA_phra_vechayanrangsarit
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+				air_chief_reform
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phra Vechayanrangsarit"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+	}
+	SIA_manphya_khanphialong={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = SIA_manphya_khanphialong
+			ledger = army
+				allowed = {
+					original_tag = SIA
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Manphya Khanphialong"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_5"
+			}
+		}
+	}
+	SIA_luang_phibunsongkhram={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = SIA_luang_phibunsongkhram
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					army_chief_morale_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Luang Phibunsongkhram"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+		}
+	}
+	SIA_phraya_wichcitcholathai={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = SIA_phraya_wichcitcholathai
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+					navy_chief_decisive_battle_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phraya Wichcitcholathai"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+	}
+	SIA_sawat_phutianands={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = SIA_sawat_phutianands
+			ledger = navy
+				allowed = {
+					original_tag = SIA
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Sawat Phutianands"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_3"
+			}
+		}
+	}
+	SIA_phraya_chalermarkiart={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = SIA_phraya_chalermarkiart
+			allowed = {
+					original_tag = SIA
+				}
+				traits = {
+				air_chief_rely_on_others
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phraya Chalermarkiart"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
+	SIA_kuang_abhayavongsa={
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_kuang_abhayavongsa
+			allowed  = {
+					original_tag  = SIA
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Kuang Abhayavongsa"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
+	SIA_thawee_punyaketu={
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_thawee_punyaketu
+			allowed  = {
+					original_tag  = SIA
+				}
+				traits  = {
+					captain_of_industry 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Thawee Punyaketu"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+	}
+	SIA_phot_bhahalyodin={
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_phot_bhahalyodin
+			allowed  = {
+					original_tag  = SIA
+				}
+				traits  = {
+					prince_of_terror 
+					fascist_demagogue 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Phot Bhahalyodin"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+	}	
+	
+	SIA_randomdude={
+		advisor={
+			slot = political_advisor
+			allowed  = {
+					original_tag  = SIA
+				}
+				traits  = {
+					editor
+				}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_4"
+			}
+		}
+	}	
+	
+	SIA_randomdude2 ={
+		advisor={
+			slot = political_advisor
+			allowed  = {
+					original_tag  = SIA
+				}
+				traits  = {
+					economist
+				}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_4"
+			}
+		}
+	}
+	SIA_inf ={
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				army_infantry_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SIA_Sanguan_Ruchirapa={
+		name = "Sanguan Ruchirapa"
+		portraits={
+			army={
+				large="GFX_portrait_admiral_sanguan"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		navy_leader={
+		    visible = {
+			 has_completed_focus = SIA_navy_shit
+			}			
+					traits = { battleship_adherent naval_lineage fly_swatter inshore_fighter ironside big_guns_expert ground_pounder gunnery_expert blue_water_expert }
+					skill = 5
+					attack_skill = 3
+					defense_skill = 2
+					maneuvering_skill = 3
+					coordination_skill = 3
+		}
+	}	
+	
+	SIA_Tai_ho={
+		name = "Tai Ho"
+		portraits={
+			army={
+				large="GFX_portrait_TAI_HO"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		navy_leader={
+		    visible = {
+			 has_completed_focus = SIA_foregin_guidance
+			}			
+			traits = { aviation_enthusiast bold air_controller flight_deck_manager superior_tactician spotter dive_bomber torpedo_bomber fighter_director blue_water_expert }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			maneuvering_skill = 5
+			coordination_skill = 5
+		}
+	}		
+	
+	SIA_Thawal_Thamrong={
+		name = "Thawal Thamrong"
+		portraits={
+			army={
+				large="GFX_RAJ_herbert_fitzherbert"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		navy_leader={
+			traits = { media_personality chief_engineer fleet_protector destroyer_leader blockade_runner spotter blue_water_expert concealment_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}	
+	
+	SIA_Luang_Sinthusongkhramchai={
+		name = "Luang Sinthusongkhramchai"
+		portraits={
+			army={
+				large="GFX_portrait_luang_sinthusongkhramchai"
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+		navy_leader={
+			traits = { search_pattern_expert fleet_protector blockade_runner fly_swatter inshore_fighter seawolf silent_hunter concealment_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+		advisor={
+			slot = high_command
+			idea_token = SIA_luang_sinthusongkhramchai
+			ledger = navy
+				allowed = {
+					original_tag = SIA
+				}
+				traits = {
+				air_air_superiority
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+	}
+	
+	SIA_Sook_Wilepana={  
+		name = "Sook Wi'lepana"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_montagu_stopford_small
+				large=GFX_portrait_Siam_Plaek
+			}
+		}		
+		field_marshal = { 
+			desc = "Sook_Wi'lepana_desc"
+			traits = { politically_connected panzer_leader panzer_expert camouflage_expert fortress_buster jungle_rat offensive_doctrine }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+		}		
+	}	
+	
+	SIA_Krittapat_Benjawan={  
+		name = "Krittapat Benjawan"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_montagu_stopford_small
+				large=GFX_portrait_luang_sinthusongkhramchai
+			}
+		}		
+		field_marshal = { 
+			desc = "Krittapat_Benjawan_desc"
+			traits = { offensive_doctrine naval_invader trait_mountaineer invader_ii commando skirmisher }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+		}		
+	}	
+	
+	SIA_Sawad_Sawadronnarong={  
+		name = "Sawad Sawadronnarong"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_montagu_stopford_small
+				large=GFX_portrait_Luang_Sawad
+			}
+		}		
+		field_marshal = { 
+			desc = "Sawad_Sawadronnarong_desc"
+			traits = { defensive_doctrine trait_cautious hill_fighter infantry_expert skirmisher brilliant_strategist thorough_planner }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}
+
+	SIA_Chira_Wichitsongkhram={  
+		name = "Chira Wichitsongkhram"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Chin_wichitsongkhram
+			}
+		}		
+		corps_commander={
+		   desc = "Chira_Wichitsongkhram_desc"
+			traits = { ranger expert_improviser trickster infantry_leader skirmisher militias_officer }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}		
+	
+	SIA_Pichit_Kriangsakpichit={  
+		name = "Pichit Kriangsakpichit"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Pichit_krieng
+			}
+		}		
+		corps_commander={
+	        desc = "Pichit_Kriangsakpichit_desc"
+			traits = { ranger cavalry_leader cavalry_expert combined_arms_expert trait_engineer trait_mountaineer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+		}		
+	}		
+	
+	SIA_Sai_Kotchaseni={  
+		name = "Sai Kotchaseni"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Sai_Kotchaseni
+			}
+		}		
+		corps_commander={
+	        desc = "Sai_Kotchaseni_desc" #
+			traits = { infantry_officer guerilla_fighter scavenger camouflage_expert urban_assault_specialist organizer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}		
+	}		
+	
+	SIA_Chakchai_Supangkasen={  
+		name = "Chakchai Supangkasen"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Chakchai_Supangkasen
+			}
+		}		
+		corps_commander={
+	        desc = "Chakchai_Supangkasen_desc"
+			traits = { infantry_leader infantry_expert trait_engineer commando politically_connected ambusher }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 5
+		}		
+	}	
+	
+	SIA_Koran_Mahagitsiri={  
+		name = "Koran Mahagitsiri"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Charun_Rattanakun_Seriroengrit
+			}
+		}		
+		corps_commander={
+	        desc = "Koran_Mahagitsiri_desc"
+			traits = { infantry_expert brilliant_strategist naval_invader invader_ii commando skirmisher paratrooper  }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}		
+	
+	SIA_Rawee_Nitayi={  
+		name = "Rawee Nitaya"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Portrait_Siam_Phraya_Phahon2
+			}
+		}		
+		corps_commander={
+	        desc = "Rawee_Nitaya_desc"
+			traits = { panzer_leader cavalry_leader expert_improviser trait_engineer adaptable commando }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}		
+	}	
+	
+	SIA_Luang_Pradit={  
+		name = "Luang Pradit"
+		portraits={
+			army={
+				small=GFX_portrait_RAJ_noel_beresfordpeirse_small
+				large=GFX_portrait_Luang_Pradit_Manutham
+			}
+		}		
+		corps_commander={
+	        desc = "Luang_Pradit_desc"
+			traits = { scavenger infantry_leader trickster trait_psychopat camouflage_expert harsh_leader war_hero }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}		
+	}	
+}

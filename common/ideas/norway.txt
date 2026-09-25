@@ -1,0 +1,492 @@
+ideas = {
+
+	country = {
+	
+		NOR_depression_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				stability_factor = -0.15
+			}
+		}
+		
+		NOR_depression_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_chi_hyper_inflation
+			
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				stability_factor = -0.10
+			}
+		}
+
+		NOR_army_slogan = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_mex_revolutionary_army
+			
+			modifier = {
+				army_org_Factor = 0.02
+				army_core_defence_factor = 0.02
+				army_morale_factor = 0.05
+			}
+		}		
+		
+		NOR_small_military_budget = {
+			picture = norarmy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.30
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				economy_cost_factor = 3.50
+			}
+		}
+		
+		NOR_factory_act = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+			}
+		}
+		
+		NOR_alt_for_norge = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_generic_monarchist_uprising
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription = 0.05
+			}
+		}
+		
+		NOR_demobilised = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = nordemobilised
+			
+			modifier = {
+				conscription = -0.001
+				training_time_factor = 10.00
+				mobilization_laws_cost_factor = 0.25
+			}
+		}
+		
+		NOR_work_for_everyone = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+                industrial_capacity_dockyard = 0.1		
+				production_speed_infrastructure_factor = 0.10
+			}
+		}
+		
+		NOR_crisis_accord = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_hun_treaty_of_trianon
+			
+			modifier = {
+				consumer_goods_expected_value = -0.10
+			}
+		}
+	}
+
+	aircraft_manufacturers = {
+			
+		#designer = yes
+		
+		NOR_marinens_flyvebaatfabrikk = {
+			
+			picture = marinens_flyvebaatfabrikk
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			cost = 100			
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}			
+		}
+
+		kjeller_flyfabrikk = {
+			
+			picture = kjeller_flyfabrikk
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			cost = 100			
+			research_bonus = {
+				air_equipment = 0.15
+				plane_modules_tech = 0.3
+			}
+			
+			traits = { fast_bomber_manufacturer }
+			
+			equipment_bonus = {
+				# licenced and built fokker C.V bombers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+			aircraft_manufacturers_cost_factor = -1
+			}			
+		}
+	}
+	
+	naval_manufacturers = {
+		
+		#designer = yes
+		
+		horten_naval_yard = {
+			
+			picture = marinens_hovedverft
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			cost = 75
+			
+			traits = { merchant_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	materiel_manufacturers = {
+		
+		#designer = yes
+		
+		kongsberg = {
+			
+			picture = Kongsberg_Vapenfabrikk
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}
+		}
+	
+		raufoss_ammunisjonsfabrikker = {
+			
+			picture = aufoss_ammunisjonsfabrikker
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}
+		}
+	
+		NOR_honefoss_karosserifabrikk = {
+			# technically not a military manufacturer. Remove if problem.
+			
+			picture = generic_motorized_equipment_manufacturer_3
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.15				
+			}
+			
+			equipment_bonus = {
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}
+		}
+	}
+
+	tank_manufacturers = { 
+		
+		#designer = yes
+
+		NOR_landsverk = {
+			
+			picture = landsverk
+
+			cost = 150
+
+			available = {
+				has_completed_focus = NOR_swedish_models
+			}
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				armor = 0.15
+				tank_modules = 0.5
+			}
+			
+			traits = { cheap_tank_manufacturer }
+			
+			modifier = {
+			tank_manufacturers_cost_factor = -1				
+			}		
+		}
+	}
+
+	industrial_concern = {
+	
+		NOR_thunes_mekaniske_verksted = {
+			picture = thunes_mekaniske_verksted
+			
+			allowed = {
+	            original_tag = NOR
+			}
+			
+			research_bonus = {
+				industry = 0.05
+			}
+
+            cost = 150	
+	
+			traits = { railway_company }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}				
+		}	
+		
+		NOR_tandbergs_radiofabrikk = {
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+			traits = { electronics_concern }
+
+            cost = 150	
+	
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}				
+		}	
+		
+		NOR_christiania_spigerverk = {
+		
+		   picture = christiania_spigerverk
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+			traits = { industrial_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+			industrial_concern_cost_factor = -0.50
+			}				
+		}
+
+		NOR_norsk_hydro = {
+
+			picture = norsk_hydro
+		
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				excavation_tech = 0.15
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			modifier = {
+				fuel_gain_factor_from_states = 0.05
+				production_oil_factor = 0.05
+			    industrial_concern_cost_factor = -0.50
+			}			
+		}
+	}	
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=450
+	name="STATE_450"
+
+	history={
+		owner = ITA
+		set_state_flag = ITA_controls
+		victory_points = {
+			10907 10 
+		}
+		victory_points = {
+			13134 1 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 5
+			10907 = {
+				naval_base = 5
+
+			}
+			13134 = {
+				naval_base = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1060 1062 1127 1186 1198 1204 4063 4120 4133 4151 4200 7063 7139 9977 10005 10049 10123 10785 10907 11951 11954 12079 12094 13134 13272 13312 13319 
+	}
+	manpower=82535
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

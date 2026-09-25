@@ -1,0 +1,28 @@
+﻿###########################
+# Finland
+###########################
+
+add_namespace = finland
+
+country_event = {
+    id = finland.69
+    title = finland.69.t
+    desc = finland.69.d
+    picture = GFX_report_event_soviet_soldiers_tank
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = finland.69.b
+		
+		load_oob = "FIN_light_tankdivision"
+    }
+
+    option = {
+        name = finland.69.a
+		
+        load_oob = "FIN_tankdivision"
+    }
+}

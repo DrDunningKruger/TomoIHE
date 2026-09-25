@@ -1,0 +1,630 @@
+﻿add_namespace = mtg_news
+
+
+#ID mtg_news 1-10: USA
+
+#  #  ##  ##  
+#  # #   #  # 
+#  #  #  #### 
+#  #   # #  # 
+ ##  ##  #  # 
+
+# US Pursues Neutrality
+news_event = {
+	id = mtg_news.3
+	title = mtg_news.3.t
+	desc = mtg_news.3.desc
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.3.a
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = mtg_news.3.b
+		trigger = { 
+			NOT = { original_tag = USA }
+			has_government = fascism
+		}
+	}
+	option = {
+		name = mtg_news.3.c
+		trigger = { 
+			NOT = { original_tag = USA }
+			has_government = communism
+		}
+	}
+	option = {
+		name = mtg_news.3.d
+		trigger = { 
+			NOT = { original_tag = USA }
+			NOT = { original_tag = BEL }
+			NOT = { has_idea = HOL_aloof_neutrality }
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+	option = {
+		name = mtg_news.3.e
+		trigger = { 
+			has_idea = HOL_aloof_neutrality
+		}
+	}
+	option = {
+		name = mtg_news.3.f
+		trigger = { 
+			original_tag = BEL
+		}
+	}
+}
+# US war powers act
+news_event = {
+	id = mtg_news.5
+	title = mtg_news.5.t
+	desc = mtg_news.5.desc
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.5.a
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = mtg_news.5.b
+		trigger = { 
+			NOT = { original_tag = CSA }
+			has_government = fascism
+		}
+	}
+	option = {
+		name = mtg_news.5.c
+		trigger = { 
+			NOT = { original_tag = USA }
+			has_government = communism
+		}
+	}
+	option = {
+		name = mtg_news.5.d
+		trigger = { 
+			NOT = { original_tag = USA }
+			Or = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+}
+
+# HOL maintains trade neutrality
+news_event = {
+	id = mtg_news.12
+	title = mtg_news.12.t
+	desc = mtg_news.12.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.12.a # Direct 1939/1940 quote by Roger Makins, Deputy Head of the Foreign Office Central Department: "A people whose 'inherent desire for personal gain' rates their burning sympathy for Finland at one ambulance and who select as leaders in an emergency M. de Geer and M. van Kleffens deserve to be overrun and enslaved."
+		trigger = {
+			original_tag = ENG
+		}
+	}
+	option = {
+		name = mtg_news.12.b
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = mtg_news.12.c
+		trigger = {
+			original_tag = HOL
+		}
+	}
+	option = {
+		name = mtg_news.12.d
+		trigger = { 
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = GER }
+			NOT = { original_tag = HOL }
+		}
+	}
+}
+
+# UK Imperial Conference
+news_event = {
+	id = mtg_news.13
+	title = mtg_britain.82.t
+	desc = mtg_news.13.desc
+	picture = GFX_news_event_imperial_conference
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.13.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+	option = {
+		name = mtg_news.13.b
+		trigger = { 
+			is_subject_of = ENG
+			OR = {
+				original_tag = CAN
+				original_tag = SAF
+				original_tag = RAJ
+				original_tag = AST
+				original_tag = NZL
+			}
+		}
+	}
+	option = {
+		name = mtg_news.13.c
+		trigger = { 
+			NOT = { original_tag = ENG }
+			NOT = {
+				AND = {
+					is_subject_of = ENG
+					OR = {
+						original_tag = CAN
+						original_tag = SAF
+						original_tag = RAJ
+						original_tag = AST
+						original_tag = NZL
+					}
+				}
+			}
+		}
+	}
+}
+
+# UK Move to Secure the Dominions
+news_event = {
+	id = mtg_news.30
+	title = mtg_news.30.t
+	desc = mtg_news.30.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.30.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.30.b
+		trigger = {
+			OR = {
+				original_tag = CAN
+				original_tag = SAF
+				original_tag = RAJ
+				original_tag = AST
+				original_tag = NZL
+			}
+			is_subject_of = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.30.c
+		trigger = { 
+			NOT = { original_tag = ENG }
+			NOT = {
+				AND = {
+					OR = {
+						original_tag = CAN
+						original_tag = SAF
+						original_tag = RAJ
+						original_tag = AST
+						original_tag = NZL
+					}
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+}
+
+# UK Move to Secure the Dominions Martial Law
+news_event = {
+	id = mtg_news.31
+	title = mtg_news.31.t
+	desc = mtg_news.31.desc
+	picture = GFX_news_event_057
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.31.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.31.b
+		trigger = {
+			original_tag = FROM
+		}
+	}
+
+	option = {
+		name = mtg_news.31.c
+		trigger = {
+			OR = {
+				original_tag = CAN
+				original_tag = SAF
+				original_tag = RAJ
+				original_tag = AST
+				original_tag = NZL
+			}
+			is_subject_of = ENG
+			NOT = { original_tag = FROM }
+		}
+	}
+
+	option = {
+		name = mtg_news.31.d
+		trigger = { 
+			NOT = { original_tag = ENG }
+			NOT = {
+				AND = {
+					OR = {
+						original_tag = CAN
+						original_tag = SAF
+						original_tag = RAJ
+						original_tag = AST
+						original_tag = NZL
+					}
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+}
+
+# UK Move to Secure the Dominions Government Flip
+news_event = {
+	id = mtg_news.32
+	title = mtg_news.32.t
+	desc = mtg_news.32.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.32.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.32.b
+		trigger = {
+			original_tag = FROM
+		}
+	}
+
+	option = {
+		name = mtg_news.32.c
+		trigger = {
+			OR = {
+				original_tag = CAN
+				original_tag = SAF
+				original_tag = RAJ
+				original_tag = AST
+				original_tag = NZL
+			}
+			is_subject_of = ENG
+			NOT = { original_tag = FROM }
+		}
+	}
+
+	option = {
+		name = mtg_news.32.d
+		trigger = { 
+			NOT = { original_tag = ENG }
+			NOT = {
+				AND = {
+					OR = {
+						original_tag = CAN
+						original_tag = SAF
+						original_tag = RAJ
+						original_tag = AST
+						original_tag = NZL
+					}
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+}
+
+# HOL Continue the War in Batavia
+news_event = {
+	id = mtg_news.46
+	title = mtg_news.46.t
+	desc = mtg_news.46.desc
+	picture = GFX_news_event_dutch_soldiers_indonesia
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.46.a
+		trigger = {
+			original_tag = HOL
+		}
+	}
+
+	option = {
+		name = mtg_news.46.b
+		trigger = {
+			NOT = { original_tag = HOL }
+		}
+	}
+}
+
+# HOL Continue the Zuiderzee Works
+news_event = {
+	id = mtg_news.47
+	title = mtg_news.47.t
+	desc = mtg_news.47.desc
+	picture = GFX_news_event_hol_polderen
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.47.a
+		trigger = {
+			original_tag = HOL
+		}
+	}
+
+	option = {
+		name = mtg_news.47.b
+		trigger = {
+			NOT = { original_tag = HOL }
+		}
+	}
+}
+
+# HOL Dutch create new buffer state
+news_event = {
+	id = mtg_news.51
+	title = mtg_news.51.t
+	desc = mtg_news.51.desc
+	picture = GFX_news_event_journalists_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.51.a
+		trigger = {
+			original_tag = HOL
+		}
+	}
+
+	option = {
+		name = mtg_news.51.b
+		trigger = {
+			NOT = { original_tag = HOL }
+		}
+	}
+}
+
+# HOL Americans protect West Indies
+news_event = {
+	id = mtg_news.52
+	title = mtg_news.52.t
+	desc = mtg_news.52.desc
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.52.a
+		trigger = {
+			original_tag = HOL
+		}
+	}
+
+	option = {
+		name = mtg_news.52.b
+		trigger = {
+			original_tag = USA
+		}
+	}
+
+	option = {
+		name = mtg_news.52.c
+		trigger = {
+			NOT = { original_tag = HOL }
+			NOT = { original_tag = USA }
+		}
+	}
+}
+
+# HOL Benelux
+news_event = {
+	id = mtg_news.53
+	title = mtg_news.53.t
+	desc = mtg_news.53.desc
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.53.a
+		trigger = {
+			is_in_faction_with = HOL
+		}
+	}
+
+	option = {
+		name = mtg_news.53.b
+		trigger = {
+			NOT = { is_in_faction_with = HOL }
+		}
+	}
+}
+
+news_event = {
+	id = mtg_news.55
+	title = mtg_news.55.t
+	desc = mtg_news.55.desc
+	picture = GFX_news_event_generic_funeral
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.55.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.55.b
+		trigger = {
+			NOT = { original_tag = ENG }
+		}
+	}
+}
+
+news_event = {
+	id = mtg_news.56
+	title = mtg_news.56.t
+	desc = mtg_news.56.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.56.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.56.b
+		trigger = {
+			original_tag = USA
+		}
+		effect_tooltip = {
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.5
+			}
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			create_country_leader = {
+				name = "Wallis I"
+				desc = "POLITICS_WALLIS_I_DESC"
+				picture = GFX_portrait_eng_wallis_simpson
+				expire = "1965.1.1"
+				ideology = despotism
+				female = yes
+				traits = {
+					unpopular_monarch socialite_connections wallis_fancy_title
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mtg_news.56.c
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = USA }
+		}
+	}
+}
+
+news_event = {
+	id = mtg_news.57
+	title = mtg_news.57.t
+	desc = mtg_news.57.desc
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mtg_news.57.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+
+	option = {
+		name = mtg_news.57.b
+		trigger = {
+			original_tag = CAN
+		}
+		ROOT = {
+			custom_effect_tooltip = ENG_create_pan_north_american_state_tt
+			effect_tooltip = {
+				if = {
+					limit = {
+						NOT = { owns_state = 332 }
+						NOT = { owns_state = 331 }
+					}
+					transfer_state = 332
+					transfer_state = 331
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mtg_news.57.c
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = CAN }
+		}
+	}
+}

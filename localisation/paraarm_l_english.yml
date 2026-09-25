@@ -1,0 +1,24 @@
+﻿l_english:
+ ##### Airborne tank battalion ###
+ light_para_armor:0 "Airborne Tank"
+ light_para_armor_desc:0 "Airborne Tank or Airborne Assault Vehicle(AAVs) is a small light tank that designed to be transported by glider and support paratroopers."
+ 
+ #### Airborne tank chassis ####
+ paradrop_tank_chassis:0 "Airborne Tank"
+ paradrop_tank_chassis_desc:0 "Airborne Tank or Airborne Assault Vehicle(AAVs) is a small light tank that designed to be transported by glider and support paratroopers."
+ paradrop_tank_chassis_0:0 "Airborne Tank Chassis"
+ tank_designer_paradrop_tank_chassis:0 "Airborne Tank"
+ 
+ ### Airborne tank module categories #####
+ EQ_MOD_CAT_tank_para_main_armament_TITLE:0 "Airborne Tank Armaments"
+ EQ_MOD_CAT_tank_para_turret_type_TITLE:0 "Airborne Tank Turret Type"
+ 
+ #### Airborne tank module ####
+ tank_light_one_man_tank_turret_p:0 "Airborne Tank Turret"
+ tank_light_one_man_tank_turret_p_desc:0 "A small turret barely large enough to hold a single crew member, who is tasked with aiming and loading the main armament as well as keeping watch for targets and threats."
+ tank_auto_cannon_2_p:0 "Airborne Tank Automatic Cannon"
+ tank_auto_cannon_2_p_desc:0 "Adapted from a fast-firing anti-air gun, this automatic cannon can lay down a hail of fire that is devastating to soft targets. The small caliber does limit its anti-armor performance."
+ tank_small_cannon_2_p:0 "Airborne Tank Small Cannon"
+ tank_small_cannon_2_p_desc:0 "A small and cheap cannon, able to fire both anti-infantry and anti-armor rounds. Its small caliber limits its usefulness"
+ tank_high_velocity_cannon_p:0 "Airborne Tank High-Velocity Cannon"
+ tank_high_velocity_cannon_p_desc:0 "A cannon specifically designed to achieve a high muzzle velocity. Using specialized ammunition, it has superb anti-armor characteristics, but its performance against soft targets suffers."

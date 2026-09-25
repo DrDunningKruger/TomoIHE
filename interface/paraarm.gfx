@@ -1,0 +1,139 @@
+spriteTypes = {	
+	####Hey PDX I hate your codings####
+	
+	#######subuniticons for paratank battalion#######
+	spriteType = { name = "GFX_unit_light_para_armor_icon_medium"					textureFile = "gfx/interface/counters/divisions_large/unit_paraarm_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_light_para_armor_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_paraarm_icon.dds" noOfFrames = 2}
+	
+	#######texticons for paratank battalion######
+	spriteType = {
+		name = "GFX_nato_unit_light_para_armor_icon_small"
+		texturefile = "gfx/texticons/nato_unit_paraarm_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_light_para_armor_icon_small"
+		texturefile = "gfx/texticons/unit_paraarm_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+	
+	#####equipment designer icon for paratank#####
+	SpriteType = {
+		name = "GFX_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ENG_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_RAJ_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_NEP_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_AST_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_NZL_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}
+	SpriteType = {
+		name = "GFX_SAF_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_CAN_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassis.dds"
+	}	
+	SpriteType = {
+		name = "GFX_NOR_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassi2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GRE_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassi2.dds"
+	}			
+	SpriteType = {
+		name = "GFX_GER_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GEN/CHASSIS/AIRBORNE_chassi2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ITA_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/ITA/TANKS/ITA_LT2_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_IEA_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/ITA/TANKS/ITA_LT2_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ROM_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/ROM/TANKS/ROM_LT1_3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_SPR_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SPR/TANKS/SPR_LT1_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_BUL_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/BUL/TANKS/BUL_LT2_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_YUG_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/GER/TANKS/GER_LT3_4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_HUN_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/HUN/TANKS/HUN_LT3_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_CPL_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV/TANKS/SOV_paratank.dds"
+	}	
+	SpriteType = {
+		name = "GFX_MON_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV/TANKS/SOV_paratank.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV/TANKS/SOV_paratank.dds"
+	}	
+	SpriteType = {
+		name = "GFX_USA_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA/TANKS/USA_paratank_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_BEL_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA/TANKS/USA_paratank_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_JAP_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/JAP/TANKS/JAP_LT2_3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_MAN_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/JAP/TANKS/JAP_LT2_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_SIA_paradrop_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/JAP/TANKS/JAP_LT2_3.dds"
+	}
+	
+	#####tank equipment categories for paratank chassis#####
+	SpriteType = {
+		name = "GFX_paradrop_tank_chassis"
+		texturefile = "gfx/interface/equipmentdesigner/tanks/role_icons/role_icon_para.dds"
+	}
+	
+	#####subtech icons for parartank research#####
+	spriteType = {
+		name = "GFX_subtech_para"
+		textureFile = "gfx/interface/technologies/subtech_para.dds"
+	}
+}

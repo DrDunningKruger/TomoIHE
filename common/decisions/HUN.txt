@@ -1,0 +1,259 @@
+foreign_politics = {
+	HUN_buy_back_the_sms_novara = {
+
+		icon = generic_naval
+
+		available = {
+		    NOT = {
+			has_war = yes
+			}
+			FRA = {
+				exists = yes
+				owns_state = 21		#Provence (Toulon)
+			}
+		}
+		
+		visible = {
+			tag = HUN
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		remove_effect = {
+			create_equipment_variant = {
+		name = "Novara Class"
+		type = ship_hull_cruiser_1
+		name_group = HUN_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+		}
+	}
+			custom_effect_tooltip = "SMS Novara will be rearmed in Toulon"
+			hidden_effect = {
+				load_oob = HUN_sms_novara_purchase
+			}
+		}
+	}
+}
+
+HUN_gyori_program_category = {
+
+	HUN_gyori_program_phase_1_prepare = {
+
+        available = {
+		has_war = no
+		has_political_power > 0
+		}
+
+		visible = {
+			has_country_flag = HUN_gyori_program
+		}
+
+		icon = generic_industry
+
+		#cost = 0
+		
+		days_remove = 90
+		fire_only_once = yes
+		
+		modifier = {
+			political_power_gain = -0.5
+		}
+
+		remove_effect = {
+			activate_mission = HUN_gyori_program_phase_1_activate
+			set_country_flag = HUN_gyori_program_i
+			custom_effect_tooltip = HUN_once_activated_the_phase_will_give
+			effect_tooltip = {
+				add_timed_idea = { idea = gyori_program_research days = 365 }
+				add_timed_idea = { idea = gyori_program_industry days = 365 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	HUN_gyori_program_phase_1_activate = {
+
+		allowed = { always = no }
+
+		icon = generic_industry
+
+		available = {
+			
+		}
+
+		#cost = 0
+		
+		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = { idea = gyori_program_research days = 365 }
+			add_timed_idea = { idea = gyori_program_industry days = 365 }
+		}
+
+		timeout_effect = {
+			add_timed_idea = { idea = gyori_program_research days = 365 }
+			add_timed_idea = { idea = gyori_program_industry days = 365 }			
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	HUN_gyori_program_phase_2_prepare = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 0
+			has_country_flag = HUN_gyori_program_i
+		}
+
+		visible = {
+			has_country_flag = HUN_gyori_program
+		}
+
+		#cost = 0
+		
+		days_remove = 90
+		fire_only_once = yes
+		
+		modifier = {
+			political_power_gain = -0.5
+		}
+
+		remove_effect = {
+			activate_mission = HUN_gyori_program_phase_2_activate
+			set_country_flag = HUN_gyori_program_ii
+			custom_effect_tooltip = HUN_once_activated_the_phase_will_give
+			effect_tooltip = {
+				add_timed_idea = { idea = gyori_program_army_research days = 365 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	HUN_gyori_program_phase_2_activate = {
+
+		allowed = { always = no }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			
+		}
+
+		#cost = 0
+		
+		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			army_experience = 50
+			add_timed_idea = { idea = gyori_program_army_research days = 365 }
+		}
+
+		timeout_effect = {
+			army_experience = 50
+			add_timed_idea = { idea = gyori_program_army_research days = 365 }		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	HUN_gyori_program_phase_3_prepare = {
+
+		icon = generic_air
+
+		available = {
+			has_political_power > 0
+			has_country_flag = HUN_gyori_program_ii
+		}
+
+		visible = {
+			has_country_flag = HUN_gyori_program
+		}
+
+		#cost = 0
+		
+		days_remove = 90
+		fire_only_once = yes
+		
+		modifier = {
+			political_power_gain = -0.5
+		}
+
+		remove_effect = {
+			activate_mission = HUN_gyori_program_phase_3_activate
+			set_country_flag = HUN_gyori_program_iii
+			custom_effect_tooltip = HUN_once_activated_the_phase_will_give
+			effect_tooltip = {
+				add_timed_idea = { idea = gyori_program_air_research days = 365 }
+				add_timed_idea = { idea = gyori_program_air_production days = 365 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	HUN_gyori_program_phase_3_activate = {
+
+		allowed = { always = no }
+
+		icon = generic_air
+
+		available = {
+			
+		}
+
+		#cost = 0
+		
+		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			air_experience = 50
+			add_timed_idea = { idea = gyori_program_air_research days = 365 }
+			add_timed_idea = { idea = gyori_program_air_production days = 365 }
+		}
+
+		timeout_effect = {
+			air_experience = 50
+			add_timed_idea = { idea = gyori_program_air_research days = 365 }
+			add_timed_idea = { idea = gyori_program_air_production days = 365 }			
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

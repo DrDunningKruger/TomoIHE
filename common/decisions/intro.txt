@@ -1,0 +1,287 @@
+tutorial_decisions = {
+
+	#GENERAL
+	IHE_mod_info = {
+		allowed = { always = yes }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.3
+		}
+	}
+	
+	IHE_ruleset = {
+		allowed = { always = yes }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.1
+		}
+	}
+	
+	#AXIS
+	IHE_germany_retard = {
+		allowed = { original_tag = GER }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.7
+		}
+	}
+
+	IHE_italy_retard = {
+		allowed = { original_tag = ITA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.8
+		}
+	}
+	
+	IHE_iea_retard = {
+		allowed = { original_tag = IEA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.9
+		}
+	}	
+
+	IHE_hungary_retard = {
+		allowed = { original_tag = HUN }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.11
+		}
+	}
+
+	IHE_romania_retard = {
+		allowed = { original_tag = ROM }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.10
+		}
+	}
+
+	IHE_bulgaria_retard = {
+		allowed = { original_tag = BUL }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.12
+		}
+	}
+
+	IHE_croatia_retard = {
+		allowed = { original_tag = YUG }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.37
+		}
+	}
+	
+	IHE_finland_retard = {
+		allowed = { original_tag = FIN }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.14
+		}
+	}	
+
+	IHE_spain_retard = {
+		allowed = { original_tag = SPR }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.13
+		}
+	}
+	
+	#COPRO
+	IHE_japan_retard = {
+		allowed = { original_tag = JAP }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.36
+		}
+	}
+
+	IHE_manchuko_retard = {
+		allowed = { original_tag = MAN }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.35
+		}
+	}
+
+	IHE_siam_retard = {
+		allowed = { original_tag = SIA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.34
+		}
+	}
+	
+	#ALLIES
+	IHE_UK_retard = {
+		allowed = { original_tag = ENG }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.15
+		}
+	}
+	
+	IHE_france_retard = {
+		allowed = { original_tag = FRA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.16
+		}
+	}
+	
+	IHE_belgium_retard = {
+		allowed = { original_tag = BEL }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.17
+		}
+	}
+	
+	IHE_holland_retard = {
+		allowed = { original_tag = HOL }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.18
+		}
+	}
+	
+	IHE_greece_retard = {
+		allowed = { original_tag = GRE }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.19
+		}
+	}
+	
+	IHE_norway_retard = {
+		allowed = { original_tag = NOR }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.20
+		}
+	}
+	
+	IHE_poland_retard = {
+		allowed = { original_tag = POL }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.21
+		}
+	}	
+	
+	IHE_canada_retard = {
+		allowed = { original_tag = CAN }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.29
+		}
+	}
+	
+	IHE_usa_retard = {
+		allowed = { original_tag = USA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.33
+		}
+	}
+	
+	IHE_mexico_retard = {
+		allowed = { original_tag = MEX }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.31
+		}
+	}
+	
+	IHE_philippines_retard = {
+		allowed = { original_tag = PHI }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.31
+		}
+	}	
+	
+	IHE_brazil_retard = {
+		allowed = { original_tag = BRA }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.32
+		}
+	}
+	
+	IHE_cuba_retard = {
+		allowed = { original_tag = CUB }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.30
+		}
+	}
+	
+	IHE_australia_retard = {
+		allowed = { original_tag = AST }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.27
+		}
+	}
+	
+	IHE_nzl_retard = {
+		allowed = { original_tag = NZL }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.28
+		}
+	}
+	
+	IHE_india_retard = {
+		allowed = { original_tag = RAJ }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.26
+		}
+	}
+	
+	IHE_saf_retard = {
+		allowed = { original_tag = SAF }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.25
+		}
+	}
+	
+	IHE_ussr_retard = {
+		allowed = { original_tag = SOV }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.22
+		}
+	}
+
+	IHE_mongolia_retard = {
+		allowed = { original_tag = MON }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.23
+		}
+	}
+
+    IHE_nepal_retard = {	
+		allowed = { original_tag = NEP }
+		fire_only_once = no
+		complete_effect = {
+		country_event = tutorial.24
+		}
+	}
+	
+	#DISABLE
+	IHE_disable = {
+		allowed = { always = yes }
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = disable_tutorials
+		}
+	}
+}

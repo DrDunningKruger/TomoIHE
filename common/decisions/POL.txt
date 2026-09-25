@@ -1,0 +1,92 @@
+war_measures = {
+
+	POL_uprising = {
+
+		allowed = {
+			OR = {
+				original_tag = POL
+				original_tag = CPL
+			}
+		}
+
+		available = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 10
+						}
+						has_completed_focus = POL_warsaw_uprising
+		}
+		
+		visible = {
+        has_war = yes
+		NOT = {
+        has_global_flag = POLAND_CLICKED
+		}
+		}
+		
+		fire_only_once = yes
+		selectable_mission = yes 
+		cost = 0
+		days_remove = 26
+		
+		complete_effect = { 
+		news_event = { hours = 6 id = news.6965 } 
+		set_global_flag = POLAND_CLICKED
+		SWI = {
+		transfer_state = 10
+		}
+		}
+		
+		remove_effect = {
+              ROOT = {
+			  		transfer_state = 10		
+					load_oob = "POL_warsaw_uprising"
+			  }
+			  10 = {
+			  			add_building_construction = {
+							type = bunker
+							level = 4
+							province = 2179
+							instant_build = yes
+						}
+			  			add_building_construction = {
+							type = bunker
+							level = 4
+							province = 5304
+							instant_build = yes
+						}		
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 8217
+							instant_build = yes
+						}		
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 6521
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3544
+							instant_build = yes
+						}
+						add_dynamic_modifier = {
+							modifier = POL_warsaw 
+							days = 30
+							scope = POL
+						}	
+						add_dynamic_modifier = {
+							modifier = POL_warsaw 
+							days = 30
+							scope = CPL
+						}						
+			  }
+		}
+	}
+}

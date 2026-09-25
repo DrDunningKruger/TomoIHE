@@ -1,0 +1,52 @@
+﻿air_wings = {
+	305 = { 
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9	
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9	
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9	
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9			
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9	
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9	
+
+			medium_plane_fighter_airframe_2 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Ju 88 C6"
+			}	
+			start_experience_factor = 0.9
+	}
+}

@@ -1,0 +1,33 @@
+add_namespace = iea
+
+# 30k dead niggas
+	country_event = {
+		id = iea.10
+		title = iea.10.t
+		desc = iea.10.d
+		picture = GFX_report_event_japan_army_mountainside
+		
+		is_triggered_only = yes
+		
+		option = { # Duke of Aosta
+			name = france.1.a
+			ai_chance = { factor = 90 }
+			create_country_leader = {
+				name = "Amedeo di Aosta"
+				desc = "POLITICS_AMEDEO_PATS_DESC"
+				picture = "GFX_Portrait_eastafrica_amedeo_aosta"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					#
+				}
+			}
+		}
+				
+			
+	option = { # Rodolfo Graziani
+		name = france.1.b
+		ai_chance = { factor = 10 }		
+		}
+	}
+	

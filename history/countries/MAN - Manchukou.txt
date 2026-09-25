@@ -1,0 +1,93 @@
+﻿capital = 328
+
+oob = "MAN_1936"
+set_research_slots = 3
+set_fuel_ratio = 1.0
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	infantry_weapons = 1
+	gw_artillery = 1
+	armored_car1 = 1
+	fuel_silos = 1	
+	interwar_antitank = 1
+	jap_armor_pack = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+	engine_tech_1 = 1
+	amphibious_drive = 1	
+    new_tank_guns = 1	
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1		
+	irregular_infantry = 1 
+	armor_tech_1 = 1
+	tank_aa_guns = 1
+    easy_maintenance = 1
+	tank_improved_guns = 1	
+	radio_tech_1 = 1
+    superior_firepower = 1	
+}
+
+if = {
+	limit = { has_dlc = "Waking the Tiger" }
+	set_country_flag = MAN_northern_bandits
+	set_country_flag = MAN_eastern_bandits
+	set_country_flag = MAN_western_bandits
+	add_ideas = MAN_banditry
+	add_ideas = MAN_kwantung_veto
+	add_ideas = MAN_low_legitimacy_5
+	add_ideas = training_spirit
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 80
+	neutrality = 20
+}
+recruit_character = MAN_aisin_gioro_puyi
+recruit_character = MAN_zhao_shangzhi
+recruit_character = MAN_changlin_linge
+recruit_character = MAN_kyoiji_tomonaga
+recruit_character = MAN_yonimitsu_kasahara
+recruit_character = MAN_deng_linge
+recruit_character = MAN_hung_zhehuang
+recruit_character = MAN_nakajima_kesago
+recruit_character = MAN_yin_zuoqian
+recruit_character = MAN_hesehn_tiemei
+recruit_character = MAN_xian_yuan
+recruit_character = MAN_guan_xingde
+recruit_character = MAN_dudeman
+recruit_character = MAN_planeguy
+recruit_character = MAN_planeguy2
+recruit_character = MAN_random_dude
+recruit_character = MAN_Yoshijiro_Umezu
+recruit_character = MAN_Seishiro_Itagaki
+recruit_character = MAN_Kuniaki_Koiso
+recruit_character = MAN_Kenji_Doihara
+recruit_character = MAN_Keisuke_Fujie
+recruit_character = MAN_Sadao_Araki
+recruit_character = MAN_Kiichiro_Higuchi
+recruit_character = MAN_Hitoshi_Imamura
+recruit_character = MAN_Zhang_Haipeng
+recruit_character = MAN_Zhang_Jinghui
+recruit_character = MAN_Otozo_Yamada
+recruit_character = MAN_Jo_Iimura
+recruit_character = MAN_Toshizo_Nishio
+recruit_character = MAN_random_two
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 }	

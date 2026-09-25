@@ -1,0 +1,351 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GER = {
+			
+				create_corps_commander = {
+					name = "Gerd von Rundstedt"
+					desc = "gerv_von_rundstedt_desc" #A offensive tank commander, vulnerable to encirclements.
+					picture = "Portrait_Germany_Gerd_von_Rundstedt.dds"
+					traits = { trait_defeatist combined_arms_expert ranger organizer panzer_leader brilliant_strategist}
+					skill = 5
+					attack_skill = 6
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+					id = 1
+				}
+
+				create_corps_commander = {
+					name = "Günther von Kluge"
+					desc = "gunther_von_kluge" #A fortbuster tank commander.
+					picture = "Portrait_Germany_Gunther_von_Kluge.dds"
+					traits = { brilliant_strategist armor_officer panzer_leader panzer_expert adaptable fortress_buster}
+					skill = 5
+					id = 2
+					attack_skill = 6
+					defense_skill = 3
+					planning_skill = 4
+					logistics_skill = 4
+				}
+
+				create_corps_commander = {
+					name = "Friedrich Paulus"
+					desc = "friedrich_paulus_desc" #A deffensive infantry general, best when given a chance to entrench.
+					picture = "Portrait_Germany_Friedrich_Paulus.dds"
+					traits = { trait_cautious inflexible_strategist infantry_expert infantry_leader ambusher hill_fighter }
+					skill = 4
+					id = 3
+					attack_skill = 4
+					defense_skill = 5
+					planning_skill = 3
+					logistics_skill = 4
+				}
+
+				create_field_marshal = {
+					name = "Erwin Rommel"
+					desc = "erwin_rommel_desc" #Fieldmarshal of German Afrika korps. Good for desserts and regions lacking in supplies.
+					picture = "Portrait_Germany_Erwin_Rommel.dds"
+					traits = { trickster trait_reckless panzer_leader desert_fox expert_improviser panzer_expert logistics_wizard aggressive_assaulter}
+					skill = 7
+					id = 4
+					attack_skill = 7
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 7
+				}
+
+				create_field_marshal = {
+					name = "Erich von Manstein"
+					desc = "erich_von_manstein_desc" #Main Barbarossa tank fieldmarshal. 
+					picture = "Portrait_Germany_Erich_von_Manstein.dds"
+					traits = { offensive_doctrine panzer_leader aggressive_assaulter trait_engineer ranger expert_improviser logistics_wizard winter_specialist }
+					skill = 7
+					id = 5
+					attack_skill = 7
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+				}
+
+				create_field_marshal = {
+					name = "Heinz Guderian"
+					desc = "heinz_guderian_desc" #A quick tank fieldmarshal, excellent under air supperiority. Father of Blitzkrieg.
+					picture = "Portrait_Germany_Heinz_Guderian.dds"
+					traits = { organizer trickster panzer_leader armor_officer adaptable expert_improviser organisational_leader aggressive_assaulter }
+					skill = 7
+					id = 6
+					attack_skill = 7
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+				}
+
+				create_corps_commander = {
+					name = "Wilhelm List"
+					desc = "wilhelm_list_desc" #A offensive infantry general, most useful while commanding artilerry divisions.
+					picture = "Portrait_Germany_Wilhelm_List.dds"
+					traits = { career_officer infantry_expert infantry_leader bearer_of_artillery war_hero }
+					skill = 5
+					id = 7
+					attack_skill = 6
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 3
+				}
+
+				create_corps_commander = {
+					name = "Ewald von Kleist"
+					desc = "ewald_von_kleist_desc" #Quick and defensive tank commander, espescially useful for performing or getting out of encirclements.
+					picture = "Portrait_Germany_Ewald_von_Kleist.dds"
+					traits = { war_hero panzer_expert panzer_leader ranger swamp_fox trait_engineer camouflage_expert expert_improviser }
+					skill = 6
+					id = 8
+					attack_skill = 5
+					defense_skill = 7
+					planning_skill = 4
+					logistics_skill = 5
+				}
+
+				create_corps_commander = {
+					name = "Fedor von Bock"
+					desc = "fedor_von_bock_desc" #A agressive tank commander, with lower recovery rate.
+					picture = "Portrait_Germany_Fedor_von_Bock.dds"
+					traits = { harsh_leader urban_assault_specialist panzer_leader brilliant_strategist trait_engineer expert_improviser combined_arms_expert }
+					skill = 6
+					id = 9
+					attack_skill = 6
+					defense_skill = 6
+					planning_skill = 4
+					logistics_skill = 5
+				}
+
+				create_field_marshal = {
+					name = "Walter Model"
+					desc = "Walter Model" #A deffensive tank fieldmarshal. Good without air support, excellent pick for defense of German core lands.
+					picture = "Portrait_Germany_Walter_Model.dds"
+					traits = { trait_engineer politically_connected combined_arms_expert ambusher panzer_expert thorough_planner unyielding_defender infantry_officer }
+					skill = 6
+					id = 10
+					attack_skill = 5
+					defense_skill = 7
+					planning_skill = 5
+					logistics_skill = 5
+				}
+
+				create_corps_commander = {
+					name = "Maximilian von Weichs"
+					desc = "maximilian_von_weichs_desc" #A motorized commander, who has nothing special going for him.
+					picture = "Portrait_Germany_Maximilian_von_Weichs.dds"
+					traits = { war_hero cavalry_officer cavalry_leader combined_arms_expert hill_fighter }
+					skill = 5
+					id = 11
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+				}
+
+				create_corps_commander = {
+					name = "Wilhelm Ritter von Leeb"
+					desc = "wilhelm_ritter_von_lebb_desc" #A defensive infantry commander, best suited for defense of mainland.
+					picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb.dds"
+					traits = { war_hero infantry_officer infantry_leader infantry_expert ranger }
+					skill = 4
+					id = 13
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 4
+					logistics_skill = 4
+				}
+
+				create_corps_commander = {
+					name = "Georg-Hans Reinhardt"
+					desc = "hans_reinhardt_desc" #Tanks are not supposed to be used in mountains, but in case u have to do that, this is your guy.
+					picture = "Portrait_Germany_Georg_von_Reinhardt.dds"
+					traits = { armor_officer panzer_leader camouflage_expert hill_fighter trait_mountaineer media_personality }
+					skill = 4
+					id = 14
+					attack_skill = 5
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 6
+				}
+
+				create_corps_commander = {
+					name = "Walter Krüger"
+					desc = "walter_kruger_desc" #A special tank commander, useful in situations where there's plenty of cities yet lack of supplies.
+					picture = "Portrait_Germany_Walter_Kruger.dds"
+					traits = { armor_officer urban_assault_specialist commando trait_reckless politically_connected organizer trickster }
+					skill = 5
+					id = 15
+					attack_skill = 5
+					defense_skill = 4
+					planning_skill = 5
+					logistics_skill = 7
+				}
+
+				create_corps_commander = {
+					name = "Kurt Student"
+					desc = "kurt_student_desc" #Commander of fallschirmjagers.
+					picture = "Portrait_Germany_Kurt_Student.dds"
+					traits = { brilliant_strategist paratrooper commando trait_reckless infantry_expert guerilla_fighter urban_assault_specialist }
+					skill = 6
+					id = 16
+					attack_skill = 6
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 6
+				}
+
+				create_corps_commander = {
+					name = "Erwin von Witzleben"
+					desc = "erwin_von_witzleben_desc" #A good for nothing, good for everything infantry commander.
+					picture = "Portrait_Germany_Erwin_von_Witzleben.dds"
+					traits = { infantry_officer career_officer infantry_expert organizer adaptable }
+					skill = 4
+					id = 17
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 4
+				}
+
+				create_corps_commander = {
+					name = "Hermann Hoth"
+					picture = "Portrait_Germany_Herman_Hoth.dds"
+					traits = { trait_reckless infantry_leader ambusher urban_assault_specialist }
+					skill = 4
+					id = 18
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+				}
+
+				create_corps_commander = {
+					name = "Johannes Blaskowitz"
+					picture = "Portrait_Germany_Johannes_Blaskowitz.dds"
+					traits = { infantry_expert trickster  camouflage_expert infantry_leader inflexible_strategist }
+					skill = 4
+					id = 19
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 4
+					logistics_skill = 5
+				}
+
+				create_field_marshal = {
+					name = "Paul Hausser"
+					desc = "paul_hausser_desc" #Infantry fieldmarshal, good for any ocassion.
+					picture = "Portrait_Germany_Paul_Hausser.dds"
+					traits = { politically_connected infantry_leader infantry_officer ambusher adaptable organisational_leader unyielding_defender }
+					skill = 6
+					id = 20
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 6
+				}
+
+				create_field_marshal = {
+					name = "Friedrich Schulz"
+					desc = "friedrich_schulz_desc" #A deffensive infantry fieldmarshal.
+					picture = "Portrait_Germany_Friedrich_Schulz.dds"
+					traits = { career_officer infantry_leader guerilla_fighter scavenger unyielding_defender defensive_doctrine ambusher }
+					skill = 7
+					id = 21
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 4
+					logistics_skill = 6
+				}
+
+				#create_corps_commander = {
+				#	name = "Georg von Küchler"
+				#	picture = "Portrait_Germany_Georg_von_Kuchler.dds"
+				#	traits = { war_hero infantry_officer fortress_buster infantry_expert }
+				#	skill = 4
+				#	id = 22
+				#	attack_skill = 3
+				#	defense_skill = 2
+				#	planning_skill = 4
+				#	logistics_skill = 4
+				#}
+
+				create_corps_commander = {
+					name = "Alfred Jodl"
+					picture = "Portrait_Germany_Alfred_Jodl.dds"
+					traits = { politically_connected career_officer organizer infantry_officer skilled_staffer trait_cautious }
+					skill = 5
+					id = 23
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 8
+				}
+
+				#create_corps_commander = {
+				#	name = "Sepp Dietrich"
+				#	picture = "Portrait_Germany_Josef_Dietrich.dds"
+				#	traits = { politically_connected trait_reckless }
+				#	skill = 3
+				#	id = 24
+				#	attack_skill = 3
+				#	defense_skill = 3
+				#	planning_skill = 1
+				#	logistics_skill = 2
+				#}
+
+				#create_corps_commander = {
+				#	name = "Hasso von Manteuffel"
+				#	picture = "Portrait_Germany_Hasso_von_Manteuffel.dds"
+				#	traits = { career_officer trait_cautious adaptable expert_improviser }
+				#	skill = 4
+				#	id = 25
+				#	attack_skill = 4
+				#	defense_skill = 4
+				#	planning_skill = 3
+				#	logistics_skill = 3
+				#}
+
+				create_corps_commander = {
+					name = "Albert Kesselring"
+					desc = "albert_kesselring_desc" #Infantry leader for afrika korps.
+					picture = "Portrait_Germany_Albert_Kesselring.dds"
+					traits = { infantry_expert infantry_leader hill_fighter ambusher war_hero desert_fox guerilla_fighter }
+					skill = 6
+					id = 32
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 4
+					logistics_skill = 4
+				}
+
+				#create_corps_commander = {
+				#	name = "Gotthard Heinrici"
+				#	picture = "Portrait_Germany_Gotthard_Heinrici.dds"
+				#	traits = { trait_engineer infantry_officer trait_cautious scavenger combined_arms_expert ambusher infantry_leader winter_specialist thorough_planner organisational_leader }
+				#	skill = 6
+				#	id = 33
+				#	attack_skill = 4
+				#	defense_skill = 7
+				#	planning_skill = 6
+				#	logistics_skill = 5
+				#}
+
+				#create_corps_commander = {
+				#	name = "Ernst-Eberhard Hell"
+				#	picture = "Portrait_Germany_Ernst-Eberhard_Hell.dds"
+				#	traits = { winter_specialist trait_engineer war_hero }
+				#	skill = 3
+				#	id = 34
+				#	attack_skill = 3
+				#	defense_skill = 2
+				#	planning_skill = 3
+				#	logistics_skill = 2
+				#}
+			}
+		}
+	}
+}

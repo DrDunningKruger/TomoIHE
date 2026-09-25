@@ -1,0 +1,571 @@
+spriteTypes = {
+####Weapons####
+	SpriteType = {
+	    name = "GFX_GER_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_rifle_gewehr98.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_rifle_kar98k.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_smg_mp40.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_stg44.dds"
+	}
+####Amphibious####
+	SpriteType = {
+		name = "GFX_GER_amphibious_tank_chassis_medium"
+         texturefile = "gfx/interface/technologies/GEN/CHASSIS/ITA_AMP_CH.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_amf_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_amf_2.dds"
+	}	
+####Transport####	
+	SpriteType = {
+		name = "GFX_GER_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_motorized.dds"
+	}		
+    SpriteType = {
+        name = "GFX_GER_motorized_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_motorized.dds"
+    }		
+	SpriteType = {
+		name = "GFX_GER_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_apc_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_apc_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_apc_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_transport_plane.dds"	
+	}
+    SpriteType = {
+        name = "GFX_GER_motorized_rocket_unit_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_motorized_rocket_unit.dds"
+	}	
+####Armored Car####
+	SpriteType = {
+		name = "GFX_GER_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AC0_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AC1_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AC2_1.dds"		
+	}
+####WW1_Armor####	
+	SpriteType = {
+		name = "GFX_GER_gwtank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT0_CH.dds"
+	}
+####Basic Light####	
+	SpriteType = {
+		name = "GFX_GER_basic_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT1_CH.dds"
+	}
+####Improved Light####		
+	SpriteType = {
+		name = "GFX_GER_improved_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT2_CH.dds"
+	}	
+####Advanced Light####	
+	SpriteType = {
+		name = "GFX_GER_advanced_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT3_CH.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_modern_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_LT4_CH.dds"
+	}
+####Basic Medium####	
+	SpriteType = {
+		name = "GFX_GER_basic_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT1_CH.dds"
+	}	
+####Improved Medium####	
+	SpriteType = {
+		name = "GFX_GER_improved_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT2_CH.dds"
+	}
+####Advanced Medium####	
+	SpriteType = {
+		name = "GFX_GER_advanced_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_MT3_CH.dds"
+	}
+####MBT####	
+	SpriteType = {
+		name = "GFX_GER_main_battle_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/ITA_SH_CH.dds"
+	}	
+####Basic Heavy####	
+	SpriteType = {
+		name = "GFX_GER_basic_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT1_CH.dds"
+	}		
+####Improved Heavy####	
+	SpriteType = {
+		name = "GFX_GER_improved_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT2_CH.dds"
+	}
+####Advanced Heavy####	
+	SpriteType = {
+		name = "GFX_GER_advanced_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_HT3_CH.dds"
+	}	
+####Super Heavy####	
+	SpriteType = {
+		name = "GFX_GER_super_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/GER_SH_CH.dds"
+	}
+####German missile####	
+	SpriteType = {
+		name = "GFX_GER_guided_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_guided_missile_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_guided_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_guided_missile_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_guided_missile_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_guided_missile_3.dds"
+	}				
+####Support Weapons####
+	SpriteType = { 
+		name = "GFX_GER_infantry_weapons2_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_eqpnt_1.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_improved_infantry_weapons_2_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_eqpnt_2.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_advanced_infantry_weapons2_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_eqpnt_3.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_support_weapons_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_1.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_support_weapons2_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_2.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_support_weapons3_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_3.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_GER_support_weapons4_medium" 
+		texturefile = "gfx/interface/technologies/Support/GER_HVY_arms_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Support/GER_AT_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Support/GER_AT_2.dds"
+	}				
+#German howitzer#
+	SpriteType = {
+		name = "GFX_GER_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_ART_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_artillery1_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_ART_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_artillery4_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_ART_3.dds"
+	}	
+#German AA#
+	SpriteType = {
+		name = "GFX_GER_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AA_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_GER_antiair2_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_AA_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_antiair5_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AA_3.dds"
+	}	
+#German AT#
+	SpriteType = {
+        name = "GFX_GER_interwar_antitank_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_AT_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_GER_antitank2_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_AT_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_antitank5_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_AT_3.dds"
+	}	
+#German submarines#
+	SpriteType = {
+		name = "GFX_GER_early_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine1.dds"
+	}	
+	SpriteType = {	
+		name = "GFX_GER_early_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_improved_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_submarine4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_submarine_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_cruiser_submarine.dds"
+	}
+#German destroyer#
+	SpriteType = {
+		name = "GFX_GER_early_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer1.dds"
+	}	
+	SpriteType = {	
+		name = "GFX_GER_early_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_destroyer_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_destroyer4.dds"
+	}
+#German light cruiser#
+	SpriteType = {
+		name = "GFX_GER_early_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser1.dds"
+	}	
+	SpriteType = {	
+		name = "GFX_GER_early_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_1_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_2_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_3_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser3.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_advanced_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_4_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_light_cruiser4.dds"
+	}
+#German heavy cruiser#
+	SpriteType = {
+		name = "GFX_GER_early_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_early_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_1_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_2_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_3_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser3.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_advanced_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_4_capital_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_cruiser4.dds"
+	}
+#German battle cruiser#
+	SpriteType = {	
+		name = "GFX_GER_early_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battlecruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battlecruiser2.dds"
+	}
+#German battleship#
+	SpriteType = {
+		name = "GFX_GER_early_battleship_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship1.dds"
+	}	
+	SpriteType = {	
+		name = "GFX_GER_early_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_battleship_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_battleship_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship3.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_advanced_battleship_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_battleship4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_cruiser_panzerschiff_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_panzerschiff.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_pre_dreadnought_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_pre_dreadnought.dds"
+	}		
+#German super-heavy battleship#
+	SpriteType = {
+		name = "GFX_GER_heavy_battleship_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_ship_hull_super_heavy_1_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_heavy_battleship2_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_heavy_battleship2.dds"
+	}
+#German carrier#
+	SpriteType = {
+		name = "GFX_GER_ship_hull_carrier_conversion_ca_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier_conversion_ca.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_early_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier1.dds"
+	}
+	SpriteType = {	
+		name = "GFX_GER_early_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier2.dds"
+	}
+		SpriteType = {
+		name = "GFX_GER_basic_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/GER/NAVY/GER_carrier4.dds"
+	}
+	
+
+	SpriteType = {
+		name = "GFX_GER_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_Rocket_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/GER/GER_Rocket_Art_2.dds"
+	}
+
+#####GER#####
+	SpriteType = {
+		name = "GFX_GER_iw_small_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_fighter_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_small_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_improved_small_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_advanced_small_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_fighter_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_jet_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_iw_medium_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_bomber_0.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_basic_medium_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_bomber_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_improved_medium_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_bomber_2.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_advanced_medium_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_bomber_3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_jet_tac_bomber_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_iw_large_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_strat_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_basic_large_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_strat_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GER_improved_large_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_strat_2.dds"
+	}		
+	SpriteType = {
+		name = "GFX_GER_advanced_large_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_strat_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_modern_large_airframe_medium"
+        texturefile = "gfx/interface/technologies/GER/AIR/GER_jet_strat_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_transport_plane_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/GER/GER_transport_plane.dds"
+	}	
+}

@@ -1,0 +1,24 @@
+﻿air_wings = {
+	653 = { 
+			transport_plane_equipment = {
+				owner = "SOV" 
+				amount = 100
+			}	
+			transport_plane_equipment = {
+				owner = "SOV" 
+				amount = 100
+			}
+			transport_plane_equipment = {
+				owner = "SOV" 
+				amount = 100
+			}
+			transport_plane_equipment = {
+				owner = "SOV" 
+				amount = 100
+			}
+			transport_plane_equipment = {
+				owner = "SOV" 
+				amount = 100
+			}
+	}
+}

@@ -1,0 +1,63 @@
+
+units = {
+	division = {
+		name = "Kings Rifles"
+		location = 10097
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 12044
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 12044
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 7073
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 7073
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 12071
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 12071
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Kings Rifles"
+		location = 12889
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 12889
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}	
+	division = {
+		name = "Kings Rifles"
+		location = 4068
+		division_template = "Kings Rifles"
+		start_experience_factor = 0.8
+	}
+}

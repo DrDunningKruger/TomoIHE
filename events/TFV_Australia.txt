@@ -1,0 +1,41 @@
+﻿###########################
+# Australian TFV events Events
+###########################
+
+add_namespace = tfv_australia
+
+#coronation visit
+country_event = {
+	id = tfv_australia.90
+	title = tfv_australia.90.t	
+	desc = tfv_australia.90.desc	#
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 33
+		}
+		name = tfv_australia.90.a
+		add_stability = 0.10
+	}
+
+	option = {
+		ai_chance = {
+			base = 34
+		}
+		name = tfv_australia.90.b
+		add_manpower = 25000
+		add_war_support = 0.05
+	}
+
+	option = {
+		ai_chance = {
+			base = 33
+		}
+		name = tfv_australia.90.c
+		add_political_power = 100
+	}
+}
+

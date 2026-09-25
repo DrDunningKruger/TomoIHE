@@ -1,0 +1,56 @@
+foreign_politics = {
+
+	FIN_swap_sisu = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			tag = FIN
+		}
+		
+		available = {
+            has_completed_focus = FIN_lottabattle
+			has_idea = sisu
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 50
+
+		#days_remove = 1
+
+		complete_effect = {
+			swap_ideas = {
+			remove_idea = sisu
+			add_idea = sisu2	
+		    }
+		}
+	}	
+	
+	FIN_swap_sisu_2 = {
+
+		icon = generic_prepare_civil_war
+
+		visible = {
+			tag = FIN
+		}
+		
+		available = {
+            has_completed_focus = FIN_lottabattle
+			has_idea = sisu2
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 50
+
+		#days_remove = 1
+
+		complete_effect = {
+			swap_ideas = {
+			remove_idea = sisu2	
+			add_idea = sisu	
+		    }
+		}
+	}
+}

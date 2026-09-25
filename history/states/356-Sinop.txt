@@ -1,0 +1,21 @@
+
+state={
+	id=356
+	name="STATE_356" # Kastamonu
+	manpower = 1
+	state_category = wasteland
+
+	history={
+		owner = SWI
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		979 11839 11897 
+	}
+
+	local_supplies=0.0 
+}

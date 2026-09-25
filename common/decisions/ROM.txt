@@ -1,0 +1,83 @@
+foreign_politics = {
+ROM_annex_bul = {
+	icon = generic_operation
+
+	
+			available = {
+			BUL = { is_ai = yes }
+			}
+	
+			allowed = {
+				tag = ROM
+			}
+
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+				country_exists = BUL
+				BUL = { is_ai = yes }
+			}
+
+			complete_effect = {
+				ROM = { 
+					annex_country = {
+						target = BUL
+						transfer_troops = yes 
+					}
+			}
+		}
+	}
+	
+	ROM_remove_core_bonus = {
+	icon = generic_operation
+			available = {
+			has_idea = stats_on_cores
+			}
+	
+			allowed = {
+				tag = ROM
+			}
+
+			fire_only_once = no
+
+			cost = 0
+
+			visible = {
+				has_completed_focus = ROM_imdying
+			}
+
+			complete_effect = {
+               remove_ideas = stats_on_cores
+		    }
+	}	
+	
+	ROM_add_core_bonus = {
+	icon = generic_operation
+			available = {
+			AND = {
+			NOT = {
+			has_idea = stats_on_cores
+			}
+			has_completed_focus = ROM_imdying
+			}
+			}
+	
+			allowed = {
+				tag = ROM
+			}
+
+			fire_only_once = no
+
+			cost = 0
+
+			visible = {
+				has_completed_focus = ROM_imdying
+			}
+
+			complete_effect = {
+              add_ideas = stats_on_cores
+		    }
+	}
+}

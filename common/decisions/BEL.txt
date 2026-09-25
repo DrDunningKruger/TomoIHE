@@ -1,0 +1,37 @@
+#foreign_politics = {
+#
+#BEL_expand_congo_manpower = {
+#	icon = generic_operation
+#
+#	
+#			available = {
+#				has_full_control_of_state = 769
+#			}
+#			
+#			allowed = {
+#			TAG = BEL
+#			}
+#			
+#			fire_only_once = no
+#
+#			days_remove = 180
+#			
+#			cost = 100
+#
+#			visible = {
+#				has_completed_focus = BEL_rualconscription
+#			}
+#				
+#			complete_effect = {
+#
+#				add_state_modifier = {
+#					modifier = {
+#						local_manpower = 0.05
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
+
+			

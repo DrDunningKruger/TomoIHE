@@ -1,0 +1,43 @@
+
+state={
+	id=554
+	name="STATE_554"
+	resources={
+		oil=30.000
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			4111 5 
+		}
+		victory_points = {
+			3942 1 
+		}
+		victory_points = {
+			1549 1 
+		}
+		victory_points = {
+			6883 1 
+		}
+		victory_points = {
+			12473 3 
+		}
+		victory_points = {
+			1056 1 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+
+	}
+
+	provinces={
+		1074 4111 4486 4550 7184 10383 12442 1056 1072 1088 7140 7671 10087 12473 901 1549 1578 1606 1634 2013 3942 6883 7513 10882 12316 
+	}
+	manpower=2197501
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=2.000
+}

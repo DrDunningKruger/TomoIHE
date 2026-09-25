@@ -1,0 +1,98 @@
+﻿capital = 327
+
+oob = "PHI_1936"
+set_research_slots = 3
+set_fuel_ratio = 1.0
+# Starting tech
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	mtg_transport = 1	
+	trade_interdiction = 1	
+	radio_detection = 1	
+    decimetric_radar = 1	
+	interwar_antiair = 1	
+	fuel_silos = 1	
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1	
+	superior_firepower = 1
+	engine_tech_1 = 1	
+	armor_tech_1 = 1	
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+    new_tank_guns = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1	
+}
+
+add_ideas = {
+       training_spirit
+       PHI_depression
+       PHI_linguistics
+	   PHI_independence
+	   Lacking_military_expenses
+	   PHI_nogun
+	   PHI_landlords
+	   PHI_economi
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.9.15"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 82
+	fascism = 9
+	communism = 9
+}
+
+recruit_character = PHI_manuel_luis_quezón
+recruit_character = PHI_pedro_p_baguisa
+recruit_character = PHI_deodato_jacinto
+recruit_character = PHI_hermano_jacinto
+recruit_character = PHI_pelagio_cruz
+recruit_character = PHI_jose_v_andrada
+recruit_character = PHI_leoncio_s_tan
+recruit_character = PHI_benito_n_ebuen
+recruit_character = PHI_basilio_fernando
+recruit_character = PHI_basilio_j_valdez
+recruit_character = PHI_santiago_nuval
+recruit_character = PHI_heraclio_alano
+recruit_character = PHI_ramon_a_alcaraz
+recruit_character = PHI_victor_h_dizon
+recruit_character = PHI_edwin_andrews
+recruit_character = PHI_eustacio_orobia
+recruit_character = PHI_vicente_p_lim
+recruit_character = PHI_emilio_aguinaldo
+recruit_character = PHI_juan_sumulong
+recruit_character = PHI_sergio_osmena
+recruit_character = PHI_industryman2
+recruit_character = PHI_industryman
+recruit_character = PHI_infantryleg
+recruit_character = PHI_cavgy
+recruit_character = PHI_Herbert_Fitzherbert
+recruit_character = PHI_Mikel_Limcangco
+recruit_character = PHI_Clifford_Noe
+recruit_character = PHI_Salipada_Pendatun
+recruit_character = PHI_Paulino_Santos
+recruit_character = PHI_Rafael_Jalandoni
+recruit_character = PHI_Alfredo_Santos
+recruit_character = PHI_Manuel_Cabal
+recruit_character = PHI_Basilio_Valdez
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 }	

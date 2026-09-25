@@ -1,0 +1,14 @@
+﻿
+#   #  ##  ###  # # ### ###       ## #  #  ##  ###  ###  ##   ##  ### 
+#   # #  # #  # # # #   #  #     #   #  # #  # #  #  #  #  # #    #   
+# # # #  # ###  ##  ##  ###       #  #### #  # ###   #  #### # ## ##  
+# # # #  # #  # # # #   #  #       # #  # #  # #  #  #  #  # #  # #   
+ # #   ##  #  # # # ### #  #     ##  #  #  ##  #  #  #  #  #  ##  ### 
+
+
+#events to notify player that they are having worker issues
+add_namespace = lar_worker_shortage
+
+#country switched to extensive conscription while on full employment
+
+#country demobilizes while having worker shortage

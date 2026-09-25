@@ -1,0 +1,23 @@
+foreign_politics = {
+    SIA_jap_coop = {
+		available = {
+			if = {
+				has_capitulated = yes 
+			}
+		}
+		visible = {
+		 	AND = {
+				tag = SIA
+				has_capitulated = yes 
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = yes
+		complete_effect = {
+        JAP = { change_tag_from = SIA }
+		} 		
+	}
+}

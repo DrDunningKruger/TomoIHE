@@ -1,0 +1,23 @@
+
+state={
+	id=841
+	name="STATE_841"
+	
+	history={
+		owner = SOV
+		victory_points = {
+			12128 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	provinces={
+		12128
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

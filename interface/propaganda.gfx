@@ -1,0 +1,189 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GER_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/GER_Propaganda.dds"
+	}
+	
+	SpriteType = {
+		name = "RUL_global"
+		texturefile = "gfx/IntroductionPropaganda/RUL_global.dds"
+	}	
+	
+	SpriteType = {
+		name = "RUL_global2"
+		texturefile = "gfx/IntroductionPropaganda/RUL_global2.dds"
+	}
+	
+	SpriteType = {
+		name = "MOD_global"
+		texturefile = "gfx/IntroductionPropaganda/MOD_global.dds"
+	}	
+	
+	SpriteType = {
+		name = "MOD_global2"
+		texturefile = "gfx/IntroductionPropaganda/MOD_global2.dds"
+	}
+
+	SpriteType = {
+		name = "MOD_global3"
+		texturefile = "gfx/IntroductionPropaganda/MOD_global3.dds"
+	}
+
+	SpriteType = {
+		name = "MOD_global4"
+		texturefile = "gfx/IntroductionPropaganda/MOD_global4.dds"
+	}
+
+	SpriteType = {
+		name = "ITA_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/ITA_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "ITA_Propaganda2"
+		texturefile = "gfx/IntroductionPropaganda/ITA_Propaganda2.dds"
+	}
+
+	SpriteType = {
+		name = "ROM_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/ROM_Propaganda.dds"
+	}	
+		SpriteType = {
+		name = "HUN_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/HUN_Propaganda.dds"
+	}	
+	SpriteType = {
+		name = "SPR_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/SPR_Propaganda.dds"
+	}
+	SpriteType = {
+		name = "BUL_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/BUL_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "ENG_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/ENG_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "FRA_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/FRA_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "BEL_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/BEL_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "HOL_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/HOL_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "GRE_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/GRE_Propaganda.dds"
+	}
+	
+	SpriteType = {
+		name = "NOR_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/NOR_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "POL_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/POL_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "SOV_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/SOV_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "MON_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/MON_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "SAF_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/SAF_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "RAJ_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/RAJ_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "AST_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/AST_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "NZL_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/NZL_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "CAN_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/CAN_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "CUB_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/CUB_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "MEX_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/MEX_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "BRA_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/BRA_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "USA_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/USA_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "PHI_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/PHI_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "CHI_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/PHI_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "SIA_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/SIA_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "MAN_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/MAN_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "JAP_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/JAP_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "CRO_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/CRO_Propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "FIN_Propaganda"
+		texturefile = "gfx/IntroductionPropaganda/FIN_Propaganda.dds"
+	}	
+}

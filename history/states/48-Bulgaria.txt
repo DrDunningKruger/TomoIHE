@@ -1,0 +1,34 @@
+
+state={
+	id=48
+	name="STATE_48"
+	resources={
+		aluminium=2.000
+	}
+
+	history={
+		owner = BUL
+		victory_points = {
+			949 15 
+		}
+		victory_points = {
+			9771 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			air_base = 5
+
+		}
+		add_core_of = BUL
+
+	}
+
+	provinces={
+		793 935 949 965 2010 3908 3971 5094 9771 10755 11754 
+	}
+	manpower=1685989
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

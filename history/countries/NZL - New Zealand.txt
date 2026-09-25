@@ -1,0 +1,182 @@
+﻿capital = 284
+
+oob = "NZL_1936"
+
+# Starting tech
+set_stability = 0.8
+set_war_support = 0.3
+set_research_slots = 3
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	armored_car1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	fleet_in_being = 1
+	superior_firepower = 1	
+	fuel_silos = 1	
+	gwtank_chassis = 1
+	britbong_armor_pack = 1	
+	engines_1 = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1
+	aircraft_construction = 1
+	range_improvements = 1
+	electronics_2 = 1	
+	fighter_guns = 1
+	interwar_antitank = 1
+	engine_tech_1 = 1	
+	armor_tech_1 = 1
+	radio_tech_1 = 1	
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+	motorised_infantry = 1	
+	basic_light_tank_chassis = 1
+    new_tank_guns = 1	
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+		sonar = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.11.27"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+}
+
+add_ideas = {
+       training_spirit
+	   AFRICA_ALLIES_6	   
+}
+
+set_convoys = 70
+set_fuel_ratio = 1.0
+
+recruit_character = NZL_michael_joseph_savage
+recruit_character = NZL_sidney_holland
+recruit_character = NZL_john_ormond
+recruit_character = NZL_elsie_farrelly
+recruit_character = NZL_r_a_cochrane
+recruit_character = NZL_l_p_peterson
+recruit_character = NZL_j_c_nichols
+recruit_character = NZL_n_weir
+recruit_character = NZL_j_e_duigan
+recruit_character = NZL_edward_puttick
+recruit_character = NZL_norris_stephen_falla
+recruit_character = NZL_trevor_handley
+recruit_character = NZL_keith_j_holyoake
+recruit_character = NZL_a_j_stallworthy
+recruit_character = NZL_eric_prendergast
+recruit_character = NZL_arthur_dawes
+recruit_character = NZL_william_sinclair_burgess
+recruit_character = NZL_h_e_horan
+recruit_character = NZL_h_d_mcgregor
+recruit_character = NZL_w_h_stratton
+recruit_character = NZL_a_e_davy
+recruit_character = NZL_walter_nash
+recruit_character = NZL_w_a_veitch_milne
+recruit_character = NZL_peter_fraser
+recruit_character = NZL_navboomer
+recruit_character = NZL_hawk
+recruit_character = NZL_fortification_engineer
+recruit_character = NZL_commando
+recruit_character = NZL_industryman
+recruit_character = NZL_harry_dewolf
+recruit_character = NZL_Peter_Phipps
+recruit_character = NZL_Bernard_Freyber
+recruit_character = NZL_Leslie_Andrew
+recruit_character = NZL_George_Clifton
+recruit_character = NZL_Robert_Row
+recruit_character = NZL_William_Stevens
+recruit_character = NZL_Harold_Barrowclough
+recruit_character = NZL_James_Harges
+recruit_character = NZL_Andrew_Russel
+
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "NZL_1939_naval"
+		else = {
+			set_naval_oob = "NZL_1939_naval"
+		}
+	}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Danae Class"
+		type = ship_hull_cruiser_1
+		name_group = NZL_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Cheap ASW"
+		type = ship_hull_light_1
+		name_group = NZL_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}	
+}
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 600 }	

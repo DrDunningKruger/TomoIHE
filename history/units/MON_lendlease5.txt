@@ -1,0 +1,88 @@
+﻿air_wings = {
+	330 = {
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Spitfire MkVb"
+								
+			}
+            start_experience_factor = 0.3				
+	}
+}

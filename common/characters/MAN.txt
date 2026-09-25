@@ -1,0 +1,732 @@
+characters={
+	MAN_aisin_gioro_puyi={
+		name=MAN_aisin_gioro_puyi
+		portraits={
+			civilian={
+				large="gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			traits={ warrior_code }
+			expire="1960.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			traits={ warrior_code }
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	MAN_zhao_shangzhi={
+		name=MAN_zhao_shangzhi
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ national_integralist }
+			expire="1956.1.1.12"
+			id=-1
+		}
+	}
+	MAN_changlin_linge={
+		name=MAN_changlin_linge
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			traits={ silent_workhorse }
+			expire="1941.1.1.12"
+			id=-1
+		}
+	}
+
+
+	### THEORISTS ###
+
+	# Claire Lee Chennault is in shared file
+
+	MAN_hung_zhehuang={
+		name=MAN_hung_zhehuang
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = MAN_hung_zhehuang
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	MAN_xian_yuan={
+		name=MAN_xian_yuan
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_1"
+			}
+		}
+		advisor={
+			cost = 100	
+			slot = theorist
+			idea_token = MAN_xian_yuan
+			ledger = navy
+			allowed = {
+				original_tag = MAN
+			}
+			
+			traits = {
+				naval_theorist
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = MANantisubbera
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				navy_anti_submarine_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	MAN_deng_linge={
+		name=MAN_deng_linge
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = MAN_deng_linge
+			ledger = air
+			allowed = {
+				original_tag = MAN
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+
+	### ARMY CHIEFS ###
+
+	# Alexander von Falkenhausen in shared file
+
+	MAN_guan_xingde={
+		name=MAN_guan_xingde
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_4"
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = MAN_guan_xingde
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+		MAN_yin_zuoqian={
+		name=MAN_yin_zuoqian
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_3"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = MAN_yin_zuoqian
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	# Claire Lee Chennault is in shared file
+
+	MAN_nakajima_kesago={
+		name=MAN_nakajima_kesago
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MAN_nakajima_kesago
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+	
+	MAN_dudeman ={
+		name=MAN_nakajima_kesago
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MAN_nakajima_kesago
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	MAN_yonimitsu_kasahara={
+		name=MAN_yonimitsu_kasahara
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_yonimitsu_kasahara
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MAN_kyoiji_tomonaga={
+		name=MAN_kyoiji_tomonaga
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_kyoiji_tomonaga
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MAN_hesehn_tiemei={
+		name=MAN_hesehn_tiemei
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_hesehn_tiemei
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	MAN_planeguy={
+		name=MAN_hesehn_tiemei
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_hesehn_tiemei
+			ledger = air
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+			air_air_superiority	
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+	
+	MAN_planeguy2={
+		name=MAN_hesehn_tiemei
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_hesehn_tiemei
+			ledger = air
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+			air_chief_air_logistics
+			air_chief_naval_strike
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	MAN_random_dude ={
+		portraits={
+			army={
+				small="GFX_idea_kingoro_hashimoto"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed = {
+				original_tag = MAN
+			}
+			cost = 150
+			traits = {
+            education_reformer
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}		
+	}	
+	
+	MAN_random_two ={
+		portraits={
+			army={
+				small=GFX_portrait_JAP_seishiro_itagaki_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed = {
+				original_tag = MAN
+			}
+			cost = 150
+			traits = {
+            economic_organizer
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+			available = {
+				has_completed_focus = MAN_second_five_year_plan
+			}				
+		}	
+	}
+
+	MAN_Yoshijiro_Umezu={ #Kwantung Army commander, wanted to fight till end
+		name = "Yoshijiro Umezu"
+		portraits={
+			army={
+				small=GFX_portrait_JAP_yoshijiro_umezu_small
+				large=GFX_portrait_Portrait_Japan_Yoshijiro_Umezu
+			}
+		}		
+		field_marshal = { 
+		    desc = "Yoshijiro_Umezu_desc"
+			traits = { defensive_doctrine unyielding_defender ambusher infantry_leader ranger harsh_leader }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MANdefguy
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	MAN_Seishiro_Itagaki={ #Kwantung Army Chief of Staff, sacked after war with Soviets
+		name = "Seishiro Itagaki"
+		portraits={
+			army={
+				small=GFX_portrait_JAP_seishiro_itagaki_small
+				large=GFX_portrait_Portrait_Japan_Seishiro_Itagaki
+			}
+		}		
+		field_marshal = { 
+		    desc = "Seishiro_Itagaki_desc"
+			traits = { trickster panzer_leader panzer_expert offensive_doctrine thorough_planner trait_engineer }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MANreformera
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	MAN_Kenji_Doihara={ #man who took manchucko, goverend it and goverend malaya, air force guy
+		name = "Kenji Doihara"
+		portraits={
+			army={
+				small="GFX_idea_kenji_doihara"
+				large=GFX_portrait_Portrait_Japan_Kenji_Doihara
+			}
+		}		
+		field_marshal = { 
+		    desc = "Kenji_Doihara_desc"
+			traits = { organisational_leader career_officer scavenger media_personality offensive_doctrine infantry_leader infantry_expert }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 5
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MANmaneuverguy
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	MAN_Kuniaki_Koiso={ #governer of Korea
+		name = "Kuniaki Koiso"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Kuniaki_Koiso
+			}
+		}		
+		corps_commander={
+		    desc = "Kuniaki_Koiso_desc"
+			traits = { trickster panzer_leader panzer_expert offensive_doctrine thorough_planner trait_engineer }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+		}		
+	}	
+	
+	MAN_Keisuke_Fujie={ #commanded armies in mainland japan for defense
+		name = "Keisuke Fujie"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Keisuke_Fujie
+			}
+		}		
+		corps_commander={
+		    desc = "Keisuke_Fujie_desc"
+			traits = { career_officer bearer_of_artillery camouflage_expert inflexible_strategist war_hero } 
+			skill = 5
+			attack_skill = 4
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 4
+		}		
+	}	
+	
+	MAN_Sadao_Araki={ #commanded armies in mainland japan for defense
+		name = "Sadao Araki" #inf general for soviet front
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Sadao_Araki
+			}
+		}		
+		corps_commander={
+			desc = "Sadao_Araki_desc"
+			traits = { ranger infantry_expert trait_engineer trait_reckless fortress_buster ranger winter_specialist }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}		
+	}	
+	
+	MAN_Kiichiro_Higuchi={  #invaded alaska 
+		name = "Kiichiro Higuchi"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Kiichiro_Higuchi
+			}
+		}		
+		corps_commander={
+			desc = "Kiichiro_Higuchi_desc"
+			traits = { winter_expert hill_fighter winter_specialist naval_invader invader_ii infantry_leader infantry_expert }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}	
+	
+	MAN_Hitoshi_Imamura={ 
+		name = "Hitoshi Imamura"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Hitoshi_Imamura
+			}
+		}		
+		corps_commander={
+			desc = "Hitoshi_Imamura_desc"
+			traits = { politically_connected commando naval_invader invader_ii trait_mountaineer infantry_leader jungle_rat }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}		
+	}	
+	
+	MAN_Zhang_Haipeng={ 
+		name = "Zhang Haipeng"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_man_zhang_haipeng
+			}
+		}		
+		corps_commander={
+			desc = "Zhang_Haipeng_desc"
+			traits = { war_hero cavalry_officer cavalry_leader cavalry_expert trickster hill_fighter irregulars_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+		}		
+	}
+
+	MAN_Zhang_Jinghui={ #PM of Manchuckou
+		name = "Zhang Jinghui"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_man_zhang_jinghui
+			}
+		}		
+		field_marshal = { 
+		    desc = "Zhang_Jinghui_desc"
+			traits = { infantry_officer irregulars_officer defensive_doctrine ambusher ranger trait_mountaineer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+		}		
+	}
+	
+	MAN_Otozo_Yamada={  #FM? tried to organize kwantung army to fight soviets in 1945
+		name = "Otozo Yamada"
+		portraits={
+			army={
+				small=GFX_portrait_AST_thomas_blamey_small
+				large=GFX_portrait_Portrait_Japan_Otozo_Yamada
+			}
+		}		
+		corps_commander={
+			desc = "Otozo_Yamada_desc"
+			traits = { organizer ranger panzer_expert panzer_leader trickster commando expert_improviser scavenger }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 5
+		}		
+	}	
+	
+	MAN_Jo_Iimura={ 
+		name = "Jo Iimura"
+		portraits={
+			army={
+				small=GFX_portrait_JAP_jo_iimura_small
+				large=GFX_portrait_Portrait_Japan_Jo_Iimura
+			}
+		}		
+		corps_commander={
+			desc = "Jo_Iimura_desc"
+			traits = { career_officer infantry_leader infantry_expert skirmisher commando naval_invader urban_assault_specialist }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+		}
+		advisor={
+			slot = high_command
+			idea_token = MAN_mechman
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_CombinedArms_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}	
+	
+	MAN_Toshizo_Nishio={  
+		name = "Toshizo Nishio" #Toshizo
+		portraits={
+			army={
+				small=GFX_portrait_JAP_toshizo_nishio_small
+				large=GFX_portrait_Portrait_Japan_Toshizo_Nishio
+			}
+		}	
+		advisor={
+			slot = high_command
+			idea_token = MAN_tanker
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		corps_commander={
+			desc = "Toshizo_Nishio_desc" #Toshizo
+			traits = { brilliant_strategist ranger organizer trait_engineer infantry_expert panzer_leader hill_fighter }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 6
+		}		
+	}	
+
+}

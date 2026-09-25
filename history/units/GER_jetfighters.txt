@@ -1,0 +1,22 @@
+﻿air_wings = {
+	305 = { 
+			small_plane_airframe_4 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Me 262"
+			}	
+			start_experience_factor = 0.9
+			small_plane_airframe_4 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Me 262"
+			}	
+			start_experience_factor = 0.9
+			small_plane_airframe_4 = {
+				owner = "GER" 
+				amount = 100
+				version_name = "Me 262"
+			}
+			start_experience_factor = 0.9
+	}
+}

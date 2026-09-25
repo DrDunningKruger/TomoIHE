@@ -1,0 +1,1148 @@
+﻿add_namespace = mtg_netherlands
+
+# New government forms
+country_event = {
+	id = mtg_netherlands.10
+	title = mtg_netherlands.10.t
+	desc = mtg_netherlands.10.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.10.a
+		set_party_name = { ideology = democratic long_name = HOL_CHU_party_long name = HOL_CHU_party }
+		create_country_leader = {
+			name = "Dirk Jan de Geer"
+			desc = "POLITICS_DIRK_JAN_DE_GEER_DESC"
+			picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				defeatist
+			}
+		}
+		remove_ideas = HOL_weak_government
+	}
+}
+
+# Replace the Defeatist Government
+country_event = {
+	id = mtg_netherlands.14
+	title = mtg_netherlands.14.t
+	desc = mtg_netherlands.14.d
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.14.a
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -0.05
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Pieter Sjoerds Gerbrandy"
+			desc = "POLITICS_PIETER_SJOERDS_GERBRANDY_DESC"
+			picture = "portrait_hol_pieter_sjoerds_gerbrandy.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				little_churchill
+			}
+		}
+		if = {
+			limit = {
+				has_idea = HOL_weak_government
+			}
+			remove_ideas = HOL_weak_government
+		}
+	}
+}
+
+# Event for FROM for equipment to prepare against an invasion
+country_event = {
+	id = mtg_netherlands.29
+	title = mtg_netherlands.29.t
+	desc = mtg_netherlands.29.d
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+	
+	# Ok - give them infantry equipment
+	option = {
+		name = mtg_netherlands.29.a
+		trigger = {
+			has_equipment = {
+			    infantry_equipment > 2000
+			}
+		}
+		FROM = { country_event = { id = mtg_netherlands.30 hours = 6 } }
+		set_country_flag = secret_staff_talks_infantry_equipment
+		effect_tooltip = {
+			send_equipment = {
+			    equipment = artillery_equipment
+			    amount = 2000
+			    target = FROM
+			}
+		}
+	}
+
+	# Ok - give them support equipment
+	option = {
+		name = mtg_netherlands.29.b
+		trigger = {
+			has_equipment = {
+				support_equipment > 250
+			}
+		}
+		FROM = { country_event = { id = mtg_netherlands.30 hours = 6 } }
+		set_country_flag = secret_staff_talks_support_equipment
+		effect_tooltip = {
+			send_equipment = {
+			    equipment = support_equipment
+			    amount = 250
+			    target = FROM
+			}
+		}
+	}
+
+	# Ok - give them artillery equipment
+	option = {
+		name = mtg_netherlands.29.c
+		trigger = {
+			has_equipment = {
+				artillery_equipment > 200
+			}
+		}
+		FROM = { country_event = { id = mtg_netherlands.30 hours = 6 } }
+		set_country_flag = secret_staff_talks_artillery_equipment
+		effect_tooltip = {
+			send_equipment = {
+			    equipment = artillery_equipment
+			    amount = 200
+			    target = FROM
+			}
+		}
+	}
+
+	# Nope
+	option = {
+		name = mtg_netherlands.29.e
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 9
+				NOT = {
+					has_equipment = {
+					    infantry_equipment > 2000
+					}
+				}
+				NOT = {
+					has_equipment = {
+						support_equipment > 250
+					}
+				}
+				NOT = {
+					has_equipment = {
+						artillery_equipment > 200
+					}
+				}
+			}
+		}
+		FROM = { country_event = { id = mtg_netherlands.31 hours = 6 } }
+	}
+}
+
+# Event for HOL saying FROM will deliver equipment
+country_event = {
+	id = mtg_netherlands.30
+	title = mtg_netherlands.30.t
+	desc = mtg_netherlands.30.d
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+	
+	# Ok!
+	option = {
+		name = mtg_netherlands.30.a
+		if = {
+			limit = {
+				FROM = { has_country_flag = secret_staff_talks_infantry_equipment }
+			}
+			FROM = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 2000
+				    target = ROOT
+				}
+				clr_country_flag = secret_staff_talks_infantry_equipment
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_country_flag = secret_staff_talks_support_equipment }
+			}
+			FROM = {
+				send_equipment = {
+				    equipment = support_equipment
+				    amount = 250
+				    target = ROOT
+				}
+				clr_country_flag = secret_staff_talks_support_equipment
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_country_flag = secret_staff_talks_artillery_equipment }
+			}
+			FROM = {
+				send_equipment = {
+				    equipment = artillery_equipment
+				    amount = 200
+				    target = ROOT
+				}
+				clr_country_flag = secret_staff_talks_artillery_equipment
+			}
+		}
+	}
+}
+
+# Event for HOL saying FROM will NOT deliver equipment
+country_event = {
+	id = mtg_netherlands.31
+	title = mtg_netherlands.31.t
+	desc = mtg_netherlands.31.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# Damnit
+	option = {
+		name = mtg_netherlands.31.a
+	}
+}
+
+# Event for FROM asking to draw up a combined staff plan
+country_event = {
+	id = mtg_netherlands.32
+	title = mtg_netherlands.32.t
+	desc = mtg_netherlands.32.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.32.a
+		army_experience = -5
+		FROM = { country_event = { id = mtg_netherlands.33 hours = 6 } }
+		custom_effect_tooltip = mtg_netherlands.32_tt
+	}
+
+	# Nope
+	option = {
+		name = mtg_netherlands.32.b
+		FROM = { country_event = { id = mtg_netherlands.34 hours = 6 } }
+	}
+}
+
+# Event for HOL saying FROM wants to draw up a staff plan
+country_event = {
+	id = mtg_netherlands.33
+	title = mtg_netherlands.33.t
+	desc = mtg_netherlands.33.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+	
+	# Ok!
+	option = {
+		name = mtg_netherlands.33.a
+		effect_tooltip = {
+			FROM = { army_experience = -5 }
+		}
+		custom_effect_tooltip = mtg_netherlands.33_tt
+		if = {
+			limit = {
+				FROM = { tag = ENG }
+			}
+			set_country_flag = secret_staff_talks_british_staff_plan
+		}
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+			set_country_flag = secret_staff_talks_french_staff_plan
+		}
+		if = {
+			limit = {
+				FROM = { tag = GER }
+			}
+			set_country_flag = secret_staff_talks_german_staff_plan
+		}
+	}
+}
+
+# Event for HOL saying FROM does not want to draw up a staff plan
+country_event = {
+	id = mtg_netherlands.34
+	title = mtg_netherlands.34.t
+	desc = mtg_netherlands.34.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# Damnit
+	option = {
+		name = mtg_netherlands.34.a
+	}
+}
+
+# Event for FROM asking to exchange intelligence
+country_event = {
+	id = mtg_netherlands.35
+	title = mtg_netherlands.35.t
+	desc = mtg_netherlands.35.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.35.a
+		add_political_power = -25
+		FROM = { country_event = { id = mtg_netherlands.36 hours = 6 } }
+		custom_effect_tooltip = mtg_netherlands.35_tt
+		if = {
+			limit = {
+				has_war_with = GER
+			}
+			add_timed_idea = { idea = HOL_shared_intelligence_hol_ger days = 180 }
+		}
+		if = {
+			limit = {
+				has_war_with = FRA
+			}
+			add_timed_idea = { idea = HOL_shared_intelligence_hol_fra days = 180 }
+		}
+		if = {
+			limit = {
+				has_war_with = ENG
+			}
+			add_timed_idea = { idea = HOL_shared_intelligence_hol_eng days = 180 }
+		}
+		if = {
+			limit = {
+				NOT = { has_war_with = GER }
+				NOT = { has_war_with = FRA }
+				NOT = { has_war_with = ENG }
+			}
+			custom_effect_tooltip = mtg_netherlands.35_tt_2
+			set_country_flag = secret_staff_talks_dutch_intelligence
+		}
+	}
+
+	# Nope
+	option = {
+		name = mtg_netherlands.35.b
+		FROM = { country_event = { id = mtg_netherlands.37 hours = 6 } }
+	}
+}
+
+# Event for HOL saying FROM agrees to exchange intelligence
+country_event = {
+	id = mtg_netherlands.36
+	title = mtg_netherlands.36.t
+	desc = mtg_netherlands.36.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+	
+	# Ok!
+	option = {
+		name = mtg_netherlands.36.a
+		effect_tooltip = {
+			FROM = {
+				add_political_power = -25
+				custom_effect_tooltip = mtg_netherlands.35_tt
+			}
+		}
+		custom_effect_tooltip = mtg_netherlands.35_tt_2
+		if = {
+			limit = {
+				FROM = { tag = ENG }
+			}
+			set_country_flag = secret_staff_talks_british_intelligence
+		}
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+			set_country_flag = secret_staff_talks_french_intelligence
+		}
+		if = {
+			limit = {
+				FROM = { tag = GER }
+			}
+			set_country_flag = secret_staff_talks_german_intelligence
+		}
+	}
+}
+
+# Event for HOL saying FROM does not agree to exchange intelligence
+country_event = {
+	id = mtg_netherlands.37
+	title = mtg_netherlands.37.t
+	desc = mtg_netherlands.37.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# Damnit
+	option = {
+		name = mtg_netherlands.37.a
+	}
+}
+
+# EVENTS 38-40 removed!
+
+# Event for FROM asking to share military knowledge
+country_event = {
+	id = mtg_netherlands.41
+	title = mtg_netherlands.41.t
+	desc = mtg_netherlands.41.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.41.a
+		army_experience = -5
+		effect_tooltip = {
+			FROM = {
+				add_tech_bonus = {
+					name = HOL_secret_staff_talks
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+		FROM = { country_event = { id = mtg_netherlands.42 hours = 6 } }
+	}
+
+	# Nope
+	option = {
+		name = mtg_netherlands.41.b
+		FROM = { country_event = { id = mtg_netherlands.43 hours = 6 } }
+	}
+}
+
+# Event for HOL saying FROM agrees to share military knowledge
+country_event = {
+	id = mtg_netherlands.42
+	title = mtg_netherlands.42.t
+	desc = mtg_netherlands.42.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	# Ok!
+	option = {
+		name = mtg_netherlands.42.a
+		effect_tooltip = {
+			FROM = { army_experience = -5 }
+		}
+		add_tech_bonus = {
+			name = HOL_secret_staff_talks
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+# Event for HOL saying FROM does not agree to share military knowledge
+country_event = {
+	id = mtg_netherlands.43
+	title = mtg_netherlands.43.t
+	desc = mtg_netherlands.43.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# Damnit
+	option = {
+		name = mtg_netherlands.43.a
+	}
+}
+
+### Prince Bernhard Shenanigans ###
+
+# Prince Bernhard generator event
+country_event = {
+	id = mtg_netherlands.44
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_government = communism }
+		is_ai = no
+	}
+	
+	hidden = yes
+
+	immediate = {
+		random_list = {
+			10 = { # Minor Scandal
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.45 }
+			}
+			15 = { # Dashing Public Impression
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.46 }
+			}
+			15 = { # Good Example Air Forces
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.47 }
+			}
+			10 = { # Bad Example Air Forces
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.48 }
+			}
+			15 = { # Good Strategy Meddling
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.49 }
+			}
+			10 = { # Bad Strategy Meddling
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.50 }
+			}
+			10 = { # Goes to gather intelligence
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.51 }
+			}
+			10 = { # Goes to organize resistance
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+				country_event = { id = mtg_netherlands.54 }
+			}
+			5 = { # Diplomatic Row
+				modifier = {
+					factor = 0
+					NOT = { has_idea = HOL_prince_bernhard }
+				}
+				modifier = {
+					factor = 0
+					has_war = no
+				}
+
+				modifier = {
+					factor = 0.2
+					has_capitulated = no
+				}
+				country_event = { id = mtg_netherlands.57 }
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_war = yes
+				}
+				country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+			}
+		}
+	}
+}
+
+# Prince Bernhard involved in minor scandal
+country_event = {
+	id = mtg_netherlands.45
+	title = mtg_netherlands.45.t
+	desc = mtg_netherlands.45.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.45.a
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard makes dashing public impression
+country_event = {
+	id = mtg_netherlands.46
+	title = mtg_netherlands.46.t
+	desc = mtg_netherlands.46.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.46.a
+		add_political_power = 25
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard sets good example for air forces
+country_event = {
+	id = mtg_netherlands.47
+	title = mtg_netherlands.47.t
+	desc = mtg_netherlands.47.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.47.a
+		add_timed_idea = { idea = HOL_bernhard_good_air_example days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard sets bad example for air forces
+country_event = {
+	id = mtg_netherlands.48
+	title = mtg_netherlands.48.t
+	desc = mtg_netherlands.48.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.48.a
+		add_timed_idea = { idea = HOL_bernhard_bad_air_example days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+
+	# Handle the situation
+	option = {
+		name = mtg_netherlands.48.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard gives good input on strategy
+country_event = {
+	id = mtg_netherlands.49
+	title = mtg_netherlands.49.t
+	desc = mtg_netherlands.49.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.49.a
+		add_timed_idea = { idea = HOL_bernhard_good_strategy_meddling days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard gives bad input on strategy
+country_event = {
+	id = mtg_netherlands.50
+	title = mtg_netherlands.50.t
+	desc = mtg_netherlands.50.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.50.a
+		add_timed_idea = { idea = HOL_bernhard_bad_strategy_meddling days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+
+	# Handle the situation
+	option = {
+		name = mtg_netherlands.50.b
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard goes to gather intelligence
+country_event = {
+	id = mtg_netherlands.51
+	title = mtg_netherlands.51.t
+	desc = mtg_netherlands.51.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.51.a
+		hidden_effect = {
+			random_list = {
+				15 = { country_event = { id = mtg_netherlands.52 days = 7 random = 7 } }
+				10 = { country_event = { id = mtg_netherlands.53 days = 7 random = 7 } }
+			}
+		}
+	}
+
+	# stop him
+	option = {
+		name = mtg_netherlands.51.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard gathers good intelligence
+country_event = {
+	id = mtg_netherlands.52
+	title = mtg_netherlands.52.t
+	desc = mtg_netherlands.52.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.52.a
+		add_timed_idea = { idea = HOL_bernhard_good_intelligence days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard gathers bad intelligence
+country_event = {
+	id = mtg_netherlands.53
+	title = mtg_netherlands.53.t
+	desc = mtg_netherlands.53.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.53.a
+		add_timed_idea = { idea = HOL_bernhard_bad_intelligence days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard goes to organize resistance
+country_event = {
+	id = mtg_netherlands.54
+	title = mtg_netherlands.54.t
+	desc = mtg_netherlands.54.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.54.a
+		hidden_effect = {
+			random_list = {
+				15 = { country_event = { id = mtg_netherlands.55 days = 7 random = 7 } }
+				10 = { country_event = { id = mtg_netherlands.56 days = 7 random = 7 } }
+			}
+		}
+	}
+
+	# No way
+	option = {
+		name = mtg_netherlands.54.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard successfully organizes resistance
+country_event = {
+	id = mtg_netherlands.55
+	title = mtg_netherlands.55.t
+	desc = mtg_netherlands.55.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.55.a
+		add_timed_idea = { idea = HOL_bernhard_organized_resistance days = 30 }
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Prince Bernhard is wounded organizing resistance
+#country_event = {
+#	id = mtg_netherlands.56
+#	title = mtg_netherlands.56.t
+#	desc = mtg_netherlands.56.d
+#	picture = GFX_report_event_hol_prins_bernhard
+#
+#	is_triggered_only = yes
+#	
+#	# Ok
+#	option = {
+#		name = mtg_netherlands.56.a
+#		random_unit_leader = {
+#			limit = {
+#				has_id = 982
+#			}
+#			add_timed_unit_leader_trait = {
+#				trait = wounded
+#				days = 90
+#			}
+#		}
+#		hidden_effect = {
+#			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+#		}
+#	}
+#}
+
+# Prince Bernhard causes diplomatic row generator event
+country_event = {
+	id = mtg_netherlands.57
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { has_war_with = ROOT }
+					NOT = {
+						any_country = {
+							has_war_with = PREV
+							has_war_with = ROOT
+						}
+					}
+					is_major = no
+					any_owned_state = {
+						OR = {
+							is_coastal = yes
+							any_neighbor_state = {
+								is_fully_controlled_by = HOL
+							}
+						}
+					}
+				}
+				save_event_target_as = HOL_bernhard_row_target
+			}
+			country_event = { id = mtg_netherlands.58 }
+		}
+	}
+}
+
+# Prince Bernhard causes diplomatic row
+country_event = {
+	id = mtg_netherlands.58
+	title = mtg_netherlands.58.t
+	desc = mtg_netherlands.58.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.58.a
+		event_target:HOL_bernhard_row_target = {
+			country_event = { id = mtg_netherlands.59 }
+			set_country_flag = { flag = HOL_bernhard_row_target value = 1 days = 60 }
+		}
+		hidden_effect = {
+			country_event = { id = mtg_netherlands.44 days = 60 random = 60 }
+		}
+	}
+}
+
+# Notification event of diplomatic row
+country_event = {
+	id = mtg_netherlands.59
+	title = mtg_netherlands.59.t
+	desc = mtg_netherlands.59.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.59.a
+	}
+}
+
+# Notification event of escalation of diplomatic row
+country_event = {
+	id = mtg_netherlands.60
+	title = mtg_netherlands.60.t
+	desc = mtg_netherlands.60.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Let 'em come
+	option = {
+		name = mtg_netherlands.60.a
+		ai_chance = { factor = 9 }
+		FROM = {
+			country_event = { id = mtg_netherlands.61 days = 1 random = 3 }
+			effect_tooltip = {
+				create_wargoal = {
+				    type = puppet_wargoal_focus
+				    target = ROOT
+				}
+			}
+		}
+	}
+
+	# Invest heavily in soothing relations
+	option = {
+		name = mtg_netherlands.60.b
+		ai_chance = { factor = 1 }
+		add_political_power = -100
+		FROM = { country_event = { id = mtg_netherlands.62 days = 1 random = 3 } }
+	}
+}
+
+# Event for HOL saying FROM is not backing down
+country_event = {
+	id = mtg_netherlands.61
+	title = mtg_netherlands.61.t
+	desc = mtg_netherlands.61.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.61.a
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+	}
+}
+
+# Event for HOL saying FROM soothed tensions
+country_event = {
+	id = mtg_netherlands.62
+	title = mtg_netherlands.62.t
+	desc = mtg_netherlands.62.d
+	picture = GFX_report_event_hol_prins_bernhard
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.62.a
+	}
+}
+
+# Event for HOL notifying of evacuation of gold reserves
+country_event = {
+	id = mtg_netherlands.63
+	title = mtg_netherlands.63.t
+	desc = mtg_netherlands.63.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_netherlands.63.a
+		remove_ideas = HOL_preparing_evacuation_of_gold_reserves
+		add_legitimacy = 20
+		add_political_power = 100
+	}
+}
+
+# Zuiderzee event for HOL offering infrastructure build speed
+country_event = {
+	id = mtg_netherlands.64
+	title = mtg_netherlands.64.t
+	desc = mtg_netherlands.64.d
+	picture = GFX_report_event_hol_polderen
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = HOL
+		NOT = { has_completed_focus = HOL_the_zuiderzee_works }
+		focus_progress = {
+			focus = HOL_the_zuiderzee_works
+			progress > 0.33
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	# We will invest
+	option = {
+		name = mtg_netherlands.64.a
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -50
+		add_timed_idea = { idea = HOL_zuiderzee_infrastructure_advancements days = 365 }
+	}
+
+	# We will not
+	option = {
+		name = mtg_netherlands.64.b
+	}
+}
+
+# Zuiderzee event for HOL offering factory build speed
+country_event = {
+	id = mtg_netherlands.65
+	title = mtg_netherlands.65.t
+	desc = mtg_netherlands.65.d
+	picture = GFX_report_event_hol_polderen
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = HOL
+		NOT = { has_completed_focus = HOL_the_zuiderzee_works }
+		focus_progress = {
+			focus = HOL_the_zuiderzee_works
+			progress > 0.67
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	# We will invest
+	option = {
+		name = mtg_netherlands.64.a
+		add_political_power = -50
+		add_timed_idea = { idea = HOL_zuiderzee_industrial_advancements days = 365 }
+	}
+
+	# We will not
+	option = {
+		name = mtg_netherlands.64.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Hidden event removing Shell-shocked spectator spirit
+country_event = {
+	id = mtg_netherlands.68
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = HOL
+		OR = {
+			has_idea = HOL_shell_shocked_spectator_1
+			has_idea = HOL_shell_shocked_spectator_2
+			has_idea = HOL_shell_shocked_spectator_3
+			has_idea = HOL_shell_shocked_spectator_4
+			has_idea = HOL_shell_shocked_spectator_5
+			has_idea = HOL_aloof_neutrality
+		}
+		has_defensive_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_idea = HOL_shell_shocked_spectator_1
+					has_idea = HOL_shell_shocked_spectator_2
+					has_idea = HOL_shell_shocked_spectator_3
+					has_idea = HOL_shell_shocked_spectator_4
+					has_idea = HOL_shell_shocked_spectator_5
+				}
+			}
+			hidden_effect = {
+				remove_ideas = HOL_shell_shocked_spectator_1
+				remove_ideas = HOL_shell_shocked_spectator_2
+				remove_ideas = HOL_shell_shocked_spectator_3
+				remove_ideas = HOL_shell_shocked_spectator_4
+				remove_ideas = HOL_shell_shocked_spectator_5
+			}
+		}
+		if = {
+			limit = {
+				has_idea = HOL_aloof_neutrality
+			}
+			hidden_effect = {
+				remove_ideas = HOL_aloof_neutrality
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+﻿# Destroyers sent to brazil
+
+units = {
+	fleet = {
+		name = "American Destroyer Squadron"
+		naval_base = 10980 	
+		task_force = {					
+			name = "American Destroyer Flotilla 2"				
+			location = 10980 	 # Sussex
+			# 22nd Destroyer Division				
+			ship = { name = "NRB Babitonga" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }					# USS Shubrick		
+			ship = { name = "NRB Baependi" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS Bailey			
+			ship = { name = "NRB Benevente" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS Swasey			
+			ship = { name = "NRB Beberibe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }					# USS Meade	
+			# 21st Destroyer Division
+			ship = { name = "NRB Bocaina" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS McCalla			
+			ship = { name = "NRB Bauru" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS Rodgers			
+			ship = { name = "NRB Bertioga" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS Welles			
+			ship = { name = "NRB Bracui" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA creator = USA version_name = "Clemson Class" } } }				# USS Aulick				
+		}				
+					
+	}
+}					
+					

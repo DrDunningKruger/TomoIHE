@@ -1,0 +1,21 @@
+state=
+{
+	id=314
+	name="STATE_314"
+	manpower = 1
+	
+	state_category = wasteland
+	
+	history=
+	{
+		owner = SWI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+	   13093 
+	}
+
+	local_supplies=0.0 
+}

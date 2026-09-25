@@ -1,0 +1,19 @@
+state={
+	id=798
+	name="STATE_798"
+	provinces={
+		2158 4963 5152 8105 10745 10953 12970
+	}
+	manpower = 1
+	
+	state_category = rural
+
+	history= {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	local_supplies=0.0 
+}

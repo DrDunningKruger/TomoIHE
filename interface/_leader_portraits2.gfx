@@ -1,0 +1,1168 @@
+spriteTypes = {
+
+	spriteType = {
+		name = GFX_portrait_percy_hobart
+		texturefile = "gfx/leaders/ENG/percy_hobart.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_John_Crocker
+		texturefile = "gfx/leaders/ENG/John_Crocker.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Richard_McCreery
+		texturefile = "gfx/leaders/ENG/Richard_McCreery.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Ronald_Scobie
+		texturefile = "gfx/leaders/ENG/Ronald_Scobie.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_frederick_browning
+		texturefile = "gfx/leaders/ENG/frederick_browning.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Anderson_Kenneth
+		texturefile = "gfx/leaders/ENG/Anderson_Kenneth.dds"
+	}	
+	
+	
+	spriteType = {
+		name = GFX_portrait_Georges_Blanchard
+		texturefile = "gfx/leaders/FRA/Georges_Blanchard.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Andre_Corap
+		texturefile = "gfx/leaders/FRA/Andre_Corap.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Aime_Doumenc
+		texturefile = "gfx/leaders/FRA/Aime_Doumenc.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Raoul_Magrin_Vernerey
+		texturefile = "gfx/leaders/FRA/Raoul_Magrin_Vernerey.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Diego_Brosset
+		texturefile = "gfx/leaders/FRA/Diego_Brosset.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Marie_Pierre_Koenig
+		texturefile = "gfx/leaders/FRA/Marie_Pierre_Koenig.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_France_Charles_De_Gaulle
+		texturefile = "gfx/leaders/FRA/Portrait_France_Charles_De_Gaulle.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Jean_de_Lattre_de_Tassigny
+		texturefile = "gfx/leaders/FRA/Jean_de_Lattre_de_Tassigny.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Alphonse_Juin
+		texturefile = "gfx/leaders/FRA/Alphonse_Juin.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Rene_Olry
+		texturefile = "gfx/leaders/FRA/Rene_Olry.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Rene_Prioux
+		texturefile = "gfx/leaders/FRA/Rene_Prioux.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_philippe_leclerc
+		texturefile = "gfx/leaders/FRA/philippe_leclerc.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Jean_Touzet_du_Vigier
+		texturefile = "gfx/leaders/FRA/Jean_Touzet_du_Vigier.dds"
+	}	
+	
+	
+	
+	spriteType = {
+		name = GFX_portrait_Viktor_Pavicic
+		texturefile = "gfx/leaders/YUG/Viktor_Pavicic.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Jure_Francetic
+		texturefile = "gfx/leaders/YUG/Jure_Francetic.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Slavko_Kvaternik
+		texturefile = "gfx/leaders/YUG/Slavko_Kvaternik.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Eduard_Bona_Bunic
+		texturefile = "gfx/leaders/YUG/Eduard_Bona-Bunic.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_slavko_stancer
+		texturefile = "gfx/leaders/YUG/slavko_stancer.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Matija_Canic
+		texturefile = "gfx/leaders/YUG/Matija_Canic.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_rafael_boban
+		texturefile = "gfx/leaders/YUG/rafael_boban.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Mihajlo_Lukic
+		texturefile = "gfx/leaders/YUG/Mihajlo_Lukic.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Vladimir_Laxa
+		texturefile = "gfx/leaders/YUG/Vladimir_Laxa.dds"
+	}
+
+	
+	spriteType = {
+		name = GFX_portrait_Viktor_Pavicic_small
+		texturefile = "gfx/interface/ideas/idea_ITA_generic_3.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Jure_Francetic_small
+		texturefile = "gfx/interface/ideas/portrait_Finland_Generic_land_7_small.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_Slavko_Kvaternik_small
+		texturefile = "gfx/interface/ideas/idea_ENG_generic_land_1.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_slavko_stancer_small
+		texturefile = "gfx/interface/ideas/idea_GER_generic_land_5.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_Matija_canic_small
+		texturefile = "gfx/interface/ideas/idea_SOV_generic_land_5.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_rafael_boban_small
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}	
+	spriteType = {
+		name = GFX_portrait_rafael_boban_small
+		texturefile = "gfx/interface/ideas/idea_GER_generic_land_2.dds"
+	}
+
+#	spriteType = {
+#		name = GFX_portrait_Mihajlo_Lukic_small
+#		texturefile = "gfx/interface/ideas/idea_USA_raymond_a_spruance.dds"
+#	}
+
+
+
+#### Canadians 
+
+	spriteType = {
+		name = GFX_portrait_Crerar_Harry
+		texturefile = "gfx/leaders/CAN/Crerar_Harry_image.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Portrait_Andrew_McNaughton
+		texturefile = "gfx/leaders/CAN/Portrait_Andrew_McNaughton.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Portrait_Thomas_Victor_Anderson
+		texturefile = "gfx/leaders/CAN/Thomas_Victor_Anderson.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Guy_Granville_Simonds
+		texturefile = "gfx/leaders/CAN/Guy_Granville_Simonds.dds"
+	}	
+	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_Charles_Foulkes
+		texturefile = "gfx/leaders/CAN/Charles_Foulkes.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_Bert_Hoffmeister
+		texturefile = "gfx/leaders/CAN/Bert_Hoffmeister.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_Christopher_Vokes
+		texturefile = "gfx/leaders/CAN/Christopher_Vokes.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_Frank_Worthington
+		texturefile = "gfx/leaders/CAN/Frank_Worthington.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_CAN_robert_moncel
+		texturefile = "gfx/leaders/CAN/robert_moncel.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_John_Meredith_Rockingham
+		texturefile = "gfx/leaders/CAN/John_Meredith_Rockingham.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_CAN_Arthur_potts
+		texturefile = "gfx/leaders/CAN/Arthur_potts.dds"
+	}	
+	
+########### USA	
+	
+	spriteType = {
+		name = GFX_portrait_Portrait_USA_Generic_dude
+		texturefile = "gfx/leaders/USA/Portrait_USA_Generic_dude.dds"
+	}	
+	
+	spriteType = {	
+		name = GFX_portrait_USA_george_marshall
+		texturefile = "gfx/leaders/USA/Portrait_USA_Generic_dude2.dds"
+	}
+
+
+########## MEX
+
+	spriteType = {
+		name = GFX_portrait_Mexican_Generic_land_5
+		texturefile = "gfx/leaders/MEX/Mexican_Generic_land_5.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_portrait_mex_jose_gonzalo_escobar
+		texturefile = "gfx/leaders/MEX/portrait_mex_jose_gonzalo_escobar.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_portrait_mex_abelardo_rodriguez
+		texturefile = "gfx/leaders/MEX/portrait_mex_abelardo_rodriguez.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Portrait_Mexico_Joaquin_Amaro
+		texturefile = "gfx/leaders/MEX/Portrait_Mexico_Joaquin_Amaro.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_portrait_mex_calles_military
+		texturefile = "gfx/leaders/MEX/portrait_mex_calles_military.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_mex_gildardo_magana
+		texturefile = "gfx/leaders/MEX/mex_gildardo_magana.dds"
+	}
+
+########## CUB
+
+	spriteType = {
+		name = GFX_portrait_Cuban_two
+		texturefile = "gfx/leaders/CUB/Cuban_two.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Cuban_one
+		texturefile = "gfx/leaders/CUB/Cuban_one.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Cuban_three
+		texturefile = "gfx/leaders/CUB/Cuban_three.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Cuban_four
+		texturefile = "gfx/leaders/CUB/Cuban_four.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Cuban_five
+		texturefile = "gfx/leaders/CUB/Cuban_five.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Cuban_six
+		texturefile = "gfx/leaders/CUB/Cuban_six.dds"
+	}	
+	
+########## BRA
+	
+	spriteType = {
+		name = GFX_portrait_euclides_zenobio_da_costa
+		texturefile = "gfx/leaders/BRA/euclides_zenobio_da_costa.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Alberto_Ribeiro_Paz
+		texturefile = "gfx/leaders/BRA/Alberto_Ribeiro_Paz.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Canrobert_Pereira_Da_Costa
+		texturefile = "gfx/leaders/BRA/Canrobert_Pereira_Da_Costa.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Joao_Baptista_de_Mattos
+		texturefile = "gfx/leaders/BRA/Joao_Baptista_de_Mattos.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Eurico_Gaspar_Dutra
+		texturefile = "gfx/leaders/BRA/Eurico_Gaspar_Dutra.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Odilio_Denys
+		texturefile = "gfx/leaders/BRA/Odilio_Denys.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Joao_De_Sagades_Viana
+		texturefile = "gfx/leaders/BRA/Joao_De_Sagades_Viana.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Louis_Mountbatten
+		texturefile = "gfx/leaders/ENG/Louis_Mountbatten.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_idea_max_horton_big
+		texturefile = "gfx/leaders/ENG/Max_Horton.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_idea_dudley_pound_big
+		texturefile = "gfx/leaders/ENG/Dudley_Pound.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_ENG_Arthur_Palliser
+		texturefile = "gfx/leaders/ENG/Arthur_Palliser.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_ENG_Percy_Noble
+		texturefile = "gfx/leaders/ENG/Percy_Noble.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_ENG_tom_phillips
+		texturefile = "gfx/leaders/ENG/Tom_Phillips.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_FRA_Georges_Thierry
+		texturefile = "gfx/leaders/FRA/Georges_Thierry_D_Argenlieu.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Antonio_Legnani
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Antonio_Legnani.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Mario_Falangola
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Mario_Falangola.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Enea_Navarini
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Enea_Navarini.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Gabriele_Nasci
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Gabriele_Nasci.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_Bruno_Malaguti
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Bruno_Malaguti.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Brunetto_Brunetti
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Brunetto_Brunetti.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Giorgio_Carlo
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Giorgio_Carlo_Calvi_di_Bergolo.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Mario_Balotta
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Mario_Balotta.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Alberto_Savoia
+		texturefile = "gfx/leaders/ITA/portrait_ita_Adalberto_di_Savoia_Genova.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_franco_general
+		texturefile = "gfx/leaders/SPR/francisco_franco.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Edouard_van_den_Bergen
+		texturefile = "gfx/leaders/BEL/Edouard_van_den_Bergen.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_BEL_Alexis_Vander
+		texturefile = "gfx/leaders/BEL/Alexis_Vander_Veken.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Auguste_Baesens
+		texturefile = "gfx/leaders/BEL/Auguste_Baesens.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_victorvanstrydonck
+		texturefile = "gfx/leaders/BEL/Auguste_Edouard_Gilliaert.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_BEL_mcl_keyaerts
+		texturefile = "gfx/leaders/BEL/MCL_Keyaerts.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_BEL_jules_pire_image
+		texturefile = "gfx/leaders/BEL/jules_pire_image.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_NOR_bear
+		texturefile = "gfx/leaders/NOR/portrait_JAN_johan_mayen.dds"
+	}		
+	
+	spriteType = {
+		name = GFX_portrait_Prince_Bernard
+		texturefile = "gfx/leaders/HOL/prince_bernhard_image.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_HOL_simonguy
+		texturefile = "gfx/leaders/HOL/Simon_Hendrik_Spoor.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_HOL_jakob
+		texturefile = "gfx/leaders/HOL/Jakob_Harberts.dds"
+	}	
+
+	spriteType = {
+		name = GFX_portrait_HOL_andel
+		texturefile = "gfx/leaders/HOL/Jan_Van_Andel.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_andro_vrkljan
+		texturefile = "gfx/leaders/YUG/andro_vrkljan.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_duro_jakcin
+		texturefile = "gfx/leaders/YUG/duro_jakcin.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Farkas_Ferenc
+		texturefile = "gfx/leaders/HUN/Farkas_Ferenc.dds"
+	}	
+
+	spriteType = {
+		name = GFX_portrait_Oszlanyi_Kornel
+		texturefile = "gfx/leaders/HUN/Oszlanyi_Kornel.dds"
+	}		
+	
+	spriteType = {
+		name = GFX_portrait_Bertalan_Arpad
+		texturefile = "gfx/leaders/HUN/Bertalan_Arpad.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_ioan_mihail_racovita
+		texturefile = "gfx/leaders/ROM/ioan_mihail_racovita.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Constantin_Constantinescu
+		texturefile = "gfx/leaders/ROM/Constantin_Constantinescu.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Vaino_Valve
+		texturefile = "gfx/leaders/FIN/Vaino_Valve.dds"
+	}		
+	
+	spriteType = {
+		name = GFX_portrait_Georges_Timmermans
+		texturefile = "gfx/leaders/BEL/Georges_Timmermans.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Lambert_Robins
+		texturefile = "gfx/leaders/BEL/Lambert_Robins.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Pavel_Batov
+		texturefile = "gfx/leaders/SOV/Pavel_Batov.dds"
+	}	
+
+	spriteType = {
+		name = GFX_portrait_Vasily_Danilovich_Sokolovsky
+		texturefile = "gfx/leaders/SOV/Vasily_Danilovich_Sokolovsky.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_William_Poole
+		texturefile = "gfx/leaders/SAF/William_Poole.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Dan_Pienaar_image
+		texturefile = "gfx/leaders/SAF/Dan_Pienaar_image.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Hendrik_Klopper
+		texturefile = "gfx/leaders/SAF/Hendrik_Klopper.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Pierre_De_Villiers
+		texturefile = "gfx/leaders/SAF/Pierre_De_Villiers.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Nick_Bierman
+		texturefile = "gfx/leaders/SAF/Nick_Bierman.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Christiaan_du_Toit
+		texturefile = "gfx/leaders/SAF/Christiaan_du_Toit.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Pieter_de_Waal
+		texturefile = "gfx/leaders/SAF/Pieter_de_Waal.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_George_Brink1
+		texturefile = "gfx/leaders/SAF/George_Brink.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Maczek
+		texturefile = "gfx/leaders/POL/Maczek.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Zygmunt_Bohusz_Szyszko
+		texturefile = "gfx/leaders/POL/Zygmunt_Bohusz_Szyszko.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_POL_Rudolf_Dreszer
+		texturefile = "gfx/leaders/POL/Rudolf_Dreszer.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Bronislaw_Prugar_Ketling
+		texturefile = "gfx/leaders/POL/Bronislaw_Prugar_Ketling.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Mieczyslaw_Boruta_Spiechowicz
+		texturefile = "gfx/leaders/POL/Mieczyslaw_Boruta_Spiechowicz.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Italy_Amedeo_Savoia_Aosta
+		texturefile = "gfx/leaders/IEA/Portrait_Italy_Amedeo_Savoia_Aosta.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Italy_Pietro_Gazzera
+		texturefile = "gfx/leaders/IEA/Portrait_Italy_Pietro_Gazzera.dds"
+	}	
+
+	spriteType = {
+		name = GFX_portrait_Corneliu_Teodorini
+		texturefile = "gfx/leaders/ROM/Corneliu_Teodorini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_AOI_gugliemo_nasi"
+		texturefile = "gfx/leaders/IEA/portrait_AOI_gugliemo_nasi.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_greekosmas"
+		texturefile = "gfx/leaders/GRE/kosmas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Georgios_Grivas"
+		texturefile = "gfx/leaders/GRE/Georgios_Grivas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Ioannis_Kotoulas"
+		texturefile = "gfx/leaders/GRE/Ioannis_Kotoulas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Konstantinos_Davakis"
+		texturefile = "gfx/leaders/GRE/Konstantinos_Davakis.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Konstantinos_Bakopoulos"
+		texturefile = "gfx/leaders/GRE/Konstantinos_Bakopoulos.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_georgios_stanotas"
+		texturefile = "gfx/leaders/GRE/georgios_stanotas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Petros_Voulgaris"
+		texturefile = "gfx/leaders/GRE/Petros_Voulgaris.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Dimitrios_Oikonomou"
+		texturefile = "gfx/leaders/GRE/Dimitrios_Oikonomou.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_demestichas"
+		texturefile = "gfx/leaders/GRE/demestichas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_papagos"
+		texturefile = "gfx/leaders/GRE/papagos.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Georgios_Grivas"
+		texturefile = "gfx/leaders/GRE/Georgios_Grivas.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_katsimitros"
+		texturefile = "gfx/leaders/GRE/katsimitros.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_gre_konstantinos_demertziss"
+		texturefile = "gfx/leaders/GRE/portrait_gre_konstantinos_demertzis.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_one"
+		texturefile = "gfx/leaders/NEP/Nepal_one.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_two"
+		texturefile = "gfx/leaders/NEP/Nepal_two.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_eight"
+		texturefile = "gfx/leaders/NEP/Nepal_eight.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_three"
+		texturefile = "gfx/leaders/NEP/Nepal_three.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_four"
+		texturefile = "gfx/leaders/NEP/Nepal_four.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_five"
+		texturefile = "gfx/leaders/NEP/Nepal_five.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_six"
+		texturefile = "gfx/leaders/NEP/Nepal_six.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Nepal_seven"
+		texturefile = "gfx/leaders/NEP/Nepal_seven.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_William_Tennant"
+		texturefile = "gfx/leaders/NEP/William_Tennant.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Dumitru_Damaceanu
+		texturefile = "gfx/leaders/ROM/Dumitru_Damaceanu.dds"
+	}		
+	
+	spriteType = {
+		name = GFX_portrait_Iosif_Iacobici
+		texturefile = "gfx/leaders/ROM/Iosif_Iacobici.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Leonard_Mociulschi
+		texturefile = "gfx/leaders/ROM/Leonard_Mociulschi.dds"
+	}
+	
+	spriteType = {
+		name = GFX_portrait_georgi_markov
+		texturefile = "gfx/leaders/BUL/georgi_markov.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_ivan_markov
+		texturefile = "gfx/leaders/BUL/ivan_markov.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_nikola_hadzipetkov
+		texturefile = "gfx/leaders/BUL/nikola_hadzipetkov.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_konstantin_lukash
+		texturefile = "gfx/leaders/BUL/konstantin_lukash.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_damyan_velchev
+		texturefile = "gfx/leaders/BUL/damyan_velchev.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_angel_dotsev
+		texturefile = "gfx/leaders/BUL/angel_dotsev.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_nikola_mihov
+		texturefile = "gfx/leaders/BUL/nikola_mihov.dds"
+	}		
+	
+	spriteType = {
+		name = GFX_portrait_vasil_boydev
+		texturefile = "gfx/leaders/BUL/vasil_boydev.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_Carl_Johan_Erichsen
+		texturefile = "gfx/leaders/NOR/Carl_Johan_Erichsen.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_small_himmler
+		texturefile = "gfx/interface/ideas/portrait_GER_heinrich_himmler_small.dds"
+	}	
+	
+	spriteType = {
+		name = GFX_portrait_small_gobby
+		texturefile = "gfx/interface/ideas/portrait_GER_joseph_goebbels_small.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_small_hess
+		texturefile = "gfx/interface/ideas/portrait_GER_rudolf_hess_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_bul_asen_nikolov"
+		texturefile = "gfx/leaders/BUL/asen_nikolov.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Choibalsan"
+		texturefile = "gfx/leaders/MON/portrait_Choibalsan.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Lhagvasuren"
+		texturefile = "gfx/leaders/MON/Portrait_Lhagvasuren.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Butochiyn_Tsog"
+		texturefile = "gfx/leaders/MON/Butochiyn_Tsog.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Demid"
+		texturefile = "gfx/leaders/MON/Portrait_Demid.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Lkhagvasuren_Jamyan1"
+		texturefile = "gfx/leaders/MON/Lkhagvasuren_Jamyan1.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Yumjaagiin"
+		texturefile = "gfx/leaders/MON/Portrait_Yumjaagiin.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Leslie_Andrew"
+		texturefile = "gfx/leaders/NZL/Leslie_Andrew.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_George_Clifton"
+		texturefile = "gfx/leaders/NZL/George_Clifton.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Andrew_Russel"
+		texturefile = "gfx/leaders/NZL/Andrew_Russel.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_William_George_Stevens"
+		texturefile = "gfx/leaders/NZL/William_George_Stevens.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_portrait_Harold_Barrowclough"
+		texturefile = "gfx/leaders/NZL/Harold_Barrowclough.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_James_Hargest"
+		texturefile = "gfx/leaders/NZL/James_Hargest.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Leslie_Morshead"
+		texturefile = "gfx/leaders/AST/Leslie_Morshead.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_John_Lavarack_image"
+		texturefile = "gfx/leaders/AST/John_Lavarack_image.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Thomas_Blamey"
+		texturefile = "gfx/leaders/AST/Thomas_Blamey.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Australia_Alan_Vasey"
+		texturefile = "gfx/leaders/AST/Portrait_Australia_Alan_Vasey.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Australia_Horace_Robertson"
+		texturefile = "gfx/leaders/AST/Portrait_Australia_Horace_Robertson.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Australia_John_Northcott"
+		texturefile = "gfx/leaders/AST/Portrait_Australia_John_Northcott.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Iven_Mackay"
+		texturefile = "gfx/leaders/AST/Iven_Mackay.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_William_Slim"
+		texturefile = "gfx/leaders/RAJ/William_Slim.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Montagu_Stopford"
+		texturefile = "gfx/leaders/RAJ/Montagu_Stopford.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Claude_Auchinleck_image"
+		texturefile = "gfx/leaders/RAJ/Claude_Auchinleck_image.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Douglas_Gracey"
+		texturefile = "gfx/leaders/RAJ/Douglas_Gracey.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Noel_Beresford_Peirse"
+		texturefile = "gfx/leaders/RAJ/Noel_Beresford_Peirse.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_J_N_chaudhuri"
+		texturefile = "gfx/leaders/RAJ/J_N_chaudhuri.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Orde_Wingate"
+		texturefile = "gfx/leaders/RAJ/Orde_Wingate.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Geoffrey_Scoones"
+		texturefile = "gfx/leaders/RAJ/Geoffrey_Scoones.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Charles_Hamilton_Boucher"
+		texturefile = "gfx/leaders/RAJ/Charles_Hamilton_Boucher.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Salipada_Pendatun"
+		texturefile = "gfx/leaders/PHI/Salipada_Pendatun.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Paulino_Santos"
+		texturefile = "gfx/leaders/PHI/Paulino_Santos.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Rafael_Jalandoni"
+		texturefile = "gfx/leaders/PHI/Rafael_Jalandoni.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Manuel_F_Cabal"
+		texturefile = "gfx/leaders/PHI/Manuel_F_Cabal.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Alfredo_M_Santos"
+		texturefile = "gfx/leaders/PHI/Alfredo_M_Santos.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Basilio_J_Valdez"
+		texturefile = "gfx/leaders/PHI/Basilio_J_Valdez.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Yoshijiro_Umezu"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Yoshijiro_Umezu.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Seishiro_Itagaki"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Seishiro_Itagaki.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Kuniaki_Koiso"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Kuniaki_Koiso.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Keisuke_Fujie"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Keisuke_Fujie.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Sadao_Araki"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Sadao_Araki.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Kiichiro_Higuchi"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Kiichiro_Higuchi.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Kenji_Doihara"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Kenji_Doihara.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Hitoshi_Imamura"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Hitoshi_Imamura.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Otozo_Yamada"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Otozo_Yamada.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Jo_Iimura"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Jo_Iimura.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Toshizo_Nishio"
+		texturefile = "gfx/leaders/MAN/Portrait_Japan_Toshizo_Nishio.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Tomoyuki_Yamashita"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Tomoyuki_Yamashita.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Hisaichi_Terauchi"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Hisaichi_Terauchi.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Shunroku_Hata"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Shunroku_Hata.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Yasuji_Okamura"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Yasuji_Okamura.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Akira_Muto"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Akira_Muto.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Shizuichi_Tanaka"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Shizuichi_Tanaka.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Harukichi_Hyakutake"
+		texturefile = "gfx/leaders/JAP/Portrait_Japan_Harukichi_Hyakutake.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Japan_Harukichi_Hyakutake"
+		texturefile = "gfx/leaders/SIA/admiral_thawal.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_luang_sinthusongkhramchai"
+		texturefile = "gfx/leaders/SIA/luang_sinthusongkhramchai.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Siam_Plaek"
+		texturefile = "gfx/leaders/SIA/Siam_Plaek.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_luang_sinthusongkhramchai"
+		texturefile = "gfx/leaders/SIA/luang_sinthusongkhramchai.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Luang_Sawad"
+		texturefile = "gfx/leaders/SIA/Luang_Sawad.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Chin_wichitsongkhram"
+		texturefile = "gfx/leaders/SIA/Chin_wichitsongkhram.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Pichit_krieng"
+		texturefile = "gfx/leaders/SIA/Pichit_krieng.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Sai_Kotchaseni"
+		texturefile = "gfx/leaders/SIA/Sai_Kotchaseni.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Chakchai_Supangkasen"
+		texturefile = "gfx/leaders/SIA/Chakchai_Supangkasen.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Charun_Rattanakun_Seriroengrit"
+		texturefile = "gfx/leaders/SIA/Charun_Rattanakun_Seriroengrit.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_Portrait_Siam_Phraya_Phahon2"
+		texturefile = "gfx/leaders/SIA/Portrait_Siam_Phraya_Phahon2.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_portrait_Luang_Pradit_Manutham"
+		texturefile = "gfx/leaders/SIA/Luang_Pradit_Manutham.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_TAI_HO"
+		texturefile = "gfx/leaders/SIA/TAI_HO.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_admiral_sanguan"
+		texturefile = "gfx/leaders/SIA/admiral_sanguan.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_portrait_generic_land_2"
+		texturefile = "gfx/leaders/GRE/generic_land_2.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_portrait_Emile_Muselier"
+		texturefile = "gfx/leaders/FRA/Emile_Muselier.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_Thrasyvoulos_Tsakalotos"
+		texturefile = "gfx/leaders/GRE/Thrasyvoulos_Tsakalotos.dds"
+	}		
+	
+}

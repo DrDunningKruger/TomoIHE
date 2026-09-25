@@ -1,0 +1,10 @@
+italy_enters_war_category = {
+	allowed = {
+		original_tag = ITA
+	}
+	available = {
+	}
+	priority = {
+		base = 100
+	}
+}

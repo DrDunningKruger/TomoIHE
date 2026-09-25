@@ -1,0 +1,18 @@
+﻿air_wings = {
+	653 = {
+		small_plane_airframe_3 =  {	
+				owner = "SOV" 
+				amount = 100
+				version_name = "La-5"		
+			}
+			name = "Arat Squadron"	
+			start_experience_factor = 0.9
+		small_plane_airframe_3 =  {	
+				owner = "SOV" 
+				amount = 100
+				version_name = "La-5"		
+			}
+			name = "Arat Squadron II"
+            start_experience_factor = 0.9
+    }
+}

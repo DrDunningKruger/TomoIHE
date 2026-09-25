@@ -1,0 +1,25 @@
+
+state={
+	id=318
+	name="STATE_318"
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			4641 5 
+		}
+
+	}
+
+	provinces={
+		4641 
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

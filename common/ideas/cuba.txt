@@ -1,0 +1,204 @@
+ideas = {
+
+    country = { 
+	
+		CUB_provisional_government = {
+			picture = received_attache
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				political_power_cost = 1	
+                research_speed_factor = 0.10				
+			}
+		}
+		
+		CUB_puppet_regime = {
+			picture = pheco
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    democratic_drift = 0.05		
+				political_power_cost = 0.75
+                production_speed_buildings_factor = 0.10	
+				hidden_modifier = {
+                production_speed_coastal_bunker_factor = -0.10
+			    production_speed_bunker_factor = -0.10
+                }				
+			}
+		}
+		
+		CUB_puppet_regime2 = {
+			picture = pheco
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                democratic_drift = 0.05			
+				political_power_cost = 0.60
+                production_speed_buildings_factor = 0.10	
+                #industrial_capacity_factory = 0.05	
+				hidden_modifier = {
+                production_speed_coastal_bunker_factor = -0.1		
+			    production_speed_bunker_factor = -0.1
+                }				
+			}
+		}
+
+		CUB_puppet_regime3 = {
+			picture = pheco
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                democratic_drift = 0.05
+                industrial_capacity_factory = 0.1				
+			}
+		}		
+
+		CUB_schools = {
+			picture = generic_research_bonus
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+                research_speed_factor = 0.10				
+			}
+		}		
+
+		CUBRAF = {
+		           
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+			picture = usaaf		
+            
+			modifier = {
+			air_doctrine_cost_factor = -0.5
+			}
+		}
+		
+		CUB_nine_cent = {
+			picture = CUB_nine
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				production_speed_anti_air_building_factor = 0.25
+				production_speed_arms_factory_factor = 0.1	
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+
+		CUB_charbourne = {
+			picture = GRE_tobacco_trade
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				consumer_goods_expected_value = -0.20
+			}
+		}
+
+		CUB_lowsupport = {
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				stability_factor = -0.10
+				war_support_factor = -0.1				
+			}
+		}
+		CUB_badsupport = {
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				stability_factor = -0.05
+				war_support_factor = -0.05				
+			}
+		}		
+	}
+}

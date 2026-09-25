@@ -1,0 +1,91 @@
+﻿capital = 315
+
+oob = "CUB_1936"
+set_research_slots = 3
+# Starting tech
+set_technology = {
+    cap_everyone = 1
+	infantry_weapons = 1
+	superior_firepower = 1	
+	fuel_silos = 1	
+	basic_train = 1	
+	engines_1 = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1	
+	engine_tech_1 = 1	
+	armor_tech_1 = 1	
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1	
+    new_tank_guns = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1	
+}
+set_country_flag = monroe_doctrine
+set_war_support = 0.2
+set_fuel_ratio = 1.0
+set_convoys = 50
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.10"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 69
+	fascism = 4
+	communism = 20
+	neutrality = 7
+}
+
+add_ideas = {
+    training_spirit
+	CUB_provisional_government
+	CUB_lowsupport
+}
+
+
+recruit_character = CUB_jose_agripino_barnet
+recruit_character = CUB_guillermo_cabral
+recruit_character = CUB_wenceslao_carmona
+recruit_character = CUB_gregorio_morales
+recruit_character = CUB_fidel_castro
+recruit_character = CUB_enrique_c_rolas
+recruit_character = CUB_palaez_menendez
+recruit_character = CUB_domingo_r_del_toro
+recruit_character = CUB_eduardo_chibas
+recruit_character = CUB_juan_blas_hernandez
+recruit_character = CUB_sergio_carbo
+recruit_character = CUB_fulgencio_batista
+recruit_character = CUB_rodrigo_a_fuentes
+recruit_character = CUB_sandalio_junco
+recruit_character = CUB_salvador_castaneda_castro
+recruit_character = CUB_angel_gonzalez
+recruit_character = CUB_julio_sanguily
+recruit_character = CUB_carlos_prio
+recruit_character = CUB_gerardo_machado
+recruit_character = CUB_eugenio_molinet_castro
+recruit_character = CUB_milguy
+recruit_character = CUB_industrialist
+recruit_character = CUB_tanker
+recruit_character = CUB_mechman
+
+recruit_character = CUB_Markel_Madrid
+recruit_character = CUB_Alfonso_Herrera
+recruit_character = CUB_Jairo_Ariza
+recruit_character = CUB_Teo_Herrero
+recruit_character = CUB_Sergio_Duque
+recruit_character = CUB_Jorge_Chistau
+
+recruit_character = CUB_Felipe_Carvajal
+recruit_character = CUB_Leonardo_Orduno
+recruit_character = CUB_maximo_castanon
+
+
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 100 }	

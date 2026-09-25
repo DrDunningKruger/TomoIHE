@@ -1,0 +1,39 @@
+division_template = {
+	name = "3rd Carpathian Rifle Division"			
+	is_locked = no
+	division_names_group = POL_INF_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }	
+		mountaineers = { x = 1 y = 2 }	
+		mountaineers = { x = 1 y = 3 }	
+		anti_tank_brigade = { x = 2 y = 0 }
+		anti_tank_brigade = { x = 2 y = 1 }		
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Carpathian Rifle Brigade"
+		location = 792
+		division_template = "3rd Carpathian Rifle Division"	
+		start_experience_factor = 1.5
+	}
+	division = {
+		name = "2nd Carpathian Rifle Brigade"
+		location = 792
+		division_template = "3rd Carpathian Rifle Division"
+		start_experience_factor = 1.5
+	}
+}

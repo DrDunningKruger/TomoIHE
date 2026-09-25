@@ -1,0 +1,100 @@
+#Burma_road_category = {
+#	Burma_delivery = {
+#
+#		icon = jap_conquer_china
+#
+#		allowed = { original_tag = CHI }
+#		
+#		visible = {
+#			has_global_flag = asia_only
+#		}
+#		
+#		available = {
+#			NOT = { has_global_flag = burma_road_closed }
+#		}
+#
+#		days_mission_timeout = 30
+#	
+#		cancel_trigger = {
+#			NOT = { has_global_flag = burma_road_closed }
+#		}
+#
+#		activation = {
+#			has_global_flag = burma_road_closed
+#		}
+#
+#		fire_only_once = no
+#
+#		is_good = yes
+#
+#		timeout_effect = {
+#			if = {
+#				limit = { has_global_flag = burma_road_lvl_1 }
+#				CHI = { 
+#					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = USA }
+#					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 128 producer = USA }
+#					add_equipment_to_stockpile = { type = support_equipment_1 amount = 200 producer = USA }
+#					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 86 producer = USA }
+#					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 140 producer = USA }
+#				}
+#				hidden_effect = {
+#				activate_mission = Burma_delivery
+#				}
+#			}
+#			if = {
+#				limit = { has_global_flag = burma_road_lvl_2 }
+#				CHI = {
+#					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2400 producer = USA }
+#				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 160 producer = USA }
+#				add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 producer = USA }
+#		add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 108 producer = USA }
+#					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 175 producer = USA }
+#				}
+#				hidden_effect = {
+#				activate_mission = Burma_delivery
+#				}
+#			}
+#			if = {
+#				limit = { has_global_flag = burma_road_lvl_3 }
+#				CHI = {
+#					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2880 producer = USA }
+#					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 200 producer = USA }
+#					add_equipment_to_stockpile = { type = support_equipment_1 amount = 312 producer = USA }
+#					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 135 producer = USA }
+#					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 219 producer = USA }
+#				}
+#				hidden_effect = {
+#				activate_mission = Burma_delivery
+#				}
+#			}
+#			if = {
+#				limit = { has_global_flag = burma_road_lvl_4 }
+#				CHI = {
+#					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3456 producer = USA }
+#					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 250 producer = USA }
+#					add_equipment_to_stockpile = { type = support_equipment_1 amount = 390 producer = USA }
+#					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 169 producer = USA }
+#					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 274 producer = USA }
+#				}
+#				hidden_effect = {
+#				activate_mission = Burma_delivery
+#				}
+#			}
+#			if = {
+#				limit = { has_global_flag = burma_road_lvl_5 }
+#				CHI = {
+#					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 4147 producer = USA }
+#					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 312 producer = USA }
+#					add_equipment_to_stockpile = { type = support_equipment_1 amount = 488 producer = USA }
+#					add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 211 producer = USA }
+#					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 342 producer = USA }
+#				}
+#				hidden_effect = {
+#				activate_mission = Burma_delivery
+#				}
+#			}
+#		}
+#	}
+#}
+
+

@@ -1,0 +1,1304 @@
+#Category allowed for JAP
+
+JAP_intervene_in_china = {
+	
+	JAP_china_step_up_war_effort = {
+
+		icon = jap_conquer_china
+
+		allowed = { original_tag = JAP }
+		
+		visible = {
+		has_war_with = CHI
+		}
+		
+		available = {
+		NOT = { country_exists = CHI }
+		}
+
+		days_mission_timeout = 30
+		#days_remove = 1
+	
+		cancel_trigger = {
+			hidden_trigger = {
+					NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
+			}
+		}
+
+		activation = {
+			JAP_has_idea_JAP_intervene_in_china = yes
+		}
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			if = {
+				limit = {
+					USA = {
+						has_war = no
+					}
+				}
+				USA = { add_war_support = 0.025 }
+			}
+			JAP_intervene_in_china_level_down = yes
+		}
+	}
+
+	JAP_ichi_go = {
+
+		icon = jap_conquer_china
+
+		available = {
+		NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
+			event_target:WTT_current_china_leader = {
+				has_capitulated = no
+				exists = yes
+			}
+		}
+
+		visible = {
+			any_enemy_country = {
+				is_literally_china = yes
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			if = {
+				limit = {
+					USA = {
+						has_war = no
+					}
+				}
+				USA = { add_war_support = 0.1 }
+			}
+			add_ideas = JAP_ichi_go
+			activate_mission_tooltip = JAP_conquer_china
+			set_country_flag = JAP_conquer_china_activate
+		}
+	}
+
+	JAP_conquer_china = {
+
+		icon = jap_conquer_china
+
+		available = {
+			event_target:WTT_current_china_leader = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		visible = {
+			JAP_has_idea_JAP_intervene_in_china = yes
+			any_enemy_country = {
+				is_literally_china = yes
+			}
+		}
+
+		activation = {
+			has_country_flag = JAP_conquer_china_activate
+		}
+
+		fire_only_once = yes
+
+		is_good = no
+
+		days_mission_timeout = 360
+		
+		timeout_effect = {
+			add_stability = -0.05
+			add_war_support = -0.15
+		}
+
+		complete_effect = {
+			add_stability = 0.03
+			add_war_support = 0.07
+		}
+	}
+}
+
+foreign_politics = { 
+
+	JAP_annex_siam = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			SIA = { is_ai = yes }
+			OR = {
+			GER = { has_completed_focus = GER_danzig_or_war }
+		    NOT = { country_exists = GER }
+		}}
+				
+		cost = 0
+				
+		visible = {
+			country_exists = SIA
+		}
+				
+		fire_only_once = yes
+		
+		complete_effect = {
+			JAP = { 
+						annex_country = {
+							target = SIA
+							transfer_troops = yes 
+						}
+			}
+			SIA = {
+					remove_state_core = 289
+					remove_state_core = 724
+					remove_state_core = 670
+					remove_state_core = 741
+			}
+			if = {
+					limit = {	
+					NOT = { country_exists = MAN }
+				  }
+			add_research_slot = 1
+			}
+		}
+	}
+	JAP_annex_manchukuo = {
+
+		icon = generic_operation
+
+		allowed = {
+			tag = JAP
+		}
+				
+		available = {
+			MAN = { is_ai = yes }		
+		}
+
+			fire_only_once = yes
+
+			cost = 0
+				
+		visible = {
+			country_exists = MAN
+		}
+
+		complete_effect = {
+		add_manpower = 150000
+			JAP = { 
+				annex_country = {
+					target = MAN
+					transfer_troops = yes 			
+				}
+			}
+			if = {
+					limit = {	
+					NOT = { country_exists = SIA }
+				  }
+			add_research_slot = 1
+			}			
+			if = {
+					limit = {	
+						NOT = {	has_completed_focus = JAP_expand_the_showa_steel_works }
+				  }
+				716 = {
+						add_resource = {
+							type = steel
+							amount = 16
+						}				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}			
+			}
+			if = {
+					limit = {	
+						NOT = {	has_completed_focus = JAP_expand_manchurian_railways }
+				  }
+				716 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+				}			
+			}
+			if = {
+					limit = {	
+						NOT = {	has_completed_focus = JAP_light_industry_development }
+				  }
+				715 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}		
+			}
+			if = {
+					limit = {	
+						NOT = {	has_completed_focus = JAP_heavy_industry_development }
+				  }
+				716 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}		
+			}		
+			if = {
+					limit = {	
+						NOT = {	has_completed_focus = JAP_manchuoil }
+				  }
+				714 = {
+					add_resource = {
+							type = oil
+							amount = 32
+						}
+				}		
+			}		
+		}
+	}
+}
+
+
+JAP_interservice_rivalry = {
+	JAP_steel_for_guns = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_steel_for_ships
+			}
+		}
+		cost = 30
+		days_remove = -1
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 4
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = 0.4
+    			tooltip_side = JAP_rivalry_army_side
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = JAP_steel_for_guns
+		}
+	}
+	JAP_steel_for_ships = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_steel_for_guns
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = -0.4
+    			tooltip_side = JAP_rivalry_navy_side
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = JAP_steel_for_ships
+		}
+	}
+	JAP_prioritize_army_aircraft_construction = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_prioritize_naval_aircraft_construction
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1938.9.1
+			}
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = 0.4
+    			tooltip_side = JAP_rivalry_army_side
+			}
+			add_ideas = JAP_prioritize_army_aircraft_construction
+			set_country_flag = JAP_prioritize_army_aircraft_construction
+		}
+	}
+	JAP_prioritize_naval_aircraft_construction = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_prioritize_army_aircraft_construction
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1938.9.1
+			}
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = -0.4
+    			tooltip_side = JAP_rivalry_navy_side
+			}
+			add_ideas = JAP_prioritize_naval_aircraft_construction
+			set_country_flag = JAP_prioritize_naval_aircraft_construction
+		}
+	}
+	JAP_everybody_serves = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_draft_exemptions
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		modifier = {
+			conscription = 0.02
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			set_country_flag = JAP_everybody_serves
+		}
+	}
+	JAP_draft_exemptions = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_everybody_serves
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = -0.4
+    			tooltip_side = JAP_rivalry_navy_side
+			}
+			set_country_flag = JAP_draft_exemptions
+		}
+	}
+	JAP_raiding_regiments = {
+
+		icon = generic_tank
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_special_air_landing_force
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		modifier = {
+			special_forces_cap = 0.02
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = 0.4
+    			tooltip_side = JAP_rivalry_army_side
+			}
+			set_country_flag = JAP_raiding_regiments
+		}
+	}
+	JAP_special_air_landing_force = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_country_flag = JAP_interservice_rivalry_selected
+			}
+			NOT = {
+				has_country_flag = JAP_raiding_regiments
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = -1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+			}
+		}
+		modifier = {
+			special_forces_attack_factor = 0.05 
+			special_forces_defence_factor = 0.05
+		}
+		complete_effect = {
+			set_country_flag = JAP_interservice_rivalry_selected
+			activate_mission = JAP_interservice_rivalry_off
+			add_power_balance_value = {
+    			id = JAP_interservice_rivalry_bop
+    			value = -0.4
+    			tooltip_side = JAP_rivalry_navy_side
+			}
+			set_country_flag = JAP_special_air_landing_force
+		}
+	}
+
+	JAP_interservice_rivalry_off = {
+
+		allowed = { always = no }
+
+		icon = ger_mefo_bills
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = yes
+
+		timeout_effect = {
+			clr_country_flag = JAP_interservice_rivalry_selected
+		}
+
+		ai_will_do = {
+			
+		}
+	}
+}
+
+foreign_politics = {
+	JAP_sue_for_peace_nuke = {
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_global_flag = JAP_nuke_1
+			has_global_flag = JAP_nuke_2
+			has_navy_size = { size < 40 }
+			NOT = {
+				controls_state = 526
+				controls_state = 645
+			}
+		}
+
+		visible = {
+			has_war = yes
+			has_global_flag = JAP_nuke_1
+		}
+
+		cost = 0
+
+		days_remove = -1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					controls_state = 525
+					controls_state = 527
+				}
+				factor = 10
+			}
+		}
+
+		modifier = {
+			forced_surrender_limit = -1.0
+		}
+
+		remove_effect = {
+
+		}
+
+		remove_trigger = {
+			has_war = no
+		}
+		complete_effect = {
+			hidden_effect = {
+				clr_global_flag = JAP_nuke_1
+				clr_global_flag = JAP_nuke_2
+			}
+		}
+	}
+	JAP_sue_for_peace_nuke_mission = {
+		available = {
+			has_global_flag = JAP_nuke_1
+			has_global_flag = JAP_nuke_2
+		}
+
+		visible = {
+			NOT = {
+				OR = {
+					controls_state = 536
+					controls_state = 533
+					controls_state = 534
+					controls_state = 532
+					controls_state = 282
+					controls_state = 530
+					controls_state = 531
+					controls_state = 528
+					controls_state = 529
+				}
+			}
+		}
+
+		modifier = {
+			
+		}
+
+		days_mission_timeout = 720
+		fire_only_once = yes
+
+		activation = {
+			has_tech = nukes
+			has_war_with = JAP
+		}
+
+		complete_effect = {
+			JAP = {
+				unlock_decision_tooltip = JAP_sue_for_peace_nuke
+			}
+		}
+	}
+}
+
+#Category allowed for JAP
+#Not visible if puppet
+JAP_southern_expansion = {
+	JAP_invade_yunan = {
+		available = {
+			has_completed_focus = JAP_3rdbattle
+			OR = {
+			has_full_control_of_state = 603
+			has_full_control_of_state = 599
+			has_full_control_of_state = 671
+			has_full_control_of_state = 670
+			}
+		}
+
+		visible = {
+			tag = JAP
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			transfer_state = 325
+			transfer_state = 747
+			transfer_state = 751
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+		}
+	}
+
+	JAP_pressure_france = { 
+
+		available = {
+			16 = { NOT = { is_controlled_by = FRA } }
+			NOT = { has_war_with = FRA }
+			NOT = { is_in_faction_with = FRA }
+			custom_trigger_tooltip = {
+				tooltip = demand_indochina_focus_tt
+				OR = {
+					286 = { is_fully_controlled_by = FRA }
+					670 = { is_fully_controlled_by = FRA }
+					671 = { is_fully_controlled_by = FRA }
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = JAP_strike_south_doctrine
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		complete_effect = {
+			FRA = { country_event = { id = france.1 } }
+			
+				transfer_state = 286
+				transfer_state = 670
+				transfer_state = 671		
+				transfer_state = 741
+				transfer_state = 728
+				728 = { add_core_of = CHI }
+		}
+
+	}
+}
+
+
+
+political_actions = {
+	JAP_break_the_london_naval_treaty = {
+
+		icon = generic_break_treaty
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+
+		}
+
+		visible = {
+			has_idea = JAP_the_london_naval_treaty
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			remove_ideas = JAP_the_london_naval_treaty
+			FRA = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
+			USA = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
+			ENG = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
+			FRA = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
+			USA = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
+			ENG = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
+			remove_opinion_modifier = { target = FRA modifier = JAP_join_the_london_naval_treaty }
+			remove_opinion_modifier = { target = USA modifier = JAP_join_the_london_naval_treaty }
+			remove_opinion_modifier = { target = ENG modifier = JAP_join_the_london_naval_treaty }
+		}		
+	}
+}
+
+prospect_for_resources = {
+
+ ##  ##  #  # ### #  # ### ###  #  #     ###  ###  ##  ##  #  # ###   ##  ###      ##  ###  ###  ##  
+#   #  # #  #  #  #  # #   #  # ## #     #  # #   #   #  # #  # #  # #  # #       #  # #  # #   #  # 
+ #  #  # #  #  #  #### ##  ###  # ##     ###  ##   #  #  # #  # ###  #    ##      #### ###  ##  #### 
+  # #  # #  #  #  #  # #   #  # #  #     #  # #     # #  # #  # #  # #  # #       #  # #  # #   #  # 
+##   ##   ##   #  #  # ### #  # #  #     #  # ### ##   ##   ##  #  #  ##  ###     #  # #  # ### #  # 
+
+#623:0 "Luzon"
+#627:0 "Mindanao"
+#625:0 "Samar"
+#725:0 "Nauru"
+
+	#Below is visible when JAP_exploit_the_southern_resource_area is completed
+	JAP_develop_luzon_chromium_deposits = { #623
+		icon = chromium
+
+		highlight_states = {
+			state = 623
+		}
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 623
+			has_tech = excavation3
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			623 = {
+				NOT = {
+					has_state_flag = luzon_chromium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			623 = {
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+				set_state_flag = luzon_chromium_developed
+			}
+		}
+	}
+
+	JAP_develop_mindanao_steel_deposits = { #627
+		icon = steel
+
+		highlight_states = {
+			state = 627
+		}
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 627
+			has_tech = excavation4
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			627 = {
+				NOT = {
+					has_state_flag = mindanao_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			627 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				set_state_flag = mindanao_steel_developed
+			}
+		}
+	}
+
+	JAP_develop_samar_steel_deposits = { #625
+		icon = steel
+
+		highlight_states = {
+			state = 625
+		}
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 625
+			has_tech = excavation3
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			625 = {
+				NOT = {
+					has_state_flag = samar_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			625 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				set_state_flag = samar_steel_developed
+			}
+		}
+	}
+
+	JAP_develop_nauru_tungsten_deposits = { #725
+		icon = tungsten
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		highlight_states = {
+			state = 725
+		}
+
+		available = {
+			has_full_control_of_state = 725
+			has_tech = excavation4
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			725 = {
+				NOT = {
+					has_state_flag = nauru_tungsten_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			725 = {
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+				set_state_flag = nauru_tungsten_developed
+			}
+		}
+	}
+	JAP_develop_tonkin_aluminium_deposits = { #671
+		icon = aluminium
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 671
+			has_tech = excavation4
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			671 = {
+				NOT = {
+					has_state_flag = tonkin_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			671 = {
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+				set_state_flag = tonkin_aluminium_developed
+			}
+		}
+	}
+
+	JAP_develop_singapore_aluminium_deposits = { #336
+		icon = aluminium
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 336
+			has_tech = excavation2
+		}
+
+		visible = {
+			has_completed_focus = JAP_exploit_the_southern_resource_area
+			336 = {
+				NOT = {
+					has_state_flag = singapore_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			336 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = singapore_aluminium_developed
+			}
+		}
+	}
+
+ ##  #  # ### #  # ###  ## ###     ###  ###  ##  ##  #  # ###   ##  ###  ## 
+#  # #  #  #  ## # #   #   #       #  # #   #   #  # #  # #  # #  # #   #   
+#    ####  #  # ## ##   #  ##      ###  ##   #  #  # #  # ###  #    ##   #  
+#  # #  #  #  #  # #     # #       #  # #     # #  # #  # #  # #  # #     # 
+ ##  #  # ### #  # ### ##  ###     #  # ### ##   ##   ##  #  #  ##  ### ##  
+
+	#Below is visible when JAP_3rdbattle is completed
+	JAP_develop_shandong_aluminium_deposits = { #597
+		
+		icon = aluminium
+
+		highlight_states = {
+			state = 597
+		}
+
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 597
+			has_tech = excavation3
+		}
+
+		visible = {
+			has_completed_focus = JAP_3rdbattle
+			597 = {
+				NOT = {
+					has_state_flag = shandong_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			597 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = shandong_aluminium_developed
+			}
+		}
+	}
+
+	JAP_develop_yunnan_aluminium_deposits = { #325
+
+		icon = aluminium
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 325
+			has_tech = excavation3
+		}
+
+		visible = {
+			has_completed_focus = JAP_3rdbattle
+			325 = {
+				NOT = {
+					has_state_flag = yunnan_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			325 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = yunnan_aluminium_developed
+			}
+		}	
+	}
+	JAP_develop_sichuan_aluminium_deposits = { #605
+
+		icon = aluminium
+		
+		allowed = {
+			original_tag = JAP
+		}
+
+		available = {
+			has_full_control_of_state = 605
+			has_tech = excavation3
+		}
+
+		visible = {
+			has_completed_focus = JAP_3rdbattle
+			605 = {
+				NOT = {
+					has_state_flag = sichuan_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			605 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = sichuan_aluminium_developed
+			}
+		}	
+	}
+}

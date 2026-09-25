@@ -1,0 +1,65 @@
+
+RAJ_UK = {
+	color = rgb { 170  10  10 }
+	color_ui = rgb { 200  10  10 }
+}
+
+#CRO = {
+#	color = rgb { 245  70  70 }
+#}
+
+
+CAN_UK = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+
+HUN_EMPIRE = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+NOR_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+HOL_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+BEL_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+
+SPR_civil_war = {
+	color = rgb { 200 100 31 }
+	color_ui = rgb { 245 123 38 }
+}
+
+GER_greater_german_reich = {
+	color = rgb { 54 54 54 }
+	color_ui = rgb { 115 115 115 }
+}
+
+SOV_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+
+IEA_ALBANIA	= { 
+	color = rgb { 149 45 102 }
+	color_ui = rgb { 194 59 133 }
+}
+
+CRO	= { 
+	color = rgb { 184 46 138 }
+	color_ui = rgb { 184 46 138 }
+}
+
+ITA_SOC	= { 
+	color = rgb { 44 81 41 }
+	color_ui = rgb { 44 81 41 }
+}

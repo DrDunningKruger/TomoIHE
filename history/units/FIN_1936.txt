@@ -1,0 +1,100 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "1 DIV TRAIN"		
+	division_names_group = ENG_INF_01
+    template_counter = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+	}
+	support = {
+       	
+	}
+}
+division_template = {
+	name = "Jalkaväkidivisioona"		# Infantry Division
+
+	division_names_group = FIN_INF_01
+    template_counter = 106
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }	
+		infantry = { x = 3 y = 0 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11105
+		division_template = "1 DIV TRAIN"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.01
+	}
+}
+	
+### No air units (first formed Jan-1938) ###
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FIN"
+		}
+		requested_factories = 1
+		progress = 0.66
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "FIN"
+		}
+		requested_factories = 1
+		progress = 0.35
+		efficiency = 100
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3000 }
+	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 250 }
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 }	
+}

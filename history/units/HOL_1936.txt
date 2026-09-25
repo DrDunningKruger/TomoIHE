@@ -1,0 +1,160 @@
+﻿division_template = {
+	name = "1 DIV TRAIN"		
+	division_names_group = ENG_INF_01
+    template_counter = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+	}
+	support = {
+       	
+	}
+}
+division_template = {
+	name = "Infanterie Divisie"
+	division_names_group = HOL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}	
+}
+division_template = {
+	name = "Motor Division"  		# Motorized Cavalry Brigade
+	division_names_group = HOL_MOT_01
+										# Note: motorized cavalry. Most sources have them truck-equipped.
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 0 y = 4 }		
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }	
+		motorized = { x = 1 y = 4 }			
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}	
+}
+
+division_template = {
+	name = "Mariniersdivisie"		# Marines
+	division_names_group = HOL_MAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 0 y = 4 }		
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 1 y = 4 }		
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+       	anti_air = { x = 0 y = 2 }
+	}	
+	priority = 2
+}
+
+units = {
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 391
+		division_template = "1 DIV TRAIN"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.01
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HOL"
+		}
+		requested_factories = 1
+		progress = 0.58
+		efficiency = 100
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HOL" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}	
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "HOL" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "HOL"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3700 }	
+}

@@ -1,0 +1,455 @@
+on_actions = {
+	on_startup = {
+			effect = {
+#				if = {
+#					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = ONLY_ASIA}}
+#					USA = { 
+#					load_oob = USA_1936_yes_asia 
+#					}
+#					set_global_flag = asia_only
+#					set_global_flag = burma_road_closed
+#					set_global_flag = burma_road_lvl_1
+#					JAP = {
+#						add_named_threat = { threat = 80 name = WW2_going_on}
+#						add_ideas = china_stalemate
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					CHI = {
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					USA = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					AST = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					RAJ = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					SIA = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					MAN = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					NZL = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					PHI = {
+#						add_ideas = naval_catch_up
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#					NEP = {
+#						air_experience = 500
+#						army_experience = 500
+#						navy_experience = 250
+#					}
+#				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA}}
+					SWI = {
+						annex_country = {
+							target = JAP
+						}
+						annex_country = {
+							target = MAN
+						}
+						annex_country = {
+							target = CHI
+						}
+						annex_country = {
+							target = RAJ
+						}
+						annex_country = {
+							target = NEP
+						}
+						annex_country = {
+							target = SIA
+						}
+						annex_country = {
+							target = PHI
+						}
+						annex_country = {
+							target = AST
+						}
+						annex_country = {
+							target = NZL
+						}	
+						annex_country = {
+							target = MEX
+						}
+					}
+					SOV = {
+						annex_country = {
+							target = MON
+						}					
+					}
+#					USA = {
+#					add_ideas = usanoasiaspirit
+#					}		
+					ITA = {
+					add_ideas = ITA_asiabuff
+					}
+				set_global_flag = no_asia
+					ENG = { 
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 30000
+							producer = ENG
+					}
+					add_research_slot = 1
+					}
+				}
+#				if = {
+#					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA_plus_raj}}
+#					SWI = {
+#						annex_country = {
+#							target = JAP
+#						}
+#						annex_country = {
+#							target = MAN
+#						}
+#						annex_country = {
+#							target = CHI
+#						}
+#						annex_country = {
+#							target = AST
+#						}
+#						annex_country = {
+#							target = NZL
+#						}
+#						annex_country = {
+#							target = NEP
+#						}
+#						annex_country = {
+#							target = SIA
+#						}
+#						annex_country = {
+#							target = PHI
+#						}
+#						annex_country = {
+#							target = MEX
+#						}						
+#					}
+#					USA = {
+#					add_ideas = usanoasiaspirit
+#					}
+#					}					
+#				set_global_flag = no_asia
+#				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA_plus_ast}}
+					SWI = {
+						annex_country = {
+							target = JAP
+						}
+						annex_country = {
+							target = MAN
+						}
+						annex_country = {
+							target = CHI
+						}
+						annex_country = {
+							target = RAJ
+						}
+						annex_country = {
+							target = NEP
+						}
+						annex_country = {
+							target = SIA
+						}
+						annex_country = {
+							target = PHI
+						}
+						annex_country = {
+							target = MEX
+						}						
+					}
+					SOV = {
+						annex_country = {
+							target = MON
+						}					
+					}					
+					AST = {
+						add_state_core = 723
+						add_state_core = 284
+						annex_country = {
+							target = NZL
+							transfer_troops = yes
+					    }
+				    }
+					AST = { 
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 10000
+							producer = AST
+						}
+					}
+#					USA = {
+#					add_ideas = usanoasiaspirit
+#					}	
+					ITA = {
+					add_ideas = ITA_asiabuff
+					}					
+				set_global_flag = no_asia
+				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = YES_ASIA}}
+						USA = { load_oob = USA_1936_yes_asia }
+				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA}}
+						USA = { load_oob = USA_1936_no_asia }
+						USA = {						
+							385 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}
+							386 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}
+							393 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}							
+							375 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}							
+							386 = { 
+								remove_building = { type = dockyard level = 1 }	
+							}
+							378 = { 
+								remove_building = { type = dockyard level = 2 }	
+							}
+							378 = { 
+								remove_building = { type = industrial_complex level = 10 }
+							}							
+						}
+					IEA = {
+							559 = {
+							add_resource = {
+								type = rubber
+								amount = 100
+							}
+						}
+					}
+				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA_plus_ast}}
+						USA = { load_oob = USA_1936_no_asia }
+						USA = {
+							357 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}
+							358 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}							
+							385 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}
+							386 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}
+							393 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}							
+							375 = { 	
+								remove_building = { type = industrial_complex level = 5 }		
+							}							
+							386 = { 
+								remove_building = { type = dockyard level = 1 }	
+							}
+							378 = { 
+								remove_building = { type = dockyard level = 2 }	
+							}
+							378 = { 
+								remove_building = { type = industrial_complex level = 10 }
+							}							
+						}
+					IEA = {
+						559 = {
+							add_resource = {
+								type = rubber
+									amount = 100
+							}
+						}
+					}
+				}
+#				if = {
+#					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA_plus_raj}}
+#						USA = { load_oob = USA_1936_no_asia }
+#						USA = {
+#							357 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}
+#							358 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}							
+#							385 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}
+#							386 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}
+#							393 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}							
+#							375 = { 	
+#								remove_building = { type = industrial_complex level = 5 }		
+#							}							
+#							386 = { 
+#								remove_building = { type = dockyard level = 1 }	
+#							}
+#							378 = { 
+#								remove_building = { type = dockyard level = 2 }	
+#							}
+#							378 = { 
+#								remove_building = { type = industrial_complex level = 10 }
+#							}							
+#						}
+#					IEA = {
+#						559 = {
+#							add_resource = {
+#								type = rubber
+#								amount = 100
+#							}
+#						}
+#					}
+#				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_SCW_STATUS option = NO_SCW}}
+					set_global_flag = NO_SCW
+				}
+				if = {
+					limit = {has_game_rule = {rule = IHE_SCW_STATUS option = NO_SPR}}
+					set_global_flag = NO_SCW
+					set_global_flag = NO_SPAIN
+					SWI = {
+						annex_country = {
+							target = SPR
+						}
+						171 = { 	
+							remove_building = { type = arms_factory level = 1 }		
+						}	
+						790 = { 	
+							remove_building = { type = arms_factory level = 1 }		
+							remove_building = { type = industrial_complex level = 3 }		
+						}	
+						174 = {
+							remove_building = { type = industrial_complex level = 3 }		
+						}	
+						791 = {
+							remove_building = { type = industrial_complex level = 3 }		
+						}	
+						176 = {
+							remove_building = { type = industrial_complex level = 3 }		
+						}
+						792 = { 	
+							remove_building = { type = arms_factory level = 1 }		
+							remove_building = { type = industrial_complex level = 1 }		
+						}	
+						169 = { 	
+							remove_building = { type = arms_factory level = 1 }		
+							remove_building = { type = industrial_complex level = 1 }		
+						}		
+						166 = {
+							remove_building = { type = industrial_complex level = 1 }		
+						}		
+						793 = {
+							remove_building = { type = industrial_complex level = 1 }		
+						}	
+						165 = { 	
+							remove_building = { type = arms_factory level = 1 }		
+							remove_building = { type = industrial_complex level = 2 }		
+						}	
+						41 = {	
+							remove_building = { type = arms_factory level = 2 }		
+							remove_building = { type = industrial_complex level = 7 }		
+						}
+						170 = {
+							remove_building = { type = industrial_complex level = 1 }		
+						}		
+						175 = {
+							remove_building = { type = industrial_complex level = 1 }		
+						}	
+						173 = {
+							remove_building = { type = industrial_complex level = 2 }		
+						}					
+					}						
+					ITA = {
+                    	770 = {
+							add_resource = {
+								type = tungsten
+								amount = 250
+							}	
+							add_resource = {
+								type = chromium
+								amount = 175
+							}	
+							add_resource = {
+								type = steel
+								amount = 25
+							}
+						}    
+						2 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 12
+									instant_build = yes
+							}
+						}	
+					}
+			}
+	}
+#	on_state_control_changed = {
+#		effect = {
+#			if = { 
+#				limit = {
+#					has_game_rule = {rule = IHE_ASIA_STATUS option = ONLY_ASIA}
+#					NOT = { 640 = { is_controlled_by = RAJ } }
+#					NOT = { 288 = { is_controlled_by = RAJ } }
+#				}
+#			clr_global_flag = burma_road_closed
+#			}
+#		}
+#		effect = {
+#			if = { 
+#				limit = {
+#					has_game_rule = {rule = IHE_ASIA_STATUS option = ONLY_ASIA}
+#					OR = {
+#						NOT = { 747 = { is_controlled_by = CHI } }
+#						NOT = { 751 = { is_controlled_by = CHI } }
+#					}
+#				}
+#			clr_global_flag = burma_road_closed
+#			}
+#		}
+#	}						
+}
+
+				
+				
+				

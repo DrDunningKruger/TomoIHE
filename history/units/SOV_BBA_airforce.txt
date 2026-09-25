@@ -1,0 +1,479 @@
+﻿
+### Air Wings
+air_wings = {
+
+	219 = {	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+		}
+
+        137 = { #Crimea
+			medium_plane_naval_bomber_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "DB-3T"
+			}
+			medium_plane_naval_bomber_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "MBR-2"
+			}	
+			medium_plane_naval_bomber_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "MBR-2"
+			}
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 10"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 10"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 10"
+			}
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}			
+		}  
+		195 = {	#leningrad
+			medium_plane_naval_bomber_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "MBR-2"
+			}
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}
+			large_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "TB-3"
+			}
+			large_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "TB-3"
+			}			
+		}	
+		208 = {	#Luga, under leningrad
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}			
+		}	
+		263 = {	#Novgorod, under leningrad
+			small_plane_cas_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SU-2"
+			}	
+			small_plane_cas_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SU-2"
+			}			
+		}	
+		209 = {	#Pskov, under leningrad
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}			
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}			
+		}	
+		242 = {	#Smolensk
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}			
+		}	
+		207 = {	#Vitebsk
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}			
+		}	
+		206 = {	#Minsk
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}		
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}		
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}				
+		}	
+		194 = {	#Mozyr, under minsk
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}				
+		}	
+		241 = {	#Gomel
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}				
+		}	
+		202 = {	#Kiev
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}		
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-16 Type 28"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}			
+		}	
+		193 = {	#Chernigov
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}		
+			small_plane_cas_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "U-2"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}				
+		}	
+		220 = {	#Kursk
+			medium_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "DB-3"
+			}	
+			medium_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "DB-3"
+			}	
+			medium_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "DB-3"
+			}	
+			medium_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "DB-3"
+			}				
+		}	
+		260 = {	#Voronezh
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}					
+		}	
+		218 = {	#Rostov
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}	
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}
+			medium_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SB-2"
+			}					
+		}	
+		227 = {	#Stalino
+			small_plane_cas_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SU-2"
+			}	
+			small_plane_cas_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "SU-2"
+			}						
+		}	
+		200 = {	#Zaporozhe
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}					
+		}	
+		226 = {	#Dnipro
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-15bis"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_0 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}	
+			small_plane_airframe_1 = {
+				owner = "SOV" 
+				amount = 100
+				version_name = "I-153"
+			}
+		}		
+}

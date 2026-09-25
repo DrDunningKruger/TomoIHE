@@ -1,0 +1,1089 @@
+SpriteTypes = {
+####Weapons####
+####KMT####
+	SpriteType = {
+	    name = "GFX_CHI_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_rifle_gewehr88.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_rifle_type24.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_smg_bergmann1920.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_smg_cal_45_m3.dds"
+	}
+####Transport####
+	SpriteType = {
+		name = "GFX_CHI_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_motorized.dds"
+	}
+    SpriteType = {
+        name = "GFX_CHI_motorized_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/CHI/CHI_motorized.dds"
+    }
+	SpriteType = {
+		name = "GFX_CHI_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_apc_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_apc_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_apc_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_transport_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_GXC_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_transport_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_YUN_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_transport_plane.dds"
+	}	
+	SpriteType = {
+		name = "GFX_XSM_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_transport_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_SHX_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_transport_plane.dds"
+	}	
+    SpriteType = {
+        name = "GFX_CHI_motorized_rocket_unit_medium"
+        texturefile = "gfx/interface/technologies/CHI/CHI_motorized_rocket_unit.dds"
+	}    
+	SpriteType = {
+        name = "GFX_MAN_motorized_rocket_unit_medium"
+        texturefile = "gfx/interface/technologies/JAP/JAP_ktyusha.dds"
+	}
+####Armored Car####
+	SpriteType = {
+		name = "GFX_CHI_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_armored_car_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_armored_car_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_armored_car3_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_armored_car_3.dds"
+	}
+####Amphibious####
+	SpriteType = {
+		name = "GFX_CHI_amphibious_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_amp_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_amphibious_tank_2_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_amp_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_amf_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_amf_2.dds"
+	}
+####Basic Light Tank###
+	SpriteType = {
+		name = "GFX_CHI_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_light_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_light_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_light_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_light_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_light_spaa.dds"
+	}
+####Improved Light Tank###
+	SpriteType = {
+		name = "GFX_CHI_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_light_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_light_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_light_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_light_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_light_spaa.dds"
+	}
+####Advanced Light Tank###
+	SpriteType = {
+		name = "GFX_CHI_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_light_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_light_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_light_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_light_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_light_spaa.dds"
+	}
+####Basic Medium Tank###
+	SpriteType = {
+		name = "GFX_CHI_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_medium_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_medium_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_medium_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_medium_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_medium_spaa.dds"
+	}
+####Improved Medium Tank###
+	SpriteType = {
+		name = "GFX_CHI_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_medium_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_medium_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_medium_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_medium_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_medium_spaa.dds"
+	}
+####Advanced Medium Tank###
+	SpriteType = {
+		name = "GFX_CHI_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_medium_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_medium_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_medium_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_medium_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_medium_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_medium_spaa.dds"
+	}
+####Basic Heavy Tank###
+	SpriteType = {
+		name = "GFX_CHI_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_basic_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_basic_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_basic_heavy_spaa.dds"
+	}
+####Improved Heavy Tank###
+	SpriteType = {
+		name = "GFX_CHI_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_heavy_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_heavy_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_improved_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_imp_heavy_spaa.dds"
+	}
+####Advanced Heavy Tank###
+	SpriteType = {
+		name = "GFX_CHI_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_heavy_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_heavy_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_advanced_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_adv_heavy_spaa.dds"
+	}
+####Main Battle Tank###
+	SpriteType = {
+		name = "GFX_CHI_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_MBT.dds"
+	}
+####Super Heavy Tank###
+	SpriteType = {
+		name = "GFX_CHI_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_super_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_super_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_super_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/GEN/GEN_super_heavy_spaa.dds"
+	}
+####Fighter####
+	SpriteType = {
+		name = "GFX_CHI_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_fighter_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_fighter3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_fighter_3.dds"
+	}
+####CAS####
+	SpriteType = {
+		name = "GFX_CHI_CAS1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_CAS_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_CAS2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_CAS_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_CAS3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_CAS_3.dds"
+	}
+####Naval Bomber####
+	SpriteType = {
+		name = "GFX_CHI_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_nav_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_nav_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_nav_3.dds"
+	}
+####Heavy Fighter####
+	SpriteType = {
+		name = "GFX_CHI_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_heavy_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_heavy_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_heavy_fighter_3.dds"
+	}
+####Tac Bomber####
+	SpriteType = {
+		name = "GFX_CHI_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_bomber_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_bomber_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_bomber_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_bomber_3.dds"
+	}
+####Strat Bomber####
+    SpriteType = {
+		name = "GFX_CHI_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_strat_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_CHI_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_strat_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_strat_3.dds"
+	}
+####CV Fighter####	
+	SpriteType = {
+		name = "GFX_CHI_cv_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_fighter_0.dds"
+		}	
+    SpriteType = {
+        name = "GFX_CHI_cv_fighter1_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_fighter_1.dds"
+    }
+    SpriteType = {
+        name = "GFX_CHI_cv_fighter2_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_fighter_2.dds"
+    }
+    SpriteType = {
+        name = "GFX_CHI_cv_fighter3_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_fighter_3.dds"
+    }
+####CV Nav Bomber####	
+    SpriteType = {
+        name = "GFX_CHI_cv_naval_bomber1_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_nav_1.dds"
+    }	
+    SpriteType = {
+        name = "GFX_CHI_cv_naval_bomber2_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_nav_2.dds"
+    }		
+	SpriteType = {
+        name = "GFX_CHI_cv_naval_bomber3_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_cv_nav_3.dds"
+    }
+####Scout Planes####
+	SpriteType = {
+		name = "GFX_CHI_scout_plane1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_scout_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_scout_2.dds"
+	}	
+####Jet Fighter####
+	SpriteType = {
+		name = "GFX_CHI_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_jet_fighter_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_CHI_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CHI/AIR/CHI_jet_fighter_2.dds"
+	}
+####Jet Bomber####	
+    SpriteType = {
+        name = "GFX_CHI_jet_strategic_bomber1_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_jet_strat_bomber.dds"
+    }
+    SpriteType = {
+        name = "GFX_CHI_jet_tactical_bomber1_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_jet_tac_bomber_1.dds"
+    }	
+    SpriteType = {
+        name = "GFX_CHI_jet_tactical_bomber2_medium"
+        texturefile = "gfx/interface/technologies/CHI/AIR/CHI_jet_tac_bomber_2.dds"
+    }	
+####China howitzer####
+	SpriteType = {
+		name = "GFX_CHI_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_artillery1_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_Art_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CHI_artillery4_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_Art_3.dds"
+	}
+####China AA#####
+	SpriteType = {
+		name = "GFX_CHI_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_AA_1.dds"
+	}
+####China AT####
+	SpriteType = {
+		name = "GFX_CHI_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_AT_1.dds"
+	}
+						###########MAN##########
+####Weapons####
+    SpriteType = {
+		name = "GFX_MAN_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/MAN/MAN_Liao_Type_13_rifle.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/CHI/CHI_rifle_zh29.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_smg_type_100.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_Type_5M1.dds"
+	}
+####Transport####
+	SpriteType = {
+		name = "GFX_MAN_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_type97.dds"
+	}
+    SpriteType = {
+        name = "GFX_MAN_motorized_equipment_1_medium"
+        texturefile = "gfx/interface/technologies/JAP/JAP_type97.dds"
+    }
+	SpriteType = {
+		name = "GFX_MAN_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_apc_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_apc_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_apc_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_transport_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_transport_plane.dds"
+	}	
+####Amphibious####
+	SpriteType = {
+		name = "GFX_MAN_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_ampf_mot_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_ampf_mot_2.dds"
+	}
+####Armored Car####
+	SpriteType = {
+        name = "GFX_MAN_armored_car1_medium"
+        texturefile = "gfx/interface/technologies/JAP/JAP_AC0_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_armored_car2_medium"
+        texturefile = "gfx/interface/technologies/JAP/JAP_AC0_2.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_armored_car3_medium"
+        texturefile = "gfx/interface/technologies/JAP/JAP_AC2_2.dds"
+	}	
+####Fighter####
+	SpriteType = {
+		name = "GFX_MAN_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_fighter_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_fighter1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_fighter2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_fighter3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_fighter_3.dds"
+	}
+####CAS####
+	SpriteType = {
+		name = "GFX_MAN_CAS1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_CAS_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_CAS2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_CAS_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_CAS3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_CAS_3.dds"
+	}
+####Naval Bomber####
+	SpriteType = {
+		name = "GFX_MAN_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_nav_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_nav_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_nav_3.dds"
+	}
+####Heavy Fighter####
+	SpriteType = {
+		name = "GFX_MAN_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_heavy_fighter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_heavy_fighter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_heavy_fighter_3.dds"
+	}
+####Tac Bomber####
+	SpriteType = {
+		name = "GFX_MAN_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_bomber_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_bomber_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_bomber_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_bomber_3.dds"
+	}
+####Strat Bomber####
+    SpriteType = {
+		name = "GFX_MAN_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_strat_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_MAN_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_strat_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_strat_3.dds"
+	}
+####CV CAS####
+	SpriteType = {
+        name = "GFX_MAN_cv_CAS1_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_CAS_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_CAS2_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_CAS_2.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_CAS3_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_CAS_3.dds"
+	}
+####CV Fighter####
+	SpriteType = {
+        name = "GFX_MAN_cv_early_fighter_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_fighter_0.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_fighter1_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_fighter_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_fighter2_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_fighter_2.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_fighter3_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_fighter_3.dds"
+	}
+####CV Nav Bomber####
+	SpriteType = {
+        name = "GFX_MAN_cv_naval_bomber1_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_nav_1.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_naval_bomber2_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_nav_2.dds"
+	}
+	SpriteType = {
+        name = "GFX_MAN_cv_naval_bomber3_medium"
+        texturefile = "gfx/interface/technologies/JAP/AIR/JAP_cv_nav_3.dds"
+	}
+####Jet Fighter####
+	SpriteType = {
+		name = "GFX_MAN_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_jet_fighter_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_MAN_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/MAN/AIR/MAN_jet_fighter_2.dds"
+	}	
+#Manchu howitzer#
+	SpriteType = {
+		name = "GFX_MAN_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_artillery1_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_Art_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_artillery4_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_Art_3.dds"
+	}
+#Manchu AA#
+	SpriteType = {
+		name = "GFX_MAN_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AA_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_antiair2_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AA_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_antiair5_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AA_3.dds"
+	}
+#Manchu AT#
+	SpriteType = {
+		name = "GFX_MAN_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AT_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_antitank2_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AT_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_antitank5_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_AT_3.dds"
+	}
+####Scout Planes####
+	SpriteType = {
+		name = "GFX_MAN_scout_plane1_medium"
+		texturefile = "gfx/interface/technologies/JAP/AIR/JAP_scout_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/JAP/AIR/JAP_scout_2.dds"
+	}
+####WW1_Armor####
+	SpriteType = {
+		name = "GFX_MAN_gwtank_medium"
+		texturefile = "gfx/interface/technologies/FRA/FRA_ww1_afv.dds"
+	}
+####Basic Light####
+	SpriteType = {
+		name = "GFX_MAN_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_basic_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_light_td_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_basic_light_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_light_art_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_basic_light_spa.dds"
+	}
+    SpriteType = {
+		name = "GFX_MAN_basic_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_basic_light_spaa.dds"
+	}
+####Improved Light####
+	SpriteType = {
+		name = "GFX_MAN_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_imp_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_light_td_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_imp_light_spat.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_light_art_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_imp_light_spa.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/JAP/JAP_imp_light_spaa.dds"
+	}
+########	
+	SpriteType = {
+		name = "GFX_MAN_amphibious_tank_chassis_medium"
+         texturefile = "gfx/interface/technologies/GEN/CHASSIS/ITA_AMP_CH.dds"
+	}
+####WW1_Armor####	
+	SpriteType = {
+		name = "GFX_MAN_gwtank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/WW1_CH.dds"
+	}
+####Basic Light####	
+	SpriteType = {
+		name = "GFX_MAN_basic_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_LT1_CH.dds"
+	}
+####Improved Light####		
+	SpriteType = {
+		name = "GFX_MAN_improved_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_LT2_CH.dds"
+	}	
+####Advanced Light####	
+	SpriteType = {
+		name = "GFX_MAN_advanced_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_LT3_CH.dds"
+	}	
+	SpriteType = {
+		name = "GFX_MAN_modern_light_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_LT4_CH.dds"
+	}
+####Basic Medium####	
+	SpriteType = {
+		name = "GFX_MAN_basic_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_MT1_CH.dds"
+	}	
+####Improved Medium####	
+	SpriteType = {
+		name = "GFX_MAN_improved_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_MT2_CH.dds"
+	}
+####Advanced Medium####	
+	SpriteType = {
+		name = "GFX_MAN_advanced_medium_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_MT3_CH.dds"
+	}
+####MBT####	
+	SpriteType = {
+		name = "GFX_MAN_main_battle_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_MT_CH.dds"
+	}	
+####Basic Heavy####	
+	SpriteType = {
+		name = "GFX_MAN_basic_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_HT1_CH.dds"
+	}		
+####Improved Heavy####	
+	SpriteType = {
+		name = "GFX_MAN_improved_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_SH_CH.dds"
+	}
+####Advanced Heavy####	
+	SpriteType = {
+		name = "GFX_MAN_advanced_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_HT3_CH.dds"
+	}	
+####Super Heavy####	
+	SpriteType = {
+		name = "GFX_MAN_super_heavy_tank_chassis_medium"
+        texturefile = "gfx/interface/technologies/GEN/CHASSIS/JAP_SH_CH2.dds"
+	}	
+    #Japanese submarines#
+	SpriteType = {
+		name = "GFX_MAN_early_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_ship_hull_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_submarine4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_submarine_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_cruiser_submarine.dds"
+	}
+	#Japanese destroyer#
+	SpriteType = {
+		name = "GFX_MAN_early_destroyer_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_destroyer_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_destroyer_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_destroyer_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_ship_hull_light_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_destroyer4.dds"
+	}
+	#Japanese light cruiser#
+	SpriteType = {
+		name = "GFX_MAN_early_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser1.dds"
+	}
+ 	SpriteType = {
+		name = "GFX_MAN_early_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser1.dds"
+	}
+	SpriteType = {
+	     	name = "GFX_MAN_ship_hull_cruiser_1_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_2_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_3_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_light_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_4_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_light_cruiser4.dds"
+	}
+	#Japanese heavy cruiser#
+	SpriteType = {
+		name = "GFX_MAN_early_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_1_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_2_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_3_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_light_cruiser_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_heavy_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_ship_hull_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_4_capital_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_cruiser4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_cruiser_coastal_defense_ship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_cruiser_coastal_defense_ship.dds"
+	}
+	#Japanese battle cruiser#
+	SpriteType = {
+		name = "GFX_MAN_early_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battlecruiser1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_battlecruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battlecruiser2.dds"
+	}
+	#Japanese battleship#
+	SpriteType = {
+		name = "GFX_MAN_early_battleship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_battleship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_battleship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_battleship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_ship_hull_heavy_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_battleship4.dds"
+	}
+	#Japanese super-heavy battleship#
+	   	SpriteType = {
+		name = "GFX_MAN_heavy_battleship_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_super_heavy_1_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_battleship1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_heavy_battleship2_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_heavy_battleship2.dds"
+	}
+    #Japanese carrier#
+   	SpriteType = {
+		name = "GFX_MAN_ship_hull_carrier_conversion_ca_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier_conversion_ca.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_early_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_basic_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier2.dds"
+	}
+		SpriteType = {
+		name = "GFX_MAN_basic_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier2.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_improved_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier3.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier4.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_advanced_ship_hull_carrier_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_carrier4.dds"
+	}
+	#Japanese torpedo cruiser
+	SpriteType = {
+		   name = "GFX_MAN_torpedo_cruiser_medium"
+		   texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_torpedo_cruiser.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_ship_hull_torpedo_cruiser_medium"
+		texturefile = "gfx/interface/technologies/JAP/NAVY/JAP_torpedo_cruiser.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MAN_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_Rocket_Art_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_MAN_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/USA/USA_Rocket_Art_2.dds"
+	}	
+}

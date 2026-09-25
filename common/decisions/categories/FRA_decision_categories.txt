@@ -1,0 +1,18 @@
+FRA_war_measures = {
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+FRA_free_france = {
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+fra_holds_vs_germany_category = {
+	allowed = {
+		original_tag = FRA
+	}
+	priority = 20
+}

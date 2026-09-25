@@ -1,0 +1,66 @@
+# ai_strategy
+
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+ 
+
+GRE_prepare_for_war_strategy = {
+	allowed = { original_tag = GRE }
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+	
+	# defending from naval
+	ai_strategy = {
+
+		type = put_unit_buffers
+		ratio = 0.2
+		states = {
+			186 # Attica
+			47 # Aegean
+			187 # Peloponnese
+		}
+		subtract_fronts_from_need = no
+	}
+	
+	ai_strategy = {
+		type = ignore_army_incompetence
+		value = 0
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ITA
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ROM
+		value = 50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 50
+	}
+	
+	
+}
+

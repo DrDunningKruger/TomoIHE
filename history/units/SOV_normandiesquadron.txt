@@ -1,0 +1,11 @@
+﻿air_wings = {
+	653 = {
+		small_plane_airframe_3 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "Yak 7"		
+			}
+			name = "Normandie-Niemen"
+            start_experience_factor = 0.9
+	    }
+}

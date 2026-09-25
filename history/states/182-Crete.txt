@@ -1,0 +1,40 @@
+
+state={
+	id=182
+	name="STATE_182"
+	resources={
+		aluminium=15.000
+		steel=15.000
+		tungsten=15.000
+	}
+
+	history={
+		owner = SWI
+		victory_points = {
+			1164 5
+		}			
+		victory_points = {
+			12058 3
+		}
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 2
+			air_base = 10
+			1164 = {
+				naval_base = 3
+			}
+			12058 = {
+				naval_base = 1
+			}
+		}	
+
+	}
+
+	provinces={
+		1164 12058 13324 13327 13328 13330 13331 13332 
+	}
+	manpower=193950
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

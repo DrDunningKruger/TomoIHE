@@ -1,0 +1,175 @@
+ideas = {
+	country = {
+		ENG_kill_italians = {
+
+			picture = FRA_scw_intervention_nationalists_focus		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.05
+			}			
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.05
+			}		
+			targeted_modifier = {
+				tag = YUG
+				attack_bonus_against = 0.05
+			}		
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+			}	
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.05
+			}
+		}
+		
+        NEP_policy_of_isolationism = {
+		
+			picture = independence
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = 0.1
+				research_speed_factor = -0.15				
+			}
+	    }
+
+		NEP_suppressed_religion = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = nepreligion
+			
+			modifier = {
+				stability_factor = -0.20
+			}
+		}
+		
+		NEP_suppressed_religion_2 = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = nepreligion
+			
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		NEP_suppressed_religion_3 = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = nepreligion
+			
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+
+		NEP_suppressed_religion_4 = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = nepreligion
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}		
+		
+		NEP_SLC = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = gre_schachtplan
+			
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}		
+		NEP_bank = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		NEP_gurkhas = {
+			
+			allowed = {
+				original_tag = NEP
+			}
+
+			removal_cost = -1
+
+			picture = gurkhas
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+					terrain_penalty_reduction = 0.05
+					army_morale_factor = 0.05
+			}
+		}	
+	}
+}

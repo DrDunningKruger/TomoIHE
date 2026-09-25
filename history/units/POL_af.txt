@@ -1,0 +1,33 @@
+﻿air_wings = {
+	
+	10 = {
+		small_plane_cas_airframe_1 = {
+			owner = "POL" 
+			amount = 100
+			version_name = "PZL.23"
+		}		
+			name = "Polish Fighters"
+			start_experience_factor = 0.5		
+		small_plane_cas_airframe_1 = {
+			owner = "POL" 
+			amount = 100
+			version_name = "PZL.23"
+		}
+			name = "Polish Fighters"
+			start_experience_factor = 0.5		
+		small_plane_airframe_1 = {
+			owner = "POL" 
+			amount = 100
+			version_name = "PZL P.11"
+		}	
+			name = "Polish Fighters"
+			start_experience_factor = 0.5		
+		small_plane_airframe_1 = {
+			owner = "POL" 
+			amount = 100
+			version_name = "PZL P.11"
+		}	
+			name = "Polish Fighters"
+			start_experience_factor = 0.5	
+	}
+}

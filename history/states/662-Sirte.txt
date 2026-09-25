@@ -1,0 +1,26 @@
+
+state={
+	id=662
+	name="STATE_662"
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		victory_points = {
+			5188 1
+		}			
+
+	}
+
+	provinces={
+		1994 2007 4191 5179 5188 7985 8240 10996 12022 12082 12866 12917 13308 13310 
+	}
+	manpower=13213
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

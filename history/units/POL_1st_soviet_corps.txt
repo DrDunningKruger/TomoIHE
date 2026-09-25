@@ -1,0 +1,55 @@
+division_template = {
+	name = "Cavalry Brigade"		
+	is_locked = no
+	division_names_group = POL_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		mot_anti_tank_brigade = { x = 1 y = 2 }
+		mot_anti_tank_brigade = { x = 1 y = 3 }
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 }
+        anti_tank = { x = 0 y = 3 }		
+	}
+}
+
+units = {
+	division = {
+		name = "Jan Henryk Dąbrowski"
+		location = 12128
+		division_template = "Infantry Division"	
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Romuald Traugutt"
+		location = 12128
+		division_template = "Infantry Division"	
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Jan Kiliński"
+		location = 12128
+		division_template = "Infantry Division"	
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "1st Cavalry Brigade"
+		location = 12128
+		division_template = "Cavalry Brigade"	
+		force_equipment_variants = { infantry_equipment_2 = { owner = "SOV" } }	
+		start_experience_factor = 0.89
+	}	
+}

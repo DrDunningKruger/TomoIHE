@@ -1,0 +1,46 @@
+
+#			create_corps_commander = { #defensive gen for mountains
+#				name = "Ioannis Pitsikas"
+#				picture = "ioannis_pitsikas.dds"
+#				traits = { trait_mountaineer organizer infantry_leader }
+#				skill = 4
+#				attack_skill = 4
+#				defense_skill = 4
+#				planning_skill = 4
+#				logistics_skill = 5
+#			}
+
+
+#			create_field_marshal = { #commie
+#				name = "Evripidis Bakirtzis"
+#				picture = "evripidis_bakirtzis.dds"
+#				traits = { guerilla_fighter politically_connected infantry_leader }
+#				skill = 2
+#				attack_skill = 2
+#				defense_skill = 3
+#				planning_skill = 2
+#				logistics_skill = 2
+#			}
+
+#			create_field_marshal = { #nothing on this guy
+#				name = "Markos Drakos"
+#				picture = "drakos.dds"
+#				traits = { infantry_officer brilliant_strategist infantry_leader }
+#				skill = 4
+#				attack_skill = 3
+#				defense_skill = 3
+#				planning_skill = 4
+#				logistics_skill = 3
+#			}
+
+#			create_corps_commander = { #commie 
+#				name = "Aris Velouchiotis"
+#				picture = "Velouchiotis.dds"
+#				traits = { bearer_of_artillery }
+#				skill = 2
+#				attack_skill = 2
+#				defense_skill = 2
+#				planning_skill = 1
+#				logistics_skill = 1
+#			}
+				

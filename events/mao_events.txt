@@ -1,0 +1,231 @@
+add_namespace = mao
+
+country_event = {
+	id = mao.10
+	title = mao.10.title
+	desc = mao.10.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	fire_only_once = yes
+	trigger = {
+	tag = USA
+	date > 1937.1.1
+	NOT = { has_global_flag = asia_only }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = mao.10.a
+		ai_chance = { factor = 100}
+		hidden_effect = {
+			USA = {
+				swap_ideas = {
+					remove_idea = great_depression
+					add_idea = great_depression_2
+				}
+				set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 280 }
+				custom_effect_tooltip = USA_great_depression_cooldown_tt
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mao.11
+	title = mao.11.title
+	desc = mao.11.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	fire_only_once = yes
+	trigger = {
+	tag = USA
+	date > 1938.1.1
+	NOT = { has_global_flag = asia_only }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = mao.11.a
+		ai_chance = { factor = 100}
+		hidden_effect = {
+			USA = {
+				swap_ideas = {
+				remove_idea = great_depression_2
+				add_idea = great_depression_3
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mao.12
+	title = mao.12.title
+	desc = mao.12.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	fire_only_once = yes
+	trigger = {
+	tag = USA
+	date > 1939.1.1
+	NOT = { has_global_flag = asia_only }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = mao.12.a
+		ai_chance = { factor = 100}
+		remove_ideas = great_depression_3
+		hidden_effect = {
+			USA = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = USA_federal_housing_act
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_core_of = ROOT
+						not = { has_state_flag = USA_federal_housing_act }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = USA_federal_housing_act
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_core_of = ROOT
+						not = { has_state_flag = USA_federal_housing_act }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = USA_federal_housing_act
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_core_of = ROOT
+						not = { has_state_flag = USA_federal_housing_act }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = USA_federal_housing_act
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						is_core_of = ROOT
+						not = { has_state_flag = USA_federal_housing_act }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = USA_federal_housing_act
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mao.13
+	title = mao.13.title
+	desc = mao.13.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	fire_only_once = yes
+	trigger = {
+	tag = USA
+	date > 1940.1.1
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = mao.13.a
+		ai_chance = { factor = 100}
+		hidden_effect = {
+			USA = {
+				if = {
+					limit = {
+						NOT = { has_idea = undisturbed_isolation }
+						NOT = { has_idea = isolation }
+						NOT = { has_country_flag = USA_the_giant_wakes_added_civ_eco }
+					}
+					add_political_power = 100
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = isolation 
+							has_idea = undisturbed_isolation 
+							has_country_flag = USA_the_giant_wakes_added_civ_eco
+						}
+					}
+					add_ideas = civilian_economy
+					set_country_flag = USA_the_giant_wakes_added_civ_eco
+				}
+			}
+		}
+	}
+}
+
+##Event: Yekatit 12
+country_event = {
+	id = mao.1
+	title = mao.1.title
+	desc = mao.1.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	fire_only_once = yes
+	trigger = {
+	tag = IEA
+	date > 1937.2.17
+	}
+	mean_time_to_happen = {
+		days = 14
+	}
+	option = {
+		name = mao.1.a
+		ai_chance = { factor = 100}
+		IEA = {
+			set_country_flag = Yekatit_happened
+		}
+	}
+}
+
+##Event: Giaveni in italy
+country_event = {
+	id = mao.2
+	title = mao.2.title
+	desc = mao.2.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_soldiers_marching
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	tag = ITA
+	}
+	
+	option = {
+		name = mao.2.a
+		ai_chance = { factor = 100}	
+	}	
+}

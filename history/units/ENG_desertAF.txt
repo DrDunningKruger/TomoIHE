@@ -1,0 +1,57 @@
+﻿air_wings = {
+	
+	126 = {
+		small_plane_airframe_2 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "Kittyhawk"
+			}
+			name = "261 Wing"
+			start_experience_factor = 0.9
+		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+			modifier="support_unique"
+			name="Dominic"
+			surname="Battlehammer"
+			callsign="Chad"
+			portrait=3
+		}		
+	    small_plane_airframe_2 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "Kittyhawk"
+			}
+			name = "253 Wing"
+			start_experience_factor = 0.9   
+		small_plane_airframe_2 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "Kittyhawk"
+			}
+			name = "258 Wing"
+			start_experience_factor = 0.9
+		
+		small_plane_airframe_2 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "Kittyhawk"
+			}
+			name = "262 Wing"
+			start_experience_factor = 0.9
+	
+		
+		medium_plane_naval_bomber_airframe_1 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "PBY Catalina"
+			}
+			name = "261 Wing"
+			start_experience_factor = 0.9	
+		medium_plane_naval_bomber_airframe_1 =  {		
+				owner = "ENG" 
+				amount = 100
+				version_name = "PBY Catalina"
+			}
+			name = "270 Wing"
+			start_experience_factor = 0.9
+	}
+}

@@ -1,0 +1,61 @@
+﻿division_template = {
+	name = "Hungarian Cavalry"	
+	division_names_group = HUN_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 1 y = 4 }
+        cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+		cavalry = { x = 2 y = 4 }
+		cavalry = { x = 3 y = 0 }
+		cavalry = { x = 3 y = 1 }
+		cavalry = { x = 3 y = 2 }
+		mot_anti_tank_brigade = { x = 4 y = 0 }
+		mot_anti_tank_brigade = { x = 4 y = 1 }
+		mot_anti_tank_brigade = { x = 4 y = 2 }
+		mot_anti_tank_brigade = { x = 4 y = 3 }
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 	
+		anti_tank = { x = 0 y = 3 } 	
+	}
+}
+
+units = {
+	division= {
+		location = 9660
+		name = "Hungarian Cavalry"
+		division_template = "Hungarian Cavalry"
+		start_experience_factor = 0.4
+	}
+	division= {
+		location = 9660
+		name = "Hungarian Cavalry"
+		division_template = "Hungarian Cavalry"
+		start_experience_factor = 0.4
+	}
+	division= {
+		location = 9660
+		name = "Hungarian Cavalry"
+		division_template = "Hungarian Cavalry"
+		start_experience_factor = 0.4
+	}	
+	division= {
+		location = 9660
+		name = "Hungarian Cavalry"
+		division_template = "Hungarian Cavalry"
+		start_experience_factor = 0.4
+	}
+}

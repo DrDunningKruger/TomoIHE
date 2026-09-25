@@ -1,0 +1,810 @@
+characters={
+	BRA_getulio_vargas={
+		name=BRA_getulio_vargas
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/Portrait_Brazil_Getulio_Vargas.dds" # Can become Fascism leader later (via Portugal FT)
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}	
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	BRA_arlindo_veiga_dos_santos={
+		name=BRA_arlindo_veiga_dos_santos
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/portrait_bra_arlindo_veiga_dos_santos.dds" #Can become country leader later (via Portugal FT)
+			}
+		}
+		country_leader = {
+			expire = "1954.8.24"
+			ideology = despotism
+			id=-1
+			traits = {
+				staunch_monarchist
+			}
+		}
+	}
+	
+	BRA_plinio_salgado={
+		name=BRA_plinio_salgado
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/Portrait_Brazil_Plinio_Salgado.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	BRA_luis_carlos_prestes={
+		name=BRA_luis_carlos_prestes
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	### THEORISTS ###
+
+	BRA_eduardo_gomes={
+		name=BRA_eduardo_gomes
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = BRA_eduardo_gomes
+			ledger = air
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = eduardo_gomes
+			traits = {
+				air_warfare_theorist
+			}
+		}		
+	}	
+	
+	BRA_navy_theorist={
+		name=BRA_eduardo_gomes
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			ledger = navy
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = BRAnavy_theorist
+			traits = {
+				naval_theorist
+			}
+		}		
+	}
+
+
+	### ARMY CHIEFS ###
+
+
+
+	### NAVY CHIEFS ###
+
+	BRA_aristides_guilhem={
+		name=BRA_aristides_guilhem
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+		advisor={		
+			slot = navy_chief
+			idea_token = BRA_aristides_guilhem
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	BRA_jorge_martins={
+		name=BRA_jorge_martins
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = BRA_jorge_martins
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	BRA_floriano_peixoto={
+		name=BRA_floriano_peixoto
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = BRA_floriano_peixoto
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### AIR CHIEFS ###
+
+	BRA_salgado_filho={
+		name=BRA_salgado_filho
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BRA_salgado_filho
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_ismael_motta_paes={
+		name=BRA_ismael_motta_paes
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+		advisor={	
+			slot = air_chief
+			idea_token = BRA_ismael_motta_paes
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	BRA_epaminondas_dos_santos={
+		name=BRA_epaminondas_dos_santos
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+		advisor={	
+			slot = high_command
+			ledger = air
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = epaminondas_dos_santos
+			traits = {
+				air_chief_fighter_bomber
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_agliberto_vieira={
+		name=BRA_agliberto_vieira
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = navy
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	BRA_artur_da_costa_e_silva={
+		name=BRA_artur_da_costa_e_silva
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = bainfa
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_moreira_lima={
+		name=BRA_moreira_lima
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = air
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				air_chief_naval_strike
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	### POLITICAL ADVISORS ###
+
+	BRA_osvaldo_aranha={
+		name=BRA_osvaldo_aranha
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_osvaldo_aranha
+			allowed  = {
+				original_tag  = BRA
+			}
+			cost = 100
+			traits  = {
+				famous_aviator
+                quartermaster_general				
+			}
+		}		
+	}
+	
+	BRA_afranio_de_mello_franco={
+		name=BRA_afranio_de_mello_franco
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_afranio_de_mello_franco
+			allowed  = {
+				original_tag  = BRA
+			}
+			traits  = {
+				popular_figurehead 
+			}
+		}		
+	}	
+	
+	BRA_war_industrialist={
+		name="Sidnei Luz Cordeiro"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_war_industrialist
+			allowed  = {
+				original_tag  = BRA
+			}
+			traits  = {
+				war_industrialist
+			}
+		}		
+	}	
+	
+	BRA_captain_of_industry={
+		name="Guilherme Nakamura Prestes"
+		portraits={
+			army={
+				small="GFX_idea_silvio_scaroni"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_captain_of_industry
+			allowed  = {
+				original_tag  = BRA
+			}
+			traits  = {
+				captain_of_industry
+			}
+		}		
+	}	
+	
+	BRA_reformer={
+		name="Cássio Fagundes Alencar"
+		portraits={
+			army={
+				small="GFX_idea_ettore_muti"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_reformer
+			allowed  = {
+				original_tag  = BRA
+			}
+			traits  = {
+				economic_reformer
+			}
+		}		
+	}
+	
+	
+	######################## Generals
+	######################## Generals
+	######################## Generals
+	
+	BRA_Mascarenhas_de_Morais = {
+		name = "Mascarenhas de Morais"
+		portraits = {
+				army={
+					large=GFX_portrait_BRA_mascarenhas_de_morais_2
+					small=GFX_portrait_BRA_mascarenhas_de_morais_2_small
+				}
+		}
+		
+		field_marshal = {
+			desc = "mascarenhas_de_morais_2_desc"	#Leader of the expeditionary force
+			traits = { naval_invader offensive_doctrine hill_fighter infantry_expert organisational_leader media_personality panzer_leader }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 5
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = BRA_newton_cavalcanti
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = newton_cavalcanti
+			traits = {
+				military_theorist
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = BRA_joao_neves_da_fontoura
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_Euclides_Zenobio_Da_Costa = {
+		name = "Euclides Zenobio Da Costa"
+		portraits = {
+			army = {
+				large=GFX_portrait_BRA_euclides_zenobio_da_costa
+				small=GFX_portrait_BRA_euclides_zenobio_da_costa_small
+			}
+		}
+		
+		corps_commander = {
+			desc = "Euclides_Zenobio_desc"	#studied defensive lines in brazil, trained inf for expedition, fort buster, attacker
+			traits = { politically_connected brilliant_strategist infantry_leader infantry_expert fortress_buster trait_mountaineer }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = bralogis
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_Olympio_Falconiere_da_Cunha = {
+		name = "Olympio Falconiere da Cunha"
+		portraits = {
+			army = {
+				large=GFX_portrait_BRA_olympio_falconiere_da_cunha
+				small=GFX_portrait_BRA_olympio_falconiere_da_cunha_small
+			}
+		}
+		
+		corps_commander = {
+			desc = "olympio_falconiere_da_cunha_desc"	#2nd in charge of brazilian expeditionary force, well make him into a tanker
+			traits = { panzer_leader panzer_expert trickster expert_improviser urban_assault_specialist trait_mountaineer }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 4
+		}
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = bratank
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = BRA_maneuver
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				army_chief_maneuver_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_Alberto_Ribeiro_Paz = {
+		name = "Alberto Ribeiro Paz"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Alberto_Ribeiro_Paz" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Alberto_Ribeiro_Paz_desc"	#engineer
+			traits = { jungle_rat infantry_leader trait_engineer ambusher war_hero }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 6
+		}
+	}
+
+	BRA_Canrobert_Pereira_da_Costa = {
+		name = "Canrobert Pereira da Costa"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Canrobert_Pereira_Da_Costa" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Canrobert_Pereira_Da_Costa_desc"	#cavalry and artillery guy, went to many schools?
+			traits = { bearer_of_artillery cavalry_leader cavalry_expert scavenger combined_arms_expert harsh_leader }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+
+	BRA_Eurico_Gaspar_Dutra = {
+		name = "Eurico Gaspar Dutra"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Eurico_Gaspar_Dutra" #Can become unit leader
+			}
+		}
+		
+		field_marshal = {
+			desc = "Eurico_Gaspar_Dutra_desc"	#Minister of War, home guard fm
+			traits = { infantry_leader infantry_officer trait_cautious guerilla_fighter cavalry_leader defensive_doctrine }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}	
+
+		advisor={
+			slot = army_chief
+			idea_token = BRA_joao_neves_da_fontoura
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = joao_neves_da_fontoura
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	BRA_Odilio_Denys = {
+		name = "Odilio Denys"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Odilio_Denys" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Odilio_Denys_desc"	#led presidential guard, well make him into a tanker for europe
+			traits = { panzer_leader ranger trickster naval_invader ambusher trait_reckless }
+			skill = 5
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+
+	BRA_Joao_De_Sagades_Viana = {
+		name = "Joao De Sagades Viana"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Joao_De_Sagades_Viana" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Joao_De_Sagades_Viana_desc"	#organized a motorized unit, participated in italy, was good at defending
+			traits = { combined_arms_expert infantry_expert trait_mountaineer organizer inflexible_strategist scavenger }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 5
+		}
+	}
+
+	BRA_Joao_Baptista_de_Mattos = {
+		name = "Joao Baptista de Mattos"
+		portraits = {
+			army = {
+				small = "GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_Joao_Baptista_de_Mattos" #Can become unit leader
+			}
+		}
+		
+		corps_commander = {
+			desc = "Joao_Baptista_de_Mattos_desc"	#trained expeditionary force but wasnt allowed to participate due to black
+			traits = { guerilla_fighter infantry_leader infantry_expert commando skirmisher naval_invader paratrooper }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	BRA_Pedro_Aurelio_de_Gois_Monteiro = {
+		name = "Pedro Aurélio de Góis Monteiro"
+		portraits = {
+			army = {
+				large=GFX_portrait_BRA_gois_monterio
+				small=GFX_portrait_BRA_gois_monterio_small
+			}
+		}
+		
+		field_marshal = {
+			desc = "gois_monterio_desc"	#chief of staff of the army, well make him into invader fm
+			traits = { infantry_expert naval_invader invader_ii naval_liason ambusher offensive_doctrine aggressive_assaulter }
+			skill = 5
+			attack_skill = 7
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+		}
+		
+		advisor={	
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = bracommando
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+		
+		advisor={
+			slot = army_chief
+			idea_token = BRA_nero_fiuza_de_castro
+			allowed = {
+				original_tag = BRA
+			}
+			idea_token = nero_fiuza_de_castro
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+############### NAVY
+
+	BRA_augusto_rademaker={
+		name=BRA_augusto_rademaker
+		portraits={
+			army={
+				large=GFX_portrait_BRA_augusto_rademaker
+				small=GFX_portrait_BRA_augusto_rademaker_small
+			}
+		}
+		navy_leader={
+			traits = { old_guard_navy caustic_personality gentlemanly battleship_adherent blue_water_expert ironside big_guns_expert marksman safety_first }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 5	
+			legacy_id=-1
+		}
+	}
+	
+	BRA_henrique_aristides_guilhem = {
+		name = BRA_henrique_aristides_guilhem
+		portraits = {
+			army = {
+				large=GFX_portrait_BRA_henrique_guilhem
+				small=GFX_portrait_BRA_henrique_guilhem_small
+			}
+		}
+		navy_leader={
+			traits = { blockade_runner blue_water_expert spotter smoke_screen_expert crisis_magician }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 3	
+			legacy_id=-1
+		}
+		advisor={		
+			slot = navy_chief
+			idea_token = BRA_henrique_aristides_guilhem
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+}

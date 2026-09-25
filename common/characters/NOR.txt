@@ -1,0 +1,746 @@
+characters={
+	NOR_johan_nygaardsvold={
+		name="Johan Nygaardsvold"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/Portrait_Norway_Johan_Nygaardsvold.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ ww_one_trauma }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	NOR_vidkun_quisling={
+		name="Vidkun Quisling"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/Portrait_Norway_Vidkun_Quisling.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	NOR_johan_ludwig_mowinckel={
+		name="Johan Ludwig Mowinckel"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	NOR_adam_egedenissen={
+		name="Adam Egede-Nissen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	NOR_skule_storheil={
+		name="Skule Storheil"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_3"
+			}
+		}	
+	
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = NOR_skule_storheil
+			ledger = navy
+				allowed = {
+					original_tag = NOR
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+
+
+	}
+	NOR_ole_reistad={
+		name="Ole Reistad"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}	
+	
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = NOR_ole_reistad
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+				air_chief_reform
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		advisor={
+			
+			
+			slot = high_command
+			ledger = air
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+				air_bomber_interception 
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+	}
+	NOR_tryggve_gran={
+		name="Tryggve Gran"
+		portraits={
+			army={
+				small="GFX_portrait_NOR_tryggve_gran_small"
+			}
+		}
+	
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = NOR_tryggve_gran
+			ledger = air
+				allowed = {
+					original_tag = NOR
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+		advisor={
+			slot = high_command
+			ledger = air
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+				air_chief_night_bomber
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+	}
+	NOR_henry_diesen={
+		name="Henry Diesen"
+		portraits={
+			army={
+				large=GFX_portrait_NOR_henry_diesen
+				small=GFX_portrait_NOR_henry_diesen_small
+			}
+		}	
+	
+		advisor={
+			
+			slot = navy_chief
+			idea_token = NOR_henry_diesen
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					navy_chief_decisive_battle_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		navy_leader={
+			traits = { fleet_protector inshore_fighter spotter concealment_expert lancer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+			legacy_id=-1
+		}		
+	}
+	NOR_konrad_sundlo={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = NOR_konrad_sundlo
+			ledger = army
+				allowed = {
+					original_tag = NOR
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Konrad Sundlo"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	NOR_otto_ruge={
+		advisor={
+
+		    available = {
+			 OR = {
+			 has_completed_focus = NOR_join_allies
+			 has_completed_focus = NOR_replace_lakke
+			 has_completed_focus = NOR_issue_mobilisation_orders
+			}			
+			}		
+		
+		name="Otto Ruge"			
+			
+		slot = army_chief
+			idea_token = NOR_otto_ruge
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		
+
+
+		portraits={
+			army={
+				large="GFX_portrait_NOR_otto_ruge"
+				small="GFX_portrait_NOR_otto_ruge_small"
+			}
+		}
+		
+		field_marshal = {
+		    visible = {
+			 OR = {
+			 has_completed_focus = NOR_join_allies
+			 has_completed_focus = NOR_replace_lakke
+			 has_completed_focus = NOR_issue_mobilisation_orders
+			}			
+			}
+							desc = "Otto_Ruge_desc" #
+							traits = { urban_assault_specialist winter_specialist defensive_doctrine unyielding_defender infantry_leader trait_defeatist }
+							skill = 5
+							attack_skill = 5
+							defense_skill = 6
+							planning_skill = 5
+							logistics_skill = 5
+		}
+	}
+	NOR_jacob_von_der_lippe={
+		name="Jacob von der Lippe"
+		portraits={
+			army={
+				large=GFX_portrait_jacob_von_der_lippe
+				small=GFX_portrait_jacob_von_der_lippe_small
+			}
+		}	
+	
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = NOR_jacob_von_der_lippe
+			ledger = navy
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					navy_chief_naval_aviation_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	NOR_kristian_laake={
+		name="Kristian Laake"
+			portraits={
+				army={
+					large="GFX_portrait_NOR_kristian_laake"
+					small="GFX_portrait_NOR_kristian_laake_small"
+				}
+			}
+	
+		advisor={
+			slot = army_chief
+			idea_token = NOR_kristian_laake
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NOR_infman
+			ledger = army
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 200
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+		
+		field_marshal = {
+					desc = "Kristian_Laake_desc" #slow ass fm, defeatist, sacked when war began
+					traits = { trait_cautious defensive_doctrine winter_specialist infantry_leader organisational_leader trait_defeatist }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+		}
+	}
+	
+	NOR_carl_gustav_fleischer={
+		name=NOR_carl_gustav_fleischer  
+		portraits={
+			army={
+				large=GFX_portrait_NOR_carl_gustav_fleischer
+				small=GFX_portrait_NOR_carl_gustav_fleischer_small
+			}
+		}
+
+		corps_commander={
+					desc = "Carl_Gustav_Fleischer_desc" # good general, captured narvik, evacuated after norway fell, wanted to be commando, killed himself in 42
+					traits = { naval_invader commando infantry_expert trait_mountaineer inspirational_leader winter_expert }
+					skill = 6
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 5
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = NOR_guychiefreform
+			allowed = {
+				original_tag = NOR
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NOR_gustavfish
+			ledger = army
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_commando_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}			
+	}
+
+	NOR_jacob_ager_laurantzon={
+		name=NOR_jacob_ager_laurantzon
+		portraits={
+			army={
+				large=GFX_portrait_NOR_jacob_ager_laurantzon
+				small=GFX_portrait_NOR_jacob_ager_laurantzon_small
+			}
+		}
+
+		corps_commander={
+					desc = "jacob_ager_laurantzon_desc" # surrendered immedaitely
+					traits = { trait_defeatist trait_mountaineer winter_specialist  }
+					skill = 4
+					attack_skill = 3
+					defense_skill = 4
+					planning_skill = 5
+					logistics_skill = 5
+			legacy_id=-1
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = NOR_concealer
+			ledger = army
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_concealment_2
+				}
+				cost = 200
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+	}
+
+	NOR_jacob_hivden_haug={
+		name=NOR_jacob_hivden_haug
+		corps_commander={
+					desc = "jacob_Hvinden_Haug_desc" # abandoned strong positions and later surrendered
+					traits = { trait_defeatist ranger trait_imbecile winter_specialist }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 4
+			legacy_id=-1
+		}
+		portraits={
+			army={
+				large="GFX_portrait_NOR_jacob_hvinden_haug"
+				small="GFX_portrait_NOR_jacob_hvinden_haug_small"
+			}
+		}
+	}	
+	
+	NOR_bear={
+		name="Bear"
+		corps_commander={
+					desc = "bear_general_desc" #
+					traits = { trait_imbecile winter_specialist winter_expert ranger }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 4
+			legacy_id=-1
+		}
+		portraits={
+			army={
+				large="GFX_portrait_NOR_bear"
+				small="GFX_portrait_NOR_jacob_hvinden_haug_small"
+			}
+		}
+	}		
+	
+	NOR_Carl_Johan_Erichsen={
+		name="Bear"
+		corps_commander={
+					desc = "Carl_Johan_Erichsen_desc" #
+					traits = { winter_specialist panzer_leader panzer_expert hill_fighter trait_engineer }
+					skill = 5
+					attack_skill = 5
+					defense_skill = 5
+					planning_skill = 5
+					logistics_skill = 3
+			legacy_id=-1
+		}
+		portraits={
+			army={
+				large="GFX_portrait_Carl_Johan_Erichsen"
+				small="GFX_portrait_NOR_jacob_hvinden_haug_small"
+			}
+		}
+	}	
+	
+	NOR_hjalmar_riiser_larsen={
+		name="Hjalmar Riiser-Larsen"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}	
+	
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = NOR_hjalmar_riiser_larsen
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+				air_chief_rely_on_others
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	NOR_willhelm_von_tangen_hansteen={
+	
+		name="Willhelm von Tangen Hansteen"
+		portraits={
+			army={
+				large="GFX_portrait_NOR_wilhelm_von_tangen_hansteen"
+				small="GFX_portrait_NOR_wilhelm_von_tangen_hansteen_small"
+			}
+		}	
+	
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = NOR_willhelm_von_tangen_hansteen
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_chief_organizational_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = NOR_willhelm_von_tangen_hansteen2323
+			ledger = army
+				allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					army_armored_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+		
+		field_marshal = {
+		    visible = {
+			 OR = {
+			 has_completed_focus = NOR_join_allies
+			 has_completed_focus = NOR_issue_mobilisation_orders
+			}			
+			}		
+							desc = "wilhelm_von_tangen_hansteen_desc" #
+							traits = { offensive_doctrine fast_planner adaptable career_officer panzer_leader naval_invader }
+							skill = 5
+							attack_skill = 6
+							defense_skill = 5
+							planning_skill = 4
+							logistics_skill = 5		
+		}
+	}
+	NOR_edgar_otto={
+		name="Edgar Otto"
+		portraits={
+			army={
+				large=GFX_portrait_edgar_otto
+				small=GFX_portrait_edgar_otto_small
+			}
+		}
+	
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = NOR_edgar_otto
+			allowed = {
+					original_tag = NOR
+				}
+				traits = {
+					navy_chief_naval_aviation_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		navy_leader={
+			traits = { fleet_protector inshore_fighter ironside gunnery_expert bold big_guns_expert marksman }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id=-1
+		}		
+	}
+	NOR_adolf_indrebo={
+		name="Adolf Indrebø"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}	
+	
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_adolf_indrebo
+			allowed  = {
+					original_tag  = NOR
+				}
+				cost = 75
+				traits  = {
+					captain_of_industry 
+				}
+		}
+	}	
+	NOR_nowegiancivguy={
+		name="Jens Laugen"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}	
+	
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_othernigga
+			allowed  = {
+					original_tag  = NOR
+				}
+				traits  = {
+					resolute_social_democrat
+				}
+		}
+	}	
+	NOR_rearmer={
+		advisor={
+			slot = political_advisor
+			allowed  = {
+					original_tag  = NOR
+				}
+				traits  = {
+				rearmer
+				conservative_grandee
+				}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+	}
+	NOR_halvdan_koht={
+		name="Halvdan Koht"
+			portraits={
+				civilian={
+					small="GFX_portrait_NOR_halvdan_koht_small"
+				}
+			}	
+	
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_halvdan_koht
+			allowed  = {
+					original_tag  = NOR
+				}
+				traits  = {
+					smooth_talking_charmer 
+					great_architect
+				}
+		}
+	}
+	NOR_trygve_halvdan_lie={
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_trygve_halvdan_lie
+			allowed  = {
+					original_tag  = NOR
+				}
+				traits  = {
+					popular_figurehead 
+				}
+		}
+
+		name="Trygve Halvdan Lie"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+	}
+	
+	NOR_elias_corneliussen={
+		name="Elias Corneliussen"
+		portraits={
+			army={
+				large=GFX_portrait_NOR_elias_corneliussen
+				small=GFX_portrait_NOR_elias_corneliussen_small
+			}
+		}
+		navy_leader={
+			traits = { fleet_protector navy_career_officer inshore_fighter spotter blockade_runner concealment_expert destroyer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 1
+			legacy_id=-1
+		}
+	}
+
+	NOR_carsten_tank_nielsen={
+		name="Carsten Tank-Nielsen"
+		portraits={
+			army={
+				large=GFX_portrait_carsten_tank_nielsen
+				small=GFX_portrait_carsten_tank_nielsen_small
+			}
+		}
+
+		navy_leader={
+			traits = { fleet_protector inshore_fighter blockade_runner bold superior_tactician concealment_expert destroyer_leader search_pattern_expert } ### Literally speaking a blockade runner during the Russo-Japanese war.
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 4	
+			legacy_id=-1
+		}
+	}	
+}

@@ -1,0 +1,31 @@
+technologies = {
+	Mao = {
+		research_cost = 0
+		XOR = {
+			Battlehammer
+		}
+		folder = {
+			name = industry_folder
+			position = { x = -3 y = 0 }
+		}
+		
+			modifier = {
+				#factor = 0
+			}		
+	}
+	Battlehammer = {
+		XOR = {
+			Mao
+		}
+		research_cost = 0
+		folder = {
+			name = industry_folder
+			position = { x = -5 y = 0 }
+		}
+		
+			modifier = {
+				#factor = 0
+			}		
+	}
+}
+

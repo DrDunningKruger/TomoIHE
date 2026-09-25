@@ -1,0 +1,27 @@
+
+state={
+	id=812
+	name="STATE_812"
+
+	history={
+		owner = SWI
+		victory_points = {
+			8251 5 
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			8251 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+
+		}
+	}
+
+	provinces={
+		496 567 3152 8251 11426 12984 
+	}
+	manpower=275220
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=282
+	name="STATE_282"
+	resources={
+		aluminium=31.000
+		oil=10.000
+		rubber=12.000
+	}
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 4
+			air_base = 6
+			industrial_complex = 5
+			arms_factory = 2
+			dockyard = 4
+			1182 = {
+				naval_base = 10
+			}
+		}
+		victory_points = {
+			2085 50 
+		}
+
+	}
+
+	provinces={
+		993 1097 1113 1182 1944 2085 4000 4100 4184 4188 7016 9998 11908 
+	}
+	manpower=13773000
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

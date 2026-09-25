@@ -1,0 +1,872 @@
+characters={
+	BEL_paul_van_zeeland={
+		name="Paul Van Zeeland"
+		portraits={
+			civilian={
+				large="gfx/leaders/BEL/Portrait_Belgium_Paul_van_Zeeland.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+			traits  = {
+			economist
+			ww_one_trauma
+			}		
+		}	
+	}
+	BEL_gilles_wyvekens={
+		name=BEL_gilles_wyvekens
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ financial_expert }
+			expire="1945.1.1.12"
+			id=-1
+		}
+	}
+	BEL_fritz_conrad={
+		advisor={
+			slot = navy_chief
+			idea_token = BEL_fritz_conrad
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					navy_chief_naval_aviation_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_fritz_conrad
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+				large="GFX_AST_leslie_morshead"
+			}
+		}
+	}
+	BEL_raoul_overstraeten={
+		advisor={
+			slot = air_chief
+			idea_token = BEL_raoul_overstraeten
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					air_chief_rely_on_others
+				}
+				cost = 50
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_raoul_overstraeten
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}
+	BEL_georges_deffontaine={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = BEL_georges_deffontaine
+			ledger = navy
+				allowed = {
+					original_tag = BEL
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+		name=BEL_georges_deffontaine
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+	}
+	BEL_victor_strydonck_burkel={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = BEL_victor_strydonck_burkel
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_chief_reform_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_victor_strydonck_burkel
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+	BEL_georges_vereecken={
+		advisor={
+			slot = navy_chief
+			idea_token = BEL_georges_vereecken
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_georges_vereecken
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+	}
+	BEL_oscar_michiels={
+		advisor={
+			slot = high_command
+			idea_token = BEL_oscar_michiels
+			ledger = army
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_oscar_michiels
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+	}
+	BEL_charles_bastin={
+		advisor={
+			slot = army_chief
+			idea_token = BEL_charles_bastin
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_charles_bastin
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+	}
+	BEL_rene_lagrou={
+		advisor={
+			slot = high_command
+			idea_token = BEL_rene_lagrou
+			ledger = air
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+				air_chief_close_coordination
+					air_chief_paratrooper
+					
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_rene_lagrou
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}	
+	BEL_interceptor ={
+		advisor={
+			slot = high_command
+			idea_token = BEL_rene_lagrou
+			ledger = air
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					air_bomber_interception
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_rene_lagrou
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}
+	BEL_fritz_lob={
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = BEL_fritz_lob
+			ledger = air
+				allowed = {
+					original_tag = BEL
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+		name=BEL_fritz_lob
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}
+	}
+	BEL_jules_iserentant={
+		advisor={
+			slot = air_chief
+			idea_token = BEL_jules_iserentant
+			allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					air_chief_reform
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=BEL_jules_iserentant
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}
+	BEL_paul-henri_spaak={
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_sparkmanindu
+			allowed  = {
+					original_tag  = BEL
+				}
+				traits  = {
+					captain_of_industry 
+				}
+				cost = 75
+		}
+		name=BEL_paul-henri_spaak
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+	}	
+	BEL_appeaser ={
+		advisor={
+			slot = political_advisor
+			idea_token = BELappeaser
+			allowed  = {
+					original_tag  = BEL
+					has_war = no
+				}
+				traits  = {
+					appeaser
+					finance_graduate
+				}
+		}
+		name=BEL_paul-henri_spaak
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+	}
+	
+	BEL_achille_van_acker = {
+			advisor = {
+				slot = political_advisor
+				idea_token = BEL_achille_van_acker
+				allowed  = {
+					original_tag  = BEL
+				}
+				cost = 75
+				traits  = {
+					education_reformer
+				}
+			}
+			name = BEL_achille_van_acker
+			portraits = {
+				civilian = {
+					small = GFX_portrait_BEL_achille_van_acker_small
+				}
+			}
+	}	
+	
+	BEL_gaston_eyskens={
+		advisor={
+			slot = political_advisor
+			idea_token = BEL_gaston_eyskens
+			allowed  = {
+					original_tag  = BEL
+				}
+				traits  = {
+					armaments_organizer 
+				}
+		}
+		name=BEL_gaston_eyskens
+		portraits={
+			army={
+			    large="GFX_AST_leslie_morshead"			
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+	}
+
+	BEL_dieudonne_salve = {
+			advisor = {
+				slot = political_advisor
+				idea_token = BEL_dieudonne_salve
+				allowed  = {
+						original_tag  = BEL
+					}
+				available = {
+		
+				}
+				traits  = {
+					war_industrialist
+				}
+			}
+			name = BEL_dieudonne_salve
+			portraits = {
+				army = {
+					small = GFX_portrait_BEL_dieudonne_saive_small
+				}
+			}
+	}
+	
+	BEL_camille_gutt = {
+			advisor = {
+				slot = political_advisor
+				idea_token = BEL_camille_gutt
+				allowed  = {
+					original_tag  = BEL
+				}	
+				traits  = {
+					financial_expert 
+				}
+			available = {				
+				has_completed_focus = BEL_galopincommittee
+			}					
+			}
+			name = BEL_camille_gutt
+			portraits = {
+				army = {
+					small = GFX_portrait_BEL_camille_gutt_small
+				}
+			}
+	}	
+	
+	BEL_camille_huysmans = {
+			advisor = {
+				slot = political_advisor
+				idea_token = BEL_camille_huysmans
+				allowed  = {
+					original_tag  = BEL
+				}
+				traits  = {
+					gifted_shipping_magnate
+				}
+			available = {				
+				has_completed_focus = BEL_colonialtradefleet
+			}					
+				cost = 150
+			}
+			name = BEL_camille_huysmans
+			portraits = {
+				army = {
+					small = GFX_portrait_BEL_camille_huysmans_small
+				}
+			}
+	}
+
+	BEL_emile_de_cartier_de_marchienne = {
+			advisor = {
+				slot = political_advisor
+				idea_token = BEL_emile_de_cartier_de_marchienne
+				allowed  = {
+					original_tag  = BEL
+				}
+				available = {
+					has_government = democratic 
+				}
+				traits  = {
+					silent_workhorse
+				}
+			}
+			name = BEL_emile_de_cartier_de_marchienne
+			portraits = {
+				army = {
+					small = GFX_portrait_BEL_emile_de_cartier_de_marchienne_small
+				}
+			}
+	}
+
+#
+
+
+##############################
+
+	BEL_raoul_van_overstraeten = {
+
+			name = BEL_raoul_van_overstraeten
+
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_raoul_van_overstraeten
+					small = GFX_portrait_BEL_raoul_van_overstraeten_small
+				}
+			}
+
+			field_marshal = {
+			    desc = "raoul_van_overstraeten_desc"	#tanker for mainland
+				traits = { camouflage_expert ranger inflexible_strategist trait_defeatist trait_cautious }
+				skill = 5
+				attack_skill = 3
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 3
+			}
+
+			advisor = {
+				slot = theorist
+				idea_token = BEL_raoul_van_overstraeten_theorist
+				available = {
+						original_tag = BEL
+				}
+				
+				traits = {
+					superior_firepower_expert
+				}
+				
+				cost = 150
+
+				ai_will_do = {
+					base = 1.000
+				}
+			}
+	}	
+	
+	BEL_mcl_keyaerts = {
+			name=BEL_mcl_keyaerts
+			portraits={
+				army={
+					large=GFX_portrait_BEL_mcl_keyaerts
+					small=GFX_portrait_BEL_maurice_keyaerts_small
+				}
+			}
+
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_armored_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+			
+			corps_commander={
+						desc = "MCL_Keyaerts_desc"	#tanker for mainland
+						traits = { panzer_leader ranger trait_defeatist trickster }
+						skill = 5
+						attack_skill = 6
+						defense_skill = 4
+						planning_skill = 4
+						logistics_skill = 4
+				legacy_id=-1
+			}
+	}	
+	
+	BEL_jules_pire = {
+			name = BEL_jules_pire
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_jules_pire_image
+					small = GFX_portrait_BEL_jules_pire_small
+				}
+			}
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = BEL_jules_pire
+			ledger = army
+				allowed = {
+					original_tag = BEL
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+		advisor={
+			slot = high_command
+			idea_token = BELentrenchmentguy
+			ledger = army
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_entrenchment_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+			
+		corps_commander = {
+						desc = "jules_pire_desc"	
+						traits = { cavalry_leader career_officer trickster infantry_expert }
+						skill = 5
+						attack_skill = 4
+						defense_skill = 5
+						planning_skill = 4
+						logistics_skill = 5
+		}
+	}
+
+
+	BEL_Edouard_van_den_Bergen = {
+
+			name = "Edouard van den Bergen"
+
+			portraits = {
+				army = {
+					large = GFX_portrait_Edouard_van_den_Bergen
+					small = GFX_portrait_BEL_raoul_van_overstraeten_small
+				}
+			}
+
+		advisor={
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = BEL
+			}
+			traits = {
+				army_CombinedArms_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+			field_marshal = {
+			            desc = "Edouard_van_den_Bergen_desc"	 #was chief of staff, sacked for defending the country without kings orders
+						traits = { defensive_doctrine infantry_officer urban_assault_specialist organisational_leader }
+						skill = 5
+						attack_skill = 3
+						defense_skill = 3
+						planning_skill = 4
+						logistics_skill = 4
+			}	
+	}		
+	
+	BEL_Auguste_Baesens = {
+
+			name = "Auguste Baesens"
+
+			portraits = {
+				army = {
+					large = GFX_portrait_Auguste_Baesens
+					small = GFX_portrait_BEL_raoul_van_overstraeten_small
+				}
+			}
+
+			corps_commander = {
+						desc = "Auguste_Baesens_desc"	
+						traits = { bearer_of_artillery trait_engineer trait_defeatist war_hero }
+						skill = 4
+						attack_skill = 5
+						defense_skill = 4
+						planning_skill = 4
+						logistics_skill = 4
+			}	
+	}
+	
+	BEL_Alexis_Vander = {
+
+			name = "Alexis Vander Veken"
+
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_Alexis_Vander
+					small = GFX_portrait_BEL_raoul_van_overstraeten_small
+				}
+			}
+
+			corps_commander = { 
+						desc = "Alexis_Vander_Veken_desc" #Commanded I corps and a big fort 	 
+						traits = { organizer ambusher infantry_leader trait_defeatist war_hero defensive_doctrine }
+						skill = 4
+						attack_skill = 5
+						defense_skill = 5
+						planning_skill = 5
+						logistics_skill = 5
+			}	
+	}
+
+
+	BEL_jean_baptise_piron = {
+			name = BEL_jean_baptise_piron
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_jean_baptiste_piron
+					small = GFX_portrait_BEL_jean_baptiste_piron_small
+				}
+			}
+			advisor={
+				slot = army_chief
+				idea_token = BEL_maneuver
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}			
+			corps_commander = {
+				visible = {
+					has_completed_focus = BEL_movegovernmenttoengland
+				}
+				
+			    desc = "Jean-Baptiste_Piron_desc"	
+						traits = { infantry_leader infantry_expert ranger brilliant_strategist naval_invader invader_ii } #led free belgian infantry in europe
+						skill = 6
+						attack_skill = 5
+						defense_skill = 5
+						planning_skill = 5
+						logistics_skill = 5
+			}
+	}
+	
+	BEL_yvan_gerard = {
+			name = BEL_yvan_gerard
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_yvan_gerard
+					small = GFX_portrait_BEL_yvan_gerard_small
+				}
+			}
+			advisor={
+				slot = army_chief
+				idea_token = BEL_guy_simonds1
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}						
+			
+			corps_commander = {
+			    desc = "BEL_yvan_gerard_desc"	
+				visible = {
+					has_completed_focus = BEL_movegovernmenttoengland
+				}
+				traits = { panzer_expert scavenger camouflage_expert expert_improviser }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 5
+			}	
+	}	
+	
+	BEL_victor_van_strydonck_de_burkel = {
+			name = BEL_victor_van_strydonck_de_burkel
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_victor_van_strydonck_de_burke
+					small = GFX_portrait_BEL_victor_van_strydonck_de_burke_small
+				}
+			}
+			
+		advisor={
+			slot = high_command
+			idea_token = BEL_victor_van_strydonck_de_burkel
+			ledger = army
+				allowed = {
+					original_tag = BEL
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}		
+			
+			field_marshal = {
+				visible = {
+					has_completed_focus = BEL_movegovernmenttoengland
+				}
+						desc = "Victor_van_Strydonck_de_Burkel_desc"	
+						traits = { defensive_doctrine infantry_leader infantry_expert panzer_leader naval_invader }
+						skill = 5
+						attack_skill = 5
+						defense_skill = 6
+						planning_skill = 4
+						logistics_skill = 5
+			}
+	}	
+	
+	BEL_victor_Auguste_Edouard = {
+			name = "Auguste Edouard Gilliaert"
+			portraits = {
+				army = {
+					large = GFX_portrait_victorvanstrydonck
+					small = GFX_portrait_BEL_victor_van_strydonck_de_burke_small
+				}
+			}
+			field_marshal = {
+				visible = {
+					has_completed_focus = BEL_assumedirectcontrolofcongo
+				}
+
+						desc = "Auguste_Edouard_Gilliaert_desc"	
+						traits = { offensive_doctrine desert_fox infantry_expert commando fortress_buster }
+						skill = 5
+						attack_skill = 5
+						defense_skill = 5
+						planning_skill = 5
+						logistics_skill = 5
+			}
+	}
+
+	BEL_eddy_blondeel = {
+			name = BEL_eddy_blondeel
+			portraits = {
+				army = {
+					large = GFX_portrait_BEL_eddy_blondeel
+					small = GFX_portrait_BEL_eddy_blondeel_small
+				}
+			}
+			corps_commander = {
+				visible = { 
+					has_completed_focus = BEL_5thspecialairservice
+				}
+						desc = "eddyblondeel_desc"	
+						traits = { infantry_leader guerilla_fighter urban_assault_specialist commando paratrooper }
+						skill = 5
+						attack_skill = 4
+						defense_skill = 5
+						planning_skill = 4
+						logistics_skill = 5
+			}
+		}
+		
+		
+	BEL_Georges_Timmermans = {
+		name = "Georges Timmermans"
+		portraits = {
+			army = {
+				large = "GFX_portrait_Georges_Timmermans"
+				small = GFX_portrait_BUL_atanas_shalapatov_small
+			}
+		}
+		navy_leader = {
+			traits = { bold old_guard_navy navy_career_officer blockade_runner fleet_protector destroyer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 2
+			legacy_id = -1
+		}		
+	}	
+	
+	BEL_Lambert_Robins = {
+		name = "Lambert Robins"
+		portraits = {
+			army = {
+				large = "GFX_portrait_Lambert_Robins"
+				small = GFX_portrait_BUL_atanas_shalapatov_small
+			}
+		}
+		navy_leader = {
+			traits = { bold seawolf green_water_expert blockade_runner concealment_expert silent_hunter loading_drill_master }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 4
+			legacy_id = -1
+		}		
+	}		
+}

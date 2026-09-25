@@ -1,0 +1,34 @@
+﻿l_english:
+  medium_plane_cas_airframe_0:0 "Inter-War Attack Bomber"
+  medium_plane_cas_airframe_1:0 "Basic Attack Bomber"
+  medium_plane_cas_airframe_2:0 "Improved Attack Bomber"
+  medium_plane_cas_airframe_3:0 "Advanced Attack Bomber"
+  medium_plane_cas_airframe_4:0 "Modern Attack Bomber"
+  medium_plane_cas_airframe_desc:0 "Medium CAS with better range and damage, but less cost efficient"
+  medium_cas:0 "Medium Attack Bomber"
+
+  medium_plane_naval_bomber_airframe_0:0 "Inter-War Patrol Bomber"
+  medium_plane_naval_bomber_airframe_1:0 "Basic Patrol Bomber"
+  medium_plane_naval_bomber_airframe_2:0 "Improved Patrol Bomber"
+  medium_plane_naval_bomber_airframe_3:0 "Advanced Patrol Bomber"
+  medium_plane_naval_bomber_airframe_4:0 "Modern Patrol Bomber"
+  medium_plane_naval_bomber_airframe_desc:0 "Medium NAV with better range and damage, but less cost efficient"
+  medium_nav_bomber:0 "Medium Patrol Bomber"
+
+  small_plane_scout_plane_airframe_0:0 "Inter-War Army Cooperation Plane"
+  small_plane_scout_plane_airframe_1:0 "Basic Army Cooperation Plane"
+  small_plane_scout_plane_airframe_2:0 "Improved Army Cooperation Plane"
+  small_plane_scout_plane_airframe_3:0 "Advanced Army Cooperation Plane"
+  small_plane_scout_plane_airframe_4:0 "Modern Army Cooperation Plane"
+  small_plane_scout_plane_airframe_desc:0 "Small Scout Plane"
+  small_scout_plane:0 "Army Cooperation Plane"
+
+  large_plane_scout_plane_airframe_0:0 "Inter-War Large Scout Plane Airframe"
+  large_plane_scout_plane_airframe_1:0 "Basic Large Scout Plane Airframe"
+  large_plane_scout_plane_airframe_2:0 "Improved Large Scout Plane Airframe"
+  large_plane_scout_plane_airframe_3:0 "Advanced Large Scout Plane Airframe"
+  large_plane_scout_plane_airframe_4:0 "Modern Large Scout Plane Airframe"
+  large_plane_scout_plane_airframe_desc:0 "Large Scout Plane"
+  heavy_scout_plane:0 "Large Scout Plane"
+  
+

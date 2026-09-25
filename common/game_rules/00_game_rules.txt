@@ -1,0 +1,224 @@
+IHE_ASIA_STATUS = {
+	name = "Select_Asia_status"
+	group = "MAO_ASIA_GROUPKEY"
+	icon = "GFX_wargoals"
+	default = {
+		name = YES_ASIA
+		text = "Enable Asia"
+		desc = "Enables Asia (full IHE experience)"
+	}
+	#option = {
+	#	name = ONLY_ASIA
+	#	text = "Asia Only"
+	#	desc = "Disables everything but Asia and USA, run this rule together with 1939 scenario to ensure everything works as intendent"
+	#}
+	option = {
+		name = NO_ASIA
+		text = "Disable Asia"
+		desc = "Disables Asia and buffs UK (4 players less required to start the game)"
+	}	
+	#option = {
+	#	name = NO_ASIA_plus_raj
+	#	text = "Disable Asia + RAJ"
+	#	desc = "Disables Asia but leaves British Raj (3 players less required to start the game)"
+	#}	
+	option = {
+		name = NO_ASIA_plus_ast
+		text = "Disable Asia + AST"
+		desc = "Disables Asia but leaves Australia (3 players less required to start the game)"
+	}
+}
+
+select_host_country = {
+	name = "Select Host for Host Tool"
+	group = "Host Tool"
+	icon = GFX_volunteers
+	default = {
+		name = GER
+		text = "Germany"
+		desc = ""
+	}
+	option = {
+		name = ITA
+		text = "Italy"
+		desc = ""
+	}
+	option = {
+		name = ROM
+		text = "Romania"
+		desc = ""
+	}
+	option = {
+		name = HUN
+		text = "Hungary"
+		desc = ""
+	}
+	option = {
+		name = BUL
+		text = "Bulgaria"
+		desc = ""
+	}
+	option = {
+		name = SPR
+		text = "Spain"
+		desc = ""
+	}	
+	option = {
+		name = FIN
+		text = "Finland"
+		desc = ""
+	}
+	option = {
+		name = IEA
+		text = "Italian East Africa"
+		desc = ""
+	}	
+	option = {
+		name = ENG
+		text = "United Kingdom"
+		desc = ""
+	}
+	option = {
+		name = FRA
+		text = "France"
+		desc = ""
+	}	
+	option = {
+		name = USA
+		text = "USA"
+		desc = ""
+	}
+	option = {
+		name = CAN
+		text = "Canada"
+		desc = ""
+	}
+	option = {
+		name = SAF
+		text = "South Africa"
+		desc = ""
+	}
+	option = {
+		name = RAJ
+		text = "British Raj"
+		desc = ""
+	}
+	option = {
+		name = AST
+		text = "Australia"
+		desc = ""
+	}
+	option = {
+		name = NZL
+		text = "New Zealand"
+		desc = ""
+	}
+	option = {
+		name = JAP
+		text = "Japan"
+		desc = ""
+	}
+	option = {
+		name = MAN
+		text = "Manchukuo"
+		desc = ""
+	}
+	option = {
+		name = SIA
+		text = "Siam"
+		desc = ""
+	}	
+	option = {
+		name = SOV
+		text = "Soviet Union"
+		desc = ""
+	}
+	option = {
+		name = MON
+		text = "Mongolia"
+		desc = ""
+	}	
+	option = {
+		name = BRA
+		text = "Brazil"
+		desc = ""
+	}
+	option = {
+		name = MEX
+		text = "Mexico"
+		desc = ""
+	}
+	option = {
+		name = CUB
+		text = "Cuba"
+		desc = ""
+	}
+	option = {
+		name = PHI
+		text = "Philippines"
+		desc = ""
+	}
+	option = {
+		name = NEP
+		text = "Nepal"
+		desc = ""
+	}
+	option = {
+		name = GRE
+		text = "Greece"
+		desc = ""
+	}	
+	option = {
+		name = BEL
+		text = "Belgium"
+		desc = ""
+	}
+	option = {
+		name = HOL
+		text = "Netherlands"
+		desc = ""
+	}
+	option = {
+		name = NOR
+		text = "Norway"
+		desc = ""
+	}
+	option = {
+		name = POL
+		text = "Poland"
+		desc = ""
+	}	
+}
+
+IHE_SCW_STATUS = {
+	name = Select_SCW_status
+	group = "MAO_SCW_GROUPKEY"
+	icon = "GFX_wargoals"
+	default = {
+		name = NO_SCW
+		text = "Disable SCW"
+		desc = "Disables SCW"
+	}
+	option = {
+		name = NO_SPR
+		text = "Disable Spain"
+		desc = "Annex Spain into Swiss Empire and move resources to Italy"
+	}
+	#option = {
+	#	name = YES_SCW
+	#	text = "Enable SCW"
+	#	desc = "Enables SCW (but why would u?)"
+	#}
+}
+
+#maximum_fort_level = {
+#	name = "RULE_MAXIMUM_FORT_LEVEL"
+#	group = "RULE_GROUP_GAMEPLAY"
+#	icon = "GFX_maximum_fort_level"
+#	option = {
+#		name = level_5
+#		text = "RULE_OPTION_5"
+#		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+#	}
+#}
+

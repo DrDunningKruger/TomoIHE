@@ -1,0 +1,18 @@
+﻿units= {
+	fleet = {
+		name = "FNFL AF"
+		naval_base = 1145 # 
+		task_force = {				
+			name = "FNFL"			
+			location = 1145 # 
+			ship = { name = "Richelieu" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = FRA version_name = "Richelieu Class" } } } 
+			ship = { name = "Suffren" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }	
+			ship = { name = "Gloire" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "La Galissonnière Class" } } }	
+			ship = { name = "Montcalm" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "La Galissonnière Class" } } }	
+			ship = { name = "Georges Leygues" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FRA version_name = "La Galissonnière Class" } } }				
+			ship = { name = "Le Fantasque" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Le Fantasque Class" } } }					
+			ship = { name = "Le Malin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Le Fantasque Class" } } }
+			ship = { name = "Tigre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }			
+		}		
+	}
+}	

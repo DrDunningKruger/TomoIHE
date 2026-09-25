@@ -1,0 +1,136 @@
+sub_units = {
+	signal_company = {
+		abbreviation = "SIG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		can_be_parachuted = yes
+		
+		# Important Ability
+		initiative = 0.20
+		
+		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
+		
+		essential = {
+			support_equipment
+			motorized_equipment
+		}
+
+		need = {
+			support_equipment = 20
+			motorized_equipment = 10
+		}
+		
+		same_support_type = signal_company
+	}	
+	
+	armored_signal_company = {
+		abbreviation = "ASG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		breakthrough 	= -0.55
+		defense 		= -0.55		
+		soft_attack 	= -0.55
+		hard_attack 	= -0.55
+	
+		# Important Ability
+		initiative = 0.25
+		
+		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
+		
+		essential = {
+			armored_car_equipment
+		}
+
+		need = {
+			armored_car_chassis = 24
+			support_equipment = 10
+		}
+		
+		forest = {
+			movement = 0.05
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.05
+		}
+		jungle = {
+			movement = 0.05
+		}
+		plains = {
+			movement = 0.15
+		}
+		desert = {
+			movement = 0.15
+		}
+		river = {
+			movement = 0.1
+		}		
+		
+		same_support_type = signal_company
+	}
+}

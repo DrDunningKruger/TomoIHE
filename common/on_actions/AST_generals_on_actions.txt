@@ -1,0 +1,114 @@
+
+#create_corps_commander = { #ROLE artilleryman
+#	name = "Frank Berryman" #ww1 artillery vet, good planner, fought in africa and asia
+#	desc = "Frank_Berryman_desc" #ww1 artillery vet, good planner, fought in africa and asia
+#	picture = "Frank_Berryman.dds"
+#	traits = { bearer_of_artillery combined_arms_expert trait_reckless cavalry_leader organizer }
+#	skill = 5
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 7
+#	logistics_skill = 5
+#}
+
+#create_field_marshal = { #ROLE competent old guard
+#	name = "Brudenell White" #good ww1 general, died in early ww2 air accident before he saw combat  
+#	picture = "Brudenell_White.dds"
+#	traits = { infantry_leader war_hero cavalry_officer old_guard trait_cautious trait_engineer  }
+#	skill = 6
+#	attack_skill = 6
+#	defense_skill = 6
+#	planning_skill = 6
+#	logistics_skill = 6
+#}
+
+#BAD ICON
+
+#create_corps_commander = { #ROLE fort buster
+#	name = "Francis Hassett" #youngest aussie of rank, average soldier, 
+#	picture = "Francis_Hassett.dds"
+#	traits = { infantry_leader fortress_buster brilliant_strategist media_personality trait_mountaineer  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = {  #ROLE adaptable artilleryman 
+#	name = "John Wilton" #served in indian army artillery in interwar period, saw service in syria and did great in new gunea 
+#	picture = "John_Wilton.dds"
+#	traits = { bearer_of_artillery trait_mountaineer jungle_rat adaptable expert_improviser  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 6
+#}
+
+#create_corps_commander = { #ROLE swamp inf
+#	name = "Sandy Pearson" #young lad in ww2, nothing known about his service
+#	picture = "Sandy_Pearson.dds"
+#	traits = { swamp_fox infantry_leader naval_liason career_officer  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 3
+#}
+
+#create_corps_commander = { #ROLE hold ports in africa
+#	name = "Thomas Daly"  #tobruk and borneo
+#	picture = "Thomas_Daly.dds"
+#	traits = { trait_mountaineer desert_fox urban_assault_specialist guerilla_fighter ambusher  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 4
+#}	
+
+#create_corps_commander = {  #ROLE defensive commando 
+#	name = "Reginald Pollard" #staffer for most of the war, led commandos on raids against italians in desert and fought in papua 
+#	picture = "Reginald_Pollard.dds"
+#	traits = { commando skirmisher infantry_leader career_officer winter_specialist invader_ii }
+#	skill = 5
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 8
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #ROLE DDAY 
+#	name = "Mervyn Brogan" #engineer, served as staff member in guinea and observer on dday
+#	picture = "Mervyn_Brogan.dds"
+#	traits = { ranger naval_invader trait_engineer organizer  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE desert infantry
+#	name = "Arthur MacDonald"  #very average officer, fought in africa and pacific 
+#	picture = "Arthur_MacDonald.dds"
+#	traits = { desert_fox commando infantry_leader trickster camouflage_expert }
+#	skill = 5
+#	attack_skill = 4
+#	defense_skill = 4
+#	planning_skill = 5
+#	logistics_skill = 5
+#}
+
+#create_corps_commander = { #ROLE defensive Jungle general
+#	name = "Gordon Bennett" #fought in ww1, surrendered in malaya in ww2
+#	picture = "Portrait_Gordon_Bennett.dds" 
+#	traits = { old_guard war_hero jungle_rat inflexible_strategist guerilla_fighter hill_fighter  }
+#	skill = 4
+#    attack_skill = 3
+#    defense_skill = 6
+#    planning_skill = 5
+#    logistics_skill = 5
+#}
+

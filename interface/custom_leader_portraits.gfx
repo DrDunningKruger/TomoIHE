@@ -1,0 +1,60 @@
+spriteTypes = {
+
+	# leaders we need to override in DLC go in this file
+
+	# South Africa #######	
+	
+	spriteType = {
+		name = "GFX_CAN_Andrew_Mcnaughton"
+		textureFile = "gfx//leaders//CAN//Andrew_Mcnaughton.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_Harry_Crerar"
+		textureFile = "gfx//leaders//CAN//Harry_Crerar.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_Kenneth_Stuart"
+		textureFile = "gfx//leaders//CAN//Kenneth_Stuart.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_CAN_Frank_Worthington"
+		textureFile = "gfx//leaders//CAN//Frank_Worthington.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_robert_moncel"
+		textureFile = "gfx//leaders//CAN//robert_moncel.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_CAN_John_Meredith_Rockingham"
+		textureFile = "gfx//leaders//CAN//John_Meredith_Rockingham.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_George_Kitching"
+		textureFile = "gfx//leaders//CAN//George_Kitching.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_John_Hamilton_Roberts"
+		textureFile = "gfx//leaders//CAN//John_Hamilton_Roberts.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_CAN_Portrait_Harry_Crerar"
+		textureFile = "gfx//leaders//CAN//Portrait_Harry_Crerar.dds"
+	}		
+	
+	
+	
+	spriteType = {
+		name = "GFX_portrait_ENG_Edmund_Ironside"
+		textureFile = "gfx/leaders/ENG/Portrait_Britain_Edmund_Ironside.dds"
+	}	
+	
+	
+}

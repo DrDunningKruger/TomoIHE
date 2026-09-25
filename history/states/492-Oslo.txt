@@ -1,0 +1,30 @@
+
+state={
+	id=492
+	name="STATE_492"
+
+	history={
+		victory_points = {
+			1887 15 
+		}	
+		owner = NOR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2			
+			air_base = 2
+			1887 = {
+				naval_base = 6
+				coastal_bunker = 2
+			}
+		}
+	}
+
+	provinces={
+		14 27 100 144 179 1887 3007 3059 3094 3171 4526 4892 6072 6080 6115 6151 6160 6184 9036 9103 9157 9174 9204 11029 11037 11078 11151 11184 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

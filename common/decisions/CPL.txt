@@ -1,0 +1,35 @@
+foreign_politics = {
+CPL_take_over_poland = {
+		icon = generic_operation
+
+			allowed = {
+				tag = CPL
+			}
+
+			available = {
+			AND = {
+				POL = { is_ai = yes }
+				POL = { has_government = communism }
+			}
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = POL
+			POL = { has_full_control_of_state = 10  }
+			}
+				
+			complete_effect = {
+				CPL = { 
+					annex_country = {
+						target = POL
+						transfer_troops = yes 
+					}
+			}
+		}
+
+}
+}

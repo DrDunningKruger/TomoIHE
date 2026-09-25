@@ -1,0 +1,88 @@
+division_template = {
+	name = "Latvian Riflemen"		
+	division_names_group = POL_INF_01
+    template_counter = 105	
+	regiments = {
+		jaeger = { x = 0 y = 0 }
+		jaeger = { x = 0 y = 1 }
+		jaeger = { x = 0 y = 2 }
+		jaeger = { x = 0 y = 3 }
+		jaeger = { x = 1 y = 0 }
+		jaeger = { x = 1 y = 1 }
+		jaeger = { x = 1 y = 2 }
+		jaeger = { x = 1 y = 3 }
+		anti_tank_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+	support = {
+	engineer = { x = 0 y = 0 }
+	artillery = { x = 0 y = 1 }
+	anti_air = { x = 0 y = 2 }
+	anti_tank = { x = 0 y = 3 }
+	recon = { x = 0 y = 4 }
+	military_police = { x = 0 y = 5 }
+    }
+}
+
+units = {
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}	
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}	
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}
+	division = {
+		name = "Latvian Riflemen"
+		location = 12128
+		division_template = "Latvian Riflemen"	
+		start_experience_factor = 0.89
+	}	
+}

@@ -1,0 +1,145 @@
+
+ai_historical_focus_list_GER = {
+	ai_national_focuses = {
+		GER_rhineland 	
+		GER_plan_z
+		GER_air_innovation	
+		GER_four_year_plan
+		GER_autarky
+		GER_hermann_goring_werke
+		GER_kdf_wagen
+		GER_extra_tech_slot	
+		GER_soviet_treaty
+        GER_autobahn
+        GER_army_innovation	
+		GER_rearm_the_wehrmacht
+		GER_anschluss
+		GER_demand_sudetenland
+		GER_end_of_czechoslovakia
+		GER_demand_memel
+		GER_artillery
+		GER_army_innovation_2
+		GER_integrate_war_economies
+		GER_west_wall
+		GER_trade_interdiction
+		GER_pak
+		GER_flak
+		GER_air_innovation_2
+		GER_radar
+		GER_strategic_air_effort
+		GER_german_war_economy
+		GER_arcticbase
+		GER_radios
+		GER_mol_rib_pact
+		GER_danzig_or_war
+	}
+}
+
+ai_historical_focus_list_ENG = {
+	ai_national_focuses = {
+       limited_rearmament_focus
+	   uk_empire_focus
+	   uk_service_focus
+	   uk_colonial_focus
+	   ENG_steady_as_she_goes
+	   shadow_scheme_focus
+	   uk_industrial_focus
+	   uk_extra_tech_slot
+	   ENG_home_defence
+	   general_rearmament_focus
+	   air_rearmament_focus
+	   naval_rearmament_focus
+	   ENG_prepare_for_the_inevitable
+	   royal_ordinance_focus
+	   coastal_command_focus
+	   aircraft_production_focus
+	}
+}
+
+ai_historical_focus_list_ITA = {
+	ai_national_focuses = {
+    ITA_ethiopian_war_logistics_bba
+    ITA_italian_highways_bba
+	ITA_railway_innovations
+	ITA_investments_in_edison
+	ITA_expand_national_universities
+	ITA_naval_power_projection
+	ITA_expand_naval_facilities
+	ITA_ministry_of_italian_africa
+	ITA_develop_eastafrica
+	ITA_develop_libya
+	ITA_air_innovations_bba
+	ITA_citta_dell_aria
+	ITA_oto_naval_guns
+    ITA_triumph_in_africa_bba
+	ITA_anglo_italian_agreements
+	ITA_lessons_of_war	
+	ITA_culto_del_duce
+	ITA_foreign_affairs
+	ITA_albanian_occupation
+	}
+}
+
+
+ai_historical_focus_list_MON = {
+	ai_national_focuses = {
+       MON_woolwashingfactory
+	   MON_tireplant
+	}
+}
+
+ai_historical_focus_list_HOL = {
+	ai_national_focuses = {
+       HOL_form_new_government
+	   HOL_gateway_to_europe
+	   HOL_cave_to_the_british
+	   HOL_unity_through_democracy
+	   HOL_abandon_the_gold_standard
+	   HOL_continue_the_public_works
+	   HOL_the_maastunnel
+	   HOL_finish_the_noordoostpolder
+	   HOL_expand_the_artillerieinrichtingen
+	   HOL_expand_RD_facilities
+	   HOL_philips_focus
+	   HOL_the_zuiderzee_works
+	   HOL_develop_the_randstad
+	   HOL_expand_the_ijmuiden_steel_mill
+	   HOL_fokker
+	   HOL_the_western_possessions
+	   HOL_expand_curacao_oil_refineries
+	   HOL_war_on_pacifism
+	   HOL_obtain_foreign_colonial_investments
+	   HOL_the_crown_jewel_colony
+	   HOL_java
+	   HOL_reinforce_java
+	   HOL_overturn_military_budget_cuts
+	   #HOL_appoint_new_supreme_commander
+	   #HOL_production_under_license
+	   HOL_go_with_britain
+	   HOL_expand_the_mld
+	   HOL_protect_the_mainland
+	   HOL_modernize_the_air_fleet
+	   HOL_strategic_bombing_defense
+	   HOL_unsinkable_aircraft_carriers
+	   HOL_sumatra
+	   HOL_borneo_and_the_grote_oost
+	   HOL_continue_the_war_in_batavia
+	   HOL_friesland_agricultural_impetus
+	   HOL_daf	   
+	}
+}
+
+ai_historical_focus_list_JAP = {
+	ai_national_focuses = {
+       JAP_purge_the_kodoha_faction
+	   JAP_new_naval_estimates
+	   JAP_guide_the_zaibatsus
+	   JAP_national_mobilization_law
+	   JAP_nationalize_war_industry
+	   JAP_national_research_policy
+	   JAP_national_defense_state
+	   JAP_liaison_conference
+	   JAP_greater_east_asian_co_prosperity_sphere
+	   JAP_intervene_in_china1
+	}
+}

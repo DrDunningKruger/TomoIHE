@@ -1,0 +1,19 @@
+
+dont_defend_ally = {
+	allowed = { 
+		always = yes
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		#id = GER
+		value = 1000
+	}
+}
+	

@@ -1,0 +1,487 @@
+default_unit_production = {
+	enable = {
+		always = yes
+		original_tag = GER
+	}
+	
+	abort = {
+		always = no
+	}	
+	
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 500
+	}
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = -100
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 0
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+}
+
+default_role_ratios = {
+	enable = {
+		not = {
+			has_dlc = "Man the Guns"
+		}
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE
+	}
+	
+	abort = {
+		always = no
+	}	
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_sub
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 100
+	}
+}
+
+default_role_ratios = {
+	enable = {
+		has_dlc = "Man the Guns"
+		original_tag = GER
+	}
+	
+	abort = {
+		always = no
+	}	
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -70
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 65
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = 35
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 20
+	}
+}
+
+convoy_voy_voy_voy = {
+	enable = {
+		has_dlc = "Man the Guns"
+		convoy_threat > 0.2
+	}
+	abort = {
+		convoy_threat < 0.2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_escort
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = -100
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = -100
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 100
+	}
+}
+
+default_pp_spend_amount = {
+	enable = {
+		always = yes
+	}
+	
+	abort = {
+		always = no
+	}	
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 100
+	}
+}
+
+default_garrison_production = {
+	enable = {
+		original_tag = GER 
+
+		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = yes
+	}
+	abort = {
+		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 5
+	}
+	
+	# Old garrison system against resistance
+	# ai_strategy = {
+	# 	type = role_ratio
+	# 	id = suppression
+	# 	value = 2
+	# }
+}
+
+default_mountaineers_production = {
+	enable = {
+		original_tag = GER
+	}
+	abort = {
+		ai_wants_divisions < 12 #Decreasing the amount of mountaineers the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 3
+	}
+}
+
+default_area_priority_non_africa = {
+    enable = {
+        NOT = { original_tag = ITA }
+        NOT = { original_tag = FRA }
+        NOT = { original_tag = ENG }
+        NOT = { is_subject_of = ENG }
+        NOT = { capital_scope = { is_on_continent = africa } }
+	not = { original_tag = IEA } # custom AI for IHE
+	not = { original_tag = GRE } # custom AI for IHE
+    }
+	
+	abort = {
+		always = no
+	}	
+}
+
+default_stockpile_management = {
+	enable = {
+		num_divisions > 150
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE
+	}
+
+	abort = {
+		num_divisions < 130
+	}
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 35 # double base stockpile #from 25 to 35
+	}
+}
+
+DEFAULT_template_design = {
+	enable = {	
+		date < 1936.1.1	
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE			
+	}
+	abort = { 
+		date > 1945.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+}
+
+save_admiral_pp_for_later = {
+	enable = {
+		has_war = no
+		threat < 0.3
+		has_political_power < 200
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE		
+	}
+	abort = {
+		OR = {
+			has_war = yes	
+			threat > 0.3
+			has_political_power > 200
+		}
+	}
+
+	ai_strategy = { # dont burn PP on admirals (can still get free ones)
+		type = pp_spend_priority
+		id = admiral
+		value = -100
+	}
+}
+
+do_not_waste_pp_if_saving_for_manpower_laws = {
+
+	enable = {
+		manpower_per_military_factory < 500
+		has_war = yes
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE
+	}
+	abort = {
+		OR = {
+			manpower_per_military_factory > 500
+			has_war = no
+		}
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+}
+
+
+put_garrisons_on_high_prio = {
+	enable = {
+		always = yes
+		not = { original_tag = IEA } # custom AI for IHE
+		not = { original_tag = GRE } # custom AI for IHE
+	}
+	
+	abort = {
+		always = no
+	}	
+	
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = 100 # positive is high prio, negative is low prio
+	}
+}

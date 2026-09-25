@@ -1,0 +1,627 @@
+focus_tree = {
+	id = albanian_focus
+	
+	default = no
+
+	continuous_focus_position = { x = 100 y = 1250 }
+
+	initial_show_position = {
+		x = 20
+		y = 0
+	}
+	
+	focus = {
+		id = IEA_be_less_shit
+		icon = GFX_AST_training
+		x = 15
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_rearmament }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 1.0
+							uses = 1
+							technology = marines2
+							technology = marines3
+							technology = tech_mountaineers2
+							technology = tech_mountaineers3
+			}		
+			add_tech_bonus = {
+				name = USA_amphibious_operations
+				bonus = 1.0
+				uses = 1
+				category = tp_tech 
+			}}
+	}
+
+	focus = {
+		id = IEA_tonak
+		icon = GFX_IEA_heavytank
+		x = 1
+		y = 1
+		relative_position_id = IEA_be_less_shit
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_be_less_shit }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_army_maneuvers
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}		
+			add_tech_bonus = {
+				name = mong_armor_effort
+				bonus = 1.0
+				uses = 2
+				category = armor
+				}
+		
+			if = {
+			limit = { NOT = { has_tech = easy_maintenance  }}
+			set_technology = {
+				easy_maintenance = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = tank_aa_guns2  }}
+			set_technology = {
+				tank_aa_guns2 = 1
+			}}	
+			if = {
+			limit = { NOT = { has_tech = tank_aa_guns  }}
+			set_technology = {
+				tank_aa_guns = 1
+			}}	
+			if = {
+			limit = { NOT = { has_tech = armor_tech_1  }}
+			set_technology = {
+				armor_tech_1 = 1
+			}}	
+			if = {
+			limit = { NOT = { has_tech = armor_tech_2  }}
+			set_technology = {
+				armor_tech_2 = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = tank_autocannon  }}
+			set_technology = {
+				tank_autocannon = 1
+			}}		
+			if = {
+			limit = { NOT = { has_tech = howitzer_guns  }}
+			set_technology = {
+				howitzer_guns = 1
+			}}		
+			if = {
+			limit = { NOT = { has_tech = tank_improved_guns  }}
+			set_technology = {
+				tank_improved_guns = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = antitank_guns  }}
+			set_technology = {
+				antitank_guns = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = new_tank_guns  }}
+			set_technology = {
+				new_tank_guns = 1
+			}}
+			if = {
+			limit = { NOT = { has_tech = three_man_turrets  }}
+			set_technology = {
+				three_man_turrets = 1
+			}}				
+			if = {
+			limit = { NOT = { has_tech = engine_tech_2  }}
+			set_technology = {
+				engine_tech_2 = 1
+			}}		
+			if = {
+			limit = { NOT = { has_tech = engine_tech_1  }}
+			set_technology = {
+				engine_tech_1 = 1
+			}}
+			if = {
+			limit = { NOT = { has_tech = radio_tech_1  }}
+			set_technology = {
+				radio_tech_1 = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = radio_tech_2  }}
+			set_technology = {
+				radio_tech_2 = 1
+			}}
+			if = {
+			limit = { NOT = { has_tech = improved_light_tank_chassis  }}
+			set_technology = {
+				improved_light_tank_chassis = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = improved_medium_tank_chassis  }}
+			set_technology = {
+				improved_medium_tank_chassis = 1
+			}}			
+			if = {
+			limit = { NOT = { has_tech = improved_heavy_tank_chassis  }}
+			set_technology = {
+				improved_heavy_tank_chassis = 1
+			}}
+
+			if = {
+			limit = { NOT = { has_tech = fueltank_tech  }}
+			set_technology = {
+				fueltank_tech = 1
+			}}		
+
+			if = {
+			limit = { NOT = { has_tech = advanced_light_tank_chassis  }}
+			set_technology = {
+				advanced_light_tank_chassis = 1
+			}}	
+
+			if = {
+			limit = { NOT = { has_tech = gwtank_chassis  }}
+			set_technology = {
+				gwtank_chassis = 1
+			}}	
+			if = {
+			limit = { NOT = { has_tech = basic_light_tank_chassis  }}
+			set_technology = {
+				basic_light_tank_chassis = 1
+			}}	
+			if = {
+			limit = { NOT = { has_tech = improved_light_tank_chassis  }}
+			set_technology = {
+				improved_light_tank_chassis = 1
+			}}		
+
+			if = {
+			limit = { NOT = { has_tech = basic_medium_tank_chassis  }}
+			set_technology = {
+				basic_medium_tank_chassis = 1
+			}}	
+
+			if = {
+			limit = { NOT = { has_tech = basic_heavy_tank_chassis  }}
+			set_technology = {
+				basic_heavy_tank_chassis = 1
+			}}		
+		}		
+	}
+
+	focus = {
+		id = IEA_union_not_annexation
+		icon = GFX_IEA_union
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+			if = { limit = { has_idea = IEA_collaboration_movements }
+            remove_ideas = IEA_collaboration_movements
+			}
+		if = { limit = { has_idea = IEA_workforce }
+			swap_ideas = {
+			remove_idea = IEA_workforce
+			add_idea = IEA_albanian_workforce
+		    }		
+		}			
+		}		
+	}
+
+	focus = {
+		id = IEA_customs_union
+		icon = GFX_SIA_money
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_union_not_annexation }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		if = { limit = { has_idea = IEA_Italian_funds }
+			swap_ideas = {
+			remove_idea = IEA_Italian_funds
+			add_idea = IEA_customs_union		
+		    }		
+		}
+		if = { limit = { has_idea = IEA_stable_budget }
+		add_political_power = 100
+		}
+		if = { limit = { NOT = { OR = {
+		has_idea = IEA_stable_budget 
+		has_idea = IEA_Italian_funds
+		}}}
+		add_ideas = IEA_Italian_funds
+		}		
+		}
+		
+	}
+
+	focus = {
+		id = IEA_modernization
+		icon = GFX_IEA_power
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_union_not_annexation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+			if = {
+				limit = {
+					has_idea = IEA_undevelopedwasteland
+				}		
+				remove_ideas = { IEA_undevelopedwasteland }
+			}		
+		
+		if = { limit = { NOT = { has_tech = motorised_infantry }}
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}}		
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+				category = rocketry
+			}}
+	}
+
+	focus = {
+		id = IEA_work_you_dogs
+		icon = GFX_SAF_mining
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_modernization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+						add_tech_bonus = {
+				name = SAF_expand_the_mining_industry
+				bonus = 1
+				uses = 2
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+	}}
+
+	focus = {
+		id = IEA_italian_industry
+		icon = GFX_goal_continuous_repairments
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_customs_union }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+				technology = construction3
+				technology = construction4
+				technology = construction5
+			}
+			if = { limit = { has_idea = IEA_undevelopedwasteland }
+            remove_ideas = IEA_undevelopedwasteland
+			}			
+		}		
+		
+	}
+
+	focus = {
+		id = IEA_italian_heavy_industry
+		icon = GFX_SAF_heavy
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_customs_union }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+            if = { limit = { has_full_control_of_state = 44 }
+				44 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}		
+		    }		
+		}		
+	}
+	}
+
+	focus = {
+		id = IEA_infrastructure
+		icon = GFX_BEL_roads
+		x = 1
+		y = 1
+		relative_position_id = IEA_modernization
+		
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_modernization }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+            if = { limit = { has_full_control_of_state = 44 }
+				44 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}          
+			if = { limit = { has_full_control_of_state = 805 }
+				805 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+            if = { limit = { has_full_control_of_state = 105 }
+				105 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+            if = { limit = { has_full_control_of_state = 108 }
+				108 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}			
+		}		
+	}
+
+	focus = {
+		id = IEA_national_unity
+		icon = GFX_IEA_unified
+		x = 0
+		y = 1
+		relative_position_id = IEA_union_not_annexation
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_union_not_annexation }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		 has_full_control_of_state = 44
+		 has_full_control_of_state = 805
+		 has_full_control_of_state = 105
+		 has_full_control_of_state = 802
+		}
+		completion_reward = {
+             add_stability = 0.2
+			 add_war_support = 0.1
+        }		
+	}
+
+	focus = {
+		id = IEA_rearmament
+		icon = GFX_ITA_army
+		x = 13
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {			
+		    add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+			add_tech_bonus = {
+				name = mong_sa_engineer_corps
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}			
+		}		
+	}
+
+	focus = {
+		id = IEA_albarmy
+		icon = GFX_ROM_equipment
+		x = 13
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_rearmament }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+            if = { limit = { has_full_control_of_state = 44 }
+				44 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				}
+			}  			
+		}		
+	}
+
+	focus = {
+		id = IEA_the_gun
+		icon = GFX_IEA_gun
+		x = -2
+		y = 1
+		relative_position_id = IEA_rearmament
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_rearmament }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+						add_tech_bonus = {
+				name = infantry_artillery_bonus
+                bonus = 1.00
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = IEA_get_guns
+		icon = GFX_IEA_guns
+		x = -1
+		y = 1
+		relative_position_id = IEA_the_gun
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_the_gun }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		OR = {
+			has_tech = infantry_weapons1
+			has_tech = improved_infantry_weapons
+			has_tech = advanced_infantry_weapons			
+		}
+		}		
+		
+		completion_reward = {
+		if = { 
+		limit = { has_tech = advanced_infantry_weapons }
+		add_equipment_to_stockpile = {
+							type = infantry_equipment_3
+							amount = 5000
+        }}
+		else_if = {
+		limit = { has_tech = improved_infantry_weapons }
+		add_equipment_to_stockpile = {
+							type = infantry_equipment_2
+							amount = 5000
+        }}		
+		else = {
+		add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 5000
+        }			
+			}
+		custom_effect_tooltip = "Get 5000 of the best infatry equipment you have researched"		
+		}		
+	}	
+
+	focus = {
+		id = IEA_gun_2
+		icon = GFX_IEA_arty
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_the_gun }
+		ai_will_do = {
+			factor = 1
+		}
+		
+			completion_reward = {
+						add_tech_bonus = {
+				name = infantry_artillery_bonus
+                bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+				}		
+	}
+
+	focus = {
+		id = IEA_mils
+		icon = GFX_IEA_milz
+		x = 14
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IEA_be_less_shit }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+            if = { limit = { has_full_control_of_state = 44 }
+				44 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		    }		
+		}		
+	}
+	
+	
+}
+}

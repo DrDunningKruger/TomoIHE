@@ -1,0 +1,109 @@
+﻿air_wings = {
+	330 = {
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+            start_experience_factor = 0.3				
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_1 =  {		
+				owner = "MON" 
+				amount = 100
+				version_name = "Hurricane IIc"
+							
+			}
+            start_experience_factor = 0.3				
+	}
+}

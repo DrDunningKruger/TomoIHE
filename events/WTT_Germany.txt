@@ -1,0 +1,373 @@
+﻿add_namespace = wtt_germany
+
+#Notification event for Hungary and Romania for Integrate War Economies
+country_event = {
+	id = wtt_germany.7
+	title = wtt_germany.7.t
+	desc = wtt_germany.7.d
+	picture = GFX_report_event_tank_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_germany.7.a
+		effect_tooltip = {
+			if = {
+				limit = { 
+					tag = HUN
+				}
+				GER = { puppet = HUN }
+			}
+			if = {
+				limit = { 
+					tag = ROM
+				}
+				GER = { puppet = ROM }
+			}
+			every_state = {
+				limit = { has_state_flag = GER_integrate_war_economies }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+# Wilhelm II dies
+country_event = {
+	id = wtt_germany.26
+	title = wtt_germany.26.t
+	desc = wtt_germany.26.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = GER
+		has_government = neutrality
+		date > 1939.1.1
+		has_country_leader = { ruling_only = yes name = "Wilhelm II" }
+	}
+
+	mean_time_to_happen = {
+		days = 1460	# Died in 1941
+	}
+	
+	#ok I guess
+	option = {
+		name = wtt_germany.26.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Wilhelm III"
+			desc = "POLITICS_WILHELM_III_DESC"
+			picture = GFX_portrait_ger_wilhelm_iii
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				popular_figurehead2
+			}
+		}
+	}
+}
+
+# Reintegration remove cores for Alsace and notification for France
+country_event = {
+	id = wtt_germany.63
+	title = wtt_germany.63.t
+	desc = wtt_germany.63.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_germany.63.a
+		effect_tooltip = {
+			GER = {
+				add_state_core = 8
+				add_state_core = 28
+			}
+		}
+	}
+}
+
+# Reintegration notification for Luxemburg
+country_event = {
+	id = wtt_germany.64
+	title = wtt_germany.64.t
+	desc = wtt_germany.63.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_germany.64.a
+		effect_tooltip = {
+			GER = {
+				add_state_core = 8
+				add_state_core = 28
+			}
+		}
+	}
+}
+
+# Event asking whether HUN/ROM want to become puppet in return for factories.
+country_event = {
+	id = wtt_germany.72
+	title = wtt_germany.72.t
+	desc = wtt_germany.72.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = { # Yaplx
+		name = wtt_germany.72.a
+		effect_tooltip = {
+			GER = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = GER_integrate_war_economies }
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_integrate_war_economies
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = GER_integrate_war_economies }
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_integrate_war_economies
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_integrate_war_economies_1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_integrate_war_economies_2
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor" 
+					is_in_faction_with = FROM
+					FROM = { is_subject = no }
+				}
+				FROM = {
+					set_autonomy = { target = ROOT autonomy_state = autonomy_satellite }
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Together for Victory"
+					NOT = { has_dlc = "Death or Dishonor" } 
+					is_in_faction_with = FROM
+					FROM = { is_subject = no }
+				}
+				FROM = {
+					set_autonomy = { target = ROOT autonomy_state = autonomy_dominion }
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_dlc = "Together for Victory" }
+					NOT = { has_dlc = "Death or Dishonor" }
+					is_in_faction_with = FROM
+					FROM = { is_subject = no }
+				}
+				FROM = { puppet = ROOT }
+			}
+		}
+		custom_effect_tooltip = wtt_germany.72_tt
+		FROM = {
+			country_event = { id = wtt_germany.73 days = 1 }
+		}
+	}
+}
+
+# Event for GER saying HUN/ROM accepted
+country_event = {
+	id = wtt_germany.73
+	title = wtt_germany.73.t
+	desc = wtt_germany.73.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_germany.73.a
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+				NOT = { has_state_flag = GER_integrate_war_economies }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_integrate_war_economies
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+				NOT = { has_state_flag = GER_integrate_war_economies }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_integrate_war_economies
+		}
+		FROM = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_integrate_war_economies_1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_integrate_war_economies_2
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Death or Dishonor" 
+				is_subject = no
+			}
+			every_country = {
+				limit = {
+					is_subject_of = FROM
+				}
+				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_satellite } }
+			}
+			set_autonomy = { target = FROM autonomy_state = autonomy_satellite }
+		}
+		if = {
+			limit = { 
+				has_dlc = "Together for Victory"
+				NOT = { has_dlc = "Death or Dishonor" } 
+				is_subject = no
+			}
+			every_country = {
+				limit = {
+					is_subject_of = FROM
+				}
+				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_dominion } }
+			}
+			set_autonomy = { target = FROM autonomy_state = autonomy_dominion }
+		}
+		if = {
+			limit = { 
+				NOT = { has_dlc = "Together for Victory" }
+				NOT = { has_dlc = "Death or Dishonor" }
+				is_subject = no
+			}
+			every_country = {
+				limit = {
+					is_subject_of = FROM
+				}
+				ROOT = { puppet = PREV }
+			}
+			puppet = FROM
+		}
+	}
+}
+
+# Event for GER saying HUN/ROM rejected
+country_event = {
+	id = wtt_germany.74
+	title = wtt_germany.74.t
+	desc = wtt_germany.74.desc
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_germany.74.a
+	}
+}
+
+#################
+

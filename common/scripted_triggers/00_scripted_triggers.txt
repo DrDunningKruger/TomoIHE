@@ -1,0 +1,458 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+
+state_is_in_the_mediterranean_sea = {
+	custom_trigger_tooltip = {
+		tooltip = state_is_in_the_mediterranean_sea_tt
+		OR = {
+			state = 118 #GIBRALTAR
+			state = 459
+			state = 460
+			state = 458
+			state = 665
+			state = 448
+			state = 449
+			state = 450
+			state = 451
+			state = 452
+			state = 839
+			state = 447
+			state = 446
+			state = 453
+			state = 454
+			state = 553
+			state = 677
+			state = 183
+			state = 182
+			state = 840
+			state = 1
+			state = 114
+			state = 115
+			state = 164
+			state = 116
+		}
+	}
+}
+
+SOV_state_is_around_moscow = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 247
+			state = 246
+			state = 219
+			state = 248
+			state = 253
+			state = 254
+			state = 252
+		}
+	}
+}
+
+SOV_state_is_around_russia = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 205
+			state = 223
+			state = 243
+			state = 224
+			state = 222
+			state = 220
+			state = 240
+			state = 241
+			state = 242
+			state = 258
+			state = 260
+			state = 257
+			state = 206		
+			state = 204
+			state = 194			
+		}
+	}
+}
+
+SOV_state_is_around_Leningrad = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 195
+			state = 244
+			state = 208
+			state = 263
+			state = 209
+			state = 210
+			state = 207			
+		}
+	}
+}
+
+SOV_state_is_around_Riga = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 13
+			state = 191
+			state = 12
+			state = 190
+			state = 189
+			state = 11
+			state = 784
+		}
+	}
+}
+
+SOV_state_is_around_Ukraine = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 202
+			state = 193
+			state = 225
+			state = 221
+			state = 259
+			state = 203
+			state = 226
+			state = 197
+			state = 192	
+			state = 198	
+			state = 199
+			state = 201	
+			state = 196
+			state = 137
+			state = 200	
+			state = 227	
+			state = 228
+			state = 218			
+		}
+	}
+}
+
+SOV_state_is_around_Stalingrad = {
+custom_trigger_tooltip = {
+		tooltip = SOV_state_is_around_moscow_tt
+		OR = {
+			state = 217
+			state = 245
+			state = 265
+			state = 238
+			state = 234
+			state = 235
+			state = 237
+			state = 236
+			state = 233
+			state = 232
+			state = 229
+			state = 231
+			state = 230	
+			state = 239		
+		}
+	}
+}
+
+can_ROOT_get_wargoal_on_THIS = {
+	exists = yes
+	NOT = { is_in_faction_with = ROOT }
+	NOT = { is_subject_of = ROOT }
+}
+
+#Country scope
+is_JAP_or_ally_of_JAP = {
+	OR = {
+		tag = JAP
+		is_in_faction_with = JAP
+		is_subject_of = JAP
+	}
+}
+
+is_border_conflict_defender_vs_FROM = {
+	has_variable = ROOT.defender_state_vs_@FROM
+}
+
+has_not_initiated_border_incident_with_FROM = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_FROM
+		NOT = {		
+			any_state = {
+				check_variable = { FROM.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+has_not_initiated_border_incident_with_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_ROOT
+		NOT = {
+			any_state = {
+				check_variable = { ROOT.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+#State scope
+has_ROOT_at_least_1_div_in_current_state_scope = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_one_division_in_state
+		ROOT = { divisions_in_state = { state = PREV size > 0 } }
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_subject
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+#Country scope
+is_free_or_subject_of_root = {
+	OR = {
+		is_subject = no
+		is_subject_of = ROOT
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_ally
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+}
+
+ai_air_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = home_defence
+		has_tech = dive_bombing
+		has_tech = flying_fortress
+	}
+}
+
+ai_air_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = day_bombing
+		has_tech = night_bombing
+		has_tech = direct_ground_support
+		has_tech = fighter_veteran_initiative
+	}
+}
+ai_air_doctrine_tier_3_trigger = {
+	OR = {
+		has_tech = high_level_bombing
+		has_tech = combat_unit_destruction
+		has_tech = multialtitude_flying
+	}
+}
+
+ai_land_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = elastic_defence
+		has_tech = mobile_defence
+	}
+}
+
+ai_land_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = kampfgruppe
+		has_tech = mechanised_offensive
+	}
+}
+SOV_save_pp_for_manpower_trouble = {
+	has_manpower < 1000000
+	has_political_power < 200
+	surrender_progress > 0	
+}
+
+anti_submarine_strategy_required_trigger = {
+	OR = {
+		AND = {
+			tag = ENG
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = USA
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = JAP
+			not = { is_in_faction_with = USA }
+		}
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+	}
+}
+
+should_USA_invade_europe_or_africa = {
+	USA = {
+		OR = {
+			is_in_faction_with = ENG
+			has_military_access_to = ENG
+		}
+	}
+	surrender_progress < 0.05
+	FRA = {
+		has_capitulated = yes
+	}
+	OR = {
+		GER = {
+			exists = yes
+			has_war_with = USA
+		}
+		ITA = {
+			exists = yes
+			has_war_with = USA
+		}
+		SPR = {
+			exists = yes
+			has_war_with = USA
+		}
+		USA = {
+			OR = {
+				AND = {
+					has_government = democratic
+					ENG = { has_government = democratic } 
+					OR = {
+						GER = { has_government = fascism }
+						ITA = { has_government = fascism }
+					}
+				}
+				is_in_array = { potential_and_current_enemies = GER }
+				is_in_array = { potential_and_current_enemies = ITA }
+				is_in_array = { potential_and_current_enemies = SPR }
+			}
+		}
+	}
+}
+
+enemy_has_equal_or_better_radar_tech_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = enemy_has_equal_or_better_radar_tech_trigger_tt
+		if = {
+			limit = {
+				ROOT = { 
+					has_tech = radio_detection 
+					NOT = {
+						has_tech = decimetric_radar
+					}
+				} 
+			}
+			FROM = { 
+				OR = {
+					has_tech = radio_detection 
+					has_tech = decimetric_radar
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { 
+					has_tech = decimetric_radar 
+					NOT = {
+						has_tech = improved_decimetric_radar
+					}
+				} 
+			}
+			FROM = { 
+				OR = {
+					has_tech = decimetric_radar 
+					has_tech = improved_decimetric_radar
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { 
+					has_tech = improved_decimetric_radar 
+					NOT = {
+						has_tech = centimetric_radar
+					}
+				} 
+			}
+			FROM = { 
+				OR = {
+					has_tech = improved_decimetric_radar 
+					has_tech = centimetric_radar
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { 
+					has_tech = centimetric_radar 
+					NOT = {
+						has_tech = improved_centimetric_radar
+					}
+				} 
+			}
+			FROM = { 
+				OR = {
+					has_tech = centimetric_radar 
+					has_tech = improved_centimetric_radar
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { 
+					has_tech = improved_centimetric_radar 
+					NOT = {
+						has_tech = advanced_centimetric_radar
+					}
+				} 
+			}
+			FROM = { 
+				OR = {
+					has_tech = improved_centimetric_radar 
+					has_tech = advanced_centimetric_radar
+				}
+			}
+		}
+		#no more steps needed because end of research tree is reached
+	}
+}

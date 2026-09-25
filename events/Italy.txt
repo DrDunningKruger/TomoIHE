@@ -1,0 +1,114 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = italy
+
+# Extension of the Vallo Alpino
+country_event = {
+	id = italy.4
+	title = italy.4.t
+	desc = italy.4.d
+	picture = GFX_report_event_bunker_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.4.a
+		158 = {
+			add_building_construction = {
+				type = bunker
+				province = 11891
+				level = 3
+			}
+			add_building_construction = {
+				type = bunker
+				province = 11721
+				level = 3
+			}
+		
+			add_building_construction = {
+				type = bunker
+				province = 9738
+				level = 3
+			}
+		}
+		160 = {
+			add_building_construction = {
+				type = bunker
+				province = 3657
+				level = 3
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9613
+				level = 3
+			}
+			add_building_construction = {
+				type = bunker
+				province = 11595
+				level = 3
+			}
+		}
+	}
+}
+
+
+# Italian-German Treaty (Germans)
+country_event = {
+	id = italy.5
+	title = italy.5.t
+	desc = italy.5.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.5.a	#sounds good
+		ITA = {
+			country_event = { days = 1 id = italy.6 }
+		}
+		# REVISIT Balance research bonus, also in event below
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			technology = tech_mountaineers2
+		}
+			add_doctrine_cost_reduction = {
+				name = FRA_army_reform
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+	}
+}
+
+# Germans Accept Italian-German Treaty
+country_event = {
+	id = italy.6
+	title = italy.6.t
+	desc = italy.6.d
+	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = italy.6.a
+		# REVISIT Balance research bonus
+		add_tech_bonus = {
+			name = synth_bonus
+			bonus = 1.0
+			uses = 2
+			category = synth_resources
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 2
+			category = armor
+		}
+		ITA = {
+			add_opinion_modifier = { target = GER modifier = ger_ita_tech_treaty }
+		}
+	}
+}

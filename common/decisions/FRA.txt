@@ -1,0 +1,575 @@
+fra_holds_vs_germany_category = {
+	
+	# The longer Fra holds, the more tank production bonus it gets after cap
+	# if cap < 01/11/39 = 0	idea0 FRA_should_hold_1
+	# if cap < 01/12/39 = -5% tank cost idea1 FRA_should_hold_2
+	# if cap < 01/01/1940 = -8% tank cost idea2 FRA_should_hold_3
+	# if cap < 01/02/1940 = -12% tank cost idea3 FRA_should_hold_4
+	# if cap > 01/02/1940 = -15% tank cost idea4 FRA_should_hold_5
+	# if Fra capitulates, end and apply the tank cost bonus
+	# 10/03/26, Mao - "I made the bonuses timed for a year"
+	# 30/08/26, Mao - "Reworked decisions to work with new capitulation system, added stages so the game know what territory to take away when france caps"
+
+	FRA_should_hold_1 = {
+		allowed = {
+			original_tag = FRA
+		}		
+		activation = {
+		  OR = {
+			GER = { has_war_with = ENG } # once war starts
+			if = { date > 1939.09.15 }
+		  }
+		}
+		available = {
+			FRA = { has_country_flag = france_is_capped } 
+		}
+		cancel_trigger = {
+			#FRA = { has_capitulated = yes }
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no # Italy wants to join asap
+	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
+		fire_only_once = yes
+		days_mission_timeout = 60 # danzig or war + 60 = 01/11/39
+		selectable_mission = no
+
+
+		complete_effect = {
+			#fra capitulates too soon, no bonus
+			set_global_flag = FRA_stage_4 #nigga didnt hold
+			SWI = { 
+				#America, Asian island, Carribean
+				transfer_state = 310
+				transfer_state = 694
+				transfer_state = 641
+				transfer_state = 635
+				transfer_state = 734
+				#Syria & Lebanon
+				transfer_state = 553 
+				transfer_state = 554
+				#French somaliland, Madagascar & surrounding islands
+				transfer_state = 543
+				transfer_state = 708
+				transfer_state = 706
+				transfer_state = 713
+				#Guinea, Togo, Ivory Coast, Basically coastal french west africa
+				transfer_state = 776
+				transfer_state = 777
+				transfer_state = 779
+				transfer_state = 298
+				transfer_state = 780
+				#Subsaharan africa
+				transfer_state = 781
+				transfer_state = 778
+				transfer_state = 556
+				transfer_state = 272
+				transfer_state = 557
+				transfer_state = 786
+				transfer_state = 782
+				transfer_state = 515
+				transfer_state = 775
+			}
+		}
+		
+		timeout_effect = { # france still alive, start next mission
+				FRA = { activate_mission = FRA_should_hold_2 }
+				FRA = { add_ideas = FRA_logistical_troubles_1 }
+		}
+	}
+	
+	FRA_should_hold_2 = {
+		allowed = {
+			original_tag = FRA
+		}		
+		activation = {
+			always = no
+		}
+		available = {
+			FRA = { has_country_flag = france_is_capped } 
+		}
+		cancel_trigger = {
+			#FRA = { has_capitulated = yes }
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no 
+	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
+		fire_only_once = yes
+		days_mission_timeout = 30 # danzig or war + 90 = 01/12/39
+		selectable_mission = no
+		
+		complete_effect = { 
+			FRA = {
+					add_timed_idea = {
+						idea = FRA_tank_bonus_1
+						days = 365   # 1 year
+					}
+				}
+			set_global_flag = FRA_stage_3
+			SWI = { 
+				#America, Asian island, Carribean
+				transfer_state = 310
+				transfer_state = 694
+				transfer_state = 641
+				transfer_state = 635
+				transfer_state = 734
+				#Syria & Lebanon
+				transfer_state = 553 
+				transfer_state = 554
+				#French somaliland, Madagascar & surrounding islands
+				transfer_state = 543
+				transfer_state = 708
+				transfer_state = 706
+				transfer_state = 713
+				#Guinea, Togo, Ivory Coast, Basically coastal french west africa
+				transfer_state = 776
+				transfer_state = 777
+				transfer_state = 779
+				transfer_state = 298
+				transfer_state = 780
+				transfer_state = 296
+			}
+		}
+		
+		timeout_effect = { # france still alive, start next mission
+				FRA = { activate_mission = FRA_should_hold_3 }
+				FRA = {
+					swap_ideas = {
+						remove_idea = FRA_logistical_troubles_1
+						add_idea = FRA_logistical_troubles_2		
+					}				
+				}				
+		}
+	}
+
+	FRA_should_hold_3 = {
+		allowed = {
+			original_tag = FRA
+		}		
+		activation = {
+			always = no
+		}
+		available = {
+			FRA = { has_country_flag = france_is_capped } 
+		}
+		cancel_trigger = {
+			#FRA = { has_capitulated = yes }
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no 
+	   
+		fire_only_once = yes
+		days_mission_timeout = 30 # danzig or war + 120 = 1/1/40
+		selectable_mission = no
+		
+		complete_effect = { 
+			FRA = {
+					add_timed_idea = {
+						idea = FRA_tank_bonus_2
+						days = 365   # 1 year
+					}
+				}
+			set_global_flag = FRA_stage_2
+			SWI = { 
+				#America, Asian island, Carribean
+				transfer_state = 310
+				transfer_state = 694
+				transfer_state = 641
+				transfer_state = 635
+				transfer_state = 734
+			}
+		}
+		
+		timeout_effect = { # france still alive, start next mission
+				FRA = { activate_mission = FRA_should_hold_4 }	
+				FRA = {
+					swap_ideas = {
+						remove_idea = FRA_logistical_troubles_2
+						add_idea = FRA_logistical_troubles_3
+					}				
+				}				
+		}
+	}	
+	
+	FRA_should_hold_4 = {
+		allowed = {
+			original_tag = FRA
+		}		
+		activation = {
+			always = no
+		}
+		available = {
+			FRA = { has_country_flag = france_is_capped } 
+		}
+		cancel_trigger = {
+			#FRA = { has_capitulated = yes }
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no 
+	    
+		fire_only_once = yes
+		days_mission_timeout = 30 # danzig or war + 150 = 1/2/40
+		selectable_mission = no
+		
+		complete_effect = { 
+			FRA = {
+					add_timed_idea = {
+						idea = FRA_tank_bonus_3
+						days = 365   # 1 year
+					}
+				}
+			set_global_flag = FRA_stage_1
+				SWI = { 
+					#Syria & Lebanon
+					transfer_state = 553 
+					transfer_state = 554
+					#French somaliland, Madagascar & surrounding islands
+					transfer_state = 543
+					transfer_state = 708
+					transfer_state = 706
+					transfer_state = 713
+				}
+		}
+		
+		timeout_effect = { # france still alive, start next mission
+			FRA = { activate_mission = FRA_held }
+			FRA = {
+				swap_ideas = {
+					remove_idea = FRA_logistical_troubles_3
+					add_idea = FRA_logistical_troubles_4
+				}				
+			}			
+		}
+	}	
+	
+	FRA_held = {
+		allowed = {
+			original_tag = FRA
+		}		
+		activation = {
+			always = no
+		}
+		available = {
+			FRA = { has_country_flag = france_is_capped } 
+		}
+		cancel_trigger = {
+			#FRA = { has_capitulated = yes }
+		}
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no
+	    
+		fire_only_once = yes
+		days_mission_timeout = 1 #danzig or war + 150 = france held
+		selectable_mission = no
+		
+		timeout_effect = { # france still alive, start next mission
+			FRA = { activate_mission = FRA_held }
+            if = { limit = { has_idea = FRA_logistical_troubles_4 } 
+				swap_ideas = {
+					remove_idea = FRA_logistical_troubles_4
+					add_idea = FRA_logistical_troubles_5
+				}	
+			}			
+		}		
+		
+		complete_effect = {
+			FRA = {
+					add_timed_idea = {
+						idea = FRA_tank_bonus_4
+						days = 365   # 1 year
+					}
+				}
+			set_global_flag = FRA_stage_0
+		}
+	}
+}
+
+economy_decisions = {
+
+	FRA_reorganize_aviation_industry_north = {
+		available = { NOT = { has_country_flag = france_is_capped }}
+
+		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+        
+		fire_only_once = yes
+		
+		remove_effect = { 
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+		days_remove = 120
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+		
+	}
+
+	FRA_reorganize_aviation_industry_west = {
+		available = { NOT = { has_country_flag = france_is_capped }}
+
+		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+        
+		fire_only_once = yes
+
+		remove_effect = { 
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+		days_remove = 120
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	FRA_reorganize_aviation_industry_center = {
+		available = { NOT = { has_country_flag = france_is_capped }}
+
+		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+        
+		fire_only_once = yes
+
+		remove_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+		days_remove = 120
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	FRA_reorganize_aviation_industry_south_east = {
+		available = { NOT = { has_country_flag = france_is_capped }}
+
+		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+        
+		fire_only_once = yes
+
+		remove_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+		days_remove = 120
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	FRA_reorganize_aviation_industry_south_west = {
+		available = { NOT = { has_country_flag = france_is_capped }}
+
+		visible = { has_completed_focus = FRA_reorganize_the_aviation_industry }
+        
+		fire_only_once = yes
+
+		remove_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+		days_remove = 120
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}
+
+FRA_free_france = {
+	FRA_move_capital_to_morocco = {
+        available = {	
+			has_full_control_of_state = 461
+		}
+		visible = {
+		 	FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 461 } 
+		}
+	}
+	
+	FRA_annex_VIC = {
+		available = {
+			if = {
+			    AND = {
+				date > 1942.1.1
+				controls_state = 16
+				controls_state = 15
+				controls_state = 14
+			    }
+			}
+		}
+		visible = {
+            AND = {		
+				OR = {
+					date > 1942.1.1
+					FRA = { has_country_flag = france_is_capped } 
+				}
+				SWI = { controls_state = 33 }
+				NOT = { has_global_flag = vichy_annexed }		
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_capital = { state = 16 }
+			
+			FRA = {
+					transfer_state = 20
+					transfer_state = 21
+					transfer_state = 22
+					transfer_state = 32
+					transfer_state = 31
+					transfer_state = 25
+					transfer_state = 33
+					transfer_state = 26
+			}
+			hidden_effect = {
+				set_global_flag = vichy_annexed
+			}
+		}
+	}
+	
+	FRA_annex_BCO = {
+		available = {
+			not = {
+				controls_state = 461
+			}
+				BEL = { is_ai = yes }			
+				BEL = { has_full_control_of_state = 295 has_full_control_of_state = 538 has_full_control_of_state = 718 has_full_control_of_state = 768 has_full_control_of_state = 769 }
+			}
+			visible = { 
+				FRA = { has_country_flag = france_is_capped } 
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1000
+			}
+			fire_only_once = yes
+			complete_effect = {
+			FRA = {
+					transfer_state = 796
+					transfer_state = 295
+					transfer_state = 538
+					transfer_state = 718
+					transfer_state = 768
+					transfer_state = 769
+			}
+			ENG = {
+				annex_country = {
+					target = BEL
+					transfer_troops = yes
+				}			
+			}			
+		}
+	}
+
+	FRA_move_capital_to_caledonia = {
+        available = {	
+		has_full_control_of_state = 635
+		}
+		visible = { 
+		 	FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 635 } 
+		}
+	}	
+	
+	FRA_move_capital_to_senegal = {
+        available = {	
+		has_full_control_of_state = 272
+		}
+		visible = { 
+		 	FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 272 } 
+		}
+	}
+	
+	FRA_move_capital_to_cameroon = {
+
+        available = {	
+		has_full_control_of_state = 773
+		}	
+	
+		visible = {		
+			 FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 773 } 
+		}
+	}
+	
+	FRA_move_capital_to_lebanon = {
+        available = {	
+		has_full_control_of_state = 553
+		}		
+	
+		visible = { 
+		 	FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 553 } 
+		}
+	}
+
+	FRA_move_capital_to_guiana = {
+        available = {	
+		has_full_control_of_state = 310
+		}		
+	
+		visible = { 
+		 	FRA = { has_country_flag = france_is_capped } 
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			set_capital = { state = 310 } 
+		}
+	}	
+}

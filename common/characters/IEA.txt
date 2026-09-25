@@ -1,0 +1,515 @@
+characters={
+	IEA_pietro_badoglio={
+		name=ITA_pietro_badoglio
+		portraits={
+			army={
+				small="GFX_idea_pietro_badoglio"
+			}
+			army={
+				large="gfx/leaders/ITA/Portrait_Italy_Pietro_Badoglio.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = ieatheoristarmy
+			ledger = army
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = IEA_chiefoffensive
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		field_marshal = { 
+		    desc = "pietro_badoglio_desc" #Defensive general most useful for flat terrain
+				traits = { politically_connected inflexible_strategist war_hero infantry_expert irregulars_officer panzer_leader }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
+		}		
+		
+		
+		
+		
+	}
+
+	IEA_giacomo_acerbo={
+		name=ITA_giacomo_acerbo
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed  = {
+				original_tag = IEA
+			}
+			traits  = {
+				war_industrialist 
+			}
+			idea_token = IEA_giacomo_acerbo
+			on_add  = {
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
+		}
+	}	
+	
+	IEA_junio_valerio_borghese={
+		name=ITA_junio_valerio_borghese
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed  = {
+				original_tag  = IEA
+			}
+			traits  = {
+				armaments_organizer 
+			}
+			idea_token = IEA_junio_valerio_borghese
+			on_add  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	IEA_luigi_einaudi={
+		name=ITA_luigi_einaudi
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_4.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed  = {
+				original_tag  = IEA
+			}
+			traits  = {
+				captain_of_industry 
+			}
+			cost = 50
+			idea_token = IEA_luigi_einaudi
+			on_add  = {
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
+		}
+	}
+
+	IEA_paolo_thaon_di_revel={
+		name=ITA_paolo_thaon_di_revel
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			allowed  = {
+				original_tag  = IEA
+			}
+			cost = 50
+			traits  = {
+				quartermaster_general 
+				fascist_militia_leader
+			}
+			idea_token = IEA_paolo_thaon_di_revel
+			on_add  = {
+			}
+			ai_will_do  = {
+				factor  = 0.300
+			}
+		}
+	}
+
+#####	
+#####	
+#####	
+#####	
+#####	
+#####	
+#####
+
+	IEA_guiseppe_fioravanzo={
+		name=ITA_guiseppe_fioravanzo
+		portraits={
+			army={
+				small="GFX_idea_guiseppe_fioravanzo"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = IEAnavyguyasa
+			ledger = navy
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				submarine_specialist
+			}
+		}		
+	}
+
+	IEA_renato_sandalli={
+		name=ITA_renato_sandalli
+		portraits={
+			army={
+				small="GFX_idea_renato_sandalli"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = renato_sandalli
+			ledger = air
+			allowed = {
+				original_tag = IEA
+			}
+			traits = { air_warfare_theorist }
+		}		
+	}
+
+	IEA_italo_balbo={
+		name=ITA_italo_balbo
+		portraits={
+			army={
+				small="GFX_idea_italo_balbo"
+			}
+			army={
+				large="gfx/leaders/ITA/portrait_italy_italo_balbo.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ieaitalobalbo
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				air_chief_rely_on_others
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	IEA_francesco_pricolo={
+		name=ITA_francesco_pricolo
+		portraits={
+			army={
+				small="GFX_idea_francesco_pricolo"
+			}
+		}
+		advisor={
+		    idea_token = ieafrancescopricolo
+			slot = air_chief
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				air_chief_reform
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	IEA_ettore_muti={
+		name=ITA_ettore_muti
+		portraits={
+			army={
+				small="GFX_idea_ettore_muti"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ieaettoremuti
+			ledger = air
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+			air_chief_fighter_bomber
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	IEA_amedeo_savoia={ #
+		name = "Amedeo Savoia Aosta"
+		portraits={
+			army={
+				large=GFX_portrait_Italy_Amedeo_Savoia_Aosta
+				small="GFX_portrait_ITA_amedeo_di_savoia_aosta_small"
+			}
+		}
+		field_marshal={
+		    desc = "amedeo_savoia_desc" #Defensive fieldmarshal, he's good as long as u can keep your trenches.
+				traits = { defensive_doctrine trait_cautious media_personality organizer infantry_leader trait_mountaineer }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 3
+				logistics_skill = 3
+		}
+		advisor={
+			slot = high_command
+			idea_token = ieaentrenchmentadvisor
+			ledger = army
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_entrenchment_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = IEAentrenchmentdef
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+	
+	IEA_pirzo_brioli={ #
+		name = "Pirzo Biroli"
+		portraits={
+			army={
+				large=GFX_portrait_ITA_alessandro_pirzio_biroli
+				small="GFX_portrait_ITA_alessandro_pirzio_biroli_small"
+			}
+		}
+		corps_commander={
+		    desc = "pirzo_biroli_desc" #A classic general, good for everything good for nothing.
+				traits = { harsh_leader trait_defeatist adaptable infantry_leader infantry_expert cavalry_leader }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
+		}
+		advisor={
+			slot = high_command
+			idea_token = ieacavalryl
+			ledger = army
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_cavalry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = IEA_chiefreformation
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}			
+	}	
+	
+	IEA_Pietro_Gazzera={ #
+		name = "Pietro Gazzera"
+		portraits={
+			army={
+				large=GFX_portrait_Italy_Pietro_Gazzera
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}		
+		corps_commander={
+		    desc = "pietro_gazzera_desc" #A artillery commander, given enough pieces he might be able to launch a offensive, even in the horn of africa.
+			traits = { war_hero bearer_of_artillery commando desert_fox infantry_leader harsh_leader }
+			skill = 4
+			attack_skill = 6
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 4
+
+		}
+	}
+
+
+########## vanilloids
+
+	AOI_enrico_cerulli = {
+		name = AOI_enrico_cerulli
+		portraits = {
+			army = {
+				small = GFX_portrait_AOI_enrico_cerulli_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_enrico_cerulli
+			allowed  = { 
+				original_tag  = IEA
+			}
+			traits  = {
+				backroom_backstabber
+				prince_of_terror 
+			}
+			available = {
+
+			}
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}	
+
+	AOI_guglielmo_nasi = {
+		name = AOI_guglielmo_nasi
+		portraits = {
+			army = {
+				large = GFX_portrait_AOI_gugliemo_nasi
+				small = GFX_portrait_AOI_gugliemo_nasi_small
+			}
+		}
+		advisor={
+		    idea_token = ieaarmyregroup
+			slot = high_command
+			ledger = army
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_regrouping_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = IEA_chiefmaneuver
+			allowed = {
+				original_tag = IEA
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			desc = "guglielmo_nasi_desc" #used tanks and aircraft to take east africa
+			traits = { panzer_expert irregulars_officer war_hero jungle_rat ambusher camouflage_expert }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}	
+	
+	AOI_vincenzo_de_feo = {
+		name = AOI_vincenzo_de_feo
+		portraits = {
+			army = {
+				large = GFX_Portrait_Italy_Generic_navy_3
+				small = "GFX_idea_ITA_generic_navy_3"
+			}
+		}
+
+		navy_leader = {
+			traits = { seawolf spotter blue_water_expert hunter_killer concealment_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 5
+			legacy_id = -1
+		}
+	}
+
+	IEA_rodolfo_graziani = {
+		name = ITA_rodolfo_graziani
+		portraits = {
+			army = {
+				small = GFX_idea_rodolfo_graziani
+				large = GFX_portrait_ITA_rodolfo_graziani
+			}
+		}
+
+		field_marshal = {
+			traits = { offensive_doctrine infantry_expert war_hero panzer_leader harsh_leader desert_fox infantry_leader }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			visible = {	
+				    has_completed_focus = IEA_butcher_of_africa		
+			}			
+		}
+	}	
+	
+}

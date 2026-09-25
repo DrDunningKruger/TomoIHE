@@ -1,0 +1,74 @@
+﻿air_wings = {
+	653 = {
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}
+			start_experience_factor = 0.3	
+		small_plane_airframe_2 =  {		
+				owner = "SOV" 
+				amount = 100
+				version_name = "P-40C"
+								
+			}	
+			
+	}
+}

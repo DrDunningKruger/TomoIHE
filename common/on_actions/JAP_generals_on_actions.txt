@@ -1,0 +1,26 @@
+
+
+#			create_corps_commander = { #prince, commanded in china, used poisonous gas, left army after japan attacked allies
+#				name = "Naruhiko Higashikuni"
+#				picture = "Portrait_Japan_Naruhiko_Higashikuni.dds"
+#				traits = { JAP_samurai_lineage politically_connected career_officer harsh_leader naval_invader trait_engineer trickster }
+#				skill = 5
+#				attack_skill = 7
+#				defense_skill = 2
+#				planning_skill = 3
+#				logistics_skill = 4
+#			}
+
+
+#			create_corps_commander = { #guy just really liked china but did nanjing massacre? retired after 38
+#				name = "Iwane Matsui"
+#					picture = "Portrait_Japan_Iwane_Matsui.dds"
+#				traits = { old_guard trait_cautious urban_assault_specialist camouflage_expert }
+#				skill = 4
+#				attack_skill = 4
+#				defense_skill = 3
+#				planning_skill = 3
+#				logistics_skill = 3
+#			}
+
+

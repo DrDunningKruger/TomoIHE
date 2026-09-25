@@ -1,0 +1,2255 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	
+	### materials
+	
+	material_fabric = { #you really shouldnt use this
+		abbreviation = "mfb"
+		category = plane_material_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = -0.2
+			air_defence = -0.5
+		}
+
+		build_cost_resources = {
+			steel = 1
+		}
+	}	
+	
+	material_steel = { #replaces aluminium with steel, has worse stats
+		abbreviation = "mst"
+		category = plane_material_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = -0.1
+			air_defence = -0.3
+		}
+		build_cost_resources = {
+			steel = 2
+		}		
+	}	
+	
+	material_wood = { #cheap, costs no resources
+		abbreviation = "mwd"
+		category = plane_material_type
+		sfx = sfx_ui_sd_module_engine
+
+		build_cost_resources = {
+			aluminium = -1
+		}
+		
+		multiply_stats = {
+			#maximum_speed = -0.2
+			air_defence = -0.7
+		}
+	}	
+	
+	material_aluminium = {#standard, no debuffs
+		abbreviation = "mal"
+		category = plane_material_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+
+		}
+
+		build_cost_resources = {
+			aluminium = 2
+		}	
+	}	
+	
+	### wing shape
+
+	tac_wing = {
+		abbreviation = "twl"
+		category = plane_wing_type_medium
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+            
+		}
+	}	
+	
+	tac_wing_high = {
+		abbreviation = "twh"
+		category = plane_wing_type_medium
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = -0.1
+            air_defence = -0.2
+            air_ground_attack = 0.1			
+			naval_strike_targetting = 0.1
+			surface_detection = 0.1
+			sub_detection = 0.1
+            air_bombing = 0.1			
+		}
+	}	
+	
+	tac_wing_swept = {
+		abbreviation = "tws"
+		category = plane_wing_type_medium
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = 0.25
+            #air_defence = -0.1			
+			air_agility = -0.30
+			build_cost_ic = 0.1
+		}	
+	}
+
+	bomber_wing = {
+		abbreviation = "stw"
+		category = plane_wing_type_heavy
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+            
+		}
+	}	
+	
+	flying_wing_bomber = {
+		abbreviation = "flw"
+		category = plane_wing_type_heavy
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = 0.25
+            #air_defence = -0.1			
+			air_agility = -0.30
+			build_cost_ic = 0.1
+		}	
+        dismantle_cost_ic = 10
+	}	
+
+	biplane_wing = {
+		abbreviation = "bpw"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = -0.5
+			air_agility = 0.5
+			naval_strike_targetting = 0.1
+			surface_detection = 0.1
+			sub_detection = 0.1
+			build_cost_ic = 0.25			
+		}		
+		add_stats = {
+			air_defence = 3
+		}
+	}
+	
+	straight_wing = {
+		abbreviation = "stw"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+
+		}
+	}	
+	
+	flying_saucer = {
+		abbreviation = "ufo"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+        add_stats = {
+		   build_cost_ic = 100
+		}
+
+		multiply_stats = {
+			maximum_speed = 2
+			air_agility = 2
+			air_defence = 2
+            air_range = 0.2
+		}
+        dismantle_cost_ic = 100		
+	}	
+		
+		
+	flying_saucer_medium = {
+		abbreviation = "ufo"
+		category = plane_wing_type_medium
+		sfx = sfx_ui_sd_module_engine
+
+        add_stats = {
+		   build_cost_ic = 100
+		}
+
+		multiply_stats = {
+			maximum_speed = 2
+			air_agility = 2
+			air_defence = 2
+            air_range = 0.2
+		}
+        dismantle_cost_ic = 100		
+	}	
+	
+	gull_wing = {
+		abbreviation = "glw"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			air_ground_attack = 0.1
+			naval_strike_attack = 0.1
+			maximum_speed = -0.1
+			air_attack = -0.05
+		}			
+		
+		add_stats = {
+			air_defence = 1
+		}		
+		
+	}
+
+	parosal_wing = {
+		abbreviation = "prw"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = -0.2
+		}
+		multiply_stats = {
+			naval_strike_targetting = 0.1
+			surface_detection = 0.1
+			sub_detection = 0.1
+		}
+	}	
+	
+	swept_wing = {
+		abbreviation = "sww"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = 0.15
+			air_agility = -0.10
+			air_ground_attack = 0.1
+			naval_strike_attack = 0.1
+			air_attack = 0.1
+		}		
+		
+        dismantle_cost_ic = 20
+	}	
+	
+	flying_wing = {
+		abbreviation = "flw"
+		category = plane_wing_type
+		sfx = sfx_ui_sd_module_engine
+
+		multiply_stats = {
+			maximum_speed = 0.25
+            #air_defence = -0.1			
+			air_agility = -0.30
+			build_cost_ic = 0.1
+		}
+		
+        dismantle_cost_ic = 20
+	}
+	
+	### Engines
+
+	engine_1_1x = {
+		abbreviation = "e11"
+		category = plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 200
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.21
+			air_range = 200
+		}	
+	}
+
+	engine_1_2x = {
+		abbreviation = "e12"
+		category = twin_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 200
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.42
+			air_range = 300
+		}	
+	}
+
+	engine_1_3x = {
+		abbreviation = "e13"
+		category = medium_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 250
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.63
+			air_range = 300
+		}
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}		
+	}
+
+	engine_1_4x = {
+		abbreviation = "e14"
+		category = quad_large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 200
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.84
+			air_range = 450
+		}
+	}
+
+	engine_1_6x = {
+		abbreviation = "e16"
+		category = large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 250
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.26
+			air_range = 450
+		}
+		
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}			
+	}
+
+	engine_2_1x = {
+		abbreviation = "e21"
+		category = plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_1_1x
+
+		add_stats = {
+			maximum_speed = 300
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.21
+			air_range = 300
+		}
+	}
+
+	engine_2_2x = {
+		abbreviation = "e22"
+		category = twin_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_1_2x
+
+		add_stats = {
+			maximum_speed = 300
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.42
+			air_range = 450
+		}
+	}
+
+	engine_2_3x = {
+		abbreviation = "e23"
+		category = medium_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_1_3x
+
+		add_stats = {
+			maximum_speed = 375
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.63
+			air_range = 450
+		}
+
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}	
+	}
+
+	engine_2_4x = {
+		abbreviation = "e24"
+		category = quad_large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_1_4x
+
+		add_stats = {
+			maximum_speed = 300
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.84
+			air_range = 675
+		}
+	}
+
+	engine_2_6x = {
+		abbreviation = "e26"
+		category = large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_1_6x
+
+		add_stats = {
+			maximum_speed = 375
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.26
+			air_range = 675
+		}
+
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}	
+	}
+
+	engine_3_1x = { #finished
+		abbreviation = "e31"
+		category = plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_2_1x
+
+		add_stats = {
+			maximum_speed = 400
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.21
+			air_range = 400
+		}
+	}
+
+	engine_3_2x = {
+		abbreviation = "e32"
+		category = twin_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_2_2x
+
+		add_stats = {
+			maximum_speed = 400
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.42
+			air_range = 600
+		}
+	}
+
+	engine_3_3x = {
+		abbreviation = "e33"
+		category = medium_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_2_3x
+
+		add_stats = {
+			maximum_speed = 500
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.63
+			air_range = 600
+		}
+
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}	
+	}
+
+	engine_3_4x = {
+		abbreviation = "e34"
+		category = quad_large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_2_4x
+
+		add_stats = {
+			maximum_speed = 400
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.84
+			air_range = 900
+		}
+	}
+
+	engine_3_6x = {
+		abbreviation = "e36"
+		category = large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_2_6x
+
+		add_stats = {
+			maximum_speed = 500
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.26
+			air_range = 900
+		}
+		
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}			
+	}
+
+	engine_4_1x = {
+		abbreviation = "e41"
+		category = plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_3_1x
+
+		add_stats = {
+			maximum_speed = 500
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.21
+			air_range = 500
+		}
+	}
+
+	engine_4_2x = {
+		abbreviation = "e42"
+		category = twin_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_3_2x
+
+		add_stats = {
+			maximum_speed = 500
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.42
+			air_range = 750
+		}
+	}
+
+	engine_4_3x = {
+		abbreviation = "e43"
+		category = medium_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_3_3x
+
+		add_stats = {
+			maximum_speed = 625
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.63
+			air_range = 750
+		}
+		
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}			
+	}
+
+	engine_4_4x = {
+		abbreviation = "e44"
+		category = quad_large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_3_4x
+
+		add_stats = {
+			maximum_speed = 500
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.84
+			air_range = 1125
+		}
+	}
+
+	engine_4_6x = {
+		abbreviation = "e46"
+		category = large_plane_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_3_6x
+
+		add_stats = {
+			maximum_speed = 625
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.26
+			air_range = 1125
+		}
+		
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}			
+	}
+
+	jet_engine_1x = {
+		abbreviation = "j1"
+		category = plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_4_1x
+
+		add_stats = {
+			maximum_speed = 900
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.3
+			air_range = 600
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+	}
+
+	jet_engine_2x = {
+		abbreviation = "j2"
+		category = medium_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_4_2x
+
+		add_stats = {
+			maximum_speed = 850
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 0.6
+			air_range = 2500
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+	}
+
+	jet_engine_4x = {
+		abbreviation = "j4"
+		category = quad_large_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_4_4x
+
+		add_stats = {
+			maximum_speed = 850
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.2
+			air_range = 5000
+		}
+		build_cost_resources = {
+			tungsten = 2
+		}
+	}
+
+	jet_engine_6x = {
+		abbreviation = "j6"
+		category = large_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = engine_4_6x
+
+		add_stats = {
+			maximum_speed = 850
+			thrust = 0
+			build_cost_ic = 0
+			fuel_consumption = 1.8
+			air_range = 5000
+		}
+		build_cost_resources = {
+			tungsten = 3
+		}
+		
+		multiply_stats = {		
+			build_cost_ic = 0.25
+			air_range = 0.33
+		}			
+	}
+
+	rocket_engine_1 = {
+		abbreviation = "re1"
+		category = plane_rocket_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 1000
+			thrust = 0
+			build_cost_ic = 0
+			air_range = 0
+		}
+		multiply_stats = {
+			air_range = -0.5
+		}
+		build_cost_resources = {
+			tungsten = 3
+		}
+	}
+
+	rocket_engine_2 = { #rocket engines only come in sets of 1
+		abbreviation = "re2"
+		category = plane_rocket_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 1200
+			thrust = 0
+			build_cost_ic = 0
+			air_range = 0
+		}
+		multiply_stats = {
+			air_range = -0.5
+		}
+		build_cost_resources = {
+			tungsten = 1
+		}
+	}
+
+	rocket_engine_3 = { #rocket engines only come in sets of 1
+		abbreviation = "re3"
+		category = plane_rocket_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 1500
+			thrust = 0
+			build_cost_ic = 0
+			air_range = 0
+		}
+		multiply_stats = {
+			air_range = -0.5
+		}
+		build_cost_resources = {
+			tungsten = 3
+		}
+	}
+
+##      ## ########    ###    ########   #######  ##    ##  ######  
+##  ##  ## ##         ## ##   ##     ## ##     ## ###   ## ##    ## 
+##  ##  ## ##        ##   ##  ##     ## ##     ## ####  ## ##       
+##  ##  ## ######   ##     ## ########  ##     ## ## ## ##  ######  
+##  ##  ## ##       ######### ##        ##     ## ##  ####       ## 
+##  ##  ## ##       ##     ## ##        ##     ## ##   ### ##    ## 
+ ###  ###  ######## ##     ## ##         #######  ##    ##  ###### 
+	
+	light_mg_2x = {
+		abbreviation = "lmg2"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 16
+			build_cost_ic = 0
+		}		
+		xp_cost = 0
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		
+		mission_type_stats = {
+			limit = {
+				cas
+				port_strike
+				strategic_bomber
+				naval_bomber
+				attack_logistics
+			}
+			add_stats = {
+				air_attack = -10
+			}
+		}		
+		
+		#can_convert_from = {
+		#	module_category = fighter_weapon
+		#	convert_cost_ic = 0
+		#}		
+	}	
+	
+	heavy_mg_2x = { #fighter armament 2
+		abbreviation = "hmg2"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 20
+			build_cost_ic = 0
+			#air_ground_attack = 1
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		
+		mission_type_stats = {
+			limit = {
+				cas
+				port_strike
+				strategic_bomber
+				naval_bomber
+				attack_logistics
+			}
+			add_stats = {
+				air_attack = -15
+			}
+		}		
+		
+		#can_convert_from = {
+		#	module_category = fighter_weapon
+		#	convert_cost_ic = 100
+		#}			
+	}
+	
+	aircraft_cannon_1_1x = {
+		abbreviation = "ac11"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 25
+			build_cost_ic = 0
+			#air_agility = -9
+			#air_ground_attack = 1
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		#can_convert_from = {
+		#	module_category = fighter_weapon_cannon
+		#	convert_cost_ic = 1.5
+		#}
+
+		mission_type_stats = {
+			limit = {
+				cas
+				port_strike
+				strategic_bomber
+				naval_bomber
+				attack_logistics
+			}
+			add_stats = {
+				air_attack = -15
+			}
+		}		
+	}
+
+
+	wunder_cannon_1_1x = { #greenland flying saucer module
+		abbreviation = "ac11"
+		category = fighter_weapon_cannon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 60
+			build_cost_ic = 50
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+	}
+
+	### INTERCEPTOR WEAPONS 
+	### INTERCEPTOR WEAPONS 
+	### INTERCEPTOR WEAPONS 
+	
+	aa_rocket_rails = {
+		abbreviation = "rraa"
+		category = interceptor_weapons
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				interception
+			}
+			add_stats = {
+				air_attack = 10
+			}			
+		}
+		dismantle_cost_ic = 0.5		
+	}	
+	
+	schrage_musik = {
+		abbreviation = "shm"
+		category = interceptor_weapons
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 8
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				interception
+			}
+			add_stats = {
+				air_attack = 30
+			}			
+		}
+		dismantle_cost_ic = 1.5		
+	}
+
+
+ ######     ###     ######  
+##    ##   ## ##   ##    ## 
+##        ##   ##  ##       
+##       ##     ##  ######  
+##       #########       ## 
+##    ## ##     ## ##    ## 
+ ######  ##     ##  ######  
+	
+	light_strike_payload = {
+		abbreviation = "lsp"
+		category = strike_payload
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas }
+
+		allow_mission_type = {
+			cas
+			attack_logistics
+			naval_bomber
+		}
+		add_stats = {
+			air_ground_attack = 6
+		}
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -4
+			}
+		}
+		
+        mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 5
+			}
+			add_average_stats = {
+				naval_strike_targetting = 6
+			}
+			
+			multiply_stats = {
+				#air_agility = -0.2
+				#maximum_speed = -0.2
+			}				
+        }		
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.05
+		}
+	}
+	
+	heavy_strike_payload = {
+		abbreviation = "hsp"
+		category = strike_payload
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		allow_mission_type = {
+			cas
+			attack_logistics
+			naval_bomber
+		}
+		add_stats = {
+			air_ground_attack = 13
+		}
+		
+        mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 9
+			}
+			add_average_stats = {
+				naval_strike_targetting = 6
+			}				
+        }		
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -11
+			}
+		}		
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.05
+		}
+	}	
+	
+	cluster_bomb_payload = { #Better at CAS, can't nav strike 
+		abbreviation = "lsp"
+		category = strike_payload
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas }
+
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_stats = {
+			air_ground_attack = 8
+		}
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -6
+			}
+		}		
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.05
+		}
+	}
+	
+	tank_buster_1x1 = {
+		abbreviation = "tb1"
+		category = strike_payload
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		add_stats = {
+			air_ground_attack = 14
+		}
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -12
+			}
+		}		
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.05
+		}		
+	}	
+	
+ ########    ###     ######  
+    ##      ## ##   ##    ## 
+    ##     ##   ##  ##       
+    ##    ##     ## ##
+    ##    ######### ##      
+    ##    ##     ## ##    ## 
+    ##    ##     ##  ######
+
+	tactical_payload_small = {
+		abbreviation = "tps"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { tactical_bomber }
+
+		allow_mission_type = {
+			cas
+			#port_strike
+			strategic_bomber
+			naval_bomber
+			attack_logistics
+		}
+		add_stats = {
+			air_ground_attack = 5
+			air_bombing = 8
+		}
+		
+        mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 7
+			}
+			add_average_stats = {
+				naval_strike_targetting = 5
+			}				
+        }		
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -4
+			}
+		}		
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.1
+		}	
+	}	
+	
+	tactical_payload_heavy = {
+		abbreviation = "tph"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { tactical_bomber }
+
+		allow_mission_type = {
+			cas
+			#port_strike
+			strategic_bomber
+			naval_bomber
+			attack_logistics
+		}
+		add_stats = {
+			air_ground_attack = 10
+			air_bombing = 11
+		}
+		
+        mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 10
+			}
+			add_average_stats = {
+				naval_strike_targetting = 5
+			}				
+        }			
+		
+		mission_type_stats = {
+			limit = {
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = -8
+			}
+		}		
+		
+		multiply_stats = {
+			air_agility = -0.3
+			maximum_speed = -0.3
+		}	
+	}
+	
+ #####  ######## ###### 
+##   ##    ##    ##   ##
+##         ##    ##	  ##
+ #####     ##    ######	
+     ##    ##    ##	  ##
+##   ##    ##    ##	  ##
+ #####     ##    ##	  ##
+	
+	small_strategic_payload = {
+		abbreviation = "ssp"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+
+		add_stats = {
+			#build_cost_ic = 5
+			air_bombing = 15
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			strategic_bomber
+		}
+
+		can_convert_from = {
+			module_category = strat_weapon
+			convert_cost_ic = 1
+		}	
+		#dismantle_cost_ic = 6
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.1
+		}		
+	}
+
+	large_strategic_payload = {
+		abbreviation = "ssl"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+
+		add_stats = {
+			#build_cost_ic = 5
+			air_bombing = 25
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			strategic_bomber
+		}
+
+		can_convert_from = {
+			module_category = strat_weapon
+			convert_cost_ic = 1
+		}	
+		#dismantle_cost_ic = 10
+		
+		multiply_stats = {
+			air_agility = -0.1
+			maximum_speed = -0.1
+		}		
+	}
+	
+###     ##    ####    ##    ##
+####    ##   ##  ##   ##    ##
+## ##   ##  ##    ##  ##    ##
+##  ##  ## ##      ##  ##  ##
+##   ## ## ##########  ##  ##
+##    #### ##      ##   ####
+##     ### ##      ##    ##
+
+	naval_strike_package = { #asw
+		abbreviation = "tpm"
+		category = nav_bomber_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
+
+		allow_mission_type = {
+			naval_bomber
+			#port_strike
+		}
+		
+        mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 21
+			}
+			add_average_stats = {
+				naval_strike_targetting = 10
+			}				
+        }
+		
+		multiply_stats = {
+			air_agility = -0.2
+			maximum_speed = -0.2
+		}		
+	}
+	
+	guided_anti_ship_missile = {
+		abbreviation = "asm"
+		category = nav_bomber_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
+
+		allow_mission_type = {
+			naval_bomber
+			#port_strike
+		}
+		
+       mission_type_stats = {
+            limit = {
+                naval_bomber
+            }
+			add_stats = {
+				naval_strike_attack = 22
+			}
+			add_average_stats = {
+				naval_strike_targetting = 14
+			}				
+        }	
+
+		multiply_stats = {
+			air_agility = -0.3
+			maximum_speed = -0.3
+		}		
+	}
+	
+	recon_camera = {
+		abbreviation = "rca"
+		category = recon_camera
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = scout_plane
+		forbid_equipment_type_exact_match_for_category = {
+			fighter_weapon = scout_plane
+			cas_weapon = scout_plane
+			nav_bomber_weapon = scout_plane
+			tac_weapon = scout_plane
+		}
+
+		add_stats = {
+			build_cost_ic = 0
+			surface_detection = 4
+			sub_detection = 2
+		}
+		xp_cost = 0
+		allow_mission_type = {
+			recon
+			naval_patrol
+		}		
+	}
+
+
+	fixed_explosive_charge = {
+		abbreviation = "fec"
+		category = kamikaze_bomber_weapon
+		gui_category = nav_bomber_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = suicide
+
+		add_stats = {	
+			build_cost_ic = 0
+		}
+		xp_cost = 00
+		allow_mission_type = {
+			naval_kamikaze
+		}
+
+		add_stats = {
+			naval_strike_attack = 22
+		}
+		add_average_stats = {
+			naval_strike_targetting = 11
+		}
+		multiply_stats = {
+			air_agility = -0.2
+			maximum_speed = -0.2
+		}
+
+		dismantle_cost_ic = 1
+	}
+
+ ######  ########  ########  ######  ####    ###    ##          ##     ##  #######  ########  ##     ## ##       ########  ######  
+##    ## ##     ## ##       ##    ##  ##    ## ##   ##          ###   ### ##     ## ##     ## ##     ## ##       ##       ##    ## 
+##       ##     ## ##       ##        ##   ##   ##  ##          #### #### ##     ## ##     ## ##     ## ##       ##       ##       
+ ######  ########  ######   ##        ##  ##     ## ##          ## ### ## ##     ## ##     ## ##     ## ##       ######    ######  
+      ## ##        ##       ##        ##  ######### ##          ##     ## ##     ## ##     ## ##     ## ##       ##             ## 
+##    ## ##        ##       ##    ##  ##  ##     ## ##          ##     ## ##     ## ##     ## ##     ## ##       ##       ##    ## 
+ ######  ##        ########  ######  #### ##     ## ########    ##     ##  #######  ########   #######  ######## ########  ######  
+
+	fuel_tanks_small1 = {
+		abbreviation = "fts"
+		category = plane_fuel_tank
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_range = 0.1
+			air_defence = -0.1
+		}
+		xp_cost = 0
+	}
+
+	fuel_tanks_medium1 = {
+		abbreviation = "ftm"
+		category = plane_fuel_tank
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_range = 0.15
+			air_defence = -0.25
+		}
+	}
+
+	fuel_tanks_large1 = {
+		abbreviation = "ftl"
+		category = plane_fuel_tank
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_range = 0.2
+			air_defence = -0.3
+		}
+	}	
+
+ ######  ########  ########  ######  ####    ###    ##                       ######  ##     ##    ###    ##       ##       
+##    ## ##     ## ##       ##    ##  ##    ## ##   ##                      ##    ## ###   ###   ## ##   ##       ##       
+##       ##     ## ##       ##        ##   ##   ##  ##                      ##       #### ####  ##   ##  ##       ##       
+ ######  ########  ######   ##        ##  ##     ## ##          #######      ######  ## ### ## ##     ## ##       ##       
+      ## ##        ##       ##        ##  ######### ##                            ## ##     ## ######### ##       ##       
+##    ## ##        ##       ##    ##  ##  ##     ## ##                      ##    ## ##     ## ##     ## ##       ##       
+ ######  ##        ########  ######  #### ##     ## ########                 ######  ##     ## ##     ## ######## ######## 
+
+	armor_plate_small = {
+		abbreviation = "aps"
+		category = plane_armor_slot
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 4
+			build_cost_ic = 0
+		}
+		build_cost_resources = {
+
+		}
+		xp_cost = 0
+		#dismantle_cost_ic = 0.5
+	}	
+	
+	heavy_armor_plate_small = {
+		abbreviation = "aps"
+		category = plane_armor_slot
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 6
+			build_cost_ic = 0
+		}
+		
+		build_cost_resources = {
+			steel = 1
+		}		
+	}
+
+	small_lightweight = {
+		abbreviation = "lwg"
+		category = plane_special_module_small
+		
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = 0.15
+			maximum_speed = 0.15
+			air_defence = -0.05
+		}
+	}
+		
+	torp_mounting = {
+		abbreviation = "lwg"
+		category = plane_special_module_small
+		
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+
+		}
+		
+		add_stats = {
+			naval_strike_targetting = 3
+		}
+		#add_average_stats = {
+		#	naval_strike_targetting = 2
+		#}			
+	}
+	
+	reinforced_skin_light = {
+		abbreviation = "smm"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = -0.15
+			air_defence = 0.05
+		}	
+	}	
+	
+	small_bulky_airframe = {
+		abbreviation = "smm"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+             air_defence = 0.15
+             air_agility = -0.1			 
+		}
+
+        add_stats = {
+		     build_cost_ic = 5
+		}
+
+		build_cost_resources = {
+			aluminium = 1
+		}		
+	}		
+	
+	gyroscopic_sight = { #small fighter
+		abbreviation = "gys"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_attack = 0.1
+		}			
+	}
+	
+	small_sight_bomber = { #small bomber
+		abbreviation = "sbm"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_ground_attack = 0.15
+			naval_strike_attack = 0.05
+		}
+	}	
+
+	self_sealing_fuel_tanks_small = {
+		abbreviation = "ssf"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_defence = 0.2
+		}
+		build_cost_resources = {
+			rubber = 1
+		}
+	}
+
+	small_assisted_steering = {
+		abbreviation = "ass"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_ground_attack = 0.10
+			naval_strike_attack = 0.10
+			air_agility = 0.10
+			build_cost_ic = 0.10			
+		}	
+	}		
+	
+	small_offset_tail = {
+		abbreviation = "ass"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = 0.1
+			maximum_speed = -0.10			
+		}	
+	}	
+	
+	small_wep = {
+		abbreviation = "wep"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_attack = 0.1
+			air_agility = 0.1
+			maximum_speed = 0.1
+            air_range = -0.1
+		}	
+	}	
+	
+	fighter_radar = {
+		abbreviation = "gys"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_attack = 0.2
+			build_cost_ic = 0.10			
+		}
+	}	
+	
+	small_drop_tanks = {
+		abbreviation = "sdt"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_range = 0.15
+		}
+	}	
+	
+	small_aircraft_fuel = {
+		abbreviation = "sdt"
+		category = plane_special_module_small_turbo
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			maximum_speed = 0.15
+            air_agility = 0.15			
+		}	
+		
+		add_stats = {
+		   fuel_consumption = 0.1
+		}
+	}	
+	
+	small_turbocharger = {
+		abbreviation = "sdt"
+		category = plane_special_module_small_turbo
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			maximum_speed = 0.20
+			air_agility = 0.10
+            air_attack = 0.05
+			air_ground_attack = 0.05
+			naval_strike_attack = 0.05		
+		}	
+		
+		add_stats = {
+            build_cost_ic = 4
+		}
+	}	
+	
+	small_supercharger = {
+		abbreviation = "sdt"
+		category = plane_special_module_small_turbo
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			maximum_speed = 0.20
+			air_agility = 0.10
+            air_attack = 0.05
+			air_ground_attack = 0.05
+			naval_strike_attack = 0.05
+			air_bombing = 0.05			
+            air_range = -0.1         			
+		}
+	}	
+	
+	
+	
+	small_modest_armament = {
+		abbreviation = "sdt"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			#maximum_speed = 0.1
+			#air_agility = 0.1
+		    air_range = 0.1	
+            air_attack = -0.2		
+			air_ground_attack = -0.2
+			naval_strike_attack = -0.2
+			air_bombing = -0.2
+		}	
+	}	
+	
+	drop_tanks = {
+		abbreviation = "dpt"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_range = 0.35
+		}
+		xp_cost = 0
+	}
+
+	dive_brakes_small = {
+		abbreviation = "dbs"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		
+#		forbid_module_categories = {
+#			nav_bomber_weapon
+#			cas_weapon
+#		}
+
+		multiply_stats = {
+			air_ground_attack = 0.05
+			naval_strike_targetting = 0.15
+		}
+	}
+
+	floats = {
+		abbreviation = "flo"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		allow_mission_type = {
+			naval_patrol
+		}
+		add_stats = {
+			surface_detection = 5
+			sub_detection = 4
+		}
+		multiply_stats = {
+			maximum_speed = -0.1
+			air_agility = -0.3
+		}		
+	}
+
+ ######  ########  ########  ######  ####    ###    ##                  ##     ## ######## ########  #### ##     ## ##     ## 
+##    ## ##     ## ##       ##    ##  ##    ## ##   ##                  ###   ### ##       ##     ##  ##  ##     ## ###   ### 
+##       ##     ## ##       ##        ##   ##   ##  ##                  #### #### ##       ##     ##  ##  ##     ## #### #### 
+ ######  ########  ######   ##        ##  ##     ## ##       #######    ## ### ## ######   ##     ##  ##  ##     ## ## ### ## 
+      ## ##        ##       ##        ##  ######### ##                  ##     ## ##       ##     ##  ##  ##     ## ##     ## 
+##    ## ##        ##       ##    ##  ##  ##     ## ##                  ##     ## ##       ##     ##  ##  ##     ## ##     ## 
+ ######  ##        ########  ######  #### ##     ## ########            ##     ## ######## ########  ####  #######  ##     ## 
+
+	self_sealing_fuel_tanks_medium = {
+		abbreviation = "ssf"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_defence = 0.2
+		}
+		build_cost_resources = {
+			rubber = 1
+		}
+	}
+
+	sight_bomber = { #medium bomber
+		abbreviation = "sbm"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_ground_attack = 0.1
+			naval_strike_attack = 0.1
+			air_bombing = 0.1
+		}
+	}	
+	
+	propeller_reverse = { #medium bomber
+		abbreviation = "sbm"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_ground_attack = 0.1
+		}
+	}
+	
+	gyroscopic_sight_medium = { #medium fighter
+		abbreviation = "gys"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_attack = 0.1
+		}			
+	}	
+
+	leighlight = {
+		abbreviation = "llg"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			naval_strike_targetting = 2
+		}
+	}
+
+	reinforced_skin = {
+		abbreviation = "smm"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+             air_defence = 0.1	
+		}
+
+        add_stats = {
+		     build_cost_ic = 8
+		}
+	}
+
+	medium_lightweight = {
+		abbreviation = "lwg"
+		category = plane_special_module_medium
+		
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = 0.10
+			maximum_speed = 0.15
+			air_defence = -0.05
+		}
+	}	
+	
+	Water_Injection_System = {
+		abbreviation = "wis"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = 0.25
+		}			
+	}
+
+	flying_boat_medium = {
+		abbreviation = "flbm"
+		category = medium_floats_category
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			surface_detection = 8
+			sub_detection = 4
+		}		
+		
+		forbid_module_categories = {
+			fighter_weapon
+		}		
+		
+		multiply_stats = {
+		    air_bombing = -0.5
+			air_ground_attack = -0.5	
+			maximum_speed = -0.1
+			air_agility = -0.1			
+			build_cost_ic = -0.10
+		}		
+		allow_mission_type = {
+			naval_patrol
+		}
+	}	
+	
+	medium_floats = {
+		abbreviation = "flm"
+		category = medium_floats_category
+		sfx = sfx_ui_sd_module_turret
+
+		allow_mission_type = {
+			naval_patrol
+		}
+
+		add_stats = {
+			surface_detection = 8
+			sub_detection = 4
+		}
+		multiply_stats = {
+			maximum_speed = -0.3
+			air_agility = -0.1			
+			build_cost_ic = -0.10
+		}		
+	}	
+	
+	medium_sonobuoy = {
+		abbreviation = "flm"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		#allow_mission_type = {
+		#	naval_patrol
+		#}
+
+		add_stats = {
+			surface_detection = 1
+			sub_detection = 5
+		}		
+	}	
+	
+	armor_plate_medium = {
+		abbreviation = "apm"
+		category = plane_armor_slot_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 8
+		}
+		xp_cost = 0
+	}	
+	
+	heavy_armor_plate_medium = {
+		abbreviation = "apm"
+		category = plane_armor_slot_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 12
+		}
+		build_cost_resources = {
+			steel = 1
+		}		
+		xp_cost = 0
+	}		
+
+ ######  ########  ########  ######  ####    ###    ##                  ##          ###    ########   ######   ######## 
+##    ## ##     ## ##       ##    ##  ##    ## ##   ##                  ##         ## ##   ##     ## ##    ##  ##       
+##       ##     ## ##       ##        ##   ##   ##  ##                  ##        ##   ##  ##     ## ##        ##       
+ ######  ########  ######   ##        ##  ##     ## ##       #######    ##       ##     ## ########  ##   #### ######   
+      ## ##        ##       ##        ##  ######### ##                  ##       ######### ##   ##   ##    ##  ##       
+##    ## ##        ##       ##    ##  ##  ##     ## ##                  ##       ##     ## ##    ##  ##    ##  ##       
+ ######  ##        ########  ######  #### ##     ## ########            ######## ##     ## ##     ##  ######   ######## 
+#LARGE todo
+
+	flying_boat_large = {
+		abbreviation = "flbl"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			surface_detection = 12
+			sub_detection = 4		
+		}			
+
+		multiply_stats = {
+		    air_bombing = -0.5	
+			maximum_speed = -0.1
+			air_agility = -0.1			
+			build_cost_ic = -0.25
+		}
+
+		allow_mission_type = {
+			naval_patrol
+		}		
+		
+		xp_cost = 0
+		dismantle_cost_ic = 10
+	}	
+	
+	large_sonobuoy = {
+		abbreviation = "flm"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		allow_mission_type = {
+			naval_patrol
+		}
+
+		add_stats = {
+			surface_detection = 1
+			sub_detection = 6
+		}		
+	}
+
+	armor_plate_large = {
+		abbreviation = "apl"
+		category = plane_armor_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 8
+			build_cost_ic = 0
+		}
+	}	
+	
+	armor_plate_large_heavy = {
+		abbreviation = "apl"
+		category = plane_armor_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_defence = 12
+			build_cost_ic = 0
+		}
+		
+		build_cost_resources = {
+			steel = 1
+		}		
+	}
+	
+	gun_laying_drive_large = {
+		abbreviation = "apm"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0
+		}
+		multiply_stats = {
+			air_attack = 0.2
+		}	
+	}
+	
+	self_sealing_fuel_tanks_large = {
+		abbreviation = "ssl"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_defence = 0.3
+		}
+		build_cost_resources = {
+			rubber = 1
+		}
+	}
+
+	contra_rotating_props = {
+		abbreviation = "aft"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_engine
+		
+		multiply_stats = {
+			maximum_speed = 0.2
+		}
+	}
+	
+	chaff_dispenser = {
+		abbreviation = "erj"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			air_defence = 10
+			build_cost_ic = 0
+		}
+		build_cost_resources = {
+			aluminium = 1
+		}
+	}
+
+
+######## ##       ########  ######  ######## ########   #######  ##    ## ####  ######   ######  
+##       ##       ##       ##    ##    ##    ##     ## ##     ## ###   ##  ##  ##    ## ##    ## 
+##       ##       ##       ##          ##    ##     ## ##     ## ####  ##  ##  ##       ##       
+######   ##       ######   ##          ##    ########  ##     ## ## ## ##  ##  ##        ######  
+##       ##       ##       ##          ##    ##   ##   ##     ## ##  ####  ##  ##             ## 
+##       ##       ##       ##    ##    ##    ##    ##  ##     ## ##   ###  ##  ##    ## ##    ## 
+######## ######## ########  ######     ##    ##     ##  #######  ##    ## ####  ######   ######  
+
+	plane_signal_flag = {
+		abbreviation = "psf"
+		category = plane_radio
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			air_agility = 0.01
+		}
+		xp_cost = 0
+	}	
+	
+    radio_navigation_1 = {
+		abbreviation = "rn1"
+		category = plane_radio
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			night_penalty = -0.05
+		}
+		xp_cost = 0
+	}
+
+	radio_navigation_2 = {
+		abbreviation = "rn2"
+		category = plane_radio
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+		parent = radio_navigation_1
+
+		add_stats = {
+			night_penalty = -0.1
+		}
+		xp_cost = 0
+	}	
+	
+	bomb_sights_1 = { #strat 
+		abbreviation = "bs1"
+		category = plane_special_module_bomb_sights
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_bombing = 4
+			build_cost_ic = 0
+		}
+		xp_cost = 0
+	}
+
+	bomb_sights_2 = { #strat
+		abbreviation = "bs2"
+		category = plane_special_module_bomb_sights
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+		parent = bomb_sights_1
+
+		add_stats = {
+			air_bombing = 6
+			build_cost_ic = 0
+		}
+		xp_cost = 0
+	}
+
+	air_ground_radar_1 = {
+		abbreviation = "agr1"
+		category = plane_special_module_air_ground_radar
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_bombing = 4
+			night_penalty = -0.1
+			surface_detection = 5
+			sub_detection = 1
+		}			
+		multiply_stats = {
+			naval_strike_targetting = 0.2
+		}
+	}
+
+	air_ground_radar_2 = {
+		abbreviation = "agr2"
+		category = plane_special_module_air_ground_radar
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+		parent = air_ground_radar_1
+
+		add_stats = {
+			air_bombing = 6
+			night_penalty = -0.3
+			surface_detection = 10
+			sub_detection = 2
+		}
+		multiply_stats = {
+			naval_strike_targetting = 0.2
+		}		
+	}
+
+	air_air_radar_1 = {
+		abbreviation = "aar1"
+		category = plane_special_module_air_air_radar
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			night_penalty = -0.2
+		}
+		mission_type_stats = {
+			limit = {
+				interception
+			}
+			multiply_stats = {
+				air_attack = 0.1
+			}			
+		}		
+	}
+
+	air_air_radar_2 = {
+		abbreviation = "aar2"
+		category = plane_special_module_air_air_radar
+		gui_category = plane_special_module_electronics
+		sfx = sfx_ui_sd_module_turret
+		parent = air_air_radar_1
+		add_stats = {
+			night_penalty = -0.4
+		}
+
+		mission_type_stats = {
+			limit = {
+				interception
+			}
+			multiply_stats = {
+				air_attack = 0.2
+			}			
+		}
+		
+	}
+
+########  ######## ######## ######## ##    ##  ######  #### ##     ## ########    ######## ##     ## ########  ########  ######## ########  ######  
+##     ## ##       ##       ##       ###   ## ##    ##  ##  ##     ## ##             ##    ##     ## ##     ## ##     ## ##          ##    ##    ## 
+##     ## ##       ##       ##       ####  ## ##        ##  ##     ## ##             ##    ##     ## ##     ## ##     ## ##          ##    ##       
+##     ## ######   ######   ######   ## ## ##  ######   ##  ##     ## ######         ##    ##     ## ########  ########  ######      ##     ######  
+##     ## ##       ##       ##       ##  ####       ##  ##   ##   ##  ##             ##    ##     ## ##   ##   ##   ##   ##          ##          ## 
+##     ## ##       ##       ##       ##   ### ##    ##  ##    ## ##   ##             ##    ##     ## ##    ##  ##    ##  ##          ##    ##    ## 
+########  ######## ##       ######## ##    ##  ######  ####    ###    ########       ##     #######  ##     ## ##     ## ########    ##     ######  
+
+	lmg_defense_turret = { #defensive turrets
+		abbreviation = "lmgt"
+		category = plane_special_module_defense_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_attack = 5
+			air_defence = 2
+		}
+		
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception				
+			}
+			add_stats = {
+				air_attack = -5
+				air_defence = -2
+			}
+		}		
+	}
+
+	hmg_defense_turret = {
+		abbreviation = "hmgt"
+		category = plane_special_module_defense_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_attack = 10
+			air_defence = 4
+		}
+
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception				
+			}
+			add_stats = {
+				air_attack = -10
+				air_defence = -4
+			}
+		}		
+	}
+
+	cannon_defense_turret = {
+		abbreviation = "cat"
+		category = plane_special_module_defense_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_attack = 15
+			air_defence = 6
+		}
+
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception				
+			}
+			add_stats = {
+				air_attack = -15
+				air_defence = -6
+			}
+		}		
+	}	
+	
+	streamlined_fuselage_small = {
+		abbreviation = "cat"
+		category = plane_special_module_streamlined_fuselage
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			maximum_speed = 0.05
+		}
+		
+		forbid_module_categories = {
+			plane_special_module_defense_turret
+		}		
+	}	
+	
+	streamlined_fuselage_medium = {
+		abbreviation = "cat"
+		category = plane_special_module_streamlined_fuselage_medium
+		sfx = sfx_ui_sd_module_turret
+
+		multiply_stats = {
+			maximum_speed = 0.1
+			air_agility = 0.1
+		}
+		
+		forbid_module_categories = {
+			plane_special_module_defense_turret
+		}		
+	}	

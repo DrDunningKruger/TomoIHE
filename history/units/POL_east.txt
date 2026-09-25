@@ -1,0 +1,105 @@
+division_template = {
+	name = "2th Warsaw Tank Brigade"		
+	is_locked = no
+	division_names_group = POL_INF_01
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+		medium_armor = { x = 1 y = 4 }		
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 2 y = 4 }	
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		medium_sp_anti_air_brigade = { x = 4 y = 0 }	
+		medium_sp_anti_air_brigade = { x = 4 y = 1 }
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Polish Army in The East"			
+	is_locked = no
+	division_names_group = POL_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }		
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 	
+		rocket_artillery = { x = 0 y = 3 }
+	}
+}
+
+
+
+
+units = {
+	division = {
+		name = "5th Infantry Division"
+		location = 8085
+		division_template = "Polish Army in The East"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+		start_experience_factor = 0.9
+	}
+	division = {
+		name = "6th Infantry Division"
+		location = 8085
+		division_template = "Polish Army in The East"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+		start_experience_factor = 0.9
+	}
+	division = {
+		name = "7th Infantry Division"
+		location = 8085
+		division_template = "Polish Army in The East"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+		start_experience_factor = 0.9
+	}
+	division = {
+		name = "8th Infantry Division"
+		location = 8085
+		division_template = "Polish Army in The East"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+		start_experience_factor = 0.9
+	}
+	division = {
+		name = "9th Infantry Division"
+		location = 8085
+		division_template = "Polish Army in The East"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+		start_experience_factor = 0.9
+	}
+	#division = {
+	#	name = "2th Warsaw Tank Brigade"
+	#	location = 8085
+	#	division_template = "2th Warsaw Tank Brigade"
+	#	force_equipment_variants = { infantry_equipment_2 = { owner = "POL" } }	
+	#	start_experience_factor = 1.5
+	#}
+}

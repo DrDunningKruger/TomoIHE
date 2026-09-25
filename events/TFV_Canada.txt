@@ -1,0 +1,8 @@
+﻿###########################
+# Canadian TFV events Events
+###########################
+
+add_namespace = tfv_canada
+add_namespace = canada_vanilla
+
+

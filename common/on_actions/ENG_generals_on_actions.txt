@@ -1,0 +1,129 @@
+on_actions = {
+	on_startup = {
+		effect = {
+	ENG = {
+
+
+#create_field_marshal = { #commanded BEF in France, arrogant, didn't listen to anyone, did dunkirk successfully, thats all
+#	name = "Edmund Ironside" #early war FM, home defence guy
+#	desc = "Edmund_Ironside_desc" #removed because he is shit for anything but sealion and sealion is banned
+#	picture = "Portrait_Britain_Bernard_Montgomery.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 5
+#	planning_skill = 5
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #fought in Burma, adaptable, offensive patrols, defensive gen, forbade retreats, relied on air supply extensively, beloved, child molester
+#	name = "William Slim" #Defensive Jungle Gen, should go to india?
+#	picture = "Portrait_Britain_William_Slim.dds"
+#	traits = {  }
+#	skill = 5
+#	attack_skill = 5
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 6
+#}
+
+#create_corps_commander = { #fought only in east africa and nowhere else
+#	name = "William Platt"
+#	picture = "Portrait_Britain_William_Platt.dds"
+#	traits = {  }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+#create_corps_commander = { #was stationed in africa and was later a paper pusher in asia
+#	name = "George Giffard"
+#	picture = "Portrait_Britain_George_Giffard.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+
+
+#create_corps_commander = { #ass indian commander
+#	name = "Jackie Smyth"
+#	picture = "Portrait_Britain_John_Jackie_Smyth.dds"
+#	traits = {  }
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 2
+#	planning_skill = 2
+#	logistics_skill = 2
+#}
+
+#create_corps_commander = { #except for BEF, didnt fight anywhere
+#	name = "Henry Pownall"
+#	picture = "Portrait_Britain_Henry_Pownall.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+#create_field_marshal = { #led BEF, idiot, 
+#	name = "John Vereker Lord Gort" # Aristocrat
+#	id = 994
+#	picture = "Portrait_Britain_John_Vereker.dds"
+#	traits = {  }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 4
+#	logistics_skill = 2
+#}
+
+#create_corps_commander = { #paper pusher
+#	name = "Bernard Paget"
+#	picture = "Bernard_Paget.dds"
+#	traits = {  }
+#	skill = 3
+#	
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+#create_corps_commander = { #had kidney stones, did fuck all
+#	name = "Edmond Schreiber" 
+#	picture = "Edmond_Schreiber.dds"
+#	traits = {  }
+#	skill = 3
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 3
+#	logistics_skill = 4
+#}
+
+#create_corps_commander = { #commanded 1st armored in desert, quickly relived of command for arguing with monty
+#	name = "Herbert Lumsden" 
+#	picture = "Herbert_Lumsden.dds"
+#	traits = { }
+#	skill = 5
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 4
+#	logistics_skill = 5
+#}	
+
+### John_Dill - diplomat FM
+
+### 	
+	
+	}
+		}
+	}
+}

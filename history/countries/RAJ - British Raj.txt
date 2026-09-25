@@ -1,0 +1,176 @@
+﻿capital = 439
+
+oob = "RAJ_1936"
+
+
+set_stability = 0.6
+set_war_support = 0.1
+set_research_slots = 3
+set_fuel_ratio = 1.0
+# Starting tech
+set_technology = {
+	basic_train = 1	
+    cap_everyone = 1
+	electronic_mechanical_engineering = 1
+	armored_car1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	britbong_armor_pack = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	basic_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	basic_heavy_tank_chassis = 1
+	engine_tech_1 = 1
+    new_tank_guns = 1
+	armor_tech_1 = 1	
+	armor_tech_2 = 1	
+	tank_aa_guns = 1
+	engines_1 = 1
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_large_airframe = 1
+	early_bombs = 1
+	aa_lmg = 1
+	aircraft_construction = 1
+	range_improvements = 1
+	electronics_2 = 1	
+	fighter_guns = 1
+	interwar_antitank = 1	
+	superior_firepower = 1		
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_cruiser = 1	
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+		sonar = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_ideas = {
+		RAJ_princely_states
+		RAJ_marginalized_muslim_community
+		RAJ_agrarian_society
+		RAJ_risk_of_famine
+	    training_spirit	
+	}
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_convoys = 50
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "County Class"
+		type = ship_hull_cruiser_1
+		name_group = ENG_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Cheap ASW"
+		type = ship_hull_light_1
+		name_group = AST_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}	
+}
+
+set_cosmetic_tag = RAJ_UK # British Raj
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 17
+	fascism = 2
+	communism = 1
+	neutrality = 80
+}
+recruit_character = RAJ_lord_linlithgow
+recruit_character = RAJ_v_d_savarkar
+recruit_character = RAJ_p_krishna_pillai
+recruit_character = RAJ_b_p_sitaramayya
+recruit_character = RAJ_w_h_gould_bradford
+recruit_character = RAJ_william_e_parry
+recruit_character = RAJ_mohan_singh
+recruit_character = RAJ_mehar_singh
+recruit_character = RAJ_bruce_w_mcpherson
+recruit_character = RAJ_aspy_merwan_engineer
+recruit_character = RAJ_arjan_singh_vibhusan
+recruit_character = RAJ_arthur_a_barrett
+recruit_character = RAJ_bhaskar_soman
+recruit_character = RAJ_rajendra_prasad
+recruit_character = RAJ_ravindra_darshan_singh
+recruit_character = RAJ_ram_dass_katari
+recruit_character = RAJ_archibald_wavell
+recruit_character = RAJ_louis_mountbatten
+recruit_character = RAJ_kodandera_cariappa
+recruit_character = RAJ_ram_singh_thakur
+recruit_character = RAJ_homi_j_bhabha
+recruit_character = RAJ_bahadur_jayla_of_khoch_bahur
+recruit_character = RAJ_anyang_bhula
+recruit_character = RAJ_john_edward_golightly
+recruit_character = RAJ_bhimrao_ramji_ambedkar
+recruit_character = RAJ_chakravarti_rajagopalachari
+recruit_character = RAJ_agha_khan_iii
+recruit_character = RAJ_mahatma_mohandas_gandhi
+recruit_character = RAJ_sir_mohammed_iqbal
+recruit_character = RAJ_john_mathai
+
+recruit_character = RAJ_Herbert_Fitzherbert
+recruit_character = RAJ_William_Slim
+recruit_character = RAJ_Frank_messervy
+recruit_character = RAJ_Claude_Auchinleck
+recruit_character = RAJ_Douglas_Gracey
+recruit_character = RAJ_Noel_Beresford
+recruit_character = RAJ_Jayanto_Nath_Chaudhuri
+recruit_character = RAJ_Orde_Wingate
+recruit_character = RAJ_kodandera_madappa_cariappa
+recruit_character = RAJ_Geoffrey_Scoones
+recruit_character = RAJ_Charles_Hamilton_Boucher
+
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	
