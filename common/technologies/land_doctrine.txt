@@ -1658,10 +1658,6 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-
-	    allow = {
-		TAG = SWI
-		}
 		
 		folder = {
 			name = land_doctrine_folder
@@ -2192,7 +2188,7 @@ technologies = {
 			max_organisation = 5
 			breakthrough = 0.1
 		}
-
+		max_dig_in = 5
 		category_cavalry = {
 			breakthrough = 0.05
 		}

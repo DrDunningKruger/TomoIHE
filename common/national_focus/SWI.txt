@@ -330,4 +330,47 @@ focus_tree = {
 						}						
 					}					
 		}
+
+	}
+	focus = {
+		id = italian_toratora
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1939.9.1
+			NOT = { has_global_flag = asia_only }
+		}
+		completion_reward = {
+        ITA = {		
+        add_timed_idea = { idea = ITA_tora_tora_tora_idea days = 120 }
+		}}
+	}
+	focus = {
+		id = NorthAfrica_demilitarized_zone
+		x = 6
+		y = 1
+		cost = 1
+		available = {
+			FRA = { has_country_flag = france_is_capped }
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		
+	    search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH}		
+		
+		completion_reward = {
+			458 = { set_demilitarized_zone = no }
+			459 = { set_demilitarized_zone = no }
+			460 = { set_demilitarized_zone = no }
+			513 = { set_demilitarized_zone = no }
+			462 = { set_demilitarized_zone = no }
+			461 = { set_demilitarized_zone = no }
+			665 = { set_demilitarized_zone = no }
+		}		
 	}

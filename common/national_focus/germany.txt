@@ -4011,6 +4011,28 @@ focus_tree = {
 				if = { limit = { AST = { exists = yes }}  declare_war_on = { target = AST type = annex_everything } }
 				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
 			}
+
+			ITA = {	
+				if = { limit = { POL = { exists = yes }}  declare_war_on = { target = POL type = annex_everything } }	
+				if = { limit = { ENG = { exists = yes }}  declare_war_on = { target = ENG type = annex_everything } }
+				if = { limit = { RAJ = { exists = yes }}  declare_war_on = { target = RAJ type = annex_everything } }
+				if = { limit = { CAN = { exists = yes }}  declare_war_on = { target = CAN type = annex_everything } }
+				if = { limit = { SAF = { exists = yes }}  declare_war_on = { target = SAF type = annex_everything } }
+				if = { limit = { NEP = { exists = yes }}  declare_war_on = { target = NEP type = annex_everything } }
+				if = { limit = { AST = { exists = yes }}  declare_war_on = { target = AST type = annex_everything } }
+				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
+			}
+
+			IEA = {	
+				if = { limit = { POL = { exists = yes }}  declare_war_on = { target = POL type = annex_everything } }	
+				if = { limit = { ENG = { exists = yes }}  declare_war_on = { target = ENG type = annex_everything } }
+				if = { limit = { RAJ = { exists = yes }}  declare_war_on = { target = RAJ type = annex_everything } }
+				if = { limit = { CAN = { exists = yes }}  declare_war_on = { target = CAN type = annex_everything } }
+				if = { limit = { SAF = { exists = yes }}  declare_war_on = { target = SAF type = annex_everything } }
+				if = { limit = { NEP = { exists = yes }}  declare_war_on = { target = NEP type = annex_everything } }
+				if = { limit = { AST = { exists = yes }}  declare_war_on = { target = AST type = annex_everything } }
+				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
+			}
 			
 
 
@@ -4319,18 +4341,24 @@ focus_tree = {
 			if = { limit = { BEL = { exists = yes }}  GER = { declare_war_on = { target = BEL  type = annex_everything } } }
 			if = { limit = { BEL = { exists = yes }}  ROM = { declare_war_on = { target = BEL  type = annex_everything } } }
 			if = { limit = { BEL = { exists = yes }}  HUN = { declare_war_on = { target = BEL  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  ITA = { declare_war_on = { target = BEL  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  IEA = { declare_war_on = { target = BEL  type = annex_everything } } }
 
 			#HOL
 			ENG = { add_to_faction = HOL }
 			if = { limit = { HOL = { exists = yes }}  GER = { declare_war_on = { target = HOL  type = annex_everything } } }
 			if = { limit = { HOL = { exists = yes }}  ROM = { declare_war_on = { target = HOL  type = annex_everything } } }
 			if = { limit = { HOL = { exists = yes }}  HUN = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  ITA = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  IEA = { declare_war_on = { target = HOL  type = annex_everything } } }
 
 			#FRA
 			ENG = { add_to_faction = FRA }
 			if = { limit = { FRA = { exists = yes }}  GER = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  ROM = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  HUN = { declare_war_on = { target = FRA  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  ITA = { declare_war_on = { target = FRA  type = annex_everything } } }
+			if = { limit = { BEL = { exists = yes }}  IEA = { declare_war_on = { target = FRA  type = annex_everything } } }
 
 
 			add_timed_idea = { idea = GER_western_blitzkrieg days = 120 }		

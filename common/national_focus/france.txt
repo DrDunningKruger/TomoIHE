@@ -1895,7 +1895,7 @@
 			focus = FRA_promote_entrepeneurship
 		}
 		relative_position_id = FRA_freedom_front
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

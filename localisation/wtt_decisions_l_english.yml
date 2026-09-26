@@ -532,6 +532,8 @@
  JAP_break_the_london_naval_treaty_desc:0 "The outrageous restrictions of the London Naval Treaty is a threat to the security of our nation. We must have the freedom to build a navy that can stand up to any nation that would challenge what is rightfully ours."
  JAP_tora_tora_tora:0 "Tora! Tora! Tora!"
  JAP_tora_tora_tora_desc:0 "The first blow awaits. Afterwards, we must continue swiftly, using the momentum we have gained to cripple our enemies before they know what has happened."
+ ITA_tora_tora_tora:0 "Regia Marina Naval Supremacy"
+ ITA_tora_tora_tora_desc:0 "The Regia Marina is the largest navy in the Mediterranean, It will defend Africa at all costs."
  JAP_war_with_soviet_union:1 "Declare War on [SOV.GetNameDef]"
  JAP_war_with_soviet_union_desc:1 "Our allies in Europe have signed a non-aggression pact with [SOV.GetNameDef]. However, our war cannot wait; we must unilaterally pursue a conflict with the Communists, even if it risks alienating our allies."
  prospect_for_resources:1 "Prospect for Resources"

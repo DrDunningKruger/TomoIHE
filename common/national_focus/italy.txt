@@ -4090,7 +4090,52 @@ focus_tree = {
 		    }
 		}
 	}
-
+	focus = {
+		id = ITA_annex_ita
+		icon = GFX_IEA_butcher2
+		prerequisite = { focus = ITA_via_della_vittoria }
+		x = 0
+		y = 1
+		relative_position_id = ITA_via_della_vittoria
+		cost = 5
+		continue_if_invalid = yes
+		available = {
+		    has_full_control_of_state = 161
+   		    OR = {
+            controls_state = 551
+			any_allied_country = { controls_state = 551 }
+			}   
+		    OR = {
+            controls_state = 349
+			any_allied_country = { controls_state = 349 }
+			}		
+			OR = {
+            controls_state = 549
+			any_allied_country = { controls_state = 549 }
+			}		
+			OR = {
+            controls_state = 547
+			any_allied_country = { controls_state = 547 }
+			}		
+			OR = {
+            controls_state = 559
+			any_allied_country = { controls_state = 559 }
+			}		
+			OR = {
+            controls_state = 269
+			any_allied_country = { controls_state = 269 }
+			}	
+			OR = {
+            controls_state = 268
+			any_allied_country = { controls_state = 268 }
+			}			
+		}
+		completion_reward = {
+		custom_effect_tooltip = "ITALYannex_TOOLTIP"
+			annex_country = {
+            	target = IEA
+		}
+	}
 
 
 }

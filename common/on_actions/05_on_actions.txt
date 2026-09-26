@@ -1849,738 +1849,738 @@ on_actions = {
 			########### Africa
 			774 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			660 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			718 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			769 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			768 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			295 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			538 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			772 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			539 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			773 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			558 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			776 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			777 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			778 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			781 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			556 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			779 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			274 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			780 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			700 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			272 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			701 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			557 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			546 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			770 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			771 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			545 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			542 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			541 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			275 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}		
 			719 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier  scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			681 = {
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = GER
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = ITA
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
 				}				
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
 			##################### LIBYA
@@ -2592,381 +2592,152 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}		
 			661 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}		
 			662 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			663 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			449 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			450 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			767 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			451 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			452 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
 				}				
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}		
 			839 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}						
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			447 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
 				}				
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			446 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			
 			453 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}		
 			454 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}						
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}	
 			455 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			553 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			554 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			680 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
 				}			
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
-				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			677 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = HUN
-				}				
+				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = BUL
-				}		
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = YUG
-				}			
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = SPR
-				}
 			}
 			#
 			FRA = {
@@ -2990,12 +2761,14 @@ on_actions = {
                add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
 			}
 			ITA = {
-				add_ideas = passive_naval_doctrine_research_speed	
-               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+				add_ideas = passive_naval_doctrine_research_speed
+				add_timed_idea = { idea = GER_cantattackfranceyet days = 1429 }
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 			
+
 			}
 			POL = {
 				add_ideas = passive_naval_doctrine_research_speed	
-               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 					
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 		
 			}
 			NOR = {
 				add_ideas = passive_naval_doctrine_research_speed	

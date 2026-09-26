@@ -3409,7 +3409,8 @@
  neutral_land:0 "Neutral Land"
  GER_cantattackfranceyet:0 "Can't attack France yet"
  GER_cantattackfranceyet_desc:0 "Goes away in 1940"
- 
+ italian_toratora:0 "Regia Marina Naval Supremacy"
+ italian_toratora_desc:0 "The Regia Marina is the largest navy in the Mediterranean, It will defend Africa at all costs."
  AFRICA_ALLIES_11:0 "Victory in Africa"
  AFRICA_ALLIES_10:0 "Allied Control"
  AFRICA_ALLIES_9:0 "Allied Offensive"
