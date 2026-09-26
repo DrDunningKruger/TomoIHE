@@ -1787,7 +1787,7 @@
 			add_tech_bonus = {
 				name = FRA_laissez_faire
 				uses = 3
-				bonus = 1.5
+				bonus = 1
 				technology = advanced_machine_tools
 				technology = flexible_line
 				technology = assembly_line_production

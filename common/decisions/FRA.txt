@@ -30,7 +30,7 @@ fra_holds_vs_germany_category = {
 		is_good = no # Italy wants to join asap
 	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
 		fire_only_once = yes
-		days_mission_timeout = 60 # danzig or war + 60 = 01/11/39
+		days_mission_timeout = 45 # danzig or war + 45 = 01/11/39
 		selectable_mission = no
 
 
@@ -97,14 +97,14 @@ fra_holds_vs_germany_category = {
 		is_good = no 
 	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
 		fire_only_once = yes
-		days_mission_timeout = 30 # danzig or war + 90 = 01/12/39
+		days_mission_timeout = 45 # danzig or war + 105 = 01/12/39
 		selectable_mission = no
 		
 		complete_effect = { 
 			FRA = {
 					add_timed_idea = {
 						idea = FRA_tank_bonus_1
-						days = 365   # 1 year
+						days = 548   # 1 year
 					}
 				}
 			set_global_flag = FRA_stage_3
@@ -171,7 +171,7 @@ fra_holds_vs_germany_category = {
 			FRA = {
 					add_timed_idea = {
 						idea = FRA_tank_bonus_2
-						days = 365   # 1 year
+						days = 548   # 1 year
 					}
 				}
 			set_global_flag = FRA_stage_2
@@ -223,7 +223,7 @@ fra_holds_vs_germany_category = {
 			FRA = {
 					add_timed_idea = {
 						idea = FRA_tank_bonus_3
-						days = 365   # 1 year
+						days = 548   # 1 year
 					}
 				}
 			set_global_flag = FRA_stage_1
@@ -290,7 +290,7 @@ fra_holds_vs_germany_category = {
 			FRA = {
 					add_timed_idea = {
 						idea = FRA_tank_bonus_4
-						days = 365   # 1 year
+						days = 548   # 1 year
 					}
 				}
 			set_global_flag = FRA_stage_0

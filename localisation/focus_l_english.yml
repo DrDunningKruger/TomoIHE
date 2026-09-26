@@ -3883,7 +3883,7 @@
  ROM_new_guns_desc:0 "Modern submachine guns will give our infantry the close-quarters advantage they’ve long lacked. Romania marches forward—better armed than ever."
  victory_in_europe:0 "Second World War has ended"
  New_Swabia_1_tooltip:0 "§6The war is lost. Luckily, we have where to go...§!"
- soviet_treaty_tooltip:0 "§OGet 2x100% research bonuses for tank chassis§!"
+ soviet_treaty_tooltip:0 "§OGet 1x150% research bonuses for tank chassis§!"
  BEL_air_armament:0 "Aircraft Armament"
  BEL_air_armament_desc:0 ""
  BEL_buyusaplanes:0 "Buy New Fighters"

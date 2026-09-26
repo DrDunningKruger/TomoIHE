@@ -12,9 +12,9 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-			FRA = {			
-				has_capitulated = yes
-			}			
+				FRA = {			
+					has_capitulated = yes
+				}			
 			}
 			removal_cost = -1
 			
@@ -36,9 +36,9 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-			FRA = {			
-				has_capitulated = yes
-			}			
+				FRA = {			
+					has_capitulated = yes
+				}			
 			}
 			removal_cost = -1
 			
@@ -61,9 +61,9 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-			FRA = {			
-				has_capitulated = yes
-			}			
+				FRA = {			
+					has_capitulated = yes
+				}			
 			}
 			removal_cost = -1
 			
@@ -86,9 +86,9 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-			FRA = {			
-				has_capitulated = yes
-			}			
+				FRA = {			
+					has_capitulated = yes
+				}			
 			}
 			removal_cost = -1
 			
@@ -111,9 +111,9 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-			FRA = {			
-				has_capitulated = yes
-			}			
+				FRA = {			
+					has_capitulated = yes
+				}			
 			}
 			removal_cost = -1
 			
@@ -586,8 +586,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 			research_bonus = { industry = 0.05}
 		}
