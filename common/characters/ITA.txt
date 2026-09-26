@@ -825,15 +825,14 @@ characters={
 			idea_token = ITA_commandoforwhenhedies
 			ledger = army
 			available = {
-				has_completed_focus = ITA_italiansocialistrepublic
 			}
 			allowed = {
 				original_tag = ITA
 			}
 			traits = {
-				army_commando_3
+				army_commando_1
 			}
-			cost = 25
+			cost = 100
 			ai_will_do = {
 				factor = 0.200
 			}

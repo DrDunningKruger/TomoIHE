@@ -32,7 +32,7 @@ sub_units = {
 		default_morale = 0.3
 		training_time = 180
 		weight = 1.25
-		supply_consumption = 0.25
+		supply_consumption = 0.20
 
 		#Tanks are awesome
 		# soft_attack = 0.5
@@ -58,7 +58,7 @@ sub_units = {
 			movement = -0.4
 		}
 		marsh = {
-		    attack = -0.2
+		    attack = -0.15
 			movement = -0.1
 		}
 		urban = {
@@ -66,7 +66,7 @@ sub_units = {
 			defence = -0.1
 		}
 		river = { 
-			attack = -0.2 
+			attack = -0.15 
 			movement = -0.2
 		}
 		amphibious = { 
