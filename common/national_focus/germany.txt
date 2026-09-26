@@ -4352,10 +4352,6 @@ focus_tree = {
 			   if = { limit = { BEL = { exists = yes }}  declare_war_on = { target = BEL  type = annex_everything } }	
 			   if = { limit = { HOL = { exists = yes }}  declare_war_on = { target = HOL  type = annex_everything } }	
 			   if = { limit = { FRA = { exists = yes }}  declare_war_on = { target = FRA  type = annex_everything } }
-
-               FRA = {
-			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
-			   }			   
 		}
 	}
 

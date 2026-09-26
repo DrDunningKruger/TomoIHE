@@ -1875,19 +1875,19 @@ foreign_politics = {
 					395 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 10
+							level = 15
 						}
 					}	
 					393 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 5
+							level = 10
 						}
 					}
 					375 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 7
+							level = 10
 						}
 					}
 					369 = { 
@@ -1968,6 +1968,37 @@ foreign_politics = {
 							level = 2
 						}
 					}
+					386 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+					385 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 3
+						}
+					}
+					368 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 3
+						}
+					}
+					396 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 5
+						}
+					}
+					359 = { 
+						remove_building = {
+							type = industrial_complex
+							level = 5
+						}
+					}
+
 		}
 	}
 	

@@ -69,6 +69,9 @@ fra_holds_vs_germany_category = {
 				transfer_state = 515
 				transfer_state = 775
 			}
+			FRA = {
+			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
+			}
 		}
 		
 		timeout_effect = { # france still alive, start next mission
@@ -128,6 +131,9 @@ fra_holds_vs_germany_category = {
 				transfer_state = 780
 				transfer_state = 296
 			}
+			FRA = {
+			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
+			   }
 		}
 		
 		timeout_effect = { # france still alive, start next mission
@@ -177,6 +183,9 @@ fra_holds_vs_germany_category = {
 				transfer_state = 635
 				transfer_state = 734
 			}
+			FRA = {
+			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
+			   }
 		}
 		
 		timeout_effect = { # france still alive, start next mission
@@ -228,6 +237,9 @@ fra_holds_vs_germany_category = {
 					transfer_state = 706
 					transfer_state = 713
 				}
+			FRA = {
+			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
+			   }
 		}
 		
 		timeout_effect = { # france still alive, start next mission
@@ -263,11 +275,14 @@ fra_holds_vs_germany_category = {
 		
 		timeout_effect = { # france still alive, start next mission
 			FRA = { activate_mission = FRA_held }
+			FRA = {
+			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
+			   }
             if = { limit = { has_idea = FRA_logistical_troubles_4 } 
 				swap_ideas = {
 					remove_idea = FRA_logistical_troubles_4
 					add_idea = FRA_logistical_troubles_5
-				}	
+				}
 			}			
 		}		
 		
