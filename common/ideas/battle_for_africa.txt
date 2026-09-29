@@ -23,7 +23,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				stability_factor = 0.1
 				consumer_goods_expected_value = -0.02				
-				local_resources_factor = 0.05	
+				local_resources_factor = 0.1	
 			}
 		}		
 		AFRICA_ALLIES_10 = {
@@ -161,7 +161,7 @@ ideas = {
 			}	
 	
 			modifier = {
-				stability_factor = -0.02
+				stability_factor = -0.05
 				political_power_gain = -0.05
 			}
 		}		
@@ -184,7 +184,7 @@ ideas = {
 			}			
 			
 			modifier = {
-				stability_factor = -0.04
+				stability_factor = -0.07
 				political_power_gain = -0.1			
 			}
 		}		
@@ -207,7 +207,7 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.06
+				stability_factor = -0.10
 				political_power_gain = -0.15			
 			}
 		}		
@@ -230,9 +230,9 @@ ideas = {
 			}
 		
 			modifier = {
-				stability_factor = -0.08
-				political_power_gain = -0.20
-                industrial_capacity_factory = -0.05
+				stability_factor = -0.1
+				political_power_gain = -0.15
+                industrial_capacity_factory = -0.1
 				air_superiority_efficiency = -0.05
 				air_cas_efficiency = -0.05
 				air_strategic_bomber_bombing_factor = -0.05
@@ -263,7 +263,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
-				political_power_gain = -0.25
+				political_power_gain = -0.2
                 industrial_capacity_factory = -0.2		
 				air_superiority_efficiency = -0.10
 				air_cas_efficiency = -0.10

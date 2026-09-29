@@ -881,10 +881,10 @@ foreign_politics = {
 
 		complete_effect = {
 		ITA = {
-        add_timed_idea = { idea = ITA_african_disaster days = 360 }
+        add_timed_idea = { idea = ITA_african_disaster days = 210 }
 		}	
 		GER = {
-        add_timed_idea = { idea = ITA_african_disaster days = 360 }
+        add_timed_idea = { idea = ITA_african_disaster days = 210 }
 		}
 		}
 	}
@@ -925,10 +925,10 @@ foreign_politics = {
 
 		complete_effect = {
 		ENG = {
-        add_timed_idea = { idea = ENG_african_disaster days = 360 }
+        add_timed_idea = { idea = ENG_african_disaster days = 210 }
 		}	
 		FRA = {
-        add_timed_idea = { idea = ENG_african_disaster days = 360 }
+        add_timed_idea = { idea = ENG_african_disaster days = 210 }
 		}
 		}
 	}
