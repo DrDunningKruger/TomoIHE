@@ -24,10 +24,10 @@ sub_units = {
 		combat_width = 1
 
 		need = {
-			anti_tank_equipment = 42
+			anti_tank_equipment = 32
 		}
 		manpower = 500
-		max_organisation = 10
+		max_organisation = 15
 		default_morale = 0
 		max_strength = 0.6
 		training_time = 120
