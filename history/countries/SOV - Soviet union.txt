@@ -784,7 +784,7 @@ if = {
 }
 
 	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200000 } 
-	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 175000 }
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 145000 }
 	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 5000 }
 	add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = 6000 }
 	add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 2000 }

@@ -56,7 +56,14 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 200
 		
-		category_all_infantry = {
+		motorized = {
+			max_organisation = 10
+			
+		}
+		mechanized = {
+			max_organisation = 10
+		}
+		amphibious_mechanized = {
 			max_organisation = 10
 		}
 		
@@ -251,7 +258,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 200
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 5
 		}	
 		
 		
@@ -318,7 +325,7 @@ technologies = {
 		}
 
 		category_tanks = {
-			max_organisation = 3
+			max_organisation = 5
 		}
 		
 		motorized_rocket_brigade = {
@@ -629,7 +636,7 @@ technologies = {
 
 		
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		category_tanks = {
 			max_organisation = 2
@@ -929,7 +936,8 @@ technologies = {
 	
 		category_support_battalions = {
 			max_organisation = 10
-			soft_attack = 0.1
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
 		
 		path = {
@@ -980,7 +988,8 @@ technologies = {
 		xp_unlock_cost = 200
 		category_support_battalions = {
 			max_organisation = 10
-			soft_attack = 0.1
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
 		
 		enable_tactic = tactic_overwhelming_fire
@@ -1683,7 +1692,7 @@ technologies = {
 	grand_battle_plan = {
 	
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		path = {
 			leads_to_tech = prepared_defense 
 			research_cost_coeff = 1
@@ -1730,7 +1739,7 @@ technologies = {
 	
 	prepared_defense = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		category_all_infantry = {
 			defense = 0.10
 			max_organisation = 10
@@ -1773,7 +1782,7 @@ technologies = {
 	
 	grand_assault = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		category_army = {
 			breakthrough = 0.10
 			soft_attack = 0.05
@@ -1830,7 +1839,7 @@ technologies = {
 	
 	grand_mechanized_offensive = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		xor = {
 			infantry_offensive
 		}
@@ -1896,7 +1905,7 @@ technologies = {
 	
 	assault_concentration = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		category_tanks = {
 			max_organisation = 2
 			breakthrough = 0.10
@@ -1960,7 +1969,7 @@ technologies = {
 	
 	branch_interoperation = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		category_all_infantry = {
 			max_organisation = 5
 		}
@@ -2018,7 +2027,7 @@ technologies = {
 	
 	assault_breakthrough = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		category_army = {
 			breakthrough = 0.10
 		}
@@ -2072,7 +2081,7 @@ technologies = {
 	
 	central_planning = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		max_planning = 0.1
 		max_command_power = 30
 		
@@ -2128,7 +2137,7 @@ technologies = {
 	
 	c3i_theory = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		land_reinforce_rate = 0.02
 		category_all_infantry = {
 			max_organisation = 5
@@ -2180,7 +2189,7 @@ technologies = {
 	
 	infantry_offensive = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		xor = {
 			grand_mechanized_offensive
 		}
@@ -2242,7 +2251,7 @@ technologies = {
 	
 	armored_operations = {
 		xp_research_type = army
-        xp_unlock_cost = 100
+        xp_unlock_cost = 200
         category_tanks = {
             max_organisation = 2
         }
@@ -2303,7 +2312,7 @@ technologies = {
 	infiltration_assault = {
 
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		supply_consumption_factor = -0.15
 		command_power_gain_mult = 0.2
 		
@@ -2356,7 +2365,7 @@ technologies = {
 	
 	night_assault_tactics = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		#reduce land night combat penalty
 		land_night_attack = 0.15 # negates half of base penalty
 		category_all_infantry = {
@@ -2411,11 +2420,9 @@ technologies = {
 	
 	attritional_containment = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		max_planning = 0.1
-		category_all_infantry = {
-			max_organisation = 10
-		}
+		hard_attack = 0.1
 
 		path = {
 			leads_to_tech = infiltration_in_depth 
@@ -2462,7 +2469,7 @@ technologies = {
 	
 	infiltration_in_depth = {
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 200
 		land_reinforce_rate = 0.02
 		
 		category_recon = { 
