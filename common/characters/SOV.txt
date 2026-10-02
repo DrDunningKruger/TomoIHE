@@ -355,7 +355,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				army_armored_2
+				army_armored_3
 			}
 			idea_token = SOV_georgy_zhukov
 			cost = 150
@@ -402,7 +402,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				army_infantry_2
+				army_infantry_1
 				army_concealment_2
 			}
 			idea_token = SOV_ivan_koniev
@@ -897,8 +897,8 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				army_chief_offensive_1
-				army_chief_defensive_2
+				army_chief_offensive_2
+				army_chief_defensive_1
 			}
 			idea_token = SOV_defensive
 			cost = 100

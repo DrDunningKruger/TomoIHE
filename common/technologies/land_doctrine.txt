@@ -107,7 +107,6 @@ technologies = {
 	
 	elastic_defence = {
 
-		land_reinforce_rate = 0.02
 		xp_research_type = army
 		xp_unlock_cost = 200
 
@@ -935,7 +934,7 @@ technologies = {
 
 	
 		category_support_battalions = {
-			max_organisation = 10
+			max_organisation = 5
 			soft_attack = 0.15
 			hard_attack = 0.15
 		}
@@ -987,7 +986,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 200
 		category_support_battalions = {
-			max_organisation = 10
+			max_organisation = 5
 			soft_attack = 0.15
 			hard_attack = 0.15
 		}

@@ -1102,7 +1102,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}  
 		
 		completion_reward = {
-		add_ideas = IEA_guns
 			IF = { limit = { has_country_flag = butcher_of_africa } 
 				271	=  { 
 					add_building_construction = {

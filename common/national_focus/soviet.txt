@@ -1453,7 +1453,8 @@ focus_tree = {
 	focus = {
 		id = SOV_lessons_of_war
 		icon = GFX_SOV_lessons
-		prerequisite = { focus = SOV_nkvd_divisions focus = SOV_military_reorganization }
+		prerequisite = { focus = SOV_military_reorganization }
+		prerequisite = { focus = SOV_nkvd_divisions }
 		available = {
 			OR = {
 				date > 1940.1.1
@@ -2573,6 +2574,9 @@ focus_tree = {
 				has_war_with = GER
 				date > 1941.7.1		
 			}
+			ENG = {
+				controls_state = 291
+			}
 		}		
 		x = 1
 		y = 1
@@ -2693,7 +2697,12 @@ focus_tree = {
 		available = {
 			has_war_with = GER
 		    date > 1942.01.01 
+		ENG = {
+			controls_state = 291
+			controls_state = 446
+			}
 		}		
+		
 		x = 2
 		y = 1
 		relative_position_id = lendlease3

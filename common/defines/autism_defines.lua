@@ -1,5 +1,5 @@
 NDefines.NDiplomacy.MIN_WARGOAL_JUSTIFY_COST = 5003
-
+NDefines.NDiplomacy.AUTONOMY_LEVEL_CHANGE_PP_COST_BASE = 999
 ---Planning gain on invasions
 NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_GAIN = 0.02		-- Planning Bonus gain per day for naval invasions
 NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = 0		-- Malus in percentage for the planning bonus gain for naval invasions

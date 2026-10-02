@@ -366,18 +366,18 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = 0.14
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.04
 			}
 			targeted_modifier = {
 				tag = MON
 				attack_bonus_against = 0.1
-				defense_bonus_against = 0.05
+				defense_bonus_against = 0.04
 			}
 			targeted_modifier = {
 				tag = CPL
 				attack_bonus_against = 0.1
-				defense_bonus_against = 0.05
+				defense_bonus_against = 0.04
 			}			
 		}
 		

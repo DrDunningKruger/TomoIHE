@@ -29,7 +29,10 @@ ideas = {
 				}
 				motorized_equipment = {
 					build_cost_ic = 0.15 instant = yes
-				}				
+				}
+				infantry_equipment = {
+					build_cost_ic = 0.30 instant = yes
+				}
 			}
 			
 		}
