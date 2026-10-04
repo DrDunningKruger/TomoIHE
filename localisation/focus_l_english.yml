@@ -2812,7 +2812,7 @@
  uk_cairoline_desc:0 ""
  uk_aswanline:0 "Aswan Line"
  uk_aswanline_desc:0 ""
- uk_crusader:0 "Operation Crusader"
+ uk_crusader:0 "Battle of Aswan"
  uk_crusader_desc:0 ""
  GER_aawall:0 "Improve Anti-Aircraft Defenses"
  GER_aawall_desc:0 ""
@@ -3916,4 +3916,4 @@
  FRA_stage_3:0 "France held poorly"
  FRA_stage_2:0 "France held mediocre"
  FRA_stage_1:0 "France held the mainland well"
- 
+ CRUSADER_TEXT:0 "§OGain 10% Attack and 5% Defense bonus against Italy and 5% Attack and 5% Defense all rest of Axis§!"

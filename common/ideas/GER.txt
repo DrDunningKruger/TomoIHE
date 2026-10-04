@@ -441,31 +441,31 @@ ideas = {
             }
             targeted_modifier = {
                 tag = HUN
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }			
             targeted_modifier = {
                 tag = SPR
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }			
             targeted_modifier = {
                 tag = ROM
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }
             targeted_modifier = {
                 tag = BUL
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }
             targeted_modifier = {
                 tag = YUG
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }
             targeted_modifier = {
                 tag = IEA
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }	
 			targeted_modifier = {
                 tag = FIN
-                trade_cost_for_target_factor = -0.4
+                trade_cost_for_target_factor = -0.8
             }			
         }         
 
@@ -1088,7 +1088,7 @@ ideas = {
 			
 			    targeted_modifier = {
                 tag = FRA
-                attack_bonus_against = -0.5
+                attack_bonus_against = -0.75
                 }
 
 		}		

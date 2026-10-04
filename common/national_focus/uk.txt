@@ -3618,14 +3618,12 @@ focus_tree = {
         available = {
 		has_full_control_of_state = 447
 		has_full_control_of_state = 446
-		has_full_control_of_state = 456
-		}
-
+		has_full_control_of_state = 456	
+		}	
 		available_if_capitulated = yes
 
 		bypass = {
-		   NOT = {
-		      has_full_control_of_state = 446
+		      NOT = {has_full_control_of_state = 446
 		   }
 		}
 
@@ -3695,7 +3693,6 @@ focus_tree = {
 		has_full_control_of_state = 456
 		has_full_control_of_state = 457
 		}
-		
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}					
 		
 		completion_reward = {
@@ -3729,28 +3726,6 @@ focus_tree = {
 			 	instant_build = yes
 			}	
 		}
-		551 = {
-			add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-			}				
-		}
-		798 = {
-			add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-			}				
-		}
-		678 = {
-			add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-			}				
-		}
-		
             division_template = {
 						name = "Kings Rifles"
 						priority = 1
@@ -3789,14 +3764,48 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_desert_rats
 		cost = 1
-
+		
 		available_if_capitulated = yes
 
         available = {
-		date > 1941.1.1
+		date > 1940.1.1
+		has_full_control_of_state = 551
+		has_full_control_of_state = 798
+		has_full_control_of_state = 678
+		ITA = { controls_state = 839 }
+							any_other_country = {
+								is_in_faction_with = ITA
+								controls_state = 839
+							}	
 		}
 
+
+
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 		completion_reward = {
+		custom_effect_tooltip = "CRUSADER_TEXT"
+			551 = {
+			add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+			}				
+		}
+			798 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+			}				
+		}
+			678 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+			}				
+		}
+		hidden_effect = {
 			add_timed_idea = { idea = ENG_kill_italians days = 50 }
 			AST = { add_timed_idea = { idea = ENG_kill_italians days = 50 } }
 			NZL = { add_timed_idea = { idea = ENG_kill_italians days = 50 } }	
@@ -3806,7 +3815,8 @@ focus_tree = {
 			CAN = { add_timed_idea = { idea = ENG_kill_italians days = 50 } }
 			FRA = { add_timed_idea = { idea = ENG_kill_italians days = 50 } }
 		}
-	}
+		}
+   }
 
 	focus = {
 		id = uk_asia_focus 

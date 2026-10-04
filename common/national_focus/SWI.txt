@@ -372,5 +372,6 @@ focus_tree = {
 			462 = { set_demilitarized_zone = no }
 			461 = { set_demilitarized_zone = no }
 			665 = { set_demilitarized_zone = no }
+			735 = { set_demilitarized_zone = no }
 		}		
 	}
