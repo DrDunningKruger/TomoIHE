@@ -133,6 +133,7 @@ add_to_faction = HUN
 add_to_faction = ROM
 add_to_faction = ITA
 add_to_faction = IEA
+add_to_faction = SPR
 
 add_ideas = {
     training_spirit

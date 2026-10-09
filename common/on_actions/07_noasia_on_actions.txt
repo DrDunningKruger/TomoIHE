@@ -423,7 +423,19 @@ on_actions = {
 						}	
 					}
 			}
-	}
+				if ={
+					limit = { USA = { is_ai = yes } }
+					ENG = {
+                    		126 = {
+								add_resource = {
+									type = oil
+									amount = 200
+								}	
+							} 
+				}
+
+			}
+}
 #	on_state_control_changed = {
 #		effect = {
 #			if = { 

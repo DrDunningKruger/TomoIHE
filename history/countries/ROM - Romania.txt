@@ -81,7 +81,6 @@ if = {
 	training_spirit	 
 	extra_trade_minor
 	ROM_king_carol_ii_hedonist
-	GER_stayoutofafrica
     AFRICA_AXIS_6
 	}
 	

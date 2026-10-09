@@ -2838,7 +2838,8 @@ on_actions = {
 			}
 			IEA = {
 				add_ideas = passive_naval_doctrine_research_speed	
-               add_timed_idea = { idea = POL_efficiencygrowth days = 20 } 				
+               add_timed_idea = { idea = POL_efficiencygrowth days = 20 }
+			   add_timed_idea = { idea = IEA_ethiopia days = 1461 }			
 			}
 			ROM = {
 				add_ideas = passive_naval_doctrine_research_speed	

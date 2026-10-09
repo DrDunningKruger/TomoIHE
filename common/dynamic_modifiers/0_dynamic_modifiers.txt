@@ -756,3 +756,10 @@ fallout_thermonuclear = {
 	local_resources_factor = -0.75
 	state_production_speed_buildings_factor = -0.75
 }
+
+african_bastion = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans
+	army_defence_factor = 0.25
+	army_speed_factor = -0.25
+}

@@ -139,14 +139,17 @@ war_measures = {
 		set_global_flag = african_counterratack
 		}
 		remove_effect = {
-              ITA = {
-			  		transfer_state = 461		
-					transfer_state = 462	
+              ITA = {		
 					transfer_state = 459
 					transfer_state = 513	
 					transfer_state = 460
 					transfer_state = 514
 			  }
+			  ENG = {
+			  		transfer_state = 461
+					transfer_state = 462
+			  }	
+
 		}
 	}
 
@@ -473,7 +476,7 @@ USA_war_plans = {
 			factor = 1
 		}
 		fire_only_once = yes
-		days_remove = 180
+		days_remove = 90
 		targeted_modifier = {
 			tag = GER
 			attack_bonus_against = 0.1

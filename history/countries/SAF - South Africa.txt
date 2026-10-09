@@ -177,4 +177,5 @@ recruit_character = SAF_guy_hallifax
 
     add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
     add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2000 }
-	add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 }	
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 }
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }	

@@ -347,6 +347,44 @@ ideas = {
 			land_doctrine_cost_factor = -0.1
 			}				
 		}
+		ITA_autarky_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = axistrade
+			
+			modifier = {
+				min_export = 0.2
+				trade_laws_cost_factor = 5
+			}
+		}
+		ITA_economic_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = axistrade
+			
+			modifier = {
+				industrial_capacity_factory = 0.075
+				production_lack_of_resource_penalty_factor = -0.25
+			}
+		}
 		ITA_tora_tora_tora_idea = {
 
 			allowed = {
@@ -369,6 +407,96 @@ ideas = {
 				supply_consumption_factor = -0.25
 				naval_speed_factor = 0.1
 				naval_hit_chance = 0.15
+			}
+		}
+		ITA_entrepeneurship = {
+			picture = chi_hyper_inflation2
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		ITA_autarky_achieved = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.20
+			}
+		}
+		growth_in_the_faction = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+
+			}
+		}
+		ITA_military_buildup = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		faction_unity = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_expected_value = -0.025
+				industrial_capacity_factory = 0.05
 			}
 		}
 	}
@@ -1008,3 +1136,5 @@ ideas = {
 		}		
 	}
 }
+ITA_autarky_idea
+axistrade

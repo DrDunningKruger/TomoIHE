@@ -168,7 +168,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
@@ -446,7 +446,7 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1939.2.15
+			date > 1938.1.1
 		}
 		
 		bypass = {
@@ -800,10 +800,10 @@ focus_tree = {
 	focus = {
 		id = CAN_commit_to_the_war
 		icon = GFX_CAN_commit
-		prerequisite = { focus = CAN_canada_wheat_board }
-		x = 3
-		y = 3
-		relative_position_id = CAN_defence_of_canada_regulations
+		prerequisite = { focus = CAN_canadian_infantry_corps }
+		x = -2
+		y = 2
+		relative_position_id = CAN_canadian_infantry_corps
 
 		cost = 5
 
@@ -897,10 +897,10 @@ focus_tree = {
 	focus = {
 		id = CAN_polymer_corporation
 		icon = GFX_YUG_oil
-		prerequisite = { focus = CAN_victory_aircraft_limited focus = CAN_fund_the_national_research_council }
-		x = -1
-		y = 4
-		relative_position_id = CAN_defence_of_canada_regulations
+		prerequisite = { focus = CAN_imperial_oil }
+		x = 0
+		y = 1
+		relative_position_id = CAN_imperial_oil
 
 		cost = 5
 
@@ -1018,7 +1018,7 @@ focus_tree = {
 		id = CAN_send_in_the_zombies
 		icon = GFX_CAN_manpower
 		prerequisite = { focus = CAN_commit_to_the_war }
-		x = 3
+		x = 5
 		y = 4
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1122,10 +1122,10 @@ focus_tree = {
 	focus = {
 		id = CAN_uranium_mining
 		icon = GFX_GEN_nuke
-		prerequisite = { focus = CAN_polymer_corporation focus = CAN_national_steel_car }
+		prerequisite = { focus = CAN_the_sabre_project }
 		x = 0
-		y = 5
-		relative_position_id = CAN_defence_of_canada_regulations
+		y = 1
+		relative_position_id = CAN_the_sabre_project
 
 		cost = 10
 
@@ -1159,7 +1159,7 @@ focus_tree = {
 		id = CAN_long_branch_arsenal
 		icon = GFX_ENG_army
 		prerequisite = { focus = CAN_send_in_the_zombies }
-		x = 2
+		x = 3
 		y = 5
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1202,7 +1202,7 @@ focus_tree = {
 		icon = GFX_CAN_command
 		prerequisite = { focus = CAN_send_in_the_zombies }
 		prerequisite = { focus = CAN_red_deer_training_camp }
-		x = 4
+		x = 5
 		y = 5
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1271,7 +1271,7 @@ focus_tree = {
 		id = CAN_compromise_with_quebec
 		icon = GFX_CAN_quebec
 		prerequisite = { focus = CAN_long_branch_arsenal focus = CAN_independent_command }
-		x = 3
+		x = 5
 		y = 6
 		relative_position_id = CAN_defence_of_canada_regulations
 
@@ -1370,7 +1370,7 @@ focus_tree = {
 	focus = {
 		id = CAN_army_modernization
 		icon = GFX_CAN_army
-		x = 15
+		x = 17
 		y = 0
 
 		cost = 10
@@ -1700,8 +1700,8 @@ focus_tree = {
 	focus = {
 		id = CAN_1st_canadian_parachute_battalion
 		icon = GFX_CAN_paratroopers
-		prerequisite = { focus = CAN_the_plan focus = CAN_a_mechanized_army }
-		x = 2
+		prerequisite = { focus = CAN_the_plan }
+		x = 4
 		y = 4
 		relative_position_id = CAN_army_modernization 
 
@@ -1907,7 +1907,7 @@ focus_tree = {
 	focus = {
 		id = CAN_strengthen_the_commonwealth_ties
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x = 21
+		x = 25
 		y = 0
 
 		cost = 5
@@ -2342,7 +2342,7 @@ focus_tree = {
 	focus = {
 		id = CAN_rcaf_station_borden
 		icon = GFX_CAN_air
-		x = 24
+		x = 28
 		y = 0
 
 		cost = 5
@@ -2658,7 +2658,7 @@ focus_tree = {
 	focus = {
 		id = CAN_halifax_shipyards
 		icon = GFX_CAN_navy
-		x = 28
+		x = 32
 		y = 0
 
 		cost = 5

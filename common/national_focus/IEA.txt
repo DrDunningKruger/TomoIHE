@@ -122,7 +122,6 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-
 	#Focus for Start Works on Imperial Road
 	focus = {
 		id = IEA_start_works_on_imperial_road
@@ -719,6 +718,7 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = IEA_ethiopiawar
 				add_idea = IEA_ethiopiawar2
+
 			}
 		}
 	}	

@@ -967,7 +967,7 @@ if = {
 	add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 1100 producer = ENG  variant_name = "Light Tank Mk. VI" }	
 	add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 250 producer = ENG  variant_name = "Cruiser VI" }	
 	add_equipment_to_stockpile = { type = heavy_tank_chassis_1 amount = 400 producer = ENG  variant_name = "Matilda II" }	
-	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 12000 }
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 14000 }
     add_equipment_to_stockpile = { type = train_equipment_1 amount = 250 }
     add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2500 }
 	

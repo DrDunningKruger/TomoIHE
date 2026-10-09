@@ -8510,4 +8510,52 @@ spriteTypes = {
 		name = "GFX_SAF_secure_intrests"
 		texturefile = "gfx/interface/goals/SAF_secure_intrests.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_GER_befriend_italy"
+		texturefile = "gfx/interface/goals/focus_GER_befriend_italy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_autarky_achieved"
+		texturefile = "gfx/interface/goals/focus_GER_autarky_achieved.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_autarky_ambitions"
+		texturefile = "gfx/interface/goals/focus_GER_autarky_ambitions.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_DEN_civilian_preparations"
+		texturefile = "gfx/interface/goals/focus_DEN_civilian_preparations.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_currency_reforms"
+		texturefile = "gfx/interface/goals/focus_generic_currency_reforms.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_factories_for_resources"
+		texturefile = "gfx/interface/goals/focus_GER_factories_for_resources.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ETH_develop_the_horn_of_africa"
+		texturefile = "gfx/interface/goals/focus_ETH_develop_the_horn_of_africa.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_anti_comintern_pact"
+		texturefile = "gfx/interface/goals/focus_GER_anti_comintern_pact.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_CONGO_bakwanga_mine"
+		texturefile = "gfx/interface/goals/focus_CONGO_bakwanga_mine.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_german_trade"
+		texturefile = "gfx/interface/goals/focus_generic_german_trade.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ITA_by_blood_alone"
+		texturefile = "gfx/interface/goals/focus_ITA_by_blood_alone.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_NOR_drobak_coastal_fort"
+		texturefile = "gfx/interface/goals/focus_NOR_drobak_coastal_fort.dds"
+	}
 }

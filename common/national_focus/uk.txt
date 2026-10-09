@@ -797,10 +797,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = jap_infantry_artillery_bonus
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
+				name = "Gun 3 Bonus"
+				bonus = 0.75
+				uses = 2
+				technology = improved_infantry_weapons
+				technology = advanced_infantry_weapons
 			}	
 		}
 	}	
@@ -3299,6 +3300,22 @@ focus_tree = {
 		cost = 1
         available = {
 		has_war_with = ITA
+		452 = {
+				CONTROLLER = {
+					OR = {
+						tag = ENG
+						is_subject_of = ENG
+					}
+				}
+			}
+		839 = {
+				CONTROLLER = {
+					OR = {
+						tag = ENG
+						is_subject_of = ENG
+					}
+				}
+			}
 		}
 		available_if_capitulated = yes
 
@@ -3623,8 +3640,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		bypass = {
-		      NOT = {has_full_control_of_state = 446
-		   }
+		      NOT = { has_full_control_of_state = 446 }
 		}
 
 		completion_reward = {
@@ -3694,7 +3710,9 @@ focus_tree = {
 		has_full_control_of_state = 457
 		}
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}					
-		
+		bypass = {
+		      NOT = { has_full_control_of_state = 456 }
+		}
 		completion_reward = {
         custom_effect_tooltip = "ASWAN_TOOLTIP"		
 		
@@ -5672,6 +5690,13 @@ focus_tree = {
 		
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
+			add_doctrine_cost_reduction = {
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 2
+                category = land_doctrine
+			army_experience = 100
+            }	
 		}
 	}
 	

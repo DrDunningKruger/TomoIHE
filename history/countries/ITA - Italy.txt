@@ -636,24 +636,6 @@ if = {
 		icon = "gfx/interface/technologies/ITA/AIR/ITA_CAS_1.dds"
 	}	
 	
-	create_equipment_variant = {
-		name = "Fiat G 50" 
-		type = small_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			engine_type_slot = engine_2_1x
-			fixed_auxiliary_weapon_slot_1 = light_mg_2x			
-			special_type_slot_1 = radio_navigation_1
-			special_type_slot_2 = armor_plate_small
-			special_type_slot_4 = small_lightweight
-			special_type_slot_5 = small_wep
-			special_type_slot_6 = gyroscopic_sight
-			fixed_auxiliary_weapon_slot_2 = straight_wing
-			fixed_auxiliary_weapon_slot_3 = material_aluminium
-			fixed_auxiliary_weapon_slot_4 = streamlined_fuselage_small			
-		}
-		icon = "gfx/interface/technologies/ITA/AIR/ITA_fighter_1.dds"
-	}	
 	
 	create_equipment_variant = {
 		name = "Cant Z506"

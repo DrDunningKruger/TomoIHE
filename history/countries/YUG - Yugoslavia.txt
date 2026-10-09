@@ -21,7 +21,6 @@ if = {
 		YUG_shit_economy
 		YUG_idea_serbian_general_staff
 		YUG_dictatorship_without_dictator
-		GER_stayoutofafrica
         AFRICA_AXIS_6		
 	}
 }

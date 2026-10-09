@@ -67,10 +67,10 @@ equipments = {
 		sub_visibility = 20
 		naval_speed = 14
 		reliability = 0.60
-		
+		naval_supremacy_factor = 0.0
 		naval_range = 1500
 		
-		max_strength = 120
+		max_strength = 100
 		
 
 		fuel_consumption = 1

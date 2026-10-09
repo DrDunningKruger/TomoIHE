@@ -28,7 +28,6 @@ if = { #DLC
 		volunteer_only
         training_spirit	
         extra_trade_minor
-		GER_stayoutofafrica
 	    AFRICA_AXIS_6
 	}
 

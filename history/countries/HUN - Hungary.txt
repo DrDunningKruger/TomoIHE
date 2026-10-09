@@ -67,7 +67,6 @@ if = {
 		extra_trade_minor
 		disarmed_nation
 		HUN_treaty_of_triannon
-		GER_stayoutofafrica
 		AFRICA_AXIS_6
 	}
 }
@@ -108,7 +107,7 @@ set_convoys = 35
 	}
 		
 	add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 150 producer = HUN  variant_name = "37M" }	
-
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 7000 }
     add_equipment_to_stockpile = { type = train_equipment_1 amount = 30 }
     add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }	
 
