@@ -314,7 +314,7 @@ economy_decisions = {
 				}
 		}
 		days_remove = 120
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
@@ -335,7 +335,7 @@ economy_decisions = {
 				}
 		}
 		days_remove = 120
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
@@ -355,7 +355,7 @@ economy_decisions = {
 				}
 		}
 		days_remove = 120
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
@@ -375,7 +375,7 @@ economy_decisions = {
 				}
 		}
 		days_remove = 120
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}
@@ -395,7 +395,7 @@ economy_decisions = {
 				}
 		}
 		days_remove = 120
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			factor = 5
 		}

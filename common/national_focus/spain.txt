@@ -683,7 +683,7 @@
 		focus = {
 			id = SPA_national_recovery
 			available = {
-				has_global_flag = scw_over
+				date > 1938.4.1
 			}
 			bypass = {
 			}
@@ -710,7 +710,6 @@
 				}
 			}
 			completion_reward = {
-			    custom_effect_tooltip = "SCW_OVER_TOOLTIP"
 			
 				add_timed_idea = { idea = SPA_national_recovery_1 days = 1825 }
 				
@@ -921,7 +920,7 @@
 			x = 0
 			y = 2
 			relative_position_id = SPA_facilitate_pyrenees_freight_transports
-			cost = 8
+			cost = 5
 
 			available_if_capitulated = yes
 
@@ -947,23 +946,6 @@
 							size > 0
 						}
 						is_core_of = ROOT
-					}
-					set_state_flag = SPA_support_the_war_industry_1civ
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-						}
-						is_core_of = ROOT
-						NOT = { has_state_flag = SPA_support_the_war_industry_1civ }
 					}
 					set_state_flag = SPA_support_the_war_industry_1civ
 					add_extra_state_shared_building_slots = 1
@@ -1074,10 +1056,10 @@
 						NOT = { has_state_flag = SPA_expand_the_war_industry_2mil }
 					}
 					set_state_flag = SPA_expand_the_war_industry_2mil
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1192,7 +1174,7 @@
 			x = 0
 			y = 2
 			relative_position_id = SPA_spanish_austerity
-			cost = 8
+			cost = 5
 
 			available_if_capitulated = yes
 
@@ -1204,6 +1186,7 @@
 		focus = {
 			id = SPA_ensure_agricultural_self_sufficiency
 			available = {
+				has_war = yes
 			}
 			bypass = {
 			}
@@ -1669,8 +1652,8 @@
 			completion_reward = {
 				add_tech_bonus = {
 					name = SPR_captured_armor
-					bonus = 1.0
-					uses = 2
+					bonus = 2.0
+					uses = 1
 					category = armor
 					}			
 				add_tech_bonus = {
@@ -1721,7 +1704,7 @@
 			x = 0
 			y = 2
 			relative_position_id = SPA_tackle_the_vulnerable_fronts
-			cost = 10
+			cost = 5
 
 			available_if_capitulated = yes
 
@@ -2103,7 +2086,7 @@
 			x = -1
 			y = 1
 			relative_position_id = SPA_adopt_the_26_points
-			cost = 10
+			cost = 5
 
 			available_if_capitulated = yes
 

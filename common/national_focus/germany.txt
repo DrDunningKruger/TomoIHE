@@ -4034,6 +4034,16 @@ focus_tree = {
 				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
 			}
 			
+			SPR = {	
+				if = { limit = { POL = { exists = yes }}  declare_war_on = { target = POL type = annex_everything } }	
+				if = { limit = { ENG = { exists = yes }}  declare_war_on = { target = ENG type = annex_everything } }
+				if = { limit = { RAJ = { exists = yes }}  declare_war_on = { target = RAJ type = annex_everything } }
+				if = { limit = { CAN = { exists = yes }}  declare_war_on = { target = CAN type = annex_everything } }
+				if = { limit = { SAF = { exists = yes }}  declare_war_on = { target = SAF type = annex_everything } }
+				if = { limit = { NEP = { exists = yes }}  declare_war_on = { target = NEP type = annex_everything } }
+				if = { limit = { AST = { exists = yes }}  declare_war_on = { target = AST type = annex_everything } }
+				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
+			}
 
 
             hidden_effect = {

@@ -573,11 +573,11 @@ ideas = {
 			traits = { heavy_tank_manufacturer }
 			
 			equipment_bonus = {
-				heavy_tank_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_aa_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_artillery_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_flame_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_aa_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_artillery_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_flame_chassis ={ build_cost_ic = -0.1 }
 			}
 
 			modifier = {
@@ -589,7 +589,10 @@ ideas = {
 			picture = vickers2
 			
 			allowed = {
+			OR = {
 				original_TAG = SAF
+				original_TAG = CAN
+			}
 			}
 			
 			research_bonus = {
@@ -600,6 +603,11 @@ ideas = {
 			traits = { pacific_light_tank_manufacturer }
 			
 			equipment_bonus = {
+				light_tank_chassis ={ build_cost_ic = -0.1 }
+				light_tank_aa_chassis ={ build_cost_ic = -0.1 }
+				light_tank_artillery_chassis ={ build_cost_ic = -0.1 }
+				light_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
+				light_tank_flame_chassis ={ build_cost_ic = -0.1 }
 			}
 			modifier = {
 			tank_manufacturers_cost_factor = -1
@@ -624,11 +632,11 @@ ideas = {
 			traits = { assault_heavy_tank_manufacturer }
 			
 			equipment_bonus = {
-				heavy_tank_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_aa_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_artillery_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_flame_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_aa_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_artillery_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_flame_chassis ={ build_cost_ic = -0.1 }
 			}
 			modifier = {
 			tank_manufacturers_cost_factor = -1
@@ -711,11 +719,11 @@ ideas = {
 			traits = { cruiser_tank_manufacturer }
 			
 			equipment_bonus = {
-				heavy_tank_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_aa_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_artillery_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
-				heavy_tank_flame_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_aa_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_artillery_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_destroyer_chassis ={ build_cost_ic = -0.1 }
+				medium_tank_flame_chassis ={ build_cost_ic = -0.1 }
 			}
 			modifier = {
 			tank_manufacturers_cost_factor = -1

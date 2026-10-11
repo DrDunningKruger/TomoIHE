@@ -8558,4 +8558,8 @@ spriteTypes = {
 		name = "GFX_focus_NOR_drobak_coastal_fort"
 		texturefile = "gfx/interface/goals/focus_NOR_drobak_coastal_fort.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_AUS_courting_the_princess_of_industry"
+		texturefile = "gfx/interface/goals/focus_AUS_courting_the_princess_of_industry.dds"
+	}
 }

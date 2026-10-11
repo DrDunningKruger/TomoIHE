@@ -3,7 +3,11 @@ state={
 	id=776
 	name="STATE_776" # Benin/Dahomey
 	manpower = 1351563
-	
+	resources={
+		steel=35.000
+		aluminium=12.000
+		tungsten=30.000
+	}
 	state_category = rural
 	history={
 		owner = FRA

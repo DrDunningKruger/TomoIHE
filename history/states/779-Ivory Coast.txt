@@ -3,7 +3,11 @@ state={
 	id=779
 	name="STATE_779" # Ivory Coast
 	manpower = 3850734
-	
+	resources={
+		steel=60.000
+		aluminium=15.000
+		tungsten=40.000
+	}
 	state_category = rural
 	history={
 		owner = FRA
@@ -13,6 +17,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
+			industrial_complex = 1
 			10803 = {
 				naval_base = 1
 			}

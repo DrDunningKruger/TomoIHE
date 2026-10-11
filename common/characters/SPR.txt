@@ -574,7 +574,7 @@ characters={
 		}			
 		field_marshal={
 				desc = "francisco_franco_desc"	#The Dictator of Spain himself, Franco is one of the best armor fieldmarshals for any situation
-				traits = { panzer_leader panzer_expert thorough_planner aggressive_assaulter politically_connected organizer }
+				traits = { panzer_leader panzer_expert thorough_planner aggressive_assaulter politically_connected organizer desert_fox }
 				skill = 7
 				attack_skill = 8
 				defense_skill = 4

@@ -758,8 +758,10 @@ fallout_thermonuclear = {
 }
 
 african_bastion = {
-	enable = { always = yes }
 	icon = GFX_modifiers_generic_military_plans
-	army_defence_factor = 0.25
-	army_speed_factor = -0.25
+	enable = { always = no }
+	remove_trigger = {
+		FRA = { has_country_flag = france_is_capped }
+	}
+	cas_damage_reduction = 0.25
 }

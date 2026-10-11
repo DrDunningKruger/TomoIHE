@@ -505,7 +505,7 @@ characters={
 
 		field_marshal = { #scout home defensive fm
 			desc = "Ferenc_Farkas_desc"
-			traits = { trickster trait_mountaineer defensive_doctrine infantry_officer inflexible_strategist }
+			traits = { trickster trait_mountaineer defensive_doctrine infantry_officer inflexible_strategist desert_fox }
 			skill = 6
 			attack_skill = 3
 			defense_skill = 3

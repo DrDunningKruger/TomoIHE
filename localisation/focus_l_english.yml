@@ -3911,7 +3911,8 @@
  FRA_retake_lands_stage_3_desc:0 ""
  FRA_retake_lands_stage_4:0 "Retake north part of West Africa"
  FRA_retake_lands_stage_4_desc:0 ""
- 
+ FRA_war_economy_time:0 "Mobilise Women and Children into the Factories"
+ FRA_war_economy_time_desc:0 "Without full support of the nation we cannot hope to retake the mainland."
  FRA_stage_4:0 "France instantly collapsed"
  FRA_stage_3:0 "France held poorly"
  FRA_stage_2:0 "France held mediocre"

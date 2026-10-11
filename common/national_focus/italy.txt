@@ -366,7 +366,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 3
+		cost = 2
 		available = {
 		  OR = {
 		   has_full_control_of_state = 451
@@ -388,21 +388,7 @@ focus_tree = {
 								level = 5
 								instant_build = yes
 				}
-			}
-			164 = {
-				add_building_construction = {
-								type = air_base
-								level = 5
-								instant_build = yes
-				}
-			}			
-			663 = {
-				add_building_construction = {
-								type = air_base
-								level = 10
-								instant_build = yes
-				}
-			}
+			}		
 			450 = {
 				add_building_construction = {
 								type = air_base
@@ -410,52 +396,10 @@ focus_tree = {
 								instant_build = yes
 				}
 			}	
-			449 = {
-				add_building_construction = {
-								type = air_base
-								level = 10
-								instant_build = yes
-				}
-			}
-			767 = {
-				add_building_construction = {
-								type = air_base
-								level = 10
-								instant_build = yes
-				}
-			}	
-			662 = {
-				add_building_construction = {
-								type = air_base
-								level = 10
-								instant_build = yes
-				}
-			}
-			448 = {
-				add_building_construction = {
-								type = air_base
-								level = 4
-								instant_build = yes
-				}
-			}	
-			661 = {
-				add_building_construction = {
-								type = air_base
-								level = 10
-								instant_build = yes
-				}
-			}
 			451 = {
 				add_building_construction = {
 								type = infrastructure
-								level = 3
-								instant_build = yes
-				}
-			}
-			663 = {
-				add_building_construction = {
-								type = infrastructure
-								level = 3
+								level = 4
 								instant_build = yes
 				}
 			}
@@ -463,27 +407,6 @@ focus_tree = {
 				add_building_construction = {
 								type = infrastructure
 								level = 3
-								instant_build = yes
-				}
-			}
-			449 = {
-				add_building_construction = {
-								type = infrastructure
-								level = 2
-								instant_build = yes
-				}
-			}
-			448 = {
-				add_building_construction = {
-								type = infrastructure
-								level = 2
-								instant_build = yes
-				}
-			}
-			661 = {
-				add_building_construction = {
-								type = infrastructure
-								level = 2
 								instant_build = yes
 				}
 			}
@@ -498,7 +421,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 5
+		cost = 3
 
 		available = {
 			has_full_control_of_state = 450
@@ -695,7 +618,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_concentrated_resources
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -831,7 +754,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = ITA_steel_industry_in_terni
-		cost = 10
+		cost = 5
 		available = {
 		  has_full_control_of_state = 2	
 		}
@@ -1002,6 +925,7 @@ focus_tree = {
 		icon = GFX_focus_GER_anti_comintern_pact
 		prerequisite = { focus = ITA_power_plants_in_terni }
 		prerequisite = { focus = ITA_steel_industry_in_terni}
+		mutually_exclusive = { focus = ITA_autarky }
 		x = 5
 		y = 1
 		relative_position_id = ITA_steel_industry_in_terni
@@ -1398,7 +1322,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_strengthen_northern_industry
-		cost = 10
+		cost = 5
 		available = {
 		has_full_control_of_state = 117
 		}
@@ -1675,7 +1599,7 @@ focus_tree = {
 		id = ITA_expand_foggia_farm_fields
 		icon = GFX_USA_farm
 		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
-
+		mutually_exclusive = { focus = ITA_new_industrialization_program }
 		x = 1
 		y = 2
 		relative_position_id = ITA_redirect_alfa_romeo_production
@@ -1718,10 +1642,10 @@ focus_tree = {
 
 	    completion_reward = {
 			157 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1735,7 +1659,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
-		cost = 4
+		cost = 2
 		available = {
 		}
 
@@ -1911,11 +1835,11 @@ focus_tree = {
 	focus = {
 		id = ITA_maneuver_warfare
 		icon = GFX_IEA_butcher
-		prerequisite = { focus = ITA_army_primacy_bba }
-		x = 4
+		prerequisite = { focus = ITA_italian_tanks }
+		x = -2
 		y = 1
-		relative_position_id = ITA_army_primacy_bba
-		cost = 4
+		relative_position_id = ITA_italian_tanks
+		cost = 2
 		available = {
 		}
 
@@ -1967,7 +1891,7 @@ focus_tree = {
 	focus = {
 		id = ITA_superesercito
 		icon = GFX_ITA_armyupgrade
-		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_maneuver_warfare }
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_italian_tanks }
 
 		x = 4
 		y = 1
@@ -2016,11 +1940,11 @@ focus_tree = {
 	focus = {
 		id = ITA_italian_tanks
 		icon = GFX_JAP_tankeq
-		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_maneuver_warfare }
+		prerequisite = { focus = ITA_army_primacy_bba }
 
-		x = 6
+		x = 4
 		y = 1
-		relative_position_id = ITA_preserve_army_traditions
+		relative_position_id = ITA_army_primacy_bba
 		cost = 5
 		available = {
 		}
@@ -2028,7 +1952,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 1.0
+				bonus = 1.5
 				uses = 1
 				category = armor
 				}					
@@ -2126,8 +2050,7 @@ focus_tree = {
 	focus = {
 		id = ITA_self_propelled_guns
 		icon = GFX_ITA_semovente
-		prerequisite = { focus = ITA_superesercito }
-		prerequisite = { focus = ITA_italian_tanks }
+		prerequisite = { focus = ITA_maneuver_warfare }
 
 		x = 1
 		y = 1
@@ -2203,8 +2126,8 @@ focus_tree = {
 		
 		prerequisite = { focus = ITA_maneuver_warfare }
 
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = ITA_maneuver_warfare		
 		cost = 5
 		available = {
@@ -2213,7 +2136,7 @@ focus_tree = {
         mutually_exclusive = { focus = ITA_standardization }
 
 		completion_reward = {
-            add_timed_idea = { idea = GER_tank_industry days = 180 }			
+            add_timed_idea = { idea = GER_tank_industry days = 360 }			
 		}
 	}
 	
@@ -2728,11 +2651,11 @@ focus_tree = {
 	focus = {
 		id = ITA_improve_overseas_naval_bases
 		icon = GFX_AST_scrap
-		prerequisite = { focus = ITA_expand_naval_facilities }
+		prerequisite = { focus = ITA_prospect_for_oil }
 
-		x = -4
+		x = 0
 		y = 1
-		relative_position_id = ITA_expand_naval_facilities
+		relative_position_id = ITA_prospect_for_oil
 		cost = 3
 		available = {
 			has_full_control_of_state = 450 

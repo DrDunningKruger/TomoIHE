@@ -894,31 +894,6 @@ focus_tree = {
 	}
 
 	#Focus for Create ELBO
-	focus = {
-		id = GRE_create_elbo
-		icon = GFX_GRE_civs2
-		cost = 10.00
-		prerequisite = {
-			focus = GRE_pyrkal_deal
-		}
-		available = {
-		has_full_control_of_state = 47
-		}		
-		x = -4
-		y = 4
-		relative_position_id = GRE_civil_engineering_plans
-			available_if_capitulated = yes
-			completion_reward = {
-					47 = {
-							add_extra_state_shared_building_slots = 3
-							add_building_construction = {
-									type = arms_factory
-									level = 2
-									instant_build = yes
-								}
-						}
-				}
-	}
 
 	#Focus for Shipyards
 	focus = {
@@ -949,31 +924,6 @@ focus_tree = {
 	}
 
 	#Focus for Firearm Factories
-	focus = {
-		id = GRE_firearm_factories
-		icon = GFX_GRE_civs
-		cost = 10.00
-		available = {
-		has_full_control_of_state = 186
-		}		
-		prerequisite = {
-			focus = GRE_pyrkal_deal
-		}
-		x = -2
-		y = 4
-		relative_position_id = GRE_civil_engineering_plans
-			available_if_capitulated = yes
-			completion_reward = {
-					186 = {
-							add_extra_state_shared_building_slots = 3
-							add_building_construction = {
-									type = arms_factory
-									level = 2
-									instant_build = yes
-								}
-						}
-				}
-	}
 
 	#Focus for National Labor Service
 	focus = {
