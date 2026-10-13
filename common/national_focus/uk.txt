@@ -1155,8 +1155,7 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-        available = { has_war = yes }	
+		}	
 		completion_reward = {	
 			add_ideas = ENG_special_air_service_idea
 			custom_effect_tooltip = available_political_advisor
@@ -1227,7 +1226,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1827,7 +1826,7 @@ focus_tree = {
 
 		completion_reward = {
 			if = { limit = { has_global_flag = no_asia } 	
-				add_timed_idea = { idea = british_fighter_discount days = 360 }
+				add_timed_idea = { idea = british_fighter_discount days = 550 }
 			else = {
 			add_timed_idea = { idea = british_fighter_discount days = 730 }
 			}
@@ -5759,8 +5758,52 @@ focus_tree = {
 			add_timed_idea = { idea = ENG_prepare_for_the_inevitable_idea days = 550 }
 		}
 	}
+	focus = {
+		id = ENG_finish_ita
+		available = {
+			ENG = { 
+				controls_state = 448
+				controls_state = 661
+				controls_state = 662
+				controls_state = 449
+				controls_state = 767
+				controls_state = 450
+				controls_state = 451
+				controls_state = 663
+			}
+			NOT = {
+            has_global_flag = gabes_clicked
+		} 
+		}		
+		prerequisite = { focus = ENG_steady_as_she_goes }
+		icon = GFX_focus_SAF_secure_africa
+		cancelable = no
+		continue_if_invalid = yes
+        cancel_if_invalid = no
+
+		x = 0
+		y = 1
+		bypass = {
+			ITA = {
+				controls_state = 665
+			}
+		}
+		relative_position_id = ENG_steady_as_she_goes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		select_effect = {
+			news_event = { hours = 6 id = news.6970 }
+			set_global_flag = gabes_clicked
+		}
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			ITA = { 
+				transfer_state = 665
+		}
+	}
 }
 
+}
 
-	### END BENELUX INTERVENTION ###
-	### END HOME DEFENCE BRANCH ###

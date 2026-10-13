@@ -7217,18 +7217,7 @@ focus_tree = {
 		cost = 1
 		 ai_will_do = {
 			factor = 1
-		}
-		 
-        bypass = {
-		OR = {
-			ITA = { NOT = { has_full_control_of_state = 451
-                            has_full_control_of_state = 450
-							has_full_control_of_state = 663
-			}} 
-            ITA = { NOT = { has_full_control_of_state = 449 }}
-		}      		
-		}         
-		 
+		}   
 		available_if_capitulated = yes
 		
         available = {
@@ -7236,7 +7225,12 @@ focus_tree = {
 		}
 		
 		    completion_reward = {
-			    custom_effect_tooltip = "GER_AFRICASTART_TOOLTIP"	
+			    custom_effect_tooltip = "GER_AFRICASTART_TOOLTIP"
+				custom_effect_tooltip = "GER_AFRIKAK_TOOLTIP"
+				hidden_effect = {
+				load_oob = "GER_afrika"	
+				load_oob = "GER_afrika"
+				load_oob = "ITA_garrisons"
 				448 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}		
@@ -7292,8 +7286,6 @@ focus_tree = {
 				453 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}
-				
-				hidden_effect = {
                 SPR = {	
 				448 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
@@ -7575,8 +7567,64 @@ focus_tree = {
 				453 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}				
+				}
+				FRA = {	
+				448 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}		
+				661 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				662 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				663 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}		
+				449 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				450 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}		
+				451 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				452 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				839 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				447 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}
+				446 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}
+				677 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}
+				680 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}
+				554 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				553 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				455 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				454 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
+				}	
+				453 = {
+					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}				
-				}				
+				}					
+				}			
 			}
 		}
 		
@@ -7600,11 +7648,65 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		custom_effect_tooltip = "GER_AFRIKAK_TOOLTIP"
-		hidden_effect = {
-		load_oob = "GER_afrika"	
-		load_oob = "GER_afrika"	
-		}
+	
+			custom_effect_tooltip = "GER_AF_TUNISIA"
+		
+		    hidden_effect = {
+			458 = {
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = GER
+						days = 180
+					}		
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = ITA
+						days = 180
+					}		
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = ROM
+						days = 180
+					}	
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = HUN
+						days = 180
+					}	
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = SPR
+						days = 180
+					}	
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = YUG
+						days = 180
+					}	
+					add_dynamic_modifier = {
+						modifier = HONK_HONK scope = BUL
+						days = 180
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 4163
+						instant_build = yes
+					}		
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9994
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11969
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 10091
+						instant_build = yes
+					}				
+			    }
+			}
 		}
 	}
 		
@@ -7848,92 +7950,6 @@ focus_tree = {
                  ITA = {add_timed_idea={ idea = GER_africacampaign days = 30}}
                  }		
 		}
-	}
-	
-	focus = {
-		id = GER_secondbattleofelalamein
-		icon = GFX_GER_tunisia
-		prerequisite = { focus = GER_firstbattleofelalamein}
-		x = 0
-		y = 1
-		relative_position_id = GER_firstbattleofelalamein
-		cost = 1
-		 ai_will_do = {
-			factor = 1
-		}
-			
-		available_if_capitulated = yes
-        available = {
-			any_country = {
-				OR = {
-					tag = GER
-					is_in_faction_with = GER
-				}
-				has_full_control_of_state = 458
-			}	
-		}
-
-		completion_reward = {
-		
-			custom_effect_tooltip = "GER_AF_TUNISIA"
-		
-		    hidden_effect = {
-			458 = {
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = GER
-						days = 180
-					}		
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = ITA
-						days = 180
-					}		
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = ROM
-						days = 180
-					}	
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = HUN
-						days = 180
-					}	
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = SPR
-						days = 180
-					}	
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = YUG
-						days = 180
-					}	
-					add_dynamic_modifier = {
-						modifier = HONK_HONK scope = BUL
-						days = 180
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 4163
-						instant_build = yes
-					}		
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 9994
-						instant_build = yes
-					}	
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 11969
-						instant_build = yes
-					}	
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = 10091
-						instant_build = yes
-					}				
-			    }
-			}
-			}
 	}
 		
 	focus = {

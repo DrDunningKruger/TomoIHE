@@ -3940,3 +3940,7 @@
  ITA_bastion_africa_desc:0 "A Strong Italian Bastion in Africa is required. We must protect the oil fields at all costs. The war depends on it."
  ITA_faction_unity:0 "A United Faction"
  ITA_faction_unity_desc:0 "Without supporting each other's interests, we cannot hope to achieve our own in this war."
+ ENG_finish_ita:0 "Finish the Axis In Africa"
+ ENG_finish_ita_desc:0 "For the Final Push we will need everything we can muster"
+ ITA_retake_Africa:0 "Push the Allies Once More"
+ ITA_retake_Africa_desc:0 "For the Final Push we will need everything we can muster"

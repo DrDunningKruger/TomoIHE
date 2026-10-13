@@ -9,7 +9,7 @@ state={
 	}
 
 	history={
-		owner = FRA
+		owner = SWI
 
 		victory_points = {
 			11969 10 
@@ -24,7 +24,7 @@ state={
 		
 		buildings = {
 			infrastructure = 2		
-			air_base = 8
+			air_base = 10
 			9994 = {
 				naval_base = 10
 			}

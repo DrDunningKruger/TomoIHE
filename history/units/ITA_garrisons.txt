@@ -1,0 +1,49 @@
+division_template = {
+	name = "Africa Corp"			
+	division_names_group = GER_ALTINF_01
+	template_counter = 77
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }		
+	}
+	support = {
+        anti_air = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 	
+		artillery = { x = 0 y = 2 } 	
+	}
+}
+
+units = {
+	division = {
+		name = "Africa Corp"
+		location = 9994
+		division_template = "Africa Corp"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "ITA" } }	
+	}	
+	division = {
+		name = "Africa Corp"
+		location = 9994
+		division_template = "Africa Corp"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "ITA" } }	
+	}
+	division = {
+		name = "Africa Corp"
+		location = 9994
+		division_template = "Africa Corp"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "ITA" } }	
+	}	
+	division = {
+		name = "Africa Corp"
+		location = 9994
+		division_template = "Africa Corp"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "ITA" } }	
+	}
+}

@@ -36,31 +36,6 @@ air_wings = {
 				amount = 100
 				version_name = "MBR-2"
 			}
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-16 Type 10"
-			}	
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-16 Type 10"
-			}	
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-16 Type 10"
-			}
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-16 Type 28"
-			}	
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-16 Type 28"
-			}			
 		}  
 		195 = {	#leningrad
 			medium_plane_naval_bomber_airframe_0 = {
@@ -297,48 +272,6 @@ air_wings = {
 				version_name = "I-153"
 			}			
 		}	
-		193 = {	#Chernigov
-			small_plane_cas_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "U-2"
-			}
-			small_plane_cas_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "U-2"
-			}		
-			small_plane_cas_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "U-2"
-			}
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}				
-		}	
 		220 = {	#Kursk
 			medium_plane_airframe_1 = {
 				owner = "SOV" 
@@ -439,41 +372,4 @@ air_wings = {
 				version_name = "I-153"
 			}					
 		}	
-		226 = {	#Dnipro
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-15bis"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-153"
-			}	
-			small_plane_airframe_0 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-153"
-			}	
-			small_plane_airframe_1 = {
-				owner = "SOV" 
-				amount = 100
-				version_name = "I-153"
-			}
-		}		
 }

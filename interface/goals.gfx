@@ -8562,4 +8562,12 @@ spriteTypes = {
 		name = "GFX_focus_AUS_courting_the_princess_of_industry"
 		texturefile = "gfx/interface/goals/focus_AUS_courting_the_princess_of_industry.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_SAF_secure_africa"
+		texturefile = "gfx/interface/goals/focus_SAF_secure_africa.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ETH_the_patriots"
+		texturefile = "gfx/interface/goals/focus_ETH_the_patriots.dds"
+	}
 }

@@ -10025,6 +10025,36 @@ news_event = {
 }
 
 news_event = {
+	id = news.6970
+	title = news.6970.title
+	desc = news.6970.desc
+	picture = GFX_news_event_saf_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6970.a
+		trigger = { TAG = GER TAG = ITA  }
+	}
+	option = {
+		name = news.6970.b
+		trigger = { TAG = ENG }
+	}
+		option = {
+		name = news.6970.d
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = ENG
+			}
+		}
+	}
+}
+
+news_event = {
 	id = news.6968
 	title = news.6968.title
 	desc = news.6968.desc

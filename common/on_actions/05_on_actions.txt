@@ -1884,7 +1884,7 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
 				}	
 				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
+					modifier =  days = 1917 scope = BUL
 				}		
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
@@ -2595,6 +2595,9 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}
 				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
+				add_dynamic_modifier = {
 					modifier = african_bastion scope = ITA
 				}
 				add_dynamic_modifier = {
@@ -2613,6 +2616,9 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}		
 			662 = {
@@ -2622,6 +2628,9 @@ on_actions = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}	
 			663 = {
 				add_dynamic_modifier = {
@@ -2630,6 +2639,9 @@ on_actions = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}	
 			449 = {
 				add_dynamic_modifier = {
@@ -2637,6 +2649,9 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}
 				add_dynamic_modifier = {
 					modifier = african_bastion scope = ITA
@@ -2659,6 +2674,9 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}
 				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
+				add_dynamic_modifier = {
 					modifier = african_bastion scope = ITA
 				}
 				add_dynamic_modifier = {
@@ -2677,6 +2695,9 @@ on_actions = {
 				}			
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}	
 			451 = {
@@ -2685,6 +2706,9 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}
 				add_dynamic_modifier = {
 					modifier = african_bastion scope = ITA
@@ -2705,6 +2729,9 @@ on_actions = {
 				}				
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}		
 			839 = {
@@ -2713,6 +2740,9 @@ on_actions = {
 				}						
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}	
 			447 = {
@@ -2721,7 +2751,10 @@ on_actions = {
 				}				
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}	
 			446 = {
 				add_dynamic_modifier = {
@@ -2729,7 +2762,10 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}
 			
 			453 = {
@@ -2738,7 +2774,10 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}		
 			454 = {
 				add_dynamic_modifier = {
@@ -2746,6 +2785,9 @@ on_actions = {
 				}						
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}	
 			455 = {
@@ -2755,6 +2797,9 @@ on_actions = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
 				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}
 			553 = {
 				add_dynamic_modifier = {
@@ -2762,7 +2807,10 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}
 			554 = {
 				add_dynamic_modifier = {
@@ -2770,7 +2818,10 @@ on_actions = {
 				}			
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}
 			680 = {
 				add_dynamic_modifier = {
@@ -2778,6 +2829,9 @@ on_actions = {
 				}			
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}	
 			}
 			677 = {
@@ -2786,7 +2840,10 @@ on_actions = {
 				}					
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}	
+				}
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
+				}
 			}
 			#
 			FRA = {

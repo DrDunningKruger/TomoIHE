@@ -31,7 +31,7 @@ HONK_HONK = { #STATE MODIFIER
 
     icon = GFX_modifiers_SOV_factory_worker_militias
     
-    local_supplies_for_controller = 2
+    local_supplies_for_controller = 3
 }
 
 AFRICA_SPEED = { #STATE MODIFIER

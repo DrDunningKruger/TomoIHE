@@ -396,6 +396,13 @@ focus_tree = {
 								instant_build = yes
 				}
 			}	
+			458 = {
+				add_building_construction = {
+								type = air_base
+								level = 5
+								instant_build = yes
+				}
+			}	
 			451 = {
 				add_building_construction = {
 								type = infrastructure
@@ -410,7 +417,15 @@ focus_tree = {
 								instant_build = yes
 				}
 			}
+			450 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 12094
+			}
 		}
+	}
 	}
 
 	focus = {
@@ -4477,4 +4492,53 @@ focus_tree = {
 	}
 
 
+}
+
+focus = {
+		id = ITA_retake_Africa
+		prerequisite = { focus = ITA_foreign_affairs }
+		available = {
+			OR = {
+				ENG = { 
+					controls_state = 448
+					controls_state = 661
+					controls_state = 662
+					controls_state = 449
+					controls_state = 767
+					controls_state = 450
+					controls_state = 451
+					controls_state = 663
+				}
+			FRA = { has_country_flag = france_is_capped }
+			}
+			NOT = {
+            has_global_flag = gabes_clicked
+		}
+		}
+		cancelable = no
+		continue_if_invalid = yes
+        cancel_if_invalid = no
+		icon = GFX_focus_ETH_the_patriots
+		bypass = {
+			ITA = {
+				controls_state = 665
+			}
+		}
+		x = -4
+		y = 1
+		relative_position_id = ITA_foreign_affairs
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		select_effect = {
+			news_event = { hours = 6 id = news.6970 }
+			set_global_flag = gabes_clicked
+		}
+        search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			ITA = { 
+				transfer_state = 665
+		}
+	}
 }

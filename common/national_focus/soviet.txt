@@ -2575,7 +2575,7 @@ focus_tree = {
 				date > 1941.7.1		
 			}
 			ENG = {
-				controls_state = 291
+				controls_state = 455
 			}
 		}		
 		x = 1
@@ -2698,8 +2698,8 @@ focus_tree = {
 			has_war_with = GER
 		    date > 1942.01.01 
 		ENG = {
-			controls_state = 291
-			controls_state = 446
+			controls_state = 455
+			controls_state = 144
 			}
 		}		
 		

@@ -25697,4 +25697,20 @@ SpriteType = {
 		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = -90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
 		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = 90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
 } 
+SpriteType = { 
+    	name = "GFX_focus_SAF_secure_africa"
+		texturefile = "gfx/interface/goals/focus_SAF_secure_africa.dds"
+	}
+	   SpriteType = { name = "GFX_focus_SAF_secure_africa_shine" texturefile = "gfx/interface/goals/focus_SAF_secure_africa.dds"   effectFile = "gfx/FX/buttonstate.lua"		legacy_lazy_load = no
+		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = -90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = 90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+} 
+SpriteType = { 
+    	name = "GFX_focus_ETH_the_patriots"
+		texturefile = "gfx/interface/goals/focus_ETH_the_patriots.dds"
+	}
+	   SpriteType = { name = "GFX_focus_ETH_the_patriots_shine" texturefile = "gfx/interface/goals/focus_ETH_the_patriots.dds"   effectFile = "gfx/FX/buttonstate.lua"		legacy_lazy_load = no
+		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = -90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+		animation = { animationmaskfile = "gfx/interface/goals/BYZ/focus_11.dds"    animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   animationrotation = 90.0 animationlooping = no	animationtime = 0.75 animationdelay = 0	animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 } }
+} 
 }

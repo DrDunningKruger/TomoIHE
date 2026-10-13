@@ -105,7 +105,6 @@ on_actions = {
 				ITA = { 
 					transfer_state = 735
 					transfer_state = 458	
-					transfer_state = 665
 					transfer_state = 1
 					
                     458 = {

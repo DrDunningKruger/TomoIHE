@@ -64,6 +64,23 @@ on_actions = {
 #			100 = war_justification.301
 #		}
 #	}
+	on_actions = {
+	on_war = {
+        effect = {
+            if = {
+                limit = {
+                    tag = FRA
+                }
+				458 = { set_demilitarized_zone = yes }
+				459 = { set_demilitarized_zone = yes }
+				460 = { set_demilitarized_zone = yes }
+				513 = { set_demilitarized_zone = yes }
+				462 = { set_demilitarized_zone = yes }
+				461 = { set_demilitarized_zone = yes }
+				665 = { set_demilitarized_zone = yes }
+            }
+        }
+    }
 
 	on_nuke_drop = {
 
