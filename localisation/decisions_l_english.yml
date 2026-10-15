@@ -1,4 +1,5 @@
 ﻿l_english:
+ decision_cost_CP_25_pp_25:0 "£command_power  §Y25§! £pol_power  §Y25§!"
  DECISIONVIEW_TITLE:0 "Events and Decisions"
  DECISIONSVIEW_EVENT_HEADER:0 "Events"
  POPUP_NEWS:0 "News Popup"

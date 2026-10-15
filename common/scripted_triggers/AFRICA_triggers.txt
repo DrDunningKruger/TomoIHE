@@ -1,0 +1,97 @@
+######
+###### AFRICA WAR
+######
+
+AFRICA_is_zone = {	# state scope; the 10 zones in the idea tooltip
+	OR = {
+		state = 458	# Tunisia
+		state = 448	# Tripoli
+		state = 449	# El Agheila
+		state = 450	# Benghasi
+		state = 164	# Rhodes
+		state = 182	# Crete
+		state = 183	# Cyprus
+		state = 839	# El-Alamein
+		state = 446	# Cairo
+		state = 454	# Palestine
+	}
+}
+
+AFRICA_is_west_defence_state = {	# state scope; western France, Benelux, North Sea coast
+	OR = {
+		state = 29	# Pas de Calais
+		state = 785	# Picardy
+		state = 15	# Normandy
+		state = 16	# Ile de France
+		state = 18	# Champagne
+		state = 27	# Champagne2
+		state = 14	# Brittany
+		state = 30	# Loire
+		state = 23	# Poitou
+		state = 19	# Aquitaine
+		state = 806	# French Basque Country
+		state = 6	# Belgium
+		state = 7	# Holland
+		state = 35	# Gelderland
+		state = 36	# Friesland
+		state = 56	# Weser-Ems
+		state = 59	# Ost-Hannover
+		state = 58	# Schleswig-Holstein
+		state = 99	# Jutland
+	}
+}
+
+AFRICA_is_west_defender = {	# country scope; who gets the western defence bonus
+	OR = {
+		tag = GER
+		tag = ITA
+	}
+}
+
+AFRICA_is_allied_side = {	# country scope
+	OR = {
+		tag = ENG
+		is_in_faction_with = ENG
+	}
+}
+
+AFRICA_is_axis_side = {	# country scope
+	OR = {
+		tag = ITA
+		is_in_faction_with = ITA
+		tag = GER
+		is_in_faction_with = GER
+	}
+}
+
+AFRICA_has_allied_idea = {
+	OR = {
+		has_idea = AFRICA_ALLIES_1
+		has_idea = AFRICA_ALLIES_2
+		has_idea = AFRICA_ALLIES_3
+		has_idea = AFRICA_ALLIES_4
+		has_idea = AFRICA_ALLIES_5
+		has_idea = AFRICA_ALLIES_6
+		has_idea = AFRICA_ALLIES_7
+		has_idea = AFRICA_ALLIES_8
+		has_idea = AFRICA_ALLIES_9
+		has_idea = AFRICA_ALLIES_10
+		has_idea = AFRICA_ALLIES_11
+	}
+}
+
+AFRICA_has_axis_idea = {
+	OR = {
+		has_idea = AFRICA_AXIS_1
+		has_idea = AFRICA_AXIS_2
+		has_idea = AFRICA_AXIS_3
+		has_idea = AFRICA_AXIS_4
+		has_idea = AFRICA_AXIS_5
+		has_idea = AFRICA_AXIS_6
+		has_idea = AFRICA_AXIS_7
+		has_idea = AFRICA_AXIS_8
+		has_idea = AFRICA_AXIS_9
+		has_idea = AFRICA_AXIS_10
+		has_idea = AFRICA_AXIS_11
+	}
+}

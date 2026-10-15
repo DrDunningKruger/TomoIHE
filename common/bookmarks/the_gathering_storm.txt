@@ -198,7 +198,6 @@ bookmarks = {
 			}
 			focuses = {
 				HUN_second_vienna_award
-				HUN_reinstate_horthy
 			}
 		}
 

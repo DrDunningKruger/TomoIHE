@@ -46,8 +46,37 @@ SOV_purge = {
 	
 	visible = {
 	NOT = { SOV = { has_completed_focus = SOV_great_purge }}
-		SOV = { has_completed_focus = SOV_collectivist_propaganda }
+		always = no
 
 	}
 		
+}
+
+SOV_propaganda_campaigns = {
+	priority = 100
+
+	icon = SOV_propaganda
+
+	scripted_gui = sov_propaganda_campaigns_ui
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		OR = {
+			has_completed_focus = SOV_expand_the_agitprop
+			has_country_flag = SOV_debug_show_propaganda_system_flag #Debug
+		}
+	}
+}
+
+SOV_red_army_recovery_category = {
+	allowed = {
+		original_tag = SOV
+	}
+	visible = {
+		date > 1941.05.30
+	}
+	priority = 20
 }

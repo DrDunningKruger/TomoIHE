@@ -1,1 +1,21 @@
+##### Re-added from base game common/scripted_triggers/SOV_scripted_triggers.txt (lost to replace_path = common/scripted_triggers) #####
 
+SOV_third_five_year_plan_available = {
+	custom_trigger_tooltip = {
+		tooltip = SOV_third_five_year_plan_available_tt
+		NOT = { has_country_flag = SOV_third_five_year_plan_locked_flag }
+	}
+}
+
+# Vanilla checks for the opposition / exiles focuses, which don't exist in this mod's Soviet tree, so these can never be true
+SOV_is_right_opposition = {
+	always = no
+}
+
+SOV_is_left_opposition = {
+	always = no
+}
+
+SOV_is_exiles = {
+	always = no
+}

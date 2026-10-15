@@ -785,7 +785,7 @@ focus_tree = {
 					instant_build = yes
 				}
 				add_resource = {
-					type = aluminum
+					type = aluminium
 					amount = 30
 				}
 			}

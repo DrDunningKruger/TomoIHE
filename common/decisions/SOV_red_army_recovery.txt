@@ -1,0 +1,105 @@
+SOV_red_army_recovery_category = {
+
+	# Red Army attack modifier, fixed to the calendar from 01/06/41 (not war start)
+	# 01/06/41 -> 01/12/41 = -10% attack	SOV_red_army_unprepared_1
+	# 01/12/41 -> 01/06/42 = -5% attack	SOV_red_army_unprepared_2
+	# 01/06/42 -> 01/12/42 = neutral		SOV_red_army_unprepared_3
+	# 01/12/42 onward      = +5% attack	SOV_red_army_unprepared_4
+
+	SOV_red_army_recovery_start = {
+		allowed = {
+			original_tag = SOV
+		}
+		activation = {
+			date > 1941.05.30 # activates 31/05/41
+		}
+		available = {
+			always = no
+		}
+		icon = mission_icon
+		is_good = no
+		fire_only_once = yes
+		days_mission_timeout = 1 # fires 01/06/41
+		selectable_mission = no
+
+		timeout_effect = {
+			add_ideas = SOV_red_army_unprepared_1
+			activate_mission = SOV_red_army_recovery_1
+		}
+	}
+
+	SOV_red_army_recovery_1 = {
+		allowed = {
+			original_tag = SOV
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 183 # 01/06/41 + 183 = 01/12/41
+		selectable_mission = no
+
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = SOV_red_army_unprepared_1
+				add_idea = SOV_red_army_unprepared_2
+			}
+			activate_mission = SOV_red_army_recovery_2
+		}
+	}
+
+	SOV_red_army_recovery_2 = {
+		allowed = {
+			original_tag = SOV
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 182 # 01/12/41 + 182 = 01/06/42
+		selectable_mission = no
+
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = SOV_red_army_unprepared_2
+				add_idea = SOV_red_army_unprepared_3
+			}
+			activate_mission = SOV_red_army_recovery_3
+		}
+	}
+
+	SOV_red_army_recovery_3 = {
+		allowed = {
+			original_tag = SOV
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 183 # 01/06/42 + 183 = 01/12/42
+		selectable_mission = no
+
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = SOV_red_army_unprepared_3
+				add_idea = SOV_red_army_unprepared_4
+			}
+			# final stage: no further mission, the buff idea stays
+		}
+	}
+}

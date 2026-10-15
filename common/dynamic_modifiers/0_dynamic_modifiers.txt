@@ -765,3 +765,618 @@ african_bastion = {
 	}
 	cas_damage_reduction = 0.25
 }
+
+# Fortified Western Front: fixed-value levels 1-5 (from Britain's AFRICA_ALLIES level), same mechanic as AXIS_Africa_modifier.
+# Each Allied copy is added with scope = <TAG> so only that country's divisions get the attack penalty.
+# Levels are swapped by AFRICA_update_western_defences.
+AFRICA_western_defences_FRA_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_FRA_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_FRA_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_FRA_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_FRA_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_FRA_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_FRA_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_FRA_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_FRA_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_FRA_tt
+	army_attack_factor = -0.50
+}
+
+AFRICA_western_defences_ENG_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_ENG_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_ENG_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_ENG_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_ENG_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_ENG_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_ENG_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_ENG_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_ENG_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_ENG_tt
+	army_attack_factor = -0.50
+}
+
+AFRICA_western_defences_USA_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_USA_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_USA_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_USA_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_USA_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_USA_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_USA_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_USA_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_USA_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_USA_tt
+	army_attack_factor = -0.50
+}
+
+AFRICA_western_defences_CAN_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_CAN_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_CAN_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_CAN_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_CAN_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_CAN_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_CAN_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_CAN_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_CAN_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_CAN_tt
+	army_attack_factor = -0.50
+}
+
+AFRICA_western_defences_SAF_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_SAF_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_SAF_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_SAF_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_SAF_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_SAF_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_SAF_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_SAF_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_SAF_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_SAF_tt
+	army_attack_factor = -0.50
+}
+
+AFRICA_western_defences_BRA_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_BRA_tt
+	army_attack_factor = -0.10
+}
+
+AFRICA_western_defences_BRA_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_BRA_tt
+	army_attack_factor = -0.20
+}
+
+AFRICA_western_defences_BRA_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_BRA_tt
+	army_attack_factor = -0.30
+}
+
+AFRICA_western_defences_BRA_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_BRA_tt
+	army_attack_factor = -0.40
+}
+
+AFRICA_western_defences_BRA_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	custom_modifier_tooltip = AFRICA_western_defences_BRA_tt
+	army_attack_factor = -0.50
+}
+
+# Unscoped, one per state: these modifiers already only affect the controller or its enemies
+AFRICA_western_fortifications_1 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	attrition_for_controller = -0.015
+	enemy_attrition = 0.015
+}
+
+AFRICA_western_fortifications_2 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	attrition_for_controller = -0.030
+	enemy_attrition = 0.030
+}
+
+AFRICA_western_fortifications_3 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	attrition_for_controller = -0.045
+	enemy_attrition = 0.045
+}
+
+AFRICA_western_fortifications_4 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	attrition_for_controller = -0.060
+	enemy_attrition = 0.060
+}
+
+AFRICA_western_fortifications_5 = {
+	enable = { always = yes }
+	icon = GFX_modifiers_AFRICA_western_defences
+	remove_trigger = { date > 1942.1.1 }
+	attrition_for_controller = -0.075
+	enemy_attrition = 0.075
+}
+
+SOV_defense_industry_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_defense_industry_ccp_2d_sov_compatibility
+
+	#INITIAL
+	conversion_cost_civ_to_mil_factor = SOV_defense_industry_conversion_cost_civ_to_mil_factor #-0.2
+	production_factory_max_efficiency_factor = SOV_defense_industry_production_factory_max_efficiency_factor #0.05
+	production_factory_efficiency_gain_factor = SOV_defense_industry_production_factory_efficiency_gain_factor #-0.05
+	line_change_production_efficiency_factor = SOV_defense_industry_line_change_production_efficiency_factor #-0.1
+
+	#FUTURE
+	land_equipment_upgrade_xp_cost = SOV_defense_industry_land_equipment_upgrade_xp_cost #-0.1 -> Tankograd
+	breakthrough_factor = SOV_defense_industry_breakthrough_factor #0.05 -> PC of Mortar Armament
+	army_artillery_defence_factor = SOV_defense_industry_army_artillery_defence_factor #0.05 -> PC of Mortar Armament
+
+	production_speed_coastal_bunker_factor = SOV_defense_industry_production_speed_coastal_bunker_factor #0.05 -> Military Engineering University
+	production_speed_bunker_factor = SOV_defense_industry_production_speed_bunker_factor #0.05 -> Military Engineering University
+	max_dig_in_factor = SOV_defense_industry_max_dig_in_factor #0.05 -> Military Engineering University
+}
+
+SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_red_army_ccp_2d_sov_compatibility
+
+	#INITIAL
+	mobilization_laws_cost_factor = SOV_the_red_army_mobilization_laws_cost_factor #-0.1
+	army_org_factor = SOV_the_red_army_army_org_factor #-0.15 Meant to represent army disgruntledness
+	experience_gain_army_factor = SOV_the_red_army_experience_gain_army_factor #-0.1
+	experience_loss_factor = SOV_the_red_army_experience_loss_factor #0.25
+
+
+	#FUTURE
+	mobilization_speed = SOV_the_red_army_mobilization_speed #0.05 -> Strengthen the Mobilization Plan
+	conscription_factor = SOV_the_red_army_conscription_factor #0.03 -> Strengthen the Mobilization Plan
+	modifier_army_sub_unit_cavalry_speed_factor = SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor # 0.05 -> Restore Cossack Units
+	cavalry_attack_factor = SOV_the_red_army_cavalry_attack_factor #0.05 -> Restore Cossack Units
+	training_time_factor = SOV_the_red_army_training_time_factor #-0.1 -> Cohesion First
+	heat_attrition_factor = SOV_the_red_army_heat_attrition_factor #-0.1 -> An Adaptable Army
+	winter_attrition_factor = SOV_the_red_army_winter_attrition_factor #-0.1 -> An Adaptable Army
+	acclimatization_cold_climate_gain_factor = SOV_the_red_army_acclimatization_cold_climate_gain_factor #0.15 -> An Adaptable Army
+	acclimatization_hot_climate_gain_factor = SOV_the_red_army_acclimatization_hot_climate_gain_factor #0.15 -> An Adaptable Army
+	terrain_trait_xp_gain_factor = SOV_the_red_army_terrain_trait_xp_gain_factor #0.15 -> An Adaptable Army
+	unit_infantry_design_cost_factor = SOV_the_red_army_unit_infantry_design_cost_factor #-0.1
+	unit_artillery_brigade_design_cost_factor = SOV_the_red_army_unit_artillery_brigade_design_cost_factor #-0.1
+	army_org_regain = SOV_the_red_army_army_org_regain #0.1 -> Barrier Troops
+	special_forces_cap = SOV_the_red_army_special_forces_cap # 0.1 -> The Glory of the Red Army
+	land_doctrine_cost_factor = SOV_the_red_army_land_doctrine_cost_factor # -0.1 -> The Glory of the Red Army
+	cas_damage_reduction = SOV_the_red_army_cas_damage_reduction #0.05 -> Experts in Camouflage
+	max_dig_in = SOV_the_red_army_max_dig_in #2 -> Experts in Camouflage
+	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
+	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
+	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
+	supply_consumption_factor = SOV_the_red_army_supply_consumption_factor #-0.05 -> Military Reorganization
+	army_attack_factor = SOV_the_red_army_army_attack_factor #0.05 -> The Glory of the Red Army
+	army_defence_factor = SOV_the_red_army_army_defence_factor #0.05 -> The Glory of the Red Army
+}
+
+SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_red_army_alt_ccp_2d_sov_compatibility
+
+	#INITIAL
+	mobilization_laws_cost_factor = SOV_the_red_army_mobilization_laws_cost_factor #-0.1
+	army_org_factor = SOV_the_red_army_army_org_factor #-0.15 Meant to represent army disgruntledness
+	experience_gain_army_factor = SOV_the_red_army_experience_gain_army_factor #-0.1
+	experience_loss_factor = SOV_the_red_army_experience_loss_factor #0.25
+
+
+	#FUTURE
+	mobilization_speed = SOV_the_red_army_mobilization_speed #0.05 -> Strengthen the Mobilization Plan
+	conscription_factor = SOV_the_red_army_conscription_factor #0.03 -> Strengthen the Mobilization Plan
+	modifier_army_sub_unit_cavalry_speed_factor = SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor # 0.05 -> Restore Cossack Units
+	cavalry_attack_factor = SOV_the_red_army_cavalry_attack_factor #0.05 -> Restore Cossack Units
+	training_time_factor = SOV_the_red_army_training_time_factor #-0.1 -> Cohesion First
+	heat_attrition_factor = SOV_the_red_army_heat_attrition_factor #-0.1 -> An Adaptable Army
+	winter_attrition_factor = SOV_the_red_army_winter_attrition_factor #-0.1 -> An Adaptable Army
+	acclimatization_cold_climate_gain_factor = SOV_the_red_army_acclimatization_cold_climate_gain_factor #0.15 -> An Adaptable Army
+	acclimatization_hot_climate_gain_factor = SOV_the_red_army_acclimatization_hot_climate_gain_factor #0.15 -> An Adaptable Army
+	terrain_trait_xp_gain_factor = SOV_the_red_army_terrain_trait_xp_gain_factor #0.15 -> An Adaptable Army
+	unit_infantry_design_cost_factor = SOV_the_red_army_unit_infantry_design_cost_factor #-0.1
+	unit_artillery_brigade_design_cost_factor = SOV_the_red_army_unit_artillery_brigade_design_cost_factor #-0.1
+	army_org_regain = SOV_the_red_army_army_org_regain #0.1 -> Barrier Troops
+	special_forces_cap = SOV_the_red_army_special_forces_cap # 0.1 -> The Glory of the Red Army
+	land_doctrine_cost_factor = SOV_the_red_army_land_doctrine_cost_factor # -0.1 -> The Glory of the Red Army
+	cas_damage_reduction = SOV_the_red_army_cas_damage_reduction #0.05 -> Experts in Camouflage
+	max_dig_in = SOV_the_red_army_max_dig_in #2 -> Experts in Camouflage
+	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
+	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
+	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
+	supply_consumption_factor = SOV_the_red_army_supply_consumption_factor #-0.05 -> Military Reorganization
+	army_attack_factor = SOV_the_red_army_army_attack_factor #0.05 -> The Glory of the Red Army
+	army_defence_factor = SOV_the_red_army_army_defence_factor #0.05 -> The Glory of the Red Army
+}
+SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_second_five_year_plan_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#INITIAL
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.15
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.05
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
+}
+
+SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS -> Third Five Year Plan
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.1
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
+
+	#INITIAL
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+}
+
+SOV_third_five_year_plan_civilian_dynamic_modifier = { #NATIONAL SPIRIT - Civilian
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_civilian_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.08
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.1
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+	line_change_production_efficiency_factor = SOV_fyp_line_change_production_efficiency_factor #0.1 -> Industrial Modernization
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+}
+
+SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Military
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_military_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1 (turned to 0 with Optmize Production Lines)
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.1
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#INITIAL -> Shift to Armaments Production
+	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10
+
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+	production_factory_start_efficiency_factor = SOV_fyp_production_factory_start_efficiency_factor #0.05 -> Optimize Production Lines
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+}
+
+SOV_fourth_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_fourth_five_year_plan
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #0
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.1 (0.2 with Civilian focus)
+	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.06/0.08 (and turned into 0.2/0.12 in this NS)
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+
+	#OPTIONAL IMPROVEMENTS
+	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10 -> Shift to Armaments Production
+	line_change_production_efficiency_factor = SOV_fyp_line_change_production_efficiency_factor #0.1 -> Industrial Modernization
+	production_factory_start_efficiency_factor = SOV_fyp_production_factory_start_efficiency_factor #0.05 -> Optimize Production Lines
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+
+	#INITIAL -> Fourth Five Year Plan
+	industry_repair_factor = SOV_fyp_industry_repair_factor #0.1
+}
+
+#Second Five Year Plan does not need an alternative
+
+SOV_third_five_year_plan_dynamic_modifier_alt = { #NATIONAL SPIRIT - Basic
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS -> Third Five Year Plan
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.1
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
+
+	#INITIAL
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+}
+
+SOV_third_five_year_plan_civilian_dynamic_modifier_alt = { #NATIONAL SPIRIT - Civilian
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_civilian_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.008
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.1
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+	line_change_production_efficiency_factor = SOV_fyp_line_change_production_efficiency_factor #0.1 -> Industrial Modernization
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+}
+
+SOV_third_five_year_plan_military_dynamic_modifier_alt = { #NATIONAL SPIRIT - Military
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_military_ccp_2d_sov_compatibility # New GFX entry pointing to the original icon, so it can be safely overwritten by CCP 2D Sov Art without impacting other content using the same icon
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1 (turned to 0 with Optmize Production Lines)
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.1
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#INITIAL -> Shift to Armaments Production
+	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10
+
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+	production_factory_start_efficiency_factor = SOV_fyp_production_factory_start_efficiency_factor #0.05 -> Optimize Production Lines
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+}
+
+SOV_fourth_five_year_plan_dynamic_modifier_alt = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_fourth_five_year_plan
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #0
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.1 (0.2 with Civilian focus)
+	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.06/0.08 (and turned into 0.2/0.12 in this NS)
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+
+	#OPTIONAL IMPROVEMENTS
+	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10 -> Shift to Armaments Production
+	line_change_production_efficiency_factor = SOV_fyp_line_change_production_efficiency_factor #0.1 -> Industrial Modernization
+	production_factory_start_efficiency_factor = SOV_fyp_production_factory_start_efficiency_factor #0.05 -> Optimize Production Lines
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+
+	#INITIAL -> Fourth Five Year Plan
+	industry_repair_factor = SOV_fyp_industry_repair_factor #0.1
+}
+
+
+SOV_ussr_academy_of_sciences_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_ussr_academy_of_sciences_ccp_2d_sov_compatibility
+
+	research_speed_factor = SOV_academy_of_sciences_research_speed_factor #0.01
+}
+
+SOV_ussr_academy_of_sciences_dynamic_modifier_alt = { #Alternative for non-commies (need this due to scripted loc not working here)
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_ussr_academy_of_sciences_ccp_2d_sov_compatibility
+
+	research_speed_factor = SOV_academy_of_sciences_research_speed_factor #0.01
+}
+
+SOV_the_politburo_good_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_the_politburo_ccp_2d_sov_compatibility
+	
+	#INITIAL
+	drift_defence_factor = SOV_the_politburo_drift_defence_factor #0.05
+
+	#FUTURE
+	defensive_war_stability_factor = SOV_the_politburo_defensive_war_stability_factor #-0.25 -> Socialism in One Country
+	communism_drift = SOV_the_politburo_communism_drift #0.05 -> Socialism in One Country
+	political_power_factor = SOV_the_politburo_political_power_factor #0.05 -> The Stalin Constitution
+	economy_cost_factor = SOV_the_politburo_economy_cost_factor #0.2 -> Secure the Administration
+	trade_laws_cost_factor = SOV_the_politburo_trade_laws_cost_factor #-0.2 -> Secure the Administration
+	mobilization_laws_cost_factor = SOV_the_politburo_mobilization_laws_cost_factor #-0.2 -> Secure the Administration
+	consumer_goods_expected_value = SOV_the_politburo_good_consumer_goods_factor #0.05 -> Collectivization Process
+	production_speed_buildings_factor = SOV_the_politburo_production_speed_buildings_factor #0.05 -> Collectivization Process
+	global_building_slots_factor = SOV_the_politburo_global_building_slots_factor #0.1 -> Collectivization Process
+	max_surrender_limit_offset = SOV_the_politburo_max_surrender_limit_offset #0.05 -> The Workers Dictatorship
+	max_command_power = SOV_the_politburo_max_command_power # 20 -> Organization, Centralization, Discipline
+	mobilization_speed = SOV_the_politburo_mobilization_speed # 0.1 -> Organization, Centralization, Discipline
+	operative_slot = SOV_the_politburo_operative_slot # 1 -> Behead the Snake
+	political_advisor_cost_factor = SOV_the_politburo_political_advisor_cost_factor #-0.15 -> Freedom of Debate, Unity of Action
+	opinion_gain_monthly_same_ideology_factor = SOV_the_politburo_opinion_gain_monthly_same_ideology_factor #0.25 -> The Construction of Communism
+}
+
+

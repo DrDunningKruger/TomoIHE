@@ -72,7 +72,7 @@ sub_units = {
 		}
 		desert = { 
 			attack = 0.05
-		#}
+		}
 		beaches = {
 			movement = -0.8
 		}

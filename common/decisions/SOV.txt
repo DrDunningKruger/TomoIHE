@@ -5255,6 +5255,308 @@ SOV_industry_relocation = {
 }
 
 SOV_great_patriotic_war = {
+	#Desperate Measures decisions (restored from vanilla)
+	SOV_factory_worker_militias = {
+		priority = 20
+
+		icon = generic_prepare_civil_war
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 15
+				FROM = {
+					OR = {
+						state = 219 #MOSCOW
+						state = 195 #LENINGRAD
+						state = 217 #STALINGRAD
+						state = 137 #SEVASTOPOL
+						state = 206 #MINSK
+						state = 202 #KIEV
+					}
+				}
+				#ROOT = { manpower_per_military_factory > 15000 } #Don't waste if we need better manpower laws
+			}
+		}
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				OR = {
+					industrial_complex > 0
+					arms_factory > 0
+					dockyard > 0
+				}
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = SOV_desperate_measures
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			FROM = {
+				NOT = { has_dynamic_modifier = { modifier = SOV_civilian_labor_in_defense } }
+			}
+		}
+
+		visible = {
+			any_enemy_country = { SOV_is_major_not_original_sov = yes }
+			NOT = { has_country_flag = SOV_order_227_flag }
+			FROM = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+					controller = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 90
+
+		cancel_if_not_visible = yes
+
+		cancel_effect = {
+			FROM = {
+				remove_dynamic_modifier = { modifier = SOV_factory_worker_militias_raised }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				#Cost
+				add_command_power = -25
+				add_political_power = -25
+
+				FROM = {
+					add_dynamic_modifier = {
+						modifier = SOV_factory_worker_militias_raised
+						scope = SOV
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_factory_worker_militias_state_modifier_tt
+		}
+
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = { modifier = SOV_factory_worker_militias_raised }
+			}
+		}
+	}
+
+	SOV_civilian_labor_in_defense = {
+		priority = 10
+
+		icon = POL_organize_strike_two
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				OR = {
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = megalopolis
+					has_state_category = metropolis
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 15
+				FROM = {
+					OR = {
+						state = 219 #MOSCOW
+						state = 195 #LENINGRAD
+						state = 217 #STALINGRAD
+						state = 137 #SEVASTOPOL
+						state = 206 #MINSK
+						state = 202 #KIEV
+					}
+				}
+				#ROOT = { manpower_per_military_factory > 15000 } #Don't waste if we need better manpower laws
+			}
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			FROM = {
+				NOT = { has_dynamic_modifier = { modifier = SOV_factory_worker_militias_raised } }
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			any_enemy_country = { SOV_is_major_not_original_sov = yes }
+			NOT = { has_country_flag = SOV_order_227_flag }
+			FROM = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+					controller = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 90
+
+		cancel_if_not_visible = yes
+
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { is_controlled_by = ROOT }
+					NOT = {
+						any_neighbor_state = {
+							controller = { has_war_with = ROOT }
+						}
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			FROM = {
+				remove_dynamic_modifier = { modifier = SOV_civilian_labor_in_defense }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				#Cost
+				add_command_power = -25
+				add_political_power = -25
+
+				FROM = {
+					add_dynamic_modifier = {
+						modifier = SOV_civilian_labor_in_defense
+						scope = SOV
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_civilian_labor_in_defense_state_modifier_tt
+		}
+
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = { modifier = SOV_civilian_labor_in_defense }
+			}
+		}
+	}
+
+	SOV_staggered_retreat = {
+		priority = 31
+
+		icon = GFX_decision_generic_military
+
+		ai_will_do = {
+			base = 0.5
+		}
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			surrender_progress > 0.15
+		}
+
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			any_enemy_country = { SOV_is_major_not_original_sov = yes }
+			NOT = { has_country_flag = SOV_order_227_flag }
+		}
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 14
+		}
+		custom_cost_text = decision_cost_CP_50_pp_15
+
+		days_remove = 90
+
+		cancel_trigger = {
+			surrender_progress < 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -15
+			}
+		}
+
+		modifier = {
+			army_speed_factor = -0.1
+			army_defence_factor = 0.05
+			org_loss_when_moving = -0.1
+		}
+	}
+
+	SOV_scorched_earth = {
+
+		icon = generic_scorched_earth
+		allowed = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				SOV_is_major_not_original_sov = yes
+			}
+			surrender_progress > 0
+			NOT = { has_country_flag = SOV_order_227_flag }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			NOT = { has_country_flag = SOV_order_227_flag }
+		}
+
+		complete_effect = {
+			set_country_flag = SOV_scorched_earth
+		}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 0
+				SOV_save_pp_for_manpower_trouble = yes
+			}
+		}
+	}
+
 
 	#217 "Stalingrad"
 	SOV_hold_stalingrad = {

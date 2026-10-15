@@ -1243,6 +1243,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_unit_medium_scout_plane_icon_small"
+		texturefile = "gfx/texticons/unit_air_scout_plane_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 
 	spriteType = {
 		name = "GFX_unit_maritime_patrol_plane_icon_small"

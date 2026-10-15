@@ -174,7 +174,6 @@ characters = {
 			advisor = {
 				slot = political_advisor
 				idea_token = SOV_popular
-				name = SOV_lavrenty_beriya			
 				allowed = {
 					original_tag = SOV
 				}
@@ -190,7 +189,194 @@ characters = {
 				}
 			}
 	}
-	
+
+	### Vanilla political advisors (paranoia on_add/on_remove and NSB alignment triggers removed - not present in mod)
+
+	SOV_nikita_khrushchyov = {
+		name = SOV_nikita_khrushchyov
+		portraits = {
+			army = {
+				small = "GFX_idea_nikita_khrushchev"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = nikita_khrushchyov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			traits = {
+				political_commissar
+			}
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+	}
+
+	SOV_lazar_kaganovich = {
+		name = SOV_lazar_kaganovich
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_lazar_kaganovich"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lazar_kaganovich
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			available = {
+				has_completed_focus = SOV_finish_the_five_year_plan
+			}
+			traits = {
+				iron_lazar
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	### Vanilla alt-history political advisors - available from start (their vanilla unlock focuses are not in the mod)
+
+	SOV_ivan_smirnov = {
+		name = SOV_ivan_smirnov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_ivan_smirnov"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_ivan_smirnov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			traits = {
+				head_directorate_of_new_buildings
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+	SOV_ivar_smilga = {
+		name = SOV_ivar_smilga
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_ivar_smilga"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_ivar_smilga
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			traits = {
+				soviet_economist
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
+	SOV_nikolay_bukharin = {
+		name = SOV_nikolay_bukharin
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_nikolay_bukharin"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_nikolay_bukharin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			traits = {
+				economy_reformer
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SOV_grigory_sokolnikov = {
+		name = SOV_grigory_sokolnikov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_grigory_sokolnikov"
+			}
+		}
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_grigory_sokolnikov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+			}
+			traits = {
+				peoples_commissar_of_finance
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+	}
+
 	SOV_patriarch_sergy = {
 		name = SOV_patriarch_sergy
 		portraits = {

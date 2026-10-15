@@ -163,7 +163,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				political_power_gain = -0.05
-				naval_invasion_penalty = 0.1
 			}
 		}		
 		AFRICA_ALLIES_4 = {
@@ -187,7 +186,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.07
 				political_power_gain = -0.1	
-				naval_invasion_penalty = 0.15		
 			}
 		}		
 		AFRICA_ALLIES_3 = {
@@ -211,7 +209,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				political_power_gain = -0.05
-				naval_invasion_penalty = 0.15			
 			}
 		}		
 		AFRICA_ALLIES_2 = {
@@ -244,7 +241,6 @@ ideas = {
 				air_nav_efficiency = -0.05
 				air_ace_generation_chance_factor = -0.05
 				air_accidents_factor = 0.05
-				naval_invasion_penalty = 0.2			
 			}
 		}		
 		AFRICA_ALLIES_1 = { #TOTAL ALLIED DEATH
@@ -277,7 +273,6 @@ ideas = {
 				air_nav_efficiency = -0.10
 				air_ace_generation_chance_factor = -0.10
 				air_accidents_factor = 0.10
-				naval_invasion_penalty = 0.25				
 			}
 		}		
 		# FOR AXIS
@@ -318,7 +313,6 @@ ideas = {
 				stability_factor = 0.05
 				fascism_drift = 0.05
                 army_core_defence_factor = 0.25
-				naval_invasion_penalty = 0.2		
 			}
 		}		
 		AFRICA_AXIS_10 = {
@@ -346,7 +340,6 @@ ideas = {
 				stability_factor = 0.025
 				fascism_drift = 0.03
                 army_core_defence_factor = 0.2
-				naval_invasion_penalty = 0.1					
 			}
 		}		
 		AFRICA_AXIS_9 = {

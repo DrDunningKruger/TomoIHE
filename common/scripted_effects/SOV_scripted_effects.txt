@@ -1,0 +1,90 @@
+# Re-added from vanilla SOV_scripted_effects.txt (lost to replace_path = common/scripted_effects)
+# Used by focus SOV_national_specialists: upgrades the hired Soviet industrial designer
+SOV_replace_industrial_designer = {
+	custom_effect_tooltip = SOV_upgrade_industrial_designer_tt
+	if = {
+		limit = {
+			has_idea = stalingrad_tractor_factory
+		}
+		swap_ideas = {
+			remove_idea = stalingrad_tractor_factory
+			add_idea = stalingrad_tractor_factory_improved
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = leningrad_polytechnical_institute
+		}
+		swap_ideas = {
+			remove_idea = leningrad_polytechnical_institute
+			add_idea = leningrad_polytechnical_institute_improved
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SOV_soviet_railways
+		}
+		swap_ideas = {
+			remove_idea = SOV_soviet_railways
+			add_idea = SOV_soviet_railways_improved
+		}
+	}
+}
+
+# Re-added from vanilla SOV_scripted_effects.txt (lost to replace_path = common/scripted_effects)
+# Used by the targeted national spirits' on_remove in common/ideas/soviet.txt
+SOV_clear_hidden_targeted_ns_effect = {
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_ENG
+		}
+		add_ideas = SOV_targeted_bonus_against_ENG
+	}
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_FRA
+		}
+		add_ideas = SOV_targeted_bonus_against_FRA
+	}
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_GER
+		}
+		add_ideas = SOV_targeted_bonus_against_GER
+	}
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_ITA
+		}
+		add_ideas = SOV_targeted_bonus_against_ITA
+	}
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_USA
+		}
+		add_ideas = SOV_targeted_bonus_against_USA
+	}
+	if = {
+		limit = {
+			has_idea = SOV_targeted_bonus_against_JAP
+		}
+		add_ideas = SOV_targeted_bonus_against_JAP
+	}
+}
+
+# Re-added from vanilla SOV_scripted_effects.txt (lost to replace_path = common/scripted_effects)
+SOV_foreign_politics_decision_cost_reduction_effect = { #Add more diplomacy vars here to divide and round them
+	divide_variable = { SOV_pressure_country_government_cost = 2 }
+	divide_variable = { SOV_promote_ideology_rallies_cost = 2 }
+	divide_variable = { SOV_send_ultimatum_to_country_cost = 2 }
+	divide_variable = { SOV_send_infantry_equipment_cost = 2 }
+	divide_variable = { SOV_peace_deal_cost = 2 }
+	divide_variable = { SOV_sinkiang_proposal_cost = 2 }
+
+	round_variable = SOV_pressure_country_government_cost
+	round_variable = SOV_promote_ideology_rallies_cost
+	round_variable = SOV_send_ultimatum_to_country_cost
+	round_variable = SOV_send_infantry_equipment_cost
+	round_variable = SOV_peace_deal_cost
+	round_variable = SOV_sinkiang_proposal_cost
+}

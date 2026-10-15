@@ -1,0 +1,26 @@
+##### PROPAGANDA SYSTEM - copied from base game common/scripted_triggers/SOV_scripted_triggers.txt #####
+SOV_propaganda_poster_slot_available = {
+	custom_trigger_tooltip = {
+		tooltip = SOV_propaganda_poster_slot_available_tt
+		OR = {
+			check_variable = { SOV_poster_left_icon_frame = SOV_propaganda_empty_slot_index }
+			check_variable = { SOV_poster_center_icon_frame = SOV_propaganda_empty_slot_index }
+			check_variable = { SOV_poster_right_icon_frame = SOV_propaganda_empty_slot_index }
+		}
+	}
+}
+
+SOV_propaganda_victory_at_hand_available = { #Basically Great Patriotic War is ongoing
+	custom_trigger_tooltip = {
+		tooltip = SOV_propaganda_victory_at_hand_available_tt
+		has_country_flag = SOV_third_five_year_plan_locked_flag
+		NOT = { has_country_flag = SOV_fourth_five_year_plan_available_flag }
+	}
+}
+
+SOV_is_major_not_original_sov = {
+	is_major = yes
+	hidden_trigger = {
+		NOT = { original_tag = SOV }
+	}
+}

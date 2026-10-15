@@ -40,7 +40,7 @@ characters={
 			
 			navy_leader={
 				visible = {
-					has_completed_focus = HUN_reinstate_horthy
+					always = no
 				}			
 				traits = { seawolf gentlemanly blue_water_expert naval_lineage superior_tactician spotter air_controller fly_swatter flight_deck_manager safety_first }
 				skill = 6

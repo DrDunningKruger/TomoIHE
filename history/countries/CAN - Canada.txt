@@ -91,12 +91,12 @@ if = {
 	limit = { NOT = { has_dlc = "Together for Victory" } }
 	set_cosmetic_tag = CAN_ALY
 }
+add_ideas = AFRICA_ALLIES_6
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	add_ideas = CAN_great_depression_1
 	add_ideas = CAN_conscription_crisis
 	add_ideas = training_spirit
-	add_ideas = AFRICA_ALLIES_6
 	set_cosmetic_tag = CAN_UK
 
 	add_to_tech_sharing_group = commonwealth_research

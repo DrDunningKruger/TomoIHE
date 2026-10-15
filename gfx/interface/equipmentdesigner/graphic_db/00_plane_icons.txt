@@ -5547,12 +5547,22 @@ SOV = {
 		}			
 		medium_plane_scout_plane_airframe_3 = {
 			pool = {
-				icons = { 				
+				limit = { has_dlc = "La Resistance" }
+				icons = {
 					GFX_FRA_scout_plane2_medium
 				 }
 				models = {
 					FRA_medium_plane_entity
-				}			 
+				}
+			}
+			pool = {
+				limit = { NOT = { has_dlc = "La Resistance" } }
+				icons = {
+					GFX_scout_plane2_medium
+				}
+				models = {
+					FRA_medium_plane_entity
+				}
 			}
 		}
 		large_plane_airframe_0 = {

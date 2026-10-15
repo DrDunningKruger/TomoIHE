@@ -1,0 +1,135 @@
+# Soviet (No Step Back) idea icons missing from the mod's interface/ideas.gfx - copied from base game interface/ideas.gfx
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_SOV_an_empire_in_the_pacific_idea_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_sea_focused_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_consolidate_power_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_volunteer_expedition_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_defense_industry_artillery_bonus_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_artillery_regiments.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOV_desperate_measures_ns_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_tfv_can_conscription_crisis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_honest_serfdom_idea_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_manpower_bonus.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_SOV_legacy_of_rome_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_monarchist_uprising.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_memories_of_1905_idea_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_japanese_conflict.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_modernize_the_far_eastern_fleet_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_navy_bonus.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_SOV_modernize_the_far_eastern_fleet_vanilla_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_navy_bonus.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_SOV_national_brotherhood_idea_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_infantry_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_our_slavic_commitments_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_battle_priests_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_yug_orthodox_church_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_humanism_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_keep_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_keep_humanism_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_swap_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_politicized_military_swap_humanism_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rebuild_the_nation_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_goods_red_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rebuild_the_savior_cathedral_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_ARG_construction_guilds.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rehabilitated_military_ns_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_morale_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_restoration_and_development_idea_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_exploit_mines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_restore_the_glory_of_the_motherland_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_morale_bonus.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_SOV_romanov_reconstruction_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/generic_intel_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_russian_corporate_state_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_man_five_year_plan_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_siberian_lessons_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_can_wartime_prices_and_trade_board.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_SOV_smersh_no_lar_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_saf_soviet_advisers.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_man_five_year_plan_tank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_the_local_soviets_idea_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_generic_local_self_management.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_smersh_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/idea_saf_soviet_advisers.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_trotskyite_plot_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/trotskyite_plot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_trotskyite_plot_purged_nsb_ccp_sov_compatibility"
+		texturefile = "gfx/interface/ideas/trotskyite_plot_purged.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tur_etatism"
+		texturefile = "gfx/interface/ideas/idea_tur_etatism.dds"
+	}
+}

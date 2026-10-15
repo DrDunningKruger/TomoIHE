@@ -1136,5 +1136,3 @@ ideas = {
 		}		
 	}
 }
-ITA_autarky_idea
-axistrade

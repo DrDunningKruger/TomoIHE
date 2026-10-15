@@ -1,0 +1,422 @@
+######
+###### AFRICA WAR
+######
+# global.AFRICA_score = zones held by the Allied side minus zones held by the Axis side (-10..10)
+# Every 2 points of score is one level, so taking a zone from the enemy moves one step; all 10 zones = max level
+# Allied level = 6 + score/2, Axis level = 6 - score/2 (rounded toward 0)
+
+# Recount who holds the Africa zones and re-apply the levels. Safe to call from any scope.
+AFRICA_recalculate = {
+	set_variable = { global.AFRICA_score = 0 }
+	every_state = {
+		limit = { AFRICA_is_zone = yes }
+		if = {
+			limit = { controller = { AFRICA_is_allied_side = yes } }
+			add_to_variable = { global.AFRICA_score = 1 }
+		}
+		else_if = {
+			limit = { controller = { AFRICA_is_axis_side = yes } }
+			subtract_from_variable = { global.AFRICA_score = 1 }
+		}
+	}
+
+	# only swap ideas when the score actually moved (unset AFRICA_score_applied = 0 = stalemate start)
+	if = {
+		limit = {
+			NOT = { check_variable = { var = global.AFRICA_score value = global.AFRICA_score_applied compare = equals } }
+		}
+		set_variable = { global.AFRICA_score_applied = global.AFRICA_score }
+		every_country = {
+			limit = { AFRICA_has_allied_idea = yes }
+			AFRICA_apply_allied_level = yes
+		}
+		every_country = {
+			limit = { AFRICA_has_axis_idea = yes }
+			AFRICA_apply_axis_level = yes
+		}
+		AFRICA_update_western_defences = yes
+	}
+}
+
+# Strength 0..5 from Britain's current AFRICA_ALLIES level: ALLIES_6+ = 0, ALLIES_1 = 5
+# (to flip the direction: ALLIES_7 = 1 ... ALLIES_11 = 5)
+AFRICA_update_western_defences = {
+	set_variable = { global.AFRICA_west_strength = 0 }
+	if = {
+		limit = { country_exists = ENG }
+		ENG = {
+			if = {
+				limit = { has_idea = AFRICA_ALLIES_1 }
+				set_variable = { global.AFRICA_west_strength = 5 }
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_ALLIES_2 }
+				set_variable = { global.AFRICA_west_strength = 4 }
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_ALLIES_3 }
+				set_variable = { global.AFRICA_west_strength = 3 }
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_ALLIES_4 }
+				set_variable = { global.AFRICA_west_strength = 2 }
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_ALLIES_5 }
+				set_variable = { global.AFRICA_west_strength = 1 }
+			}
+		}
+	}
+
+	# Same mechanic as AXIS_Africa_modifier: fixed-value modifiers, one copy per Allied country
+	# (scope = FRA/ENG/USA/CAN/SAF/BRA) so only that country's divisions get the attack penalty.
+	# Levels 1-5 = strength; per level -10% attack, -1.5% controller attrition, +1.5% enemy attrition.
+	every_state = {
+		limit = { AFRICA_is_west_defence_state = yes }
+		AFRICA_remove_western_defences = yes
+		if = {
+			limit = {
+				check_variable = { global.AFRICA_west_strength > 0 }
+				controller = { AFRICA_is_west_defender = yes }
+			}
+			if = {
+				limit = { check_variable = { global.AFRICA_west_strength > 4 } }
+				AFRICA_add_western_defences_5 = yes
+			}
+			else_if = {
+				limit = { check_variable = { global.AFRICA_west_strength > 3 } }
+				AFRICA_add_western_defences_4 = yes
+			}
+			else_if = {
+				limit = { check_variable = { global.AFRICA_west_strength > 2 } }
+				AFRICA_add_western_defences_3 = yes
+			}
+			else_if = {
+				limit = { check_variable = { global.AFRICA_west_strength > 1 } }
+				AFRICA_add_western_defences_2 = yes
+			}
+			else = {
+				AFRICA_add_western_defences_1 = yes
+			}
+		}
+	}
+}
+
+# State scope: level 1 of the western defence modifiers
+AFRICA_add_western_defences_1 = {
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_1 scope = FRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_1 scope = ENG }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_USA_1 scope = USA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_1 scope = CAN }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_1 scope = SAF }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_1 scope = BRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_fortifications_1 }
+}
+
+# State scope: level 2 of the western defence modifiers
+AFRICA_add_western_defences_2 = {
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_2 scope = FRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_2 scope = ENG }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_USA_2 scope = USA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_2 scope = CAN }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_2 scope = SAF }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_2 scope = BRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_fortifications_2 }
+}
+
+# State scope: level 3 of the western defence modifiers
+AFRICA_add_western_defences_3 = {
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_3 scope = FRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_3 scope = ENG }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_USA_3 scope = USA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_3 scope = CAN }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_3 scope = SAF }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_3 scope = BRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_fortifications_3 }
+}
+
+# State scope: level 4 of the western defence modifiers
+AFRICA_add_western_defences_4 = {
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_4 scope = FRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_4 scope = ENG }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_USA_4 scope = USA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_4 scope = CAN }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_4 scope = SAF }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_4 scope = BRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_fortifications_4 }
+}
+
+# State scope: level 5 of the western defence modifiers
+AFRICA_add_western_defences_5 = {
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_5 scope = FRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_5 scope = ENG }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_USA_5 scope = USA }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_5 scope = CAN }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_5 scope = SAF }
+	add_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_5 scope = BRA }
+	add_dynamic_modifier = { modifier = AFRICA_western_fortifications_5 }
+}
+
+# State scope: strips every level of the western defence modifiers.
+# Scoped copies must be checked and removed with the same scope they were added with.
+AFRICA_remove_western_defences = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_1 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_1 scope = FRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_2 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_2 scope = FRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_3 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_3 scope = FRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_4 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_4 scope = FRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_5 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_FRA_5 scope = FRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_1 scope = ENG } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_1 scope = ENG }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_2 scope = ENG } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_2 scope = ENG }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_3 scope = ENG } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_3 scope = ENG }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_4 scope = ENG } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_4 scope = ENG }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_5 scope = ENG } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_ENG_5 scope = ENG }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_USA_1 scope = USA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_USA_1 scope = USA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_USA_2 scope = USA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_USA_2 scope = USA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_USA_3 scope = USA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_USA_3 scope = USA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_USA_4 scope = USA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_USA_4 scope = USA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_USA_5 scope = USA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_USA_5 scope = USA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_1 scope = CAN } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_1 scope = CAN }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_2 scope = CAN } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_2 scope = CAN }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_3 scope = CAN } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_3 scope = CAN }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_4 scope = CAN } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_4 scope = CAN }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_5 scope = CAN } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_CAN_5 scope = CAN }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_1 scope = SAF } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_1 scope = SAF }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_2 scope = SAF } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_2 scope = SAF }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_3 scope = SAF } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_3 scope = SAF }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_4 scope = SAF } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_4 scope = SAF }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_5 scope = SAF } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_SAF_5 scope = SAF }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_1 scope = BRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_1 scope = BRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_2 scope = BRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_2 scope = BRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_3 scope = BRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_3 scope = BRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_4 scope = BRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_4 scope = BRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_5 scope = BRA } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_defences_BRA_5 scope = BRA }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_fortifications_1 } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_fortifications_1 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_fortifications_2 } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_fortifications_2 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_fortifications_3 } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_fortifications_3 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_fortifications_4 } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_fortifications_4 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AFRICA_western_fortifications_5 } }
+		remove_dynamic_modifier = { modifier = AFRICA_western_fortifications_5 }
+	}
+}
+
+AFRICA_apply_allied_level = {
+	remove_ideas = {
+		AFRICA_ALLIES_1
+		AFRICA_ALLIES_2
+		AFRICA_ALLIES_3
+		AFRICA_ALLIES_4
+		AFRICA_ALLIES_5
+		AFRICA_ALLIES_6
+		AFRICA_ALLIES_7
+		AFRICA_ALLIES_8
+		AFRICA_ALLIES_9
+		AFRICA_ALLIES_10
+		AFRICA_ALLIES_11
+	}
+	if = {
+		limit = { check_variable = { global.AFRICA_score > 9 } }
+		add_ideas = AFRICA_ALLIES_11
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 7 } }
+		add_ideas = AFRICA_ALLIES_10
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 5 } }
+		add_ideas = AFRICA_ALLIES_9
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 3 } }
+		add_ideas = AFRICA_ALLIES_8
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 1 } }
+		add_ideas = AFRICA_ALLIES_7
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -2 } }
+		add_ideas = AFRICA_ALLIES_6
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -4 } }
+		add_ideas = AFRICA_ALLIES_5
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -6 } }
+		add_ideas = AFRICA_ALLIES_4
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -8 } }
+		add_ideas = AFRICA_ALLIES_3
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -10 } }
+		add_ideas = AFRICA_ALLIES_2
+	}
+	else = {
+		add_ideas = AFRICA_ALLIES_1
+	}
+}
+
+# Mirror of the allied level: score +10 = AXIS_1, -10 = AXIS_11
+AFRICA_apply_axis_level = {
+	remove_ideas = {
+		AFRICA_AXIS_1
+		AFRICA_AXIS_2
+		AFRICA_AXIS_3
+		AFRICA_AXIS_4
+		AFRICA_AXIS_5
+		AFRICA_AXIS_6
+		AFRICA_AXIS_7
+		AFRICA_AXIS_8
+		AFRICA_AXIS_9
+		AFRICA_AXIS_10
+		AFRICA_AXIS_11
+	}
+	if = {
+		limit = { check_variable = { global.AFRICA_score > 9 } }
+		add_ideas = AFRICA_AXIS_1
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 7 } }
+		add_ideas = AFRICA_AXIS_2
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 5 } }
+		add_ideas = AFRICA_AXIS_3
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 3 } }
+		add_ideas = AFRICA_AXIS_4
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > 1 } }
+		add_ideas = AFRICA_AXIS_5
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -2 } }
+		add_ideas = AFRICA_AXIS_6
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -4 } }
+		add_ideas = AFRICA_AXIS_7
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -6 } }
+		add_ideas = AFRICA_AXIS_8
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -8 } }
+		add_ideas = AFRICA_AXIS_9
+	}
+	else_if = {
+		limit = { check_variable = { global.AFRICA_score > -10 } }
+		add_ideas = AFRICA_AXIS_10
+	}
+	else = {
+		add_ideas = AFRICA_AXIS_11
+	}
+}
