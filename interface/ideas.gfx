@@ -7015,5 +7015,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_NEP_advisor_3"
 		texturefile = "gfx/interface/ideas/NEP_advisor_3.dds"
-	}	
+	}
+	spriteType = {
+		name = "GFX_idea_GER_wirtschaftswunder"
+		texturefile = "gfx/interface/ideas/idea_GER_wirtschaftswunder.dds"
+	}
 }

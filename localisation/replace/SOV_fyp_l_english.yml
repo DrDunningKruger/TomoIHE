@@ -1,7 +1,15 @@
 ﻿l_english:
+ SOV_the_collectivization_process_ns_tt:1 "$SOV_modify_the_politburo_ns_intro$ \nConsumer Goods Factories: §Y-2.0%§! \nMax Factories in a State: §G+10%§! \n\n"
+ SOV_restore_cossack_units_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDivision Speed: §G+5.0%§! \nBreakthrough: §G+5.0%§! \n\n"
+ SOV_cohesion_first_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDivision Organization: §G+5.0%§! \nTraining time: §R+10.00%§! \nDivision Defense: §R-5.0%§! \n\n"
+ SOV_optimize_production_lines_ns_tt:0 "$SOV_modify_fyp_ns_intro$ \nFactory Output: §G+5.00%§! \n£prod_eff Production Efficiency growth: §G+5.00%§! \nProduction Efficiency Base: §G+5.00%§! \n\n"
+ SOV_found_the_pcdi:0 "Early War Economy"
+ SOV_found_the_pcdi_name_default:0 "Early War Economy"
+ SOV_found_the_pcdi_name_alt:0 "Early War Economy"
  # Overrides of vanilla nsb_focus_l_english.yml: five year plan now uses consumer_goods_expected_value
  SOV_third_five_year_plan_ns_alt_tt:0 "Replace §Y$SOV_third_five_year_plan_dynamic_modifier$§! by §Y$SOV_third_five_year_plan_dynamic_modifier_alt$§!\n Effective change: \n£prod_eff Production Efficiency growth: §G+5.00%§! \nIndustrial Concern Cost: §G-15%§! \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+5.0%§!\n\n"
  SOV_third_five_year_plan_ns_tt:0 "$SOV_modify_fyp_ns_intro$ \n£prod_eff Production Efficiency growth: §G+5.00%§! \nIndustrial Concern Cost: §G-15%§! \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+5.0%§!\n\n"
  SOV_reorganize_the_pc_of_heavy_industry_ns_tt:0 "$SOV_modify_fyp_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y-5.0%§! \n\n"
  SOV_upgrade_industrial_designer_tt:0 "Modify the following Industrial Designers by: \n\n§Y$stalingrad_tractor_factory$§!: Industrial Research Speed: §G+10%§!, $MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y-5.0%§! \n\n§Y$leningrad_polytechnical_institute$§!: Electronics Research Speed: §G+10%§!, Supply Consumption: §G-2.0%§! \n\n§Y$SOV_soviet_railways$§!: Trains and Railways Research Speed: §G+10%§!, Mobilization Speed: §G+2.0%§!"
  SOV_finish_the_five_year_plan:0 "Finish the Second Five Year Plan"
+ SOV_propaganda_anti_fascism_tt:0 "Gains '§Y$SOV_anti_fascist_campaign_generic$§!' against the §Ymost industrialized fascist country in the world§!, which grants (Attack bonus against country: §G+5.0%§!, Defense bonus against country: §G+5.0%§!) for §Y[?SOV_default_propaganda_campaign_duration]§! days."

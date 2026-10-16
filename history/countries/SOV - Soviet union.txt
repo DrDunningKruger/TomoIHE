@@ -204,7 +204,7 @@ set_variable = { SOV_poster_right_icon_frame = SOV_propaganda_locked_slot_index 
 set_variable = { SOV_default_propaganda_campaign_duration = 180 } #Duration days for propaganda campaigns
 set_variable = { SOV_default_propaganda_campaign_cooldown = 90 } #Days of cooldown after a Propaganda Campaign has been finished.
 set_variable = { SOV_default_propaganda_campaign_old_days = 150 } #A propaganda poster will age (change GFX) after this amount of days have passed since the campaign was activated
-set_variable = { SOV_propaganda_cost = 15 } #Used not only to set the rest of propaganda campaign costs here, but also used to increase each campaign cost after being activated
+set_variable = { SOV_propaganda_cost = 30 } #Used not only to set the rest of propaganda campaign costs here, but also used to increase each campaign cost after being activated
 set_variable = { SOV_propaganda_cost_increase = 2 } #This will multiply the regular propaganda_cost each time a propaganda campaign is activated, so that it's cost is increased
 set_variable = { SOV_propaganda_motherland_calls_cost = SOV_propaganda_cost } # ID = 2
 set_variable = { SOV_propaganda_victory_at_hand_cost = SOV_propaganda_cost } # ID = 3
@@ -213,18 +213,13 @@ set_variable = { SOV_propaganda_fight_to_the_last_cost = SOV_propaganda_cost } #
 set_variable = { SOV_propaganda_hit_of_hammer_cost = SOV_propaganda_cost } # ID = 6
 set_variable = { SOV_propaganda_transport_cost = SOV_propaganda_cost } # ID = 7
 set_variable = { SOV_propaganda_oil_for_the_motherland_cost = SOV_propaganda_cost } # ID = 8
-set_variable = { SOV_propaganda_more_metal_cost = SOV_propaganda_cost } # ID = 9
 set_variable = { SOV_propaganda_high_yield_cost = SOV_propaganda_cost } # ID = 10
 set_variable = { SOV_propaganda_for_the_motherland_cost = SOV_propaganda_cost } # ID = 11
 set_variable = { SOV_propaganda_heroes_forward_cost = SOV_propaganda_cost } # ID = 12
-set_variable = { SOV_propaganda_anti_capitalism_cost = SOV_propaganda_cost } # ID = 13
 set_variable = { SOV_propaganda_anti_fascism_cost = SOV_propaganda_cost } # ID = 14
-set_variable = { SOV_propaganda_treacherous_enemy_cost = SOV_propaganda_cost } # ID = 15
-set_variable = { SOV_propaganda_do_not_blab_cost = SOV_propaganda_cost } # ID = 16
 set_variable = { SOV_propaganda_sweep_scum_out_cost = SOV_propaganda_cost } # ID = 17
 set_variable = { SOV_propaganda_knowledge_cost = SOV_propaganda_cost } # ID = 18
 set_variable = { SOV_propaganda_builders_of_communism_cost = SOV_propaganda_cost } # ID = 19
-set_variable = { SOV_propaganda_glory_to_partisans_cost = SOV_propaganda_cost } # ID = 20
 set_variable = { SOV_propaganda_death_to_invaders_cost = SOV_propaganda_cost } # ID = 21
 set_variable = { SOV_propaganda_stalin_cost = SOV_propaganda_cost } # ID = 22
 set_variable = { SOV_propaganda_rebuild_to_glory_cost = SOV_propaganda_cost } # ID = 23
@@ -319,14 +314,14 @@ set_variable = { SOV_fyp_factory_requirement_tier_4 = 180 }
 set_variable = { SOV_fyp_factory_requirement_tier_5 = 240 }
 
 #THIRD FIVE YEAR PLAN NATIONAL SPIRIT VARS
-set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.15 }
-set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
+set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.1 }
+set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0 }
 set_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
 set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
 set_variable = { SOV_fyp_industrial_concern_cost_factor = -0.15 } #-> Third Five Year Plan
 set_variable = { SOV_fyp_local_resources_factor = 0 } #-> Increase State Reserves
 set_variable = { SOV_fyp_line_change_production_efficiency_factor = 0 } #-> Industrial Modernization
-set_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.1 } #-> Shift to Armaments Production
+set_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.05 } #Base for every Five Year Plan, +0.1 -> Shift to Armaments Production
 set_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0 } #-> Optimize Production Lines
 set_variable = { SOV_fyp_industrial_capacity_factory = 0 } #-> Steel Casting Industry
 set_variable = { SOV_fyp_industrial_capacity_dockyard = 0 } #-> Steel Casting Industry
@@ -365,7 +360,7 @@ set_variable = { SOV_red_fleet_special_forces_cap = 0 } #-> Marines
 
 #DEFENSE INDUSTRY NATIONAL SPIRIT VARS
 set_variable = { SOV_defense_industry_conversion_cost_civ_to_mil_factor = -0.2 }
-set_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
+set_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0 }
 set_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor = -0.05 }
 set_variable = { SOV_defense_industry_line_change_production_efficiency_factor = -0.1 }
 set_variable = { SOV_defense_industry_tank_manufacturer_cost_factor = 0 } #-> Tank Designer focus
@@ -382,10 +377,11 @@ set_variable = { SOV_the_red_army_mobilization_laws_cost_factor = -0.1 }
 set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
 set_variable = { SOV_the_red_army_experience_gain_army_factor = -0.1 }
 set_variable = { SOV_the_red_army_experience_loss_factor = 0.25 }
+set_variable = { SOV_the_red_army_land_reinforce_rate = -0.03 }
 set_variable = { SOV_the_red_army_mobilization_speed = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_conscription_factor = 0 } #-> Strengthen the Mobilization Plan
-set_variable = { SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor = 0 } #-> Restore Cossack Units
-set_variable = { SOV_the_red_army_cavalry_attack_factor = 0 } #-> Restore Cossack Units
+set_variable = { SOV_the_red_army_army_speed_factor = 0 } #-> Restore Cossack Units
+set_variable = { SOV_the_red_army_breakthrough_factor = 0 } #-> Restore Cossack Units
 set_variable = { SOV_the_red_army_training_time_factor = 0 } # -> Cohsesion First
 set_variable = { SOV_the_red_army_heat_attrition_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_winter_attrition_factor = 0 } # -> An Adaptable Army

@@ -1,6 +1,70 @@
 ideas = {
 	country = {
 		# Red Army recovery chain, driven by SOV_red_army_recovery_category missions
+		SOV_soviet_military_ideology_idea = { # From SOV_soviet_military_ideology
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_army_war_college
+			modifier = {
+				custom_modifier_tooltip = SOV_soviet_military_ideology_idea_tt # Custom tooltip so the efficiency cap is listed last
+				hidden_modifier = {
+					army_attack_factor = 0.05
+					army_speed_factor = 0.05
+					production_factory_max_efficiency_factor = -0.05
+				}
+			}
+		}
+		SOV_soviet_efficient_supply_chains_idea = { # From SOV_soviet_efficient_supply_chains
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_supply_lines
+			modifier = {
+				supply_consumption_factor = -0.1
+				production_speed_supply_node_factor = 0.5
+				production_speed_rail_way_factor = 0.5
+			}
+		}
+		SOV_prioritise_new_armor_innovations_idea = { # From SOV_prioritise_new_armor_innovations
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_armor
+			modifier = {
+				breakthrough_factor = 0.075
+				army_armor_attack_factor = 0.025
+				army_armor_defence_factor = 0.025
+			}
+		}
+		SOV_economic_willpower_and_might_idea = { # From SOV_economic_willpower_and_might
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_improved_industries
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
 		SOV_red_army_unprepared_1 = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
@@ -315,8 +379,8 @@ ideas = {
 
 			equipment_bonus = {
 				armor = {
-					soft_attack = 0.05
-					hard_attack = 0.05
+					soft_attack = 0.04
+					hard_attack = 0.04
 				}
 			}
 		}
@@ -750,6 +814,9 @@ ideas = {
 
 		officers_purged = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 			
 			allowed = {
 				always = no # Added via focus
@@ -766,6 +833,9 @@ ideas = {
 
 		officers_purged_2 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -783,6 +853,9 @@ ideas = {
 		}
 		officers_purged_3 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -800,6 +873,9 @@ ideas = {
 		}
 		officers_purged_4 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -817,6 +893,9 @@ ideas = {
 		}
 		officers_purged_5 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -834,6 +913,9 @@ ideas = {
 		}
 		officers_purged_6 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -851,6 +933,9 @@ ideas = {
 		}
 		officers_purged_7 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -868,6 +953,9 @@ ideas = {
 		}
 		officers_purged_8 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -885,6 +973,9 @@ ideas = {
 		}
 		officers_purged_9 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -902,6 +993,9 @@ ideas = {
 		}
 		officers_purged_10 = {
 			removal_cost = -1
+			cancel = {
+				has_war = yes # Purge penalty ends once the Soviets are at war
+			}
 
 			picture = officers_purged
 			
@@ -915,100 +1009,6 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.05
-			}
-		}
-
-		SOV_great_patriotic_war = {
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				army_org_factor = 0.45
-				war_support_factor = 0.2
-			}
-		}
-
-		SOV_great_patriotic_war_2 = {
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				army_org_factor = 0.35
-				war_support_factor = 0.15
-			}
-		}
-
-		SOV_great_patriotic_war_3 = {
-			removal_cost = -1
-			
-			picture = generic_intel_bonus
-			
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				army_org_factor = 0.25
-				war_support_factor = 0.1
-			}
-		}
-
-		SOV_great_patriotic_war_4 = {
-			removal_cost = -1
-			
-			picture = generic_intel_bonus
-
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				army_org_factor = 0.15
-				war_support_factor = 0.05
-			}
-		}
-
-		SOV_great_patriotic_war_5 = {
-			removal_cost = -1
-			
-			picture = generic_intel_bonus
-
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			modifier = {
-				army_org_factor = 0.05
 			}
 		}
 
@@ -1072,10 +1072,10 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
 				consumer_goods_factor = 0.05
 				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 
@@ -1095,6 +1095,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05 #0.05
 				consumer_goods_factor = 0.1 #0.1
 				production_speed_industrial_complex_factor = 0.05 #0.05
+				production_speed_arms_factory_factor = 0.05 #0.05
 				industrial_concern_cost_factor = -0.15 #-0.15
 			}
 		}
@@ -1588,8 +1589,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ENG
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1610,8 +1611,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = FRA
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1632,8 +1633,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1654,8 +1655,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1676,8 +1677,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = USA
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -1698,8 +1699,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
@@ -2833,7 +2834,6 @@ ideas = {
 			picture = SOV_rehabilitated_military_ns_nsb_ccp_sov_compatibility
 
 			modifier = {
-				land_reinforce_rate = 0.02
 				army_morale_factor = 0.10
 			}
 		}

@@ -2,6 +2,25 @@ ideas = {
 
 	country = {
 
+		FRA_war_economy_time_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
 		FRA_logistical_troubles_1 = {
 			
 			allowed = {
@@ -586,7 +605,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.1
 			}
 			research_bonus = { industry = 0.05}

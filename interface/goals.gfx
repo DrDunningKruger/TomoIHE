@@ -9496,4 +9496,28 @@ spriteTypes = {
 		name = "GFX_focus_GRE_an_orthodox_state"
 		texturefile = "gfx/interface/goals/focus_GRE_an_orthodox_state.dds"
 	}
+	SpriteType = {
+		name = "GFX_SOV_early_war_economy"
+		texturefile = "gfx/interface/goals/industrystuff.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_soviet_military_ideology"
+		texturefile = "gfx/interface/goals/focus_SOV_panslavic_nationalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_economic_willpower_and_might"
+		texturefile = "gfx/interface/goals/focus_SOV_support_spanish_poum.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_soviet_efficient_supply_chains"
+		texturefile = "gfx/interface/goals/focus_SOV_socialism_in_one_country.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_prioritise_new_armor_innovations"
+		texturefile = "gfx/interface/goals/focus_SOV_the_supreme_soviet.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_prussian_legacy"
+		texturefile = "gfx/interface/goals/focus_GER_prussian_legacy.dds"
+	}
 }

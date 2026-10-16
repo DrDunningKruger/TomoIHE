@@ -796,8 +796,6 @@ GRE_national_focus = {
 		GRE_public_works_projects
 		GRE_athens_salonica_railway
 		GRE_pyrkal_deal
-		GRE_create_elbo
-		GRE_firearm_factories			
 
 		GRE_asfalia
 		GRE_public_reeducation

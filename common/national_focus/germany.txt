@@ -3320,37 +3320,37 @@ focus_tree = {
 			#ROM	
 			if = { limit = { ROM = { exists = yes }}  ROM = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { ROM = { exists = yes }}  ROM = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { ROM = { exists = yes }}  ROM = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { ROM = { exists = yes } CPL = { exists = yes } }  ROM = { declare_war_on = { target = CPL  type = annex_everything } } }
 
 			#HUN	
 			if = { limit = { HUN = { exists = yes }}  HUN = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { HUN = { exists = yes }}  HUN = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { HUN = { exists = yes }}  HUN = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { HUN = { exists = yes } CPL = { exists = yes } }  HUN = { declare_war_on = { target = CPL  type = annex_everything } } }
 
 			#ITA	
 			if = { limit = { ITA = { exists = yes }}  ITA = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { ITA = { exists = yes }}  ITA = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { ITA = { exists = yes }}  ITA = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { ITA = { exists = yes } CPL = { exists = yes } }  ITA = { declare_war_on = { target = CPL  type = annex_everything } } }
 
 			#SPR	
 			if = { limit = { SPR = { exists = yes }}  SPR = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { SPR = { exists = yes }}  SPR = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { SPR = { exists = yes }}  SPR = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { SPR = { exists = yes } CPL = { exists = yes } }  SPR = { declare_war_on = { target = CPL  type = annex_everything } } }
 
 			#YUG	
 			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { YUG = { exists = yes } CPL = { exists = yes } }  YUG = { declare_war_on = { target = CPL  type = annex_everything } } }
 
 			#BUL	
 			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = CPL  type = annex_everything } } }			
+			if = { limit = { BUL = { exists = yes } CPL = { exists = yes } }  BUL = { declare_war_on = { target = CPL  type = annex_everything } } }			
 			
 			#IEA	
 			if = { limit = { IEA = { exists = yes }}  IEA = { declare_war_on = { target = SOV  type = annex_everything } } }
 			if = { limit = { IEA = { exists = yes }}  IEA = { declare_war_on = { target = MON  type = annex_everything } } }
-			if = { limit = { IEA = { exists = yes }}  IEA = { declare_war_on = { target = CPL  type = annex_everything } } }
+			if = { limit = { IEA = { exists = yes } CPL = { exists = yes } }  IEA = { declare_war_on = { target = CPL  type = annex_everything } } }
 			
 			hidden_effect = { 
 			if = { limit = { FRA = { is_ai = yes } }} 
@@ -3416,10 +3416,29 @@ focus_tree = {
 	}	
 	
 	focus = {
+		id = GER_wartime_economic_reorganisation
+		icon = GFX_focus_GER_prussian_legacy
+		prerequisite = { focus = GER_continuetheoffence focus = GER_halttheoffence }
+		x = -1
+		y = 1
+		relative_position_id = GER_continuetheoffence
+		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_ideas = GER_wartime_economic_reorganisation
+		}
+	}
+
+	focus = {
 		id = GER_fallblau
 		icon = GFX_GER_barb
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		cost = 1
 		ai_will_do = {
 			factor = 500
@@ -3428,8 +3447,8 @@ focus_tree = {
 		always = no
 		}
 		available_if_capitulated = yes
-		prerequisite = { focus = GER_continuetheoffence focus = GER_halttheoffence }
-		relative_position_id = GER_continuetheoffence
+		prerequisite = { focus = GER_wartime_economic_reorganisation }
+		relative_position_id = GER_wartime_economic_reorganisation
 
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
         completion_reward = {

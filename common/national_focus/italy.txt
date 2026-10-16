@@ -1526,7 +1526,7 @@ focus_tree = {
 	focus = {
 		id = ITA_redirect_alfa_romeo_production
 		icon = GFX_focus_ITA_redirect_alfa_romeo_production
-		prerequisite = { focus = ITA_brescia_small_arms_industry focus = ITA_milan_comms_industry }
+		prerequisite = { focus = ITA_brescia_small_arms_industry }
 
 		x = 0
 		y = 1

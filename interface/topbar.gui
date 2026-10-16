@@ -824,12 +824,11 @@ guiTypes = {
 				
 				iconType = {
 					name = "prototype_rewards_aquired_bg"
-					 size = { width = 0 height = 0 }
 				}
 
 				instantTextBoxType = {
 					name ="prototype_rewards_aquired"
-					 size = { width = 0 height = 0 }
+					 maxWidth = 0 maxHeight = 0
 				}				
 				
 				buttonType = {

@@ -132,4 +132,12 @@ spriteTypes = {
 		name = "GFX_idea_tur_etatism"
 		texturefile = "gfx/interface/ideas/idea_tur_etatism.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_supply_lines"
+		texturefile = "gfx/interface/ideas/idea_generic_supply_lines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_improved_industries"
+		texturefile = "gfx/interface/ideas/idea_generic_improved_industries.dds"
+	}
 }
