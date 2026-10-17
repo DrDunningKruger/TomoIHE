@@ -163,9 +163,29 @@ ideas = {
  
             targeted_modifier = {
                 tag = ENG
-                trade_cost_for_target_factor = -0.2
-            }				
-        }		
+                trade_cost_for_target_factor = -0.8
+            }
+        }
+
+        extra_trade_england_dominion = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+			picture = alliedtrade
+
+            targeted_modifier = {
+                tag = ENG
+                trade_cost_for_target_factor = -0.55
+            }
+        }
 
 # ideas to boost FRA as reward for holding Germany
 

@@ -320,7 +320,7 @@ equipment_modules = {
 		}
 		dismantle_cost_ic  = 2		
 		multiply_stats =  {
-			maximum_speed = 0.7
+			maximum_speed = 0.55
 			reliability = -0.07
 		}
 	}

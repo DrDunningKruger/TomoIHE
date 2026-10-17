@@ -167,6 +167,8 @@
  HUN_develop_tanks_desc:0 "The nations surrounding us have identified the importance of the tank, and are producing them in great numbers. We must develop our own tank designs and attempt to keep up with our allies and adversaries."
  HUN_assault_gun_focus:0 "Assault Gun Focus"
  HUN_assault_gun_focus_desc:0 "Rather than focus on full-fledged tanks, we will instead rely on assault guns to air our infantry in affecting break-throughs, as a more cost-effective alternative."
+ HUN_integrate_german_armor_manufacturing:0 "Integrate German Armor Manufacturing"
+ HUN_integrate_german_armor_manufacturing_desc:0 "By adopting German production methods and licensed designs, our factories can turn out tanks far more efficiently."
  HUN_joint_tank_procurement:0 "Joint Tank Procurement"
  HUN_joint_tank_procurement_desc:0 "Together with our allies we can develop new tank models much more effectively. We will set up a joint procurement bureau where our engineers can work together to identify the best designs to move forward with."
  HUN_armored_warfare:0 "Armored Warfare"

@@ -978,9 +978,9 @@ SOV_propaganda_campaigns = {
 		visible = {
 		}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 90
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 180
 
 		cost = SOV_propaganda_anti_fascism_cost
 
@@ -1110,7 +1110,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_eng
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 			else_if = {
@@ -1119,7 +1119,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_fra
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 			else_if = {
@@ -1128,7 +1128,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_ger
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 			else_if = {
@@ -1137,7 +1137,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_ita
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 			else_if = {
@@ -1146,7 +1146,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_usa
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 			else_if = {
@@ -1155,7 +1155,7 @@ SOV_propaganda_campaigns = {
 				}
 				add_timed_idea = {
 					idea = SOV_anti_fascist_campaign_jap
-					days = SOV_default_propaganda_campaign_duration
+					days = 90
 				}
 			}
 		}
@@ -1169,7 +1169,7 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_propaganda_anti_fascism_cost = SOV_propaganda_cost }
 			clear_variable = SOV_propaganda_cost
 
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
+			custom_effect_tooltip = SOV_propaganda_anti_fascism_cooldown_tt
 		}
 	}
 
@@ -1224,15 +1224,15 @@ SOV_propaganda_campaigns = {
 			}
 		}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 90
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 180
 
 		cost = SOV_propaganda_sweep_scum_out_cost
 
 		modifier = {
-			army_core_attack_factor = 0.05
-			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.025
+			army_core_defence_factor = 0.025
 		}
 
 		complete_effect = {
@@ -1250,7 +1250,7 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_propaganda_sweep_scum_out_cost = SOV_propaganda_cost }
 			clear_variable = SOV_propaganda_cost
 
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
+			custom_effect_tooltip = SOV_propaganda_sweep_scum_out_cooldown_tt
 		}
 	}
 

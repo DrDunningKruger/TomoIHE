@@ -86,6 +86,7 @@ add_ideas = SAF_ossewabrandwag
 add_ideas = SAF_history_of_segregation
 add_ideas = training_spirit	
 add_ideas = AFRICA_ALLIES_6
+add_ideas = extra_trade_england_dominion
 
 add_to_tech_sharing_group = commonwealth_research
 add_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }

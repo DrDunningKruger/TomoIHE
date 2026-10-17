@@ -805,8 +805,6 @@ on_actions = {
 						transfer_state = 47
 						transfer_state = 186
 						transfer_state = 187
-						transfer_state = 182
-						transfer_state = 840
 						transfer_state = 164
 					}
 				}
@@ -1141,8 +1139,6 @@ on_actions = {
 						transfer_state = 47
 						transfer_state = 186
 						transfer_state = 187
-						transfer_state = 182
-						transfer_state = 840
 						transfer_state = 164
 					}
 					ENG = {
@@ -1436,8 +1432,6 @@ on_actions = {
 						transfer_state = 47
 						transfer_state = 186
 						transfer_state = 187
-						transfer_state = 182
-						transfer_state = 840
 						transfer_state = 164
 					}
 					ENG = {

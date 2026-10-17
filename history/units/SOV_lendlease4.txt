@@ -2,105 +2,105 @@
 	653 = {
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
             start_experience_factor = 0.3				
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}
 			start_experience_factor = 0.3	
 		small_plane_airframe_1 =  {		
 				owner = "SOV" 
-				amount = 100
+				amount = 50
 				version_name = "Hurricane IIc"
 							
 			}

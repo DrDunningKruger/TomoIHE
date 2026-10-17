@@ -17,7 +17,6 @@ country_event = {
 		tag = GRE
 		has_war_with = ITA
 		NOT = { 
-		has_completed_focus = GRE_evacuate_government_to_crete
 		has_completed_focus = GRE_establish_the_cairo_government
 		has_completed_focus = GRE_british_arms_assistance
 		}
@@ -51,7 +50,6 @@ country_event = {
 		tag = GRE
 		has_war_with = ITA
 		NOT = { 
-		has_completed_focus = GRE_evacuate_government_to_crete
 		has_completed_focus = GRE_establish_the_cairo_government
 		has_completed_focus = GRE_british_arms_assistance
 		}
@@ -85,7 +83,6 @@ country_event = {
 		tag = GRE
 		has_war_with = ITA
 		NOT = { 
-		has_completed_focus = GRE_evacuate_government_to_crete
 		has_completed_focus = GRE_establish_the_cairo_government
 		has_completed_focus = GRE_british_arms_assistance
 		}

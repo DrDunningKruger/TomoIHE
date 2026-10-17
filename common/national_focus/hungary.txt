@@ -3659,12 +3659,12 @@ focus_tree = {
 		}	
 		
 		completion_reward = {
-			add_ideas = HUN_assault_gun_focus
+			add_ideas = HUN_integrate_german_armor_manufacturing
 		}
 	}
 
 	focus = {
-		id = HUN_pilis_order_of_battle 
+		id = HUN_pilis_order_of_battle
 		icon = GFX_NOR_oldguard
 		prerequisite = { focus = HUN_secret_rearmament_focus  }
 		mutually_exclusive = { focus = HUN_blitzkrieg_adoption }

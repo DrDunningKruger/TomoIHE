@@ -3723,6 +3723,8 @@ focus = {
 
 	completion_reward = {
 		add_ideas = SOV_soviet_military_ideology_idea
+		custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
+		SOV_unlock_propaganda_campaign_slot_effect = yes
 	}
 }
 
@@ -4397,19 +4399,15 @@ focus = {
 
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 
-		completion_reward = {        	
-		   custom_effect_tooltip="SOVIET_UNION_PLANE_TOOLTIP"	
-		   
+		completion_reward = {
+			air_experience = 200
+
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
 				category = air_doctrine
 				uses = 4
 				cost_reduction = 0.5
-			}	
-			
-		   hidden_effect = {
-		    load_oob = "SOV_BBA_airforce"
-		   }
+			}
 		}
 	}	
 
@@ -5382,10 +5380,6 @@ focus = {
 			swap_ideas = {
 				remove_idea = LL_support1
 				add_idea = LL_support2
-			}
-			swap_ideas = {
-				remove_idea = rehabilitated_military_focus
-				add_idea = rehabilitated_military_focus_ii
 			}
 		}
 	}

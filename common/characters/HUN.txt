@@ -308,7 +308,7 @@ characters={
 				original_tag = HUN
 			}
 			traits = {
-				army_armored_1
+				army_armored_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -381,7 +381,7 @@ characters={
 				original_tag = HUN
 			}
 			traits = {
-				army_commando_2
+				army_commando_1
 			}
 			cost = 100
 			ai_will_do = {

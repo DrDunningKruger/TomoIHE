@@ -8,21 +8,17 @@ state={
 	}
 	
 	history={
-		owner = SWI
+		owner = ENG
 		
 		victory_points = {
 			13329 10
 		}
 		buildings = {
-			industrial_complex = 2
 			infrastructure = 2
 			air_base = 10
-			13329 = {
-				naval_base = 3
-
-			}
 			13325 = {
 				naval_base = 1
+				coastal_bunker = 2
 
 			}
 

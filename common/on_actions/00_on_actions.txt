@@ -560,21 +560,20 @@ on_actions = {
 					original_tag = GRE
 					NOT = { has_global_flag = gre_caput }
 				}
-				GRE = { 
-					transfer_state = 182
-					transfer_state = 840
-					182 = {
-						set_state_flag = ENG_controls	
+				ENG = {
+					if = {
+						limit = {
+							has_full_control_of_state = 182
+							has_full_control_of_state = 840
+						}
+						load_oob = ENG_crete
 					}
-					#remove_ideas = GRE_ammunition_sortages
-					#remove_ideas = GRE_logistical_troubles
-					#remove_ideas = GRE_army_fatigue
-				}
-				#GRE = {
-				#	load_oob = GRE_crete 
-				#}
-				ENG = { 
-					load_oob = ENG_crete
+					else_if = {
+						limit = {
+							has_full_control_of_state = 183
+						}
+						load_oob = ENG_crete_cyprus
+					}
 				}
 				set_global_flag = gre_caput
 			}
