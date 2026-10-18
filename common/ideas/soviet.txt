@@ -2258,7 +2258,7 @@ ideas = {
 				research_speed_factor = 0.02
 				drift_defence_factor = 0.05
 				communism_drift = 0.05
-				consumer_goods_expected_value = -0.05
+				consumer_goods_expected_value = -0.03
 			}
 		}
 
@@ -4120,10 +4120,9 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.15
 				army_core_defence_factor = 0.03
-				army_core_attack_factor = 0.03
 				max_command_power = 50
 
-				army_org_factor = 0.05
+				army_org_factor = 0.03
 				army_morale_factor = -0.1
 			}
 		}

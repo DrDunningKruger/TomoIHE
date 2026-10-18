@@ -564,7 +564,7 @@ characters={
 				original_tag = SPR
 			}
 			traits = {
-			army_chief_offensive_1	
+			SPR_franco_army_chief_offensive
 			}
 			idea_token = spanisoffensive
 			cost = 100

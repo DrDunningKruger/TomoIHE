@@ -5306,6 +5306,16 @@ leader_traits = {
 		}
 	}
 	
+	SPR_franco_army_chief_offensive = { # Franco: +10% attack, +0.10 army xp
+		sprite = 7
+		army_attack_factor = 0.1
+		experience_gain_army = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	army_chief_offensive_2 = { # +10 Offensive efficiency
 		sprite = 7
 		army_attack_factor = 0.1		

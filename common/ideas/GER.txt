@@ -1065,7 +1065,28 @@ ideas = {
 				}
 			}
 		}
-		
+
+		GER_jaegernotprogramm_bob = {
+			name = GER_jaegernotprogramm
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = airproduction
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.075 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.075 instant = yes
+				}
+			}
+		}
+
 		GER_stayoutofafrica = {
 			allowed = {
             ITA = {

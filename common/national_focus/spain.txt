@@ -683,7 +683,7 @@
 		focus = {
 			id = SPA_national_recovery
 			available = {
-				date > 1938.4.1
+				date > 1938.8.1
 			}
 			bypass = {
 			}

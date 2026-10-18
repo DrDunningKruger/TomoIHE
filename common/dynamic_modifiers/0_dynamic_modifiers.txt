@@ -1156,9 +1156,8 @@ SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	#INITIAL
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0
-	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.05
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_factor #0.075
 	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
-	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.05
 }
 
 SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic

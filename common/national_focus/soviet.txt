@@ -424,19 +424,28 @@ focus_tree = {
 			}
 		}
 		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
 			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
 			add_to_variable = { SOV_fyp_line_change_production_efficiency_factor = 0.1 }
 			custom_effect_tooltip = SOV_industrial_modernization_ns_tt
 
-			add_tech_bonus = {
-				name = SOV_industrial_modernization
-				ahead_reduction = 0.5
-				bonus = 1.0
-				uses = 1
-				category = industry
+			random_controlled_state = {
+				limit = {
+					arms_factory > 1
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -624,8 +633,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_shift_to_armaments_production
 				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
+				uses = 1
+				technology = improved_infantry_weapons
 			}
 		}
 	}
@@ -1365,7 +1374,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -3008,7 +3017,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_politburo_good_consumer_goods_factor = -0.02 }
 			add_to_variable = { SOV_the_politburo_global_building_slots_factor = 0.1 } 
 			custom_effect_tooltip = SOV_the_collectivization_process_ns_tt
 
@@ -3772,6 +3780,7 @@ focus = {
 	id = SOV_economic_willpower_and_might
 	icon = GFX_SOV_economic_willpower_and_might
 	prerequisite = { focus = SOV_socialist_realism focus = SOV_prioritise_new_armor_innovations }
+	mutually_exclusive = { focus = SOV_patriarch_of_all_russia }
 	x = -1
 	y = 1
 	relative_position_id = SOV_prioritise_new_armor_innovations
@@ -4059,6 +4068,7 @@ focus = {
 	id = SOV_patriarch_of_all_russia
 	icon = GFX_SOV_patriarch_of_all_russia_ccp_2d_sov_compatibility
 	prerequisite = { focus = SOV_war_heroes focus = SOV_socialist_realism }
+	mutually_exclusive = { focus = SOV_economic_willpower_and_might }
 	x = 1
 	y = 1
 	relative_position_id = SOV_war_heroes
@@ -4073,8 +4083,22 @@ focus = {
 	completion_reward = {
 		add_stability = 0.1
 
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = SOV_patriarch_sergy
+		random_controlled_state = {
+			limit = {
+				industrial_complex > 1
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -4430,7 +4454,6 @@ focus = {
 
 		completion_reward = {
 			add_research_slot = 1
-			add_ideas = peoples_commissariat_focus
 		}
 	}
 
@@ -4956,7 +4979,7 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_industrial_modernization
-		cost = 4
+		cost = 2
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -4974,7 +4997,6 @@ focus = {
 		}
 
 		completion_reward = {
-   		  add_country_leader_trait = armaments_genius	
           add_ideas = tot_economic_mobilisation		
 
 		   swap_ideas = {
