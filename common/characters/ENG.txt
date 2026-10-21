@@ -928,8 +928,11 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
+			available = {
+				has_completed_focus = ENG_advanced_warfare_military_schools
+			}
 			traits = {
-				army_armored_2
+				army_armored_3
 			}
 			cost = 100
 			ai_will_do = {

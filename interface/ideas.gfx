@@ -7020,4 +7020,24 @@ spriteTypes = {
 		name = "GFX_idea_GER_wirtschaftswunder"
 		texturefile = "gfx/interface/ideas/idea_GER_wirtschaftswunder.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_RAJ_issue_bonds_on_the_stock_market"
+		texturefile = "gfx/interface/ideas/idea_RAJ_issue_bonds_on_the_stock_market.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWE_the_lion_of_the_north"
+		texturefile = "gfx/interface/ideas/idea_SWE_the_lion_of_the_north.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_naval_invade_britain"
+		texturefile = "gfx/interface/ideas/idea_generic_naval_invade_britain.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARG_invest_in_railways"
+		texturefile = "gfx/interface/ideas/idea_ARG_invest_in_railways.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARG_war_division"
+		texturefile = "gfx/interface/ideas/idea_ARG_war_division.dds"
+	}
 }

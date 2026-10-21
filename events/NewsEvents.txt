@@ -10006,7 +10006,7 @@ news_event = {
 	
 	option = {
 		name = news.6969.a
-		trigger = { TAG = GER TAG = ITA  }
+		trigger = { OR = { TAG = GER TAG = ITA } }
 	}
 	option = {
 		name = news.6969.b
@@ -10036,7 +10036,14 @@ news_event = {
 	
 	option = {
 		name = news.6970.a
-		trigger = { TAG = GER TAG = ITA  }
+		trigger = {
+			OR = {
+				TAG = GER
+				TAG = ITA
+				is_in_faction_with = GER
+				is_in_faction_with = ITA
+			}
+		}
 	}
 	option = {
 		name = news.6970.b
@@ -10049,6 +10056,53 @@ news_event = {
 				TAG = GER
 				TAG = ITA
 				TAG = ENG
+				is_in_faction_with = GER
+				is_in_faction_with = ITA
+			}
+		}
+	}
+}
+
+news_event = {
+	id = news.6971
+	title = news.6971.title
+	desc = news.6971.desc
+	picture = GFX_news_event_saf_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6971.a
+		trigger = {
+			OR = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = news.6971.b
+		trigger = {
+			OR = {
+				TAG = ITA
+				TAG = GER
+				is_in_faction_with = ITA
+				is_in_faction_with = GER
+			}
+		}
+	}
+	option = {
+		name = news.6971.d
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = ITA
+				TAG = GER
+				is_in_faction_with = ENG
+				is_in_faction_with = ITA
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -10066,7 +10120,7 @@ news_event = {
 	
 	option = {
 		name = news.6968.a
-		trigger = { TAG = GER TAG = ITA  }
+		trigger = { OR = { TAG = GER TAG = ITA } }
 	}
 	option = {
 		name = news.6968.b

@@ -128,6 +128,7 @@ set_variable = { var = eng_gateway_to_europe_influence value = 0 }
 add_ideas = {
     training_spirit
 	ENG_the_war_to_end_all_wars
+	ENG_british_army_tradition
 	george_v
     extra_trade_allied	
 	AFRICA_ALLIES_6

@@ -582,8 +582,32 @@ ideas = {
                 tag = GER
                 trade_cost_for_target_factor = -0.8
             }
-        }		
-		
+        }
+
+		IEA_extra_trade_minor = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+			picture = axistrade
+
+            targeted_modifier = {
+                tag = ITA
+                trade_cost_for_target_factor = -0.5
+            }
+            targeted_modifier = {
+                tag = GER
+                trade_cost_for_target_factor = -0.8
+            }
+        }
+
 		extra_trade_minor_2 = {
             
             allowed = {
@@ -2613,6 +2637,10 @@ ideas = {
 			}
 			
 			traits = { mechanized_equipment_manufacturer }
+
+			modifier = {
+			materiel_manufacturers_cost_factor = -1
+			}
 		}
 	}
 

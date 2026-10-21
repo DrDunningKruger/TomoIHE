@@ -18,6 +18,7 @@ state=
 			air_base = 10
 			10007 = {
 				naval_base = 4
+				coastal_bunker = 4
 			}
 			7003 = {
 				naval_base = 1

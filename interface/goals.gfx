@@ -9520,4 +9520,76 @@ spriteTypes = {
 		name = "GFX_focus_GER_prussian_legacy"
 		texturefile = "gfx/interface/goals/focus_GER_prussian_legacy.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_NORDIC_com_research"
+		texturefile = "gfx/interface/goals/focus_NORDIC_com_research.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_RAJ_military_into_the_workforce"
+		texturefile = "gfx/interface/goals/focus_RAJ_military_into_the_workforce.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_attempted_assasination_of_sidqi"
+		texturefile = "gfx/interface/goals/focus_IRQ_attempted_assasination_of_sidqi.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_tank_assault"
+		texturefile = "gfx/interface/goals/focus_generic_tank_assault.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_tank_assembly"
+		texturefile = "gfx/interface/goals/focus_generic_tank_assembly.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_CHL_ibanezs_coup"
+		texturefile = "gfx/interface/goals/focus_CHL_ibanezs_coup.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SWE_let_fly_all_guns"
+		texturefile = "gfx/interface/goals/focus_SWE_let_fly_all_guns.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_RAJ_trickle_down_economics"
+		texturefile = "gfx/interface/goals/focus_RAJ_trickle_down_economics.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_reinforcing_the_supply_network"
+		texturefile = "gfx/interface/goals/focus_generic_reinforcing_the_supply_network.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_BEL_engine_of_the_economy"
+		texturefile = "gfx/interface/goals/focus_BEL_engine_of_the_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_AFG_scavenging"
+		texturefile = "gfx/interface/goals/focus_AFG_scavenging .dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_BEL_v_for_victory"
+		texturefile = "gfx/interface/goals/focus_BEL_v_for_victory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SWE_the_lion_of_the_north"
+		texturefile = "gfx/interface/goals/focus_SWE_the_lion_of_the_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SWE_italian_destroyers"
+		texturefile = "gfx/interface/goals/focus_SWE_italian_destroyers.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SWE_defense_act"
+		texturefile = "gfx/interface/goals/focus_SWE_defense_act.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_DEN_no_regulations"
+		texturefile = "gfx/interface/goals/focus_DEN_no_regulations.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_road_investment"
+		texturefile = "gfx/interface/goals/focus_generic_road_investment.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ITA_liberation_or_death"
+		texturefile = "gfx/interface/goals/focus_ITA_liberation_or_death.dds"
+	}
 }

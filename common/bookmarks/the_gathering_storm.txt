@@ -69,7 +69,7 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				tizard_mission_focus
+				shadow_scheme_focus
 			}
 		}
 		"GER"={

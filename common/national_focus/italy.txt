@@ -1100,10 +1100,10 @@ focus_tree = {
 		relative_position_id = ITA_develop_the_military
 		cost = 5
 		available = {
-		  has_full_control_of_state = 448
-		  has_full_control_of_state = 450
-		  has_full_control_of_state = 449
-		  has_full_control_of_state = 451	
+		  controls_province = 12994 # Tripoli
+		  controls_province = 10907 # Benghasi
+		  controls_province = 2023 # El Agheila
+		  controls_province = 1140 # Derna
 		}
 
         search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -4532,7 +4532,7 @@ focus = {
 			factor = 1
 		}	
 		select_effect = {
-			news_event = { hours = 6 id = news.6970 }
+			news_event = { hours = 6 id = news.6971 }
 			set_global_flag = gabes_clicked
 		}
         search_filters = {FOCUS_FILTER_INDUSTRY}		

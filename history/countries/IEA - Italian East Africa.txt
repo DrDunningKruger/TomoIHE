@@ -15,7 +15,7 @@ add_ideas = {
 	IEA_Italian_funds
     IEA_ethiopiawar	
 	training_spirit
-	extra_trade_minor
+	IEA_extra_trade_minor
 }
 
 set_convoys = 50

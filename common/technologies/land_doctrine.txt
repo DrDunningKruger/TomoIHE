@@ -1919,7 +1919,7 @@ technologies = {
 			max_organisation = 5
 		}
 		category_all_armor = {
-			default_morale = 0.2
+			default_morale = 0.1
 		}
 
 		enable_tactic = tactic_overwhelming_fire
