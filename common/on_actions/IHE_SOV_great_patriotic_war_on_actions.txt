@@ -1,0 +1,40 @@
+on_actions = {
+	# ROOT = country declaring war, FROM = country being declared on
+	on_declare_war = {
+		effect = {
+			# Great Patriotic War focus completes automatically when Germany and the Soviet Union go to war
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							ROOT = { original_tag = GER }
+							FROM = { original_tag = SOV }
+						}
+						AND = {
+							ROOT = { original_tag = SOV }
+							FROM = { original_tag = GER }
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						original_tag = SOV
+						exists = yes
+						NOT = { has_completed_focus = Great_patriotic_war }
+					}
+					complete_national_focus = Great_patriotic_war
+				}
+				# Factory Relocation Inefficiency: -30% production efficiency growth for 120 days, once per game
+				every_country = {
+					limit = {
+						original_tag = SOV
+						exists = yes
+						NOT = { has_country_flag = SOV_factory_relocation_inefficiency_given }
+					}
+					set_country_flag = SOV_factory_relocation_inefficiency_given
+					add_timed_idea = { idea = SOV_factory_relocation_inefficiency days = 120 }
+				}
+			}
+		}
+	}
+}

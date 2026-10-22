@@ -1,0 +1,21 @@
+
+# IHE: songs used by the IHE_music_focus continuous focus.
+# play_song only finds songs listed in a station, so they are added to base_music
+# with factor = 0 so they never come up in the normal rotation.
+music_station = "base_music"
+
+music = {
+	song = "IHE_focus_track"
+
+	chance = {
+		factor = 0
+	}
+}
+
+music = {
+	song = "IHE_silence"
+
+	chance = {
+		factor = 0
+	}
+}

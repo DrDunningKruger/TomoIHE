@@ -5349,115 +5349,23 @@ focus = {
 	}
 
 	focus = {
-		id = defensiveline
-		icon = GFX_RKKA
-		prerequisite = { focus = Great_patriotic_war }
+		id = sovguards1
+		icon = GFX_sovguards
+		prerequisite = { focus = SOV_battle_of_moscow }
 		x = -2
-		y = 1
+		y = 3
 		relative_position_id = Great_patriotic_war
 		cost = 5		
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-        SOV = { surrender_progress > 0.25 }
-		}
-		available_if_capitulated = yes
-		
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-		
-		completion_reward = {
-		hidden_effect = {
-	    load_oob = "SOV_defensiveline3"}
-		custom_effect_tooltip = "SOV_150_DIVS"
-		add_ideas = LL_support1
-		}
-	}
-
-	focus = {
-		id = defensiveline2
-		icon = GFX_RKKA
-		prerequisite = { focus = defensiveline }	
-		x = 0
-		y = 1
-		relative_position_id = defensiveline
-		cost = 5
-		available = {
-		OR  = {
-			if = { date > 1942.1.1 }
-            SOV = { surrender_progress > 0.35 }			
-			}}		
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-		
-		completion_reward = {
-		hidden_effect = {
-		load_oob = "SOV_defensiveline3"}
-		custom_effect_tooltip = "SOV_150_DIVS"
-			swap_ideas = {
-				remove_idea = LL_support1
-				add_idea = LL_support2
-			}
-		}
-	}
-
-	focus = {
-		id = defensiveline3
-		icon = GFX_RKKA
-		prerequisite = { focus = defensiveline2 }	
-		x = 0
-		y = 1
-		relative_position_id = defensiveline2
-		cost = 5
-		available = {
-		OR  = {
-			if = { date > 1942.6.1 }
-            SOV = { surrender_progress > 0.50 }			
-			}}	
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		
-		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-		
-		completion_reward = {
-			hidden_effect = {
-				load_oob = "SOV_defensiveline3"
-			}
-			custom_effect_tooltip = "SOV_150_DIVS"
-			swap_ideas = {
-				remove_idea = nkvd_2
-				add_idea = nkvd_3	
-			}
-		}
-	}
-	
-	focus = {
-		id = sovguards1
-		icon = GFX_sovguards
-		prerequisite = { focus = Great_patriotic_war }
-		x = 0
-		y = 1
-		relative_position_id = Great_patriotic_war
-		cost = 10		
-		ai_will_do = {
-			factor = 1
-		}
 		bypass = {
-		NOT = { has_full_control_of_state = 219
+		NOT = { has_full_control_of_state = 253
         } }
 		
 		cancel_if_invalid = yes
 		available = {
-			has_full_control_of_state = 219
-			if = { date > 1941.11.01 } 
+			has_full_control_of_state = 253
 			has_war_with = GER
 		}
 		
@@ -5473,21 +5381,19 @@ focus = {
 	focus = {
 		id = sovguards2
 		icon = GFX_sovguards
-		prerequisite = { focus = sovguards1 }
+		prerequisite = { focus = SOV_battle_of_kursk }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = Great_patriotic_war
-		cost = 10		
+		cost = 5		
 		ai_will_do = {
 			factor = 1
 		}
         cancel_if_invalid = yes
 
 		available = {
-			controls_province = 1278
-			controls_province = 11111	
+			controls_province = 9449 # Voronezh, where SOV_guards2 spawns
 		    has_tech = improved_medium_tank_chassis		
-			if = { date > 1942.05.01 } 
 		}		
 		cancel_if_invalid = yes
 		
@@ -5522,42 +5428,560 @@ focus = {
 	focus = {
 		id = sovguards3
 		icon = GFX_sovguards
-		prerequisite = { focus = sovguards2 }
-		x = 0
+		prerequisite = { focus = SOV_battle_of_rostov }
+		x = 2
 		y = 3
 		relative_position_id = Great_patriotic_war
-		cost = 10		
+		cost = 5		
 		ai_will_do = {
 			factor = 1
 		}
         cancel_if_invalid = yes
 
 			available = {
-			has_full_control_of_state = 398
-			has_full_control_of_state = 651		
-			if = { date > 1942.11.01 } 
-		}	
-		
+			has_full_control_of_state = 217 # Stalingrad, where SOV_guards3 spawns
+		    has_tech = improved_medium_tank_chassis
+		}
+
 		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
-		
+
 		completion_reward = {
+			if = {
+			limit = { NOT = { has_tech = tech_maintenance_company  }}
+			set_technology = {
+				tech_maintenance_company = 1
+			}}
+			if = {
+			limit = { NOT = { has_tech = tech_logistics_company  }}
+			set_technology = {
+				tech_logistics_company = 1
+			}}
+			if = {
+			limit = { NOT = { has_tech = tech_signal_company  }}
+			set_technology = {
+				tech_signal_company = 1
+			}}
 		hidden_effect = {
 		load_oob = "SOV_guards3"}
 		custom_effect_tooltip = "SOV_GUARDS_III"
 		}
-	}	
+	}
+
+	# Placeholder after Prepare for The Next Winter / Order 227: needs either one
+	focus = {
+		id = SOV_victory_requires_innovation
+		icon = GFX_SOV_Zhukov_research
+		prerequisite = { focus = SOV_prepare_for_the_next_winter focus = SOV_order_227_focus }
+		x = 0
+		y = 2
+		relative_position_id = sovguards2
+		cost = 1
+		available = {
+			date > 1943.1.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SOV_victory_requires_innovation_idea
+			add_tech_bonus = {
+				name = SOV_victory_requires_innovation
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	# Pick one of three counteroffensives after Victory Requires Innovation. Placeholders, rewards to be added.
+	focus = {
+		id = SOV_counter_army_group_north
+		icon = GFX_focus_GER_subdue_the_wehrmacht_historical
+		prerequisite = { focus = SOV_victory_requires_innovation }
+		mutually_exclusive = { focus = SOV_counter_army_group_centre }
+		mutually_exclusive = { focus = SOV_counter_army_group_south }
+		x = -2
+		y = 1
+		relative_position_id = SOV_victory_requires_innovation
+		cost = 1
+		available = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_counter_army_group_north_tt
+			hidden_effect = {
+				398 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				397 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				400 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				351 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				253 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				252 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				833 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				399 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				214 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_counter_army_group_centre
+		icon = GFX_focus_GER_subdue_the_wehrmacht_historical
+		prerequisite = { focus = SOV_victory_requires_innovation }
+		mutually_exclusive = { focus = SOV_counter_army_group_north }
+		mutually_exclusive = { focus = SOV_counter_army_group_south }
+		x = 0
+		y = 1
+		relative_position_id = SOV_victory_requires_innovation
+		cost = 1
+		available = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_counter_army_group_centre_tt
+			hidden_effect = {
+				249 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				651 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				256 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				250 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				255 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				254 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				257 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				251 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				652 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_counter_army_group_south
+		icon = GFX_focus_GER_subdue_the_wehrmacht_historical
+		prerequisite = { focus = SOV_victory_requires_innovation }
+		mutually_exclusive = { focus = SOV_counter_army_group_north }
+		mutually_exclusive = { focus = SOV_counter_army_group_centre }
+		x = 2
+		y = 1
+		relative_position_id = SOV_victory_requires_innovation
+		cost = 1
+		available = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_counter_army_group_south_tt
+			hidden_effect = {
+				239 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				260 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				265 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				245 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				238 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				234 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				235 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				237 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				217 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				829 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				401 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				407 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				236 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				406 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				279 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				228 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				232 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				231 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
+
+	# Placeholders after the Guards focuses: need any one of the three, mutually exclusive with each other
+	focus = {
+		id = SOV_prepare_for_the_next_winter
+		icon = GFX_SOV_worker_1
+		prerequisite = { focus = sovguards1 focus = sovguards2 focus = sovguards3 }
+		mutually_exclusive = { focus = SOV_order_227_focus }
+		x = -1
+		y = 1
+		relative_position_id = sovguards2
+		cost = 1
+		bypass = {
+			date > 1943.1.1 # not taken by 1 Jan 1943
+		}
+		available = {
+			date > 1942.3.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea = SOV_prepare_next_winter_idea days = 180 }
+			custom_effect_tooltip = SOV_prepare_for_the_next_winter_tt
+			# flag rather than has_completed_focus, because a bypassed focus also counts as completed
+			hidden_effect = { set_country_flag = SOV_improved_winter_offensive }
+		}
+	}
+
+	focus = {
+		id = SOV_order_227_focus
+		icon = GFX_SOV_Stalin_Note
+		prerequisite = { focus = sovguards1 focus = sovguards2 focus = sovguards3 }
+		mutually_exclusive = { focus = SOV_prepare_for_the_next_winter }
+		x = 1
+		y = 1
+		relative_position_id = sovguards2
+		cost = 1
+		bypass = {
+			date > 1943.1.1 # not taken by 1 Jan 1943
+		}
+		available = {
+			date > 1942.3.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea = SOV_order_227_idea days = 180 }
+		}
+	}
+
+	# Like GER_winter: can't be picked, completed by the SOV_Winter_offensive_1 mission when it gives the winter_offensive idea
+	focus = {
+		id = SOV_approaching_soviet_winter
+		icon = GFX_GER_winter
+		prerequisite = { focus = Great_patriotic_war }
+		x = 0
+		y = 1
+		relative_position_id = Great_patriotic_war
+		cost = 1
+		available = {
+			always = no
+		}
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 500
+		}
+		completion_reward = {
+		}
+	}
+
+	# Soviet counterpart to GER_riga / GER_vitebsk / GER_kiev: pick one of three battles
+	focus = {
+		id = SOV_battle_of_moscow
+		icon = GFX_SOV_Chuikov
+		prerequisite = { focus = SOV_approaching_soviet_winter }
+		mutually_exclusive = { focus = SOV_battle_of_kursk }
+		mutually_exclusive = { focus = SOV_battle_of_rostov }
+		x = -2
+		y = 1
+		relative_position_id = SOV_approaching_soviet_winter
+		cost = 1
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_battle_of_moscow_tt
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_soviet_winter_offensive_tomo
+				}
+				219 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				247 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				246 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				242 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				205 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				223 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				254 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				253 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				248 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				243 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_battle_of_kursk
+		icon = GFX_SOV_Zhukov_Heroism
+		prerequisite = { focus = SOV_approaching_soviet_winter }
+		mutually_exclusive = { focus = SOV_battle_of_moscow }
+		mutually_exclusive = { focus = SOV_battle_of_rostov }
+		x = 0
+		y = 1
+		relative_position_id = SOV_approaching_soviet_winter
+		cost = 1
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_battle_of_kursk_tt
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_soviet_winter_offensive_tomo
+				}
+				220 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				222 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				240 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				224 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				225 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				193 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				259 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				260 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				258 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_battle_of_rostov
+		icon = GFX_SOV_URAA
+		prerequisite = { focus = SOV_approaching_soviet_winter }
+		mutually_exclusive = { focus = SOV_battle_of_moscow }
+		mutually_exclusive = { focus = SOV_battle_of_kursk }
+		x = 2
+		y = 1
+		relative_position_id = SOV_approaching_soviet_winter
+		cost = 1
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_battle_of_rostov_tt
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_soviet_winter_offensive_tomo
+				}
+				218 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				227 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				200 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				234 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				228 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				226 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				196 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				245 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+				238 = {
+					add_dynamic_modifier = { modifier = SOV_focus_battle_offensive scope = ROOT days = 45 }
+					add_dynamic_modifier = { modifier = SOV_focus_battle_entrenchment days = 45 }
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = lendlease
 		icon = GFX_BritishLL1
-		prerequisite = { focus = Great_patriotic_war }
-		x = 2
+		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		x = 3
 		y = 1
 		available = {
 			if = { date > 1941.11.01 }
-            has_full_control_of_state = 416			
-			}	
-		relative_position_id = Great_patriotic_war
+            has_full_control_of_state = 416
+			}
+		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 		ai_will_do = {
 			factor = 1

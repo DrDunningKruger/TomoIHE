@@ -2931,6 +2931,12 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}	
 
 		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_anschluss_tomo
+				}
+			}
 			GER = {
 			country_event = { hours = 2 id = germany.4 }
 			}
@@ -3440,6 +3446,12 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_german_victory_east_tomo
+				}
+			}
 			add_named_threat = { threat = 100 name = GER_barb_wt }
 			
 			#GER
@@ -4127,7 +4139,13 @@ focus_tree = {
 		cost = 5
 	
 		completion_reward = {
-			add_timed_idea = { idea = GER_eastern_blitzkrieg days = 120 }		
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_gotterdammerung_tomo
+				}
+			}
+			add_timed_idea = { idea = GER_eastern_blitzkrieg days = 120 }
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			ENG = { add_to_faction = POL }
 				if = { limit = { POL = { exists = yes }}  declare_war_on = { target = POL type = annex_everything } }	
@@ -4496,6 +4514,12 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}			
 		
 		completion_reward = {
+				hidden_effect = {
+					every_country = {
+						limit = { is_ai = no }
+						scoped_sound_effect = IHE_munich_agreement_tomo
+					}
+				}
 		        add_political_power = 100
 				GER = {
 					country_event = germany.50
@@ -4622,6 +4646,12 @@ focus_tree = {
 		}
 
 		completion_reward = { 
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_on_the_beaches_tomo
+				}
+			}
 			add_named_threat = { threat = 100 name = GER_fall_of_france_wt }
 			add_equipment_to_stockpile = {
 							type = infantry_equipment_1
@@ -4646,6 +4676,12 @@ focus_tree = {
 		}
 
 		bypass_effect  = {
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_on_the_beaches_tomo
+				}
+			}
 			add_named_threat = { threat = 100 name = GER_fall_of_france_wt }
 			add_equipment_to_stockpile = {
 							type = infantry_equipment_1
@@ -6549,11 +6585,18 @@ focus_tree = {
 
 		available = {
 			has_war_with = SOV
+			date > 1942.1.1
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_total_war_tomo
+				}
+			}
 			if = {
 				limit = {
 					has_idea = tot_economic_mobilisation
@@ -7730,7 +7773,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-	
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_afrikakorps_tomo
+				}
+			}
+
 			custom_effect_tooltip = "GER_AF_TUNISIA"
 		
 		    hidden_effect = {
@@ -8019,10 +8068,18 @@ focus_tree = {
 		bypass = {
 		  date > 1941.5.1
 		}
-			
+
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_rommel_to_italy_tt
+			hidden_effect = {
+				# Rommel is created in on_startup (common/on_actions/GER_generals_on_actions.txt) with legacy id = 4
+				every_unit_leader = {
+					limit = { has_id = 4 }
+					set_nationality = ITA
+				}
+			}
 				add_timed_idea={ idea = GER_africacampaign days = 30}
              hidden_effect = {
                  ROM = {add_timed_idea={ idea = GER_africacampaign days = 30}}

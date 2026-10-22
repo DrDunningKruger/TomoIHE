@@ -1,0 +1,44 @@
+scripted_gui = {
+	SWOA_focus_background = {
+		# national_focus_context: scope is the owner of the focus tree being viewed, so foreign trees show their own background (GDU used player_context)
+		context_type = national_focus_context
+		parent_window_name = "a_focus_background"
+		window_name = "SWOA_focus_background_container"
+
+		visible = {
+			check_variable = { show_background > 0 }
+			# toggle is stored on the player (bg_tool_open sets it on ROOT), not on the viewed tree's owner
+			ROOT = { has_country_flag = FOCUS_BG_background }
+		}
+
+		properties = {
+			SWOA_focus_background_image = {
+				image = "[THIS.GetFocusBG]"
+			}
+		}
+	}
+	bg_tool_open= {
+		context_type = player_context
+		parent_window_name = "nationalfocusview"
+		window_name = "focus_bg_container"
+		visible = {
+			always = yes
+		}
+		effects = {
+			bg_tool_open_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = FOCUS_BG_background } } }
+					ROOT = { set_country_flag = FOCUS_BG_background }
+				}
+				else = {
+					ROOT = { clr_country_flag = FOCUS_BG_background }
+				}
+			}
+		}
+		triggers = {
+			bg_tool_open_click_enabled = {
+				always = yes
+			}
+		}
+	}
+}

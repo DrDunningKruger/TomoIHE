@@ -1,0 +1,133 @@
+category = {
+	name = "IHE_effects"
+	soundeffects = {
+		IHE_anschluss_tomo
+		IHE_munich_agreement_tomo
+		IHE_afrikakorps_tomo
+		IHE_gotterdammerung_tomo
+		IHE_german_victory_east_tomo
+		IHE_total_war_tomo
+		IHE_soviet_winter_offensive_tomo
+		IHE_on_the_beaches_tomo
+	}
+}
+
+sound = {
+	name = "IHE_anschluss_tomo"
+	file = "sound/IHE_anschluss_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_anschluss_tomo"
+	sounds = {
+		sound = IHE_anschluss_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_munich_agreement_tomo"
+	file = "sound/IHE_munich_agreement_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_munich_agreement_tomo"
+	sounds = {
+		sound = IHE_munich_agreement_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_afrikakorps_tomo"
+	file = "sound/IHE_afrikakorps_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_afrikakorps_tomo"
+	sounds = {
+		sound = IHE_afrikakorps_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_gotterdammerung_tomo"
+	file = "sound/IHE_gotterdammerung_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_gotterdammerung_tomo"
+	sounds = {
+		sound = IHE_gotterdammerung_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_german_victory_east_tomo"
+	file = "sound/IHE_german_victory_east_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_german_victory_east_tomo"
+	sounds = {
+		sound = IHE_german_victory_east_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_total_war_tomo"
+	file = "sound/IHE_total_war_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_total_war_tomo"
+	sounds = {
+		sound = IHE_total_war_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_soviet_winter_offensive_tomo"
+	file = "sound/IHE_soviet_winter_offensive_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_soviet_winter_offensive_tomo"
+	sounds = {
+		sound = IHE_soviet_winter_offensive_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_on_the_beaches_tomo"
+	file = "sound/IHE_on_the_beaches_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_on_the_beaches_tomo"
+	sounds = {
+		sound = IHE_on_the_beaches_tomo
+	}
+	max_audible = 1
+	volume = 1
+}

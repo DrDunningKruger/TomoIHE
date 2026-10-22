@@ -440,12 +440,198 @@ operations = {
 				}
 			}
 			MON = {
-				add_timed_idea = { 
+				add_timed_idea = {
 					idea = airforce_suppressed
 					days = 100
 				}
 			}
-		}	
+		}
+	}
+	GER_Summer_offensive_1944 = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			original_tag = GER
+			always = yes
+		}
+		fire_only_once = yes
+
+		is_good = no
+
+		available = {
+			NOT = {has_idea = summer_offensive}
+			AND = {date > 1944.6.22 date < 1944.9.30
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1944.5.22
+		}
+		complete_effect = {
+			GER = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ITA = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ROM = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			HUN = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			BUL = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			YUG = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			IEA = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = {
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+		}
+	}
+	GER_Summer_offensive_1945 = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			original_tag = GER
+			always = yes
+		}
+		fire_only_once = yes
+
+		is_good = no
+
+		available = {
+			NOT = {has_idea = summer_offensive}
+			AND = {date > 1945.6.22 date < 1945.9.30
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1945.5.22
+		}
+		complete_effect = {
+			GER = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ITA = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			ROM = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			HUN = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SPR = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			BUL = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			YUG = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			IEA = {
+				add_timed_idea = {
+					idea = summer_offensive
+					days = 100
+				}
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = {
+					idea = airforce_suppressed
+					days = 100
+				}
+			}
+		}
 	}
 }
 

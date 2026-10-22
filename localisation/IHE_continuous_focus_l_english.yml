@@ -1,0 +1,4 @@
+﻿l_english:
+ IHE_music_focus:0 "Play Music"
+ IHE_music_focus_desc:0 "Plays a music track while this focus is active. Cancel the focus to stop it. Has no other effect."
+ IHE_music_focus_tt:0 "Play Banger for §Y[ROOT.GetName]§!"

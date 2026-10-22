@@ -136,219 +136,111 @@ division_template = {
 units = {
 	division = {
 		name = "Guards Tanks"
-		location = 1278
+		location = 9449
 		division_template = "Guards Tanks Div"
 		start_experience_factor = 0.5
 	}
 	division = {
 		name = "Guards Tanks"
-		location = 1278
+		location = 9449
 		division_template = "Guards Tanks Div"
 		start_experience_factor = 0.5
 	}
 	division = {
-		name = "Guards Tanks"
-		location = 1278
-		division_template = "Guards Tanks Div"
-		start_experience_factor = 0.5
-	}
-	division = {
-		name = "Guards Tanks"
-		location = 1278
-		division_template = "Guards Tanks Div"
-		start_experience_factor = 0.5
-	}	
-	division = {
 		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
-		division_template = "Guards Rifle Division II"
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Guards Rifles"
-		location = 11111
+		location = 9449
 		division_template = "Guards Rifle Division II"
 		start_experience_factor = 0.8
 	}
 
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
 	division = {
 		name = "Kuban Cossacks"
-		location = 11111
+		location = 9449
 		division_template = "Cossacks Cavalry Division II"		
 		start_experience_factor = 0.8
 	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}	
-	division = {
-		name = "Kuban Cossacks"
-		location = 11111
-		division_template = "Cossacks Cavalry Division II"		
-		start_experience_factor = 0.8
-	}
 }

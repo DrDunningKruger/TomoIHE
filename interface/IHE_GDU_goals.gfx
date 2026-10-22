@@ -1,0 +1,27 @@
+# Focus icons copied from the GDU mod (workshop 2983471880, interface/gfx/GDU_goals.gfx)
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_SOV_Chuikov"
+		texturefile = "gfx/interface/goals/SOV_Chuikov.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Zhukov_Heroism"
+		texturefile = "gfx/interface/goals/SOV_Zhukov_Heroism.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_URAA"
+		texturefile = "gfx/interface/goals/SOV_URAA.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Stalin_Note"
+		texturefile = "gfx/interface/goals/SOV_Stalin_Note.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_worker_1"
+		texturefile = "gfx/interface/goals/SOV_worker_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Zhukov_research"
+		texturefile = "gfx/interface/goals/SOV_Zhukov_research.tga"
+	}
+}

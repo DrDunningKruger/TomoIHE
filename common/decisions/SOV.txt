@@ -339,7 +339,7 @@ SOV_industry_relocation = {
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 7
 
 		fire_only_once = yes
 		
@@ -355,439 +355,19 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						219 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					219 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						219 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					219 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				219 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						247 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					247 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						247 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					247 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				247 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						246 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					246 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						246 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					246 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				246 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						248 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					248 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						248 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					248 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}				
+				248 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						252 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					252 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						252 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					252 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				252 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						253 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					253 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						253 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					253 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				253 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						254 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					254 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						254 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					254 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}				
+				254 = { IHE_SOV_relocate_state_factories = yes }
 				
 				if = {
 					limit = {
@@ -861,7 +441,7 @@ SOV_industry_relocation = {
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 7
 
 		fire_only_once = yes
 		
@@ -877,439 +457,19 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						195 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					195 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						195 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					195 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				195 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						244 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					244 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						244 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					244 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				244 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						208 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					208 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						208 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					208 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				208 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						263 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					263 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						263 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					263 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				263 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						209 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					209 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						209 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					209 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				209 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						210 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					210 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						210 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					210 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				210 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						207 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					207 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						207 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					207 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}				
+				207 = { IHE_SOV_relocate_state_factories = yes }
 				
 				if = {
 					limit = {
@@ -1382,7 +542,7 @@ SOV_industry_relocation = {
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 4
 
 		fire_only_once = yes
 		
@@ -1398,439 +558,19 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						12 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					12 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						12 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					12 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				12 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						13 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					13 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						13 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					13 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				13 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						191 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					191 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						191 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					191 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				191 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						190 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					190 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						190 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					190 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				190 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						189 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					189 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						189 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					189 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				189 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						11 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					11 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						11 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					11 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				11 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						784 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					784 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						784 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					784 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}				
+				784 = { IHE_SOV_relocate_state_factories = yes }
 				
 				if = {
 					limit = {
@@ -1903,7 +643,7 @@ SOV_industry_relocation = {
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 4
 
 		fire_only_once = yes
 		
@@ -1919,935 +659,35 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						222 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					222 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						222 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					222 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				222 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						205 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					205 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						205 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					205 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				205 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						223 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					223 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						223 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					223 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				223 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						243 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					243 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						243 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					243 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				243 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						224 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					224 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						224 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					224 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				224 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						220 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					220 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						220 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					220 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				220 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						240 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					240 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						240 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					240 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				240 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						241 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					241= { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						241 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					241 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				241 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						242 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					242 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						242 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					242 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				242 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						258 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					258 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						258 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					258 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				258 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						260 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					260 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						260 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					260 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				260 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						257 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					257 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						257 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					257 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				257 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						206 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					206 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						206 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					206 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				206 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						204 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					204 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						204 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					204 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				204 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						194 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					194 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						194 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					194 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}				
+				194 = { IHE_SOV_relocate_state_factories = yes }
 				
 				if = {
 					limit = {
@@ -2984,7 +824,7 @@ SOV_industry_relocation = {
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 4
 
 		fire_only_once = yes
 		
@@ -3000,1121 +840,41 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						202 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					202 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						202 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					202 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				202 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						193 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					193 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						193 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					193 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				193 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						225 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					225 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						225 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					225 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				225 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						221 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					221 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						221 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					221 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				221 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						259 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					259 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						259 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					259 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				259 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						203 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					203 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						203 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					203 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				203 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						226 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					226 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						226 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					226 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				226 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						197 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					197 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						197 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					197 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				197 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						192	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					192	 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						192	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					192	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				192 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						198 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					198 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						198 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					198 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				198 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						199 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					199 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						199 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					199 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				199 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						201	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					201	 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						201	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					201	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				201 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						196 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					196 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						196 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					196 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				196 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						137 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					137 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						137 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					137 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				137 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						200	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					200	 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						200	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					200	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				200 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						227 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					227 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						227 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					227 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				227 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						228 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					228 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						228 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					228 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				228 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						218	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					218	 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						218	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					218	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				218 = { IHE_SOV_relocate_state_factories = yes }
 
 				
 				
@@ -4255,13 +1015,134 @@ SOV_industry_relocation = {
 		}
 	}
 	
+	# Rear areas: every Soviet state west of 586, plus 586 (Alma-Ata). Converts civs to mils in place, nothing moves to Siberia
+	SOV_industry_relocation_rear = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = SOV }
+
+		days_mission_timeout = 20
+
+		fire_only_once = yes
+		
+		available = {
+			NOT = { has_war_with = GER }
+		}
+		
+		activation = {
+			SOV = { has_war_with = GER }
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			hidden_effect = {
+				213 = { IHE_SOV_convert_state_civs = yes }
+				214 = { IHE_SOV_convert_state_civs = yes }
+				215 = { IHE_SOV_convert_state_civs = yes }
+				216 = { IHE_SOV_convert_state_civs = yes }
+				249 = { IHE_SOV_convert_state_civs = yes }
+				250 = { IHE_SOV_convert_state_civs = yes }
+				251 = { IHE_SOV_convert_state_civs = yes }
+				255 = { IHE_SOV_convert_state_civs = yes }
+				256 = { IHE_SOV_convert_state_civs = yes }
+				262 = { IHE_SOV_convert_state_civs = yes }
+				264 = { IHE_SOV_convert_state_civs = yes }
+				279 = { IHE_SOV_convert_state_civs = yes }
+				351 = { IHE_SOV_convert_state_civs = yes }
+				397 = { IHE_SOV_convert_state_civs = yes }
+				398 = { IHE_SOV_convert_state_civs = yes }
+				399 = { IHE_SOV_convert_state_civs = yes }
+				400 = { IHE_SOV_convert_state_civs = yes }
+				401 = { IHE_SOV_convert_state_civs = yes }
+				406 = { IHE_SOV_convert_state_civs = yes }
+				407 = { IHE_SOV_convert_state_civs = yes }
+				489 = { IHE_SOV_convert_state_civs = yes }
+				571 = { IHE_SOV_convert_state_civs = yes }
+				573 = { IHE_SOV_convert_state_civs = yes }
+				581 = { IHE_SOV_convert_state_civs = yes }
+				582 = { IHE_SOV_convert_state_civs = yes }
+				584 = { IHE_SOV_convert_state_civs = yes }
+				585 = { IHE_SOV_convert_state_civs = yes }
+				651 = { IHE_SOV_convert_state_civs = yes }
+				652 = { IHE_SOV_convert_state_civs = yes }
+				653 = { IHE_SOV_convert_state_civs = yes }
+				821 = { IHE_SOV_convert_state_civs = yes }
+				823 = { IHE_SOV_convert_state_civs = yes }
+				825 = { IHE_SOV_convert_state_civs = yes }
+				826 = { IHE_SOV_convert_state_civs = yes }
+				827 = { IHE_SOV_convert_state_civs = yes }
+				828 = { IHE_SOV_convert_state_civs = yes }
+				829 = { IHE_SOV_convert_state_civs = yes }
+				831 = { IHE_SOV_convert_state_civs = yes }
+				832 = { IHE_SOV_convert_state_civs = yes }
+				833 = { IHE_SOV_convert_state_civs = yes }
+				834 = { IHE_SOV_convert_state_civs = yes }
+				841 = { IHE_SOV_convert_state_civs = yes }
+				586 = { IHE_SOV_convert_state_civs = yes }
+
+				if = {
+					limit = {
+						OR = {
+							213 = { IHE_SOV_state_has_civs_to_convert = yes }
+							214 = { IHE_SOV_state_has_civs_to_convert = yes }
+							215 = { IHE_SOV_state_has_civs_to_convert = yes }
+							216 = { IHE_SOV_state_has_civs_to_convert = yes }
+							249 = { IHE_SOV_state_has_civs_to_convert = yes }
+							250 = { IHE_SOV_state_has_civs_to_convert = yes }
+							251 = { IHE_SOV_state_has_civs_to_convert = yes }
+							255 = { IHE_SOV_state_has_civs_to_convert = yes }
+							256 = { IHE_SOV_state_has_civs_to_convert = yes }
+							262 = { IHE_SOV_state_has_civs_to_convert = yes }
+							264 = { IHE_SOV_state_has_civs_to_convert = yes }
+							279 = { IHE_SOV_state_has_civs_to_convert = yes }
+							351 = { IHE_SOV_state_has_civs_to_convert = yes }
+							397 = { IHE_SOV_state_has_civs_to_convert = yes }
+							398 = { IHE_SOV_state_has_civs_to_convert = yes }
+							399 = { IHE_SOV_state_has_civs_to_convert = yes }
+							400 = { IHE_SOV_state_has_civs_to_convert = yes }
+							401 = { IHE_SOV_state_has_civs_to_convert = yes }
+							406 = { IHE_SOV_state_has_civs_to_convert = yes }
+							407 = { IHE_SOV_state_has_civs_to_convert = yes }
+							489 = { IHE_SOV_state_has_civs_to_convert = yes }
+							571 = { IHE_SOV_state_has_civs_to_convert = yes }
+							573 = { IHE_SOV_state_has_civs_to_convert = yes }
+							581 = { IHE_SOV_state_has_civs_to_convert = yes }
+							582 = { IHE_SOV_state_has_civs_to_convert = yes }
+							584 = { IHE_SOV_state_has_civs_to_convert = yes }
+							585 = { IHE_SOV_state_has_civs_to_convert = yes }
+							651 = { IHE_SOV_state_has_civs_to_convert = yes }
+							652 = { IHE_SOV_state_has_civs_to_convert = yes }
+							653 = { IHE_SOV_state_has_civs_to_convert = yes }
+							821 = { IHE_SOV_state_has_civs_to_convert = yes }
+							823 = { IHE_SOV_state_has_civs_to_convert = yes }
+							825 = { IHE_SOV_state_has_civs_to_convert = yes }
+							826 = { IHE_SOV_state_has_civs_to_convert = yes }
+							827 = { IHE_SOV_state_has_civs_to_convert = yes }
+							828 = { IHE_SOV_state_has_civs_to_convert = yes }
+							829 = { IHE_SOV_state_has_civs_to_convert = yes }
+							831 = { IHE_SOV_state_has_civs_to_convert = yes }
+							832 = { IHE_SOV_state_has_civs_to_convert = yes }
+							833 = { IHE_SOV_state_has_civs_to_convert = yes }
+							834 = { IHE_SOV_state_has_civs_to_convert = yes }
+							841 = { IHE_SOV_state_has_civs_to_convert = yes }
+							586 = { IHE_SOV_state_has_civs_to_convert = yes }
+						}
+					}
+					activate_mission = SOV_industry_relocation_rear
+				}
+			}
+		}
+	}
+
     SOV_industry_relocation_stalingrad = {
 
 		icon = generic_construction
 
 		allowed = { original_tag = SOV }
 
-		days_mission_timeout = 2
+		days_mission_timeout = 7
 
 		fire_only_once = yes
 		
@@ -4277,873 +1158,33 @@ SOV_industry_relocation = {
 
 		timeout_effect = {
 			hidden_effect = {
-				if = { 
-					limit = {
-						217 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					217 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						217 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					217 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				217 = { IHE_SOV_relocate_state_factories = yes }
 				
-				if = { 
-					limit = {
-						245 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					245 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						245 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					245 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				245 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						265 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					265 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						265 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					265 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				265 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						238 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					238 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						238 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					238 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				238 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						234 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					234 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						234 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					234 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				234 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						235 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					235 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						235 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					235 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				235 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						237 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					237 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						237 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					237 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				237 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						236 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					236 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						236 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					236 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				236 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						233 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					233 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						233 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					233 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				233 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						232 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					232 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						232 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					232 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				232 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						229 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					229 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						229 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					229 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				229 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						231 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					231 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						231 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					231 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				231 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						230	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					230	= { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						230	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					230	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				230 = { IHE_SOV_relocate_state_factories = yes }
 
-				if = { 
-					limit = {
-						239	 = {
-							is_owned_and_controlled_by = SOV
-							arms_factory > 2
-						}
-					}
-					239	 = { 
-						remove_building = {
-							type = arms_factory
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				if = { 
-					limit = {
-						239	 = {
-							is_owned_and_controlled_by = SOV
-							industrial_complex > 2
-						}
-					}
-					239	 = { 
-						remove_building = {
-							type = industrial_complex
-							level = 2
-						}
-					}
-					random_state  = { 
-						limit = {
-							has_state_flag = is_literally_siberia
-							free_building_slots = {
-								building = industrial_complex
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					
-					}
-				}
+				239 = { IHE_SOV_relocate_state_factories = yes }
 				
 				if = {
 				limit = {
@@ -5919,10 +1960,11 @@ operations = {
 		complete_effect = {
 		GER = { complete_national_focus = GER_winter }
 			SOV = {
-				add_timed_idea = { 
+				add_timed_idea = {
 					idea = winter_offensive
 					days = 100
 				}
+				complete_national_focus = SOV_approaching_soviet_winter
 			}
 			MON = {
 				add_timed_idea = { 
@@ -5956,6 +1998,7 @@ operations = {
 		available = {
 			NOT = {has_idea = winter_offensive}
 			NOT = {has_idea = winter_offensive2}
+			NOT = {has_idea = winter_offensive_improved}
 			AND	= {date > 1942.10.30
 			date < 1943.2.30
 			}
@@ -5965,10 +2008,20 @@ operations = {
 			date > 1942.9.30
 		}
 		complete_effect = {
-			add_timed_idea = { 
-				idea = winter_offensive2	
-				days = 100
-			}		
+			# Prepare for The Next Winter (SOV_prepare_for_the_next_winter) upgrades the Soviet winter offensive
+			if = {
+				limit = { has_country_flag = SOV_improved_winter_offensive }
+				add_timed_idea = {
+					idea = winter_offensive_improved
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = winter_offensive2
+					days = 100
+				}
+			}
 			MON = {
             add_timed_idea = {			
 				idea = winter_offensive2	
@@ -6000,6 +2053,7 @@ operations = {
 
 		available = {
 			NOT = {has_idea = winter_offensive2}
+			NOT = {has_idea = winter_offensive_improved}
 			AND = {date > 1943.10.30 date < 1944.2.30
 			}
 		}
@@ -6008,9 +2062,19 @@ operations = {
 			date > 1943.9.30
 		}
 		complete_effect = {
-			add_timed_idea = { 
-				idea = winter_offensive2
-				days = 100
+			# Prepare for The Next Winter (SOV_prepare_for_the_next_winter) upgrades the Soviet winter offensive
+			if = {
+				limit = { has_country_flag = SOV_improved_winter_offensive }
+				add_timed_idea = {
+					idea = winter_offensive_improved
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = winter_offensive2
+					days = 100
+				}
 			}
 			MON = {
 			add_timed_idea = { 
@@ -6052,6 +2116,114 @@ operations = {
 #					remove_ideas = german_summer_offensive_halved
 #				}
 #			}
+		}
+	}
+	SOV_Winter_offensive_1944 = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			original_tag = SOV
+			always = yes
+		}
+		fire_only_once = yes
+		
+		is_good = no
+
+		available = {
+			NOT = {has_idea = winter_offensive2}
+			NOT = {has_idea = winter_offensive_improved}
+			AND = {date > 1944.10.30 date < 1945.2.28
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1944.9.30
+		}
+		complete_effect = {
+			# Prepare for The Next Winter (SOV_prepare_for_the_next_winter) upgrades the Soviet winter offensive
+			if = {
+				limit = { has_country_flag = SOV_improved_winter_offensive }
+				add_timed_idea = {
+					idea = winter_offensive_improved
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = winter_offensive2
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = { 
+					idea = winter_offensive2
+					days = 100
+				}			
+			}
+			CPL = {
+				add_timed_idea = { 
+					idea = winter_offensive2
+					days = 100
+				}			
+			}
+		}
+	}
+	SOV_Winter_offensive_1945 = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			original_tag = SOV
+			always = yes
+		}
+		fire_only_once = yes
+		
+		is_good = no
+
+		available = {
+			NOT = {has_idea = winter_offensive2}
+			NOT = {has_idea = winter_offensive_improved}
+			AND = {date > 1945.10.30 date < 1946.2.28
+			}
+		}
+		days_mission_timeout = 30
+		activation = {
+			date > 1945.9.30
+		}
+		complete_effect = {
+			# Prepare for The Next Winter (SOV_prepare_for_the_next_winter) upgrades the Soviet winter offensive
+			if = {
+				limit = { has_country_flag = SOV_improved_winter_offensive }
+				add_timed_idea = {
+					idea = winter_offensive_improved
+					days = 100
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = winter_offensive2
+					days = 100
+				}
+			}
+			MON = {
+				add_timed_idea = { 
+					idea = winter_offensive2
+					days = 100
+				}			
+			}
+			CPL = {
+				add_timed_idea = { 
+					idea = winter_offensive2
+					days = 100
+				}			
+			}
 		}
 	}
 }

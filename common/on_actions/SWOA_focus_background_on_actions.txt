@@ -1,0 +1,65 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			# backgrounds start switched on (GDU sets this in 00_GDU_on_actions.txt)
+			every_country = {
+				set_country_flag = FOCUS_BG_background
+			}
+			ENG = {
+				set_variable = { show_background = 1 }
+			}
+			FRA = {
+				set_variable = { show_background = 2 }
+			}
+			GER = {
+				set_variable = { show_background = 3 }
+			}
+			HUN = {
+				set_variable = { show_background = 14 }
+			}
+			ITA = {
+				set_variable = { show_background = 4 }
+			}
+			ROM = {
+				set_variable = { show_background = 19 }
+			}
+			BUL = {
+				set_variable = { show_background = 11 }
+			}
+			SPR = {
+				set_variable = { show_background = 20 }
+			}
+			JAP = {
+				set_variable = { show_background = 5 }
+			}
+			SOV = {
+				set_variable = { show_background = 6 }
+			}
+			USA = {
+				set_variable = { show_background = 7 }
+			}
+			CAN = {
+				set_variable = { show_background = 8 }
+			}
+			SAF = {
+				set_variable = { show_background = 8 }
+			}
+			RAJ = {
+				set_variable = { show_background = 8 }
+			}
+			AST = {
+				set_variable = { show_background = 8 }
+			}
+			NZL = {
+				set_variable = { show_background = 8 }
+			}
+			FIN = {
+				set_variable = { show_background = 9 }
+			}
+			NOR = {
+				set_variable = { show_background = 9 }
+			}
+		}
+	}
+}
+

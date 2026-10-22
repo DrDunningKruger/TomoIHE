@@ -122,9 +122,28 @@ GER_focus_kiev = { #STATE MODIFIER
     enable = { always = yes }
 
     icon = GFX_modifiers_SOV_factory_worker_militias
-    
+
     army_speed_factor = 0.05
     army_defence_factor = -0.05
+    max_dig_in = -2.5
+}
+
+# Soviet battle focuses (SOV_battle_of_moscow / kursk / rostov)
+SOV_focus_battle_offensive = { #STATE MODIFIER - added with scope = SOV so only Soviet units get it
+    enable = { always = yes }
+    attacker_modifier = yes # also counts Soviet units attacking into the state from outside it
+
+    icon = GFX_modifiers_SOV_defend_moscow
+
+    army_attack_factor = 0.1
+    army_speed_factor = 0.05
+}
+
+SOV_focus_battle_entrenchment = { #STATE MODIFIER - no scope, applies to everyone in the state
+    enable = { always = yes }
+
+    icon = GFX_modifiers_SOV_defend_moscow
+
     max_dig_in = -2.5
 }
 
@@ -1081,7 +1100,7 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	army_org_factor = SOV_the_red_army_army_org_factor #-0.15 Meant to represent army disgruntledness
 	experience_gain_army_factor = SOV_the_red_army_experience_gain_army_factor #-0.1
 	experience_loss_factor = SOV_the_red_army_experience_loss_factor #0.25
-	land_reinforce_rate = SOV_the_red_army_land_reinforce_rate #-0.03
+	land_reinforce_rate = SOV_the_red_army_land_reinforce_rate #-0.02
 
 
 	#FUTURE
@@ -1120,7 +1139,7 @@ SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
 	army_org_factor = SOV_the_red_army_army_org_factor #-0.15 Meant to represent army disgruntledness
 	experience_gain_army_factor = SOV_the_red_army_experience_gain_army_factor #-0.1
 	experience_loss_factor = SOV_the_red_army_experience_loss_factor #0.25
-	land_reinforce_rate = SOV_the_red_army_land_reinforce_rate #-0.03
+	land_reinforce_rate = SOV_the_red_army_land_reinforce_rate #-0.02
 
 
 	#FUTURE

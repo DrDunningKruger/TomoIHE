@@ -1,0 +1,14 @@
+# State scope: true while IHE_SOV_relocate_state_factories still has something to move from this state
+IHE_SOV_state_has_relocatable_factories = {
+	is_owned_and_controlled_by = SOV
+	OR = {
+		industrial_complex > 2
+		arms_factory > 2
+	}
+}
+
+# State scope: true while IHE_SOV_convert_state_civs still has civilian factories to convert in this state
+IHE_SOV_state_has_civs_to_convert = {
+	is_owned_and_controlled_by = SOV
+	industrial_complex > 5
+}

@@ -1,0 +1,95 @@
+# Original RKKA Reserves focuses, removed from common/national_focus/soviet.txt (lines 5351-5440, after the uk_iran focus, before sovguards1).
+# Backed up 2026-10-21 from commit 5daf23a. To revert: paste these blocks back, or run:
+#   git checkout 5daf23a -- common/national_focus/soviet.txt history/units/SOV_defensiveline3.txt
+# and delete common/on_actions/IHE_SOV_reserves_on_actions.txt, events/IHE_SOV_reserves.txt, localisation/IHE_SOV_reserves_l_english.yml
+
+	focus = {
+		id = defensiveline
+		icon = GFX_RKKA
+		prerequisite = { focus = Great_patriotic_war }
+		x = -2
+		y = 1
+		relative_position_id = Great_patriotic_war
+		cost = 5		
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+        SOV = { surrender_progress > 0.25 }
+		}
+		available_if_capitulated = yes
+		
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+		
+		completion_reward = {
+		hidden_effect = {
+	    load_oob = "SOV_defensiveline3"}
+		custom_effect_tooltip = "SOV_150_DIVS"
+		add_ideas = LL_support1
+		}
+	}
+
+	focus = {
+		id = defensiveline2
+		icon = GFX_RKKA
+		prerequisite = { focus = defensiveline }	
+		x = 0
+		y = 1
+		relative_position_id = defensiveline
+		cost = 5
+		available = {
+		OR  = {
+			if = { date > 1942.1.1 }
+            SOV = { surrender_progress > 0.35 }			
+			}}		
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+		
+		completion_reward = {
+		hidden_effect = {
+		load_oob = "SOV_defensiveline3"}
+		custom_effect_tooltip = "SOV_150_DIVS"
+			swap_ideas = {
+				remove_idea = LL_support1
+				add_idea = LL_support2
+			}
+		}
+	}
+
+	focus = {
+		id = defensiveline3
+		icon = GFX_RKKA
+		prerequisite = { focus = defensiveline2 }	
+		x = 0
+		y = 1
+		relative_position_id = defensiveline2
+		cost = 5
+		available = {
+		OR  = {
+			if = { date > 1942.6.1 }
+            SOV = { surrender_progress > 0.50 }			
+			}}	
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+		
+		completion_reward = {
+			hidden_effect = {
+				load_oob = "SOV_defensiveline3"
+			}
+			custom_effect_tooltip = "SOV_150_DIVS"
+			swap_ideas = {
+				remove_idea = nkvd_2
+				add_idea = nkvd_3	
+			}
+		}
+	}

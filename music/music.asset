@@ -137,3 +137,17 @@ music = {
 	file = "thegreatpatrioticwar.ogg"
 	volume = 0.65
 }
+
+# IHE: continuous focus IHE_music_focus (played with scoped_play_song, not in any station so it never plays randomly)
+music = {
+	name = "IHE_focus_track"
+	file = "IHE_focus_track.ogg"
+	volume = 0.8
+}
+
+# IHE: 2 seconds of silence, played when IHE_music_focus is cancelled to cut the track off
+music = {
+	name = "IHE_silence"
+	file = "IHE_silence.ogg"
+	volume = 0
+}

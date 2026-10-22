@@ -26,7 +26,7 @@ set_technology = { #WARNING: Do not just remove techs from here -> It can impact
 	paratroopers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	mobile_warfare = 1
+	mass_assault = 1
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
@@ -376,7 +376,7 @@ set_variable = { SOV_the_red_army_mobilization_laws_cost_factor = -0.1 }
 set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
 set_variable = { SOV_the_red_army_experience_gain_army_factor = -0.1 }
 set_variable = { SOV_the_red_army_experience_loss_factor = 0.25 }
-set_variable = { SOV_the_red_army_land_reinforce_rate = -0.03 }
+set_variable = { SOV_the_red_army_land_reinforce_rate = -0.02 }
 set_variable = { SOV_the_red_army_mobilization_speed = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_conscription_factor = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_army_speed_factor = 0 } #-> Restore Cossack Units

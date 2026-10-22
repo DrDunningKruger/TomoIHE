@@ -242,9 +242,44 @@ continuous_focus_palette = {
 		}
 		
 		supports_ai_strategy = ai_focus_military_advancements
-		
+
 		daily_cost = 1
-		
+
+		available_if_capitulated = yes
+	}
+
+	# IHE: no gameplay effect, only plays a music track for this country's player while active
+	focus = {
+		id = IHE_music_focus
+
+		icon = GFX_goal_generic_propaganda
+
+		available = {
+			always = yes
+		}
+
+		select_effect = {
+			custom_effect_tooltip = IHE_music_focus_tt
+			hidden_effect = {
+				set_country_flag = IHE_music_focus_active
+				scoped_play_song = "IHE_focus_track"
+			}
+		}
+
+		# there is no stop-sound effect, so starting a short silent track cuts the custom one off
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IHE_music_focus_active
+				scoped_play_song = "IHE_silence"
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		daily_cost = 0
+
 		available_if_capitulated = yes
 	}
 

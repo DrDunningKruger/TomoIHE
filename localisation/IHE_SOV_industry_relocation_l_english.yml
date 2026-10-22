@@ -1,0 +1,4 @@
+﻿l_english:
+ SOV_industry_relocation_rear:0 "Convert Rear Area Industry"
+ SOV_factory_relocation_inefficiency:0 "Factory Relocation Inefficiency"
+ SOV_factory_relocation_inefficiency_desc:0 "Whole factories are being torn down, loaded onto trains and rebuilt far to the east. Production lines will take time to recover their efficiency."

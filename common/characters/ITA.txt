@@ -903,9 +903,9 @@ characters={
 			}
 		}
 		
-		field_marshal = {
+		corps_commander = {
 			desc = "giuseppe_tellera_desc" #died during compass, brave tanker
-			traits = { offensive_doctrine panzer_leader panzer_expert desert_fox trait_reckless logistics_wizard } 
+			traits = { offensive_doctrine panzer_leader panzer_expert desert_fox trait_reckless logistics_wizard }
 			skill = 6
 			attack_skill = 6
 			defense_skill = 6

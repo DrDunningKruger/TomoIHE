@@ -1,0 +1,59 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			# RKKA Reserves: 50 divisions spawn at 1.25m, 2.5m and 3.75m Soviet casualties (replaces defensiveline focuses)
+			SOV = {
+				if = {
+					limit = {
+						casualties_k > 1250
+						NOT = { has_country_flag = SOV_rkka_reserves_1 }
+					}
+					set_country_flag = SOV_rkka_reserves_1
+					load_oob = "SOV_defensiveline3"
+					add_ideas = LL_support1
+					country_event = { id = ihe_sov_reserves.1 }
+				}
+				if = {
+					limit = {
+						casualties_k > 2500
+						has_country_flag = SOV_rkka_reserves_1
+						NOT = { has_country_flag = SOV_rkka_reserves_2 }
+					}
+					set_country_flag = SOV_rkka_reserves_2
+					load_oob = "SOV_defensiveline3"
+					if = {
+						limit = { has_idea = LL_support1 }
+						swap_ideas = {
+							remove_idea = LL_support1
+							add_idea = LL_support2
+						}
+					}
+					else = {
+						add_ideas = LL_support2
+					}
+					country_event = { id = ihe_sov_reserves.2 }
+				}
+				if = {
+					limit = {
+						casualties_k > 3750
+						has_country_flag = SOV_rkka_reserves_2
+						NOT = { has_country_flag = SOV_rkka_reserves_3 }
+					}
+					set_country_flag = SOV_rkka_reserves_3
+					load_oob = "SOV_defensiveline3"
+					if = {
+						limit = { has_idea = nkvd_2 }
+						swap_ideas = {
+							remove_idea = nkvd_2
+							add_idea = nkvd_3
+						}
+					}
+					else = {
+						add_ideas = nkvd_3
+					}
+					country_event = { id = ihe_sov_reserves.3 }
+				}
+			}
+		}
+	}
+}

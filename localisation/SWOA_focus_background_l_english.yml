@@ -1,0 +1,5 @@
+﻿l_english:
+ FOCUS_BG_TOOLTIP_on:0 "§HActivate 'Focus BG'§!"
+ FOCUS_BG_TOOLTIP_off:0 "§HDeactivate 'Focus BG'§!"
+ focus_bg_on:0 "Focus BG:£trigger_no"
+ focus_bg_off:0 "Focus BG:£trigger_yes"

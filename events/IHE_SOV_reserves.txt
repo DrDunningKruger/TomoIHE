@@ -1,0 +1,41 @@
+add_namespace = ihe_sov_reserves
+
+# Notification only - units and ideas are applied in common/on_actions/IHE_SOV_reserves_on_actions.txt
+country_event = {
+	id = ihe_sov_reserves.1
+	title = ihe_sov_reserves.1.t
+	desc = ihe_sov_reserves.1.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.1.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}
+
+country_event = {
+	id = ihe_sov_reserves.2
+	title = ihe_sov_reserves.2.t
+	desc = ihe_sov_reserves.2.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.2.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}
+
+country_event = {
+	id = ihe_sov_reserves.3
+	title = ihe_sov_reserves.3.t
+	desc = ihe_sov_reserves.3.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.3.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}
