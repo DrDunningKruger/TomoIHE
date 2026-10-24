@@ -491,6 +491,7 @@ ENG_IH&E_special = {
 					has_war = yes
 					has_capitulated = yes
 					has_full_control_of_state = 718
+					has_full_control_of_state = 846
 					has_full_control_of_state = 769
 					has_full_control_of_state = 768
 					has_full_control_of_state = 295
@@ -525,6 +526,7 @@ ENG_IH&E_special = {
 							limit = { country_exists = FRA }
 							FRA = {
 								transfer_state = 718
+								transfer_state = 846
 								transfer_state = 769
 								transfer_state = 768
 								transfer_state = 295

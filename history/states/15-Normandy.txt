@@ -30,12 +30,10 @@ state={
 			air_base = 10
 			7991 = {
 				naval_base = 10
-				coastal_bunker = 1
 
 			}
 			9434 = {
 				naval_base = 5
-				coastal_bunker = 1
 
 			}
 			485 = {

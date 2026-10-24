@@ -694,6 +694,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -733,6 +736,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -775,6 +781,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -817,6 +826,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -859,6 +871,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -901,6 +916,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -943,6 +961,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -985,6 +1006,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1027,6 +1051,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1069,6 +1096,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1111,6 +1141,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1153,6 +1186,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1195,6 +1231,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1237,6 +1276,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1279,6 +1321,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1321,6 +1366,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1363,6 +1411,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1405,6 +1456,9 @@ on_actions = {
 			add_opinion_modifier = { target = YUG modifier = embargo_others }  
 			add_opinion_modifier = { target = YUG modifier = embargo_others2 }		
 			add_opinion_modifier = { target = YUG modifier = embargo_others3 }		
+			add_opinion_modifier = { target = SPR modifier = embargo_others }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others2 }  
+			add_opinion_modifier = { target = SPR modifier = embargo_others3 }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others }  
 			add_opinion_modifier = { target = FIN modifier = embargo_others2 } 			
 			add_opinion_modifier = { target = FIN modifier = embargo_others3 } 			
@@ -1816,6 +1870,11 @@ on_actions = {
 					modifier = benelux_modifier days = 1461
 				}
 			}	
+			553 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
 			459 = {
 				add_dynamic_modifier = {
 					modifier = benelux_modifier days = 1461
@@ -1870,6 +1929,29 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
 				}
 			}			
+			845 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
+				}
+			}			
 			660 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 1917 scope = GER
@@ -1894,6 +1976,29 @@ on_actions = {
 				}
 			}		
 			718 = {
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = GER
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = ITA
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = HUN
+				}				
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = ROM
+				}	
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = BUL
+				}		
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = YUG
+				}			
+				add_dynamic_modifier = {
+					modifier = AXIS_Africa_modifier days = 1917 scope = SPR
+				}
+			}			
+			846 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 1917 scope = GER
 				}			
@@ -2801,17 +2906,6 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}
 			}
-			553 = {
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = GER
-				}					
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = ROM
-				}
-				add_dynamic_modifier = {
-					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
-				}
-			}
 			554 = {
 				add_dynamic_modifier = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = GER
@@ -3202,6 +3296,20 @@ on_actions = {
 	
 	on_capitulation = {
 		effect = {
+			# Greece capitulates: a human Bulgaria immediately receives Thrace and Central Macedonia
+			if = {
+				limit = {
+					original_tag = GRE
+					BUL = { exists = yes is_ai = no }
+				}
+				every_state = {
+					limit = {
+						OR = { state = 731 state = 184 }
+						is_owned_by = ROOT
+					}
+					BUL = { transfer_state = PREV }
+				}
+			}
 			if = {
 				limit = {
 					original_tag = POL 
@@ -3317,6 +3425,7 @@ on_actions = {
 					transfer_state = 295
 					transfer_state = 538
 					transfer_state = 718
+					transfer_state = 846
 					transfer_state = 769
 					transfer_state = 768
 				}

@@ -133,3 +133,44 @@ country_event = {
 		name = bulgaria.5.a
 	}
 }
+
+# Return the Bulgarian Cores - Italy decides
+country_event = {
+	id = bulgaria.6
+	title = bulgaria.6.t
+	desc = bulgaria.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+
+	is_triggered_only = yes
+
+	option = { # all states
+		name = bulgaria.6.a
+		ai_chance = { factor = 10 }
+		every_state = {
+			limit = {
+				OR = { state = 802 state = 44 state = 805 state = 185 state = 47 state = 186 state = 108 state = 105 state = 731 state = 184 }
+				is_owned_by = ITA
+			}
+			set_state_flag = BUL_ceded_by_italy
+			BUL = { transfer_state = PREV }
+		}
+	}
+
+	option = { # some states
+		name = bulgaria.6.b
+		ai_chance = { factor = 30 }
+		every_state = {
+			limit = {
+				OR = { state = 802 state = 44 state = 805 state = 185 state = 108 state = 105 }
+				is_owned_by = ITA
+			}
+			set_state_flag = BUL_ceded_by_italy
+			BUL = { transfer_state = PREV }
+		}
+	}
+
+	option = { # nothing
+		name = bulgaria.6.c
+		ai_chance = { factor = 60 }
+	}
+}

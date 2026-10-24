@@ -1,0 +1,22 @@
+
+state={
+	id=553
+	name="STATE_553"
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 2
+			air_base = 10
+		}
+
+	}
+
+	provinces={
+		1152 1207 4154 4933 7908 7958 7993 8046 10731 12845 
+	}
+	manpower=932776
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

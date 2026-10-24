@@ -1,0 +1,46 @@
+AFRICA_atlantic_wall_category = {
+
+	# Every country gets this mission so everyone can see the timer. They all start on the same day
+	# from the same trigger, so they stay in sync, but only Germany's copy builds the forts.
+	# Starts when the Axis holds every Africa zone (score -10). If the Allies retake a zone but the Axis is still
+	# ahead, the running timer finishes and builds, then waits until the Axis holds every zone again.
+	# Cancels at once if Africa falls back to Stalemate or Allied-favoured (score above -2), when the forts
+	# hit 10, and for good on 1942.1.1.
+	AFRICA_dday_forts = {
+		allowed = {
+			always = yes
+		}
+		activation = {
+			check_variable = { global.AFRICA_score < -9 }
+			check_variable = { global.AFRICA_dday_forts < 10 }
+			date < 1942.1.1
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				check_variable = { global.AFRICA_score > -2 } # Stalemate or Allied-favoured: stop at once
+				check_variable = { global.AFRICA_dday_forts > 9 }
+				date > 1942.1.1
+			}
+		}
+		icon = mission_icon
+		is_good = no
+		fire_only_once = no
+		days_mission_timeout = 120
+		selectable_mission = no
+
+		timeout_effect = {
+			if = {
+				limit = { original_tag = GER }
+				AFRICA_add_dday_forts = yes
+			}
+			# only restart while the Axis still holds every zone; otherwise this was the last build until it does again
+			if = {
+				limit = { check_variable = { global.AFRICA_score < -9 } }
+				activate_mission = AFRICA_dday_forts # cancel_trigger ends it for everyone once the forts hit 10
+			}
+		}
+	}
+}

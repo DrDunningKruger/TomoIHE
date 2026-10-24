@@ -3093,12 +3093,46 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BUL_bulgarisation_of_the_balkans
+		id = BUL_return_the_bulgarian_cores
 
 		prerequisite = { focus = BUL_approach_germany }
 
-		icon = GFX_bulgarisation
+		icon = GFX_bulnationalism
 		relative_position_id = BUL_approach_germany
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			GER = { has_completed_focus = GER_kill_yugo }
+			OR = {
+				GRE = { has_capitulated = yes }
+				GRE = { exists = no }
+			}
+			ITA = { exists = yes }
+			NOT = { has_war_with = ITA }
+			802 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			44 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			805 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			185 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			47 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			186 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			108 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			105 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+		}
+
+		completion_reward = {
+			ITA = { country_event = { id = bulgaria.6 } }
+		}
+	}
+
+	focus = {
+		id = BUL_bulgarisation_of_the_balkans
+
+		prerequisite = { focus = BUL_return_the_bulgarian_cores }
+
+		icon = GFX_bulgarisation
+		relative_position_id = BUL_return_the_bulgarian_cores
 		x = 0
 		y = 1
 		cost = 5
@@ -3113,7 +3147,9 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		custom_effect_tooltip = "Get cores on the Balkan territory under your control"
+		custom_effect_tooltip = "Get cores on the Balkan territory under your control and on the lands ceded by Italy"
+			set_cosmetic_tag = BUL_EMPIRE
+			add_ideas = BUL_bulgarian_empire
 			if = {
 				limit = {
 					has_full_control_of_state = 77
@@ -3153,13 +3189,23 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_full_control_of_state = 106	
+					has_full_control_of_state = 803
 					803	 = { NOT = { is_core_of = ROOT } }
 				}
 				803	 = { set_state_flag = BUL_bulgarisation_campaign_flag }
 				803	 = { add_extra_state_shared_building_slots = 2 }
 				add_state_core = 803	
 			}			
+
+			every_state = {
+				limit = {
+					has_state_flag = BUL_ceded_by_italy
+					is_owned_by = ROOT
+					is_fully_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				ROOT = { add_state_core = PREV }
+			}
 
 			add_ai_strategy = { 
 				type = garrison

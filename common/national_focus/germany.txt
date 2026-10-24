@@ -907,6 +907,7 @@ focus_tree = {
 					}
 				}
 			}				
+				GER_atlantikwall_cap_forts = yes
 			}
 		}
 	}
@@ -3389,6 +3390,7 @@ focus_tree = {
 			#set_global_flag = falkenhausen_recalled
 
                 add_timed_idea ={ idea = GER_prepareforinevitable days = 100 }
+                add_ideas = GER_prepareforinevitable_manpower
                 hidden_effect = {
                  ROM = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
                  HUN = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
@@ -3597,6 +3599,10 @@ focus_tree = {
         completion_reward = {
 		   custom_effect_tooltip = "GER_BLAU_TOOLTIP"    
 			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					scoped_sound_effect = IHE_fallblau_tomo
+				}
 			load_oob = "GER_blau"
 				if = {
 				limit = { NOT = { has_tech = tech_military_police  }}
@@ -4252,10 +4258,10 @@ focus_tree = {
 		completion_reward = {
 		if = { limit = { NOR = { exists = yes }}  declare_war_on = { target = NOR  type = annex_everything } }
 		ROM = {
-			if = { limit = { NOR = { exists = yes }}  declare_war_on = { target = NOR  type = annex_everything } }
+			if = { limit = { NOR = { exists = yes } NOT = { has_war_with = NOR } }  declare_war_on = { target = NOR  type = annex_everything } }
 		}
 		HUN = {
-			if = { limit = { NOR = { exists = yes }}  declare_war_on = { target = NOR  type = annex_everything } }
+			if = { limit = { NOR = { exists = yes } NOT = { has_war_with = NOR } }  declare_war_on = { target = NOR  type = annex_everything } }
 		}
 		ENG = { add_to_faction = NOR }
         transfer_state = 99
@@ -4454,21 +4460,27 @@ focus_tree = {
 			#HOL
 			ENG = { add_to_faction = HOL }
 			if = { limit = { HOL = { exists = yes }}  GER = { declare_war_on = { target = HOL  type = annex_everything } } }
-			if = { limit = { HOL = { exists = yes }}  ROM = { declare_war_on = { target = HOL  type = annex_everything } } }
-			if = { limit = { HOL = { exists = yes }}  HUN = { declare_war_on = { target = HOL  type = annex_everything } } }
-			if = { limit = { BEL = { exists = yes }}  ITA = { declare_war_on = { target = HOL  type = annex_everything } } }
-			if = { limit = { BEL = { exists = yes }}  IEA = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { HOL = { exists = yes } ROM = { NOT = { has_war_with = HOL } } }  ROM = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { HOL = { exists = yes } HUN = { NOT = { has_war_with = HOL } } }  HUN = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { HOL = { exists = yes } ITA = { NOT = { has_war_with = HOL } } }  ITA = { declare_war_on = { target = HOL  type = annex_everything } } }
+			if = { limit = { HOL = { exists = yes } IEA = { NOT = { has_war_with = HOL } } }  IEA = { declare_war_on = { target = HOL  type = annex_everything } } }
 
 			#FRA
 			ENG = { add_to_faction = FRA }
 			if = { limit = { FRA = { exists = yes }}  GER = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  ROM = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  HUN = { declare_war_on = { target = FRA  type = annex_everything } } }
-			if = { limit = { BEL = { exists = yes }}  ITA = { declare_war_on = { target = FRA  type = annex_everything } } }
-			if = { limit = { BEL = { exists = yes }}  IEA = { declare_war_on = { target = FRA  type = annex_everything } } }
+			if = { limit = { FRA = { exists = yes }}  ITA = { declare_war_on = { target = FRA  type = annex_everything } } }
+			if = { limit = { FRA = { exists = yes }}  IEA = { declare_war_on = { target = FRA  type = annex_everything } } }
+
+			#BUL joins the Axis and the war on France
+			if = { limit = { BUL = { exists = yes } FRA = { exists = yes } }
+				GER = { add_to_faction = BUL }
+				BUL = { declare_war_on = { target = FRA  type = annex_everything } }
+			}
 
 
-			add_timed_idea = { idea = GER_western_blitzkrieg days = 120 }		
+			add_timed_idea = { idea = GER_western_blitzkrieg days = 120 }
             BEL = {
 				transfer_state = 8		
 			}
@@ -4484,9 +4496,6 @@ focus_tree = {
 						instant_build = yes
 					}			
 			}			
-			   if = { limit = { BEL = { exists = yes }}  declare_war_on = { target = BEL  type = annex_everything } }	
-			   if = { limit = { HOL = { exists = yes }}  declare_war_on = { target = HOL  type = annex_everything } }	
-			   if = { limit = { FRA = { exists = yes }}  declare_war_on = { target = FRA  type = annex_everything } }
 		}
 	}
 
@@ -6617,7 +6626,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = GER_thebeginningoftheend
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -6638,7 +6647,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_conscriptthevolksturm
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -6691,7 +6700,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_deployhitlerjugend
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -6761,56 +6770,652 @@ focus_tree = {
 		available_if_capitulated = yes
 
        completion_reward = {
-		 if = { limit = { controls_province = 2215 }
-          763 = {
-		    add_building_construction = {
-				type = bunker
-				level = 3
-				province = 2215
-			 	instant_build = yes
-			}		 
-		    }
-		    }	
-		if = { limit = { controls_province = 6332 }
-          763 = {
-		    add_building_construction = {
-				type = bunker
-				level = 3
-				province = 6332
-			 	instant_build = yes
-			}		 
-		    }
-		    }	
-		if = { limit = { controls_province = 2149 }
-          763 = {
-		    add_building_construction = {
-				type = bunker
-				level = 3
-				province = 2149
-			 	instant_build = yes
-			}		 
-		    }
-		    }	
-		if = { limit = { controls_province = 11021 }
-          763 = {
-		    add_building_construction = {
-				type = bunker
-				level = 3
-				province = 11021
-			 	instant_build = yes
-			}		 
-		    }
-		    }	
-		if = { limit = { controls_province = 10992 }
-          763 = {
-		    add_building_construction = {
-				type = bunker
-				level = 3
-				province = 10992
-			 	instant_build = yes
-			}		 
-		    }
-		    }		
+		if = {
+			limit = {
+				OR = {
+					controls_province = 362
+					any_allied_country = { controls_province = 362 }
+					any_subject_country = { controls_province = 362 }
+				}
+			}
+			85 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 362
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 389
+					any_allied_country = { controls_province = 389 }
+					any_subject_country = { controls_province = 389 }
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 389
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3324
+					any_allied_country = { controls_province = 3324 }
+					any_subject_country = { controls_province = 3324 }
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3324
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 279
+					any_allied_country = { controls_province = 279 }
+					any_subject_country = { controls_province = 279 }
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 279
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 243
+					any_allied_country = { controls_province = 243 }
+					any_subject_country = { controls_province = 243 }
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 243
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 6401
+					any_allied_country = { controls_province = 6401 }
+					any_subject_country = { controls_province = 6401 }
+				}
+			}
+			98 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6401
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 548
+					any_allied_country = { controls_province = 548 }
+					any_subject_country = { controls_province = 548 }
+				}
+			}
+			98 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 548
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11492
+					any_allied_country = { controls_province = 11492 }
+					any_subject_country = { controls_province = 11492 }
+				}
+			}
+			10 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11492
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 2179
+					any_allied_country = { controls_province = 2179 }
+					any_subject_country = { controls_province = 2179 }
+				}
+			}
+			10 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 2179
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 8217
+					any_allied_country = { controls_province = 8217 }
+					any_subject_country = { controls_province = 8217 }
+				}
+			}
+			10 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 8217
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 6511
+					any_allied_country = { controls_province = 6511 }
+					any_subject_country = { controls_province = 6511 }
+				}
+			}
+			10 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6511
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3458
+					any_allied_country = { controls_province = 3458 }
+					any_subject_country = { controls_province = 3458 }
+				}
+			}
+			90 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3458
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 562
+					any_allied_country = { controls_province = 562 }
+					any_subject_country = { controls_province = 562 }
+				}
+			}
+			90 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 562
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3497
+					any_allied_country = { controls_province = 3497 }
+					any_subject_country = { controls_province = 3497 }
+				}
+			}
+			90 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3497
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11430
+					any_allied_country = { controls_province = 11430 }
+					any_subject_country = { controls_province = 11430 }
+				}
+			}
+			90 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11430
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9427
+					any_allied_country = { controls_province = 9427 }
+					any_subject_country = { controls_province = 9427 }
+				}
+			}
+			88 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9427
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11398
+					any_allied_country = { controls_province = 11398 }
+					any_subject_country = { controls_province = 11398 }
+				}
+			}
+			88 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11398
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11554
+					any_allied_country = { controls_province = 11554 }
+					any_subject_country = { controls_province = 11554 }
+				}
+			}
+			71 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11554
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 581
+					any_allied_country = { controls_province = 581 }
+					any_subject_country = { controls_province = 581 }
+				}
+			}
+			71 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 581
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3550
+					any_allied_country = { controls_province = 3550 }
+					any_subject_country = { controls_province = 3550 }
+				}
+			}
+			71 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3550
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3581
+					any_allied_country = { controls_province = 3581 }
+					any_subject_country = { controls_province = 3581 }
+				}
+			}
+			71 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3581
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 6604
+					any_allied_country = { controls_province = 6604 }
+					any_subject_country = { controls_province = 6604 }
+				}
+			}
+			71 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6604
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11536
+					any_allied_country = { controls_province = 11536 }
+					any_subject_country = { controls_province = 11536 }
+				}
+			}
+			73 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11536
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9563
+					any_allied_country = { controls_province = 9563 }
+					any_subject_country = { controls_province = 9563 }
+				}
+			}
+			73 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9563
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 6571
+					any_allied_country = { controls_province = 6571 }
+					any_subject_country = { controls_province = 6571 }
+				}
+			}
+			73 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6571
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9704
+					any_allied_country = { controls_province = 9704 }
+					any_subject_country = { controls_province = 9704 }
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9704
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 727
+					any_allied_country = { controls_province = 727 }
+					any_subject_country = { controls_province = 727 }
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 727
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9685
+					any_allied_country = { controls_province = 9685 }
+					any_subject_country = { controls_province = 9685 }
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9685
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 711
+					any_allied_country = { controls_province = 711 }
+					any_subject_country = { controls_province = 711 }
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 711
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3689
+					any_allied_country = { controls_province = 3689 }
+					any_subject_country = { controls_province = 3689 }
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3689
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 690
+					any_allied_country = { controls_province = 690 }
+					any_subject_country = { controls_province = 690 }
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 690
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 11619
+					any_allied_country = { controls_province = 11619 }
+					any_subject_country = { controls_province = 11619 }
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11619
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 3663
+					any_allied_country = { controls_province = 3663 }
+					any_subject_country = { controls_province = 3663 }
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3663
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9617
+					any_allied_country = { controls_province = 9617 }
+					any_subject_country = { controls_province = 9617 }
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9617
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 6658
+					any_allied_country = { controls_province = 6658 }
+					any_subject_country = { controls_province = 6658 }
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6658
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9612
+					any_allied_country = { controls_province = 9612 }
+					any_subject_country = { controls_province = 9612 }
+				}
+			}
+			801 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9612
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 649
+					any_allied_country = { controls_province = 649 }
+					any_subject_country = { controls_province = 649 }
+				}
+			}
+			211 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 649
+					instant_build = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_province = 9783
+					any_allied_country = { controls_province = 9783 }
+					any_subject_country = { controls_province = 9783 }
+				}
+			}
+			211 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9783
+					instant_build = yes
+				}
+			}
+		}
 	    }
 	}
 		
@@ -7181,7 +7786,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_thebeginningoftheend
-		cost = 5
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7230,7 +7835,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		relative_position_id = GER_thebeginningoftheend
-		cost = 5
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7262,7 +7867,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_deploypanzerlehr
-		cost = 5
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7399,9 +8004,6 @@ focus_tree = {
 				554 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
-				553 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
 				455 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
@@ -7452,9 +8054,6 @@ focus_tree = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}
 				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				553 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
 				455 = {
@@ -7510,9 +8109,6 @@ focus_tree = {
 				554 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
-				553 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
 				455 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
@@ -7564,9 +8160,6 @@ focus_tree = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}
 				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				553 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
 				455 = {
@@ -7623,9 +8216,6 @@ focus_tree = {
 				554 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
-				553 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
 				455 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
@@ -7680,9 +8270,6 @@ focus_tree = {
 				554 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
-				553 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
 				455 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
@@ -7734,9 +8321,6 @@ focus_tree = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}
 				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				553 = {
 					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
 				}	
 				455 = {
@@ -8137,6 +8721,10 @@ focus_tree = {
                 custom_effect_tooltip = "NEWGENERAL_TOOLTIP"
 				set_fuel_ratio = 1
 				hidden_effect = {
+					every_country = {
+						limit = { is_ai = no }
+						scoped_sound_effect = IHE_steiner_tomo
+					}
 						if = {
 						limit = { NOT = { has_tech = mechanised_infantry  }}
 						set_technology = {
@@ -8288,12 +8876,12 @@ focus_tree = {
 					transfer_state = 105
 					transfer_state = 802
 					transfer_state = 506
+					transfer_state = 108
 				}
 				GER = {
 					transfer_state = 102
 					transfer_state = 107
 					transfer_state = 764
-					transfer_state = 108					
 				}
 				YUG = {
 					set_cosmetic_tag = CRO

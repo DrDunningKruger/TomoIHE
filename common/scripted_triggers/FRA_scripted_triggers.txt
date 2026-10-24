@@ -31,6 +31,14 @@ FRA_controls_north_africa = {
 			}
 		}
 	}
+	553 = {
+		OR = {
+			is_controlled_by = ROOT
+			CONTROLLER = {
+				is_subject_of = ROOT
+			}
+		}
+	}
 	459 = {
 		OR = {
 			is_controlled_by = ROOT
@@ -90,14 +98,6 @@ FRA_controls_syria = {
 		}
 	}
 	554 = {
-		OR = {
-			is_controlled_by = ROOT
-			CONTROLLER = {
-				is_subject_of = ROOT
-			}
-		}
-	}
-	553 = {
 		OR = {
 			is_controlled_by = ROOT
 			CONTROLLER = {

@@ -34,6 +34,7 @@ AFRICA_recalculate = {
 			limit = { AFRICA_has_axis_idea = yes }
 			AFRICA_apply_axis_level = yes
 		}
+		AFRICA_update_german_armour = yes
 		AFRICA_update_western_defences = yes
 	}
 }
@@ -77,6 +78,7 @@ AFRICA_update_western_defences = {
 		if = {
 			limit = {
 				check_variable = { global.AFRICA_west_strength > 0 }
+				date < 1942.1.1 # the Fortified Western Front modifiers expire in 1942
 				controller = { AFRICA_is_west_defender = yes }
 			}
 			if = {
@@ -418,5 +420,83 @@ AFRICA_apply_axis_level = {
 	}
 	else = {
 		add_ideas = AFRICA_AXIS_11
+	}
+}
+
+# Germany gets -1% armour IC per positive Axis level: AXIS_7 = -1% ... AXIS_11 = -5%
+AFRICA_update_german_armour = {
+	if = {
+		limit = { country_exists = GER }
+		GER = {
+			remove_ideas = {
+				GER_AFRICA_armour_1
+				GER_AFRICA_armour_2
+				GER_AFRICA_armour_3
+				GER_AFRICA_armour_4
+				GER_AFRICA_armour_5
+			}
+			if = {
+				limit = { has_idea = AFRICA_AXIS_11 }
+				add_ideas = GER_AFRICA_armour_5
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_AXIS_10 }
+				add_ideas = GER_AFRICA_armour_4
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_AXIS_9 }
+				add_ideas = GER_AFRICA_armour_3
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_AXIS_8 }
+				add_ideas = GER_AFRICA_armour_2
+			}
+			else_if = {
+				limit = { has_idea = AFRICA_AXIS_7 }
+				add_ideas = GER_AFRICA_armour_1
+			}
+		}
+	}
+}
+
+# Atlantic Wall: while the Axis holds AXIS_11 (score -10, all zones), every 120 days the
+# AFRICA_dday_forts mission adds 1 coastal fort level to every coastal province of the D-Day states
+# (the French Atlantic coast, Benelux and the German North Sea coast). Coastal forts cap at 10, so the counter stops at 10.
+AFRICA_add_dday_forts = {
+	if = {
+		limit = {
+			check_variable = { global.AFRICA_dday_forts < 10 }
+			date < 1942.1.1
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 19
+					state = 23
+					state = 30
+					state = 14
+					state = 15
+					state = 785
+					state = 29
+					state = 6
+					state = 7
+					state = 35
+					state = 36
+					state = 56
+					state = 58
+					state = 59
+				}
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_coastal = yes
+				}
+			}
+		}
+		add_to_variable = { global.AFRICA_dday_forts = 1 }
 	}
 }

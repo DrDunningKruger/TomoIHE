@@ -1,0 +1,23 @@
+
+state={
+	id=842
+	name="STATE_842"
+	manpower = 1231431
+
+	state_category = rural
+
+	history={
+		owner = ENG
+
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		1596 1639 1960 5060 8052 8208 10390 10418 10739 11022 12409
+	}
+
+	local_supplies=0.0 
+}

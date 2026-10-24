@@ -670,7 +670,7 @@ characters={
 		
 		corps_commander = {
 					desc = "Enea_Navarini_desc" #Militia officer with core bonuses, good for fighting husky.
-					traits = { militias_officer infantry_leader infantry_officer infantry_expert trickster inspirational_leader }
+					traits = { militias_officer infantry_leader infantry_officer infantry_expert trickster skilled_staffer }
 					skill = 6
 					attack_skill = 4
 					defense_skill = 6

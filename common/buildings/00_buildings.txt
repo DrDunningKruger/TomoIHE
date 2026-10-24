@@ -129,6 +129,7 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 7
 		land_fort = 1
+		repair_speed_factor = 0.7 # 30% slower than default repair speed
 		value = 0.01	
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -145,6 +146,7 @@ buildings = {
 		only_costal = yes
 		icon_frame = 8
 		naval_fort = 1
+		repair_speed_factor = 0.7 # 30% slower than default repair speed
 		value = 0.01
 		
 		infrastructure_construction_effect = yes
@@ -235,7 +237,7 @@ buildings = {
 
 	radar_station = {
 		show_on_map = 1
-		base_cost = 2000
+		base_cost = 4000
 		icon_frame = 11
 		radar = yes
 		damage_factor = 0.5

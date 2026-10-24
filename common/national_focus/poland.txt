@@ -133,7 +133,7 @@
 		}
 		available = {
 		    NOT = { TAG = CPL }
-			FRA = { has_full_control_of_state = 553 }
+			FRA = { has_full_control_of_state = 554 }
 		}
 		completion_reward = {
 		custom_effect_tooltip = "POL_MOUNTAINEERS_TOOLTIP"

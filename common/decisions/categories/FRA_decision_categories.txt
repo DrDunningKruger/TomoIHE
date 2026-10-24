@@ -16,3 +16,18 @@ fra_holds_vs_germany_category = {
 	}
 	priority = 20
 }
+
+fra_holds_vs_germany_observer_category = {
+	allowed = {
+		NOT = { original_tag = FRA }
+	}
+	visible = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+			tag = ENG
+			is_in_faction_with = ENG
+		}
+	}
+	priority = 20
+}

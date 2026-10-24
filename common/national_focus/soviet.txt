@@ -385,7 +385,6 @@ focus_tree = {
 					bonus = 1.0
 					uses = 1
 					category = industry
-					category = electronics
 				}
 			}
 			else = {
@@ -400,7 +399,6 @@ focus_tree = {
 					bonus = 1.0
 					uses = 1
 					category = industry
-					category = electronics
 				}
 			}
 		}

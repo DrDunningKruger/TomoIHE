@@ -377,3 +377,150 @@ ENG_africa_level_down = {
 		}
 	}
 }
+
+# Bombard The Coast: lowers every coastal fort in the D-Day states to level 2 (forts already at 2 or below are left alone)
+ENG_bombard_dday_coast = {
+	19 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	23 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	30 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	14 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	15 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	29 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	6 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	7 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	35 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	36 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	56 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	58 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+	59 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				level > 2
+			}
+		}
+	}
+}

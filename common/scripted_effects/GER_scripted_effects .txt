@@ -491,3 +491,128 @@ GER_africa_level_down = {
 		}
 	}
 }
+# Atlantikwall focus: after the forts are placed, cap these provinces (forts above the cap are lowered to it)
+GER_atlantikwall_cap_forts = {
+	15 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 7991
+				level > 2
+			}
+		}
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 9434
+				level > 2
+			}
+		}
+		set_building_level = {
+			type = coastal_bunker
+			level = 3
+			province = {
+				id = 485
+				level > 3
+			}
+		}
+	}
+	14 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 10494
+				level > 2
+			}
+		}
+	}
+	30 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 11465
+				level > 2
+			}
+		}
+	}
+	23 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 6657
+				level > 2
+			}
+		}
+	}
+	19 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 9737
+				level > 2
+			}
+		}
+	}
+	7 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 9498
+				level > 2
+			}
+		}
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 3314
+				level > 2
+			}
+		}
+	}
+	36 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 2
+			province = {
+				id = 6336
+				level > 2
+			}
+		}
+	}
+	29 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 3
+			province = {
+				id = 575
+				level > 3
+			}
+		}
+	}
+	6 = {
+		set_building_level = {
+			type = coastal_bunker
+			level = 3
+			province = {
+				id = 6560
+				level > 3
+			}
+		}
+		set_building_level = {
+			type = coastal_bunker
+			level = 3
+			province = {
+				id = 6598
+				level > 3
+			}
+		}
+	}
+}

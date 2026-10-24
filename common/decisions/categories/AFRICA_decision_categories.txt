@@ -1,0 +1,6 @@
+AFRICA_atlantic_wall_category = {
+	allowed = {
+		always = yes
+	}
+	priority = 20
+}

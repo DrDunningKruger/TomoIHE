@@ -392,6 +392,7 @@
 			any_state = {
 				OR = {
 					state = 774
+					state = 845
 					state = 660
 				}	
 				is_owned_or_subject_trigger = yes
@@ -459,7 +460,6 @@
 		available = {
 			any_state = {
 				OR = {
-					state = 553
 					state = 554
 				}	
 				is_owned_or_subject_trigger = yes
@@ -3119,6 +3119,7 @@
 				transfer_state = 779
 				transfer_state = 298
 				transfer_state = 780
+				transfer_state = 296
 			}
 
 		}
@@ -3160,18 +3161,15 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			clr_global_flag = FRA_stage_2
-			set_global_flag = FRA_stage_1
+			clr_global_flag = FRA_stage_1
 
 			FRA = {
-				#Syria & Lebanon
-				transfer_state = 553 
-				transfer_state = 554
-				#French somaliland, Madagascar & surrounding islands
-				transfer_state = 543
-				transfer_state = 708
-				transfer_state = 706
-				transfer_state = 713
+				#America, Asian island, Carribean
+				transfer_state = 310
+				transfer_state = 694
+				transfer_state = 641
+				transfer_state = 635
+				transfer_state = 734
 			}
 		}
 	}
@@ -3213,15 +3211,15 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			clr_global_flag = FRA_stage_1
+			clr_global_flag = FRA_stage_2
+			set_global_flag = FRA_stage_1
 
 			FRA = {
-				#America, Asian island, Carribean
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
+				#French somaliland, Madagascar & surrounding islands
+				transfer_state = 543
+				transfer_state = 708
+				transfer_state = 706
+				transfer_state = 713
 			}
 		}
 	}

@@ -893,6 +893,11 @@ on_actions = {
 						modifier = AFRICA_SPEED
 					}
 				}
+				553 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED
+					}
+				}
 				459 = {
 					add_dynamic_modifier = {
 						modifier = AFRICA_SPEED
@@ -993,11 +998,6 @@ on_actions = {
 						modifier = AFRICA_SPEED
 					}
 				}
-				553 = {
-					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
-					}
-				}	
 				677 = {
 					add_dynamic_modifier = {
 						modifier = AFRICA_SPEED

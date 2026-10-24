@@ -2,6 +2,25 @@ ideas = {
 
 	country = {
 
+		FRA_fighting_on = { # 90 days after France caps, added by the cap on_action
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.25
+			}
+		}
+
 		FRA_war_economy_time_idea = {
 
 			allowed = {

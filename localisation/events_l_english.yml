@@ -3360,3 +3360,8 @@
  finland.69.a:0 "Medium Tank Division"
  beaches_desc:0 "§4Large, open beaches, suitable for amphibious operations. It will be easier for marines, amtracks and amtanks to land on this type of terrain over time.§!"
  gabes_clicked:0 "Gabes Retaken Focus Already Started"
+ bulgaria.6.t:0 "Bulgaria Demands Its Cores"
+ bulgaria.6.d:0 "The government in Sofia has sent us a formal note demanding the return of lands it considers rightfully Bulgarian: Kosovo, Albania, Northern Epirus, Epirus, Greece, the Peloponnese, Eastern Serbia, Montenegro, Central Macedonia and Thrace. How shall we respond?"
+ bulgaria.6.a:0 "Concede All the Cores"
+ bulgaria.6.b:0 "Concede to Some Demands"
+ bulgaria.6.c:0 "Refuse to Concede"

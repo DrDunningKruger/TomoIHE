@@ -7040,4 +7040,8 @@ spriteTypes = {
 		name = "GFX_idea_ARG_war_division"
 		texturefile = "gfx/interface/ideas/idea_ARG_war_division.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ITA_new_roman_empire_ns"
+		texturefile = "gfx/interface/ideas/idea_ITA_new_roman_empire_ns.dds"
+	}
 }

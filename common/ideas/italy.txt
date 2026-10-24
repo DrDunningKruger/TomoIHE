@@ -1,5 +1,24 @@
 ideas = {
 	country = {
+		ITA_exercitus_romanus = {
+			removal_cost = -1
+
+			picture = ITA_new_roman_empire_ns
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				industrial_capacity_factory = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
 		ITA_hardened_irregular_bands = {
 			removal_cost = -1
 

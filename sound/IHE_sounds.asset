@@ -9,6 +9,8 @@ category = {
 		IHE_total_war_tomo
 		IHE_soviet_winter_offensive_tomo
 		IHE_on_the_beaches_tomo
+		IHE_steiner_tomo
+		IHE_fallblau_tomo
 	}
 }
 
@@ -127,6 +129,36 @@ soundeffect = {
 	name = "IHE_on_the_beaches_tomo"
 	sounds = {
 		sound = IHE_on_the_beaches_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_steiner_tomo"
+	file = "sound/IHE_steiner_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_steiner_tomo"
+	sounds = {
+		sound = IHE_steiner_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_fallblau_tomo"
+	file = "sound/IHE_fallblau_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_fallblau_tomo"
+	sounds = {
+		sound = IHE_fallblau_tomo
 	}
 	max_audible = 1
 	volume = 1

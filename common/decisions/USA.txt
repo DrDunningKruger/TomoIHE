@@ -111,6 +111,7 @@ war_measures = {
 		has_full_control_of_state = 513	
 		has_full_control_of_state = 459
         has_full_control_of_state = 462		
+        has_full_control_of_state = 553
         has_full_control_of_state = 461		
 		}
 			OR = {
@@ -148,6 +149,7 @@ war_measures = {
 			  ENG = {
 			  		transfer_state = 461
 					transfer_state = 462
+					transfer_state = 553
 			  }	
 
 		}

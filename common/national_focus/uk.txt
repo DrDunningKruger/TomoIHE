@@ -1562,7 +1562,7 @@ focus_tree = {
 		hidden_effect = {
 		load_oob = "ENG_marines"
 		}
-		805 = { add_dynamic_modifier = { modifier = ENG_dday } }
+		806 = { add_dynamic_modifier = { modifier = ENG_dday } }
 		19 = { add_dynamic_modifier = { modifier = ENG_dday } }
 		23 = { add_dynamic_modifier = { modifier = ENG_dday } }
 		30 = { add_dynamic_modifier = { modifier = ENG_dday } }
@@ -1570,6 +1570,32 @@ focus_tree = {
 		15 = { add_dynamic_modifier = { modifier = ENG_dday } }
 		785 = { add_dynamic_modifier = { modifier = ENG_dday } }
 		29 = { add_dynamic_modifier = { modifier = ENG_dday } }
+		}
+	}
+
+	focus = {
+		id = ENG_bombard_the_coast
+		prerequisite = { focus = ENG_royalmarines }
+		available = {
+			date > 1943.1.1
+		}
+
+		icon = GFX_goal_generic_navy_cruiser
+		x = 2
+		y = 1
+		relative_position_id = ENG_royalmarines
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
+
+		completion_reward = {
+			custom_effect_tooltip = ENG_bombard_the_coast_tt
+			hidden_effect = {
+				ENG_bombard_dday_coast = yes
+			}
 		}
 	}
 	
@@ -1605,7 +1631,10 @@ focus_tree = {
 	focus = {
 		id = ENG_LRDG
 		prerequisite = { focus = ENG_special_air_service }
-		available = { 
+		available = {
+			has_war = yes
+			controls_state = 293 # Yemen
+			date > 1941.1.1
 		}
 
 		continue_if_invalid = yes
@@ -1614,11 +1643,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_special_air_service
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
-        available = { has_war = yes }	
 		completion_reward = {	
 			add_tech_bonus = {
 				name = special_bonus
@@ -1635,12 +1663,7 @@ focus_tree = {
 				technology = tech_logistics_company3
 				technology = tech_logistics_company4
 			}	
-			add_tech_bonus = {
-				name = armor_bonus_modules2
-				bonus = 1.0
-				uses = 1
-				category = tank_modules
-			}
+			transfer_state = 844 # Asir, Vichy-held until the LRDG secures it
 			add_equipment_to_stockpile = {
 								type = motorized_equipment
 								amount = 1500
@@ -2301,20 +2324,24 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = aircraft_production_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		
 		available = {
-		date > 1942.6.1
-		has_tech = improved_large_airframe
-		has_tech = electronics_3
-		has_tech = aa_hmg
-		has_tech = survivability_studies
-        }
+			date > 1942.1.1
+		}
 
 		completion_reward = {
 		custom_effect_tooltip = "THOUSAND_BOMBER_RAID_TOOLTIP"
+		set_technology = {
+			improved_large_airframe = 1
+			electronics_3 = 1
+			aa_hmg = 1
+			survivability_studies = 1
+			late_bombs = 1
+			engines_1 = 1
+		}
 		
 				create_equipment_variant = {
 					name = "Lancaster I"
@@ -2341,7 +2368,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = large_plane_airframe_2
 					producer = ENG
-					amount = 1000
+					amount = 800
 					variant_name = "Lancaster I"
 				}				
 		}
@@ -3370,6 +3397,7 @@ focus_tree = {
 
 		available = {				
 			has_full_control_of_state = 119
+			controls_state = 456 # Aswan
 		}
 
 		completion_reward = {

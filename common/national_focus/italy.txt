@@ -3844,6 +3844,77 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_imperium_romanum
+		icon = GFX_focus_ITA_mare_nostrum
+		prerequisite = { focus = ITA_towards_a_greater_italy }
+		x = 0
+		y = 1
+		relative_position_id = ITA_towards_a_greater_italy
+		cost = 5
+
+		cancel_if_invalid = yes
+
+		available = {
+			date > 1941.1.1
+			NOT = { surrender_progress > 0 }
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_morocco_tt
+				controls_state = 461
+				controls_state = 462
+				controls_state = 553
+				controls_state = 783
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_algeria_tt
+				controls_state = 459
+				controls_state = 460
+				controls_state = 513
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_tunis_tt
+				controls_state = 458
+				controls_state = 665
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_libya_tt
+				controls_state = 448
+				controls_state = 449
+				controls_state = 661
+				controls_state = 662
+				controls_state = 767
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_tobruk_tt
+				controls_state = 450
+				controls_state = 451
+				controls_state = 663
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_egypt_tt
+				controls_state = 446
+				controls_state = 447
+				controls_state = 452
+				controls_state = 839
+			}
+			custom_trigger_tooltip = {
+				tooltip = ITA_imperium_romanum_syria_tt
+				controls_state = 453
+				controls_state = 454
+				controls_state = 455
+				controls_state = 554
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_imperium_romanum_tag_tt
+			hidden_effect = { set_cosmetic_tag = ITA_IMPERIUM }
+			add_ideas = ITA_exercitus_romanus
+		}
+	}
+
 
 ########  #######  ########  ######## ####  ######   ##    ##    ########   #######  ##       #### ######## ####  ######   ######     ########  ####  ######   ##     ## ######## 
 ##       ##     ## ##     ## ##        ##  ##    ##  ###   ##    ##     ## ##     ## ##        ##     ##     ##  ##    ## ##    ##    ##     ##  ##  ##    ##  ##     ##    ##    
@@ -4186,7 +4257,7 @@ focus_tree = {
 			}}	
 	
 	hidden_effect = {
-	        set_cosmetic_tag = ITA_SOC				
+	        if = { limit = { NOT = { has_completed_focus = ITA_imperium_romanum } } set_cosmetic_tag = ITA_SOC }
 
 			115 = {
 				add_dynamic_modifier = {
@@ -4466,6 +4537,14 @@ focus_tree = {
 			OR = {
             controls_state = 549
 			any_allied_country = { controls_state = 549 }
+			}		
+			OR = {
+            controls_state = 842
+			any_allied_country = { controls_state = 842 }
+			}		
+			OR = {
+            controls_state = 843
+			any_allied_country = { controls_state = 843 }
 			}		
 			OR = {
             controls_state = 547

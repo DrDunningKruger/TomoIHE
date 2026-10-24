@@ -564,7 +564,7 @@ characters = {
 
 		field_marshal = {
 			desc = "Georgy_Zhukov_desc"	
-			traits = { trickster panzer_leader war_hero trait_engineer ranger winter_specialist offensive_doctrine politically_connected panzer_expert }
+			traits = { panzer_leader trait_engineer ranger winter_specialist offensive_doctrine politically_connected panzer_expert logistics_wizard thorough_planner }
 			skill = 7
 			attack_skill = 7
 			defense_skill = 5
@@ -925,9 +925,9 @@ characters = {
 
 		corps_commander = {
 			desc = "Konstantin_Rokossovsky_desc"
-			traits = { trait_reckless panzer_leader panzer_expert trickster armor_officer ranger winter_specialist }
+			traits = { panzer_leader panzer_expert armor_officer ranger winter_specialist trait_engineer swamp_fox urban_assault_specialist }
 			skill = 6
-			attack_skill = 6
+			attack_skill = 7
 			defense_skill = 6
 			planning_skill = 5
 			logistics_skill = 5

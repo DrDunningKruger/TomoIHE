@@ -1463,6 +1463,7 @@ on_actions = {
 					transfer_state = 459
 					transfer_state = 461
 					transfer_state = 462
+					transfer_state = 553
 					transfer_state = 699
 					transfer_state = 514
 				}
@@ -1496,6 +1497,7 @@ on_actions = {
 				BEL = { # Belgian Kongo
 					transfer_state = 295
 					transfer_state = 718
+					transfer_state = 846
 					transfer_state = 538
 					transfer_state = 769
 					transfer_state = 768

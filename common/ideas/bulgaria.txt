@@ -12,6 +12,21 @@ ideas = {
 
 	country = { #DLC
 
+		BUL_bulgarian_empire = {
+			picture = bul_bulgarian_irredentism
+
+			allowed = {
+				original_tag = BUL
+			}
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.3
+				stability_factor = 0.2
+				war_support_factor = 0.2
+			}
+		}
+
 		BUL_army_restrictions = {
 			picture = tfv_can_conscription_crisis
 
